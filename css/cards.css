@@ -1,0 +1,315 @@
+/* Flashcards page */
+
+/* Flashcards */
+.cards-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.cards-head > div {
+  flex: 1 1 300px;
+}
+.deck-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 1em;
+  flex: 0 1 320px;
+  max-width: 100%;
+}
+.deck-select select {
+  flex: 1;
+  min-width: 0;
+}
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  max-width: 100%;
+}
+.deck {
+  position: relative;
+  max-width: 460px;
+  height: 290px;
+  margin: 26px auto 0;
+}
+.deck:not(.empty)::before,
+.deck:not(.empty)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 2px solid var(--line);
+}
+.deck::before {
+  transform: translateY(16px) scale(0.9);
+  opacity: 0.45;
+}
+.deck::after {
+  transform: translateY(8px) scale(0.95);
+  opacity: 0.75;
+}
+.deck.empty {
+  height: auto;
+}
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  perspective: 1200px;
+  cursor: grab;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.flash:active {
+  cursor: grabbing;
+}
+.flash-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.flash.flipped .flash-inner {
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  inset: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+.face.front {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.face.back {
+  background: var(--signal);
+  color: var(--on-signal);
+  transform: rotateY(180deg);
+  box-shadow: var(--shadow);
+}
+.face .word {
+  font: 700 clamp(32px, 7vw, 46px)/1.1 var(--cond);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+/* Long German words (Staatsangehörigkeit) get smaller so they fit on one line */
+.face .word.long {
+  font-size: clamp(27px, 5.8vw, 38px);
+}
+.face .word.xlong {
+  font-size: clamp(22px, 4.8vw, 31px);
+}
+/* The back: meaning, the German with its plural, and an example sentence */
+.face.back.has-ex .word {
+  font-size: clamp(26px, 5.6vw, 36px);
+}
+.face.back.has-ex .word.xlong {
+  font-size: clamp(21px, 4.6vw, 28px);
+}
+.face .forms {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+.face .ex {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 14px;
+  max-width: 36ch;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.face .ex-en {
+  opacity: 0.75;
+}
+/* Why a card from the review queue is back */
+.face .why {
+  margin-bottom: 14px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: var(--sunken);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+.face .why.is-missed {
+  background: color-mix(in srgb, var(--err) 14%, var(--surface));
+  color: var(--text);
+}
+.face .why.is-new {
+  background: color-mix(in srgb, var(--signal) 30%, var(--surface));
+  color: var(--text);
+}
+.face .hint {
+  font-size: 14px;
+  margin-top: 12px;
+  opacity: 0.7;
+}
+.swipe {
+  position: absolute;
+  top: 16px;
+  z-index: 3;
+  font: 700 20px/1 var(--cond);
+  padding: 6px 10px 4px;
+  border: 3px solid currentColor;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+.swipe.yes {
+  left: 16px;
+  color: var(--ok);
+  transform: rotate(-8deg);
+}
+.swipe.no {
+  right: 16px;
+  color: var(--err);
+  transform: rotate(8deg);
+}
+.flash.lean-yes .swipe.yes,
+.flash.lean-no .swipe.no {
+  opacity: 1;
+}
+.card-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 44px;
+  flex-wrap: wrap;
+}
+.card-actions[hidden] {
+  display: none;
+}
+.meter {
+  height: 6px;
+  background: var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  max-width: 460px;
+  margin: 20px auto 0;
+}
+.meter i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--ok);
+  transition: width 0.3s;
+}
+
+/* Every word of a topic deck, with its plural and example, to read and hear */
+.word-list {
+  max-width: 680px;
+  margin: 34px auto 0;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.word-list summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 0;
+  width: fit-content;
+}
+.word-list ul {
+  /* content inside <details> inherits through the browser's own (unstyled) slot, so restate this */
+  box-sizing: border-box;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+.word-list li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--surface);
+}
+.wl-word {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wl-word > div {
+  flex: 1;
+  min-width: 0;
+}
+.wl-word b,
+.wl-word .pl,
+.wl-en,
+.wl-ex > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.wl-word b {
+  font-weight: 600;
+}
+.wl-word .pl {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+.wl-en {
+  color: var(--muted);
+  text-align: right;
+  max-width: 45%;
+}
+/* On phones the meaning goes under the word, so long German words keep the full width */
+@media (max-width: 560px) {
+  .wl-word {
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+  .wl-en {
+    flex-basis: 100%;
+    max-width: none;
+    padding-left: 50px;
+    text-align: left;
+  }
+}
+.wl-ex {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 15px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .flash-inner,
+  .meter i {
+    transition: none;
+  }
+}
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}

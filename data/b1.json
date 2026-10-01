@@ -1,0 +1,1584 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "The simple past",
+      "germanTitle": "Das Präteritum",
+      "intro": "Stories, news and books use the Präteritum. You'll read it far more often than you say it, so learning to recognise the forms comes first.",
+      "table": {
+        "head": ["", "sagen", "gehen"],
+        "rows": [
+          ["ich", "sagte", "ging"],
+          ["du", "sagtest", "gingst"],
+          ["er / sie / es", "sagte", "ging"],
+          ["wir", "sagten", "gingen"],
+          ["ihr", "sagtet", "gingt"],
+          ["sie / Sie", "sagten", "gingen"]
+        ]
+      },
+      "rules": [
+        "Regular verbs add -te to the stem: sagen → sagte, wohnen → wohnte. Stems in -t or -d add -ete: arbeiten → arbeitete, reden → redete.",
+        "Irregular verbs change the stem, and ich and er/sie/es have no ending: gehen → ging, kommen → kam, sehen → sah, finden → fand.",
+        "A few mix both patterns: denken → dachte, bringen → brachte, wissen → wusste, kennen → kannte.",
+        "In conversation most verbs use the Perfekt, but sein, haben and the modal verbs almost always use the Präteritum: war, hatte, konnte, musste."
+      ],
+      "examples": [
+        {
+          "de": "Als Kind wohnte ich in einem kleinen Dorf.",
+          "en": "As a child I lived in a small village."
+        },
+        {
+          "de": "Plötzlich klingelte das Telefon.",
+          "en": "Suddenly the phone rang."
+        },
+        {
+          "de": "Sie kam spät nach Hause und ging sofort ins Bett.",
+          "en": "She got home late and went straight to bed."
+        },
+        {
+          "de": "Früher musste ich jeden Tag mit dem Bus fahren.",
+          "en": "I used to have to take the bus every day."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Gestern ___ ich lange im Büro. (arbeiten)",
+          "options": ["arbeitet", "arbeite", "arbeitete"],
+          "answer": 2,
+          "hint": "The stem ends in -t, so add -ete: arbeitete"
+        },
+        {
+          "type": "fill",
+          "question": "Gestern ___ er erst um zehn nach Hause. (kommen, Präteritum)",
+          "answers": ["kam"],
+          "hint": "kommen → kam"
+        },
+        {
+          "type": "choice",
+          "question": "gehen in the Präteritum: wir ___",
+          "options": ["gingen", "gehten", "gangen"],
+          "answer": 0,
+          "hint": "gehen → ging, wir gingen"
+        },
+        {
+          "type": "fill",
+          "question": "Letzte Woche ___ ich keine Zeit. (haben, Präteritum)",
+          "answers": ["hatte"],
+          "hint": "haben → hatte"
+        },
+        {
+          "type": "listen",
+          "question": "Listen. What did Lena see when she opened the door?",
+          "audioText": "Als Lena die Tür öffnete, stand ihr Bruder mit einem großen Paket davor.",
+          "options": ["Her brother with a big bag", "Nobody at all", "Her brother with a big parcel"],
+          "answer": 2,
+          "hint": "stand … davor = was standing in front of it",
+          "englishOptions": true
+        },
+        {
+          "type": "write",
+          "question": "Start a story in the Präteritum: where you were, what you saw, what you did.",
+          "modelAnswer": "Es war ein kalter Abend im November. Ich wartete am Bahnhof auf den Zug. Plötzlich sah ich einen alten Freund. Wir tranken zusammen einen Kaffee und redeten lange."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "plötzlich",
+          "en": "suddenly"
+        },
+        {
+          "de": "früher",
+          "en": "in the past / used to"
+        },
+        {
+          "de": "damals",
+          "en": "back then"
+        },
+        {
+          "de": "das Dorf",
+          "en": "village",
+          "pl": "Dörfer"
+        },
+        {
+          "de": "die Geschichte",
+          "en": "story / history",
+          "pl": "Geschichten"
+        },
+        {
+          "de": "erzählen",
+          "en": "to tell (a story)"
+        },
+        {
+          "de": "klingeln",
+          "en": "to ring"
+        },
+        {
+          "de": "öffnen",
+          "en": "to open"
+        },
+        {
+          "de": "das Paket",
+          "en": "parcel",
+          "pl": "Pakete"
+        },
+        {
+          "de": "das Ende",
+          "en": "end",
+          "pl": "Enden"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Wishes, advice and polite requests",
+      "germanTitle": "Konjunktiv II",
+      "intro": "The Konjunktiv II is for things that aren't real: wishes, daydreams, advice and polite requests. For most verbs you only need würde + infinitive.",
+      "table": {
+        "head": ["", "werden", "haben", "sein"],
+        "rows": [
+          ["ich", "würde", "hätte", "wäre"],
+          ["du", "würdest", "hättest", "wärst"],
+          ["er / sie / es", "würde", "hätte", "wäre"],
+          ["wir", "würden", "hätten", "wären"],
+          ["ihr", "würdet", "hättet", "wärt"],
+          ["sie / Sie", "würden", "hätten", "wären"]
+        ]
+      },
+      "rules": [
+        "For most verbs: würde + infinitive at the end. Ich würde gern mehr reisen.",
+        "haben, sein and the modal verbs have their own forms: hätte, wäre, könnte, müsste, dürfte. Ich hätte gern einen Tee.",
+        "Unreal 'if' sentences: Wenn ich Zeit hätte, würde ich kommen. The wenn clause ends with its verb, and the main clause starts with würde right after the comma.",
+        "Advice: Du solltest … (you should). Polite requests: Könnten Sie mir helfen? Würden Sie bitte das Fenster schließen?"
+      ],
+      "examples": [
+        {
+          "de": "Ich hätte gern ein Glas Wasser.",
+          "en": "I'd like a glass of water."
+        },
+        {
+          "de": "Wenn ich reich wäre, würde ich um die Welt reisen.",
+          "en": "If I were rich, I'd travel around the world."
+        },
+        {
+          "de": "Du solltest mehr schlafen.",
+          "en": "You should sleep more."
+        },
+        {
+          "de": "Könnten Sie das bitte wiederholen?",
+          "en": "Could you repeat that, please?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Wenn ich Zeit ___, würde ich dich besuchen.",
+          "options": ["hatte", "habe", "hätte"],
+          "answer": 2,
+          "hint": "Unreal condition → hätte"
+        },
+        {
+          "type": "fill",
+          "question": "Wir ___ gern mehr reisen. (würde)",
+          "answers": ["würden"],
+          "hint": "wir → würden"
+        },
+        {
+          "type": "choice",
+          "question": "Most polite: ___ Sie mir bitte helfen?",
+          "options": ["Konnten", "Können", "Könnten"],
+          "answer": 2,
+          "hint": "Konjunktiv II is the most polite: Könnten"
+        },
+        {
+          "type": "fill",
+          "question": "Du ___ mehr Wasser trinken. (sollen, as advice)",
+          "answers": ["solltest"],
+          "hint": "Advice → du solltest"
+        },
+        {
+          "type": "order",
+          "question": "Build: If I were you, I'd call her.",
+          "words": ["Wenn", "ich", "du", "wäre", "würde", "ich", "sie", "anrufen"],
+          "answers": ["Wenn ich du wäre, würde ich sie anrufen", "Ich würde sie anrufen, wenn ich du wäre"],
+          "hint": "Verb at the end of the wenn clause, then würde right after the comma."
+        },
+        {
+          "type": "write",
+          "question": "What would you do with a year off? Write two or three sentences.",
+          "modelAnswer": "Wenn ich ein Jahr frei hätte, würde ich durch Südamerika reisen. Ich würde Spanisch lernen und in kleinen Hotels wohnen. Am Ende würde ich ein Buch über die Reise schreiben."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "würde",
+          "en": "would"
+        },
+        {
+          "de": "hätte",
+          "en": "would have"
+        },
+        {
+          "de": "wäre",
+          "en": "would be"
+        },
+        {
+          "de": "könnte",
+          "en": "could"
+        },
+        {
+          "de": "sollte",
+          "en": "should"
+        },
+        {
+          "de": "reisen",
+          "en": "to travel"
+        },
+        {
+          "de": "reich",
+          "en": "rich"
+        },
+        {
+          "de": "die Welt",
+          "en": "world",
+          "pl": "Welten"
+        },
+        {
+          "de": "wiederholen",
+          "en": "to repeat"
+        },
+        {
+          "de": "der Traum",
+          "en": "dream",
+          "pl": "Träume"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The passive",
+      "germanTitle": "Das Passiv",
+      "intro": "The passive puts the action in the spotlight instead of the person doing it. You'll meet it in instructions, the news and official letters.",
+      "table": {
+        "head": ["Tense", "Example"],
+        "rows": [
+          ["Präsens", "Das Haus wird renoviert."],
+          ["Präteritum", "Das Haus wurde renoviert."],
+          ["Perfekt", "Das Haus ist renoviert worden."],
+          ["With a modal", "Das Haus muss renoviert werden."]
+        ]
+      },
+      "rules": [
+        "Präsens passive: werden in position 2 + Partizip II at the end. Hier wird Deutsch gesprochen.",
+        "Past: wurde + Partizip II (Das Rathaus wurde 1905 gebaut). In the Perfekt it's ist … worden, with no ge-.",
+        "To say who did it, add von + dative: Der Brief wurde von meiner Chefin geschrieben.",
+        "With a modal verb, werden goes to the very end as an infinitive: Die Rechnung muss bis Freitag bezahlt werden."
+      ],
+      "examples": [
+        {
+          "de": "Hier wird Deutsch gesprochen.",
+          "en": "German is spoken here."
+        },
+        {
+          "de": "Die Brücke wurde im neunzehnten Jahrhundert gebaut.",
+          "en": "The bridge was built in the 19th century."
+        },
+        {
+          "de": "Das Paket wird morgen geliefert.",
+          "en": "The parcel will be delivered tomorrow."
+        },
+        {
+          "de": "Der Termin muss leider verschoben werden.",
+          "en": "Unfortunately the appointment has to be postponed."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Das Essen ___ jetzt gekocht.",
+          "options": ["wird", "wurde", "werden"],
+          "answer": 0,
+          "hint": "jetzt → Präsens; das Essen → wird"
+        },
+        {
+          "type": "fill",
+          "question": "Das Museum ___ 1998 eröffnet. (Präteritum)",
+          "answers": ["wurde"],
+          "hint": "Past passive → wurde"
+        },
+        {
+          "type": "choice",
+          "question": "Der Brief wurde ___ meinem Kollegen geschrieben. (by)",
+          "options": ["mit", "von", "durch"],
+          "answer": 1,
+          "hint": "The person who did it → von + dative"
+        },
+        {
+          "type": "fill",
+          "question": "Die Rechnung muss bis Freitag bezahlt ___.",
+          "answers": ["werden"],
+          "hint": "Modal verb + Partizip II + werden"
+        },
+        {
+          "type": "order",
+          "question": "Build: The windows are cleaned every week.",
+          "words": ["Die", "Fenster", "werden", "jede", "Woche", "geputzt"],
+          "answers": ["Die Fenster werden jede Woche geputzt", "Jede Woche werden die Fenster geputzt"],
+          "hint": "werden in position 2, the participle at the end."
+        },
+        {
+          "type": "choice",
+          "question": "Make it passive: Man repariert das Auto.",
+          "options": ["Das Auto hat repariert.", "Das Auto wurde repariert.", "Das Auto wird repariert."],
+          "answer": 2,
+          "hint": "Präsens stays Präsens: wird repariert"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "bauen",
+          "en": "to build"
+        },
+        {
+          "de": "reparieren",
+          "en": "to repair"
+        },
+        {
+          "de": "liefern",
+          "en": "to deliver"
+        },
+        {
+          "de": "bezahlen",
+          "en": "to pay"
+        },
+        {
+          "de": "verschieben",
+          "en": "to postpone"
+        },
+        {
+          "de": "die Rechnung",
+          "en": "bill / invoice",
+          "pl": "Rechnungen"
+        },
+        {
+          "de": "die Brücke",
+          "en": "bridge",
+          "pl": "Brücken"
+        },
+        {
+          "de": "das Jahrhundert",
+          "en": "century",
+          "pl": "Jahrhunderte"
+        },
+        {
+          "de": "putzen",
+          "en": "to clean"
+        },
+        {
+          "de": "der Kollege",
+          "en": "colleague",
+          "pl": "Kollegen"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Relative clauses",
+      "germanTitle": "Relativsätze",
+      "intro": "Relative clauses add detail to a noun: the man who lives next door, the book I'm reading. The relative pronoun mostly looks like der, die or das.",
+      "table": {
+        "head": ["", "masc.", "fem.", "neut.", "plural"],
+        "rows": [
+          ["Nom.", "der", "die", "das", "die"],
+          ["Akk.", "den", "die", "das", "die"],
+          ["Dat.", "dem", "der", "dem", "denen"]
+        ]
+      },
+      "rules": [
+        "Gender and number come from the noun it refers to; the case comes from its role inside the relative clause. Der Mann, den ich kenne: den is the object of kenne.",
+        "The conjugated verb goes to the end, and commas mark off the relative clause: Das Buch, das ich lese, ist spannend.",
+        "The forms are the same as der, die, das, except the dative plural: denen. Die Kinder, denen ich helfe …",
+        "A preposition goes in front of the pronoun: Die Stadt, in der ich wohne … Der Freund, mit dem ich reise …"
+      ],
+      "examples": [
+        {
+          "de": "Das ist die Frau, die neben uns wohnt.",
+          "en": "That's the woman who lives next door to us."
+        },
+        {
+          "de": "Der Film, den wir gestern gesehen haben, war super.",
+          "en": "The film we saw yesterday was great."
+        },
+        {
+          "de": "Wie heißt der Kollege, mit dem du arbeitest?",
+          "en": "What's the name of the colleague you work with?"
+        },
+        {
+          "de": "Die Leute, denen das Haus gehört, sind sehr nett.",
+          "en": "The people who own the house are very nice."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Der Mann, ___ dort steht, ist mein Nachbar.",
+          "options": ["der", "den", "dem"],
+          "answer": 0,
+          "hint": "He's the subject of steht → nominative: der"
+        },
+        {
+          "type": "choice",
+          "question": "Der Pullover, ___ ich gekauft habe, ist zu klein.",
+          "options": ["der", "den", "dem"],
+          "answer": 1,
+          "hint": "Object of kaufen, masculine → den"
+        },
+        {
+          "type": "fill",
+          "question": "Die Frau, ___ ich geholfen habe, war sehr dankbar.",
+          "answers": ["der"],
+          "hint": "helfen takes the dative; feminine → der"
+        },
+        {
+          "type": "fill",
+          "question": "Das ist das Café, in ___ wir uns kennengelernt haben.",
+          "answers": ["dem"],
+          "hint": "in + dative (where?), neuter → dem"
+        },
+        {
+          "type": "choice",
+          "question": "Die Nachbarn, mit ___ wir oft grillen, kommen aus Polen.",
+          "options": ["die", "denen", "dem"],
+          "answer": 1,
+          "hint": "mit + dative plural → denen"
+        },
+        {
+          "type": "order",
+          "question": "Build: The book that I'm reading is exciting.",
+          "words": ["Das", "Buch", "das", "ich", "lese", "ist", "spannend"],
+          "answers": ["Das Buch, das ich lese, ist spannend"],
+          "hint": "Commas around the relative clause, with its verb at the end."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Nachbar",
+          "en": "neighbour",
+          "pl": "Nachbarn"
+        },
+        {
+          "de": "die Leute",
+          "en": "people",
+          "pl": "pl"
+        },
+        {
+          "de": "spannend",
+          "en": "exciting"
+        },
+        {
+          "de": "nett",
+          "en": "nice"
+        },
+        {
+          "de": "dankbar",
+          "en": "grateful"
+        },
+        {
+          "de": "kennenlernen",
+          "en": "to get to know"
+        },
+        {
+          "de": "der Pullover",
+          "en": "jumper",
+          "pl": "Pullover"
+        },
+        {
+          "de": "grillen",
+          "en": "to have a barbecue"
+        },
+        {
+          "de": "die Stadt",
+          "en": "town / city",
+          "pl": "Städte"
+        },
+        {
+          "de": "dort",
+          "en": "there"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Verbs with prepositions",
+      "germanTitle": "Worauf wartest du?",
+      "intro": "Many verbs come with a fixed preposition, and it's often not the one English uses. Learn them as one unit: warten auf, denken an, sich interessieren für.",
+      "table": {
+        "head": ["Verb", "Example"],
+        "rows": [
+          ["warten auf + Akk.", "Ich warte auf den Bus."],
+          ["denken an + Akk.", "Ich denke oft an dich."],
+          ["sich interessieren für + Akk.", "Er interessiert sich für Kunst."],
+          ["sich freuen auf + Akk.", "Wir freuen uns auf die Ferien."],
+          ["träumen von + Dat.", "Sie träumt von einem Haus am Meer."],
+          ["Angst haben vor + Dat.", "Ich habe Angst vor Spinnen."]
+        ]
+      },
+      "rules": [
+        "Learn the verb, the preposition and the case as one unit: warten auf + accusative, träumen von + dative.",
+        "The preposition rarely matches English: denken an = think of, Angst haben vor = be afraid of, sich interessieren für = be interested in.",
+        "To ask about a thing, use wo + preposition, with an extra r before a vowel: Worauf wartest du? Wofür interessierst du dich? Wovon träumst du?",
+        "To point back to a thing, use da(r) + preposition: Ich warte darauf. For people, keep the preposition + pronoun: Auf wen wartest du? Ich warte auf ihn."
+      ],
+      "examples": [
+        {
+          "de": "Worauf wartest du noch?",
+          "en": "What are you still waiting for?"
+        },
+        {
+          "de": "Ich interessiere mich sehr für Geschichte.",
+          "en": "I'm very interested in history."
+        },
+        {
+          "de": "Sprichst du oft über deine Arbeit? — Nein, ich spreche nie darüber.",
+          "en": "Do you often talk about your work? — No, I never talk about it."
+        },
+        {
+          "de": "Sie hat sich über die Verspätung geärgert.",
+          "en": "She was annoyed about the delay."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich warte schon seit einer Stunde ___ den Bus.",
+          "options": ["an", "für", "auf"],
+          "answer": 2,
+          "hint": "warten auf"
+        },
+        {
+          "type": "choice",
+          "question": "Er interessiert sich ___ Fußball.",
+          "options": ["für", "über", "an"],
+          "answer": 0,
+          "hint": "sich interessieren für"
+        },
+        {
+          "type": "fill",
+          "question": "Denkst du oft ___ deine Kindheit?",
+          "answers": ["an"],
+          "hint": "denken an"
+        },
+        {
+          "type": "choice",
+          "question": "___ freust du dich? — Auf die Ferien.",
+          "options": ["Wofür", "Woran", "Worauf"],
+          "answer": 2,
+          "hint": "sich freuen auf → worauf"
+        },
+        {
+          "type": "fill",
+          "question": "Ärgerst du dich über den Lärm? — Ja, ich ärgere mich sehr ___.",
+          "answers": ["darüber"],
+          "hint": "über + a thing → darüber"
+        },
+        {
+          "type": "listen",
+          "question": "Listen. What is Mia afraid of?",
+          "audioText": "Mia hat keine Angst vor Hunden, aber sie hat große Angst vor dem Fliegen.",
+          "options": ["Dogs", "Flying", "Spiders"],
+          "answer": 1,
+          "hint": "Angst vor dem Fliegen = afraid of flying",
+          "englishOptions": true
+        }
+      ],
+      "vocab": [
+        {
+          "de": "warten auf",
+          "en": "to wait for"
+        },
+        {
+          "de": "denken an",
+          "en": "to think of"
+        },
+        {
+          "de": "sich interessieren für",
+          "en": "to be interested in"
+        },
+        {
+          "de": "träumen von",
+          "en": "to dream of"
+        },
+        {
+          "de": "sich ärgern über",
+          "en": "to be annoyed about"
+        },
+        {
+          "de": "sprechen über",
+          "en": "to talk about"
+        },
+        {
+          "de": "Angst haben vor",
+          "en": "to be afraid of"
+        },
+        {
+          "de": "die Kindheit",
+          "en": "childhood",
+          "pl": "-"
+        },
+        {
+          "de": "die Ferien",
+          "en": "holidays",
+          "pl": "pl"
+        },
+        {
+          "de": "die Verspätung",
+          "en": "delay",
+          "pl": "Verspätungen"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Time clauses",
+      "germanTitle": "Als, wenn, nachdem",
+      "intro": "Time clauses say when something happens. The tricky pair is als and wenn, which both translate as 'when'. nachdem needs a tense one step further back.",
+      "table": {
+        "head": ["Word", "Example"],
+        "rows": [
+          ["als (once, in the past)", "Als ich zehn war, zogen wir nach Wien."],
+          ["wenn (whenever / if)", "Wenn es regnet, nehme ich den Bus."],
+          ["bevor (before)", "Bevor ich gehe, rufe ich dich an."],
+          ["nachdem (after)", "Nachdem wir gegessen hatten, gingen wir spazieren."],
+          ["während (while)", "Während sie kocht, deckt er den Tisch."],
+          ["seit (since)", "Seit ich hier wohne, fahre ich Fahrrad."]
+        ]
+      },
+      "rules": [
+        "als: one event or one period in the past. Als ich zehn war … / Als der Film anfing …",
+        "wenn: things that happened again and again (immer wenn), and anything in the present or future.",
+        "nachdem needs a tense one step further back. In a past story that means the Plusquamperfekt, hatte or war + Partizip II: Nachdem sie angekommen war, rief sie an.",
+        "All of these send the verb to the end. After the comma, the main clause starts with its verb: Bevor ich esse, wasche ich mir die Hände."
+      ],
+      "examples": [
+        {
+          "de": "Als ich nach Deutschland kam, konnte ich kein Wort Deutsch.",
+          "en": "When I came to Germany, I couldn't speak a word of German."
+        },
+        {
+          "de": "Immer wenn ich meine Oma besuche, backt sie einen Kuchen.",
+          "en": "Every time I visit my grandma, she bakes a cake."
+        },
+        {
+          "de": "Nachdem wir den Film gesehen hatten, gingen wir essen.",
+          "en": "After we'd watched the film, we went out to eat."
+        },
+        {
+          "de": "Bevor du gehst, mach bitte das Licht aus.",
+          "en": "Before you go, please turn off the light."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "___ ich klein war, hatte ich einen Hund.",
+          "options": ["Als", "Wenn", "Wann"],
+          "answer": 0,
+          "hint": "One period in the past → als"
+        },
+        {
+          "type": "choice",
+          "question": "Immer ___ ich Kopfschmerzen habe, trinke ich viel Wasser.",
+          "options": ["als", "wenn", "wann"],
+          "answer": 1,
+          "hint": "Every time → wenn"
+        },
+        {
+          "type": "fill",
+          "question": "Nachdem er die Prüfung bestanden ___, feierte er mit Freunden.",
+          "answers": ["hatte"],
+          "hint": "Past story → Plusquamperfekt: hatte bestanden"
+        },
+        {
+          "type": "choice",
+          "question": "Nachdem sie angekommen ___, rief sie ihre Mutter an.",
+          "options": ["ist", "hatte", "war"],
+          "answer": 2,
+          "hint": "ankommen takes sein → war angekommen"
+        },
+        {
+          "type": "order",
+          "question": "Build: I read before I go to sleep.",
+          "words": ["Ich", "lese", "bevor", "ich", "schlafen", "gehe"],
+          "answers": ["Ich lese, bevor ich schlafen gehe", "Bevor ich schlafen gehe, lese ich"],
+          "hint": "bevor sends its verb to the end."
+        },
+        {
+          "type": "write",
+          "question": "Write one sentence about your past with als and one about a habit with wenn.",
+          "modelAnswer": "Als ich achtzehn war, bin ich zum ersten Mal allein verreist. Wenn ich heute verreise, nehme ich immer zu viel Gepäck mit."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "bevor",
+          "en": "before"
+        },
+        {
+          "de": "nachdem",
+          "en": "after"
+        },
+        {
+          "de": "während",
+          "en": "while"
+        },
+        {
+          "de": "seit",
+          "en": "since / for"
+        },
+        {
+          "de": "immer wenn",
+          "en": "every time"
+        },
+        {
+          "de": "die Prüfung",
+          "en": "exam",
+          "pl": "Prüfungen"
+        },
+        {
+          "de": "bestehen",
+          "en": "to pass (an exam)"
+        },
+        {
+          "de": "ankommen",
+          "en": "to arrive"
+        },
+        {
+          "de": "die Oma",
+          "en": "grandma",
+          "pl": "Omas"
+        },
+        {
+          "de": "das Gepäck",
+          "en": "luggage",
+          "pl": "-"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Infinitive with zu",
+      "germanTitle": "Infinitiv mit zu",
+      "intro": "After many verbs and phrases, a second verb goes to the end with zu. With um … zu and damit you can also say why you do something.",
+      "table": {
+        "head": ["Phrase", "Example"],
+        "rows": [
+          ["Lust haben", "Ich habe Lust, ins Kino zu gehen."],
+          ["vergessen", "Ich habe vergessen, dich anzurufen."],
+          ["Es ist wichtig", "Es ist wichtig, genug zu schlafen."],
+          ["versuchen", "Er versucht, pünktlich zu sein."],
+          ["um … zu", "Ich spare, um ein Auto zu kaufen."],
+          ["damit", "Ich spreche langsam, damit du mich verstehst."]
+        ]
+      },
+      "rules": [
+        "zu + infinitive goes to the end, and a comma usually comes before the whole phrase: Ich habe keine Zeit, heute zu kochen.",
+        "Separable verbs put zu between prefix and stem: anzurufen, einzukaufen, aufzustehen.",
+        "Modal verbs never take zu: Ich muss arbeiten, not Ich muss zu arbeiten.",
+        "um … zu (in order to) when both parts share the subject: Ich spare, um ein Auto zu kaufen. With two different subjects, use damit: Ich erkläre es, damit du es verstehst."
+      ],
+      "examples": [
+        {
+          "de": "Hast du Lust, am Samstag wandern zu gehen?",
+          "en": "Do you fancy going hiking on Saturday?"
+        },
+        {
+          "de": "Vergiss nicht, die Blumen zu gießen!",
+          "en": "Don't forget to water the flowers!"
+        },
+        {
+          "de": "Ich stehe früh auf, um den ersten Zug zu nehmen.",
+          "en": "I get up early to catch the first train."
+        },
+        {
+          "de": "Sie spricht laut, damit alle sie hören.",
+          "en": "She speaks loudly so that everyone can hear her."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich habe keine Lust, heute ___.",
+          "options": ["um kochen", "kochen", "zu kochen"],
+          "answer": 2,
+          "hint": "Lust haben + zu + infinitive"
+        },
+        {
+          "type": "fill",
+          "question": "Vergiss nicht, mich ___! (anrufen)",
+          "answers": ["anzurufen"],
+          "hint": "Separable: an + zu + rufen"
+        },
+        {
+          "type": "choice",
+          "question": "Ich muss heute lange ___.",
+          "options": ["arbeiten", "zu arbeiten"],
+          "answer": 0,
+          "hint": "Modal verbs never take zu."
+        },
+        {
+          "type": "choice",
+          "question": "Ich spare Geld, ___ ein neues Fahrrad zu kaufen.",
+          "options": ["damit", "um", "für"],
+          "answer": 1,
+          "hint": "Same subject and zu at the end → um … zu"
+        },
+        {
+          "type": "choice",
+          "question": "Ich erkläre es langsam, ___ du es verstehst.",
+          "options": ["zu", "um", "damit"],
+          "answer": 2,
+          "hint": "Two different subjects (ich, du) → damit"
+        },
+        {
+          "type": "order",
+          "question": "Build: It's important to drink enough water.",
+          "words": ["Es", "ist", "wichtig", "genug", "Wasser", "zu", "trinken"],
+          "answers": ["Es ist wichtig, genug Wasser zu trinken"],
+          "hint": "zu + infinitive at the very end."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "Lust haben",
+          "en": "to feel like / fancy"
+        },
+        {
+          "de": "vergessen",
+          "en": "to forget"
+        },
+        {
+          "de": "versuchen",
+          "en": "to try"
+        },
+        {
+          "de": "sparen",
+          "en": "to save (money)"
+        },
+        {
+          "de": "erklären",
+          "en": "to explain"
+        },
+        {
+          "de": "wichtig",
+          "en": "important"
+        },
+        {
+          "de": "pünktlich",
+          "en": "on time"
+        },
+        {
+          "de": "gießen",
+          "en": "to water (plants)"
+        },
+        {
+          "de": "wandern",
+          "en": "to hike"
+        },
+        {
+          "de": "die Blume",
+          "en": "flower",
+          "pl": "Blumen"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Adjective endings",
+      "germanTitle": "Adjektivendungen",
+      "intro": "An adjective in front of a noun needs an ending. It depends on the article, the gender and the case, but two patterns cover most sentences.",
+      "table": {
+        "head": ["", "after der / die / das", "after ein / kein / mein"],
+        "rows": [
+          ["Nom. masc.", "der neue Tisch", "ein neuer Tisch"],
+          ["Nom. neut.", "das neue Buch", "ein neues Buch"],
+          ["Nom. fem.", "die neue Lampe", "eine neue Lampe"],
+          ["Akk. masc.", "den neuen Tisch", "einen neuen Tisch"],
+          ["Dat. (all)", "dem neuen Tisch", "einem neuen Tisch"],
+          ["Plural", "die neuen Bücher", "keine neuen Bücher"]
+        ]
+      },
+      "rules": [
+        "After der, die, das: -e in the nominative singular and in the feminine and neuter accusative. Everywhere else: -en. Ich kaufe den roten Pullover.",
+        "After ein, kein and mein, the adjective shows the gender where the article can't: ein neuer Tisch (masculine), ein neues Buch (neuter). The rest matches der, die, das.",
+        "With no article, the adjective takes the article's ending: kalter Kaffee (der), frische Milch (die), kaltes Wasser (das).",
+        "After a verb there's no ending at all: Der Tisch ist neu. Only an adjective right before a noun changes."
+      ],
+      "examples": [
+        {
+          "de": "Ich suche eine günstige Wohnung mit einem großen Balkon.",
+          "en": "I'm looking for an affordable flat with a big balcony."
+        },
+        {
+          "de": "Der neue Kollege kommt aus Italien.",
+          "en": "The new colleague is from Italy."
+        },
+        {
+          "de": "Wir haben einen kleinen Garten hinter dem Haus.",
+          "en": "We have a small garden behind the house."
+        },
+        {
+          "de": "Frisches Brot schmeckt am besten.",
+          "en": "Fresh bread tastes best."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Der ___ Film war langweilig.",
+          "options": ["neuer", "neuen", "neue"],
+          "answer": 2,
+          "hint": "After der, nominative → -e"
+        },
+        {
+          "type": "choice",
+          "question": "Ich trinke gern ___ Kaffee.",
+          "options": ["schwarzer", "schwarzen", "schwarzes"],
+          "answer": 1,
+          "hint": "No article, masculine accusative (like den) → -en"
+        },
+        {
+          "type": "fill",
+          "question": "Ich habe ein ___ Fahrrad. (neu)",
+          "answers": ["neues"],
+          "hint": "ein + neuter → -es"
+        },
+        {
+          "type": "fill",
+          "question": "Wir wohnen in einer ___ Wohnung. (klein)",
+          "answers": ["kleinen"],
+          "hint": "Dative → -en"
+        },
+        {
+          "type": "choice",
+          "question": "Das ist ein ___ Tag!",
+          "options": ["schöne", "schöner", "schönen"],
+          "answer": 1,
+          "hint": "ein + masculine nominative → -er"
+        },
+        {
+          "type": "write",
+          "question": "Describe your room or flat with at least four adjectives.",
+          "modelAnswer": "Ich habe ein kleines, helles Zimmer. Neben dem großen Fenster steht ein alter Schreibtisch. Auf dem Boden liegt ein bunter Teppich."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "günstig",
+          "en": "affordable"
+        },
+        {
+          "de": "frisch",
+          "en": "fresh"
+        },
+        {
+          "de": "hell",
+          "en": "bright"
+        },
+        {
+          "de": "dunkel",
+          "en": "dark"
+        },
+        {
+          "de": "bunt",
+          "en": "colourful"
+        },
+        {
+          "de": "langweilig",
+          "en": "boring"
+        },
+        {
+          "de": "schwarz",
+          "en": "black"
+        },
+        {
+          "de": "der Balkon",
+          "en": "balcony",
+          "pl": "Balkone"
+        },
+        {
+          "de": "das Zimmer",
+          "en": "room",
+          "pl": "Zimmer"
+        },
+        {
+          "de": "der Schreibtisch",
+          "en": "desk",
+          "pl": "Schreibtische"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Connectors",
+      "germanTitle": "Obwohl, trotzdem",
+      "intro": "Linking your ideas makes B1 writing and speaking sound natural. Some connectors send the verb to the end; others take position 1 and keep the verb second.",
+      "table": {
+        "head": ["Connector", "Example"],
+        "rows": [
+          ["obwohl (although)", "Obwohl es regnet, gehen wir spazieren."],
+          ["trotzdem (still)", "Es regnet. Trotzdem gehen wir spazieren."],
+          ["deshalb (so)", "Ich bin müde, deshalb gehe ich früh ins Bett."],
+          ["sodass (so that)", "Es war laut, sodass ich nicht schlafen konnte."],
+          ["entweder … oder", "Entweder wir kochen oder wir bestellen Pizza."],
+          ["nicht nur … sondern auch", "Sie spricht nicht nur Deutsch, sondern auch Türkisch."]
+        ]
+      },
+      "rules": [
+        "obwohl (although) starts a subordinate clause, so its verb goes to the end: Obwohl ich müde bin, lerne ich weiter.",
+        "trotzdem (still), deshalb and deswegen (so, that's why) are adverbs. They can take position 1, and the verb follows right after: Ich hatte Hunger, deshalb habe ich gekocht.",
+        "sodass (so that, with the result that) works like weil, with the verb at the end: Es war laut, sodass ich nicht schlafen konnte.",
+        "Two-part connectors: entweder … oder (either … or), weder … noch (neither … nor), nicht nur … sondern auch (not only … but also)."
+      ],
+      "examples": [
+        {
+          "de": "Obwohl ich wenig Zeit habe, mache ich jeden Tag Sport.",
+          "en": "Although I have little time, I exercise every day."
+        },
+        {
+          "de": "Der Zug hatte Verspätung, deshalb kam ich zu spät.",
+          "en": "The train was late, so I was late."
+        },
+        {
+          "de": "Das Wetter war schlecht. Trotzdem sind wir an den See gefahren.",
+          "en": "The weather was bad. We still drove to the lake."
+        },
+        {
+          "de": "Ich trinke weder Kaffee noch Tee.",
+          "en": "I drink neither coffee nor tea."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "___ er krank ist, geht er zur Arbeit.",
+          "options": ["Deshalb", "Trotzdem", "Obwohl"],
+          "answer": 2,
+          "hint": "The verb (ist) is at the end → obwohl"
+        },
+        {
+          "type": "choice",
+          "question": "Er ist krank. ___ geht er zur Arbeit.",
+          "options": ["Obwohl", "Trotzdem", "Weil"],
+          "answer": 1,
+          "hint": "The verb comes right after the connector → trotzdem"
+        },
+        {
+          "type": "order",
+          "question": "Build: I have no money, so I'm staying at home.",
+          "words": ["Ich", "habe", "kein", "Geld", "deshalb", "bleibe", "ich", "zu", "Hause"],
+          "answers": ["Ich habe kein Geld, deshalb bleibe ich zu Hause"],
+          "hint": "deshalb takes position 1 of its clause, and the verb follows."
+        },
+        {
+          "type": "fill",
+          "question": "Ich spiele ___ Tennis noch Golf. (neither)",
+          "answers": ["weder"],
+          "hint": "weder … noch = neither … nor"
+        },
+        {
+          "type": "choice",
+          "question": "Wir fahren ___ mit dem Zug oder mit dem Auto.",
+          "options": ["weder", "sowohl", "entweder"],
+          "answer": 2,
+          "hint": "either … or → entweder … oder"
+        },
+        {
+          "type": "write",
+          "question": "Write about a day that didn't go to plan. Use obwohl and trotzdem.",
+          "modelAnswer": "Obwohl ich den Wecker gestellt hatte, habe ich verschlafen. Ich habe den Bus verpasst. Trotzdem war ich pünktlich im Büro, weil mich ein Kollege mitgenommen hat."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "obwohl",
+          "en": "although"
+        },
+        {
+          "de": "trotzdem",
+          "en": "still / nevertheless"
+        },
+        {
+          "de": "deshalb",
+          "en": "so / therefore"
+        },
+        {
+          "de": "deswegen",
+          "en": "that's why"
+        },
+        {
+          "de": "sodass",
+          "en": "so that"
+        },
+        {
+          "de": "entweder … oder",
+          "en": "either … or"
+        },
+        {
+          "de": "weder … noch",
+          "en": "neither … nor"
+        },
+        {
+          "de": "sondern",
+          "en": "but (rather)"
+        },
+        {
+          "de": "der See",
+          "en": "lake",
+          "pl": "Seen"
+        },
+        {
+          "de": "das Geld",
+          "en": "money",
+          "pl": "-"
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "journeys",
+      "title": "Journeys",
+      "vocab": [
+        { "de": "die Abfahrt", "en": "departure", "pl": "Abfahrten", "ex": { "de": "Die Abfahrt verschiebt sich um eine halbe Stunde.", "en": "The departure has been put back by half an hour." } },
+        { "de": "der Abflug", "en": "departure (flight)", "pl": "Abflüge", "ex": { "de": "Vor dem Abflug sollte man zwei Stunden am Flughafen sein.", "en": "You should be at the airport two hours before your flight." } },
+        { "de": "die Ankunft", "en": "arrival", "pl": "Ankünfte", "ex": { "de": "Bei unserer Ankunft war es schon dunkel.", "en": "When we arrived it was already dark." } },
+        { "de": "die Bordkarte", "en": "boarding pass", "pl": "Bordkarten", "ex": { "de": "Bitte zeigen Sie Ihre Bordkarte vor.", "en": "Please show your boarding pass." } },
+        { "de": "einchecken", "en": "to check in", "ex": { "de": "Wir können schon online einchecken.", "en": "We can already check in online." } },
+        { "de": "das Handgepäck", "en": "hand luggage", "pl": "-", "ex": { "de": "Flüssigkeiten sind im Handgepäck nur begrenzt erlaubt.", "en": "Liquids are only allowed in hand luggage in small amounts." } },
+        { "de": "annulliert", "en": "cancelled", "ex": { "de": "Unser Flug wurde annulliert.", "en": "Our flight was cancelled." } },
+        { "de": "der Anschluss", "en": "connection", "pl": "Anschlüsse", "ex": { "de": "Wegen der Verspätung habe ich meinen Anschluss verpasst.", "en": "Because of the delay I missed my connection." } },
+        { "de": "die Durchsage", "en": "announcement", "pl": "Durchsagen", "ex": { "de": "Hast du die Durchsage verstanden?", "en": "Did you understand the announcement?" } },
+        { "de": "der Fahrgast", "en": "passenger", "pl": "Fahrgäste", "ex": { "de": "Die Fahrgäste mussten in einen anderen Zug umsteigen.", "en": "The passengers had to change to another train." } },
+        { "de": "die Entschädigung", "en": "compensation", "pl": "Entschädigungen", "ex": { "de": "Bei großer Verspätung bekommt man eine Entschädigung.", "en": "If the delay is long, you get compensation." } },
+        { "de": "erstatten", "en": "to refund", "ex": { "de": "Die Bahn hat mir den Fahrpreis erstattet.", "en": "The railway refunded my fare." } },
+        { "de": "stornieren", "en": "to cancel", "ex": { "de": "Ich musste die Reise leider stornieren.", "en": "Unfortunately I had to cancel the trip." } },
+        { "de": "die Buchung", "en": "booking", "pl": "Buchungen", "ex": { "de": "Die Buchung hat problemlos geklappt.", "en": "The booking went smoothly." } },
+        { "de": "die Verpflegung", "en": "food, meals", "pl": "-", "ex": { "de": "Die Verpflegung ist im Preis inbegriffen.", "en": "Meals are included in the price." } },
+        { "de": "die Dienstreise", "en": "business trip", "pl": "Dienstreisen", "ex": { "de": "Nächste Woche bin ich auf Dienstreise.", "en": "Next week I'm away on a business trip." } },
+        { "de": "das Reiseziel", "en": "destination", "pl": "Reiseziele", "ex": { "de": "Unser Reiseziel ist dieses Jahr Portugal.", "en": "This year our destination is Portugal." } },
+        { "de": "die Ermäßigung", "en": "discount", "pl": "Ermäßigungen", "ex": { "de": "Studenten bekommen eine Ermäßigung.", "en": "Students get a discount." } },
+        { "de": "der Zuschlag", "en": "surcharge", "pl": "Zuschläge", "ex": { "de": "Für den Schnellzug zahlt man einen Zuschlag.", "en": "You pay a surcharge for the express train." } },
+        { "de": "erleben", "en": "to experience", "ex": { "de": "Auf der Reise haben wir viel erlebt.", "en": "We experienced a lot on the trip." } },
+        { "de": "sich verspäten", "en": "to be late", "ex": { "de": "Der Zug verspätet sich um zwanzig Minuten.", "en": "The train is running twenty minutes late." } },
+        { "de": "angenehm", "en": "pleasant", "ex": { "de": "Wir hatten eine angenehme Reise.", "en": "We had a pleasant journey." } },
+        { "de": "der Aufenthalt", "en": "stay", "pl": "Aufenthalte", "ex": { "de": "Wir wünschen Ihnen einen schönen Aufenthalt.", "en": "We hope you enjoy your stay." } },
+        { "de": "die Panne", "en": "breakdown", "pl": "Pannen", "ex": { "de": "Auf der Autobahn hatten wir eine Panne.", "en": "We broke down on the motorway." } },
+        { "de": "die Rückfahrt", "en": "return journey", "pl": "Rückfahrten", "ex": { "de": "Die Rückfahrt war sehr anstrengend.", "en": "The journey back was very tiring." } }
+      ]
+    },
+    {
+      "id": "neighbours",
+      "title": "Neighbours",
+      "vocab": [
+        { "de": "das Zusammenleben", "en": "living together", "pl": "-", "ex": { "de": "Für ein gutes Zusammenleben braucht man Regeln.", "en": "Living well together needs rules." } },
+        { "de": "die Hausordnung", "en": "house rules", "pl": "Hausordnungen", "ex": { "de": "Laut Hausordnung muss es ab zweiundzwanzig Uhr ruhig sein.", "en": "According to the house rules, it has to be quiet from ten p.m." } },
+        { "de": "die Ruhezeit", "en": "quiet hours", "pl": "Ruhezeiten", "ex": { "de": "Während der Ruhezeit darf man keine laute Musik hören.", "en": "During quiet hours you're not allowed to play loud music." } },
+        { "de": "die Beschwerde", "en": "complaint", "pl": "Beschwerden", "ex": { "de": "Wir haben eine Beschwerde wegen des Lärms bekommen.", "en": "We've had a complaint about the noise." } },
+        { "de": "der Lärm", "en": "noise", "pl": "-", "ex": { "de": "Der Lärm von der Baustelle stört mich.", "en": "The noise from the building site bothers me." } },
+        { "de": "stören", "en": "to disturb, bother", "ex": { "de": "Störe ich gerade?", "en": "Am I disturbing you?" } },
+        { "de": "die Rücksicht", "en": "consideration", "pl": "-", "ex": { "de": "Bitte nehmen Sie Rücksicht auf die Nachbarn.", "en": "Please be considerate of the neighbours." } },
+        { "de": "der Hausmeister", "en": "caretaker", "pl": "Hausmeister", "ex": { "de": "Der Hausmeister kümmert sich um den Garten.", "en": "The caretaker looks after the garden." } },
+        { "de": "sich kümmern um", "en": "to look after", "ex": { "de": "Kannst du dich um meine Katze kümmern?", "en": "Can you look after my cat?" } },
+        { "de": "die Hausverwaltung", "en": "property management", "pl": "Hausverwaltungen", "ex": { "de": "Ich habe die Hausverwaltung über den Schaden informiert.", "en": "I've told the property management about the damage." } },
+        { "de": "der Schaden", "en": "damage", "pl": "Schäden", "ex": { "de": "Der Schaden an der Decke ist groß.", "en": "The damage to the ceiling is extensive." } },
+        { "de": "das Treppenhaus", "en": "stairwell", "pl": "Treppenhäuser", "ex": { "de": "Im Treppenhaus dürfen keine Fahrräder stehen.", "en": "Bikes aren't allowed in the stairwell." } },
+        { "de": "der Müll", "en": "rubbish", "pl": "-", "ex": { "de": "Wer bringt diese Woche den Müll runter?", "en": "Who's taking the rubbish down this week?" } },
+        { "de": "die Mülltonne", "en": "bin", "pl": "Mülltonnen", "ex": { "de": "Die Mülltonnen stehen im Hof.", "en": "The bins are in the courtyard." } },
+        { "de": "der Hof", "en": "courtyard", "pl": "Höfe", "ex": { "de": "Die Kinder spielen im Hof.", "en": "The children play in the courtyard." } },
+        { "de": "die Gemeinschaft", "en": "community", "pl": "Gemeinschaften", "ex": { "de": "In unserem Haus gibt es eine tolle Gemeinschaft.", "en": "There's a great sense of community in our building." } },
+        { "de": "hilfsbereit", "en": "helpful", "ex": { "de": "Unsere Nachbarn sind sehr hilfsbereit.", "en": "Our neighbours are very helpful." } },
+        { "de": "annehmen", "en": "to accept; to take in", "ex": { "de": "Die Nachbarin hat mein Paket angenommen.", "en": "The neighbour took in my parcel." } },
+        { "de": "ausleihen", "en": "to borrow", "ex": { "de": "Darf ich mir deine Bohrmaschine ausleihen?", "en": "Can I borrow your drill?" } },
+        { "de": "der Streit", "en": "argument", "pl": "-", "ex": { "de": "Es gab Streit wegen der Parkplätze.", "en": "There was an argument about the parking spaces." } },
+        { "de": "sich einigen", "en": "to agree, reach an agreement", "ex": { "de": "Am Ende haben wir uns geeinigt.", "en": "In the end we reached an agreement." } },
+        { "de": "die Einladung", "en": "invitation", "pl": "Einladungen", "ex": { "de": "Danke für die Einladung zum Hoffest!", "en": "Thanks for the invitation to the courtyard party!" } },
+        { "de": "das Missverständnis", "en": "misunderstanding", "pl": "Missverständnisse", "ex": { "de": "Das war nur ein Missverständnis.", "en": "That was just a misunderstanding." } },
+        { "de": "die Klingel", "en": "doorbell", "pl": "Klingeln", "ex": { "de": "Die Klingel funktioniert nicht.", "en": "The doorbell doesn't work." } },
+        { "de": "der Briefkasten", "en": "letterbox", "pl": "Briefkästen", "ex": { "de": "Der Brief liegt im Briefkasten.", "en": "The letter is in the letterbox." } }
+      ]
+    },
+    {
+      "id": "environment",
+      "title": "The environment",
+      "vocab": [
+        { "de": "die Umwelt", "en": "environment", "pl": "-", "ex": { "de": "Wir müssen die Umwelt schützen.", "en": "We have to protect the environment." } },
+        { "de": "schützen", "en": "to protect", "ex": { "de": "Bäume schützen die Stadt vor Hitze.", "en": "Trees protect the city from heat." } },
+        { "de": "der Umweltschutz", "en": "environmental protection", "pl": "-", "ex": { "de": "Umweltschutz beginnt zu Hause.", "en": "Protecting the environment starts at home." } },
+        { "de": "das Klima", "en": "climate", "pl": "-", "ex": { "de": "Das Klima verändert sich.", "en": "The climate is changing." } },
+        { "de": "der Klimawandel", "en": "climate change", "pl": "-", "ex": { "de": "Der Klimawandel ist ein weltweites Problem.", "en": "Climate change is a global problem." } },
+        { "de": "die Energie", "en": "energy", "pl": "Energien", "ex": { "de": "Wenn wir das Licht ausschalten, sparen wir Energie.", "en": "When we switch off the light, we save energy." } },
+        { "de": "der Strom", "en": "electricity", "pl": "-", "ex": { "de": "Der Strom ist wieder teurer geworden.", "en": "Electricity has gone up again." } },
+        { "de": "erneuerbar", "en": "renewable", "ex": { "de": "Wir nutzen nur erneuerbare Energie.", "en": "We only use renewable energy." } },
+        { "de": "die Luft", "en": "air", "pl": "-", "ex": { "de": "Die Luft in der Stadt ist schlecht.", "en": "The air in the city is bad." } },
+        { "de": "der Abfall", "en": "waste", "pl": "Abfälle", "ex": { "de": "In Deutschland wird viel Abfall recycelt.", "en": "A lot of waste is recycled in Germany." } },
+        { "de": "trennen", "en": "to separate", "ex": { "de": "Wir trennen Papier, Glas und Plastik.", "en": "We separate paper, glass and plastic." } },
+        { "de": "recyceln", "en": "to recycle", "ex": { "de": "Alte Flaschen werden recycelt.", "en": "Old bottles are recycled." } },
+        { "de": "das Plastik", "en": "plastic", "pl": "-", "ex": { "de": "Viele Produkte sind in Plastik verpackt.", "en": "Many products are packed in plastic." } },
+        { "de": "die Verpackung", "en": "packaging", "pl": "Verpackungen", "ex": { "de": "Ich kaufe Obst ohne Verpackung.", "en": "I buy fruit without packaging." } },
+        { "de": "verschwenden", "en": "to waste", "ex": { "de": "Wir verschwenden zu viel Wasser.", "en": "We waste too much water." } },
+        { "de": "umweltfreundlich", "en": "environmentally friendly", "ex": { "de": "Das Fahrrad ist ein umweltfreundliches Verkehrsmittel.", "en": "The bike is an environmentally friendly means of transport." } },
+        { "de": "die Natur", "en": "nature", "pl": "-", "ex": { "de": "Am Wochenende sind wir gern in der Natur.", "en": "At the weekend we like being out in nature." } },
+        { "de": "die Hitze", "en": "heat", "pl": "-", "ex": { "de": "Die Hitze im Sommer wird immer schlimmer.", "en": "The summer heat is getting worse and worse." } },
+        { "de": "das Hochwasser", "en": "flood", "pl": "Hochwasser", "ex": { "de": "Nach dem starken Regen gab es Hochwasser.", "en": "After the heavy rain there was flooding." } },
+        { "de": "die Pflanze", "en": "plant", "pl": "Pflanzen", "ex": { "de": "Pflanzen brauchen Licht und Wasser.", "en": "Plants need light and water." } },
+        { "de": "retten", "en": "to save, rescue", "ex": { "de": "Wir können die Welt nicht allein retten.", "en": "We can't save the world on our own." } },
+        { "de": "nachhaltig", "en": "sustainable", "ex": { "de": "Ich versuche, nachhaltig zu leben.", "en": "I try to live sustainably." } },
+        { "de": "der Verbrauch", "en": "consumption", "pl": "-", "ex": { "de": "Der Verbrauch von Wasser ist zu hoch.", "en": "Water consumption is too high." } },
+        { "de": "die Solaranlage", "en": "solar panels", "pl": "Solaranlagen", "ex": { "de": "Auf dem Dach haben wir eine Solaranlage.", "en": "We've got solar panels on the roof." } },
+        { "de": "die Umweltverschmutzung", "en": "pollution", "pl": "-", "ex": { "de": "Autos tragen stark zur Umweltverschmutzung bei.", "en": "Cars contribute a lot to pollution." } }
+      ]
+    },
+    {
+      "id": "shopping",
+      "title": "Shopping online",
+      "vocab": [
+        { "de": "bestellen", "en": "to order", "ex": { "de": "Ich habe die Schuhe online bestellt.", "en": "I ordered the shoes online." } },
+        { "de": "die Bestellung", "en": "order", "pl": "Bestellungen", "ex": { "de": "Ihre Bestellung ist unterwegs.", "en": "Your order is on its way." } },
+        { "de": "liefern", "en": "to deliver", "ex": { "de": "Das Paket wird morgen geliefert.", "en": "The parcel will be delivered tomorrow." } },
+        { "de": "die Lieferung", "en": "delivery", "pl": "Lieferungen", "ex": { "de": "Die Lieferung kommt zwischen zehn und zwölf Uhr.", "en": "The delivery is coming between ten and twelve." } },
+        { "de": "kostenlos", "en": "free (of charge)", "ex": { "de": "Der Versand ist ab fünfzig Euro kostenlos.", "en": "Shipping is free on orders over fifty euros." } },
+        { "de": "der Versand", "en": "shipping", "pl": "-", "ex": { "de": "Der Versand dauert drei bis fünf Tage.", "en": "Shipping takes three to five days." } },
+        { "de": "zurückschicken", "en": "to send back", "ex": { "de": "Die Jacke ist zu klein, ich schicke sie zurück.", "en": "The jacket's too small, I'm sending it back." } },
+        { "de": "umtauschen", "en": "to exchange", "ex": { "de": "Kann ich die Hose umtauschen?", "en": "Can I exchange the trousers?" } },
+        { "de": "die Größe", "en": "size", "pl": "Größen", "ex": { "de": "Haben Sie das Kleid auch in Größe achtunddreißig?", "en": "Have you got the dress in a size thirty-eight too?" } },
+        { "de": "der Warenkorb", "en": "(shopping) basket", "pl": "Warenkörbe", "ex": { "de": "Ich habe drei Artikel im Warenkorb.", "en": "I've got three items in my basket." } },
+        { "de": "der Artikel", "en": "item; article", "pl": "Artikel", "ex": { "de": "Der Artikel ist leider ausverkauft.", "en": "Unfortunately the item is sold out." } },
+        { "de": "die Bewertung", "en": "review, rating", "pl": "Bewertungen", "ex": { "de": "Vor dem Kauf lese ich die Bewertungen.", "en": "I read the reviews before I buy." } },
+        { "de": "der Kundenservice", "en": "customer service", "pl": "-", "ex": { "de": "Ich habe den Kundenservice angerufen.", "en": "I called customer service." } },
+        { "de": "die Reklamation", "en": "complaint (about a product)", "pl": "Reklamationen", "ex": { "de": "Wegen des Fehlers habe ich eine Reklamation geschrieben.", "en": "I made a complaint because of the fault." } },
+        { "de": "reklamieren", "en": "to complain about", "ex": { "de": "Das kaputte Handy habe ich sofort reklamiert.", "en": "I complained about the broken phone straight away." } },
+        { "de": "die Garantie", "en": "guarantee", "pl": "Garantien", "ex": { "de": "Der Fernseher hat zwei Jahre Garantie.", "en": "The TV has a two-year guarantee." } },
+        { "de": "das Angebot", "en": "offer", "pl": "Angebote", "ex": { "de": "Das Angebot gilt nur bis Sonntag.", "en": "The offer is only valid until Sunday." } },
+        { "de": "vergleichen", "en": "to compare", "ex": { "de": "Ich vergleiche die Preise im Internet.", "en": "I compare prices online." } },
+        { "de": "der Gutschein", "en": "voucher", "pl": "Gutscheine", "ex": { "de": "Zum Geburtstag habe ich einen Gutschein bekommen.", "en": "I got a voucher for my birthday." } },
+        { "de": "die Zahlung", "en": "payment", "pl": "Zahlungen", "ex": { "de": "Die Zahlung per Kreditkarte hat nicht funktioniert.", "en": "The credit card payment didn't go through." } },
+        { "de": "das Kundenkonto", "en": "customer account", "pl": "Kundenkonten", "ex": { "de": "Für die Bestellung brauchen Sie ein Kundenkonto.", "en": "You need a customer account to order." } },
+        { "de": "sich anmelden", "en": "to log in; to register", "ex": { "de": "Ich melde mich mit meiner E-Mail-Adresse an.", "en": "I log in with my email address." } },
+        { "de": "die Rücksendung", "en": "return", "pl": "Rücksendungen", "ex": { "de": "Für die Rücksendung haben Sie dreißig Tage Zeit.", "en": "You have thirty days to send it back." } },
+        { "de": "der Händler", "en": "seller, dealer", "pl": "Händler", "ex": { "de": "Der Händler hat schnell geantwortet.", "en": "The seller replied quickly." } },
+        { "de": "die Qualität", "en": "quality", "pl": "Qualitäten", "ex": { "de": "Die Qualität ist leider schlecht.", "en": "Unfortunately the quality is poor." } }
+      ]
+    },
+    {
+      "id": "tv",
+      "title": "TV and entertainment",
+      "vocab": [
+        { "de": "das Fernsehen", "en": "television", "pl": "-", "ex": { "de": "Was kommt heute im Fernsehen?", "en": "What's on TV today?" } },
+        { "de": "das Programm", "en": "programme; channel", "pl": "Programme", "ex": { "de": "Das Programm ist heute langweilig.", "en": "The programmes are boring today." } },
+        { "de": "der Sender", "en": "channel, station", "pl": "Sender", "ex": { "de": "Auf welchem Sender läuft das Spiel?", "en": "Which channel is the match on?" } },
+        { "de": "der Krimi", "en": "crime drama", "pl": "Krimis", "ex": { "de": "Am Sonntag sehe ich immer den Krimi.", "en": "On Sundays I always watch the crime drama." } },
+        { "de": "die Sendung", "en": "programme, show", "pl": "Sendungen", "ex": { "de": "Die Sendung beginnt um Viertel nach acht.", "en": "The show starts at quarter past eight." } },
+        { "de": "die Serie", "en": "series", "pl": "Serien", "ex": { "de": "Ich habe die ganze Serie an einem Wochenende gesehen.", "en": "I watched the whole series in one weekend." } },
+        { "de": "die Folge", "en": "episode; consequence", "pl": "Folgen", "ex": { "de": "Die letzte Folge war sehr spannend.", "en": "The last episode was really exciting." } },
+        { "de": "die Werbung", "en": "adverts, advertising", "pl": "-", "ex": { "de": "Die Werbung nervt mich.", "en": "The adverts get on my nerves." } },
+        { "de": "der Zuschauer", "en": "viewer", "pl": "Zuschauer", "ex": { "de": "Die Sendung hatte viele Zuschauer.", "en": "The show had lots of viewers." } },
+        { "de": "der Schauspieler", "en": "actor", "pl": "Schauspieler", "ex": { "de": "Der Schauspieler ist sehr bekannt.", "en": "The actor is very well known." } },
+        { "de": "die Hauptrolle", "en": "lead role", "pl": "Hauptrollen", "ex": { "de": "Wer spielt die Hauptrolle?", "en": "Who plays the lead?" } },
+        { "de": "die Unterhaltung", "en": "entertainment; conversation", "pl": "Unterhaltungen", "ex": { "de": "Zur Unterhaltung gab es Musik und Spiele.", "en": "There was music and games for entertainment." } },
+        { "de": "die Mediathek", "en": "online library (of a TV channel)", "pl": "Mediatheken", "ex": { "de": "Die Sendung kann man später in der Mediathek sehen.", "en": "You can watch the programme later in the channel's online library." } },
+        { "de": "abonnieren", "en": "to subscribe to", "ex": { "de": "Ich habe die Zeitung abonniert.", "en": "I subscribe to the newspaper." } },
+        { "de": "die Talkshow", "en": "talk show", "pl": "Talkshows", "ex": { "de": "In der Talkshow diskutieren Politiker.", "en": "Politicians debate on the talk show." } },
+        { "de": "diskutieren", "en": "to discuss", "ex": { "de": "Wir haben lange über den Film diskutiert.", "en": "We discussed the film for a long time." } },
+        { "de": "die Meinung", "en": "opinion", "pl": "Meinungen", "ex": { "de": "Was ist deine Meinung dazu?", "en": "What's your opinion on that?" } },
+        { "de": "der Bericht", "en": "report", "pl": "Berichte", "ex": { "de": "Ich habe einen Bericht über Afrika gesehen.", "en": "I watched a report about Africa." } },
+        { "de": "die Dokumentation", "en": "documentary", "pl": "Dokumentationen", "ex": { "de": "Die Dokumentation über Wale war toll.", "en": "The documentary about whales was great." } },
+        { "de": "die Fernbedienung", "en": "remote control", "pl": "Fernbedienungen", "ex": { "de": "Wo ist die Fernbedienung?", "en": "Where's the remote?" } },
+        { "de": "ausschalten", "en": "to switch off", "ex": { "de": "Schalte bitte den Fernseher aus.", "en": "Please switch off the TV." } },
+        { "de": "das Publikum", "en": "audience", "pl": "-", "ex": { "de": "Das Publikum hat laut geklatscht.", "en": "The audience clapped loudly." } },
+        { "de": "die Kritik", "en": "review; criticism", "pl": "Kritiken", "ex": { "de": "Der Film hat gute Kritiken bekommen.", "en": "The film got good reviews." } },
+        { "de": "unterhaltsam", "en": "entertaining", "ex": { "de": "Die Show war sehr unterhaltsam.", "en": "The show was very entertaining." } },
+        { "de": "der Moderator", "en": "presenter", "pl": "Moderatoren", "ex": { "de": "Der Moderator stellt die Gäste vor.", "en": "The presenter introduces the guests." } }
+      ]
+    },
+    {
+      "id": "past",
+      "title": "The old days",
+      "vocab": [
+        { "de": "damals", "en": "back then", "ex": { "de": "Damals gab es noch keine Handys.", "en": "Back then there were no mobile phones." } },
+        { "de": "die Geschichte", "en": "story / history", "pl": "Geschichten", "ex": { "de": "Ich interessiere mich für die Geschichte meiner Stadt.", "en": "I'm interested in the history of my town." } },
+        { "de": "das Jahrhundert", "en": "century", "pl": "Jahrhunderte", "ex": { "de": "Das Haus stammt aus dem neunzehnten Jahrhundert.", "en": "The house dates from the nineteenth century." } },
+        { "de": "das Jahrzehnt", "en": "decade", "pl": "Jahrzehnte", "ex": { "de": "Er hat drei Jahrzehnte in Berlin gelebt.", "en": "He lived in Berlin for three decades." } },
+        { "de": "sich verändern", "en": "to change", "ex": { "de": "Die Stadt hat sich sehr verändert.", "en": "The town has changed a lot." } },
+        { "de": "die Vergangenheit", "en": "the past", "pl": "-", "ex": { "de": "Wir sollten aus der Vergangenheit lernen.", "en": "We should learn from the past." } },
+        { "de": "die Zukunft", "en": "future", "pl": "-", "ex": { "de": "Niemand weiß, was die Zukunft bringt.", "en": "Nobody knows what the future will bring." } },
+        { "de": "die Generation", "en": "generation", "pl": "Generationen", "ex": { "de": "Die junge Generation lebt ganz anders.", "en": "The young generation lives very differently." } },
+        { "de": "die Erfindung", "en": "invention", "pl": "Erfindungen", "ex": { "de": "Das Telefon war eine wichtige Erfindung.", "en": "The telephone was an important invention." } },
+        { "de": "erfinden", "en": "to invent", "ex": { "de": "Wer hat das Auto erfunden?", "en": "Who invented the car?" } },
+        { "de": "die Mauer", "en": "wall", "pl": "Mauern", "ex": { "de": "Die Berliner Mauer stand achtundzwanzig Jahre lang.", "en": "The Berlin Wall stood for twenty-eight years." } },
+        { "de": "der Krieg", "en": "war", "pl": "Kriege", "ex": { "de": "Nach dem Krieg wurden viele Städte neu gebaut.", "en": "After the war, many cities were rebuilt." } },
+        { "de": "der Frieden", "en": "peace", "pl": "-", "ex": { "de": "Wir leben seit vielen Jahren in Frieden.", "en": "We've lived in peace for many years." } },
+        { "de": "die Heimat", "en": "home, homeland", "pl": "-", "ex": { "de": "Meine Großeltern haben ihre Heimat nie vergessen.", "en": "My grandparents never forgot their homeland." } },
+        { "de": "auswandern", "en": "to emigrate", "ex": { "de": "Mein Urgroßvater ist nach Amerika ausgewandert.", "en": "My great-grandfather emigrated to America." } },
+        { "de": "das Ereignis", "en": "event", "pl": "Ereignisse", "ex": { "de": "Die Hochzeit war das Ereignis des Jahres.", "en": "The wedding was the event of the year." } },
+        { "de": "der Zeitzeuge", "en": "eyewitness (to history)", "pl": "Zeitzeugen", "ex": { "de": "Ein Zeitzeuge hat in unserer Schule über den Krieg erzählt.", "en": "An eyewitness talked about the war at our school." } },
+        { "de": "das Tagebuch", "en": "diary", "pl": "Tagebücher", "ex": { "de": "Meine Oma hat jeden Tag Tagebuch geschrieben.", "en": "My grandma wrote in her diary every day." } },
+        { "de": "das Denkmal", "en": "monument", "pl": "Denkmäler", "ex": { "de": "In der Altstadt gibt es viele Denkmäler.", "en": "There are lots of monuments in the old town." } },
+        { "de": "die Schreibmaschine", "en": "typewriter", "pl": "Schreibmaschinen", "ex": { "de": "Mein Vater hat noch auf einer Schreibmaschine geschrieben.", "en": "My father still wrote on a typewriter." } },
+        { "de": "historisch", "en": "historic, historical", "ex": { "de": "Die historische Altstadt ist sehr schön.", "en": "The historic old town is very beautiful." } },
+        { "de": "altmodisch", "en": "old-fashioned", "ex": { "de": "Die Möbel sind ziemlich altmodisch.", "en": "The furniture is rather old-fashioned." } },
+        { "de": "die Tradition", "en": "tradition", "pl": "Traditionen", "ex": { "de": "Weihnachten ist bei uns eine wichtige Tradition.", "en": "Christmas is an important tradition in our family." } },
+        { "de": "der Alltag", "en": "everyday life", "pl": "-", "ex": { "de": "Der Alltag war früher härter.", "en": "Everyday life used to be harder." } },
+        { "de": "sich vorstellen", "en": "to imagine", "ex": { "de": "Ich kann mir ein Leben ohne Internet nicht vorstellen.", "en": "I can't imagine life without the internet." } }
+      ]
+    },
+    {
+      "id": "paperwork",
+      "title": "Paperwork and authorities",
+      "vocab": [
+        { "de": "die Behörde", "en": "authority, public office", "pl": "Behörden", "ex": { "de": "Bei der Behörde muss man oft lange warten.", "en": "At the authorities you often have to wait a long time." } },
+        { "de": "das Amt", "en": "(public) office", "pl": "Ämter", "ex": { "de": "Ich muss morgen aufs Amt.", "en": "I have to go to the council office tomorrow." } },
+        { "de": "der Antrag", "en": "application", "pl": "Anträge", "ex": { "de": "Ich habe den Antrag online gestellt.", "en": "I submitted the application online." } },
+        { "de": "beantragen", "en": "to apply for", "ex": { "de": "Sie beantragt einen neuen Pass.", "en": "She's applying for a new passport." } },
+        { "de": "ausfüllen", "en": "to fill in", "ex": { "de": "Bitte füllen Sie das Formular vollständig aus.", "en": "Please fill in the form completely." } },
+        { "de": "unterschreiben", "en": "to sign", "ex": { "de": "Vergessen Sie nicht, den Antrag zu unterschreiben.", "en": "Don't forget to sign the application." } },
+        { "de": "die Unterschrift", "en": "signature", "pl": "Unterschriften", "ex": { "de": "Hier fehlt noch Ihre Unterschrift.", "en": "Your signature is still missing here." } },
+        { "de": "die Bescheinigung", "en": "certificate (official)", "pl": "Bescheinigungen", "ex": { "de": "Mein Arbeitgeber braucht eine Bescheinigung vom Arzt.", "en": "My employer needs a certificate from the doctor." } },
+        { "de": "beglaubigen", "en": "to certify", "ex": { "de": "Die Kopie muss beglaubigt werden.", "en": "The copy has to be certified." } },
+        { "de": "die Kopie", "en": "copy", "pl": "Kopien", "ex": { "de": "Bringen Sie bitte eine Kopie Ihres Zeugnisses mit.", "en": "Please bring a copy of your certificate." } },
+        { "de": "das Dokument", "en": "document", "pl": "Dokumente", "ex": { "de": "Alle Dokumente müssen ins Deutsche übersetzt sein.", "en": "All documents must be translated into German." } },
+        { "de": "die Anmeldung", "en": "registration", "pl": "Anmeldungen", "ex": { "de": "Die Anmeldung der Wohnung ist Pflicht.", "en": "Registering your address is compulsory." } },
+        { "de": "die Frist", "en": "deadline", "pl": "Fristen", "ex": { "de": "Die Frist endet am dreißigsten Juni.", "en": "The deadline is the thirtieth of June." } },
+        { "de": "die Aufenthaltserlaubnis", "en": "residence permit", "pl": "Aufenthaltserlaubnisse", "ex": { "de": "Er hat seine Aufenthaltserlaubnis verlängert.", "en": "He has extended his residence permit." } },
+        { "de": "die Staatsangehörigkeit", "en": "nationality", "pl": "Staatsangehörigkeiten", "ex": { "de": "Welche Staatsangehörigkeit haben Sie?", "en": "What's your nationality?" } },
+        { "de": "der Ausweis", "en": "ID card", "pl": "Ausweise", "ex": { "de": "Kann ich bitte Ihren Ausweis sehen?", "en": "Can I see your ID, please?" } },
+        { "de": "gültig", "en": "valid", "ex": { "de": "Mein Pass ist nur noch drei Monate gültig.", "en": "My passport is only valid for three more months." } },
+        { "de": "anerkennen", "en": "to recognise", "ex": { "de": "Mein Abschluss wird in Deutschland anerkannt.", "en": "My qualification is recognised in Germany." } },
+        { "de": "die Anerkennung", "en": "recognition", "pl": "Anerkennungen", "ex": { "de": "Die Anerkennung des Diploms dauert lange.", "en": "Getting the diploma recognised takes a long time." } },
+        { "de": "einreichen", "en": "to submit", "ex": { "de": "Sie müssen den Antrag bis Freitag einreichen.", "en": "You have to submit the application by Friday." } },
+        { "de": "die Unterlagen", "en": "documents, papers", "pl": "pl", "ex": { "de": "Haben Sie alle Unterlagen dabei?", "en": "Have you got all your papers with you?" } },
+        { "de": "der Bescheid", "en": "(official) decision, notice", "pl": "Bescheide", "ex": { "de": "Den Bescheid bekommen Sie per Post.", "en": "You'll get the decision by post." } },
+        { "de": "zuständig", "en": "responsible", "ex": { "de": "Wer ist für meinen Antrag zuständig?", "en": "Who's dealing with my application?" } },
+        { "de": "die Sprechzeiten", "en": "opening hours (of an office)", "pl": "pl", "ex": { "de": "Die Sprechzeiten sind montags bis freitags von acht bis zwölf.", "en": "The opening hours are Monday to Friday from eight to twelve." } },
+        { "de": "die Integration", "en": "integration", "pl": "-", "ex": { "de": "Die Sprache ist wichtig für die Integration.", "en": "Language is important for integration." } }
+      ]
+    },
+    {
+      "id": "job",
+      "title": "A new job",
+      "vocab": [
+        { "de": "die Bewerbung", "en": "(job) application", "pl": "Bewerbungen", "ex": { "de": "Ich habe zwanzig Bewerbungen geschrieben.", "en": "I've written twenty applications." } },
+        { "de": "sich bewerben", "en": "to apply (for a job)", "ex": { "de": "Sie bewirbt sich als Krankenpflegerin.", "en": "She's applying for a job as a nurse." } },
+        { "de": "der Lebenslauf", "en": "CV", "pl": "Lebensläufe", "ex": { "de": "Schicken Sie bitte auch Ihren Lebenslauf.", "en": "Please send your CV as well." } },
+        { "de": "das Vorstellungsgespräch", "en": "job interview", "pl": "Vorstellungsgespräche", "ex": { "de": "Morgen habe ich ein Vorstellungsgespräch.", "en": "I've got a job interview tomorrow." } },
+        { "de": "die Stelle", "en": "position, job", "pl": "Stellen", "ex": { "de": "Die Stelle ist ab sofort frei.", "en": "The position is available immediately." } },
+        { "de": "die Stellenanzeige", "en": "job advert", "pl": "Stellenanzeigen", "ex": { "de": "Ich lese jeden Tag die Stellenanzeigen.", "en": "I read the job adverts every day." } },
+        { "de": "der Arbeitgeber", "en": "employer", "pl": "Arbeitgeber", "ex": { "de": "Mein Arbeitgeber bezahlt das Ticket.", "en": "My employer pays for the ticket." } },
+        { "de": "der Arbeitnehmer", "en": "employee", "pl": "Arbeitnehmer", "ex": { "de": "Arbeitnehmer haben ein Recht auf Urlaub.", "en": "Employees have a right to paid holiday." } },
+        { "de": "der Vertrag", "en": "contract", "pl": "Verträge", "ex": { "de": "Der Vertrag ist auf ein Jahr befristet.", "en": "The contract is for a fixed term of one year." } },
+        { "de": "das Gehalt", "en": "salary", "pl": "Gehälter", "ex": { "de": "Das Gehalt kommt immer am Monatsende.", "en": "The salary always comes at the end of the month." } },
+        { "de": "die Erfahrung", "en": "experience", "pl": "Erfahrungen", "ex": { "de": "Haben Sie Erfahrung in diesem Bereich?", "en": "Have you got experience in this area?" } },
+        { "de": "die Ausbildung", "en": "training, apprenticeship", "pl": "Ausbildungen", "ex": { "de": "Er macht eine Ausbildung als Koch.", "en": "He's training to be a chef." } },
+        { "de": "die Qualifikation", "en": "qualification", "pl": "Qualifikationen", "ex": { "de": "Welche Qualifikationen braucht man für die Stelle?", "en": "What qualifications do you need for the job?" } },
+        { "de": "das Zeugnis", "en": "(job) reference; school report", "pl": "Zeugnisse", "ex": { "de": "Meine Chefin hat mir ein gutes Zeugnis geschrieben.", "en": "My boss wrote me a good reference." } },
+        { "de": "die Probezeit", "en": "probation (period)", "pl": "Probezeiten", "ex": { "de": "Die Probezeit dauert sechs Monate.", "en": "The probation period lasts six months." } },
+        { "de": "kündigen", "en": "to quit; to give notice", "ex": { "de": "Er hat seinen Job gekündigt.", "en": "He quit his job." } },
+        { "de": "die Kündigung", "en": "notice (of dismissal or resignation)", "pl": "Kündigungen", "ex": { "de": "Die Kündigung kam für alle überraschend.", "en": "The notice came as a surprise to everyone." } },
+        { "de": "arbeitslos", "en": "unemployed", "ex": { "de": "Nach der Kündigung war sie drei Monate arbeitslos.", "en": "After losing her job she was unemployed for three months." } },
+        { "de": "die Schicht", "en": "shift", "pl": "Schichten", "ex": { "de": "Diese Woche arbeite ich in der Nachtschicht.", "en": "This week I'm on the night shift." } },
+        { "de": "die Überstunde", "en": "hour of overtime", "pl": "Überstunden", "ex": { "de": "Letzte Woche habe ich zehn Überstunden gemacht.", "en": "Last week I did ten hours of overtime." } },
+        { "de": "einarbeiten", "en": "to train (a new colleague)", "ex": { "de": "Eine Kollegin arbeitet mich in den ersten Wochen ein.", "en": "A colleague is training me for the first few weeks." } },
+        { "de": "die Abteilung", "en": "department", "pl": "Abteilungen", "ex": { "de": "In welcher Abteilung arbeiten Sie?", "en": "Which department do you work in?" } },
+        { "de": "der Betrieb", "en": "company, firm", "pl": "Betriebe", "ex": { "de": "Der Betrieb hat zweihundert Mitarbeiter.", "en": "The firm has two hundred employees." } },
+        { "de": "der Mitarbeiter", "en": "member of staff", "pl": "Mitarbeiter", "ex": { "de": "Alle Mitarbeiter bekommen ein Weihnachtsgeld.", "en": "All the staff get a Christmas bonus." } },
+        { "de": "selbstständig", "en": "self-employed", "ex": { "de": "Mein Vater ist seit zehn Jahren selbstständig.", "en": "My father has been self-employed for ten years." } }
+      ]
+    },
+    {
+      "id": "office",
+      "title": "Office life",
+      "vocab": [
+        { "de": "der Arbeitsplatz", "en": "workplace; job", "pl": "Arbeitsplätze", "ex": { "de": "Mein Arbeitsplatz ist direkt am Fenster.", "en": "My desk is right by the window." } },
+        { "de": "die Besprechung", "en": "meeting", "pl": "Besprechungen", "ex": { "de": "Die Besprechung wurde auf Donnerstag verschoben.", "en": "The meeting has been moved to Thursday." } },
+        { "de": "das Protokoll", "en": "minutes", "pl": "Protokolle", "ex": { "de": "Wer schreibt heute das Protokoll?", "en": "Who's taking the minutes today?" } },
+        { "de": "die Tagesordnung", "en": "agenda", "pl": "Tagesordnungen", "ex": { "de": "Was steht heute auf der Tagesordnung?", "en": "What's on the agenda today?" } },
+        { "de": "der Drucker", "en": "printer", "pl": "Drucker", "ex": { "de": "Der Drucker hat kein Papier mehr.", "en": "The printer's run out of paper." } },
+        { "de": "ausdrucken", "en": "to print (out)", "ex": { "de": "Kannst du mir die Datei ausdrucken?", "en": "Can you print the file out for me?" } },
+        { "de": "die Datei", "en": "file", "pl": "Dateien", "ex": { "de": "Ich schicke dir die Datei per E-Mail.", "en": "I'll send you the file by email." } },
+        { "de": "speichern", "en": "to save", "ex": { "de": "Hast du die Datei gespeichert?", "en": "Have you saved the file?" } },
+        { "de": "der Anhang", "en": "attachment", "pl": "Anhänge", "ex": { "de": "Im Anhang finden Sie die Rechnung.", "en": "Please find the invoice attached." } },
+        { "de": "weiterleiten", "en": "to forward", "ex": { "de": "Ich leite Ihre E-Mail an meinen Kollegen weiter.", "en": "I'll forward your email to my colleague." } },
+        { "de": "erreichbar", "en": "reachable", "ex": { "de": "Heute bin ich nur per Handy erreichbar.", "en": "Today I can only be reached on my mobile." } },
+        { "de": "der Feierabend", "en": "end of the working day", "pl": "Feierabende", "ex": { "de": "Um fünf habe ich Feierabend.", "en": "I finish work at five." } },
+        { "de": "die Mittagspause", "en": "lunch break", "pl": "Mittagspausen", "ex": { "de": "In der Mittagspause gehen wir in die Kantine.", "en": "In the lunch break we go to the canteen." } },
+        { "de": "erledigen", "en": "to get done, deal with", "ex": { "de": "Ich muss heute noch viel erledigen.", "en": "I've still got lots to get done today." } },
+        { "de": "das Projekt", "en": "project", "pl": "Projekte", "ex": { "de": "Das Projekt muss bis Ende Mai fertig sein.", "en": "The project has to be finished by the end of May." } },
+        { "de": "die Leitung", "en": "management; (phone) line", "pl": "Leitungen", "ex": { "de": "Frau Berger übernimmt die Leitung des Projekts.", "en": "Ms Berger is taking over management of the project." } },
+        { "de": "vertreten", "en": "to stand in for", "ex": { "de": "Während meines Urlaubs vertritt mich Herr Kaya.", "en": "Mr Kaya is standing in for me while I'm on holiday." } },
+        { "de": "die Krankmeldung", "en": "sick note", "pl": "Krankmeldungen", "ex": { "de": "Ich schicke meine Krankmeldung heute an die Firma.", "en": "I'm sending my sick note to the company today." } },
+        { "de": "das Telefonat", "en": "phone call", "pl": "Telefonate", "ex": { "de": "Ich habe gleich ein wichtiges Telefonat.", "en": "I've got an important call in a minute." } },
+        { "de": "ausrichten", "en": "to pass on (a message)", "ex": { "de": "Können Sie ihr etwas ausrichten?", "en": "Could you give her a message?" } },
+        { "de": "zurückrufen", "en": "to call back", "ex": { "de": "Ich rufe Sie in zehn Minuten zurück.", "en": "I'll call you back in ten minutes." } },
+        { "de": "der Kopierer", "en": "photocopier", "pl": "Kopierer", "ex": { "de": "Der Kopierer ist schon wieder kaputt.", "en": "The photocopier's broken again." } },
+        { "de": "stressig", "en": "stressful", "ex": { "de": "Die letzte Woche war sehr stressig.", "en": "Last week was very stressful." } },
+        { "de": "die Gleitzeit", "en": "flexitime", "pl": "-", "ex": { "de": "Wir haben Gleitzeit, also kann ich später anfangen.", "en": "We have flexitime, so I can start later." } },
+        { "de": "das Homeoffice", "en": "working from home", "pl": "-", "ex": { "de": "Freitags arbeite ich im Homeoffice.", "en": "On Fridays I work from home." } }
+      ]
+    },
+    {
+      "id": "eating",
+      "title": "Healthy eating",
+      "vocab": [
+        { "de": "die Ernährung", "en": "diet, nutrition", "pl": "-", "ex": { "de": "Eine gesunde Ernährung ist wichtig.", "en": "A healthy diet is important." } },
+        { "de": "sich ernähren", "en": "to eat (a diet)", "ex": { "de": "Ich ernähre mich vegetarisch.", "en": "I eat a vegetarian diet." } },
+        { "de": "vegetarisch", "en": "vegetarian", "ex": { "de": "Gibt es hier auch vegetarische Gerichte?", "en": "Are there vegetarian dishes here too?" } },
+        { "de": "vegan", "en": "vegan", "ex": { "de": "Meine Tochter lebt seit einem Jahr vegan.", "en": "My daughter has been vegan for a year." } },
+        { "de": "das Gericht", "en": "dish", "pl": "Gerichte", "ex": { "de": "Mein Lieblingsgericht ist Gemüsesuppe.", "en": "My favourite dish is vegetable soup." } },
+        { "de": "die Zutat", "en": "ingredient", "pl": "Zutaten", "ex": { "de": "Für den Kuchen brauchst du nur fünf Zutaten.", "en": "You only need five ingredients for the cake." } },
+        { "de": "das Rezept", "en": "recipe; prescription", "pl": "Rezepte", "ex": { "de": "Kannst du mir das Rezept geben?", "en": "Can you give me the recipe?" } },
+        { "de": "die Kalorie", "en": "calorie", "pl": "Kalorien", "ex": { "de": "Der Salat hat wenig Kalorien.", "en": "The salad is low in calories." } },
+        { "de": "das Vitamin", "en": "vitamin", "pl": "Vitamine", "ex": { "de": "Obst und Gemüse haben viele Vitamine.", "en": "Fruit and vegetables are full of vitamins." } },
+        { "de": "enthalten", "en": "to contain", "ex": { "de": "Die Limonade enthält viel Zucker.", "en": "The lemonade contains a lot of sugar." } },
+        { "de": "der Zucker", "en": "sugar", "pl": "-", "ex": { "de": "Ich trinke Tee ohne Zucker.", "en": "I drink tea without sugar." } },
+        { "de": "das Fett", "en": "fat", "pl": "Fette", "ex": { "de": "Pommes haben viel Fett.", "en": "Chips are high in fat." } },
+        { "de": "das Vollkornbrot", "en": "wholemeal bread", "pl": "Vollkornbrote", "ex": { "de": "Zum Frühstück esse ich Vollkornbrot.", "en": "I have wholemeal bread for breakfast." } },
+        { "de": "die Mahlzeit", "en": "meal", "pl": "Mahlzeiten", "ex": { "de": "Ich esse drei Mahlzeiten am Tag.", "en": "I eat three meals a day." } },
+        { "de": "das Lebensmittel", "en": "food (item), groceries", "pl": "Lebensmittel", "ex": { "de": "Lebensmittel sind teurer geworden.", "en": "Food has become more expensive." } },
+        { "de": "das Getränk", "en": "drink", "pl": "Getränke", "ex": { "de": "Welche Getränke möchten Sie?", "en": "What would you like to drink?" } },
+        { "de": "der Appetit", "en": "appetite", "pl": "-", "ex": { "de": "Guten Appetit!", "en": "Enjoy your meal!" } },
+        { "de": "satt", "en": "full (after eating)", "ex": { "de": "Danke, ich bin satt.", "en": "No thanks, I'm full." } },
+        { "de": "abnehmen", "en": "to lose weight", "ex": { "de": "Er möchte fünf Kilo abnehmen.", "en": "He wants to lose five kilos." } },
+        { "de": "zunehmen", "en": "to put on weight", "ex": { "de": "Im Urlaub habe ich zwei Kilo zugenommen.", "en": "I put on two kilos on holiday." } },
+        { "de": "die Allergie", "en": "allergy", "pl": "Allergien", "ex": { "de": "Ich habe eine Allergie gegen Nüsse.", "en": "I'm allergic to nuts." } },
+        { "de": "scharf", "en": "spicy, hot", "ex": { "de": "Das Curry ist mir zu scharf.", "en": "The curry is too spicy for me." } },
+        { "de": "ausgewogen", "en": "balanced", "ex": { "de": "Achte auf eine ausgewogene Ernährung.", "en": "Make sure you eat a balanced diet." } },
+        { "de": "die Portion", "en": "portion", "pl": "Portionen", "ex": { "de": "Die Portionen sind hier sehr groß.", "en": "The portions here are very big." } },
+        { "de": "bio", "en": "organic", "ex": { "de": "Wir kaufen nur Bio-Eier.", "en": "We only buy organic eggs." } }
+      ]
+    },
+    {
+      "id": "insurance",
+      "title": "Insurance",
+      "vocab": [
+        { "de": "die Versicherung", "en": "insurance", "pl": "Versicherungen", "ex": { "de": "Ich brauche eine neue Versicherung für mein Auto.", "en": "I need new insurance for my car." } },
+        { "de": "versichern", "en": "to insure", "ex": { "de": "Ist dein Fahrrad gegen Diebstahl versichert?", "en": "Is your bike insured against theft?" } },
+        { "de": "der Diebstahl", "en": "theft", "pl": "Diebstähle", "ex": { "de": "Den Diebstahl habe ich sofort der Polizei gemeldet.", "en": "I reported the theft to the police straight away." } },
+        { "de": "die Haftpflichtversicherung", "en": "liability insurance", "pl": "Haftpflichtversicherungen", "ex": { "de": "Die Haftpflichtversicherung zahlt den Schaden.", "en": "The liability insurance pays for the damage." } },
+        { "de": "der Beitrag", "en": "contribution; premium", "pl": "Beiträge", "ex": { "de": "Der Beitrag wird jeden Monat abgebucht.", "en": "The premium is taken from my account every month." } },
+        { "de": "der Versicherungsschutz", "en": "insurance cover", "pl": "-", "ex": { "de": "Im Ausland haben Sie vollen Versicherungsschutz.", "en": "You're fully covered abroad." } },
+        { "de": "die Hausratversicherung", "en": "contents insurance", "pl": "Hausratversicherungen", "ex": { "de": "Die Hausratversicherung zahlt bei einem Einbruch.", "en": "Contents insurance pays out if there's a burglary." } },
+        { "de": "der Einbruch", "en": "burglary", "pl": "Einbrüche", "ex": { "de": "Nach dem Einbruch haben wir ein neues Schloss gekauft.", "en": "After the burglary we bought a new lock." } },
+        { "de": "ersetzen", "en": "to replace; to pay for", "ex": { "de": "Die Versicherung ersetzt den Schaden nicht.", "en": "The insurance won't pay for the damage." } },
+        { "de": "die Selbstbeteiligung", "en": "excess", "pl": "Selbstbeteiligungen", "ex": { "de": "Bei diesem Tarif gibt es keine Selbstbeteiligung.", "en": "There's no excess on this plan." } },
+        { "de": "betragen", "en": "to amount to", "ex": { "de": "Die Kosten betragen insgesamt dreihundert Euro.", "en": "The costs come to three hundred euros in total." } },
+        { "de": "der Tarif", "en": "rate, plan", "pl": "Tarife", "ex": { "de": "Der günstigste Tarif ist nicht immer der beste.", "en": "The cheapest plan isn't always the best." } },
+        { "de": "verursachen", "en": "to cause", "ex": { "de": "Wer hat den Unfall verursacht?", "en": "Who caused the accident?" } },
+        { "de": "der Zeuge", "en": "witness", "pl": "Zeugen", "ex": { "de": "Gibt es Zeugen für den Unfall?", "en": "Were there any witnesses to the accident?" } },
+        { "de": "der Kratzer", "en": "scratch", "pl": "Kratzer", "ex": { "de": "Das Auto hat einen Kratzer an der Tür.", "en": "The car has a scratch on the door." } },
+        { "de": "absichern", "en": "to protect (financially)", "ex": { "de": "Mit der Versicherung sichern wir unsere Familie ab.", "en": "We protect our family financially with the insurance." } },
+        { "de": "die Kosten", "en": "costs", "pl": "pl", "ex": { "de": "Die Kosten für die Reparatur sind hoch.", "en": "The repair costs are high." } },
+        { "de": "übernehmen", "en": "to take on; to cover (costs)", "ex": { "de": "Die Krankenkasse übernimmt die Behandlung.", "en": "The health insurance covers the treatment." } },
+        { "de": "die Krankenkasse", "en": "health insurance (fund)", "pl": "Krankenkassen", "ex": { "de": "Ich möchte die Krankenkasse wechseln.", "en": "I'd like to change my health insurance." } },
+        { "de": "die Behandlung", "en": "treatment", "pl": "Behandlungen", "ex": { "de": "Die Behandlung dauert drei Wochen.", "en": "The treatment lasts three weeks." } },
+        { "de": "die Rente", "en": "pension", "pl": "Renten", "ex": { "de": "Mit siebenundsechzig geht man in Rente.", "en": "People retire at sixty-seven." } },
+        { "de": "der Berater", "en": "adviser", "pl": "Berater", "ex": { "de": "Ich habe einen Termin bei einem Berater.", "en": "I've got an appointment with an adviser." } },
+        { "de": "empfehlen", "en": "to recommend", "ex": { "de": "Welche Versicherung können Sie mir empfehlen?", "en": "Which insurance can you recommend?" } },
+        { "de": "das Risiko", "en": "risk", "pl": "Risiken", "ex": { "de": "Das Risiko ist mir zu hoch.", "en": "The risk is too high for me." } },
+        { "de": "sinnvoll", "en": "sensible, worthwhile", "ex": { "de": "Eine Haftpflichtversicherung ist sehr sinnvoll.", "en": "Liability insurance is very worthwhile." } }
+      ]
+    }
+  ],
+  "test": {
+    "passMark": 6,
+    "reviewTip": "Review lessons 1, 5 and 9 (Präteritum, verbs with prepositions, connectors), then try again.",
+    "listening": [
+      {
+        "audioText": "Achtung, eine Durchsage für die Fahrgäste nach Frankfurt: Der Zug hat heute etwa zwanzig Minuten Verspätung und fährt ausnahmsweise von Gleis sieben ab. Wir bitten um Ihr Verständnis.",
+        "question": "What changes for the train to Frankfurt?",
+        "options": [
+          "It's cancelled.",
+          "It leaves about 20 minutes late from platform 7.",
+          "It leaves on time from platform 7."
+        ],
+        "answer": 1
+      },
+      {
+        "audioText": "Guten Tag, Frau Schneider, hier spricht Tim Keller aus der Personalabteilung. Wir haben Ihre Bewerbung bekommen und würden Sie gern zu einem Gespräch einladen. Hätten Sie nächste Woche am Mittwochvormittag Zeit? Rufen Sie mich bitte zurück.",
+        "question": "Why is Tim Keller calling?",
+        "options": ["To cancel an interview", "To invite her to an interview", "To ask for her documents"],
+        "answer": 1
+      },
+      {
+        "audioText": "In unserer Sendung geht es heute um das Homeoffice. Laut einer Umfrage arbeiten viele Beschäftigte lieber zu Hause, weil sie keine Zeit im Stau verlieren. Allerdings fehlt vielen der Kontakt zu den Kollegen.",
+        "question": "What do many people miss when they work from home?",
+        "options": ["Time in traffic", "Contact with colleagues", "A quiet office"],
+        "answer": 1
+      },
+      {
+        "audioText": "Liebe Kundinnen und Kunden, wegen Renovierungsarbeiten bleibt unser Geschäft vom ersten bis zum zehnten März geschlossen. Online-Bestellungen werden in dieser Zeit ganz normal verschickt.",
+        "question": "What happens to online orders in early March?",
+        "options": ["They're paused.", "They're sent out as usual.", "They cost more."],
+        "answer": 1
+      }
+    ],
+    "reading": {
+      "text": "Stadt oder Land?\n\nVor drei Jahren bin ich mit meiner Familie aus der Stadt in ein kleines Dorf gezogen. Viele Freunde fragten uns damals, ob wir uns das gut überlegt hätten. Heute kann ich sagen: Es war die richtige Entscheidung, obwohl nicht alles einfach ist.\n\nUnsere Wohnung in der Stadt war teuer und laut. Hier haben wir ein Haus mit Garten, das weniger kostet als die alte Wohnung. Die Kinder spielen draußen, und abends ist es herrlich ruhig.\n\nTrotzdem gibt es Nachteile. Der Bus fährt nur einmal pro Stunde, deshalb brauchen wir ein Auto. Und wenn wir ins Theater wollen, müssen wir fast eine Stunde fahren. Ich würde jedem raten, vor einem Umzug ein paar Wochen auf dem Land zu verbringen, um zu sehen, ob das Leben dort wirklich passt.\n\nMarkus, 41",
+      "statements": [
+        {
+          "text": "Markus wohnt seit drei Jahren auf dem Land.",
+          "isTrue": true
+        },
+        {
+          "text": "Seine Freunde fanden die Idee sofort gut.",
+          "isTrue": false
+        },
+        {
+          "text": "Das Haus kostet mehr als die alte Wohnung.",
+          "isTrue": false
+        },
+        {
+          "text": "Im Dorf fährt der Bus jede halbe Stunde.",
+          "isTrue": false
+        },
+        {
+          "text": "Die Familie braucht auf dem Land ein Auto.",
+          "isTrue": true
+        },
+        {
+          "text": "Markus rät, das Leben auf dem Land vorher auszuprobieren.",
+          "isTrue": true
+        }
+      ]
+    },
+    "writing": {
+      "task": "In an online forum, people are discussing whether it's better to learn a language online or in a classroom. Write your opinion (about 80 words): give reasons, mention one advantage of the other side, and add an example from your own experience.",
+      "placeholder": "Meiner Meinung nach …",
+      "checklist": [
+        "I gave my opinion (Meiner Meinung nach … / Ich finde …)",
+        "I gave at least two reasons (weil, deshalb …)",
+        "I mentioned an advantage of the other side (Allerdings … / Obwohl …)",
+        "I added an example from my own experience",
+        "I used a Konjunktiv II sentence (Ich würde …)",
+        "I ended with a clear closing sentence"
+      ],
+      "modelAnswer": "Meiner Meinung nach ist eine Mischung am besten. Online kann ich lernen, wann ich will, und ich spare den Weg zum Kurs. Deshalb mache ich jeden Morgen zwanzig Minuten Übungen am Handy. Allerdings fehlt mir online das Gespräch mit echten Menschen. Im Kurs muss ich spontan sprechen, auch wenn ich Fehler mache, und genau das hilft mir am meisten. Ich würde deshalb jedem raten, online zu üben und trotzdem einmal pro Woche einen Kurs zu besuchen."
+    },
+    "speaking": [
+      {
+        "task": "Plan together: a colleague is leaving. Plan a farewell party: when, where, food and a present.",
+        "modelAnswer": "Wie wäre es mit Freitagnachmittag? Da haben die meisten Zeit. Wir könnten im Besprechungsraum feiern, dann müssen wir nichts reservieren. Jeder bringt etwas zu essen mit, und für das Geschenk sammeln wir Geld. Was meinst du?"
+      },
+      {
+        "task": "Present a topic: should city centres be car-free? Talk about your experience and give your opinion.",
+        "modelAnswer": "Ich möchte über autofreie Innenstädte sprechen. In meiner Heimatstadt gibt es seit ein paar Jahren eine große Fußgängerzone, und ich finde, das Zentrum ist dadurch viel lebendiger geworden. Allerdings ist es für ältere Menschen manchmal schwierig, ohne Auto einzukaufen. Deshalb bin ich für autofreie Zentren, aber nur mit guten Busverbindungen."
+      },
+      {
+        "task": "React to your partner: Ich finde, Kinder sollten erst mit vierzehn ein Handy bekommen.",
+        "modelAnswer": "Da bin ich nicht ganz deiner Meinung. Ein Handy kann auch Sicherheit geben, zum Beispiel wenn Kinder allein zur Schule fahren. Aber man sollte klare Regeln haben, wie lange sie es benutzen dürfen."
+      },
+      {
+        "task": "Ask your partner a question about their presentation.",
+        "modelAnswer": "Du hast gesagt, dass das Zentrum lebendiger geworden ist. Wie haben die Geschäfte dort auf die Fußgängerzone reagiert?"
+      }
+    ]
+  }
+}

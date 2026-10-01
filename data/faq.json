@@ -1,0 +1,34 @@
+[
+  {
+    "question": "How should I use this every day?",
+    "answer": "Follow Today's session on the home page: review the words that are due, learn ten new words, read the next lesson's grammar, then do its exercises. It takes about fifteen minutes, and every answer fills in today's square on your practice calendar."
+  },
+  {
+    "question": "How do the word reviews work?",
+    "answer": "New words join your review queue when you first answer them on a flashcard, and a finished lesson adds all its words. A word you know comes back after 1 day, then 3, 7, 14 and 30 days; a word you miss comes back the same day. The Due today deck in Flashcards shows what's due, and each card says why it's back."
+  },
+  {
+    "question": "Where do the new words come from?",
+    "answer": "Each level has word topics, such as numbers, food, the home, work and travel: 24 for A1, 6 for A2 and 11 for B1. Today's session takes ten words a day from the next topic, and you can open any topic in Flashcards. The back of each card shows the word's plural and an example sentence, and the word list under a topic lets you hear both."
+  },
+  {
+    "question": "Do I have to start at A1?",
+    "answer": "No. All three levels are open. Switch to A2 or B1 next to the line on the home page, and the site remembers the level you were last working on."
+  },
+  {
+    "question": "Are the mock tests real exams?",
+    "answer": "No. Each level has a mock test in the four-part shape of exams at that level (listening, reading, writing, speaking) with original practice questions. You book a real exam at an official Goethe or telc centre."
+  },
+  {
+    "question": "What are the certificates?",
+    "answer": "A practice record for each level. It appears once you reach the pass mark in that level's mock test, counting listening and reading. It's for your own motivation and isn't an official result."
+  },
+  {
+    "question": "How does the listening work?",
+    "answer": "Every German word and sentence is a recording made with a natural German voice, so it sounds the same in every browser and works offline. Tap any speaker button to hear it."
+  },
+  {
+    "question": "Where is my progress saved?",
+    "answer": "In this browser on this device. Clearing browser data or using Reset progress starts you over."
+  }
+]

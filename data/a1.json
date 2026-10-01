@@ -1,0 +1,1845 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Introducing yourself",
+      "germanTitle": "Sich vorstellen",
+      "intro": "Your first sentences in German: your name, where you're from and where you live. You'll use the two verbs you need most, sein (to be) and heißen (to be called).",
+      "table": {
+        "head": ["", "sein", "heißen"],
+        "rows": [
+          ["ich", "bin", "heiße"],
+          ["du", "bist", "heißt"],
+          ["er / sie / es", "ist", "heißt"],
+          ["wir", "sind", "heißen"],
+          ["ihr", "seid", "heißt"],
+          ["sie / Sie", "sind", "heißen"]
+        ]
+      },
+      "rules": [
+        "Sie (capital S) is the polite 'you'. Use it with strangers, at offices and at work. It takes the same verb form as sie (they).",
+        "Where you're from: kommen aus + country. Ich komme aus Kanada.",
+        "Where you live: wohnen in + city. Ich wohne in Leipzig.",
+        "Questions: Wie heißt du? Woher kommst du? Wo wohnst du?"
+      ],
+      "examples": [
+        {
+          "de": "Hallo, ich heiße Anna.",
+          "en": "Hi, my name is Anna."
+        },
+        {
+          "de": "Woher kommen Sie?",
+          "en": "Where are you from? (polite)"
+        },
+        {
+          "de": "Ich komme aus Brasilien und wohne jetzt in Berlin.",
+          "en": "I'm from Brazil and now live in Berlin."
+        },
+        {
+          "de": "Wir sind neu hier.",
+          "en": "We're new here."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Wir ___ neu hier.",
+          "options": ["bin", "sind", "seid", "ist"],
+          "answer": 1,
+          "hint": "wir → sind"
+        },
+        {
+          "type": "fill",
+          "question": "Ich ___ Maya. (heißen)",
+          "answers": ["heiße"],
+          "hint": "ich → heiße"
+        },
+        {
+          "type": "fill",
+          "question": "Er ___ aus Spanien. (kommen)",
+          "answers": ["kommt"],
+          "hint": "er → stem + t: kommt"
+        },
+        {
+          "type": "choice",
+          "question": "Ihr ___ in München.",
+          "options": ["sind", "ist", "seid", "bist"],
+          "answer": 2,
+          "hint": "ihr → seid"
+        },
+        {
+          "type": "order",
+          "question": "Build the question: Where do you live?",
+          "words": ["du", "Wo", "wohnst"],
+          "answers": ["Wo wohnst du"],
+          "hint": "Question word, then verb, then subject."
+        },
+        {
+          "type": "write",
+          "question": "Introduce yourself in 3 sentences: name, country, city.",
+          "modelAnswer": "Ich heiße Maya. Ich komme aus Brasilien. Ich wohne in Leipzig."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "Hallo",
+          "en": "hello"
+        },
+        {
+          "de": "Tschüss",
+          "en": "bye"
+        },
+        {
+          "de": "heißen",
+          "en": "to be called"
+        },
+        {
+          "de": "kommen aus",
+          "en": "to come from"
+        },
+        {
+          "de": "wohnen",
+          "en": "to live"
+        },
+        {
+          "de": "woher",
+          "en": "from where"
+        },
+        {
+          "de": "wo",
+          "en": "where"
+        },
+        {
+          "de": "jetzt",
+          "en": "now"
+        },
+        {
+          "de": "neu",
+          "en": "new"
+        },
+        {
+          "de": "das Land",
+          "en": "country",
+          "pl": "Länder"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Present tense verbs",
+      "germanTitle": "Verben im Präsens",
+      "intro": "Most German verbs follow one pattern. Take the infinitive, remove -en to get the stem, then add an ending for each person.",
+      "table": {
+        "head": ["", "lernen", "arbeiten"],
+        "rows": [
+          ["ich", "lerne", "arbeite"],
+          ["du", "lernst", "arbeitest"],
+          ["er / sie / es", "lernt", "arbeitet"],
+          ["wir", "lernen", "arbeiten"],
+          ["ihr", "lernt", "arbeitet"],
+          ["sie / Sie", "lernen", "arbeiten"]
+        ]
+      },
+      "rules": [
+        "Endings: -e, -st, -t, -en, -t, -en.",
+        "If the stem ends in -t or -d, add an extra e for du, er and ihr: du arbeitest, er findet.",
+        "If the stem ends in -s, -ß or -z, du only adds -t: du heißt, du tanzt.",
+        "wir, sie and Sie always look like the infinitive."
+      ],
+      "examples": [
+        {
+          "de": "Ich lerne jeden Tag Deutsch.",
+          "en": "I learn German every day."
+        },
+        {
+          "de": "Arbeitest du heute?",
+          "en": "Are you working today?"
+        },
+        {
+          "de": "Sie trinkt gern Tee.",
+          "en": "She likes drinking tea."
+        },
+        {
+          "de": "Wir kaufen Brot.",
+          "en": "We're buying bread."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Du ___ Deutsch. (lernen)",
+          "answers": ["lernst"],
+          "hint": "du → stem + st"
+        },
+        {
+          "type": "fill",
+          "question": "Sie (she) ___ viel. (arbeiten)",
+          "answers": ["arbeitet"],
+          "hint": "Stem ends in -t, so add -et."
+        },
+        {
+          "type": "choice",
+          "question": "Wir ___ am Samstag Fußball.",
+          "options": ["spiele", "spielt", "spielen", "spielst"],
+          "answer": 2,
+          "hint": "wir → like the infinitive"
+        },
+        {
+          "type": "fill",
+          "question": "Ihr ___ Pause. (machen)",
+          "answers": ["macht"],
+          "hint": "ihr → stem + t"
+        },
+        {
+          "type": "choice",
+          "question": "Du ___ gern. (tanzen)",
+          "options": ["tanzst", "tanzt", "tanzest", "tanzen"],
+          "answer": 1,
+          "hint": "Stem ends in -z, so du only adds -t."
+        },
+        {
+          "type": "order",
+          "question": "Build: I learn German every day.",
+          "words": ["Deutsch", "lerne", "Ich", "jeden", "Tag"],
+          "answers": ["Ich lerne jeden Tag Deutsch"],
+          "hint": "Subject, verb, time, then object."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "lernen",
+          "en": "to learn"
+        },
+        {
+          "de": "arbeiten",
+          "en": "to work"
+        },
+        {
+          "de": "spielen",
+          "en": "to play"
+        },
+        {
+          "de": "machen",
+          "en": "to do / make"
+        },
+        {
+          "de": "trinken",
+          "en": "to drink"
+        },
+        {
+          "de": "kaufen",
+          "en": "to buy"
+        },
+        {
+          "de": "tanzen",
+          "en": "to dance"
+        },
+        {
+          "de": "jeden Tag",
+          "en": "every day"
+        },
+        {
+          "de": "gern",
+          "en": "gladly / like to"
+        },
+        {
+          "de": "viel",
+          "en": "a lot"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Articles and nouns",
+      "germanTitle": "Artikel und Nomen",
+      "intro": "Every German noun has a gender: masculine, feminine or neutral. The article shows it, so always learn a noun together with its article.",
+      "table": {
+        "head": ["", "the", "a"],
+        "rows": [
+          ["masculine", "der Tisch", "ein Tisch"],
+          ["feminine", "die Lampe", "eine Lampe"],
+          ["neuter", "das Buch", "ein Buch"],
+          ["plural", "die Bücher", "(no article)"]
+        ]
+      },
+      "rules": [
+        "Nouns are always written with a capital letter.",
+        "Endings that are usually feminine: -ung, -heit, -keit, -ion. die Zeitung, die Wohnung.",
+        "Nouns ending in -chen are always neuter: das Mädchen, das Brötchen.",
+        "The plural article is always die, whatever the gender."
+      ],
+      "examples": [
+        {
+          "de": "Das ist der Stuhl.",
+          "en": "That's the chair."
+        },
+        {
+          "de": "Das ist eine Wohnung in Köln.",
+          "en": "That's a flat in Cologne."
+        },
+        {
+          "de": "Die Kinder spielen.",
+          "en": "The children are playing."
+        },
+        {
+          "de": "Ich brauche ein Handy.",
+          "en": "I need a phone."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "___ Tisch",
+          "options": ["der", "die", "das"],
+          "answer": 0,
+          "hint": "der Tisch (masculine)"
+        },
+        {
+          "type": "choice",
+          "question": "___ Zeitung",
+          "options": ["der", "die", "das"],
+          "answer": 1,
+          "hint": "-ung nouns are feminine."
+        },
+        {
+          "type": "choice",
+          "question": "___ Mädchen",
+          "options": ["der", "die", "das"],
+          "answer": 2,
+          "hint": "-chen nouns are always neuter."
+        },
+        {
+          "type": "fill",
+          "question": "Das ist ___ Lampe. (a)",
+          "answers": ["eine"],
+          "hint": "die Lampe → eine"
+        },
+        {
+          "type": "fill",
+          "question": "Das ist ___ Buch. (a)",
+          "answers": ["ein"],
+          "hint": "das Buch → ein"
+        },
+        {
+          "type": "choice",
+          "question": "Plural: das Kind → die ___",
+          "options": ["Kinds", "Kinder", "Kinden"],
+          "answer": 1,
+          "hint": "die Kinder"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Tisch",
+          "en": "table",
+          "pl": "Tische"
+        },
+        {
+          "de": "der Stuhl",
+          "en": "chair",
+          "pl": "Stühle"
+        },
+        {
+          "de": "die Lampe",
+          "en": "lamp",
+          "pl": "Lampen"
+        },
+        {
+          "de": "die Zeitung",
+          "en": "newspaper",
+          "pl": "Zeitungen"
+        },
+        {
+          "de": "die Wohnung",
+          "en": "flat",
+          "pl": "Wohnungen"
+        },
+        {
+          "de": "das Buch",
+          "en": "book",
+          "pl": "Bücher"
+        },
+        {
+          "de": "das Mädchen",
+          "en": "girl",
+          "pl": "Mädchen"
+        },
+        {
+          "de": "das Kind",
+          "en": "child",
+          "pl": "Kinder"
+        },
+        {
+          "de": "das Handy",
+          "en": "mobile phone",
+          "pl": "Handys"
+        },
+        {
+          "de": "brauchen",
+          "en": "to need"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Word order",
+      "germanTitle": "Satzbau",
+      "intro": "The single most important rule in German: in a statement, the verb is always in position 2. Whatever comes first, the verb comes next.",
+      "table": {
+        "head": ["Position 1", "Verb", "Rest"],
+        "rows": [
+          ["Ich", "lerne", "heute Deutsch."],
+          ["Heute", "lerne", "ich Deutsch."],
+          ["Am Montag", "fahre", "ich nach Berlin."],
+          ["Wo", "wohnst", "du?"]
+        ]
+      },
+      "rules": [
+        "Position 1 can be the subject, a time phrase or a question word. The verb still stays second.",
+        "If a time phrase comes first, the subject moves behind the verb: Heute lerne ich.",
+        "Yes/no questions start with the verb: Wohnst du in Berlin?",
+        "Question words: was (what), wer (who), wo (where), wann (when), wie (how)."
+      ],
+      "examples": [
+        {
+          "de": "Morgen fahre ich nach Hamburg.",
+          "en": "Tomorrow I'm going to Hamburg."
+        },
+        {
+          "de": "Wann beginnt der Kurs?",
+          "en": "When does the course start?"
+        },
+        {
+          "de": "Trinkst du Kaffee?",
+          "en": "Do you drink coffee?"
+        },
+        {
+          "de": "Am Abend koche ich.",
+          "en": "In the evening I cook."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Which sentence is correct?",
+          "options": ["Heute ich lerne Deutsch.", "Heute lerne ich Deutsch.", "Lerne heute ich Deutsch."],
+          "answer": 1,
+          "hint": "Time first, then the verb, then the subject."
+        },
+        {
+          "type": "order",
+          "question": "Build: Tomorrow I'm going to Berlin.",
+          "words": ["ich", "nach", "Morgen", "fahre", "Berlin"],
+          "answers": ["Morgen fahre ich nach Berlin"],
+          "hint": "Morgen is position 1, so the verb follows."
+        },
+        {
+          "type": "order",
+          "question": "Build the yes/no question: Do you drink coffee?",
+          "words": ["Kaffee", "du", "Trinkst"],
+          "answers": ["Trinkst du Kaffee"],
+          "hint": "Yes/no questions start with the verb."
+        },
+        {
+          "type": "choice",
+          "question": "___ beginnt der Kurs? — Um neun Uhr.",
+          "options": ["Wo", "Wann", "Wer"],
+          "answer": 1,
+          "hint": "Asking about time → wann"
+        },
+        {
+          "type": "order",
+          "question": "Build: In the evening I cook.",
+          "words": ["koche", "Am", "ich", "Abend"],
+          "answers": ["Am Abend koche ich"],
+          "hint": "Am Abend counts as position 1."
+        },
+        {
+          "type": "write",
+          "question": "Write two sentences about your day that start with a time: Heute… / Am Abend…",
+          "modelAnswer": "Heute arbeite ich bis fünf Uhr. Am Abend lerne ich Deutsch."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "was",
+          "en": "what"
+        },
+        {
+          "de": "wer",
+          "en": "who"
+        },
+        {
+          "de": "wann",
+          "en": "when"
+        },
+        {
+          "de": "wie",
+          "en": "how"
+        },
+        {
+          "de": "heute",
+          "en": "today"
+        },
+        {
+          "de": "morgen",
+          "en": "tomorrow"
+        },
+        {
+          "de": "der Abend",
+          "en": "evening",
+          "pl": "Abende"
+        },
+        {
+          "de": "fahren",
+          "en": "to go / drive"
+        },
+        {
+          "de": "kochen",
+          "en": "to cook"
+        },
+        {
+          "de": "der Kurs",
+          "en": "course",
+          "pl": "Kurse"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The accusative",
+      "germanTitle": "Der Akkusativ",
+      "intro": "The accusative marks the object of a sentence, the thing you have, want or buy. The good news is that only masculine words change.",
+      "table": {
+        "head": ["", "Nominative", "Accusative"],
+        "rows": [
+          ["masculine", "der / ein", "den / einen"],
+          ["feminine", "die / eine", "die / eine"],
+          ["neuter", "das / ein", "das / ein"],
+          ["plural", "die", "die"]
+        ]
+      },
+      "rules": [
+        "Verbs like haben, möchten, kaufen and brauchen take an accusative object.",
+        "haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben.",
+        "möchten (would like): ich möchte, du möchtest, er möchte, wir möchten.",
+        "Ask yourself: is the noun masculine and the object? Then der → den, ein → einen."
+      ],
+      "examples": [
+        {
+          "de": "Ich habe einen Bruder.",
+          "en": "I have a brother."
+        },
+        {
+          "de": "Wir kaufen den Tisch.",
+          "en": "We're buying the table."
+        },
+        {
+          "de": "Ich möchte einen Kaffee, bitte.",
+          "en": "I'd like a coffee, please."
+        },
+        {
+          "de": "Hast du eine Schwester?",
+          "en": "Do you have a sister?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Ich habe ___ Bruder. (a)",
+          "answers": ["einen"],
+          "hint": "der Bruder is masculine and the object → einen"
+        },
+        {
+          "type": "choice",
+          "question": "Ich kaufe ___ Stuhl.",
+          "options": ["der", "den", "dem"],
+          "answer": 1,
+          "hint": "Masculine object → den"
+        },
+        {
+          "type": "choice",
+          "question": "Sie möchte ___ Kaffee.",
+          "options": ["ein", "eine", "einen"],
+          "answer": 2,
+          "hint": "der Kaffee → einen Kaffee"
+        },
+        {
+          "type": "fill",
+          "question": "Du ___ ein Auto. (haben)",
+          "answers": ["hast"],
+          "hint": "du → hast"
+        },
+        {
+          "type": "choice",
+          "question": "Wir brauchen ___ Wohnung.",
+          "options": ["einen", "eine", "ein"],
+          "answer": 1,
+          "hint": "Feminine doesn't change → eine"
+        },
+        {
+          "type": "write",
+          "question": "Order in a café: say what you'd like to drink and eat.",
+          "modelAnswer": "Ich möchte einen Tee und ein Brötchen, bitte."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Bruder",
+          "en": "brother",
+          "pl": "Brüder"
+        },
+        {
+          "de": "die Schwester",
+          "en": "sister",
+          "pl": "Schwestern"
+        },
+        {
+          "de": "der Kaffee",
+          "en": "coffee",
+          "pl": "Kaffees"
+        },
+        {
+          "de": "der Tee",
+          "en": "tea",
+          "pl": "Tees"
+        },
+        {
+          "de": "das Wasser",
+          "en": "water",
+          "pl": "-"
+        },
+        {
+          "de": "das Brötchen",
+          "en": "bread roll",
+          "pl": "Brötchen"
+        },
+        {
+          "de": "das Auto",
+          "en": "car",
+          "pl": "Autos"
+        },
+        {
+          "de": "haben",
+          "en": "to have"
+        },
+        {
+          "de": "möchten",
+          "en": "would like"
+        },
+        {
+          "de": "bitte",
+          "en": "please"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Saying no",
+      "germanTitle": "nicht oder kein",
+      "intro": "German has two words for 'not'. Use kein with nouns that would have ein or no article. Use nicht for everything else.",
+      "table": {
+        "head": ["", "kein (accusative)"],
+        "rows": [
+          ["masculine", "keinen Bruder"],
+          ["feminine", "keine Zeit"],
+          ["neuter", "kein Auto"],
+          ["plural", "keine Kinder"]
+        ]
+      },
+      "rules": [
+        "ein + noun becomes kein + noun: Ich habe ein Auto → Ich habe kein Auto.",
+        "Nouns with no article also take kein: Ich habe Zeit → Ich habe keine Zeit.",
+        "nicht negates verbs, adjectives and nouns with der/die/das: Ich arbeite nicht. Das ist nicht teuer.",
+        "kein takes the same endings as ein."
+      ],
+      "examples": [
+        {
+          "de": "Ich habe leider keine Zeit.",
+          "en": "Unfortunately I don't have time."
+        },
+        {
+          "de": "Das ist nicht teuer.",
+          "en": "That isn't expensive."
+        },
+        {
+          "de": "Er hat keinen Bruder.",
+          "en": "He doesn't have a brother."
+        },
+        {
+          "de": "Heute arbeite ich nicht.",
+          "en": "I'm not working today."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich habe ___ Zeit.",
+          "options": ["nicht", "keine", "kein"],
+          "answer": 1,
+          "hint": "Zeit has no article and is feminine → keine"
+        },
+        {
+          "type": "choice",
+          "question": "Das ist ___ teuer.",
+          "options": ["nicht", "kein", "keine"],
+          "answer": 0,
+          "hint": "teuer is an adjective → nicht"
+        },
+        {
+          "type": "fill",
+          "question": "Ich habe ___ Bruder.",
+          "answers": ["keinen"],
+          "hint": "Masculine object → keinen"
+        },
+        {
+          "type": "choice",
+          "question": "Er trinkt ___ Kaffee.",
+          "options": ["nicht", "keinen", "kein"],
+          "answer": 1,
+          "hint": "der Kaffee, object, no article → keinen"
+        },
+        {
+          "type": "order",
+          "question": "Build: I'm not coming today.",
+          "words": ["heute", "komme", "nicht", "Ich"],
+          "answers": ["Ich komme heute nicht"],
+          "hint": "nicht goes at the end here."
+        },
+        {
+          "type": "fill",
+          "question": "Wir haben ___ Auto.",
+          "answers": ["kein"],
+          "hint": "das Auto → kein"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "nicht",
+          "en": "not"
+        },
+        {
+          "de": "kein",
+          "en": "no / not a"
+        },
+        {
+          "de": "die Zeit",
+          "en": "time",
+          "pl": "Zeiten"
+        },
+        {
+          "de": "teuer",
+          "en": "expensive"
+        },
+        {
+          "de": "billig",
+          "en": "cheap"
+        },
+        {
+          "de": "gut",
+          "en": "good"
+        },
+        {
+          "de": "schlecht",
+          "en": "bad"
+        },
+        {
+          "de": "leider",
+          "en": "unfortunately"
+        },
+        {
+          "de": "groß",
+          "en": "big"
+        },
+        {
+          "de": "klein",
+          "en": "small"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Time and appointments",
+      "germanTitle": "Uhrzeit und Termine",
+      "intro": "Appointments are everywhere in German life: doctors, offices, courses. Here is how to say and understand the time.",
+      "table": {
+        "head": ["Time", "How you say it"],
+        "rows": [
+          ["8:00", "acht Uhr"],
+          ["8:10", "zehn nach acht"],
+          ["8:15", "Viertel nach acht"],
+          ["8:30", "halb neun"],
+          ["8:45", "Viertel vor neun"],
+          ["8:50", "zehn vor neun"]
+        ]
+      },
+      "rules": [
+        "halb means half TO the next hour: halb neun is 8:30, not 9:30.",
+        "At a time: um. Der Kurs beginnt um neun Uhr.",
+        "On a day: am. Am Montag habe ich einen Termin.",
+        "Official times such as trains and offices use the 24-hour clock: vierzehn Uhr zwanzig (14:20)."
+      ],
+      "examples": [
+        {
+          "de": "Wie spät ist es? — Es ist halb acht.",
+          "en": "What time is it? — It's 7:30."
+        },
+        {
+          "de": "Mein Termin ist um zehn Uhr.",
+          "en": "My appointment is at ten."
+        },
+        {
+          "de": "Am Freitag habe ich frei.",
+          "en": "I'm off on Friday."
+        },
+        {
+          "de": "Der Zug fährt um vierzehn Uhr zwanzig.",
+          "en": "The train leaves at 14:20."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "8:30",
+          "options": ["halb acht", "halb neun", "acht halb"],
+          "answer": 1,
+          "hint": "halb = half to the next hour"
+        },
+        {
+          "type": "choice",
+          "question": "7:15",
+          "options": ["Viertel vor sieben", "Viertel nach sieben", "halb sieben"],
+          "answer": 1,
+          "hint": "15 past → Viertel nach"
+        },
+        {
+          "type": "choice",
+          "question": "10:45",
+          "options": ["Viertel vor elf", "Viertel nach zehn", "halb elf"],
+          "answer": 0,
+          "hint": "15 to 11 → Viertel vor elf"
+        },
+        {
+          "type": "fill",
+          "question": "Der Termin ist ___ zehn Uhr.",
+          "answers": ["um"],
+          "hint": "At a time → um"
+        },
+        {
+          "type": "fill",
+          "question": "___ Freitag habe ich frei.",
+          "answers": ["am"],
+          "hint": "On a day → am"
+        },
+        {
+          "type": "listen",
+          "question": "Listen and pick the time you hear.",
+          "audioText": "Der Kurs beginnt um halb sieben.",
+          "options": ["6:30", "7:30", "6:00"],
+          "answer": 0,
+          "hint": "halb sieben = 6:30"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "die Uhr",
+          "en": "clock / o'clock",
+          "pl": "Uhren"
+        },
+        {
+          "de": "halb",
+          "en": "half"
+        },
+        {
+          "de": "das Viertel",
+          "en": "quarter",
+          "pl": "Viertel"
+        },
+        {
+          "de": "der Termin",
+          "en": "appointment",
+          "pl": "Termine"
+        },
+        {
+          "de": "beginnen",
+          "en": "to begin"
+        },
+        {
+          "de": "der Montag",
+          "en": "Monday",
+          "pl": "Montage"
+        },
+        {
+          "de": "der Freitag",
+          "en": "Friday",
+          "pl": "Freitage"
+        },
+        {
+          "de": "das Wochenende",
+          "en": "weekend",
+          "pl": "Wochenenden"
+        },
+        {
+          "de": "frei haben",
+          "en": "to be off"
+        },
+        {
+          "de": "der Zug",
+          "en": "train",
+          "pl": "Züge"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Separable verbs",
+      "germanTitle": "Trennbare Verben",
+      "intro": "Some verbs split in two. The main part stays in position 2 and the prefix jumps to the very end of the sentence.",
+      "table": {
+        "head": ["Verb", "In a sentence"],
+        "rows": [
+          ["aufstehen", "Ich stehe um sieben Uhr auf."],
+          ["einkaufen", "Wir kaufen heute ein."],
+          ["anrufen", "Er ruft seine Mutter an."],
+          ["fernsehen", "Sie sieht am Abend fern."]
+        ]
+      },
+      "rules": [
+        "Common separable prefixes: auf-, an-, ein-, aus-, mit-, fern-.",
+        "The conjugated part goes in position 2 and the prefix goes to the end.",
+        "In the dictionary the verb stays joined: aufstehen.",
+        "The stress is on the prefix: AUFstehen, EINkaufen."
+      ],
+      "examples": [
+        {
+          "de": "Ich stehe jeden Tag um sechs Uhr auf.",
+          "en": "I get up at six every day."
+        },
+        {
+          "de": "Kaufst du morgen ein?",
+          "en": "Are you shopping tomorrow?"
+        },
+        {
+          "de": "Ruf mich bitte an!",
+          "en": "Please call me!"
+        },
+        {
+          "de": "Am Wochenende sehe ich fern.",
+          "en": "At the weekend I watch TV."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "order",
+          "question": "Build: I get up at seven.",
+          "words": ["auf", "Ich", "um", "stehe", "sieben", "Uhr"],
+          "answers": ["Ich stehe um sieben Uhr auf"],
+          "hint": "auf goes to the end."
+        },
+        {
+          "type": "fill",
+          "question": "Wir kaufen am Samstag ___. (einkaufen)",
+          "answers": ["ein"],
+          "hint": "The prefix ein goes to the end."
+        },
+        {
+          "type": "choice",
+          "question": "Rufst du mich morgen ___?",
+          "options": ["auf", "an", "ein"],
+          "answer": 1,
+          "hint": "anrufen → an"
+        },
+        {
+          "type": "fill",
+          "question": "Ich ___ um sechs Uhr auf. (aufstehen)",
+          "answers": ["stehe"],
+          "hint": "ich → stehe, prefix at the end"
+        },
+        {
+          "type": "order",
+          "question": "Build: He watches TV in the evening.",
+          "words": ["am", "fern", "Er", "Abend", "sieht"],
+          "answers": ["Er sieht am Abend fern"],
+          "hint": "fern goes to the end."
+        },
+        {
+          "type": "write",
+          "question": "Describe your morning in two sentences using aufstehen and one other separable verb.",
+          "modelAnswer": "Ich stehe um sieben Uhr auf. Dann rufe ich meine Mutter an."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "aufstehen",
+          "en": "to get up"
+        },
+        {
+          "de": "einkaufen",
+          "en": "to shop"
+        },
+        {
+          "de": "anrufen",
+          "en": "to call"
+        },
+        {
+          "de": "fernsehen",
+          "en": "to watch TV"
+        },
+        {
+          "de": "der Morgen",
+          "en": "morning",
+          "pl": "Morgen"
+        },
+        {
+          "de": "der Samstag",
+          "en": "Saturday",
+          "pl": "Samstage"
+        },
+        {
+          "de": "die Mutter",
+          "en": "mother",
+          "pl": "Mütter"
+        },
+        {
+          "de": "dann",
+          "en": "then"
+        },
+        {
+          "de": "mitkommen",
+          "en": "to come along"
+        },
+        {
+          "de": "ausgehen",
+          "en": "to go out"
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "hello",
+      "title": "Meeting people",
+      "vocab": [
+        { "de": "der Name", "en": "name", "pl": "Namen", "ex": { "de": "Mein Name ist Lena Weber.", "en": "My name is Lena Weber." } },
+        { "de": "der Vorname", "en": "first name", "pl": "Vornamen", "ex": { "de": "Wie ist Ihr Vorname?", "en": "What is your first name?" } },
+        { "de": "der Nachname", "en": "surname", "pl": "Nachnamen", "ex": { "de": "Mein Nachname ist Schmidt.", "en": "My surname is Schmidt." } },
+        { "de": "die Adresse", "en": "address", "pl": "Adressen", "ex": { "de": "Wie ist deine Adresse?", "en": "What's your address?" } },
+        { "de": "die Telefonnummer", "en": "phone number", "pl": "Telefonnummern", "ex": { "de": "Wie ist Ihre Telefonnummer?", "en": "What's your phone number?" } },
+        { "de": "die Sprache", "en": "language", "pl": "Sprachen", "ex": { "de": "Ich spreche zwei Sprachen.", "en": "I speak two languages." } },
+        { "de": "sprechen", "en": "to speak", "ex": { "de": "Sprichst du Englisch?", "en": "Do you speak English?" } },
+        { "de": "Deutsch", "en": "German (language)", "ex": { "de": "Ich lerne Deutsch.", "en": "I'm learning German." } },
+        { "de": "Deutschland", "en": "Germany", "ex": { "de": "Ich wohne in Deutschland.", "en": "I live in Germany." } },
+        { "de": "Österreich", "en": "Austria", "ex": { "de": "Wien liegt in Österreich.", "en": "Vienna is in Austria." } },
+        { "de": "die Schweiz", "en": "Switzerland", "pl": "-", "ex": { "de": "Er kommt aus der Schweiz.", "en": "He comes from Switzerland." } },
+        { "de": "der Herr", "en": "Mr; gentleman", "pl": "Herren", "ex": { "de": "Guten Tag, Herr Meyer!", "en": "Hello, Mr Meyer!" } },
+        { "de": "die Frau", "en": "woman; wife; Mrs / Ms", "pl": "Frauen", "ex": { "de": "Das ist Frau Klein.", "en": "This is Ms Klein." } },
+        { "de": "Guten Morgen!", "en": "Good morning!", "ex": { "de": "Guten Morgen, Herr Weber!", "en": "Good morning, Mr Weber!" } },
+        { "de": "Auf Wiedersehen!", "en": "Goodbye!", "ex": { "de": "Auf Wiedersehen und bis morgen!", "en": "Goodbye and see you tomorrow!" } },
+        { "de": "Wie geht's?", "en": "How are you?", "ex": { "de": "Hallo, Anna! Wie geht's?", "en": "Hi Anna! How are you?" } },
+        { "de": "danke", "en": "thank you", "ex": { "de": "Danke, mir geht's gut.", "en": "Thanks, I'm fine." } },
+        { "de": "Entschuldigung!", "en": "Excuse me! / Sorry!", "ex": { "de": "Entschuldigung, wie heißen Sie?", "en": "Excuse me, what's your name?" } },
+        { "de": "buchstabieren", "en": "to spell", "ex": { "de": "Buchstabieren Sie bitte Ihren Namen.", "en": "Please spell your name." } },
+        { "de": "verheiratet", "en": "married", "ex": { "de": "Bist du verheiratet?", "en": "Are you married?" } },
+        { "de": "ledig", "en": "single", "ex": { "de": "Nein, ich bin ledig.", "en": "No, I'm single." } },
+        { "de": "geboren", "en": "born", "ex": { "de": "Ich bin in Köln geboren.", "en": "I was born in Cologne." } },
+        { "de": "das Formular", "en": "form", "pl": "Formulare", "ex": { "de": "Bitte füllen Sie das Formular aus.", "en": "Please fill in the form." } },
+        { "de": "die Postleitzahl", "en": "postcode", "pl": "Postleitzahlen", "ex": { "de": "Wie ist die Postleitzahl?", "en": "What's the postcode?" } },
+        { "de": "die Straße", "en": "street", "pl": "Straßen", "ex": { "de": "Ich wohne in der Goethestraße.", "en": "I live on Goethestraße." } }
+      ]
+    },
+    {
+      "id": "alphabet",
+      "title": "The alphabet",
+      "vocab": [
+        { "de": "A", "en": "say \"ah\"", "ex": { "de": "A wie Anton.", "en": "A as in Anton." } },
+        { "de": "B", "en": "say \"bay\"", "ex": { "de": "B wie Berta.", "en": "B as in Berta." } },
+        { "de": "C", "en": "say \"tsay\"", "ex": { "de": "C wie Cäsar.", "en": "C as in Cäsar." } },
+        { "de": "D", "en": "say \"day\"", "ex": { "de": "D wie Dora.", "en": "D as in Dora." } },
+        { "de": "E", "en": "say \"ay\"", "ex": { "de": "E wie Emil.", "en": "E as in Emil." } },
+        { "de": "F", "en": "say \"eff\"", "ex": { "de": "F wie Friedrich.", "en": "F as in Friedrich." } },
+        { "de": "G", "en": "say \"gay\"", "ex": { "de": "G wie Gustav.", "en": "G as in Gustav." } },
+        { "de": "H", "en": "say \"hah\"", "ex": { "de": "H wie Heinrich.", "en": "H as in Heinrich." } },
+        { "de": "I", "en": "say \"ee\"", "ex": { "de": "I wie Ida.", "en": "I as in Ida." } },
+        { "de": "J", "en": "say \"yot\"", "ex": { "de": "J wie Julius.", "en": "J as in Julius." } },
+        { "de": "K", "en": "say \"kah\"", "ex": { "de": "K wie Kaufmann.", "en": "K as in Kaufmann." } },
+        { "de": "L", "en": "say \"ell\"", "ex": { "de": "L wie Ludwig.", "en": "L as in Ludwig." } },
+        { "de": "M", "en": "say \"em\"", "ex": { "de": "M wie Martha.", "en": "M as in Martha." } },
+        { "de": "N", "en": "say \"en\"", "ex": { "de": "N wie Nordpol.", "en": "N as in Nordpol." } },
+        { "de": "O", "en": "say \"oh\"", "ex": { "de": "O wie Otto.", "en": "O as in Otto." } },
+        { "de": "P", "en": "say \"pay\"", "ex": { "de": "P wie Paula.", "en": "P as in Paula." } },
+        { "de": "Q", "en": "say \"koo\"", "ex": { "de": "Q wie Quelle.", "en": "Q as in Quelle." } },
+        { "de": "R", "en": "say \"air\"", "ex": { "de": "R wie Richard.", "en": "R as in Richard." } },
+        { "de": "S", "en": "say \"ess\"", "ex": { "de": "S wie Samuel.", "en": "S as in Samuel." } },
+        { "de": "T", "en": "say \"tay\"", "ex": { "de": "T wie Theodor.", "en": "T as in Theodor." } },
+        { "de": "U", "en": "say \"oo\"", "ex": { "de": "U wie Ulrich.", "en": "U as in Ulrich." } },
+        { "de": "V", "en": "say \"fow\"", "ex": { "de": "V wie Viktor.", "en": "V as in Viktor." } },
+        { "de": "W", "en": "say \"vay\"", "ex": { "de": "W wie Wilhelm.", "en": "W as in Wilhelm." } },
+        { "de": "X", "en": "say \"iks\"", "ex": { "de": "X wie Xanthippe.", "en": "X as in Xanthippe." } },
+        { "de": "Y", "en": "say \"ipsilon\"", "ex": { "de": "Y wie Ypsilon.", "en": "Y as in Ypsilon." } },
+        { "de": "Z", "en": "say \"tset\"", "ex": { "de": "Z wie Zacharias.", "en": "Z as in Zacharias." } },
+        { "de": "Ä", "en": "say \"eh\"", "ex": { "de": "Ä wie Ärger.", "en": "Ä as in Ärger." } },
+        { "de": "Ö", "en": "say \"ur\", with rounded lips", "ex": { "de": "Ö wie Ökonom.", "en": "Ö as in Ökonom." } },
+        { "de": "Ü", "en": "say \"ee\", with rounded lips", "ex": { "de": "Ü wie Übermut.", "en": "Ü as in Übermut." } },
+        { "de": "ß", "en": "say \"ess-tset\"", "ex": { "de": "Straße schreibt man mit ß.", "en": "You write Straße with ß." } }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers",
+      "vocab": [
+        { "de": "null", "en": "zero (0)", "ex": { "de": "Meine Nummer beginnt mit null.", "en": "My number starts with zero." } },
+        { "de": "eins", "en": "one (1)", "ex": { "de": "Eins plus eins ist zwei.", "en": "One plus one is two." } },
+        { "de": "zwei", "en": "two (2)", "ex": { "de": "Ich habe zwei Brüder.", "en": "I have two brothers." } },
+        { "de": "drei", "en": "three (3)", "ex": { "de": "Wir bleiben drei Tage.", "en": "We're staying for three days." } },
+        { "de": "vier", "en": "four (4)", "ex": { "de": "Unsere Familie hat vier Personen.", "en": "There are four people in our family." } },
+        { "de": "fünf", "en": "five (5)", "ex": { "de": "Fünf Äpfel, bitte.", "en": "Five apples, please." } },
+        { "de": "sechs", "en": "six (6)", "ex": { "de": "Der Kurs beginnt um sechs Uhr.", "en": "The course starts at six o'clock." } },
+        { "de": "sieben", "en": "seven (7)", "ex": { "de": "Eine Woche hat sieben Tage.", "en": "A week has seven days." } },
+        { "de": "acht", "en": "eight (8)", "ex": { "de": "Ich arbeite acht Stunden am Tag.", "en": "I work eight hours a day." } },
+        { "de": "neun", "en": "nine (9)", "ex": { "de": "Das Kind ist neun Jahre alt.", "en": "The child is nine years old." } },
+        { "de": "zehn", "en": "ten (10)", "ex": { "de": "Das kostet zehn Euro.", "en": "That costs ten euros." } },
+        { "de": "elf", "en": "eleven (11)", "ex": { "de": "Um elf Uhr gehe ich ins Bett.", "en": "I go to bed at eleven o'clock." } },
+        { "de": "zwölf", "en": "twelve (12)", "ex": { "de": "Es ist zwölf Uhr.", "en": "It's twelve o'clock." } },
+        { "de": "dreizehn", "en": "thirteen (13)", "ex": { "de": "Mein Sohn ist dreizehn.", "en": "My son is thirteen." } },
+        { "de": "sechzehn", "en": "sixteen (16)", "ex": { "de": "Sechzehn Leute kommen zur Party.", "en": "Sixteen people are coming to the party." } },
+        { "de": "siebzehn", "en": "seventeen (17)", "ex": { "de": "Der Zug fährt um siebzehn Uhr.", "en": "The train leaves at five p.m." } },
+        { "de": "zwanzig", "en": "twenty (20)", "ex": { "de": "Die Klasse hat zwanzig Schüler.", "en": "The class has twenty pupils." } },
+        { "de": "einundzwanzig", "en": "twenty-one (21)", "ex": { "de": "Ich bin einundzwanzig Jahre alt.", "en": "I'm twenty-one." } },
+        { "de": "dreißig", "en": "thirty (30)", "ex": { "de": "Ein Ticket kostet dreißig Euro.", "en": "A ticket costs thirty euros." } },
+        { "de": "hundert", "en": "a hundred (100)", "ex": { "de": "Das Fahrrad kostet hundert Euro.", "en": "The bike costs a hundred euros." } },
+        { "de": "tausend", "en": "a thousand (1,000)", "ex": { "de": "Das Auto kostet tausend Euro.", "en": "The car costs a thousand euros." } },
+        { "de": "die Zahl", "en": "number, figure", "pl": "Zahlen", "ex": { "de": "Schreib die Zahl bitte auf.", "en": "Please write the number down." } },
+        { "de": "die Nummer", "en": "number (phone, house)", "pl": "Nummern", "ex": { "de": "Wie ist deine Nummer?", "en": "What's your number?" } },
+        { "de": "wie viel", "en": "how much", "ex": { "de": "Wie viel kostet der Kaffee?", "en": "How much is the coffee?" } },
+        { "de": "wie viele", "en": "how many", "ex": { "de": "Wie viele Kinder hast du?", "en": "How many children have you got?" } }
+      ]
+    },
+    {
+      "id": "time",
+      "title": "Days and months",
+      "vocab": [
+        { "de": "der Tag", "en": "day", "pl": "Tage", "ex": { "de": "Heute ist ein schöner Tag.", "en": "It's a lovely day today." } },
+        { "de": "die Stunde", "en": "hour", "pl": "Stunden", "ex": { "de": "Ich warte schon eine Stunde.", "en": "I've been waiting for an hour." } },
+        { "de": "die Minute", "en": "minute", "pl": "Minuten", "ex": { "de": "Warte bitte eine Minute!", "en": "Wait a minute, please!" } },
+        { "de": "der Sonntag", "en": "Sunday", "pl": "Sonntage", "ex": { "de": "Am Sonntag schlafe ich lange.", "en": "On Sunday I have a lie-in." } },
+        { "de": "der Dienstag", "en": "Tuesday", "pl": "Dienstage", "ex": { "de": "Der Kurs ist am Dienstag.", "en": "The course is on Tuesday." } },
+        { "de": "der Mittwoch", "en": "Wednesday", "pl": "Mittwoche", "ex": { "de": "Am Mittwoch habe ich frei.", "en": "I'm off on Wednesday." } },
+        { "de": "der Donnerstag", "en": "Thursday", "pl": "Donnerstage", "ex": { "de": "Am Donnerstag gehe ich schwimmen.", "en": "On Thursday I go swimming." } },
+        { "de": "der Vormittag", "en": "morning (before noon)", "pl": "Vormittage", "ex": { "de": "Am Vormittag arbeite ich im Büro.", "en": "In the morning I work at the office." } },
+        { "de": "der Mittag", "en": "midday", "pl": "Mittage", "ex": { "de": "Zu Mittag essen wir zusammen.", "en": "We have lunch together at midday." } },
+        { "de": "der Nachmittag", "en": "afternoon", "pl": "Nachmittage", "ex": { "de": "Am Nachmittag trinken wir Kaffee.", "en": "In the afternoon we have coffee." } },
+        { "de": "der Januar", "en": "January", "pl": "-", "ex": { "de": "Im Januar ist es sehr kalt.", "en": "It's very cold in January." } },
+        { "de": "der Februar", "en": "February", "pl": "-", "ex": { "de": "Der Februar ist kurz.", "en": "February is short." } },
+        { "de": "der März", "en": "March", "pl": "-", "ex": { "de": "Im März beginnt der Frühling.", "en": "Spring begins in March." } },
+        { "de": "der April", "en": "April", "pl": "-", "ex": { "de": "Im April regnet es oft.", "en": "It often rains in April." } },
+        { "de": "der Mai", "en": "May", "pl": "-", "ex": { "de": "Mein Geburtstag ist im Mai.", "en": "My birthday is in May." } },
+        { "de": "der Juni", "en": "June", "pl": "-", "ex": { "de": "Im Juni fahren wir in den Urlaub.", "en": "In June we're going on holiday." } },
+        { "de": "der Juli", "en": "July", "pl": "-", "ex": { "de": "Im Juli ist das Wetter schön.", "en": "The weather's nice in July." } },
+        { "de": "der August", "en": "August", "pl": "-", "ex": { "de": "Im August sind Ferien.", "en": "The summer holidays are in August." } },
+        { "de": "der September", "en": "September", "pl": "-", "ex": { "de": "Die Schule beginnt im September.", "en": "School starts in September." } },
+        { "de": "der Oktober", "en": "October", "pl": "-", "ex": { "de": "Im Oktober werden die Blätter bunt.", "en": "In October the leaves turn colourful." } },
+        { "de": "der November", "en": "November", "pl": "-", "ex": { "de": "Der November ist oft grau.", "en": "November is often grey." } },
+        { "de": "der Dezember", "en": "December", "pl": "-", "ex": { "de": "Weihnachten ist im Dezember.", "en": "Christmas is in December." } },
+        { "de": "heute", "en": "today", "ex": { "de": "Heute habe ich keine Zeit.", "en": "I haven't got time today." } },
+        { "de": "gestern", "en": "yesterday", "ex": { "de": "Gestern war Montag.", "en": "Yesterday was Monday." } },
+        { "de": "später", "en": "later", "ex": { "de": "Bis später!", "en": "See you later!" } }
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Family",
+      "vocab": [
+        { "de": "die Familie", "en": "family", "pl": "Familien", "ex": { "de": "Meine Familie wohnt in Hamburg.", "en": "My family lives in Hamburg." } },
+        { "de": "der Vater", "en": "father", "pl": "Väter", "ex": { "de": "Mein Vater arbeitet bei der Bahn.", "en": "My father works for the railway." } },
+        { "de": "die Eltern", "en": "parents", "pl": "pl", "ex": { "de": "Meine Eltern sind schon alt.", "en": "My parents are quite old now." } },
+        { "de": "der Sohn", "en": "son", "pl": "Söhne", "ex": { "de": "Unser Sohn ist zehn Jahre alt.", "en": "Our son is ten years old." } },
+        { "de": "die Tochter", "en": "daughter", "pl": "Töchter", "ex": { "de": "Ihre Tochter studiert in Wien.", "en": "Her daughter studies in Vienna." } },
+        { "de": "die Geschwister", "en": "brothers and sisters", "pl": "pl", "ex": { "de": "Hast du Geschwister?", "en": "Have you got any brothers or sisters?" } },
+        { "de": "der Opa", "en": "grandad", "pl": "Opas", "ex": { "de": "Mein Opa kocht sehr gut.", "en": "My grandad is a very good cook." } },
+        { "de": "die Oma", "en": "grandma", "pl": "Omas", "ex": { "de": "Die Oma besucht uns am Sonntag.", "en": "Grandma's visiting us on Sunday." } },
+        { "de": "die Großeltern", "en": "grandparents", "pl": "pl", "ex": { "de": "Meine Großeltern wohnen auf dem Land.", "en": "My grandparents live in the country." } },
+        { "de": "der Onkel", "en": "uncle", "pl": "Onkel", "ex": { "de": "Mein Onkel hat drei Kinder.", "en": "My uncle has three children." } },
+        { "de": "die Tante", "en": "aunt", "pl": "Tanten", "ex": { "de": "Meine Tante wohnt in Köln.", "en": "My aunt lives in Cologne." } },
+        { "de": "der Mann", "en": "man; husband", "pl": "Männer", "ex": { "de": "Das ist mein Mann, Peter.", "en": "This is my husband, Peter." } },
+        { "de": "das Baby", "en": "baby", "pl": "Babys", "ex": { "de": "Das Baby schläft.", "en": "The baby is asleep." } },
+        { "de": "der Cousin", "en": "cousin (man)", "pl": "Cousins", "ex": { "de": "Mein Cousin wohnt in Spanien.", "en": "My cousin lives in Spain." } },
+        { "de": "geschieden", "en": "divorced", "ex": { "de": "Meine Eltern sind geschieden.", "en": "My parents are divorced." } },
+        { "de": "der Geburtstag", "en": "birthday", "pl": "Geburtstage", "ex": { "de": "Heute hat meine Schwester Geburtstag.", "en": "It's my sister's birthday today." } },
+        { "de": "feiern", "en": "to celebrate", "ex": { "de": "Wir feiern am Samstag.", "en": "We're celebrating on Saturday." } },
+        { "de": "besuchen", "en": "to visit", "ex": { "de": "Am Wochenende besuche ich meine Eltern.", "en": "At the weekend I'm visiting my parents." } },
+        { "de": "heiraten", "en": "to get married", "ex": { "de": "Sie heiraten im Mai.", "en": "They're getting married in May." } },
+        { "de": "lieben", "en": "to love", "ex": { "de": "Ich liebe meine Familie.", "en": "I love my family." } },
+        { "de": "die Hochzeit", "en": "wedding", "pl": "Hochzeiten", "ex": { "de": "Die Hochzeit ist im Juni.", "en": "The wedding is in June." } },
+        { "de": "der Partner", "en": "partner (man)", "pl": "Partner", "ex": { "de": "Mein Partner kommt aus Italien.", "en": "My partner comes from Italy." } },
+        { "de": "allein", "en": "alone", "ex": { "de": "Mein Opa wohnt allein.", "en": "My grandad lives alone." } },
+        { "de": "das Foto", "en": "photo", "pl": "Fotos", "ex": { "de": "Hier ist ein Foto von meiner Familie.", "en": "Here's a photo of my family." } },
+        { "de": "helfen", "en": "to help", "ex": { "de": "Meine Schwester hilft mir oft.", "en": "My sister often helps me." } }
+      ]
+    },
+    {
+      "id": "animals",
+      "title": "People and animals",
+      "vocab": [
+        { "de": "der Mensch", "en": "person", "pl": "Menschen", "ex": { "de": "Er ist ein netter Mensch.", "en": "He's a nice person." } },
+        { "de": "die Leute", "en": "people", "pl": "pl", "ex": { "de": "Auf der Party sind viele Leute.", "en": "There are lots of people at the party." } },
+        { "de": "der Junge", "en": "boy", "pl": "Jungen", "ex": { "de": "Der Junge spielt Fußball.", "en": "The boy is playing football." } },
+        { "de": "der Großvater", "en": "grandfather", "pl": "Großväter", "ex": { "de": "Mein Großvater ist achtzig.", "en": "My grandfather is eighty." } },
+        { "de": "die Großmutter", "en": "grandmother", "pl": "Großmütter", "ex": { "de": "Meine Großmutter backt gern.", "en": "My grandmother likes baking." } },
+        { "de": "der Verwandte", "en": "relative", "pl": "Verwandten", "ex": { "de": "Am Wochenende besuchen uns Verwandte.", "en": "Relatives are visiting us at the weekend." } },
+        { "de": "die Ehefrau", "en": "wife", "pl": "Ehefrauen", "ex": { "de": "Seine Ehefrau ist Ärztin.", "en": "His wife is a doctor." } },
+        { "de": "der Ehemann", "en": "husband", "pl": "Ehemänner", "ex": { "de": "Ihr Ehemann arbeitet viel.", "en": "Her husband works a lot." } },
+        { "de": "der Erwachsene", "en": "adult", "pl": "Erwachsenen", "ex": { "de": "Erwachsene zahlen zehn Euro.", "en": "Adults pay ten euros." } },
+        { "de": "der Jugendliche", "en": "teenager", "pl": "Jugendlichen", "ex": { "de": "Viele Jugendliche spielen Fußball.", "en": "Lots of teenagers play football." } },
+        { "de": "die Dame", "en": "lady", "pl": "Damen", "ex": { "de": "Meine Damen und Herren!", "en": "Ladies and gentlemen!" } },
+        { "de": "der Gast", "en": "guest", "pl": "Gäste", "ex": { "de": "Wir haben heute Gäste.", "en": "We've got guests today." } },
+        { "de": "die Gruppe", "en": "group", "pl": "Gruppen", "ex": { "de": "Wir arbeiten in Gruppen.", "en": "We work in groups." } },
+        { "de": "die Partnerin", "en": "partner (woman)", "pl": "Partnerinnen", "ex": { "de": "Das ist meine Partnerin, Julia.", "en": "This is my partner, Julia." } },
+        { "de": "der Schüler", "en": "pupil (boy)", "pl": "Schüler", "ex": { "de": "Der Schüler macht seine Hausaufgaben.", "en": "The pupil is doing his homework." } },
+        { "de": "die Schülerin", "en": "pupil (girl)", "pl": "Schülerinnen", "ex": { "de": "Die Schülerin liest ein Buch.", "en": "The pupil is reading a book." } },
+        { "de": "der Bekannte", "en": "acquaintance", "pl": "Bekannten", "ex": { "de": "Er ist ein Bekannter von mir.", "en": "He's an acquaintance of mine." } },
+        { "de": "die Hausfrau", "en": "housewife", "pl": "Hausfrauen", "ex": { "de": "Meine Mutter ist Hausfrau.", "en": "My mother is a housewife." } },
+        { "de": "der Hausmann", "en": "house husband", "pl": "Hausmänner", "ex": { "de": "Mein Mann ist Hausmann.", "en": "My husband is a house husband." } },
+        { "de": "der Bauer", "en": "farmer", "pl": "Bauern", "ex": { "de": "Der Bauer hat viele Tiere.", "en": "The farmer has lots of animals." } },
+        { "de": "das Tier", "en": "animal", "pl": "Tiere", "ex": { "de": "Im Zoo gibt es viele Tiere.", "en": "There are lots of animals at the zoo." } },
+        { "de": "die Katze", "en": "cat", "pl": "Katzen", "ex": { "de": "Die Katze schläft auf dem Sofa.", "en": "The cat's asleep on the sofa." } },
+        { "de": "der Hund", "en": "dog", "pl": "Hunde", "ex": { "de": "Der Hund heißt Bello.", "en": "The dog's called Bello." } },
+        { "de": "der Vogel", "en": "bird", "pl": "Vögel", "ex": { "de": "Der Vogel singt.", "en": "The bird is singing." } },
+        { "de": "das Pferd", "en": "horse", "pl": "Pferde", "ex": { "de": "Das Pferd ist schnell.", "en": "The horse is fast." } }
+      ]
+    },
+    {
+      "id": "class",
+      "title": "In class",
+      "vocab": [
+        { "de": "der Lehrer", "en": "teacher (man)", "pl": "Lehrer", "ex": { "de": "Der Lehrer erklärt die Aufgabe.", "en": "The teacher explains the exercise." } },
+        { "de": "die Lehrerin", "en": "teacher (woman)", "pl": "Lehrerinnen", "ex": { "de": "Unsere Lehrerin heißt Frau Braun.", "en": "Our teacher is called Ms Braun." } },
+        { "de": "die Schule", "en": "school", "pl": "Schulen", "ex": { "de": "Die Schule beginnt um acht.", "en": "School starts at eight." } },
+        { "de": "das Heft", "en": "exercise book", "pl": "Hefte", "ex": { "de": "Schreib das Wort ins Heft.", "en": "Write the word in your exercise book." } },
+        { "de": "der Kuli", "en": "pen", "pl": "Kulis", "ex": { "de": "Hast du einen Kuli für mich?", "en": "Have you got a pen for me?" } },
+        { "de": "das Wörterbuch", "en": "dictionary", "pl": "Wörterbücher", "ex": { "de": "Ich brauche ein Wörterbuch.", "en": "I need a dictionary." } },
+        { "de": "die Tafel", "en": "board", "pl": "Tafeln", "ex": { "de": "Die Lehrerin schreibt das Wort an die Tafel.", "en": "The teacher writes the word on the board." } },
+        { "de": "die Seite", "en": "page", "pl": "Seiten", "ex": { "de": "Wir sind auf Seite zwölf.", "en": "We're on page twelve." } },
+        { "de": "die Aufgabe", "en": "exercise, task", "pl": "Aufgaben", "ex": { "de": "Die Aufgabe ist schwer.", "en": "The exercise is hard." } },
+        { "de": "die Hausaufgabe", "en": "homework", "pl": "Hausaufgaben", "ex": { "de": "Ich mache die Hausaufgaben am Abend.", "en": "I do my homework in the evening." } },
+        { "de": "die Frage", "en": "question", "pl": "Fragen", "ex": { "de": "Ich habe eine Frage.", "en": "I have a question." } },
+        { "de": "die Antwort", "en": "answer", "pl": "Antworten", "ex": { "de": "Die Antwort ist richtig.", "en": "The answer is right." } },
+        { "de": "fragen", "en": "to ask", "ex": { "de": "Frag doch die Lehrerin!", "en": "Just ask the teacher!" } },
+        { "de": "antworten", "en": "to answer", "ex": { "de": "Bitte antworten Sie auf Deutsch.", "en": "Please answer in German." } },
+        { "de": "schreiben", "en": "to write", "ex": { "de": "Wir schreiben einen kurzen Text.", "en": "We're writing a short text." } },
+        { "de": "lesen", "en": "to read", "ex": { "de": "Ich lese den Text zweimal.", "en": "I read the text twice." } },
+        { "de": "hören", "en": "to hear; to listen", "ex": { "de": "Wir hören ein Gespräch.", "en": "We're listening to a conversation." } },
+        { "de": "verstehen", "en": "to understand", "ex": { "de": "Ich verstehe das Wort nicht.", "en": "I don't understand the word." } },
+        { "de": "wiederholen", "en": "to repeat", "ex": { "de": "Bitte wiederholen Sie den Satz.", "en": "Please repeat the sentence." } },
+        { "de": "der Satz", "en": "sentence", "pl": "Sätze", "ex": { "de": "Der Satz ist zu lang.", "en": "The sentence is too long." } },
+        { "de": "das Wort", "en": "word", "pl": "Wörter", "ex": { "de": "Wie schreibt man das Wort?", "en": "How do you spell the word?" } },
+        { "de": "richtig", "en": "right, correct", "ex": { "de": "Ist das richtig?", "en": "Is that right?" } },
+        { "de": "falsch", "en": "wrong", "ex": { "de": "Nein, das ist leider falsch.", "en": "No, I'm afraid that's wrong." } },
+        { "de": "die Pause", "en": "break", "pl": "Pausen", "ex": { "de": "Um zehn Uhr machen wir eine Pause.", "en": "At ten o'clock we have a break." } },
+        { "de": "der Fehler", "en": "mistake", "pl": "Fehler", "ex": { "de": "Ich mache viele Fehler.", "en": "I make a lot of mistakes." } }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food and shopping",
+      "vocab": [
+        { "de": "essen", "en": "to eat", "ex": { "de": "Was isst du gern?", "en": "What do you like to eat?" } },
+        { "de": "das Brot", "en": "bread", "pl": "Brote", "ex": { "de": "Ich kaufe ein Brot.", "en": "I'm buying a loaf of bread." } },
+        { "de": "der Käse", "en": "cheese", "pl": "-", "ex": { "de": "Der Käse kommt aus der Schweiz.", "en": "The cheese comes from Switzerland." } },
+        { "de": "das Fleisch", "en": "meat", "pl": "-", "ex": { "de": "Ich esse kein Fleisch.", "en": "I don't eat meat." } },
+        { "de": "der Fisch", "en": "fish", "pl": "Fische", "ex": { "de": "Freitags gibt es Fisch.", "en": "On Fridays there's fish." } },
+        { "de": "das Gemüse", "en": "vegetables", "pl": "-", "ex": { "de": "Wir kaufen das Gemüse auf dem Markt.", "en": "We buy our vegetables at the market." } },
+        { "de": "das Obst", "en": "fruit", "pl": "-", "ex": { "de": "Kinder essen gern Obst.", "en": "Children like eating fruit." } },
+        { "de": "der Apfel", "en": "apple", "pl": "Äpfel", "ex": { "de": "Der Apfel ist süß.", "en": "The apple is sweet." } },
+        { "de": "die Kartoffel", "en": "potato", "pl": "Kartoffeln", "ex": { "de": "Wir essen Kartoffeln mit Salat.", "en": "We're having potatoes with salad." } },
+        { "de": "das Ei", "en": "egg", "pl": "Eier", "ex": { "de": "Zum Frühstück esse ich ein Ei.", "en": "I have an egg for breakfast." } },
+        { "de": "die Milch", "en": "milk", "pl": "-", "ex": { "de": "Trinkst du den Kaffee mit Milch?", "en": "Do you take your coffee with milk?" } },
+        { "de": "der Saft", "en": "juice", "pl": "Säfte", "ex": { "de": "Einen Orangensaft, bitte.", "en": "An orange juice, please." } },
+        { "de": "der Kuchen", "en": "cake", "pl": "Kuchen", "ex": { "de": "Der Kuchen schmeckt sehr gut.", "en": "The cake tastes very good." } },
+        { "de": "das Frühstück", "en": "breakfast", "pl": "Frühstücke", "ex": { "de": "Das Frühstück ist um sieben Uhr.", "en": "Breakfast is at seven o'clock." } },
+        { "de": "das Mittagessen", "en": "lunch", "pl": "Mittagessen", "ex": { "de": "Was gibt es zum Mittagessen?", "en": "What's for lunch?" } },
+        { "de": "das Abendessen", "en": "dinner", "pl": "Abendessen", "ex": { "de": "Zum Abendessen gibt es Nudeln.", "en": "There's pasta for dinner." } },
+        { "de": "lecker", "en": "tasty", "ex": { "de": "Die Suppe ist wirklich lecker!", "en": "The soup is really tasty!" } },
+        { "de": "der Hunger", "en": "hunger", "pl": "-", "ex": { "de": "Ich habe Hunger!", "en": "I'm hungry!" } },
+        { "de": "der Durst", "en": "thirst", "pl": "-", "ex": { "de": "Hast du Durst?", "en": "Are you thirsty?" } },
+        { "de": "frisch", "en": "fresh", "ex": { "de": "Die Brötchen sind ganz frisch.", "en": "The rolls are really fresh." } },
+        { "de": "kosten", "en": "to cost", "ex": { "de": "Was kostet das Brot?", "en": "How much is the bread?" } },
+        { "de": "bezahlen", "en": "to pay", "ex": { "de": "Ich möchte bitte bezahlen.", "en": "I'd like to pay, please." } },
+        { "de": "das Geld", "en": "money", "pl": "-", "ex": { "de": "Ich habe kein Geld dabei.", "en": "I haven't got any money on me." } },
+        { "de": "der Supermarkt", "en": "supermarket", "pl": "Supermärkte", "ex": { "de": "Ich kaufe im Supermarkt ein.", "en": "I do my shopping at the supermarket." } },
+        { "de": "die Flasche", "en": "bottle", "pl": "Flaschen", "ex": { "de": "Eine Flasche Wasser, bitte.", "en": "A bottle of water, please." } }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "title": "Meals and the kitchen",
+      "vocab": [
+        { "de": "das Essen", "en": "food; meal", "pl": "Essen", "ex": { "de": "Das Essen ist fertig!", "en": "Dinner's ready!" } },
+        { "de": "die Suppe", "en": "soup", "pl": "Suppen", "ex": { "de": "Die Suppe ist heiß.", "en": "The soup is hot." } },
+        { "de": "der Salat", "en": "salad; lettuce", "pl": "Salate", "ex": { "de": "Ich esse einen Salat.", "en": "I'm having a salad." } },
+        { "de": "die Nudeln", "en": "pasta, noodles", "pl": "pl", "ex": { "de": "Die Kinder essen gern Nudeln.", "en": "The children like eating pasta." } },
+        { "de": "der Reis", "en": "rice", "pl": "-", "ex": { "de": "Zum Fisch gibt es Reis.", "en": "There's rice with the fish." } },
+        { "de": "das Hähnchen", "en": "chicken", "pl": "Hähnchen", "ex": { "de": "Das Hähnchen ist sehr lecker.", "en": "The chicken is very tasty." } },
+        { "de": "der Schinken", "en": "ham", "pl": "Schinken", "ex": { "de": "Ein Brötchen mit Schinken, bitte.", "en": "A roll with ham, please." } },
+        { "de": "die Butter", "en": "butter", "pl": "-", "ex": { "de": "Ich esse Brot mit Butter.", "en": "I eat bread and butter." } },
+        { "de": "die Tomate", "en": "tomato", "pl": "Tomaten", "ex": { "de": "Ich kaufe ein Kilo Tomaten.", "en": "I'm buying a kilo of tomatoes." } },
+        { "de": "die Banane", "en": "banana", "pl": "Bananen", "ex": { "de": "Mein Sohn isst jeden Tag eine Banane.", "en": "My son eats a banana every day." } },
+        { "de": "die Schokolade", "en": "chocolate", "pl": "Schokoladen", "ex": { "de": "Ich esse gern Schokolade.", "en": "I like eating chocolate." } },
+        { "de": "das Salz", "en": "salt", "pl": "-", "ex": { "de": "Gib mir bitte das Salz.", "en": "Pass me the salt, please." } },
+        { "de": "der Pfeffer", "en": "pepper", "pl": "-", "ex": { "de": "Die Suppe braucht noch Pfeffer.", "en": "The soup needs more pepper." } },
+        { "de": "das Bier", "en": "beer", "pl": "Biere", "ex": { "de": "Ein Bier, bitte!", "en": "A beer, please!" } },
+        { "de": "der Wein", "en": "wine", "pl": "Weine", "ex": { "de": "Trinkst du Rotwein oder Weißwein?", "en": "Do you drink red or white wine?" } },
+        { "de": "das Glas", "en": "glass", "pl": "Gläser", "ex": { "de": "Ein Glas Wasser, bitte.", "en": "A glass of water, please." } },
+        { "de": "die Tasse", "en": "cup", "pl": "Tassen", "ex": { "de": "Möchtest du eine Tasse Tee?", "en": "Would you like a cup of tea?" } },
+        { "de": "der Teller", "en": "plate", "pl": "Teller", "ex": { "de": "Der Teller ist leer.", "en": "The plate is empty." } },
+        { "de": "der Löffel", "en": "spoon", "pl": "Löffel", "ex": { "de": "Ich brauche einen Löffel für die Suppe.", "en": "I need a spoon for the soup." } },
+        { "de": "die Gabel", "en": "fork", "pl": "Gabeln", "ex": { "de": "Wo sind die Gabeln?", "en": "Where are the forks?" } },
+        { "de": "das Messer", "en": "knife", "pl": "Messer", "ex": { "de": "Das Messer ist sehr scharf.", "en": "The knife is very sharp." } },
+        { "de": "die Speisekarte", "en": "menu", "pl": "Speisekarten", "ex": { "de": "Die Speisekarte, bitte!", "en": "The menu, please!" } },
+        { "de": "frühstücken", "en": "to have breakfast", "ex": { "de": "Wir frühstücken um sieben Uhr.", "en": "We have breakfast at seven o'clock." } },
+        { "de": "schneiden", "en": "to cut", "ex": { "de": "Ich schneide das Brot.", "en": "I'm cutting the bread." } },
+        { "de": "süß", "en": "sweet", "ex": { "de": "Der Kuchen ist mir zu süß.", "en": "The cake is too sweet for me." } }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "At home",
+      "vocab": [
+        { "de": "das Haus", "en": "house", "pl": "Häuser", "ex": { "de": "Das Haus hat einen Garten.", "en": "The house has a garden." } },
+        { "de": "das Zimmer", "en": "room", "pl": "Zimmer", "ex": { "de": "Die Wohnung hat drei Zimmer.", "en": "The flat has three rooms." } },
+        { "de": "die Küche", "en": "kitchen", "pl": "Küchen", "ex": { "de": "Die Küche ist klein, aber hell.", "en": "The kitchen is small but bright." } },
+        { "de": "das Bad", "en": "bathroom", "pl": "Bäder", "ex": { "de": "Das Bad ist neu.", "en": "The bathroom is new." } },
+        { "de": "das Schlafzimmer", "en": "bedroom", "pl": "Schlafzimmer", "ex": { "de": "Das Schlafzimmer ist ruhig.", "en": "The bedroom is quiet." } },
+        { "de": "das Wohnzimmer", "en": "living room", "pl": "Wohnzimmer", "ex": { "de": "Wir sehen im Wohnzimmer fern.", "en": "We watch TV in the living room." } },
+        { "de": "der Balkon", "en": "balcony", "pl": "Balkone", "ex": { "de": "Wir frühstücken auf dem Balkon.", "en": "We have breakfast on the balcony." } },
+        { "de": "der Garten", "en": "garden", "pl": "Gärten", "ex": { "de": "Im Garten sind viele Blumen.", "en": "There are lots of flowers in the garden." } },
+        { "de": "das Bett", "en": "bed", "pl": "Betten", "ex": { "de": "Das Bett ist zu klein.", "en": "The bed is too small." } },
+        { "de": "der Schrank", "en": "cupboard; wardrobe", "pl": "Schränke", "ex": { "de": "Der Schrank ist im Schlafzimmer.", "en": "The wardrobe is in the bedroom." } },
+        { "de": "das Sofa", "en": "sofa", "pl": "Sofas", "ex": { "de": "Das Sofa ist sehr bequem.", "en": "The sofa is very comfortable." } },
+        { "de": "das Regal", "en": "shelf", "pl": "Regale", "ex": { "de": "Die Bücher stehen im Regal.", "en": "The books are on the shelf." } },
+        { "de": "der Kühlschrank", "en": "fridge", "pl": "Kühlschränke", "ex": { "de": "Die Milch ist im Kühlschrank.", "en": "The milk is in the fridge." } },
+        { "de": "das Fenster", "en": "window", "pl": "Fenster", "ex": { "de": "Mach bitte das Fenster zu.", "en": "Please close the window." } },
+        { "de": "die Tür", "en": "door", "pl": "Türen", "ex": { "de": "Die Tür ist offen.", "en": "The door is open." } },
+        { "de": "die Miete", "en": "rent", "pl": "Mieten", "ex": { "de": "Die Miete ist nicht hoch.", "en": "The rent isn't high." } },
+        { "de": "der Nachbar", "en": "neighbour", "pl": "Nachbarn", "ex": { "de": "Unser Nachbar hilft uns oft.", "en": "Our neighbour often helps us." } },
+        { "de": "hell", "en": "bright", "ex": { "de": "Das Wohnzimmer ist schön hell.", "en": "The living room is nice and bright." } },
+        { "de": "dunkel", "en": "dark", "ex": { "de": "Der Flur ist ein bisschen dunkel.", "en": "The hall is a bit dark." } },
+        { "de": "ruhig", "en": "quiet", "ex": { "de": "Die Straße ist sehr ruhig.", "en": "The street is very quiet." } },
+        { "de": "laut", "en": "loud, noisy", "ex": { "de": "Die Musik ist zu laut.", "en": "The music is too loud." } },
+        { "de": "schön", "en": "beautiful, nice", "ex": { "de": "Die Wohnung ist wirklich schön.", "en": "The flat is really nice." } },
+        { "de": "der Schreibtisch", "en": "desk", "pl": "Schreibtische", "ex": { "de": "Mein Schreibtisch steht am Fenster.", "en": "My desk is by the window." } },
+        { "de": "aufräumen", "en": "to tidy up", "ex": { "de": "Am Samstag räume ich die Wohnung auf.", "en": "On Saturday I tidy the flat." } },
+        { "de": "putzen", "en": "to clean", "ex": { "de": "Ich putze heute das Bad.", "en": "I'm cleaning the bathroom today." } }
+      ]
+    },
+    {
+      "id": "things",
+      "title": "Things at home",
+      "vocab": [
+        { "de": "das Dach", "en": "roof", "pl": "Dächer", "ex": { "de": "Das Haus hat ein rotes Dach.", "en": "The house has a red roof." } },
+        { "de": "die Garage", "en": "garage", "pl": "Garagen", "ex": { "de": "Das Auto steht in der Garage.", "en": "The car's in the garage." } },
+        { "de": "die Treppe", "en": "stairs", "pl": "Treppen", "ex": { "de": "Die Treppe ist sehr steil.", "en": "The stairs are very steep." } },
+        { "de": "die Dusche", "en": "shower", "pl": "Duschen", "ex": { "de": "Die Dusche ist kaputt.", "en": "The shower is broken." } },
+        { "de": "die Waschmaschine", "en": "washing machine", "pl": "Waschmaschinen", "ex": { "de": "Die Waschmaschine ist im Keller.", "en": "The washing machine is in the cellar." } },
+        { "de": "das Radio", "en": "radio", "pl": "Radios", "ex": { "de": "Im Auto hören wir Radio.", "en": "We listen to the radio in the car." } },
+        { "de": "der Laptop", "en": "laptop", "pl": "Laptops", "ex": { "de": "Mein Laptop ist zu alt.", "en": "My laptop is too old." } },
+        { "de": "das Licht", "en": "light", "pl": "Lichter", "ex": { "de": "Mach bitte das Licht an.", "en": "Please switch the light on." } },
+        { "de": "der Teppich", "en": "rug, carpet", "pl": "Teppiche", "ex": { "de": "Der Teppich im Wohnzimmer ist rot.", "en": "The rug in the living room is red." } },
+        { "de": "der Spiegel", "en": "mirror", "pl": "Spiegel", "ex": { "de": "Der Spiegel hängt im Bad.", "en": "The mirror's in the bathroom." } },
+        { "de": "das Handtuch", "en": "towel", "pl": "Handtücher", "ex": { "de": "Das Handtuch liegt im Bad.", "en": "The towel's in the bathroom." } },
+        { "de": "die Seife", "en": "soap", "pl": "Seifen", "ex": { "de": "Wasch dir die Hände mit Seife!", "en": "Wash your hands with soap!" } },
+        { "de": "die Tasche", "en": "bag", "pl": "Taschen", "ex": { "de": "Wo ist meine Tasche?", "en": "Where's my bag?" } },
+        { "de": "das Papier", "en": "paper", "pl": "Papiere", "ex": { "de": "Hast du ein Blatt Papier?", "en": "Have you got a sheet of paper?" } },
+        { "de": "der Stift", "en": "pen, pencil", "pl": "Stifte", "ex": { "de": "Hast du einen Stift?", "en": "Have you got a pen?" } },
+        { "de": "der Bleistift", "en": "pencil", "pl": "Bleistifte", "ex": { "de": "Ich schreibe mit einem Bleistift.", "en": "I'm writing with a pencil." } },
+        { "de": "die Schere", "en": "scissors", "pl": "Scheren", "ex": { "de": "Die Schere liegt in der Küche.", "en": "The scissors are in the kitchen." } },
+        { "de": "der Herd", "en": "cooker", "pl": "Herde", "ex": { "de": "Die Suppe steht auf dem Herd.", "en": "The soup is on the cooker." } },
+        { "de": "der Esstisch", "en": "dining table", "pl": "Esstische", "ex": { "de": "Wir essen am Esstisch.", "en": "We eat at the dining table." } },
+        { "de": "das Kissen", "en": "cushion; pillow", "pl": "Kissen", "ex": { "de": "Das Kissen ist sehr weich.", "en": "The cushion is very soft." } },
+        { "de": "die Decke", "en": "blanket; ceiling", "pl": "Decken", "ex": { "de": "Mir ist kalt, ich brauche eine Decke.", "en": "I'm cold, I need a blanket." } },
+        { "de": "der Vorhang", "en": "curtain", "pl": "Vorhänge", "ex": { "de": "Die Vorhänge sind blau.", "en": "The curtains are blue." } },
+        { "de": "das Geschirr", "en": "dishes", "pl": "-", "ex": { "de": "Wer spült heute das Geschirr?", "en": "Who's washing the dishes today?" } },
+        { "de": "der Mülleimer", "en": "bin", "pl": "Mülleimer", "ex": { "de": "Der Mülleimer ist in der Küche.", "en": "The bin is in the kitchen." } },
+        { "de": "die Steckdose", "en": "socket", "pl": "Steckdosen", "ex": { "de": "Wo ist hier eine Steckdose?", "en": "Where's a socket here?" } }
+      ]
+    },
+    {
+      "id": "freetime",
+      "title": "Free time",
+      "vocab": [
+        { "de": "die Freizeit", "en": "free time", "pl": "-", "ex": { "de": "In der Freizeit lese ich gern.", "en": "In my free time I like reading." } },
+        { "de": "das Hobby", "en": "hobby", "pl": "Hobbys", "ex": { "de": "Was ist dein Hobby?", "en": "What's your hobby?" } },
+        { "de": "der Sport", "en": "sport", "pl": "-", "ex": { "de": "Ich mache gern Sport.", "en": "I like doing sport." } },
+        { "de": "schwimmen", "en": "to swim", "ex": { "de": "Am Samstag schwimmen wir im See.", "en": "On Saturday we go swimming in the lake." } },
+        { "de": "der Fußball", "en": "football", "pl": "Fußbälle", "ex": { "de": "Die Kinder spielen Fußball.", "en": "The children are playing football." } },
+        { "de": "Rad fahren", "en": "to cycle", "ex": { "de": "Im Sommer fahre ich viel Rad.", "en": "In summer I cycle a lot." } },
+        { "de": "wandern", "en": "to hike", "ex": { "de": "Am Sonntag wandern wir in den Bergen.", "en": "On Sunday we go hiking in the mountains." } },
+        { "de": "joggen", "en": "to go jogging", "ex": { "de": "Ich jogge jeden Morgen im Park.", "en": "I go jogging in the park every morning." } },
+        { "de": "singen", "en": "to sing", "ex": { "de": "Sie singt sehr schön.", "en": "She sings beautifully." } },
+        { "de": "die Musik", "en": "music", "pl": "-", "ex": { "de": "Ich höre gern Musik.", "en": "I like listening to music." } },
+        { "de": "fotografieren", "en": "to take photos", "ex": { "de": "Er fotografiert gern Blumen.", "en": "He likes taking photos of flowers." } },
+        { "de": "das Spiel", "en": "game; match", "pl": "Spiele", "ex": { "de": "Das Spiel beginnt um acht.", "en": "The match starts at eight." } },
+        { "de": "der Film", "en": "film", "pl": "Filme", "ex": { "de": "Der Film dauert zwei Stunden.", "en": "The film lasts two hours." } },
+        { "de": "das Konzert", "en": "concert", "pl": "Konzerte", "ex": { "de": "Heute Abend gehen wir ins Konzert.", "en": "Tonight we're going to a concert." } },
+        { "de": "der Freund", "en": "friend (man); boyfriend", "pl": "Freunde", "ex": { "de": "Am Wochenende treffe ich meine Freunde.", "en": "At the weekend I'm meeting my friends." } },
+        { "de": "die Freundin", "en": "friend (woman); girlfriend", "pl": "Freundinnen", "ex": { "de": "Ich gehe mit meiner Freundin ins Kino.", "en": "I'm going to the cinema with my friend." } },
+        { "de": "die Party", "en": "party", "pl": "Partys", "ex": { "de": "Kommst du zur Party?", "en": "Are you coming to the party?" } },
+        { "de": "lustig", "en": "funny", "ex": { "de": "Mein Bruder ist sehr lustig.", "en": "My brother is very funny." } },
+        { "de": "langweilig", "en": "boring", "ex": { "de": "Das Spiel ist langweilig.", "en": "The match is boring." } },
+        { "de": "spannend", "en": "exciting", "ex": { "de": "Das Buch ist sehr spannend.", "en": "The book is very exciting." } },
+        { "de": "Spaß machen", "en": "to be fun", "ex": { "de": "Tanzen macht Spaß!", "en": "Dancing is fun!" } },
+        { "de": "zusammen", "en": "together", "ex": { "de": "Wir kochen am Sonntag zusammen.", "en": "We cook together on Sundays." } },
+        { "de": "oft", "en": "often", "ex": { "de": "Wie oft machst du Sport?", "en": "How often do you do sport?" } },
+        { "de": "manchmal", "en": "sometimes", "ex": { "de": "Manchmal spiele ich Gitarre.", "en": "Sometimes I play the guitar." } },
+        { "de": "nie", "en": "never", "ex": { "de": "Ich sehe nie fern.", "en": "I never watch TV." } }
+      ]
+    },
+    {
+      "id": "verbs",
+      "title": "Everyday verbs",
+      "vocab": [
+        { "de": "bringen", "en": "to bring", "ex": { "de": "Ich bringe dir einen Kaffee.", "en": "I'll bring you a coffee." } },
+        { "de": "nehmen", "en": "to take", "ex": { "de": "Ich nehme den Bus.", "en": "I'm taking the bus." } },
+        { "de": "sagen", "en": "to say", "ex": { "de": "Was sagst du?", "en": "What are you saying?" } },
+        { "de": "kennen", "en": "to know (a person, a place)", "ex": { "de": "Kennst du meinen Bruder?", "en": "Do you know my brother?" } },
+        { "de": "sitzen", "en": "to sit", "ex": { "de": "Wir sitzen im Garten.", "en": "We're sitting in the garden." } },
+        { "de": "lachen", "en": "to laugh", "ex": { "de": "Die Kinder lachen viel.", "en": "The children laugh a lot." } },
+        { "de": "laufen", "en": "to run; to walk", "ex": { "de": "Der Hund läuft im Park.", "en": "The dog is running in the park." } },
+        { "de": "leben", "en": "to live", "ex": { "de": "Meine Oma lebt in Polen.", "en": "My grandma lives in Poland." } },
+        { "de": "öffnen", "en": "to open", "ex": { "de": "Öffnen Sie bitte die Tür.", "en": "Please open the door." } },
+        { "de": "schließen", "en": "to close", "ex": { "de": "Der Supermarkt schließt um acht.", "en": "The supermarket closes at eight." } },
+        { "de": "verkaufen", "en": "to sell", "ex": { "de": "Wir verkaufen unser Auto.", "en": "We're selling our car." } },
+        { "de": "einladen", "en": "to invite", "ex": { "de": "Ich lade dich zum Essen ein.", "en": "I'm inviting you for a meal." } },
+        { "de": "mögen", "en": "to like", "ex": { "de": "Ich mag Katzen.", "en": "I like cats." } },
+        { "de": "finden", "en": "to find; to think", "ex": { "de": "Ich finde den Film gut.", "en": "I think the film's good." } },
+        { "de": "bekommen", "en": "to get, receive", "ex": { "de": "Ich bekomme viele E-Mails.", "en": "I get lots of emails." } },
+        { "de": "benutzen", "en": "to use", "ex": { "de": "Darf ich dein Handy benutzen?", "en": "Can I use your phone?" } },
+        { "de": "bedeuten", "en": "to mean", "ex": { "de": "Was bedeutet das Wort?", "en": "What does the word mean?" } },
+        { "de": "dauern", "en": "to last, take (time)", "ex": { "de": "Der Kurs dauert drei Monate.", "en": "The course lasts three months." } },
+        { "de": "holen", "en": "to fetch, go and get", "ex": { "de": "Ich hole schnell Brötchen.", "en": "I'll quickly go and get some rolls." } },
+        { "de": "abholen", "en": "to pick up", "ex": { "de": "Ich hole dich am Bahnhof ab.", "en": "I'll pick you up at the station." } },
+        { "de": "mitbringen", "en": "to bring (along)", "ex": { "de": "Bring bitte Brot mit!", "en": "Please bring some bread!" } },
+        { "de": "mitnehmen", "en": "to take (along)", "ex": { "de": "Kann ich das Buch mitnehmen?", "en": "Can I take the book with me?" } },
+        { "de": "einsteigen", "en": "to get on, get in", "ex": { "de": "Bitte schnell einsteigen!", "en": "Please get on quickly!" } },
+        { "de": "aussteigen", "en": "to get off, get out", "ex": { "de": "Wir steigen am Bahnhof aus.", "en": "We're getting off at the station." } },
+        { "de": "duschen", "en": "to have a shower", "ex": { "de": "Ich dusche jeden Morgen.", "en": "I have a shower every morning." } }
+      ]
+    },
+    {
+      "id": "town",
+      "title": "Around town",
+      "vocab": [
+        { "de": "die Stadt", "en": "town / city", "pl": "Städte", "ex": { "de": "Die Stadt hat viele Parks.", "en": "The town has lots of parks." } },
+        { "de": "der Bus", "en": "bus", "pl": "Busse", "ex": { "de": "Der Bus kommt in fünf Minuten.", "en": "The bus is coming in five minutes." } },
+        { "de": "der Bahnhof", "en": "station", "pl": "Bahnhöfe", "ex": { "de": "Wo ist der Bahnhof, bitte?", "en": "Where's the station, please?" } },
+        { "de": "das Kino", "en": "cinema", "pl": "Kinos", "ex": { "de": "Das Kino ist gleich hier links.", "en": "The cinema is just here on the left." } },
+        { "de": "die U-Bahn", "en": "underground", "pl": "U-Bahnen", "ex": { "de": "Ich fahre mit der U-Bahn zur Arbeit.", "en": "I take the underground to work." } },
+        { "de": "die Straßenbahn", "en": "tram", "pl": "Straßenbahnen", "ex": { "de": "Die Straßenbahn ist heute voll.", "en": "The tram is full today." } },
+        { "de": "das Fahrrad", "en": "bike", "pl": "Fahrräder", "ex": { "de": "Mein Fahrrad ist neu.", "en": "My bike is new." } },
+        { "de": "die Haltestelle", "en": "stop (bus, tram)", "pl": "Haltestellen", "ex": { "de": "Die Haltestelle ist vor dem Supermarkt.", "en": "The stop is in front of the supermarket." } },
+        { "de": "die Fahrkarte", "en": "ticket", "pl": "Fahrkarten", "ex": { "de": "Ich brauche eine Fahrkarte nach Berlin.", "en": "I need a ticket to Berlin." } },
+        { "de": "der Platz", "en": "square; seat", "pl": "Plätze", "ex": { "de": "Das Café ist am Marktplatz.", "en": "The café is on the market square." } },
+        { "de": "die Post", "en": "post office; post", "pl": "-", "ex": { "de": "Ich gehe zur Post.", "en": "I'm going to the post office." } },
+        { "de": "die Bank", "en": "bank", "pl": "Banken", "ex": { "de": "Die Bank ist neben der Post.", "en": "The bank is next to the post office." } },
+        { "de": "das Café", "en": "café", "pl": "Cafés", "ex": { "de": "Wir trinken im Café einen Kaffee.", "en": "We have a coffee in the café." } },
+        { "de": "das Restaurant", "en": "restaurant", "pl": "Restaurants", "ex": { "de": "Das Restaurant ist sehr gut.", "en": "The restaurant is very good." } },
+        { "de": "der Park", "en": "park", "pl": "Parks", "ex": { "de": "Im Park spielen viele Kinder.", "en": "Lots of children play in the park." } },
+        { "de": "das Museum", "en": "museum", "pl": "Museen", "ex": { "de": "Das Museum ist am Montag zu.", "en": "The museum is closed on Mondays." } },
+        { "de": "links", "en": "left", "ex": { "de": "Gehen Sie hier links.", "en": "Turn left here." } },
+        { "de": "rechts", "en": "right", "ex": { "de": "Dann gehen Sie rechts.", "en": "Then turn right." } },
+        { "de": "geradeaus", "en": "straight on", "ex": { "de": "Gehen Sie immer geradeaus.", "en": "Keep going straight on." } },
+        { "de": "weit", "en": "far", "ex": { "de": "Ist das weit von hier?", "en": "Is that far from here?" } },
+        { "de": "nah", "en": "near, close", "ex": { "de": "Der Bahnhof ist ganz nah.", "en": "The station is very close." } },
+        { "de": "dort", "en": "there", "ex": { "de": "Siehst du die Kirche dort?", "en": "Can you see the church over there?" } },
+        { "de": "ankommen", "en": "to arrive", "ex": { "de": "Der Zug kommt um acht Uhr an.", "en": "The train arrives at eight o'clock." } },
+        { "de": "abfahren", "en": "to leave, depart", "ex": { "de": "Der Bus fährt gleich ab.", "en": "The bus is about to leave." } },
+        { "de": "umsteigen", "en": "to change (trains, buses)", "ex": { "de": "In Köln steigen wir um.", "en": "We change in Cologne." } }
+      ]
+    },
+    {
+      "id": "places",
+      "title": "Shops and places",
+      "vocab": [
+        { "de": "das Geschäft", "en": "shop; business", "pl": "Geschäfte", "ex": { "de": "Das Geschäft macht um neun Uhr auf.", "en": "The shop opens at nine o'clock." } },
+        { "de": "der Laden", "en": "shop", "pl": "Läden", "ex": { "de": "Der Laden an der Ecke ist billig.", "en": "The shop on the corner is cheap." } },
+        { "de": "der Markt", "en": "market", "pl": "Märkte", "ex": { "de": "Am Samstag gehe ich auf den Markt.", "en": "On Saturday I go to the market." } },
+        { "de": "die Bäckerei", "en": "baker's", "pl": "Bäckereien", "ex": { "de": "Die Bäckerei hat frische Brötchen.", "en": "The baker's has fresh rolls." } },
+        { "de": "die Bibliothek", "en": "library", "pl": "Bibliotheken", "ex": { "de": "In der Bibliothek ist es ruhig.", "en": "It's quiet in the library." } },
+        { "de": "das Schwimmbad", "en": "swimming pool", "pl": "Schwimmbäder", "ex": { "de": "Wir gehen ins Schwimmbad.", "en": "We're going to the swimming pool." } },
+        { "de": "die Toilette", "en": "toilet", "pl": "Toiletten", "ex": { "de": "Wo ist die Toilette, bitte?", "en": "Where's the toilet, please?" } },
+        { "de": "der Kiosk", "en": "kiosk", "pl": "Kioske", "ex": { "de": "Am Kiosk kaufe ich eine Zeitung.", "en": "I buy a newspaper at the kiosk." } },
+        { "de": "das Reisebüro", "en": "travel agency", "pl": "Reisebüros", "ex": { "de": "Im Reisebüro buchen wir die Reise.", "en": "We book the trip at the travel agency." } },
+        { "de": "die Kirche", "en": "church", "pl": "Kirchen", "ex": { "de": "Die Kirche ist sehr alt.", "en": "The church is very old." } },
+        { "de": "das Theater", "en": "theatre", "pl": "Theater", "ex": { "de": "Das Theater ist im Zentrum.", "en": "The theatre is in the centre." } },
+        { "de": "das Rathaus", "en": "town hall", "pl": "Rathäuser", "ex": { "de": "Das Rathaus ist ein schönes altes Haus.", "en": "The town hall is a lovely old building." } },
+        { "de": "der Eingang", "en": "entrance", "pl": "Eingänge", "ex": { "de": "Wo ist der Eingang?", "en": "Where's the entrance?" } },
+        { "de": "der Ausgang", "en": "exit", "pl": "Ausgänge", "ex": { "de": "Der Ausgang ist links.", "en": "The exit is on the left." } },
+        { "de": "die Ecke", "en": "corner", "pl": "Ecken", "ex": { "de": "Die Bank ist an der Ecke.", "en": "The bank is on the corner." } },
+        { "de": "der Ort", "en": "place; village", "pl": "Orte", "ex": { "de": "Der Ort ist sehr klein.", "en": "The village is very small." } },
+        { "de": "die Information", "en": "information; information desk", "pl": "Informationen", "ex": { "de": "Fragen Sie an der Information.", "en": "Ask at the information desk." } },
+        { "de": "der Automat", "en": "machine (tickets, drinks)", "pl": "Automaten", "ex": { "de": "Die Fahrkarte gibt es am Automaten.", "en": "You can get the ticket from the machine." } },
+        { "de": "die S-Bahn", "en": "suburban train", "pl": "S-Bahnen", "ex": { "de": "Ich fahre mit der S-Bahn zum Flughafen.", "en": "I take the suburban train to the airport." } },
+        { "de": "die Brücke", "en": "bridge", "pl": "Brücken", "ex": { "de": "Die Brücke ist sehr lang.", "en": "The bridge is very long." } },
+        { "de": "der Zoo", "en": "zoo", "pl": "Zoos", "ex": { "de": "Am Sonntag gehen wir in den Zoo.", "en": "On Sunday we're going to the zoo." } },
+        { "de": "das Kaufhaus", "en": "department store", "pl": "Kaufhäuser", "ex": { "de": "Im Kaufhaus gibt es alles.", "en": "The department store has everything." } },
+        { "de": "die Innenstadt", "en": "town centre", "pl": "Innenstädte", "ex": { "de": "Ich wohne in der Innenstadt.", "en": "I live in the town centre." } },
+        { "de": "geöffnet", "en": "open", "ex": { "de": "Die Apotheke ist heute geöffnet.", "en": "The chemist's is open today." } },
+        { "de": "geschlossen", "en": "closed", "ex": { "de": "Sonntags sind die Geschäfte geschlossen.", "en": "Shops are closed on Sundays." } }
+      ]
+    },
+    {
+      "id": "describe",
+      "title": "Colours and describing things",
+      "vocab": [
+        { "de": "die Farbe", "en": "colour", "pl": "Farben", "ex": { "de": "Welche Farbe hat dein Auto?", "en": "What colour is your car?" } },
+        { "de": "schwarz", "en": "black", "ex": { "de": "Sie trägt eine schwarze Jacke.", "en": "She's wearing a black jacket." } },
+        { "de": "weiß", "en": "white", "ex": { "de": "Der Schnee ist weiß.", "en": "The snow is white." } },
+        { "de": "rot", "en": "red", "ex": { "de": "Das Auto ist rot.", "en": "The car is red." } },
+        { "de": "blau", "en": "blue", "ex": { "de": "Der Himmel ist blau.", "en": "The sky is blue." } },
+        { "de": "grün", "en": "green", "ex": { "de": "Im Frühling ist alles grün.", "en": "In spring everything is green." } },
+        { "de": "gelb", "en": "yellow", "ex": { "de": "Die Sonne ist gelb.", "en": "The sun is yellow." } },
+        { "de": "grau", "en": "grey", "ex": { "de": "Heute ist der Himmel grau.", "en": "The sky is grey today." } },
+        { "de": "braun", "en": "brown", "ex": { "de": "Mein Hund ist braun.", "en": "My dog is brown." } },
+        { "de": "rosa", "en": "pink", "ex": { "de": "Das Baby trägt ein rosa Kleid.", "en": "The baby is wearing a pink dress." } },
+        { "de": "lila", "en": "purple", "ex": { "de": "Meine Lieblingsfarbe ist Lila.", "en": "My favourite colour is purple." } },
+        { "de": "orange", "en": "orange", "ex": { "de": "Die Tasche ist orange.", "en": "The bag is orange." } },
+        { "de": "glücklich", "en": "happy", "ex": { "de": "Wir sind sehr glücklich.", "en": "We're very happy." } },
+        { "de": "traurig", "en": "sad", "ex": { "de": "Warum bist du traurig?", "en": "Why are you sad?" } },
+        { "de": "hässlich", "en": "ugly", "ex": { "de": "Das Bild ist hässlich.", "en": "The picture is ugly." } },
+        { "de": "einfach", "en": "easy, simple", "ex": { "de": "Die Frage ist einfach.", "en": "The question is easy." } },
+        { "de": "schwierig", "en": "difficult", "ex": { "de": "Deutsch ist nicht so schwierig.", "en": "German isn't that difficult." } },
+        { "de": "schwer", "en": "heavy; hard", "ex": { "de": "Die Tasche ist sehr schwer.", "en": "The bag is very heavy." } },
+        { "de": "leicht", "en": "light; easy", "ex": { "de": "Die Übung ist leicht.", "en": "The exercise is easy." } },
+        { "de": "kurz", "en": "short", "ex": { "de": "Die Pause ist kurz.", "en": "The break is short." } },
+        { "de": "lang", "en": "long", "ex": { "de": "Der Weg ist lang.", "en": "It's a long way." } },
+        { "de": "leise", "en": "quiet, quietly", "ex": { "de": "Sprich bitte leise!", "en": "Please speak quietly!" } },
+        { "de": "voll", "en": "full", "ex": { "de": "Das Glas ist voll.", "en": "The glass is full." } },
+        { "de": "leer", "en": "empty", "ex": { "de": "Der Kühlschrank ist leer.", "en": "The fridge is empty." } },
+        { "de": "wunderbar", "en": "wonderful", "ex": { "de": "Das Wetter ist wunderbar!", "en": "The weather is wonderful!" } }
+      ]
+    },
+    {
+      "id": "little",
+      "title": "Little words",
+      "vocab": [
+        { "de": "immer", "en": "always", "ex": { "de": "Er kommt immer zu spät.", "en": "He's always late." } },
+        { "de": "vielleicht", "en": "maybe", "ex": { "de": "Vielleicht regnet es morgen.", "en": "Maybe it'll rain tomorrow." } },
+        { "de": "sofort", "en": "right away", "ex": { "de": "Komm bitte sofort!", "en": "Come right away, please!" } },
+        { "de": "gleich", "en": "in a moment; same", "ex": { "de": "Ich komme gleich.", "en": "I'll be there in a moment." } },
+        { "de": "draußen", "en": "outside", "ex": { "de": "Die Kinder spielen draußen.", "en": "The children are playing outside." } },
+        { "de": "hier", "en": "here", "ex": { "de": "Hier ist mein Zimmer.", "en": "Here's my room." } },
+        { "de": "oben", "en": "up, upstairs", "ex": { "de": "Das Bad ist oben.", "en": "The bathroom is upstairs." } },
+        { "de": "unten", "en": "down, downstairs", "ex": { "de": "Die Küche ist unten.", "en": "The kitchen is downstairs." } },
+        { "de": "wenig", "en": "little, not much", "ex": { "de": "Ich habe wenig Zeit.", "en": "I haven't got much time." } },
+        { "de": "alle", "en": "all, everyone", "ex": { "de": "Alle sind da.", "en": "Everyone's here." } },
+        { "de": "jeder", "en": "every; everyone", "ex": { "de": "Jeder Tag ist anders.", "en": "Every day is different." } },
+        { "de": "etwas", "en": "something", "ex": { "de": "Möchtest du etwas trinken?", "en": "Would you like something to drink?" } },
+        { "de": "nichts", "en": "nothing", "ex": { "de": "Ich verstehe nichts.", "en": "I don't understand anything." } },
+        { "de": "ja", "en": "yes", "ex": { "de": "Ja, gern!", "en": "Yes, please!" } },
+        { "de": "nein", "en": "no", "ex": { "de": "Nein, danke.", "en": "No, thank you." } },
+        { "de": "auch", "en": "also, too", "ex": { "de": "Ich komme auch mit.", "en": "I'm coming too." } },
+        { "de": "noch", "en": "still; more", "ex": { "de": "Möchten Sie noch Kaffee?", "en": "Would you like some more coffee?" } },
+        { "de": "nur", "en": "only", "ex": { "de": "Ich habe nur zehn Euro.", "en": "I've only got ten euros." } },
+        { "de": "sehr", "en": "very", "ex": { "de": "Das ist sehr nett von dir.", "en": "That's very kind of you." } },
+        { "de": "wieder", "en": "again", "ex": { "de": "Sie ist wieder krank.", "en": "She's ill again." } },
+        { "de": "genau", "en": "exactly", "ex": { "de": "Genau, so ist es!", "en": "Exactly, that's how it is!" } },
+        { "de": "natürlich", "en": "of course", "ex": { "de": "Natürlich helfe ich dir.", "en": "Of course I'll help you." } },
+        { "de": "fertig", "en": "ready, finished", "ex": { "de": "Bist du fertig?", "en": "Are you ready?" } },
+        { "de": "frei", "en": "free; available", "ex": { "de": "Ist der Platz noch frei?", "en": "Is this seat free?" } },
+        { "de": "zuerst", "en": "first", "ex": { "de": "Zuerst trinke ich einen Kaffee.", "en": "First I have a coffee." } }
+      ]
+    },
+    {
+      "id": "people",
+      "title": "Looks and clothes",
+      "vocab": [
+        { "de": "aussehen", "en": "to look (like)", "ex": { "de": "Du siehst müde aus.", "en": "You look tired." } },
+        { "de": "alt", "en": "old", "ex": { "de": "Wie alt bist du?", "en": "How old are you?" } },
+        { "de": "jung", "en": "young", "ex": { "de": "Meine Mutter ist noch jung.", "en": "My mother is still young." } },
+        { "de": "schlank", "en": "slim", "ex": { "de": "Er ist groß und schlank.", "en": "He's tall and slim." } },
+        { "de": "das Haar", "en": "hair", "pl": "Haare", "ex": { "de": "Sie hat lange Haare.", "en": "She has long hair." } },
+        { "de": "die Brille", "en": "glasses", "pl": "Brillen", "ex": { "de": "Ich trage eine Brille.", "en": "I wear glasses." } },
+        { "de": "tragen", "en": "to wear; to carry", "ex": { "de": "Sie trägt ein rotes Kleid.", "en": "She's wearing a red dress." } },
+        { "de": "das Kleid", "en": "dress", "pl": "Kleider", "ex": { "de": "Das Kleid ist sehr schön.", "en": "The dress is very beautiful." } },
+        { "de": "die Hose", "en": "trousers", "pl": "Hosen", "ex": { "de": "Die Hose ist zu lang.", "en": "The trousers are too long." } },
+        { "de": "das Hemd", "en": "shirt", "pl": "Hemden", "ex": { "de": "Er trägt ein weißes Hemd.", "en": "He's wearing a white shirt." } },
+        { "de": "der Pullover", "en": "jumper", "pl": "Pullover", "ex": { "de": "Der Pullover ist schön warm.", "en": "The jumper is nice and warm." } },
+        { "de": "die Jacke", "en": "jacket", "pl": "Jacken", "ex": { "de": "Nimm eine Jacke mit!", "en": "Take a jacket with you!" } },
+        { "de": "der Schuh", "en": "shoe", "pl": "Schuhe", "ex": { "de": "Die Schuhe sind neu.", "en": "The shoes are new." } },
+        { "de": "die Kleidung", "en": "clothes", "pl": "-", "ex": { "de": "Ich kaufe Kleidung oft online.", "en": "I often buy clothes online." } },
+        { "de": "der Rock", "en": "skirt", "pl": "Röcke", "ex": { "de": "Der Rock ist zu kurz.", "en": "The skirt is too short." } },
+        { "de": "die Socke", "en": "sock", "pl": "Socken", "ex": { "de": "Ich suche meine Socken.", "en": "I'm looking for my socks." } },
+        { "de": "der Mantel", "en": "coat", "pl": "Mäntel", "ex": { "de": "Im Winter trage ich einen Mantel.", "en": "In winter I wear a coat." } },
+        { "de": "die Mütze", "en": "woolly hat, cap", "pl": "Mützen", "ex": { "de": "Setz die Mütze auf, es ist kalt!", "en": "Put your hat on, it's cold!" } },
+        { "de": "nett", "en": "nice", "ex": { "de": "Unsere Nachbarin ist sehr nett.", "en": "Our neighbour is very nice." } },
+        { "de": "freundlich", "en": "friendly", "ex": { "de": "Unser Lehrer ist immer freundlich.", "en": "Our teacher is always friendly." } },
+        { "de": "fleißig", "en": "hard-working", "ex": { "de": "Meine Schwester ist sehr fleißig.", "en": "My sister is very hard-working." } },
+        { "de": "faul", "en": "lazy", "ex": { "de": "Am Sonntag bin ich faul.", "en": "On Sundays I'm lazy." } },
+        { "de": "sympathisch", "en": "likeable", "ex": { "de": "Ich finde ihn sehr sympathisch.", "en": "I find him very likeable." } },
+        { "de": "hübsch", "en": "pretty", "ex": { "de": "Deine Tochter ist sehr hübsch.", "en": "Your daughter is very pretty." } },
+        { "de": "zufrieden", "en": "satisfied, happy", "ex": { "de": "Ich bin mit meiner Arbeit zufrieden.", "en": "I'm happy with my work." } }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Jobs and work",
+      "vocab": [
+        { "de": "der Beruf", "en": "job, profession", "pl": "Berufe", "ex": { "de": "Was sind Sie von Beruf?", "en": "What do you do for a living?" } },
+        { "de": "die Arbeit", "en": "work", "pl": "Arbeiten", "ex": { "de": "Die Arbeit macht mir Spaß.", "en": "I enjoy my work." } },
+        { "de": "die Firma", "en": "company", "pl": "Firmen", "ex": { "de": "Die Firma ist in München.", "en": "The company is in Munich." } },
+        { "de": "das Büro", "en": "office", "pl": "Büros", "ex": { "de": "Ich arbeite in einem Büro.", "en": "I work in an office." } },
+        { "de": "der Kollege", "en": "colleague", "pl": "Kollegen", "ex": { "de": "Mein Kollege ist sehr nett.", "en": "My colleague is very nice." } },
+        { "de": "die Kollegin", "en": "colleague (woman)", "pl": "Kolleginnen", "ex": { "de": "Die neue Kollegin kommt aus Polen.", "en": "The new colleague comes from Poland." } },
+        { "de": "der Chef", "en": "boss (man)", "pl": "Chefs", "ex": { "de": "Der Chef ist heute nicht da.", "en": "The boss isn't in today." } },
+        { "de": "der Arzt", "en": "doctor", "pl": "Ärzte", "ex": { "de": "Der Arzt arbeitet im Krankenhaus.", "en": "The doctor works at the hospital." } },
+        { "de": "der Koch", "en": "cook, chef (man)", "pl": "Köche", "ex": { "de": "Der Koch arbeitet am Abend.", "en": "The cook works in the evenings." } },
+        { "de": "die Verkäuferin", "en": "shop assistant (woman)", "pl": "Verkäuferinnen", "ex": { "de": "Die Verkäuferin ist sehr freundlich.", "en": "The shop assistant is very friendly." } },
+        { "de": "der Kellner", "en": "waiter", "pl": "Kellner", "ex": { "de": "Der Kellner bringt die Rechnung.", "en": "The waiter brings the bill." } },
+        { "de": "der Ingenieur", "en": "engineer (man)", "pl": "Ingenieure", "ex": { "de": "Mein Bruder ist Ingenieur.", "en": "My brother is an engineer." } },
+        { "de": "die Krankenpflegerin", "en": "nurse (woman)", "pl": "Krankenpflegerinnen", "ex": { "de": "Sie ist Krankenpflegerin.", "en": "She's a nurse." } },
+        { "de": "der Student", "en": "student (man)", "pl": "Studenten", "ex": { "de": "Ich bin Student.", "en": "I'm a student." } },
+        { "de": "studieren", "en": "to study (at university)", "ex": { "de": "Sie studiert Medizin.", "en": "She's studying medicine." } },
+        { "de": "verdienen", "en": "to earn", "ex": { "de": "Er verdient gut.", "en": "He earns well." } },
+        { "de": "der Job", "en": "job", "pl": "Jobs", "ex": { "de": "Ich suche einen Job.", "en": "I'm looking for a job." } },
+        { "de": "suchen", "en": "to look for", "ex": { "de": "Die Firma sucht einen Koch.", "en": "The company is looking for a cook." } },
+        { "de": "die Teilzeit", "en": "part-time", "pl": "-", "ex": { "de": "Ich arbeite in Teilzeit.", "en": "I work part-time." } },
+        { "de": "pünktlich", "en": "on time", "ex": { "de": "Bitte seien Sie pünktlich.", "en": "Please be on time." } },
+        { "de": "anfangen", "en": "to start", "ex": { "de": "Die Arbeit fängt um acht an.", "en": "Work starts at eight." } },
+        { "de": "aufhören", "en": "to stop", "ex": { "de": "Um fünf Uhr höre ich auf.", "en": "I stop at five o'clock." } },
+        { "de": "der Computer", "en": "computer", "pl": "Computer", "ex": { "de": "Der Computer ist neu.", "en": "The computer is new." } },
+        { "de": "kaputt", "en": "broken", "ex": { "de": "Mein Handy ist kaputt.", "en": "My phone is broken." } },
+        { "de": "der Kunde", "en": "customer", "pl": "Kunden", "ex": { "de": "Der Kunde wartet schon.", "en": "The customer is already waiting." } }
+      ]
+    },
+    {
+      "id": "health",
+      "title": "Body and health",
+      "vocab": [
+        { "de": "der Körper", "en": "body", "pl": "Körper", "ex": { "de": "Sport ist gut für den Körper.", "en": "Sport is good for your body." } },
+        { "de": "der Kopf", "en": "head", "pl": "Köpfe", "ex": { "de": "Ich habe Kopfschmerzen.", "en": "I've got a headache." } },
+        { "de": "der Bauch", "en": "stomach, tummy", "pl": "Bäuche", "ex": { "de": "Der Bauch tut mir weh.", "en": "My stomach hurts." } },
+        { "de": "der Rücken", "en": "back", "pl": "Rücken", "ex": { "de": "Ich habe oft Rückenschmerzen.", "en": "I often have backache." } },
+        { "de": "das Bein", "en": "leg", "pl": "Beine", "ex": { "de": "Er hat ein Problem mit dem Bein.", "en": "He has a problem with his leg." } },
+        { "de": "der Arm", "en": "arm", "pl": "Arme", "ex": { "de": "Sie trägt das Baby auf dem Arm.", "en": "She's carrying the baby in her arms." } },
+        { "de": "die Hand", "en": "hand", "pl": "Hände", "ex": { "de": "Gib mir die Hand.", "en": "Give me your hand." } },
+        { "de": "das Auge", "en": "eye", "pl": "Augen", "ex": { "de": "Sie hat blaue Augen.", "en": "She has blue eyes." } },
+        { "de": "das Ohr", "en": "ear", "pl": "Ohren", "ex": { "de": "Mein Ohr tut weh.", "en": "My ear hurts." } },
+        { "de": "der Zahn", "en": "tooth", "pl": "Zähne", "ex": { "de": "Ich putze zweimal am Tag die Zähne.", "en": "I brush my teeth twice a day." } },
+        { "de": "der Hals", "en": "throat; neck", "pl": "Hälse", "ex": { "de": "Ich habe Halsschmerzen.", "en": "I've got a sore throat." } },
+        { "de": "krank", "en": "ill", "ex": { "de": "Ich bin krank und bleibe zu Hause.", "en": "I'm ill and I'm staying at home." } },
+        { "de": "gesund", "en": "healthy", "ex": { "de": "Obst ist gesund.", "en": "Fruit is healthy." } },
+        { "de": "müde", "en": "tired", "ex": { "de": "Ich bin heute sehr müde.", "en": "I'm very tired today." } },
+        { "de": "das Fieber", "en": "fever, temperature", "pl": "-", "ex": { "de": "Das Kind hat Fieber.", "en": "The child has a temperature." } },
+        { "de": "der Schmerz", "en": "pain", "pl": "Schmerzen", "ex": { "de": "Haben Sie Schmerzen?", "en": "Are you in pain?" } },
+        { "de": "wehtun", "en": "to hurt", "ex": { "de": "Mein Bein tut weh.", "en": "My leg hurts." } },
+        { "de": "die Erkältung", "en": "cold", "pl": "Erkältungen", "ex": { "de": "Ich habe eine Erkältung.", "en": "I've got a cold." } },
+        { "de": "die Nase", "en": "nose", "pl": "Nasen", "ex": { "de": "Meine Nase läuft.", "en": "My nose is running." } },
+        { "de": "die Tablette", "en": "tablet, pill", "pl": "Tabletten", "ex": { "de": "Nehmen Sie dreimal am Tag eine Tablette.", "en": "Take one tablet three times a day." } },
+        { "de": "die Apotheke", "en": "chemist's, pharmacy", "pl": "Apotheken", "ex": { "de": "Die Apotheke ist neben der Bank.", "en": "The chemist's is next to the bank." } },
+        { "de": "das Gesicht", "en": "face", "pl": "Gesichter", "ex": { "de": "Sie hat ein schönes Gesicht.", "en": "She has a lovely face." } },
+        { "de": "das Krankenhaus", "en": "hospital", "pl": "Krankenhäuser", "ex": { "de": "Mein Opa ist im Krankenhaus.", "en": "My grandad is in hospital." } },
+        { "de": "schlafen", "en": "to sleep", "ex": { "de": "Schlaf gut!", "en": "Sleep well!" } },
+        { "de": "der Mund", "en": "mouth", "pl": "Münder", "ex": { "de": "Mach bitte den Mund auf.", "en": "Open your mouth, please." } }
+      ]
+    },
+    {
+      "id": "weather",
+      "title": "Weather and seasons",
+      "vocab": [
+        { "de": "das Wetter", "en": "weather", "pl": "-", "ex": { "de": "Wie ist das Wetter heute?", "en": "What's the weather like today?" } },
+        { "de": "die Sonne", "en": "sun", "pl": "-", "ex": { "de": "Heute scheint die Sonne.", "en": "The sun is shining today." } },
+        { "de": "der Regen", "en": "rain", "pl": "-", "ex": { "de": "Morgen kommt Regen.", "en": "Rain is on the way tomorrow." } },
+        { "de": "regnen", "en": "to rain", "ex": { "de": "Es regnet schon den ganzen Tag.", "en": "It's been raining all day." } },
+        { "de": "der Schnee", "en": "snow", "pl": "-", "ex": { "de": "Im Winter liegt hier viel Schnee.", "en": "In winter there's lots of snow here." } },
+        { "de": "der Wind", "en": "wind", "pl": "Winde", "ex": { "de": "Der Wind ist heute stark.", "en": "The wind is strong today." } },
+        { "de": "warm", "en": "warm", "ex": { "de": "Im Juli ist es sehr warm.", "en": "It's very warm in July." } },
+        { "de": "kalt", "en": "cold", "ex": { "de": "Heute ist es kalt.", "en": "It's cold today." } },
+        { "de": "heiß", "en": "hot", "ex": { "de": "Im Sommer ist es oft heiß.", "en": "It's often hot in summer." } },
+        { "de": "der Frühling", "en": "spring", "pl": "Frühlinge", "ex": { "de": "Im Frühling blühen die Blumen.", "en": "In spring the flowers come out." } },
+        { "de": "der Sommer", "en": "summer", "pl": "Sommer", "ex": { "de": "Im Sommer fahren wir ans Meer.", "en": "In summer we go to the seaside." } },
+        { "de": "der Herbst", "en": "autumn", "pl": "Herbste", "ex": { "de": "Im Herbst ist es oft windig.", "en": "It's often windy in autumn." } },
+        { "de": "der Winter", "en": "winter", "pl": "Winter", "ex": { "de": "Der Winter ist lang und kalt.", "en": "The winter is long and cold." } },
+        { "de": "die Jahreszeit", "en": "season", "pl": "Jahreszeiten", "ex": { "de": "Welche Jahreszeit magst du?", "en": "Which season do you like?" } },
+        { "de": "der Monat", "en": "month", "pl": "Monate", "ex": { "de": "Der Kurs dauert einen Monat.", "en": "The course lasts a month." } },
+        { "de": "Weihnachten", "en": "Christmas", "ex": { "de": "Frohe Weihnachten!", "en": "Merry Christmas!" } },
+        { "de": "Ostern", "en": "Easter", "ex": { "de": "Zu Ostern besuchen wir die Großeltern.", "en": "At Easter we visit our grandparents." } },
+        { "de": "das Fest", "en": "celebration, festival", "pl": "Feste", "ex": { "de": "Das Fest beginnt um sieben.", "en": "The celebration starts at seven." } },
+        { "de": "die Blume", "en": "flower", "pl": "Blumen", "ex": { "de": "Die Blumen sind für dich.", "en": "The flowers are for you." } },
+        { "de": "bunt", "en": "colourful", "ex": { "de": "Im Herbst sind die Bäume bunt.", "en": "In autumn the trees are colourful." } },
+        { "de": "der Baum", "en": "tree", "pl": "Bäume", "ex": { "de": "Vor dem Haus steht ein großer Baum.", "en": "There's a big tree in front of the house." } },
+        { "de": "das Jahr", "en": "year", "pl": "Jahre", "ex": { "de": "Das Jahr hat zwölf Monate.", "en": "A year has twelve months." } },
+        { "de": "die Woche", "en": "week", "pl": "Wochen", "ex": { "de": "Nächste Woche habe ich Urlaub.", "en": "Next week I'm on holiday." } },
+        { "de": "der Grad", "en": "degree", "pl": "Grad", "ex": { "de": "Es sind zwanzig Grad.", "en": "It's twenty degrees." } },
+        { "de": "die Temperatur", "en": "temperature", "pl": "Temperaturen", "ex": { "de": "Wie ist die Temperatur draußen?", "en": "What's the temperature outside?" } }
+      ]
+    },
+    {
+      "id": "travel",
+      "title": "Travel",
+      "vocab": [
+        { "de": "der Urlaub", "en": "holiday", "pl": "Urlaube", "ex": { "de": "Im August machen wir Urlaub.", "en": "In August we're going on holiday." } },
+        { "de": "reisen", "en": "to travel", "ex": { "de": "Ich reise gern allein.", "en": "I like travelling alone." } },
+        { "de": "die Reise", "en": "journey, trip", "pl": "Reisen", "ex": { "de": "Die Reise dauert drei Stunden.", "en": "The journey takes three hours." } },
+        { "de": "die Ferien", "en": "holidays", "pl": "pl", "ex": { "de": "In den Ferien fahren wir nach Italien.", "en": "In the holidays we're going to Italy." } },
+        { "de": "das Hotel", "en": "hotel", "pl": "Hotels", "ex": { "de": "Das Hotel liegt direkt am Meer.", "en": "The hotel is right by the sea." } },
+        { "de": "das Meer", "en": "sea", "pl": "Meere", "ex": { "de": "Das Meer ist heute ruhig.", "en": "The sea is calm today." } },
+        { "de": "der See", "en": "lake", "pl": "Seen", "ex": { "de": "Am See ist es schön ruhig.", "en": "It's nice and quiet by the lake." } },
+        { "de": "der Berg", "en": "mountain", "pl": "Berge", "ex": { "de": "Wir wandern auf einen Berg.", "en": "We're hiking up a mountain." } },
+        { "de": "das Dorf", "en": "village", "pl": "Dörfer", "ex": { "de": "Meine Oma wohnt in einem kleinen Dorf.", "en": "My grandma lives in a small village." } },
+        { "de": "der Flughafen", "en": "airport", "pl": "Flughäfen", "ex": { "de": "Wie komme ich zum Flughafen?", "en": "How do I get to the airport?" } },
+        { "de": "das Flugzeug", "en": "plane", "pl": "Flugzeuge", "ex": { "de": "Das Flugzeug landet um zehn Uhr.", "en": "The plane lands at ten o'clock." } },
+        { "de": "fliegen", "en": "to fly", "ex": { "de": "Wir fliegen nach Spanien.", "en": "We're flying to Spain." } },
+        { "de": "der Koffer", "en": "suitcase", "pl": "Koffer", "ex": { "de": "Mein Koffer ist sehr schwer.", "en": "My suitcase is very heavy." } },
+        { "de": "das Gepäck", "en": "luggage", "pl": "-", "ex": { "de": "Wo ist Ihr Gepäck?", "en": "Where's your luggage?" } },
+        { "de": "das Ticket", "en": "ticket", "pl": "Tickets", "ex": { "de": "Hast du die Tickets schon?", "en": "Have you got the tickets yet?" } },
+        { "de": "buchen", "en": "to book", "ex": { "de": "Wir buchen ein Zimmer im Hotel.", "en": "We're booking a hotel room." } },
+        { "de": "das Doppelzimmer", "en": "double room", "pl": "Doppelzimmer", "ex": { "de": "Ein Doppelzimmer für zwei Nächte, bitte.", "en": "A double room for two nights, please." } },
+        { "de": "die Nacht", "en": "night", "pl": "Nächte", "ex": { "de": "Eine Nacht kostet achtzig Euro.", "en": "One night costs eighty euros." } },
+        { "de": "der Pass", "en": "passport", "pl": "Pässe", "ex": { "de": "Hast du deinen Pass dabei?", "en": "Have you got your passport with you?" } },
+        { "de": "die Karte", "en": "map; card", "pl": "Karten", "ex": { "de": "Hast du eine Karte von Berlin?", "en": "Have you got a map of Berlin?" } },
+        { "de": "besichtigen", "en": "to visit, see (sights)", "ex": { "de": "Wir besichtigen heute den Dom.", "en": "Today we're visiting the cathedral." } },
+        { "de": "der Strand", "en": "beach", "pl": "Strände", "ex": { "de": "Die Kinder spielen am Strand.", "en": "The children are playing on the beach." } },
+        { "de": "das Ausland", "en": "abroad", "pl": "-", "ex": { "de": "Fährst du gern ins Ausland?", "en": "Do you like going abroad?" } },
+        { "de": "packen", "en": "to pack", "ex": { "de": "Ich packe heute den Koffer.", "en": "I'm packing my suitcase today." } },
+        { "de": "die Sehenswürdigkeit", "en": "sight, attraction", "pl": "Sehenswürdigkeiten", "ex": { "de": "Berlin hat viele Sehenswürdigkeiten.", "en": "Berlin has lots of sights." } }
+      ]
+    },
+    {
+      "id": "verbs2",
+      "title": "More everyday verbs",
+      "vocab": [
+        { "de": "warten", "en": "to wait", "ex": { "de": "Bitte warten Sie hier.", "en": "Please wait here." } },
+        { "de": "denken", "en": "to think", "ex": { "de": "Was denkst du?", "en": "What do you think?" } },
+        { "de": "wissen", "en": "to know (a fact)", "ex": { "de": "Ich weiß es nicht.", "en": "I don't know." } },
+        { "de": "glauben", "en": "to believe / think", "ex": { "de": "Ich glaube, er kommt heute.", "en": "I think he's coming today." } },
+        { "de": "vergessen", "en": "to forget", "ex": { "de": "Ich vergesse oft meinen Schlüssel.", "en": "I often forget my key." } },
+        { "de": "versuchen", "en": "to try", "ex": { "de": "Ich versuche es noch einmal.", "en": "I'll try again." } },
+        { "de": "erklären", "en": "to explain", "ex": { "de": "Kannst du mir das erklären?", "en": "Can you explain that to me?" } },
+        { "de": "erzählen", "en": "to tell (a story)", "ex": { "de": "Opa erzählt eine Geschichte.", "en": "Grandad is telling a story." } },
+        { "de": "zeigen", "en": "to show", "ex": { "de": "Zeig mir bitte das Foto!", "en": "Show me the photo, please!" } },
+        { "de": "zeichnen", "en": "to draw", "ex": { "de": "Mein Sohn zeichnet gern.", "en": "My son likes drawing." } },
+        { "de": "tun", "en": "to do", "ex": { "de": "Was kann ich für Sie tun?", "en": "What can I do for you?" } },
+        { "de": "halten", "en": "to hold; to stop", "ex": { "de": "Der Bus hält vor dem Bahnhof.", "en": "The bus stops in front of the station." } },
+        { "de": "fehlen", "en": "to be missing", "ex": { "de": "Wer fehlt heute?", "en": "Who's missing today?" } },
+        { "de": "riechen", "en": "to smell", "ex": { "de": "Die Blumen riechen gut.", "en": "The flowers smell nice." } },
+        { "de": "gratulieren", "en": "to congratulate", "ex": { "de": "Ich gratuliere dir zum Geburtstag!", "en": "Happy birthday!" } },
+        { "de": "übernachten", "en": "to stay the night", "ex": { "de": "Wir übernachten im Hotel.", "en": "We're staying at a hotel." } },
+        { "de": "baden", "en": "to have a bath; to swim", "ex": { "de": "Die Kinder baden im See.", "en": "The children are swimming in the lake." } },
+        { "de": "unterrichten", "en": "to teach", "ex": { "de": "Sie unterrichtet Deutsch.", "en": "She teaches German." } },
+        { "de": "drücken", "en": "to press; to push", "ex": { "de": "Drücken Sie bitte den Knopf.", "en": "Please press the button." } },
+        { "de": "ziehen", "en": "to pull", "ex": { "de": "Du musst die Tür ziehen.", "en": "You have to pull the door." } },
+        { "de": "treffen", "en": "to meet", "ex": { "de": "Ich treffe meine Freundin im Café.", "en": "I'm meeting my friend at the café." } },
+        { "de": "geben", "en": "to give", "ex": { "de": "Gib mir bitte das Buch.", "en": "Give me the book, please." } },
+        { "de": "gehören", "en": "to belong to", "ex": { "de": "Das Fahrrad gehört mir.", "en": "The bike's mine." } },
+        { "de": "stehen", "en": "to stand", "ex": { "de": "Das Auto steht vor dem Haus.", "en": "The car's in front of the house." } },
+        { "de": "liegen", "en": "to lie (be lying)", "ex": { "de": "Das Buch liegt auf dem Tisch.", "en": "The book is on the table." } }
+      ]
+    },
+    {
+      "id": "post",
+      "title": "Post and phone",
+      "vocab": [
+        { "de": "der Brief", "en": "letter", "pl": "Briefe", "ex": { "de": "Ich schreibe einen Brief.", "en": "I'm writing a letter." } },
+        { "de": "die Briefmarke", "en": "stamp", "pl": "Briefmarken", "ex": { "de": "Eine Briefmarke, bitte.", "en": "A stamp, please." } },
+        { "de": "das Paket", "en": "parcel", "pl": "Pakete", "ex": { "de": "Das Paket ist für dich.", "en": "The parcel is for you." } },
+        { "de": "das Päckchen", "en": "small parcel", "pl": "Päckchen", "ex": { "de": "Ich schicke dir ein Päckchen.", "en": "I'm sending you a small parcel." } },
+        { "de": "der Umschlag", "en": "envelope", "pl": "Umschläge", "ex": { "de": "Ich brauche einen Umschlag.", "en": "I need an envelope." } },
+        { "de": "das Telefon", "en": "telephone", "pl": "Telefone", "ex": { "de": "Wo ist das Telefon?", "en": "Where's the phone?" } },
+        { "de": "telefonieren", "en": "to phone", "ex": { "de": "Ich telefoniere mit meiner Mutter.", "en": "I'm on the phone to my mother." } },
+        { "de": "der Anruf", "en": "(phone) call", "pl": "Anrufe", "ex": { "de": "Danke für deinen Anruf!", "en": "Thanks for calling!" } },
+        { "de": "die Vorwahl", "en": "area code", "pl": "Vorwahlen", "ex": { "de": "Wie ist die Vorwahl von Berlin?", "en": "What's the area code for Berlin?" } },
+        { "de": "der Absender", "en": "sender", "pl": "Absender", "ex": { "de": "Wer ist der Absender?", "en": "Who's the sender?" } },
+        { "de": "der Empfänger", "en": "recipient", "pl": "Empfänger", "ex": { "de": "Schreib den Empfänger auf den Umschlag.", "en": "Write the recipient's address on the envelope." } },
+        { "de": "die Auskunft", "en": "information", "pl": "Auskünfte", "ex": { "de": "Ich brauche eine Auskunft.", "en": "I need some information." } },
+        { "de": "der Anrufbeantworter", "en": "answering machine", "pl": "Anrufbeantworter", "ex": { "de": "Sprich bitte auf den Anrufbeantworter.", "en": "Please leave a message on the answering machine." } },
+        { "de": "die E-Mail", "en": "email", "pl": "E-Mails", "ex": { "de": "Ich schreibe dir eine E-Mail.", "en": "I'll write you an email." } },
+        { "de": "die SMS", "en": "text message", "pl": "SMS", "ex": { "de": "Schick mir eine SMS!", "en": "Send me a text!" } },
+        { "de": "besetzt", "en": "busy (phone); taken", "ex": { "de": "Die Leitung ist besetzt.", "en": "The line is busy." } },
+        { "de": "Auf Wiederhören!", "en": "Goodbye! (on the phone)", "ex": { "de": "Bis morgen, auf Wiederhören!", "en": "See you tomorrow, goodbye!" } },
+        { "de": "Wie bitte?", "en": "Pardon?", "ex": { "de": "Wie bitte? Ich verstehe Sie nicht.", "en": "Pardon? I can't understand you." } },
+        { "de": "Moment, bitte!", "en": "One moment, please!", "ex": { "de": "Moment, bitte! Ich hole meinen Mann.", "en": "One moment, please! I'll get my husband." } },
+        { "de": "wählen", "en": "to dial; to choose", "ex": { "de": "Wählen Sie bitte die Nummer noch einmal.", "en": "Please dial the number again." } },
+        { "de": "klingeln", "en": "to ring", "ex": { "de": "Das Telefon klingelt.", "en": "The phone's ringing." } },
+        { "de": "das Gespräch", "en": "conversation; call", "pl": "Gespräche", "ex": { "de": "Das Gespräch dauert lange.", "en": "The conversation goes on for a long time." } },
+        { "de": "der Gruß", "en": "greeting", "pl": "Grüße", "ex": { "de": "Viele Grüße aus Berlin!", "en": "Best wishes from Berlin!" } },
+        { "de": "herzlich", "en": "warm, sincere", "ex": { "de": "Herzlichen Glückwunsch!", "en": "Congratulations!" } },
+        { "de": "lieb", "en": "dear; kind", "ex": { "de": "Liebe Anna, wie geht es dir?", "en": "Dear Anna, how are you?" } }
+      ]
+    }
+  ],
+  "test": {
+    "passMark": 5,
+    "reviewTip": "Review lessons 4 and 7, then try again.",
+    "listening": [
+      {
+        "audioText": "Achtung auf Gleis drei. Der Zug nach München fährt heute um vierzehn Uhr zwanzig.",
+        "question": "When does the train to Munich leave?",
+        "options": ["14:02", "14:20", "4:20"],
+        "answer": 1
+      },
+      {
+        "audioText": "Hallo Tom, hier ist Lisa. Ich kann heute leider nicht kommen. Treffen wir uns am Freitag um sieben?",
+        "question": "When does Lisa want to meet?",
+        "options": ["Today at 7", "Friday at 7", "Friday at 11"],
+        "answer": 1
+      },
+      {
+        "audioText": "Der Supermarkt ist von Montag bis Samstag von acht bis zwanzig Uhr geöffnet. Am Sonntag ist er geschlossen.",
+        "question": "Is the supermarket open on Sunday?",
+        "options": ["Yes, 8 to 20", "Yes, until 14", "No"],
+        "answer": 2
+      }
+    ],
+    "reading": {
+      "text": "Liebe Maria,\nich wohne jetzt in Köln. Die Wohnung ist klein, aber schön. Ich arbeite in einem Café, von Montag bis Freitag. Am Wochenende habe ich frei. Kommst du im Mai zu Besuch?\nViele Grüße\nAna",
+      "statements": [
+        {
+          "text": "Ana wohnt in Köln.",
+          "isTrue": true
+        },
+        {
+          "text": "Die Wohnung ist groß.",
+          "isTrue": false
+        },
+        {
+          "text": "Ana arbeitet am Wochenende.",
+          "isTrue": false
+        },
+        {
+          "text": "Ana fragt: Kommt Maria im Mai?",
+          "isTrue": true
+        }
+      ]
+    },
+    "writing": {
+      "task": "Your friend Jonas invited you to his party on Saturday. Write him a short message (about 30 words): you can't come, say why, suggest another day, and ask when he has time.",
+      "placeholder": "Lieber Jonas, …",
+      "checklist": [
+        "I greeted him (Lieber Jonas / Hallo Jonas)",
+        "I said I can't come (Ich kann nicht kommen)",
+        "I gave a reason",
+        "I suggested another day",
+        "I asked a question",
+        "I closed the message (Viele Grüße)"
+      ],
+      "modelAnswer": "Lieber Jonas,\nvielen Dank für die Einladung! Leider kann ich am Samstag nicht kommen. Ich muss arbeiten. Hast du am Sonntag Zeit? Wir können zusammen Kaffee trinken.\nViele Grüße"
+    },
+    "speaking": [
+      {
+        "task": "Introduce yourself: Name, Land, Wohnort, Sprachen, Beruf, Hobby.",
+        "modelAnswer": "Ich heiße Maya. Ich komme aus Brasilien und wohne in Leipzig. Ich spreche Portugiesisch, Englisch und ein bisschen Deutsch. Ich bin Köchin. Mein Hobby ist Fotografieren."
+      },
+      {
+        "task": "Topic: Essen. Ask a question with the word Frühstück.",
+        "modelAnswer": "Was isst du zum Frühstück?"
+      },
+      {
+        "task": "Make a request: ask someone to open the window.",
+        "modelAnswer": "Können Sie bitte das Fenster öffnen?"
+      },
+      {
+        "task": "Topic: Wochenende. Ask a question with the word Samstag.",
+        "modelAnswer": "Was machst du am Samstag?"
+      }
+    ]
+  }
+}

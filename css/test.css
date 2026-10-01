@@ -1,0 +1,146 @@
+/* Mock test and certificate pages */
+
+/* Mock test */
+.reading {
+  background: var(--surface);
+  border-left: 4px solid var(--signal);
+  padding: 14px 18px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 14px;
+  white-space: pre-line;
+  max-width: 62ch;
+}
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 14px;
+}
+.check-list label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 4px 0;
+  cursor: pointer;
+}
+.check-list input {
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ok);
+}
+.test-sec {
+  padding: 34px 0 10px;
+}
+
+/* Certificate */
+.cert-stage {
+  perspective: 1400px;
+  max-width: 700px;
+  margin: 26px auto 18px;
+}
+.cert {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: clamp(26px, 5vw, 50px);
+  box-shadow:
+    0 34px 70px -34px rgba(22, 35, 63, 0.6),
+    0 2px 0 rgba(22, 35, 63, 0.06);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.cert::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-radial-gradient(
+    circle at 108% -12%,
+    transparent 0 11px,
+    rgba(22, 35, 63, 0.055) 11px 12px
+  );
+}
+.cert::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1.5px solid rgba(22, 35, 63, 0.22);
+  border-radius: 3px;
+  pointer-events: none;
+}
+.cert-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font: 700 21px/1 var(--cond);
+  position: relative;
+}
+.cert-brand i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 3px var(--ink);
+}
+.cert h1 {
+  font-size: clamp(30px, 7.4vw, 58px);
+  margin: 30px 0 4px;
+  position: relative;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.cert-sub {
+  color: #566178;
+  margin-bottom: 30px;
+  position: relative;
+}
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  max-width: 460px;
+  position: relative;
+}
+.cert-grid dt {
+  font-size: 13px;
+  color: #566178;
+}
+.cert-grid dd {
+  margin: 3px 0 0;
+  font: 700 23px/1.1 var(--cond);
+  font-variant-numeric: tabular-nums;
+}
+.cert .stamp {
+  position: absolute;
+  right: clamp(20px, 5vw, 46px);
+  bottom: clamp(20px, 5vw, 42px);
+  font-size: 27px;
+}
+@media (max-width: 560px) {
+  .cert-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cert .stamp {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 24px;
+  }
+}
+
+/* a band of light sweeps across the paper once the stamp lands */
+.cert-sheen {
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: 0;
+  width: 26%;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  transform: translateX(-160%) skewX(-14deg);
+  mix-blend-mode: soft-light;
+}

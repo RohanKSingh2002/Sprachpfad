@@ -1,0 +1,167 @@
+/* Lesson page */
+
+/* Header, intro and grammar grid */
+.lesson-head {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 22px;
+}
+/* the yellow bar beside the title grows down when the lesson opens */
+.lesson-head::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  border-radius: 2px;
+  background: var(--signal);
+  transform-origin: 50% 0;
+  transition: transform 0.9s var(--ease-out);
+}
+.lesson-head.pre-draw::before {
+  transform: scaleY(0);
+}
+.lesson-head h1 {
+  margin-bottom: 4px;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.lesson-head .en {
+  font: 600 22px/1.2 var(--cond);
+  color: var(--muted);
+}
+.intro {
+  font-size: 18px;
+}
+.lesson-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  margin: 26px 0 18px;
+  align-items: start;
+}
+@media (max-width: 820px) {
+  .lesson-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Rules and spoken examples */
+ul.rules {
+  padding-left: 20px;
+  margin: 0;
+}
+ul.rules li {
+  margin-bottom: 8px;
+  max-width: 62ch;
+}
+.ex-list {
+  display: grid;
+  gap: 14px 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 700px) {
+  .ex-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.say {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.de-line {
+  font-weight: 600;
+}
+.en-line {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* Exercises section and progress bar */
+.exercises {
+  padding: 36px 0 20px;
+}
+.lprog {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + var(--nav-h));
+  z-index: var(--z-sticky);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.lprog .bar {
+  flex: 1;
+  height: 6px;
+  background: var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.lprog .bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--ok);
+  transition: width 0.4s;
+}
+
+/* Words and pager */
+.vocab {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 8px;
+}
+.vocab div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 16px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.3s var(--ease-out),
+    translate 0.3s var(--ease-out);
+}
+.vocab div:hover {
+  border-color: color-mix(in srgb, var(--text) 16%, var(--line));
+  box-shadow: var(--shadow-1);
+  translate: 0 -1px;
+}
+.vocab div > span:last-child {
+  color: var(--muted);
+  text-align: right;
+}
+.vocab .pl {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 30px 0 52px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .lprog .bar i {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-head::before {
+    transition: none;
+  }
+}

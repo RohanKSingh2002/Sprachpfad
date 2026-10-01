@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+.vscode/
+
+# voice model for tools/make_audio.py (downloaded on first run)
+tools/.models/
+__pycache__/

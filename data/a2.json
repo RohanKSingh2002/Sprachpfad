@@ -1,0 +1,1292 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Modal verbs",
+      "germanTitle": "Modalverben",
+      "intro": "Modal verbs say what you can, must, want or are allowed to do. They take position 2 and send the main verb to the end of the sentence as an infinitive.",
+      "table": {
+        "head": ["", "können", "müssen", "wollen"],
+        "rows": [
+          ["ich", "kann", "muss", "will"],
+          ["du", "kannst", "musst", "willst"],
+          ["er / sie / es", "kann", "muss", "will"],
+          ["wir", "können", "müssen", "wollen"],
+          ["ihr", "könnt", "müsst", "wollt"],
+          ["sie / Sie", "können", "müssen", "wollen"]
+        ]
+      },
+      "rules": [
+        "The modal verb takes position 2 and the main verb goes to the end as an infinitive: Ich kann heute nicht kommen.",
+        "ich and er/sie/es look the same, with no ending: ich kann, er kann; ich muss, sie muss.",
+        "dürfen = be allowed to (ich darf, du darfst, wir dürfen), sollen = be supposed to (ich soll, du sollst): Hier darf man nicht parken. Ich soll den Arzt anrufen.",
+        "nicht müssen means 'don't have to': Du musst nicht kommen. For 'mustn't', use nicht dürfen: Du darfst nicht kommen."
+      ],
+      "examples": [
+        {
+          "de": "Kannst du heute Abend kommen?",
+          "en": "Can you come this evening?"
+        },
+        {
+          "de": "Ich muss morgen früh aufstehen.",
+          "en": "I have to get up early tomorrow."
+        },
+        {
+          "de": "Hier darf man nicht rauchen.",
+          "en": "You're not allowed to smoke here."
+        },
+        {
+          "de": "Wir wollen im Sommer nach Italien fahren.",
+          "en": "We want to go to Italy in the summer."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich ___ leider nicht kommen.",
+          "options": ["kann", "kannst", "können", "könnt"],
+          "answer": 0,
+          "hint": "ich → kann, with no ending"
+        },
+        {
+          "type": "fill",
+          "question": "Du ___ jetzt nach Hause gehen. (müssen)",
+          "answers": ["musst"],
+          "hint": "du → musst"
+        },
+        {
+          "type": "order",
+          "question": "Build: I have to work today.",
+          "words": ["heute", "muss", "Ich", "arbeiten"],
+          "answers": ["Ich muss heute arbeiten", "Heute muss ich arbeiten"],
+          "hint": "Modal verb in position 2, the infinitive at the end."
+        },
+        {
+          "type": "choice",
+          "question": "Hier ___ man nicht parken. (not allowed)",
+          "options": ["muss", "will", "darf"],
+          "answer": 2,
+          "hint": "not allowed → nicht dürfen: man darf nicht"
+        },
+        {
+          "type": "choice",
+          "question": "Du musst nicht kommen. What does it mean?",
+          "options": ["You can't come.", "You mustn't come.", "You don't have to come."],
+          "answer": 2,
+          "hint": "nicht müssen = don't have to",
+          "englishOptions": true
+        },
+        {
+          "type": "write",
+          "question": "Write two sentences: one thing you have to do this week and one thing you want to do at the weekend.",
+          "modelAnswer": "Diese Woche muss ich viel arbeiten. Am Wochenende will ich Fußball spielen."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "können",
+          "en": "can / to be able to"
+        },
+        {
+          "de": "müssen",
+          "en": "must / to have to"
+        },
+        {
+          "de": "wollen",
+          "en": "to want to"
+        },
+        {
+          "de": "dürfen",
+          "en": "to be allowed to"
+        },
+        {
+          "de": "sollen",
+          "en": "to be supposed to"
+        },
+        {
+          "de": "man",
+          "en": "one / you (people in general)"
+        },
+        {
+          "de": "rauchen",
+          "en": "to smoke"
+        },
+        {
+          "de": "parken",
+          "en": "to park"
+        },
+        {
+          "de": "früh",
+          "en": "early"
+        },
+        {
+          "de": "der Sommer",
+          "en": "summer",
+          "pl": "Sommer"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The perfect tense with haben",
+      "germanTitle": "Das Perfekt",
+      "intro": "When Germans talk about the past, they mostly use the Perfekt: a form of haben in position 2 and the past participle (Partizip II) at the end.",
+      "table": {
+        "head": ["Type", "Verb", "Partizip II"],
+        "rows": [
+          ["regular", "machen", "gemacht"],
+          ["regular", "kaufen", "gekauft"],
+          ["regular", "arbeiten", "gearbeitet"],
+          ["irregular", "essen", "gegessen"],
+          ["irregular", "trinken", "getrunken"],
+          ["irregular", "schreiben", "geschrieben"]
+        ]
+      },
+      "rules": [
+        "Perfekt = haben in position 2 + Partizip II at the end: Ich habe gestern Pizza gegessen.",
+        "Regular verbs: ge + stem + t. machen → gemacht, kaufen → gekauft. Stems ending in -t or -d add -et: arbeiten → gearbeitet.",
+        "Irregular verbs end in -en and often change their vowel: trinken → getrunken, schreiben → geschrieben. Learn them in pairs.",
+        "Most verbs form the Perfekt with haben. The next lesson covers the ones that take sein."
+      ],
+      "examples": [
+        {
+          "de": "Gestern habe ich lange gearbeitet.",
+          "en": "I worked late yesterday."
+        },
+        {
+          "de": "Hast du schon gegessen?",
+          "en": "Have you eaten yet?"
+        },
+        {
+          "de": "Wir haben einen Film gesehen.",
+          "en": "We watched a film."
+        },
+        {
+          "de": "Was hast du am Wochenende gemacht?",
+          "en": "What did you do at the weekend?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich ___ Pizza gegessen.",
+          "options": ["hat", "bin", "habe"],
+          "answer": 2,
+          "hint": "essen takes haben: ich habe"
+        },
+        {
+          "type": "fill",
+          "question": "Wir haben Brot ___. (kaufen)",
+          "answers": ["gekauft"],
+          "hint": "Regular: ge + kauf + t"
+        },
+        {
+          "type": "fill",
+          "question": "Sie hat den ganzen Tag ___. (arbeiten)",
+          "answers": ["gearbeitet"],
+          "hint": "The stem ends in -t, so add -et: gearbeitet"
+        },
+        {
+          "type": "choice",
+          "question": "Er hat Tee ___. (trinken)",
+          "options": ["getrunken", "getrinkt", "getrankt"],
+          "answer": 0,
+          "hint": "Irregular: trinken → getrunken"
+        },
+        {
+          "type": "order",
+          "question": "Build the question: What did you do at the weekend?",
+          "words": ["gemacht", "du", "Was", "hast", "am", "Wochenende"],
+          "answers": ["Was hast du am Wochenende gemacht"],
+          "hint": "Question word, haben, subject, then the participle at the end."
+        },
+        {
+          "type": "write",
+          "question": "Write three sentences about last weekend in the Perfekt.",
+          "modelAnswer": "Am Samstag habe ich lange geschlafen. Dann habe ich Freunde getroffen. Am Abend haben wir einen Film gesehen."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "gestern",
+          "en": "yesterday"
+        },
+        {
+          "de": "essen",
+          "en": "to eat"
+        },
+        {
+          "de": "schreiben",
+          "en": "to write"
+        },
+        {
+          "de": "sehen",
+          "en": "to see"
+        },
+        {
+          "de": "schlafen",
+          "en": "to sleep"
+        },
+        {
+          "de": "treffen",
+          "en": "to meet"
+        },
+        {
+          "de": "der Film",
+          "en": "film",
+          "pl": "Filme"
+        },
+        {
+          "de": "die E-Mail",
+          "en": "email",
+          "pl": "E-Mails"
+        },
+        {
+          "de": "schon",
+          "en": "already / yet"
+        },
+        {
+          "de": "lange",
+          "en": "for a long time"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The perfect tense with sein",
+      "germanTitle": "Perfekt mit sein",
+      "intro": "Verbs of movement and change take sein in the Perfekt instead of haben. This lesson also covers separable verbs in the Perfekt and the two past forms you'll use every day: war and hatte.",
+      "table": {
+        "head": ["Verb", "Perfekt"],
+        "rows": [
+          ["gehen", "ich bin gegangen"],
+          ["fahren", "du bist gefahren"],
+          ["kommen", "sie ist gekommen"],
+          ["fliegen", "wir sind geflogen"],
+          ["aufstehen", "ihr seid aufgestanden"],
+          ["bleiben", "sie sind geblieben"]
+        ]
+      },
+      "rules": [
+        "Use sein for movement from A to B (gehen, fahren, kommen, fliegen) and for a change of state (aufstehen, einschlafen). bleiben and passieren take sein too.",
+        "Separable verbs put ge between prefix and stem: einkaufen → eingekauft, anrufen → angerufen, aufstehen → aufgestanden.",
+        "No ge for verbs ending in -ieren or starting with be-, ver- or er-: studiert, besucht, verstanden, erzählt.",
+        "sein and haben usually use the simple past instead: ich war, du warst, er war; ich hatte, du hattest, er hatte."
+      ],
+      "examples": [
+        {
+          "de": "Ich bin um sechs Uhr aufgestanden.",
+          "en": "I got up at six."
+        },
+        {
+          "de": "Letztes Jahr sind wir nach Wien gefahren.",
+          "en": "Last year we went to Vienna."
+        },
+        {
+          "de": "Was ist passiert?",
+          "en": "What happened?"
+        },
+        {
+          "de": "Gestern war ich krank und hatte keine Zeit.",
+          "en": "Yesterday I was ill and had no time."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Wir ___ nach Hamburg gefahren.",
+          "options": ["seid", "haben", "sind"],
+          "answer": 2,
+          "hint": "fahren is movement → sein: wir sind"
+        },
+        {
+          "type": "choice",
+          "question": "Ich ___ einen Kaffee getrunken.",
+          "options": ["habe", "bin"],
+          "answer": 0,
+          "hint": "trinken isn't movement → haben"
+        },
+        {
+          "type": "fill",
+          "question": "Ich habe meine Mutter ___. (anrufen)",
+          "answers": ["angerufen"],
+          "hint": "Separable: an + ge + rufen"
+        },
+        {
+          "type": "choice",
+          "question": "Sie hat in Wien Musik ___. (studieren)",
+          "options": ["gestudiert", "gestudieren", "studiert"],
+          "answer": 2,
+          "hint": "-ieren verbs take no ge: studiert"
+        },
+        {
+          "type": "fill",
+          "question": "Gestern ___ ich krank. (sein, simple past)",
+          "answers": ["war"],
+          "hint": "sein → ich war"
+        },
+        {
+          "type": "listen",
+          "question": "Listen. Where did Tom go on Sunday?",
+          "audioText": "Am Sonntag ist Tom mit seiner Schwester ins Museum gegangen.",
+          "options": ["To the museum", "To the cinema", "To the station"],
+          "answer": 0,
+          "hint": "ins Museum gegangen = went to the museum",
+          "englishOptions": true
+        }
+      ],
+      "vocab": [
+        {
+          "de": "gehen",
+          "en": "to go (on foot)"
+        },
+        {
+          "de": "fliegen",
+          "en": "to fly"
+        },
+        {
+          "de": "bleiben",
+          "en": "to stay"
+        },
+        {
+          "de": "passieren",
+          "en": "to happen"
+        },
+        {
+          "de": "studieren",
+          "en": "to study (at university)"
+        },
+        {
+          "de": "besuchen",
+          "en": "to visit"
+        },
+        {
+          "de": "verstehen",
+          "en": "to understand"
+        },
+        {
+          "de": "krank",
+          "en": "ill"
+        },
+        {
+          "de": "müde",
+          "en": "tired"
+        },
+        {
+          "de": "das Jahr",
+          "en": "year",
+          "pl": "Jahre"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "The dative",
+      "germanTitle": "Der Dativ",
+      "intro": "The dative answers 'to whom?' or 'for whom?'. It also follows some very common prepositions and verbs, so you'll hear it everywhere.",
+      "table": {
+        "head": ["", "Nominative", "Dative"],
+        "rows": [
+          ["masculine", "der / ein Mann", "dem / einem Mann"],
+          ["feminine", "die / eine Frau", "der / einer Frau"],
+          ["neuter", "das / ein Kind", "dem / einem Kind"],
+          ["plural", "die Kinder", "den Kindern"]
+        ]
+      },
+      "rules": [
+        "The dative marks the person who gets something: Ich gebe dem Kind einen Apfel. In the plural, the noun adds -n too: mit den Kindern.",
+        "Always dative after aus, bei, mit, nach, seit, von and zu. Short forms: zum (zu dem), zur (zu der), beim (bei dem), vom (von dem).",
+        "Some verbs always take the dative: helfen, danken, gefallen, gehören, schmecken. Das Essen schmeckt mir.",
+        "Dative pronouns: mir, dir, ihm, ihr, uns, euch, ihnen, Ihnen. Wie geht es Ihnen?"
+      ],
+      "examples": [
+        {
+          "de": "Ich fahre mit dem Bus zur Arbeit.",
+          "en": "I take the bus to work."
+        },
+        {
+          "de": "Kannst du mir helfen?",
+          "en": "Can you help me?"
+        },
+        {
+          "de": "Das Buch gehört meiner Schwester.",
+          "en": "The book belongs to my sister."
+        },
+        {
+          "de": "Wie gefällt dir die Stadt?",
+          "en": "How do you like the city?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich fahre mit ___ Bus.",
+          "options": ["der", "den", "dem"],
+          "answer": 2,
+          "hint": "mit + dative: der Bus → dem Bus"
+        },
+        {
+          "type": "choice",
+          "question": "Er wohnt noch bei ___ Eltern.",
+          "options": ["seine", "seinen", "seinem"],
+          "answer": 1,
+          "hint": "bei + dative plural → seinen"
+        },
+        {
+          "type": "fill",
+          "question": "Kannst du ___ helfen? (me)",
+          "answers": ["mir"],
+          "hint": "helfen takes the dative: mir"
+        },
+        {
+          "type": "fill",
+          "question": "Ich gehe morgen ___ Arzt. (zu + dem)",
+          "answers": ["zum"],
+          "hint": "zu + dem = zum"
+        },
+        {
+          "type": "choice",
+          "question": "Die Jacke gefällt ___. (her)",
+          "options": ["ihm", "sie", "ihr"],
+          "answer": 2,
+          "hint": "gefallen takes the dative: her → ihr"
+        },
+        {
+          "type": "order",
+          "question": "Build: I'm giving my brother a book.",
+          "words": ["ein", "meinem", "Ich", "Buch", "gebe", "Bruder"],
+          "answers": ["Ich gebe meinem Bruder ein Buch"],
+          "hint": "The person (dative) comes before the thing (accusative)."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "geben",
+          "en": "to give"
+        },
+        {
+          "de": "helfen",
+          "en": "to help"
+        },
+        {
+          "de": "danken",
+          "en": "to thank"
+        },
+        {
+          "de": "gefallen",
+          "en": "to please (be liked by)"
+        },
+        {
+          "de": "gehören",
+          "en": "to belong to"
+        },
+        {
+          "de": "schmecken",
+          "en": "to taste"
+        },
+        {
+          "de": "der Bus",
+          "en": "bus",
+          "pl": "Busse"
+        },
+        {
+          "de": "die Eltern",
+          "en": "parents",
+          "pl": "pl"
+        },
+        {
+          "de": "der Arzt",
+          "en": "doctor",
+          "pl": "Ärzte"
+        },
+        {
+          "de": "die Arbeit",
+          "en": "work",
+          "pl": "Arbeiten"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Two-way prepositions",
+      "germanTitle": "Wo oder wohin?",
+      "intro": "Nine prepositions can take the dative or the accusative. The question decides: is something staying in a place (wo?) or moving to one (wohin?)",
+      "table": {
+        "head": ["", "Wo? (dative)", "Wohin? (accusative)"],
+        "rows": [
+          ["in", "Ich bin im Park.", "Ich gehe in den Park."],
+          ["auf", "Das Buch liegt auf dem Tisch.", "Ich lege das Buch auf den Tisch."],
+          ["an", "Das Bild hängt an der Wand.", "Ich hänge das Bild an die Wand."],
+          ["unter", "Die Katze schläft unter dem Bett.", "Die Katze läuft unter das Bett."]
+        ]
+      },
+      "rules": [
+        "The nine two-way prepositions: in, an, auf, über, unter, vor, hinter, neben, zwischen.",
+        "Wo? Something stays in its place → dative. Wohin? Something moves to a place → accusative.",
+        "Verb pairs help: liegen (wo?) / legen (wohin?), stehen / stellen, sitzen / setzen. hängen works for both.",
+        "Short forms: im (in dem), ins (in das), am (an dem), ans (an das)."
+      ],
+      "examples": [
+        {
+          "de": "Wir sitzen im Garten.",
+          "en": "We're sitting in the garden."
+        },
+        {
+          "de": "Stell die Flasche bitte auf den Tisch.",
+          "en": "Please put the bottle on the table."
+        },
+        {
+          "de": "Das Auto steht vor dem Haus.",
+          "en": "The car is in front of the house."
+        },
+        {
+          "de": "Gehst du heute ins Kino?",
+          "en": "Are you going to the cinema today?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Das Buch liegt auf ___ Tisch.",
+          "options": ["den", "dem", "der"],
+          "answer": 1,
+          "hint": "liegen = location (wo?) → dative: dem"
+        },
+        {
+          "type": "choice",
+          "question": "Ich lege das Buch auf ___ Tisch.",
+          "options": ["den", "dem", "der"],
+          "answer": 0,
+          "hint": "legen = movement (wohin?) → accusative: den"
+        },
+        {
+          "type": "fill",
+          "question": "Wir gehen heute ___ Kino. (in + das)",
+          "answers": ["ins"],
+          "hint": "in + das = ins"
+        },
+        {
+          "type": "choice",
+          "question": "___ ist mein Handy? — Auf dem Sofa.",
+          "options": ["Wo", "Wohin"],
+          "answer": 0,
+          "hint": "auf dem Sofa is a place, not a direction → wo"
+        },
+        {
+          "type": "fill",
+          "question": "Die Lampe hängt über ___ Tisch. (the)",
+          "answers": ["dem"],
+          "hint": "The lamp stays in its place → dative: dem"
+        },
+        {
+          "type": "listen",
+          "question": "Listen. Where are the keys?",
+          "audioText": "Deine Schlüssel liegen neben dem Fernseher.",
+          "options": ["On the TV", "Under the TV", "Next to the TV"],
+          "answer": 2,
+          "hint": "neben = next to",
+          "englishOptions": true
+        }
+      ],
+      "vocab": [
+        {
+          "de": "liegen",
+          "en": "to lie (be lying)"
+        },
+        {
+          "de": "legen",
+          "en": "to lay (put down flat)"
+        },
+        {
+          "de": "stehen",
+          "en": "to stand"
+        },
+        {
+          "de": "stellen",
+          "en": "to put (upright)"
+        },
+        {
+          "de": "hängen",
+          "en": "to hang"
+        },
+        {
+          "de": "die Wand",
+          "en": "wall",
+          "pl": "Wände"
+        },
+        {
+          "de": "das Bild",
+          "en": "picture",
+          "pl": "Bilder"
+        },
+        {
+          "de": "der Garten",
+          "en": "garden",
+          "pl": "Gärten"
+        },
+        {
+          "de": "das Kino",
+          "en": "cinema",
+          "pl": "Kinos"
+        },
+        {
+          "de": "der Schlüssel",
+          "en": "key",
+          "pl": "Schlüssel"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Subordinate clauses",
+      "germanTitle": "Weil, dass, wenn",
+      "intro": "Words like weil (because), dass (that) and wenn (if, when) start a subordinate clause. In that clause, the conjugated verb goes to the very end.",
+      "table": {
+        "head": ["Main clause", "Subordinate clause"],
+        "rows": [
+          ["Ich bleibe zu Hause,", "weil ich krank bin."],
+          ["Ich glaube,", "dass der Kurs heute beginnt."],
+          ["Wir gehen spazieren,", "wenn das Wetter gut ist."],
+          ["Er sagt,", "dass er morgen anruft."]
+        ]
+      },
+      "rules": [
+        "In a clause with weil, dass or wenn, the conjugated verb goes to the end: …, weil ich keine Zeit habe.",
+        "Always put a comma before weil, dass and wenn. denn also means because, but keeps normal word order: …, denn ich habe keine Zeit.",
+        "Separable verbs join up again at the end: …, dass er morgen anruft. A modal verb comes last: …, weil ich arbeiten muss.",
+        "If the subordinate clause comes first, the main clause starts with its verb: Wenn ich Zeit habe, komme ich."
+      ],
+      "examples": [
+        {
+          "de": "Ich lerne Deutsch, weil ich in Berlin arbeiten möchte.",
+          "en": "I'm learning German because I'd like to work in Berlin."
+        },
+        {
+          "de": "Ich hoffe, dass du bald kommst.",
+          "en": "I hope you'll come soon."
+        },
+        {
+          "de": "Wenn es regnet, bleiben wir zu Hause.",
+          "en": "If it rains, we'll stay at home."
+        },
+        {
+          "de": "Weißt du, dass der Laden heute geschlossen ist?",
+          "en": "Do you know that the shop is closed today?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Which is correct?",
+          "options": ["…, weil habe ich keine Zeit.", "…, weil ich habe keine Zeit.", "…, weil ich keine Zeit habe."],
+          "answer": 2,
+          "hint": "After weil, the verb goes to the end."
+        },
+        {
+          "type": "order",
+          "question": "Build: I'm staying at home because I'm tired.",
+          "words": ["Ich", "bleibe", "zu", "Hause", "weil", "ich", "müde", "bin"],
+          "answers": ["Ich bleibe zu Hause, weil ich müde bin", "Weil ich müde bin, bleibe ich zu Hause"],
+          "hint": "weil sends its verb to the end."
+        },
+        {
+          "type": "fill",
+          "question": "Ich weiß, ___ du recht hast. (that)",
+          "answers": ["dass"],
+          "hint": "that = dass, with a double s"
+        },
+        {
+          "type": "fill",
+          "question": "Er sagt, dass er morgen ___. (anrufen)",
+          "answers": ["anruft"],
+          "hint": "Separable verbs join up at the end: anruft"
+        },
+        {
+          "type": "choice",
+          "question": "___ ich Zeit habe, rufe ich dich an.",
+          "options": ["Wenn", "Dass", "Denn"],
+          "answer": 0,
+          "hint": "wenn = if / when"
+        },
+        {
+          "type": "write",
+          "question": "Why are you learning German? Answer with weil.",
+          "modelAnswer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte und weil ich die Sprache schön finde."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "weil",
+          "en": "because"
+        },
+        {
+          "de": "dass",
+          "en": "that"
+        },
+        {
+          "de": "wenn",
+          "en": "if / when"
+        },
+        {
+          "de": "denn",
+          "en": "because (normal word order)"
+        },
+        {
+          "de": "glauben",
+          "en": "to believe / think"
+        },
+        {
+          "de": "hoffen",
+          "en": "to hope"
+        },
+        {
+          "de": "wissen",
+          "en": "to know (a fact)"
+        },
+        {
+          "de": "regnen",
+          "en": "to rain"
+        },
+        {
+          "de": "das Wetter",
+          "en": "weather",
+          "pl": "-"
+        },
+        {
+          "de": "bald",
+          "en": "soon"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reflexive verbs",
+      "germanTitle": "Reflexive Verben",
+      "intro": "Some verbs need a reflexive pronoun because the action goes back to the subject. English often leaves it out: sich freuen just means 'to be happy'.",
+      "table": {
+        "head": ["", "sich freuen", "sich anziehen"],
+        "rows": [
+          ["ich", "freue mich", "ziehe mich an"],
+          ["du", "freust dich", "ziehst dich an"],
+          ["er / sie / es", "freut sich", "zieht sich an"],
+          ["wir", "freuen uns", "ziehen uns an"],
+          ["ihr", "freut euch", "zieht euch an"],
+          ["sie / Sie", "freuen sich", "ziehen sich an"]
+        ]
+      },
+      "rules": [
+        "Reflexive pronouns: mich, dich, sich, uns, euch, sich. Only er/sie/es and sie/Sie use sich.",
+        "The pronoun comes right after the conjugated verb, or after the subject when the subject follows the verb: Ich freue mich. Morgen treffen wir uns.",
+        "Everyday reflexive verbs: sich waschen, sich anziehen, sich beeilen (hurry), sich treffen (meet up), sich fühlen (feel), sich setzen (sit down).",
+        "When the sentence has another object, ich and du switch to mir and dir: Ich wasche mir die Hände. Zieh dir eine Jacke an!"
+      ],
+      "examples": [
+        {
+          "de": "Ich freue mich auf das Wochenende.",
+          "en": "I'm looking forward to the weekend."
+        },
+        {
+          "de": "Beeil dich, der Zug fährt gleich!",
+          "en": "Hurry up, the train is about to leave!"
+        },
+        {
+          "de": "Wir treffen uns um acht vor dem Kino.",
+          "en": "We're meeting at eight in front of the cinema."
+        },
+        {
+          "de": "Wie fühlst du dich heute?",
+          "en": "How are you feeling today?"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich freue ___ auf den Urlaub.",
+          "options": ["mich", "dich", "sich"],
+          "answer": 0,
+          "hint": "ich → mich"
+        },
+        {
+          "type": "choice",
+          "question": "Er beeilt ___, weil der Zug gleich fährt.",
+          "options": ["ihn", "ihm", "sich"],
+          "answer": 2,
+          "hint": "er → sich"
+        },
+        {
+          "type": "fill",
+          "question": "Wie fühlt ihr ___ heute?",
+          "answers": ["euch"],
+          "hint": "ihr → euch"
+        },
+        {
+          "type": "fill",
+          "question": "Beeil ___, der Bus kommt! (du)",
+          "answers": ["dich"],
+          "hint": "du → dich"
+        },
+        {
+          "type": "order",
+          "question": "Build: We're meeting tomorrow.",
+          "words": ["uns", "Wir", "morgen", "treffen"],
+          "answers": ["Wir treffen uns morgen", "Morgen treffen wir uns"],
+          "hint": "The pronoun follows the verb, or the subject when the subject comes after the verb."
+        },
+        {
+          "type": "choice",
+          "question": "Ich wasche ___ die Hände.",
+          "options": ["mich", "mir", "sich"],
+          "answer": 1,
+          "hint": "There's another object (die Hände), so ich → mir"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "sich freuen",
+          "en": "to be pleased"
+        },
+        {
+          "de": "sich anziehen",
+          "en": "to get dressed"
+        },
+        {
+          "de": "sich waschen",
+          "en": "to wash (yourself)"
+        },
+        {
+          "de": "sich beeilen",
+          "en": "to hurry"
+        },
+        {
+          "de": "sich treffen",
+          "en": "to meet up"
+        },
+        {
+          "de": "sich fühlen",
+          "en": "to feel"
+        },
+        {
+          "de": "sich setzen",
+          "en": "to sit down"
+        },
+        {
+          "de": "der Urlaub",
+          "en": "holiday",
+          "pl": "Urlaube"
+        },
+        {
+          "de": "der Bahnhof",
+          "en": "station",
+          "pl": "Bahnhöfe"
+        },
+        {
+          "de": "die Hand",
+          "en": "hand",
+          "pl": "Hände"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Comparing things",
+      "germanTitle": "Vergleiche",
+      "intro": "To compare two things, add -er to the adjective and use als (than). For the top of the scale, use am … -sten.",
+      "table": {
+        "head": ["", "Komparativ", "Superlativ"],
+        "rows": [
+          ["schnell", "schneller", "am schnellsten"],
+          ["alt", "älter", "am ältesten"],
+          ["groß", "größer", "am größten"],
+          ["gut", "besser", "am besten"],
+          ["viel", "mehr", "am meisten"],
+          ["gern", "lieber", "am liebsten"]
+        ]
+      },
+      "rules": [
+        "Comparative: adjective + -er, then als. Der Zug ist schneller als der Bus.",
+        "Equal: so … wie. Anna ist so alt wie Tom. Not equal: nicht so … wie.",
+        "Many short adjectives add an umlaut: alt → älter, groß → größer, jung → jünger, warm → wärmer.",
+        "Superlative after a verb: am … -sten. Adjectives ending in -t, -d, -s or -z usually add -esten: am ältesten, am kürzesten. gut, viel and gern are irregular."
+      ],
+      "examples": [
+        {
+          "de": "Berlin ist größer als München.",
+          "en": "Berlin is bigger than Munich."
+        },
+        {
+          "de": "Ich trinke lieber Tee als Kaffee.",
+          "en": "I prefer tea to coffee."
+        },
+        {
+          "de": "Mein Bruder ist so alt wie ich.",
+          "en": "My brother is as old as me."
+        },
+        {
+          "de": "Am liebsten esse ich Pizza.",
+          "en": "Pizza is what I like eating most."
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Der Zug ist schneller ___ das Auto.",
+          "options": ["als", "wie", "dann"],
+          "answer": 0,
+          "hint": "Comparative + als"
+        },
+        {
+          "type": "fill",
+          "question": "Meine Schwester ist ___ als ich. (alt)",
+          "answers": ["älter"],
+          "hint": "alt → älter, with an umlaut"
+        },
+        {
+          "type": "choice",
+          "question": "Tom ist so groß ___ Paul.",
+          "options": ["als", "wie", "wenn"],
+          "answer": 1,
+          "hint": "so … wie = as … as"
+        },
+        {
+          "type": "fill",
+          "question": "Pizza schmeckt mir gut, aber Pasta schmeckt mir ___. (gut)",
+          "answers": ["besser"],
+          "hint": "gut → besser"
+        },
+        {
+          "type": "choice",
+          "question": "Welcher Berg ist ___ höchsten?",
+          "options": ["am", "der", "im"],
+          "answer": 0,
+          "hint": "Superlative after a verb: am …sten"
+        },
+        {
+          "type": "listen",
+          "question": "Listen. How much is the blue dress?",
+          "audioText": "Das rote Kleid kostet achtzig Euro. Das blaue ist billiger, es kostet nur fünfzig.",
+          "options": ["€15", "€80", "€50"],
+          "answer": 2,
+          "hint": "fünfzig = 50",
+          "englishOptions": true
+        }
+      ],
+      "vocab": [
+        {
+          "de": "als",
+          "en": "than"
+        },
+        {
+          "de": "so … wie",
+          "en": "as … as"
+        },
+        {
+          "de": "besser",
+          "en": "better"
+        },
+        {
+          "de": "mehr",
+          "en": "more"
+        },
+        {
+          "de": "lieber",
+          "en": "rather / prefer"
+        },
+        {
+          "de": "am liebsten",
+          "en": "most of all"
+        },
+        {
+          "de": "schnell",
+          "en": "fast"
+        },
+        {
+          "de": "alt",
+          "en": "old"
+        },
+        {
+          "de": "jung",
+          "en": "young"
+        },
+        {
+          "de": "der Preis",
+          "en": "price",
+          "pl": "Preise"
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "flat",
+      "title": "Finding a flat",
+      "vocab": [
+        { "de": "umziehen", "en": "to move (house)", "ex": { "de": "Wir sind letzten Monat umgezogen.", "en": "We moved last month." } },
+        { "de": "der Umzug", "en": "move (house)", "pl": "Umzüge", "ex": { "de": "Der Umzug war sehr anstrengend.", "en": "The move was really tiring." } },
+        { "de": "die Anzeige", "en": "advert", "pl": "Anzeigen", "ex": { "de": "Ich habe die Anzeige im Internet gelesen.", "en": "I read the advert online." } },
+        { "de": "der Vermieter", "en": "landlord", "pl": "Vermieter", "ex": { "de": "Der Vermieter hat die Heizung repariert.", "en": "The landlord has repaired the heating." } },
+        { "de": "mieten", "en": "to rent", "ex": { "de": "Wir möchten eine Wohnung mieten.", "en": "We'd like to rent a flat." } },
+        { "de": "der Mietvertrag", "en": "tenancy agreement", "pl": "Mietverträge", "ex": { "de": "Wir haben den Mietvertrag gestern unterschrieben.", "en": "We signed the tenancy agreement yesterday." } },
+        { "de": "die Nebenkosten", "en": "extra costs (heating, water etc.)", "pl": "pl", "ex": { "de": "Die Nebenkosten sind leider sehr hoch.", "en": "Unfortunately the extra costs are very high." } },
+        { "de": "die Kaution", "en": "deposit", "pl": "Kautionen", "ex": { "de": "Wir müssen eine Kaution zahlen.", "en": "We have to pay a deposit." } },
+        { "de": "möbliert", "en": "furnished", "ex": { "de": "Das Zimmer ist möbliert.", "en": "The room is furnished." } },
+        { "de": "die Möbel", "en": "furniture", "pl": "pl", "ex": { "de": "Wir haben neue Möbel gekauft.", "en": "We've bought new furniture." } },
+        { "de": "das Erdgeschoss", "en": "ground floor", "pl": "Erdgeschosse", "ex": { "de": "Die Wohnung liegt im Erdgeschoss.", "en": "The flat is on the ground floor." } },
+        { "de": "der Aufzug", "en": "lift", "pl": "Aufzüge", "ex": { "de": "Gibt es einen Aufzug im Haus?", "en": "Is there a lift in the building?" } },
+        { "de": "die Heizung", "en": "heating", "pl": "Heizungen", "ex": { "de": "Im Winter ist die Heizung sehr teuer.", "en": "Heating is very expensive in winter." } },
+        { "de": "funktionieren", "en": "to work (machine)", "ex": { "de": "Das Internet funktioniert wieder.", "en": "The internet's working again." } },
+        { "de": "die Nachbarschaft", "en": "neighbourhood", "pl": "Nachbarschaften", "ex": { "de": "Die Nachbarschaft ist ruhig und freundlich.", "en": "The neighbourhood is quiet and friendly." } },
+        { "de": "die Lage", "en": "location", "pl": "Lagen", "ex": { "de": "Die Lage ist super, der Bahnhof ist ganz nah.", "en": "The location is great, the station is very close." } },
+        { "de": "zentral", "en": "central", "ex": { "de": "Die Wohnung liegt sehr zentral.", "en": "The flat is very central." } },
+        { "de": "der Quadratmeter", "en": "square metre", "pl": "Quadratmeter", "ex": { "de": "Das Zimmer hat zwanzig Quadratmeter.", "en": "The room is twenty square metres." } },
+        { "de": "einziehen", "en": "to move in", "ex": { "de": "Wann können wir einziehen?", "en": "When can we move in?" } },
+        { "de": "die Besichtigung", "en": "viewing", "pl": "Besichtigungen", "ex": { "de": "Die Besichtigung ist am Dienstag um fünf.", "en": "The viewing is on Tuesday at five." } },
+        { "de": "renovieren", "en": "to renovate", "ex": { "de": "Wir haben die Küche renoviert.", "en": "We've renovated the kitchen." } },
+        { "de": "das Haustier", "en": "pet", "pl": "Haustiere", "ex": { "de": "Sind Haustiere hier erlaubt?", "en": "Are pets allowed here?" } },
+        { "de": "sauber", "en": "clean", "ex": { "de": "Die Küche ist immer sauber.", "en": "The kitchen is always clean." } },
+        { "de": "der Keller", "en": "cellar", "pl": "Keller", "ex": { "de": "Die Fahrräder stehen im Keller.", "en": "The bikes are in the cellar." } },
+        { "de": "die WG", "en": "flat share", "pl": "WGs", "ex": { "de": "Ich wohne in einer WG mit drei Studenten.", "en": "I live in a flat share with three students." } }
+      ]
+    },
+    {
+      "id": "media",
+      "title": "Growing up and media",
+      "vocab": [
+        { "de": "die Kindheit", "en": "childhood", "pl": "-", "ex": { "de": "In meiner Kindheit hatten wir keinen Fernseher.", "en": "In my childhood we didn't have a TV." } },
+        { "de": "der Fernseher", "en": "TV (set)", "pl": "Fernseher", "ex": { "de": "Wir haben einen neuen Fernseher gekauft.", "en": "We've bought a new TV." } },
+        { "de": "das Internet", "en": "internet", "pl": "-", "ex": { "de": "Ich suche die Informationen im Internet.", "en": "I'm looking for the information online." } },
+        { "de": "das Smartphone", "en": "smartphone", "pl": "Smartphones", "ex": { "de": "Mein Sohn hat ein Smartphone bekommen.", "en": "My son got a smartphone." } },
+        { "de": "die App", "en": "app", "pl": "Apps", "ex": { "de": "Mit der App lerne ich jeden Tag Vokabeln.", "en": "I learn vocabulary with the app every day." } },
+        { "de": "herunterladen", "en": "to download", "ex": { "de": "Ich habe die App heruntergeladen.", "en": "I've downloaded the app." } },
+        { "de": "die Nachricht", "en": "message; news", "pl": "Nachrichten", "ex": { "de": "Hast du meine Nachricht gelesen?", "en": "Have you read my message?" } },
+        { "de": "schicken", "en": "to send", "ex": { "de": "Schick mir bitte ein Foto!", "en": "Please send me a photo!" } },
+        { "de": "chatten", "en": "to chat (online)", "ex": { "de": "Die Kinder chatten jeden Abend.", "en": "The children chat online every evening." } },
+        { "de": "online", "en": "online", "ex": { "de": "Ich kaufe oft online ein.", "en": "I often shop online." } },
+        { "de": "das Passwort", "en": "password", "pl": "Passwörter", "ex": { "de": "Ich habe mein Passwort vergessen.", "en": "I've forgotten my password." } },
+        { "de": "das Spielzeug", "en": "toy, toys", "pl": "Spielzeuge", "ex": { "de": "Das Spielzeug liegt überall auf dem Boden.", "en": "There are toys all over the floor." } },
+        { "de": "der Kindergarten", "en": "nursery school", "pl": "Kindergärten", "ex": { "de": "Meine Tochter geht in den Kindergarten.", "en": "My daughter goes to nursery school." } },
+        { "de": "die Grundschule", "en": "primary school", "pl": "Grundschulen", "ex": { "de": "Er war vier Jahre in der Grundschule.", "en": "He was at primary school for four years." } },
+        { "de": "erziehen", "en": "to bring up", "ex": { "de": "Sie haben ihre Kinder streng erzogen.", "en": "They brought up their children strictly." } },
+        { "de": "streng", "en": "strict", "ex": { "de": "Mein Vater war sehr streng.", "en": "My father was very strict." } },
+        { "de": "erlauben", "en": "to allow", "ex": { "de": "Meine Eltern haben mir das nicht erlaubt.", "en": "My parents didn't allow me to do that." } },
+        { "de": "verbieten", "en": "to forbid, ban", "ex": { "de": "Handys sind im Unterricht verboten.", "en": "Mobile phones are banned in class." } },
+        { "de": "die Erinnerung", "en": "memory", "pl": "Erinnerungen", "ex": { "de": "Ich habe schöne Erinnerungen an die Schule.", "en": "I have lovely memories of school." } },
+        { "de": "sich erinnern", "en": "to remember", "ex": { "de": "Erinnerst du dich an unseren Lehrer?", "en": "Do you remember our teacher?" } },
+        { "de": "aufwachsen", "en": "to grow up", "ex": { "de": "Ich bin auf dem Land aufgewachsen.", "en": "I grew up in the country." } },
+        { "de": "früher", "en": "in the past / used to", "ex": { "de": "Früher habe ich viel gelesen.", "en": "I used to read a lot." } },
+        { "de": "das Video", "en": "video", "pl": "Videos", "ex": { "de": "Wir haben ein lustiges Video gesehen.", "en": "We watched a funny video." } },
+        { "de": "der Bildschirm", "en": "screen", "pl": "Bildschirme", "ex": { "de": "Kinder sitzen oft zu lange vor dem Bildschirm.", "en": "Children often spend too long in front of a screen." } },
+        { "de": "die Zeitschrift", "en": "magazine", "pl": "Zeitschriften", "ex": { "de": "Ich lese eine Zeitschrift über Autos.", "en": "I'm reading a magazine about cars." } }
+      ]
+    },
+    {
+      "id": "money",
+      "title": "Money and banking",
+      "vocab": [
+        { "de": "das Konto", "en": "bank account", "pl": "Konten", "ex": { "de": "Ich möchte ein Konto eröffnen.", "en": "I'd like to open an account." } },
+        { "de": "die Kreditkarte", "en": "credit card", "pl": "Kreditkarten", "ex": { "de": "Kann ich mit Kreditkarte bezahlen?", "en": "Can I pay by credit card?" } },
+        { "de": "bar", "en": "(in) cash", "ex": { "de": "Ich bezahle lieber bar.", "en": "I prefer to pay in cash." } },
+        { "de": "das Bargeld", "en": "cash", "pl": "-", "ex": { "de": "Hast du Bargeld dabei?", "en": "Have you got any cash on you?" } },
+        { "de": "der Geldautomat", "en": "cash machine", "pl": "Geldautomaten", "ex": { "de": "Der Geldautomat ist gleich um die Ecke.", "en": "The cash machine is just round the corner." } },
+        { "de": "abheben", "en": "to withdraw", "ex": { "de": "Ich muss noch Geld abheben.", "en": "I still need to get some money out." } },
+        { "de": "überweisen", "en": "to transfer", "ex": { "de": "Ich überweise die Miete am Monatsanfang.", "en": "I transfer the rent at the start of the month." } },
+        { "de": "die Überweisung", "en": "bank transfer", "pl": "Überweisungen", "ex": { "de": "Die Überweisung dauert einen Tag.", "en": "The transfer takes a day." } },
+        { "de": "sparen", "en": "to save (money)", "ex": { "de": "Wir sparen für ein neues Auto.", "en": "We're saving for a new car." } },
+        { "de": "ausgeben", "en": "to spend", "ex": { "de": "Ich gebe zu viel Geld für Kleidung aus.", "en": "I spend too much money on clothes." } },
+        { "de": "die Rechnung", "en": "bill / invoice", "pl": "Rechnungen", "ex": { "de": "Hast du die Rechnung schon bezahlt?", "en": "Have you paid the bill yet?" } },
+        { "de": "der Betrag", "en": "amount", "pl": "Beträge", "ex": { "de": "Bitte überweisen Sie den Betrag bis Freitag.", "en": "Please transfer the amount by Friday." } },
+        { "de": "die Gebühr", "en": "fee", "pl": "Gebühren", "ex": { "de": "Die Bank nimmt keine Gebühr.", "en": "The bank doesn't charge a fee." } },
+        { "de": "der Euro", "en": "euro", "pl": "Euro", "ex": { "de": "Das kostet zwanzig Euro.", "en": "That costs twenty euros." } },
+        { "de": "der Cent", "en": "cent", "pl": "Cent", "ex": { "de": "Ein Brötchen kostet fünfzig Cent.", "en": "A roll costs fifty cents." } },
+        { "de": "leihen", "en": "to lend; to borrow", "ex": { "de": "Kannst du mir zehn Euro leihen?", "en": "Can you lend me ten euros?" } },
+        { "de": "das Portemonnaie", "en": "wallet, purse", "pl": "Portemonnaies", "ex": { "de": "Ich habe mein Portemonnaie verloren.", "en": "I've lost my wallet." } },
+        { "de": "verlieren", "en": "to lose", "ex": { "de": "Er verliert oft seine Schlüssel.", "en": "He often loses his keys." } },
+        { "de": "der Kredit", "en": "loan", "pl": "Kredite", "ex": { "de": "Wir brauchen einen Kredit für das Haus.", "en": "We need a loan for the house." } },
+        { "de": "der Schein", "en": "(bank)note", "pl": "Scheine", "ex": { "de": "Hast du einen Zehn-Euro-Schein?", "en": "Have you got a ten-euro note?" } },
+        { "de": "die Münze", "en": "coin", "pl": "Münzen", "ex": { "de": "Ich habe nur noch Münzen.", "en": "I've only got coins left." } },
+        { "de": "das Sonderangebot", "en": "special offer", "pl": "Sonderangebote", "ex": { "de": "Die Schuhe sind im Sonderangebot.", "en": "The shoes are on special offer." } },
+        { "de": "die Quittung", "en": "receipt", "pl": "Quittungen", "ex": { "de": "Brauchen Sie eine Quittung?", "en": "Do you need a receipt?" } },
+        { "de": "die Kasse", "en": "till, checkout", "pl": "Kassen", "ex": { "de": "Bitte zahlen Sie an der Kasse.", "en": "Please pay at the till." } },
+        { "de": "zahlen", "en": "to pay", "ex": { "de": "Zahlen wir zusammen oder getrennt?", "en": "Are we paying together or separately?" } }
+      ]
+    },
+    {
+      "id": "traffic",
+      "title": "Traffic and transport",
+      "vocab": [
+        { "de": "der Verkehr", "en": "traffic", "pl": "-", "ex": { "de": "Morgens ist der Verkehr schlimm.", "en": "The traffic's bad in the mornings." } },
+        { "de": "der Stau", "en": "traffic jam", "pl": "Staus", "ex": { "de": "Wir standen eine Stunde im Stau.", "en": "We were stuck in a traffic jam for an hour." } },
+        { "de": "die Ampel", "en": "traffic lights", "pl": "Ampeln", "ex": { "de": "Die Ampel ist rot.", "en": "The lights are red." } },
+        { "de": "die Kreuzung", "en": "junction", "pl": "Kreuzungen", "ex": { "de": "An der Kreuzung biegst du links ab.", "en": "Turn left at the junction." } },
+        { "de": "abbiegen", "en": "to turn", "ex": { "de": "Hier darf man nicht abbiegen.", "en": "You're not allowed to turn here." } },
+        { "de": "der Führerschein", "en": "driving licence", "pl": "Führerscheine", "ex": { "de": "Ich habe den Führerschein mit achtzehn gemacht.", "en": "I passed my driving test at eighteen." } },
+        { "de": "der Parkplatz", "en": "car park; parking space", "pl": "Parkplätze", "ex": { "de": "Ich finde keinen Parkplatz.", "en": "I can't find a parking space." } },
+        { "de": "die Autobahn", "en": "motorway", "pl": "Autobahnen", "ex": { "de": "Wir nehmen die Autobahn nach München.", "en": "We're taking the motorway to Munich." } },
+        { "de": "die Verspätung", "en": "delay", "pl": "Verspätungen", "ex": { "de": "Der Zug hat zehn Minuten Verspätung.", "en": "The train is ten minutes late." } },
+        { "de": "der Fahrplan", "en": "timetable", "pl": "Fahrpläne", "ex": { "de": "Schau mal auf den Fahrplan.", "en": "Have a look at the timetable." } },
+        { "de": "das Gleis", "en": "platform (track)", "pl": "Gleise", "ex": { "de": "Der Zug fährt von Gleis drei ab.", "en": "The train leaves from platform three." } },
+        { "de": "der Bahnsteig", "en": "platform", "pl": "Bahnsteige", "ex": { "de": "Wir warten auf dem Bahnsteig.", "en": "We're waiting on the platform." } },
+        { "de": "verpassen", "en": "to miss", "ex": { "de": "Ich habe den Bus verpasst.", "en": "I missed the bus." } },
+        { "de": "die Verbindung", "en": "connection", "pl": "Verbindungen", "ex": { "de": "Es gibt eine direkte Verbindung nach Hamburg.", "en": "There's a direct connection to Hamburg." } },
+        { "de": "das Taxi", "en": "taxi", "pl": "Taxis", "ex": { "de": "Wir nehmen ein Taxi zum Bahnhof.", "en": "We're taking a taxi to the station." } },
+        { "de": "der Fahrer", "en": "driver", "pl": "Fahrer", "ex": { "de": "Der Fahrer hat sofort gebremst.", "en": "The driver braked immediately." } },
+        { "de": "der Fußgänger", "en": "pedestrian", "pl": "Fußgänger", "ex": { "de": "Die Fußgänger warten an der Ampel.", "en": "The pedestrians are waiting at the lights." } },
+        { "de": "zu Fuß", "en": "on foot", "ex": { "de": "Ich gehe zu Fuß zur Arbeit.", "en": "I walk to work." } },
+        { "de": "das Motorrad", "en": "motorbike", "pl": "Motorräder", "ex": { "de": "Mein Bruder fährt Motorrad.", "en": "My brother rides a motorbike." } },
+        { "de": "tanken", "en": "to get petrol", "ex": { "de": "Wir müssen noch tanken.", "en": "We still need to get petrol." } },
+        { "de": "die Tankstelle", "en": "petrol station", "pl": "Tankstellen", "ex": { "de": "Die nächste Tankstelle ist zwei Kilometer entfernt.", "en": "The nearest petrol station is two kilometres away." } },
+        { "de": "die Monatskarte", "en": "monthly ticket", "pl": "Monatskarten", "ex": { "de": "Mit der Monatskarte fahre ich günstiger.", "en": "With a monthly ticket I travel more cheaply." } },
+        { "de": "die Polizei", "en": "police", "pl": "-", "ex": { "de": "Rufen Sie bitte die Polizei!", "en": "Please call the police!" } },
+        { "de": "langsam", "en": "slow, slowly", "ex": { "de": "Fahr bitte langsam!", "en": "Please drive slowly!" } },
+        { "de": "öffentlich", "en": "public", "ex": { "de": "Ich fahre mit öffentlichen Verkehrsmitteln.", "en": "I use public transport." } }
+      ]
+    },
+    {
+      "id": "sport",
+      "title": "Sport and accidents",
+      "vocab": [
+        { "de": "der Verein", "en": "club", "pl": "Vereine", "ex": { "de": "Ich spiele in einem Fußballverein.", "en": "I play in a football club." } },
+        { "de": "das Training", "en": "training (session)", "pl": "Trainings", "ex": { "de": "Das Training ist zweimal pro Woche.", "en": "Training is twice a week." } },
+        { "de": "trainieren", "en": "to train", "ex": { "de": "Sie trainiert für einen Marathon.", "en": "She's training for a marathon." } },
+        { "de": "die Mannschaft", "en": "team", "pl": "Mannschaften", "ex": { "de": "Die Mannschaft spielt am Samstag zu Hause.", "en": "The team is playing at home on Saturday." } },
+        { "de": "gewinnen", "en": "to win", "ex": { "de": "Wer hat das Spiel gewonnen?", "en": "Who won the match?" } },
+        { "de": "das Tor", "en": "goal", "pl": "Tore", "ex": { "de": "Er hat zwei Tore geschossen.", "en": "He scored two goals." } },
+        { "de": "der Unfall", "en": "accident", "pl": "Unfälle", "ex": { "de": "Sie hatte einen Unfall mit dem Fahrrad.", "en": "She had an accident on her bike." } },
+        { "de": "sich verletzen", "en": "to hurt yourself", "ex": { "de": "Ich habe mich beim Fußball verletzt.", "en": "I hurt myself playing football." } },
+        { "de": "die Verletzung", "en": "injury", "pl": "Verletzungen", "ex": { "de": "Die Verletzung ist nicht schlimm.", "en": "The injury isn't serious." } },
+        { "de": "brechen", "en": "to break", "ex": { "de": "Er hat sich das Bein gebrochen.", "en": "He's broken his leg." } },
+        { "de": "der Notarzt", "en": "emergency doctor", "pl": "Notärzte", "ex": { "de": "Der Notarzt ist schnell gekommen.", "en": "The emergency doctor came quickly." } },
+        { "de": "der Krankenwagen", "en": "ambulance", "pl": "Krankenwagen", "ex": { "de": "Wir haben einen Krankenwagen gerufen.", "en": "We called an ambulance." } },
+        { "de": "die Notaufnahme", "en": "A&E", "pl": "Notaufnahmen", "ex": { "de": "In der Notaufnahme mussten wir lange warten.", "en": "We had to wait a long time in A&E." } },
+        { "de": "das Pflaster", "en": "plaster", "pl": "Pflaster", "ex": { "de": "Hast du ein Pflaster für mich?", "en": "Have you got a plaster for me?" } },
+        { "de": "bluten", "en": "to bleed", "ex": { "de": "Dein Finger blutet!", "en": "Your finger's bleeding!" } },
+        { "de": "fallen", "en": "to fall", "ex": { "de": "Das Kind ist vom Fahrrad gefallen.", "en": "The child fell off the bike." } },
+        { "de": "das Knie", "en": "knee", "pl": "Knie", "ex": { "de": "Mein Knie tut seit gestern weh.", "en": "My knee has been hurting since yesterday." } },
+        { "de": "der Fuß", "en": "foot", "pl": "Füße", "ex": { "de": "Mir tut der Fuß weh.", "en": "My foot hurts." } },
+        { "de": "fit", "en": "fit", "ex": { "de": "Durch Sport bleibe ich fit.", "en": "Sport keeps me fit." } },
+        { "de": "anstrengend", "en": "tiring, hard", "ex": { "de": "Das Training war sehr anstrengend.", "en": "The training was really hard." } },
+        { "de": "das Stadion", "en": "stadium", "pl": "Stadien", "ex": { "de": "Das Stadion war voll.", "en": "The stadium was full." } },
+        { "de": "Ski fahren", "en": "to ski", "ex": { "de": "Im Winter fahren wir Ski.", "en": "In winter we go skiing." } },
+        { "de": "der Helm", "en": "helmet", "pl": "Helme", "ex": { "de": "Beim Radfahren trage ich immer einen Helm.", "en": "I always wear a helmet when cycling." } },
+        { "de": "vorsichtig", "en": "careful", "ex": { "de": "Sei vorsichtig auf der Straße!", "en": "Be careful on the road!" } },
+        { "de": "das Fitnessstudio", "en": "gym", "pl": "Fitnessstudios", "ex": { "de": "Ich gehe dreimal pro Woche ins Fitnessstudio.", "en": "I go to the gym three times a week." } }
+      ]
+    },
+    {
+      "id": "holiday",
+      "title": "Holidays",
+      "vocab": [
+        { "de": "die Unterkunft", "en": "accommodation", "pl": "Unterkünfte", "ex": { "de": "Wir suchen eine günstige Unterkunft.", "en": "We're looking for cheap accommodation." } },
+        { "de": "die Ferienwohnung", "en": "holiday flat", "pl": "Ferienwohnungen", "ex": { "de": "Wir haben eine Ferienwohnung am Meer gemietet.", "en": "We rented a holiday flat by the sea." } },
+        { "de": "die Pension", "en": "guest house", "pl": "Pensionen", "ex": { "de": "Wir übernachten in einer kleinen Pension.", "en": "We're staying in a small guest house." } },
+        { "de": "gemütlich", "en": "cosy", "ex": { "de": "Das Café ist sehr gemütlich.", "en": "The café is very cosy." } },
+        { "de": "der Campingplatz", "en": "campsite", "pl": "Campingplätze", "ex": { "de": "Auf dem Campingplatz war es sehr laut.", "en": "It was very noisy at the campsite." } },
+        { "de": "das Zelt", "en": "tent", "pl": "Zelte", "ex": { "de": "Wir haben im Zelt geschlafen.", "en": "We slept in a tent." } },
+        { "de": "grillen", "en": "to have a barbecue", "ex": { "de": "Am Abend haben wir am Strand gegrillt.", "en": "In the evening we had a barbecue on the beach." } },
+        { "de": "die Halbpension", "en": "half board", "pl": "-", "ex": { "de": "Das Hotel bietet Halbpension an.", "en": "The hotel offers half board." } },
+        { "de": "die Rezeption", "en": "reception", "pl": "Rezeptionen", "ex": { "de": "Den Schlüssel bekommen Sie an der Rezeption.", "en": "You get the key at reception." } },
+        { "de": "reservieren", "en": "to reserve, book", "ex": { "de": "Ich habe einen Tisch für acht Uhr reserviert.", "en": "I've booked a table for eight o'clock." } },
+        { "de": "die Reservierung", "en": "reservation", "pl": "Reservierungen", "ex": { "de": "Haben Sie eine Reservierung?", "en": "Have you got a reservation?" } },
+        { "de": "sich beschweren", "en": "to complain", "ex": { "de": "Wir haben uns über das Zimmer beschwert.", "en": "We complained about the room." } },
+        { "de": "die Aussicht", "en": "view", "pl": "Aussichten", "ex": { "de": "Vom Balkon haben wir eine tolle Aussicht.", "en": "We've got a great view from the balcony." } },
+        { "de": "der Ausflug", "en": "trip, outing", "pl": "Ausflüge", "ex": { "de": "Morgen machen wir einen Ausflug in die Berge.", "en": "Tomorrow we're going on a trip to the mountains." } },
+        { "de": "die Insel", "en": "island", "pl": "Inseln", "ex": { "de": "Wir waren zwei Wochen auf einer Insel.", "en": "We spent two weeks on an island." } },
+        { "de": "die Küste", "en": "coast", "pl": "Küsten", "ex": { "de": "Die Küste ist sehr schön.", "en": "The coast is very beautiful." } },
+        { "de": "sich erholen", "en": "to have a rest, recover", "ex": { "de": "Im Urlaub habe ich mich gut erholt.", "en": "I had a good rest on holiday." } },
+        { "de": "die Sonnencreme", "en": "sun cream", "pl": "Sonnencremes", "ex": { "de": "Vergiss die Sonnencreme nicht!", "en": "Don't forget the sun cream!" } },
+        { "de": "der Reiseführer", "en": "guidebook; tour guide", "pl": "Reiseführer", "ex": { "de": "Ich habe einen Reiseführer über Rom gekauft.", "en": "I bought a guidebook to Rome." } },
+        { "de": "die Postkarte", "en": "postcard", "pl": "Postkarten", "ex": { "de": "Wir schreiben eine Postkarte an Oma.", "en": "We're writing a postcard to Grandma." } },
+        { "de": "das Souvenir", "en": "souvenir", "pl": "Souvenirs", "ex": { "de": "Ich habe ein Souvenir für dich.", "en": "I've got a souvenir for you." } },
+        { "de": "der Rucksack", "en": "rucksack", "pl": "Rucksäcke", "ex": { "de": "Mein Rucksack ist zu schwer.", "en": "My rucksack is too heavy." } },
+        { "de": "das Visum", "en": "visa", "pl": "Visa", "ex": { "de": "Brauche ich ein Visum für Kanada?", "en": "Do I need a visa for Canada?" } },
+        { "de": "die Rundfahrt", "en": "tour", "pl": "Rundfahrten", "ex": { "de": "Wir haben eine Rundfahrt durch die Stadt gemacht.", "en": "We went on a tour of the city." } },
+        { "de": "das Schiff", "en": "ship, boat", "pl": "Schiffe", "ex": { "de": "Das Schiff fährt um zehn Uhr ab.", "en": "The boat leaves at ten o'clock." } }
+      ]
+    }
+  ],
+  "test": {
+    "passMark": 6,
+    "reviewTip": "Review lessons 1, 6 and 8 (modal verbs, clauses with weil and wenn, comparisons), then try again.",
+    "listening": [
+      {
+        "audioText": "Liebe Fahrgäste, wegen einer Störung fährt die U-Bahn heute nur bis zum Hauptbahnhof. Von dort nehmen Sie bitte den Bus Nummer zwölf.",
+        "question": "How do passengers continue after the main station?",
+        "options": ["By tram", "By bus number 12", "On foot"],
+        "answer": 1
+      },
+      {
+        "audioText": "Hallo Sara, hier ist Ben. Das Konzert am Freitag fällt leider aus. Wollen wir stattdessen am Samstag ins Kino gehen? Ruf mich bitte zurück.",
+        "question": "What does Ben suggest?",
+        "options": ["A concert on Friday", "The cinema on Saturday", "Dinner on Saturday"],
+        "answer": 1
+      },
+      {
+        "audioText": "Und nun zum Wetter: Morgen wird es sonnig und warm, bis zu fünfundzwanzig Grad. Am Abend kann es im Süden Gewitter geben.",
+        "question": "What will the weather be like tomorrow?",
+        "options": ["Sunny, up to 25 degrees", "Rainy and cold", "Sunny, up to 15 degrees"],
+        "answer": 0
+      },
+      {
+        "audioText": "Guten Tag, hier ist die Praxis Doktor Weber. Ihr Termin am Dienstag muss leider ausfallen. Können Sie stattdessen am Donnerstag um halb zehn kommen?",
+        "question": "When is the new appointment?",
+        "options": ["Tuesday at 9:30", "Thursday at 9:30", "Thursday at 10:30"],
+        "answer": 1
+      }
+    ],
+    "reading": {
+      "text": "Hallo Lukas,\nwie geht's dir? Ich bin letzte Woche umgezogen! Meine neue Wohnung ist größer als die alte und hat sogar einen Balkon. Leider liegt sie weiter weg vom Zentrum, deshalb fahre ich jetzt jeden Tag mit dem Fahrrad zur Arbeit. Am Samstag mache ich eine kleine Party. Kannst du kommen? Du musst nichts mitbringen, aber wenn du Lust hast, kannst du einen Salat machen.\nBis bald\nJana",
+      "statements": [
+        {
+          "text": "Jana ist letzte Woche umgezogen.",
+          "isTrue": true
+        },
+        {
+          "text": "Die neue Wohnung ist kleiner als die alte.",
+          "isTrue": false
+        },
+        {
+          "text": "Jana fährt mit dem Bus zur Arbeit.",
+          "isTrue": false
+        },
+        {
+          "text": "Die Party ist am Samstag.",
+          "isTrue": true
+        },
+        {
+          "text": "Lukas muss etwas zu essen mitbringen.",
+          "isTrue": false
+        }
+      ]
+    },
+    "writing": {
+      "task": "Your colleague Frau Berger has invited you to a meeting on Monday at 10:00. Write her an email (about 40 words): thank her, say you can't come at 10 and why, suggest another time, and ask her to reply.",
+      "placeholder": "Liebe Frau Berger, …",
+      "checklist": [
+        "I greeted her politely (Liebe Frau Berger)",
+        "I thanked her for the invitation",
+        "I said I can't come at 10 and why (weil …)",
+        "I suggested another time",
+        "I asked her to reply",
+        "I closed the email (Viele Grüße)"
+      ],
+      "modelAnswer": "Liebe Frau Berger,\nvielen Dank für die Einladung. Leider kann ich am Montag um zehn Uhr nicht kommen, weil ich einen Termin beim Arzt habe. Geht es vielleicht um vierzehn Uhr? Bitte schreiben Sie mir kurz.\nViele Grüße"
+    },
+    "speaking": [
+      {
+        "task": "Talk about yourself: Wohnort, Arbeit oder Studium, Familie, Freizeit.",
+        "modelAnswer": "Ich wohne seit zwei Jahren in Hamburg. Ich arbeite in einem Büro und lerne abends Deutsch. Meine Eltern wohnen in Portugal, aber wir telefonieren jede Woche. In meiner Freizeit gehe ich gern schwimmen."
+      },
+      {
+        "task": "Word card: Wochenende. Ask a question in the Perfekt.",
+        "modelAnswer": "Was hast du letztes Wochenende gemacht?"
+      },
+      {
+        "task": "Word card: Geburtstag. Ask a question with wie.",
+        "modelAnswer": "Wie feierst du normalerweise deinen Geburtstag?"
+      },
+      {
+        "task": "Plan together: you want to buy a present for a friend. Suggest a day and a present, then ask your partner.",
+        "modelAnswer": "Wollen wir am Samstag zusammen ein Geschenk kaufen? Vielleicht ein Buch, weil er so gern liest. Oder hast du eine bessere Idee?"
+      }
+    ]
+  }
+}
