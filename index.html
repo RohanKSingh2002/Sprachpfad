@@ -6,11 +6,11 @@
     <title>Sprachpfad: German A1–B1 practice</title>
     <meta
       name="description"
-      content="Personal German practice from A1 to B1: grammar lessons, drills with instant corrections, swipeable flashcards, a practice calendar and a mock test for each level."
+      content="Personal German practice from A1 to B1: grammar lessons, fill-in and translation practice, vocabulary matching, swipeable flashcards and mock tests."
     />
     <meta name="theme-color" content="#16233F" />
     <meta property="og:title" content="Sprachpfad: German A1–B1 practice" />
-    <meta property="og:description" content="Grammar lessons, drills, flashcards and mock tests for German A1, A2 and B1." />
+    <meta property="og:description" content="Grammar lessons, fill-in and translation practice, vocabulary matching, flashcards and mock tests for German A1, A2 and B1." />
     <meta property="og:type" content="website" />
     <link
       rel="icon"
@@ -22,19 +22,14 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script>
-      // Apply a saved light/dark choice before the page is drawn, so it doesn't flash (see js/ui/theme.js).
-      try {
-        const theme = localStorage.getItem("sprachpfad-theme");
-        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
-      } catch (e) {}
-    </script>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/lesson.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/practice.css" />
+    <link rel="stylesheet" href="css/course.css" />
   </head>
   <body>
     <a class="skip" href="#app">Skip to content</a>
@@ -42,22 +37,12 @@
       <div class="wrap">
         <a class="logo" href="#/" aria-label="Sprachpfad home"><i aria-hidden="true"></i><span>Sprachpfad</span></a>
         <nav class="topnav" aria-label="Main">
-          <a href="#/" data-nav="home">Lessons</a>
+          <a href="#/" data-nav="home">Home</a>
+          <a href="#/a1/roadmap" data-nav="lessons">Lessons</a>
           <a href="#/karten" data-nav="karten">Flashcards</a>
+          <a href="#/practice" data-nav="practice">Practice</a>
           <a href="#/test" data-nav="test">Mock test</a>
         </nav>
-        <button class="theme-switch" id="themeSwitch" type="button" role="switch" aria-checked="false" aria-label="Dark mode">
-          <span class="ts-track" aria-hidden="true">
-            <span class="ts-knob"></span>
-            <svg class="ts-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-            </svg>
-            <svg class="ts-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" />
-            </svg>
-          </span>
-        </button>
       </div>
     </header>
 
@@ -78,12 +63,9 @@
     <nav class="dock" aria-label="Main, mobile">
       <a href="#/" data-nav="home">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M6 3v18" />
-          <circle cx="6" cy="7.5" r="2.3" fill="currentColor" />
-          <circle cx="6" cy="16.5" r="2.3" fill="var(--surface)" />
-          <path d="M11.5 7.5h8M11.5 16.5h8" />
+          <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
         </svg>
-        Lessons
+        Home
       </a>
       <a href="#/karten" data-nav="karten">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
@@ -91,6 +73,13 @@
           <path d="M7.5 4h10.5a2 2 0 0 1 2 2v10.5" />
         </svg>
         Cards
+      </a>
+      <a href="#/practice" data-nav="practice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 5.5h16M4 12h10M4 18.5h7" />
+          <path d="m16 16 2 2 4-5" />
+        </svg>
+        Practice
       </a>
       <a href="#/test" data-nav="test">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

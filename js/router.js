@@ -22,7 +22,10 @@ import * as cert from "./views/cert.js";
 import * as home from "./views/home.js";
 import * as lesson from "./views/lesson.js";
 import * as notFound from "./views/notfound.js";
+import * as practice from "./views/practice.js";
+import * as roadmap from "./views/roadmap.js";
 import * as test from "./views/test.js";
+import * as workshop from "./views/workshop.js";
 
 let active = null;
 let firstRoute = true;
@@ -53,6 +56,8 @@ function resolve() {
 function match(path) {
   if (path === "/") return { view: home, param: currentLevel(), nav: "home" };
   if (path === "/karten") return { view: cards, nav: "karten", title: "Flashcards" };
+  if (path === "/practice") return { view: practice, param: currentLevel(), nav: "practice", title: "Practice" };
+  if (path === "/roadmap") return { view: roadmap, param: LEVEL_BY_ID.a1, nav: "lessons", title: "A1 lessons" };
 
   const [, id, rest = ""] = path.match(/^\/([a-z0-9]+)(\/.*)?$/) || [];
   const level = LEVEL_BY_ID[id];
@@ -69,12 +74,26 @@ function match(path) {
         view: lesson,
         param: l,
         nav: "home",
-        title: `${l.germanTitle} (${level.name}, lesson ${l.id})`,
+        title: `${l.germanTitle} (${level.name}, lesson ${l.position})`,
       };
     }
     if (rest === "/test") {
       setLevel(level);
       return { view: test, param: level, nav: "test", title: `${level.name} mock test` };
+    }
+    if (rest === "/practice") {
+      setLevel(level);
+      return { view: practice, param: level, nav: "practice", title: `${level.name} practice` };
+    }
+    if (rest === "/roadmap") {
+      setLevel(level);
+      return { view: roadmap, param: level, nav: "lessons", title: `${level.name} lessons` };
+    }
+    const checkpoint = rest.match(/^\/checkpoint\/(\d+)$/);
+    const module = checkpoint && level.course?.modules.find(item => item.id === +checkpoint[1]);
+    if (module?.workshop) {
+      setLevel(level);
+      return { view: workshop, param: { level, module }, nav: "home", title: `${level.name} module ${module.id} practice` };
     }
     if (rest === "/zertifikat")
       return { view: cert, param: level, nav: "test", title: `${level.name} certificate` };
@@ -132,6 +151,9 @@ function show({ view, param, nav = "", title = "German A1–B1 practice", path }
   document
     .querySelectorAll('[data-nav="test"]')
     .forEach((a) => a.setAttribute("href", `#/${currentLevel().id}/test`));
+  document
+    .querySelectorAll('[data-nav="practice"]')
+    .forEach((a) => a.setAttribute("href", `#/${currentLevel().id}/practice`));
   document.querySelectorAll("[data-nav]").forEach((a) => {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");

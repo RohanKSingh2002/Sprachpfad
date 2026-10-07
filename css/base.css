@@ -1,6 +1,6 @@
 /* Base: colour tokens, reset, typography, layout, navigation, buttons, toast and footer */
 
-/* Colour tokens (light, then dark) */
+/* Colour tokens */
 :root {
   --bg: #f5f6f8;
   --surface: #ffffff;
@@ -10,16 +10,16 @@
   --line: #d9dfe8;
   --signal: #f2c02a;
   --on-signal: #16233f;
-  --btn-bg: #16233f;
+  --btn-bg: #40577e;
   --btn-fg: #ffffff;
-  --btn-hover: #253861;
+  --btn-hover: #344a70;
   --ok: #1e8757;
   --ok-bg: #e2f2e9;
   --err: #ba3a31;
   --err-bg: #fae7e5;
-  --board: #19223a;
-  --flap: #0e1526;
-  --flap-ink: #f2f0e8;
+  --board: #e9edf2;
+  --flap: #ffffff;
+  --flap-ink: #16233f;
   --paper: #fbfaf7;
   --ink: #16233f;
   --stamp: #2d3a8c;
@@ -36,10 +36,6 @@
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
   color-scheme: light;
-  /* light / dark switch: knob position and icon colours */
-  --switch-x: 0px;
-  --sun-ink: var(--on-signal);
-  --moon-ink: var(--muted);
   /* motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -49,64 +45,6 @@
   --shadow-2: 0 2px 4px -1px rgba(22, 35, 63, 0.06), 0 12px 28px -14px rgba(22, 35, 63, 0.28);
   --btn-shadow: 0 1px 2px rgba(22, 35, 63, 0.24), 0 10px 22px -12px rgba(22, 35, 63, 0.6);
   --spot: rgba(242, 192, 42, 0.16);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0d1424;
-    --surface: #141e35;
-    --sunken: #1b2742;
-    --text: #eceff6;
-    --muted: #a0aac0;
-    --line: #27334f;
-    --btn-bg: #f2c02a;
-    --btn-fg: #16233f;
-    --btn-hover: #f6ce55;
-    --ok: #4dbf8a;
-    --ok-bg: #133027;
-    --err: #ef7c72;
-    --err-bg: #361c20;
-    --board: #18223b;
-    --flap: #090f1d;
-    --shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4), 0 26px 50px -28px rgba(0, 0, 0, 0.9);
-    --grain: 0.08;
-    color-scheme: dark;
-    --switch-x: 28px;
-    --sun-ink: var(--muted);
-    --moon-ink: var(--on-signal);
-    --highlight: inset 0 1px 0 rgba(255, 255, 255, 0.045);
-    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.45);
-    --shadow-2: 0 2px 4px -1px rgba(0, 0, 0, 0.4), 0 14px 30px -14px rgba(0, 0, 0, 0.75);
-    --btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 24px -12px rgba(242, 192, 42, 0.35);
-    --spot: rgba(242, 192, 42, 0.09);
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0d1424;
-  --surface: #141e35;
-  --sunken: #1b2742;
-  --text: #eceff6;
-  --muted: #a0aac0;
-  --line: #27334f;
-  --btn-bg: #f2c02a;
-  --btn-fg: #16233f;
-  --btn-hover: #f6ce55;
-  --ok: #4dbf8a;
-  --ok-bg: #133027;
-  --err: #ef7c72;
-  --err-bg: #361c20;
-  --board: #18223b;
-  --flap: #090f1d;
-  --shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4), 0 26px 50px -28px rgba(0, 0, 0, 0.9);
-  --grain: 0.08;
-  color-scheme: dark;
-  --switch-x: 28px;
-  --sun-ink: var(--muted);
-  --moon-ink: var(--on-signal);
-  --highlight: inset 0 1px 0 rgba(255, 255, 255, 0.045);
-  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.45);
-  --shadow-2: 0 2px 4px -1px rgba(0, 0, 0, 0.4), 0 14px 30px -14px rgba(0, 0, 0, 0.75);
-  --btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 24px -12px rgba(242, 192, 42, 0.35);
-  --spot: rgba(242, 192, 42, 0.09);
 }
 
 /* Reset and page */
@@ -302,6 +240,9 @@ header.nav {
 .dock.has-pill a[aria-current="page"] {
   background: transparent;
 }
+.topnav.has-pill a[data-nav="lessons"][aria-current="page"] {
+  background: var(--sunken);
+}
 .topnav .pill,
 .dock .pill {
   position: absolute;
@@ -346,7 +287,7 @@ header.nav {
   }
   .dock {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 6px;
     position: fixed;
     left: 0;
@@ -382,73 +323,6 @@ header.nav {
   }
   body {
     padding-bottom: 74px;
-  }
-}
-
-/* Light / dark switch in the header (the yellow knob sits behind the active icon) */
-.theme-switch {
-  flex: none;
-  display: grid;
-  place-items: center;
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: none;
-  cursor: pointer;
-}
-.ts-track {
-  position: relative;
-  display: flex;
-  padding: 3px;
-  border-radius: 999px;
-  background: var(--sunken);
-  transition: background-color 0.2s;
-}
-.theme-switch:hover .ts-track {
-  background: color-mix(in srgb, var(--text) 9%, var(--sunken));
-}
-.theme-switch:focus-visible {
-  outline: none;
-}
-.theme-switch:focus-visible .ts-track {
-  outline: 3px solid var(--signal);
-  outline-offset: 2px;
-}
-.ts-knob {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--signal);
-  transform: translateX(var(--switch-x));
-  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.3, 1);
-}
-.ts-track svg {
-  position: relative;
-  width: 28px;
-  height: 28px;
-  padding: 6px;
-  transition: color 0.2s;
-}
-.ts-sun {
-  color: var(--sun-ink);
-}
-.ts-moon {
-  color: var(--moon-ink);
-}
-@media (max-width: 640px) {
-  .theme-switch {
-    margin-left: auto;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .ts-knob,
-  .ts-track,
-  .ts-track svg {
-    transition: none;
   }
 }
 

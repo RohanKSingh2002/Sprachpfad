@@ -11,7 +11,7 @@ export function render(level) {
   const crumb = breadcrumb(level, "Certificate");
   if (!passed(level)) {
     return `${crumb}<h1 class="cert-locked">${level.name} practice certificate</h1>
-      <p class="muted">Your certificate appears here after you score at least ${test.passMark} of ${test.total} in the ${level.name} mock test's listening and reading.</p>
+      <p class="muted">Your certificate appears here after you score at least ${test.passMark} of ${test.total} in ${test.objectiveLabel || "listening and reading"} on the ${level.name} practice assessment.</p>
       <a class="btn" href="#/${level.id}/test">Take the ${level.name} mock test</a><div style="height:60px"></div>`;
   }
   const result = testResult(level);
@@ -21,9 +21,9 @@ export function render(level) {
     <article class="cert" id="cert" aria-label="Practice certificate ${level.name}">
       <div class="cert-brand"><i aria-hidden="true"></i>Sprachpfad</div>
       <h1 lang="de">Übungszertifikat ${level.name}</h1>
-      <p class="cert-sub">Practice certificate for German at level ${level.name}</p>
+      <p class="cert-sub">${test.form ? `Objective practice record for ${level.name}; writing and speaking need separate review` : `Practice certificate for German at level ${level.name}`}</p>
       <dl class="cert-grid" lang="de">
-        <div><dt>Hören und Lesen</dt><dd>${result.best} von ${test.total}</dd></div>
+        <div><dt>${test.form ? "Objektive Übungen" : "Hören und Lesen"}</dt><dd>${result.best} von ${test.total}</dd></div>
         <div><dt>Lektionen</dt><dd>${doneCount(level)} von ${level.lessons.length}</dd></div>
         <div><dt>Datum</dt><dd>${date}</dd></div>
       </dl>

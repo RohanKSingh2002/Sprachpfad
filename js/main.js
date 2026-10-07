@@ -7,7 +7,6 @@ import { initAudio, speak } from "./ui/audio.js";
 import { startClock } from "./ui/board.js";
 import { initSpotlight } from "./ui/effects.js";
 import { initSmoothScroll } from "./ui/scroll.js";
-import { initThemeSwitch } from "./ui/theme.js";
 import { toast } from "./ui/toast.js";
 import { esc } from "./utils.js";
 
@@ -48,7 +47,6 @@ function onReset(e) {
 }
 
 async function start() {
-  initThemeSwitch(); // works even if the lessons fail to load
   try {
     await loadContent();
   } catch (error) {

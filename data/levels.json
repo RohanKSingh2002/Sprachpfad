@@ -2,7 +2,8 @@
   {
     "id": "a1",
     "name": "A1",
-    "summary": "Introductions, present tense, articles, word order, time and separable verbs."
+    "summary": "A guided 32-lesson course: everyday German, vocabulary, pronunciation, all four skills and Goethe A1 exam preparation.",
+    "courseFile": "a1-course.json"
   },
   {
     "id": "a2",

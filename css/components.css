@@ -18,7 +18,7 @@
   font: 600 17px/1 var(--cond);
 }
 .fb-head span:first-child {
-  color: var(--signal);
+  color: #8b6900;
 }
 .fb-clock {
   font-variant-numeric: tabular-nums;
@@ -98,7 +98,7 @@
   right: 0;
   top: calc(50% - 0.5px);
   height: 1px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(22, 35, 63, 0.16);
   z-index: 3;
 }
 .fb-foot {

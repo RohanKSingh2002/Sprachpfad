@@ -58,8 +58,8 @@ function board(level, next) {
     return boardHTML({
       id: "home",
       text: next.germanTitle,
-      foot: `<span>${level.name}, lesson ${next.id} of ${total}: ${esc(next.title)}</span><span>Gleis ${next.id}</span>`,
-      label: `Next stop: ${next.germanTitle}, ${level.name} lesson ${next.id} of ${total}`,
+      foot: `<span>${level.name}, lesson ${next.position} of ${total}: ${esc(next.title)}</span><span>Gleis ${next.position}</span>`,
+      label: `Next stop: ${next.germanTitle}, ${level.name} lesson ${next.position} of ${total}`,
     });
   }
   return boardHTML({
@@ -74,7 +74,7 @@ function actions(level, next) {
   const after = LEVELS[level.index + 1];
   const primary = (href, label) => `<a class="btn btn-go" href="${href}">${label}${ARROW_ICON}</a>`;
   if (next) {
-    const label = doneCount(level) ? `Continue with lesson ${next.id}` : "Start lesson 1";
+    const label = doneCount(level) ? `Continue with lesson ${next.position}` : "Start lesson 1";
     return primary(`#/${level.id}/lektion/${next.id}`, label);
   }
   if (!passed(level)) {
@@ -169,7 +169,7 @@ function sessionSteps(level) {
   if (lesson) {
     steps.push({
       title: "Study the grammar",
-      sub: `Lesson ${lesson.id}: ${lesson.germanTitle}`,
+      sub: `Lesson ${lesson.position}: ${lesson.germanTitle}`,
       href: `#/${level.id}/lektion/${lesson.id}`,
       min: grammarMinutes(lesson),
       done: openedToday(lesson) || isDone(lesson),
@@ -225,7 +225,7 @@ function sessionCard(level) {
       ? `${due.count} ${due.count === 1 ? "word comes" : "words come"} back ${whenDue(due.date)}. `
       : "";
     const more = next
-      ? `<a class="tlink" href="#/${level.id}/lektion/${next.id}">Keep going: lesson ${next.id}</a>`
+      ? `<a class="tlink" href="#/${level.id}/lektion/${next.id}">Keep going: lesson ${next.position}</a>`
       : "";
     foot = `<p class="session-foot muted small">${back}${more}</p>`;
   }
@@ -266,7 +266,10 @@ function routeMap(current) {
 /* ---------- the line for one level ---------- */
 
 function stops(level, next) {
-  return level.lessons
+  const nextIndex = next ? level.lessons.indexOf(next) : level.lessons.length;
+  const start = level.course ? Math.min(Math.max(0, level.lessons.length - 8), Math.max(0, nextIndex - 2)) : 0;
+  const visible = level.course ? level.lessons.slice(start, start + 8) : level.lessons;
+  return visible
     .map((lesson) => {
       const done = isDone(lesson);
       const cls = done ? "done" : next === lesson ? "next" : "";
@@ -275,9 +278,9 @@ function stops(level, next) {
         : cls === "next"
           ? "Next"
           : "";
-      return `<li class="${cls}"><a href="#/${level.id}/lektion/${lesson.id}">
+      return `<li class="${cls}" data-lesson-key="${lesson.key}"><a href="#/${level.id}/lektion/${lesson.id}">
         <span class="dot">${done ? CHECK_ICON : ""}</span>
-        <span><span class="st-title" lang="de">${lesson.id}. ${esc(lesson.germanTitle)}</span><span class="st-sub">${esc(lesson.title)}</span></span>
+        <span><span class="st-title" lang="de">${lesson.position}. ${esc(lesson.germanTitle)}</span><span class="st-sub">${esc(lesson.title)}</span></span>
         <span class="st">${label}</span></a></li>`;
     })
     .join("");
@@ -346,11 +349,13 @@ export function render(level) {
       ${board(level, next)}
       <div class="hero-actions">${actions(level, next)}</div>
       ${sessionCard(level)}
+      ${level.course ? `<section class="panel course-callout"><h2 class="h3">Explore A1 lessons</h2><p class="muted small">32 lessons, 16 modules, vocabulary, pronunciation and all four exam skills. Follow the sequence and review your checkpoints.</p><a class="btn small ghost" href="#/${level.id}/roadmap">Open all A1 lessons</a></section>` : ""}
     </div>
     <aside class="linecard spot" aria-labelledby="line-h">
       <div class="line-head"><h2 id="line-h">${level.name} line</h2>${levelSwitch(level, "", "Choose a level")}</div>
       <p class="muted small">${doneCount(level)} of ${level.lessons.length} stops reached</p>
       <div class="stops-wrap"><span class="rail" aria-hidden="true"></span><span class="rail-fill" aria-hidden="true"></span><ol class="stops">${stops(level, next)}</ol></div>
+      ${level.course ? `<p class="muted small">Nearby stops are shown above. <a class="tlink" href="#/${level.id}/roadmap">See all 32 lessons and module checkpoints</a></p>` : ''}
     </aside>
     ${routeMap(level)}
   </div>
@@ -359,7 +364,8 @@ export function render(level) {
     <div class="practice">
       <div>
         <h2 id="practice-h">Your practice</h2>
-        <p class="muted">${hm.active ? "Each square is a day. It darkens with every answer you give in lessons, flashcards and the mock tests." : "Each square is a day. Your first answer fills in today's square."}</p>
+        <p class="muted">${hm.active ? "Each square is a day. It darkens with every answer you give in lessons, extra practice, flashcards and mock tests." : "Each square is a day. Your first answer fills in today's square."}</p>
+        <a class="btn small ghost" href="#/${level.id}/practice">Try fill-in, translation and matching</a>
         <div class="stats">
           <div class="stat"><b data-count="${days}">${days}</b><span>${days === 1 ? "day" : "days"} in a row</span></div>
           <div class="stat"><b data-count="${done}" data-suffix="/${ALL_LESSONS.length}">${done}/${ALL_LESSONS.length}</b><span>lessons done</span></div>
@@ -376,8 +382,10 @@ export function render(level) {
   ${ticker(level)}
 
   <section aria-labelledby="faq-h">
-    <h2 id="faq-h">Questions</h2>
-    <dl class="faq">${faq}</dl>
+    <details class="faq-dropdown">
+      <summary class="faq-toggle"><h2 id="faq-h">Questions</h2></summary>
+      <div class="faq-content"><dl class="faq">${faq}</dl></div>
+    </details>
   </section>`;
 }
 
@@ -401,7 +409,8 @@ function fillRail() {
   rail.style.top = `${first}px`;
   rail.style.height = `${last - first}px`;
   const next = nextLesson(shown);
-  const target = doneCount(shown) === 0 ? first : !next ? last : middle(dots[shown.lessons.indexOf(next)]);
+  const nextDot = next && dots.find(dot => dot.closest('li').dataset.lessonKey === next.key);
+  const target = doneCount(shown) === 0 ? first : !next ? last : nextDot ? middle(nextDot) : first;
   fill.style.top = `${first}px`;
   fill.style.height = `${Math.max(0, target - first)}px`;
 }
@@ -528,7 +537,6 @@ function scrollScenes() {
   });
   revealOnScroll(".stat span", { y: 8, stagger: 0.06 });
   revealOnScroll(".ticker", { y: 16 });
-  revealOnScroll(".faq dt, .faq dd", { y: 14, stagger: 0.04 });
 
   if (!ScrollTrigger) return;
   const heat = document.querySelector(".heat");
@@ -581,8 +589,62 @@ function runTicker() {
   onLeave(() => loop.kill());
 }
 
+/** Keep the native disclosure open until its closing animation finishes. */
+function runQuestions() {
+  const faq = document.querySelector('.faq-dropdown');
+  if (!faq) return;
+  const toggle = faq.querySelector('.faq-toggle');
+  const content = faq.querySelector('.faq-content');
+  const list = faq.querySelector('.faq');
+  let expanded = faq.open;
+  let animation = null;
+
+  const finish = () => {
+    animation = null;
+    faq.open = expanded;
+    faq.classList.remove('is-closing');
+    toggle.removeAttribute('aria-expanded');
+    gsap.set(content, { clearProps: 'height' });
+    gsap.set(list, { clearProps: 'opacity,transform' });
+    ScrollTrigger?.refresh();
+  };
+  const onClick = (e) => {
+    // Native keyboard and disclosure behaviour remains available without motion.
+    if (!motionOK()) {
+      if (animation) { animation.kill(); finish(); }
+      return;
+    }
+    e.preventDefault();
+    animation?.kill();
+    const height = faq.open ? content.getBoundingClientRect().height : 0;
+    if (!faq.open) gsap.set(list, { opacity: 0, y: 12 });
+    expanded = !expanded;
+    faq.open = true;
+    faq.classList.toggle('is-closing', !expanded);
+    toggle.setAttribute('aria-expanded', String(expanded));
+    gsap.set(content, { height });
+    // Measuring the inner list lets interrupted transitions resume from their current height.
+    animation = gsap.timeline({ defaults: { ease: 'expo.out' }, onComplete: finish })
+      .to(content, { height: expanded ? list.getBoundingClientRect().height : 0, duration: expanded ? 0.65 : 0.5 }, 0)
+      .to(list, { opacity: expanded ? 1 : 0, y: expanded ? 0 : 8, duration: expanded ? 0.45 : 0.25 }, expanded ? 0.08 : 0);
+  };
+  const onFaqToggle = () => {
+    if (animation) return;
+    expanded = faq.open;
+    ScrollTrigger?.refresh();
+  };
+  toggle.addEventListener('click', onClick);
+  faq.addEventListener('toggle', onFaqToggle);
+  onLeave(() => {
+    animation?.kill();
+    toggle.removeEventListener('click', onClick);
+    faq.removeEventListener('toggle', onFaqToggle);
+  });
+}
+
 export function mount(level, { sameKind } = {}) {
   fillRail();
+  runQuestions();
   const scene = !motionOK() ? "still" : sameKind ? "level" : openingPlayed ? "return" : "opening";
   openingPlayed = true;
   slidePill(document.querySelector(".linecard .lvswitch"), "home-levels", { animate: scene === "level" });

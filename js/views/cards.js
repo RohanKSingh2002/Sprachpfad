@@ -74,7 +74,7 @@ function deckOptions(selected) {
   const option = (value, label) =>
     `<option value="${value}"${value === selected ? " selected" : ""}>${esc(label)}</option>`;
   const groups = LEVELS.map((lv) => {
-    const lessons = lv.lessons.map((l) => option(l.key, `${lv.name} lesson ${l.id}: ${l.germanTitle}`)).join("");
+    const lessons = lv.lessons.map((l) => option(l.key, `${lv.name} lesson ${l.position}: ${l.germanTitle}`)).join("");
     const topics = lv.topics.map((t) => option(t.key, `${lv.name} topic: ${t.title}`)).join("");
     return (
       `<optgroup label="${lv.name}">${option(lv.id, `All ${lv.name} words`)}${lessons}</optgroup>` +
@@ -374,8 +374,8 @@ export function onClick(e, button) {
 }
 
 /** Arrow keys only steer the card when it, or the page itself, has focus, and never with Alt, Ctrl,
- *  Cmd or Shift held (Alt+← is the browser's Back). On a button, link, menu or switch they belong
- *  to that control. */
+ *  Cmd or Shift held (Alt+← is the browser's Back). On a button, link or menu they belong to that
+ *  control. */
 const steersCard = (e) =>
   !(e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) &&
   (e.target === document.body || e.target.id === "app" || e.target.id === "flash");

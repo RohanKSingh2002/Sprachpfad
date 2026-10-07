@@ -14,6 +14,8 @@ const fresh = () => ({
   tests: {}, // "a2": { best: 8, date: 1790000000000 }
   level: null, // id of the level last opened
   today: null, // { date, cards, added, opened: ["a2-3"], plan: { a2: "a2-3" } }
+  courseChecks: {}, // learner practice and feedback records for course modules
+  coursePace: {}, // preferred course length in weeks
 });
 
 let S = fresh();
@@ -72,6 +74,8 @@ function load() {
       tests,
       level: LEVEL_BY_ID[level] ? level : null,
       today: s.today && typeof s.today === "object" ? s.today : null,
+      courseChecks: s.courseChecks && typeof s.courseChecks === "object" ? s.courseChecks : {},
+      coursePace: s.coursePace && typeof s.coursePace === "object" ? s.coursePace : {},
     };
   } catch (e) {
     return fresh();
@@ -107,6 +111,19 @@ function countAnswer() {
 /** Count one answer towards today's square on the practice calendar. */
 export function logPractice() {
   countAnswer();
+  save();
+}
+
+export const courseChecks = (level, moduleId) => S.courseChecks[`${level.id}-v${level.course.version}-${moduleId}`] || {};
+export function recordCourseCheck(level, moduleId, skill, value) {
+  const key = `${level.id}-v${level.course.version}-${moduleId}`;
+  S.courseChecks[key] = { ...courseChecks(level, moduleId), [skill]: value };
+  save();
+}
+export const coursePace = (level) => S.coursePace[level.id] || level.course.weeks;
+export function setCoursePace(level, weeks) {
+  if (![8, 16, 24].includes(weeks)) return;
+  S.coursePace[level.id] = weeks;
   save();
 }
 
@@ -193,14 +210,17 @@ export function recordLesson(lesson, score) {
 
 /* ---------- mock tests ---------- */
 
-export const testResult = (level) => S.tests[level.id] || null;
+export const testResult = (level) => {
+  const result = S.tests[level.id];
+  return result && (result.version || 1) === (level.test.version || 1) ? result : null;
+};
 export const passed = (level) => (testResult(level)?.best ?? -1) >= level.test.passMark;
 
 /** Keep the best score (a tie updates the date). */
 export function recordTest(level, score) {
   const prev = testResult(level);
   if (!prev || score >= prev.best) {
-    S.tests[level.id] = { best: score, date: Date.now() };
+    S.tests[level.id] = { best: score, date: Date.now(), version: level.test.version || 1 };
     save();
   }
 }

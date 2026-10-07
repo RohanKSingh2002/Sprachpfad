@@ -450,11 +450,55 @@
 }
 
 /* Questions */
+.faq-dropdown {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.faq-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-toggle::-webkit-details-marker {
+  display: none;
+}
+.faq-toggle h2 {
+  margin: 0;
+}
+.faq-toggle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.5s var(--ease-out);
+}
+.faq-toggle:focus-visible {
+  outline-offset: -4px;
+}
+.faq-dropdown[open] > .faq-toggle {
+  border-bottom: 1px solid var(--line);
+}
+.faq-dropdown[open]:not(.is-closing) > .faq-toggle::after {
+  transform: rotate(225deg);
+}
+.faq-content {
+  overflow: hidden;
+}
 .faq {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   column-gap: 44px;
-  margin: 20px 0 0;
+  margin: 0;
+  padding: 0 22px 6px;
 }
 .faq dt {
   font-weight: 600;
@@ -467,6 +511,10 @@
   border-top: 1px solid var(--line);
   color: var(--muted);
   max-width: 62ch;
+}
+.faq dt:first-of-type,
+.faq dd:first-of-type {
+  border-top: 0;
 }
 @media (max-width: 760px) {
   .faq {
@@ -554,7 +602,7 @@
   background: var(--signal);
 }
 .tk:hover b {
-  color: var(--signal);
+  color: #8b6900;
 }
 .tk:focus-visible {
   outline-offset: -4px;
@@ -568,13 +616,13 @@
   margin: 0 6px;
   border: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(22, 35, 63, 0.08);
   color: var(--flap-ink);
   cursor: pointer;
   transition: background-color 0.2s;
 }
 .ticker-toggle:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(22, 35, 63, 0.14);
 }
 .ticker-toggle svg {
   width: 16px;
@@ -598,6 +646,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .faq-toggle::after {
+    transition: none;
+  }
   .stops li.next .dot::after {
     animation: none;
     opacity: 0;

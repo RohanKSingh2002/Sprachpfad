@@ -55,7 +55,7 @@ function taskBody(task, i) {
 }
 
 const renderTask = (task, i) =>
-  `<div class="task" id="t${i}"><div class="kind">${i + 1}. ${KIND[task.type]}</div><div class="q">${esc(task.question)}</div>${taskBody(task, i)}<div id="fb${i}" aria-live="polite"></div></div>`;
+  `<div class="task" id="t${i}"><div class="kind">${i + 1}. ${KIND[task.type]}</div>${task.readingText ? `<div class="reading" lang="de">${esc(task.readingText)}</div>` : ""}<div class="q">${esc(task.question)}</div>${taskBody(task, i)}<div id="fb${i}" aria-live="polite"></div></div>`;
 
 function grammarTable({ head, rows }) {
   const th = head.map((h) => `<th scope="col">${esc(h)}</th>`).join("");
@@ -73,8 +73,9 @@ export function render(l) {
   firstTry = {};
   scoreShown = false;
   const { level } = l;
-  const prev = level.lessons.find((x) => x.id === l.id - 1);
-  const next = level.lessons.find((x) => x.id === l.id + 1);
+  const position = level.lessons.indexOf(l);
+  const prev = level.lessons[position - 1];
+  const next = level.lessons[position + 1];
   const graded = gradedTasks(l).length;
   const examples = l.examples
     .map(
@@ -90,17 +91,20 @@ export function render(l) {
     })
     .join("");
   const back = prev
-    ? `<a class="btn ghost" href="#/${level.id}/lektion/${prev.id}">Lesson ${prev.id}</a>`
+    ? `<a class="btn ghost" href="#/${level.id}/lektion/${prev.id}">Lesson ${prev.position}</a>`
     : "<span></span>";
   const forward = next
-    ? `<a class="btn btn-go" href="#/${level.id}/lektion/${next.id}">Lesson ${next.id}${ARROW_ICON}</a>`
+    ? `<a class="btn btn-go" href="#/${level.id}/lektion/${next.id}">Lesson ${next.position}${ARROW_ICON}</a>`
     : `<a class="btn btn-go" href="#/${level.id}/test">${level.name} mock test${ARROW_ICON}</a>`;
   return `
-  ${breadcrumb(level, `Lesson ${l.id}`)}
+  ${breadcrumb(level, `Lesson ${l.position}`)}
   <header class="lesson-head"><h1 lang="de">${esc(l.germanTitle)}</h1><div class="en">${esc(l.title)}</div></header>
   <p class="intro">${esc(l.intro)}</p>
+  ${l.outcomes ? `<div class="panel course-outcomes"><a class="tlink" href="#/${level.id}/roadmap">Module ${l.module} · Course roadmap</a><h2 class="h3">What you will practise</h2><ul>${l.outcomes.map((goal) => `<li>${esc(goal)}</li>`).join("")}</ul><p class="muted small"><b>Pronunciation:</b> ${esc(l.pronunciation)}</p></div>` : ""}
   <div class="lesson-grid">
     <div class="panel spot">${grammarTable(l.table)}</div>
+    ${l.tables ? l.tables.map(table => `<div class="panel"><h2>${esc(table.title)}</h2>${grammarTable(table)}</div>`).join('') : ''}
+    ${l.pronunciationDrills ? `<section class="panel course-pronunciation"><h2>Listen and practise pronunciation</h2><p class="muted">Listen, repeat after a pause, then say the phrase without reading. Ask a partner which word or detail they understood.</p>${l.pronunciationDrills.map(drill => `<div class="say">${speakerButton(drill.text)}<div><b>${esc(drill.label)}</b><div class="de-line" lang="de">${esc(drill.text)}</div><p class="muted small">${esc(drill.instruction)}</p></div></div>`).join('')}</section>` : ''}
     <div class="panel spot"><h2 class="h3">Remember</h2><ul class="rules">${l.rules.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>
   </div>
   <div class="panel spot say-panel"><h2 class="h3">Say it out loud</h2><p class="muted small">Tap the speaker, listen, then repeat the sentence.</p><div class="ex-list">${examples}</div></div>
@@ -111,6 +115,7 @@ export function render(l) {
     ${l.tasks.map(renderTask).join("")}
     <div id="scorebox" aria-live="polite"></div>
   </section>
+  ${l.speaking ? `<section class="course-speaking" aria-labelledby="speaking-h"><h2 id="speaking-h">Speak and interact</h2><p class="muted">Try the task before revealing the example. Use your own details and practise both roles with a partner.</p>${l.speaking.map((s, i) => `<div class="task"><div class="q">${esc(s.task)}</div><button type="button" class="btn small ghost" data-speech-model="${i}">Show and hear an example</button><div id="speech-model-${i}"></div><ul class="check-list">${s.checklist.map((item) => `<li><label><input type="checkbox">${esc(item)}</label></li>`).join("")}</ul></div>`).join("")}<p class="muted small">Writing and speaking need feedback. Your objective exercise score does not measure pronunciation or spoken interaction.</p></section>` : ""}
   <h2 class="words-h">Words from this lesson</h2>
   <div class="vocab">${words}</div>
   <div class="pager">${back}${forward}</div>`;
@@ -175,7 +180,7 @@ function showScoreWhenDone() {
   const number = motionOK()
     ? `<span aria-hidden="true">0/${total}</span><span class="sr">${score}/${total}</span>`
     : `${score}/${total}`;
-  box.innerHTML = `<div class="score"><div><strong class="num" id="scoreNum">${number}</strong><p>Lesson ${lesson.id} done. ${message}</p><a class="btn small" href="#/karten?l=${lesson.key}">Practise these words</a></div><div class="stamp" id="stamp" aria-hidden="true">Erledigt<small>${germanDate(new Date(), true)}</small></div></div>`;
+  box.innerHTML = `<div class="score"><div><strong class="num" id="scoreNum">${number}</strong><p>Lesson ${lesson.position}: objective exercises complete. ${message}</p><a class="btn small" href="#/karten?l=${lesson.key}">Practise these words</a></div><div class="stamp" id="stamp" aria-hidden="true">Erledigt<small>${germanDate(new Date(), true)}</small></div></div>`;
   if (motionOK()) {
     const counter = { v: 0 };
     const digits = document.getElementById("scoreNum").firstChild;
@@ -218,8 +223,10 @@ function moveChips(i, chips, target) {
 export function onClick(e, button) {
   if (!button || !lesson) return;
   const d = button.dataset;
-
-  if (d.mc !== undefined) {
+  if (d.speechModel !== undefined) {
+    const s = lesson.speaking[+d.speechModel];
+    document.getElementById(`speech-model-${d.speechModel}`).innerHTML = `<div class="fb info"><span lang="de">${esc(s.modelAnswer)}</span> ${speakerButton(s.modelAnswer)}</div>`;
+  } else if (d.mc !== undefined) {
     const i = +d.mc;
     const task = lesson.tasks[i];
     const box = document.getElementById(`t${i}`);

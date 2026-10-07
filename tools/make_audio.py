@@ -43,6 +43,12 @@ def spoken_texts():
     levels = json.loads((DATA / "levels.json").read_text(encoding="utf-8"))
     for level in levels:
         content = json.loads((DATA / f"{level['id']}.json").read_text(encoding="utf-8"))
+        course = {}
+        if level.get("courseFile"):
+            course = json.loads((DATA / level["courseFile"]).read_text(encoding="utf-8"))
+            content["lessons"].extend(course.get("lessons", []))
+            content.setdefault("topics", []).extend(course.get("topics", []))
+            content["test"] = course.get("test", content["test"])
         for lesson in content["lessons"]:
             for example in lesson.get("examples", []):
                 texts.setdefault(example["de"])
@@ -53,6 +59,17 @@ def spoken_texts():
                     texts.setdefault(task["audioText"])
                 elif task["type"] == "write":
                     texts.setdefault(task["modelAnswer"])
+        for support in course.get("support", {}).values():
+            for drill in support.get("pronunciationDrills", []):
+                texts.setdefault(drill["text"])
+            for item in support.get("speaking", []):
+                texts.setdefault(item["modelAnswer"])
+        for module in course.get("modules", []):
+            workshop = module.get("workshop", {})
+            if workshop:
+                texts.setdefault(workshop["listening"]["audioText"])
+                texts.setdefault(workshop["writing"]["modelAnswer"])
+                texts.setdefault(workshop["speaking"]["modelAnswer"])
         for topic in content.get("topics", []):
             for word in topic["vocab"]:
                 texts.setdefault(word["de"])

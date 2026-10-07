@@ -32,15 +32,28 @@ async function getJSON(file) {
 export async function loadContent() {
   const [levels, faq] = await Promise.all([getJSON("levels.json"), getJSON("faq.json")]);
   const files = await Promise.all(levels.map((lv) => getJSON(`${lv.id}.json`)));
+  const courses = await Promise.all(levels.map((lv) => lv.courseFile ? getJSON(lv.courseFile) : null));
 
   levels.forEach((meta, index) => {
-    const { lessons, topics = [], test } = files[index];
-    const level = { ...meta, index, lessons, topics, test };
-    test.total = test.listening.length + test.reading.statements.length;
-    lessons.forEach((lesson) => {
+    const { lessons: baseLessons, topics = [], test: baseTest } = files[index];
+    const course = courses[index];
+    topics.push(...(course?.topics || []));
+    const byId = new Map([...baseLessons, ...(course?.lessons || [])].map((l) => [l.id, l]));
+    const lessons = course ? course.lessonOrder.map((id) => byId.get(id)) : baseLessons;
+    if (lessons.some((l) => !l)) throw new Error(`The ${meta.name} course references a missing lesson`);
+    const test = course?.test || baseTest;
+    const level = { ...meta, index, lessons, topics, test, course };
+    test.total = test.listening.length + (test.reading.groups ? test.reading.groups.reduce((n, g) => n + g.items.length, 0) : test.reading.statements.length) + (test.form?.fields.length || 0);
+    lessons.forEach((lesson, position) => {
       lesson.level = level;
+      lesson.position = position + 1;
       lesson.kind = "lesson";
       lesson.key = `${level.id}-${lesson.id}`; // used in saved progress and flashcard links
+      if (course?.support[lesson.id]) {
+        const { readingTask, ...support } = course.support[lesson.id];
+        Object.assign(lesson, support);
+        if (readingTask) lesson.tasks.push(readingTask);
+      }
     });
     topics.forEach((topic) => {
       topic.level = level;
@@ -85,4 +98,4 @@ export function pluralText(entry) {
 
 /** Where a word comes from, for labels: "A1 lesson 3" or "A1 topic: Food and shopping". */
 export const setLabel = (set) =>
-  set.kind === "topic" ? `${set.level.name} topic: ${set.title}` : `${set.level.name} lesson ${set.id}`;
+  set.kind === "topic" ? `${set.level.name} topic: ${set.title}` : `${set.level.name} lesson ${set.position || set.id}`;
