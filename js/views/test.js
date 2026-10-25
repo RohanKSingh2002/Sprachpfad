@@ -11,14 +11,17 @@ import { breadcrumb, levelSwitch } from "./shared.js";
 let level = null; // level whose test is on screen
 let answers = {}; // "L0", "R2"… → answered correctly?
 let countdown = null;
+let rehearsal = false;
+let plays = [];
+const pendingAudio = new Set();
 
 function listeningPart(test) {
   return test.listening
     .map(
       (item, i) => `<div class="task" id="L${i}"><div class="kind">${item.part ? `Part ${item.part} · ` : ""}Text ${i + 1}${item.plays ? ` · rehearsal: ${item.plays === 1 ? "one play" : "two plays"}` : ""}</div>
-      <div class="row" style="margin:0 0 10px">${speakerButton(item.audioText)}<span class="muted small">Play, then answer.</span></div>
-      <div class="q"${test.version === 2 ? ' lang="de"' : ""}>${esc(item.question)}</div>
-      <div class="opts">${item.options.map((o, k) => `<button class="opt" type="button"${test.version === 2 ? ' lang="de"' : ""} data-tl="${i}" data-k="${k}">${esc(o)}</button>`).join("")}</div>
+      <div class="row" style="margin:0 0 10px">${speakerButton(item.audioText, `Play listening text ${i + 1}`).replace('<button ', `<button data-test-listen="${i}" `)}<span class="muted small" id="test-plays-${i}">Play, then answer.</span></div>
+      <div class="q"${test.form ? ' lang="de"' : ""}>${esc(item.question)}</div>
+      <div class="opts">${item.options.map((o, k) => `<button class="opt" type="button"${test.form ? ' lang="de"' : ""} data-tl="${i}" data-k="${k}">${esc(o)}</button>`).join("")}</div>
       <div id="Lfb${i}"></div></div>`,
     )
     .join("");
@@ -27,10 +30,15 @@ function listeningPart(test) {
 function readingPart(test) {
   if (test.reading.groups) {
     let index = 0;
-    return test.reading.groups.map(group => `<h3>${esc(group.title)}</h3>${group.text ? `<div class="reading" lang="de">${esc(group.text)}</div>` : ""}${group.items.map(item => {
+    return test.reading.groups.map(group => {
+      let previousText = group.text || '';
+      return `<h3>${esc(group.title)}</h3>${group.text ? `<div class="reading" lang="de">${esc(group.text)}</div>` : ""}${group.items.map(item => {
       const i = index++;
-      return `<div class="task">${item.text ? `<div class="reading" lang="de">${esc(item.text)}</div>` : ""}<div class="q" lang="de">${esc(item.question)}</div><div class="opts">${item.options.map((option, k) => `<button class="opt" type="button" lang="de" data-tr-choice="${i}" data-k="${k}">${esc(option)}</button>`).join("")}</div></div>`;
-    }).join("")}`).join("");
+      const passage = item.text && item.text !== previousText ? `<div class="reading" lang="de">${esc(item.text)}</div>` : '';
+      if (item.text) previousText = item.text;
+      return `<div class="task">${passage}<div class="q" lang="de">${esc(item.question)}</div><div class="opts">${item.options.map((option, k) => `<button class="opt" type="button" lang="de" data-tr-choice="${i}" data-k="${k}">${esc(option)}</button>`).join("")}</div></div>`;
+    }).join("")}`;
+    }).join("");
   }
   const statements = test.reading.statements
     .map(
@@ -77,8 +85,8 @@ function updateEstimate() {
 function speakingPart(test) {
   return test.speaking
     .map(
-      (s, i) => `<div class="task"><div class="q">${esc(s.task)}</div>
-      <div class="row">${speakerButton(s.modelAnswer)}<button class="btn small ghost" type="button" data-tsm="${i}">Show model</button></div>
+      (s, i) => `<div class="task"><div class="q">${esc(s.task)}</div>${s.card ? `<div class="speaking-card" lang="de" aria-label="Speaking card">${esc(s.card)}</div>` : ""}
+      <div class="row"><button class="btn small ghost" type="button" data-tsm="${i}">Show model</button></div>
       <div id="Sfb${i}"></div></div>`,
     )
     .join("");
@@ -87,12 +95,15 @@ function speakingPart(test) {
 export function render(lv) {
   level = lv;
   answers = {};
+  rehearsal = false;
+  plays = [];
+  pendingAudio.clear();
   const { test } = lv;
   return `
   ${breadcrumb(lv, "Mock test")}
   <div class="page-head"><h1>${lv.name} mock test</h1>${levelSwitch(lv, "/test", "Choose a mock test")}</div>
   <p class="muted">${test.form ? `Original A1 preparation assessment. Listening, reading and form completion are checked automatically (${test.total} items); short-message writing and speaking require feedback. Aim for ${test.passMark}/${test.total} in objective practice.` : `Four parts in the shape of a ${lv.name} exam. Original practice questions, not official exam material. Score ${test.passMark} of ${test.total} or more in listening and reading to earn your ${lv.name} practice certificate.`}</p>
-  ${test.form ? `<div class="panel test-rehearsal"><p class="small">For a rehearsal: listening about 20 minutes, reading 25 minutes, writing 20 minutes; speaking 15 minutes with a partner. Follow the listed audio play counts yourself. Use the official recordings for a realistic full rehearsal.</p><button type="button" class="btn small ghost" data-start-timer>Start a 65-minute written-practice timer</button><span id="test-timer" class="num" role="timer" aria-live="off"></span><p><a class="tlink" href="#/a1/roadmap">Course roadmap and official practice resources</a></p></div>` : ""}
+  ${test.form ? `<div class="panel test-rehearsal"><p class="small">For a rehearsal: listening about 20 minutes, reading 25 minutes, writing 20 minutes; speaking 15 minutes with a partner. Use an unfamiliar official paper for a separate full rehearsal.</p><label><input type="checkbox" data-rehearsal> Use exam playback limits and keep transcripts and models hidden until the objective questions are complete.</label><p class="muted small">Choose before playing audio. Reload the page to start a fresh attempt.</p><button type="button" class="btn small ghost" data-start-timer>Start a 65-minute written-practice timer</button><span id="test-timer" class="num" role="timer" aria-live="off"></span><p><a class="tlink" href="#/a1/roadmap">Course roadmap and official practice resources</a></p></div>` : ""}
   <section class="test-sec" aria-labelledby="t1"><h2 id="t1">1. Listening</h2>${listeningPart(test)}</section>
   <section class="test-sec" aria-labelledby="t2"><h2 id="t2">2. Reading</h2>${readingPart(test)}</section>
   <section class="test-sec" aria-labelledby="t3"><h2 id="t3">3. Writing</h2>${formPart(test)}${writingPart(test)}</section>
@@ -117,6 +128,12 @@ function showScoreWhenDone() {
     : `<a class="btn small" href="#/${level.id}">Back to the ${level.name} lessons</a>`;
   box.innerHTML = `<div class="score"><div><strong class="num">${score}/${test.total}</strong><p>${message}</p>${link}</div></div>`;
   updateEstimate();
+  if (rehearsal) {
+    document.querySelectorAll('[data-tsm], [data-tmodel]').forEach(button => { button.disabled = false; });
+    test.listening.forEach((item, i) => {
+      document.getElementById(`Lfb${i}`).innerHTML = `<div class="fb info">Transcript: <span lang="de">${esc(item.audioText)}</span></div>`;
+    });
+  }
   if (motionOK())
     gsap.from(box.firstChild, { y: 24, scale: 0.98, opacity: 0, duration: 0.7, ease: "expo.out" });
   scrollToCenter(box);
@@ -152,7 +169,8 @@ export function onClick(e, button) {
     const input = document.getElementById(`TF${i}`);
     if (!input.value.trim()) { input.focus(); return; }
     const field = test.form.fields[i];
-    const ok = field.answers.some(answer => norm(answer) === norm(input.value));
+    const normalise = field.match === 'exact' ? value => value.trim().toLowerCase() : norm;
+    const ok = field.answers.some(answer => normalise(answer) === normalise(input.value));
     answers[`F${i}`] = ok;
     logPractice();
     input.disabled = button.disabled = true;
@@ -180,8 +198,9 @@ export function onClick(e, button) {
       button.classList.add("wrong");
       shake(button);
     }
-    document.getElementById(`Lfb${i}`).innerHTML =
-      `<div class="fb info">Transcript: <span lang="de">${esc(item.audioText)}</span></div>`;
+    document.getElementById(`Lfb${i}`).innerHTML = rehearsal
+      ? '<div class="fb info">Answer recorded. Review the transcript after the objective questions.</div>'
+      : `<div class="fb info">Transcript: <span lang="de">${esc(item.audioText)}</span></div>`;
     showScoreWhenDone();
   } else if (d.tr !== undefined) {
     const i = +d.tr;
@@ -201,12 +220,46 @@ export function onClick(e, button) {
       `<div class="fb info" style="white-space:pre-line" lang="de">${esc(test.writing.modelAnswer)}</div>`;
   } else if (d.tsm !== undefined) {
     document.getElementById(`Sfb${d.tsm}`).innerHTML =
-      `<div class="fb info" lang="de">${esc(test.speaking[+d.tsm].modelAnswer)}</div>`;
+      `<div class="fb info"><p lang="de">${esc(test.speaking[+d.tsm].modelAnswer)}</p>${speakerButton(test.speaking[+d.tsm].modelAnswer)}</div>`;
   }
 }
 
 export function onChange(e) {
+  if (e.target.dataset.rehearsal !== undefined) {
+    rehearsal = e.target.checked;
+    if (rehearsal && Object.keys(answers).length < level.test.total) {
+      document.querySelectorAll('#twfb, [id^="Sfb"], [id^="Lfb"]').forEach(box => { box.innerHTML = ''; });
+    }
+    document.querySelectorAll('[data-tsm], [data-tmodel]').forEach(button => { button.disabled = rehearsal && Object.keys(answers).length < level.test.total; });
+    level.test.listening.forEach((item, i) => {
+      document.getElementById(`test-plays-${i}`).textContent = rehearsal ? `${item.plays} ${item.plays === 1 ? 'play' : 'plays'} remaining` : 'Play, then answer.';
+    });
+  }
   if (e.target.id.startsWith('review-')) updateEstimate();
+}
+
+export function onAudioPlay(button) {
+  if (button.dataset.testListen === undefined) return;
+  const i = +button.dataset.testListen;
+  if (pendingAudio.has(i) || (rehearsal && (plays[i] || 0) >= level.test.listening[i].plays)) return false;
+  pendingAudio.add(i);
+  button.disabled = true;
+  const toggle = document.querySelector('[data-rehearsal]');
+  if (toggle) toggle.disabled = true;
+}
+
+export function onAudioStarted(button, started) {
+  if (button.dataset.testListen === undefined) return;
+  const i = +button.dataset.testListen;
+  pendingAudio.delete(i);
+  if (started) plays[i] = (plays[i] || 0) + 1;
+  if (!started && !pendingAudio.size && !plays.some(Boolean)) {
+    const toggle = document.querySelector('[data-rehearsal]');
+    if (toggle) toggle.disabled = false;
+  }
+  const remaining = level.test.listening[i].plays - (plays[i] || 0);
+  button.disabled = rehearsal && remaining <= 0;
+  if (rehearsal) document.getElementById(`test-plays-${i}`).textContent = `${remaining} ${remaining === 1 ? 'play' : 'plays'} remaining`;
 }
 
 export function onKeydown(e) {

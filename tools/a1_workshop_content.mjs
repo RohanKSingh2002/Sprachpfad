@@ -1,4 +1,5 @@
 // Original module practice. These supported workshops precede unfamiliar exam rehearsals.
+import { formatMessage } from './a1_review_corrections.mjs';
 const q = ([question, options, answer, evidence]) => ({ question, options, answer, evidence });
 const pack = (id, audioText, listening, text, reading, task, modelAnswer, speakingTask, speakingModel, wordGoal = 30) => ({
   id, listening: { audioText, questions: listening.map(q) }, reading: { text, questions: reading.map(q) },
@@ -150,3 +151,80 @@ export const workshops = [
     'With a partner, do all speaking parts: introduction with spelling and a number; two information questions with answers; two different requests with suitable responses. Use new cards and avoid reading a full script.',
     'Ich heiße Alex Brown. B, R, O, W, N. Ich wohne in Bonn. Meine Hausnummer ist 14. Was isst du zum Frühstück? Brot. Wann lernst du Deutsch? Am Abend. Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte das Fenster öffnen? Natürlich.'),
 ];
+
+// Keep every model aligned with the complete task and give supported practice a vocabulary bridge.
+workshops[0].writing.modelAnswer = 'Hallo! Ich heiße Lina. Ich komme aus Italien. Jetzt wohne ich in Bonn. Ich lerne Deutsch und spreche auch Italienisch.';
+workshops[1].speaking.modelAnswer = workshops[1].speaking.modelAnswer.replace('Null eins sieben sechs …', 'Null eins sieben sechs, zwei null vier acht, drei eins fünf neun.') + ' Wo wohnen Sie? Ich wohne in Bonn.';
+workshops[3].speaking.modelAnswer = 'Meine Schwester heißt Mia. Sie ist 19 und wohnt in Bonn. Mein Bruder heißt Ben. Er ist 16 und wohnt in Berlin. Wo wohnen deine Eltern? In Köln. Was ist das? Das ist ein Heft. Ist das dein Heft? Ja. Und das? Das ist ein Stift. Ist das dein Stift? Nein, das ist Pauls Stift. Und das? Das ist ein Buch. Ist das dein Buch? Ja, das ist mein Buch.';
+workshops[5].listening.audioText = workshops[5].listening.audioText.replace('jeden Tag', 'von Montag bis Freitag');
+workshops[6].writing.modelAnswer = workshops[6].writing.modelAnswer.replace('Ist Tee im Frühstück dabei?', 'Ist beim Frühstück Tee dabei?');
+workshops[9].reading.text = workshops[9].reading.text.replace('Ein Balkon ist nicht vorhanden.', 'Die Wohnung hat keinen Balkon.');
+workshops[9].reading.questions[2].evidence = 'Die Wohnung hat keinen Balkon.';
+workshops[8].speaking.modelAnswer = 'Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte die Tür öffnen? Natürlich. Können Sie bitte das Fenster schließen? Ja, gern. Darf ich hier telefonieren? Leider nicht. Bitte telefonieren Sie draußen.';
+workshops[9].speaking.modelAnswer = 'Wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann links. Ist es weit? Nein, zehn Minuten. Meine Wohnung hat zwei Zimmer. Das Wohnzimmer ist groß. Die Küche ist klein. Der Tisch steht in der Küche. Der Schlüssel liegt auf dem Tisch.';
+workshops[10].speaking.modelAnswer += ' Können wir uns am Freitag um elf Uhr treffen? Ja, das geht.';
+workshops[11].listening.audioText = 'Guten Tag, hier ist das Hotel Linden in Bonn. Ihr Zug kommt heute um vierzehn Uhr zehn an Gleis vier an. Sie müssen nicht umsteigen. In Bonn ist es kalt und es regnet. Bitte nehmen Sie eine Jacke mit.';
+workshops[11].listening.questions[0].evidence = '… an Gleis vier an.';
+workshops[11].writing.modelAnswer = workshops[11].writing.modelAnswer.replace('Grüße, Lea', 'Mit freundlichen Grüßen, Lea');
+workshops[15].writing.modelAnswer = workshops[15].writing.modelAnswer.replace('leider kann', 'es tut mir leid, ich kann');
+workshops[14].speaking.modelAnswer += ' Thema Reisen: Wohin fährst du morgen? Nach Bonn. Thema Essen: Was isst du zum Frühstück? Brot und Käse. Thema Familie: Wo wohnt deine Schwester? In Berlin.';
+workshops[15].speaking.modelAnswer = 'Ich heiße Alex Brown und bin 27 Jahre alt. Ich komme aus Kanada und wohne in Bonn. Ich spreche Englisch und Deutsch. Ich bin Student. Ich spiele gern Fußball. Brown: B, R, O, W, N. Meine Hausnummer ist 14. Was isst du zum Frühstück? Brot. Wann lernst du Deutsch? Am Abend. Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte das Fenster öffnen? Natürlich.';
+workshops[2].reading.questions[0].options = ['Writing and listening','Reading and speaking','Reading and writing'];
+workshops[2].reading.questions[2].options = ['Yes, new learners are welcome','No, the group is full','Only with a teacher'];
+workshops[8].listening.questions[2].options = ['The course office','Other students only','The teacher'];
+workshops[10].listening.questions[1].options = ['Their identity document','Their appointment letter','Their card'];
+workshops[10].reading.questions[2].options = ['Frau Klein','The doctor','Amir’s colleague'];
+
+const germanQuestions = {
+  13: [
+    ['Warum hatte die Person gestern keine Zeit?',['Sie musste arbeiten.','Sie war krank.','Sie war auf einer Reise.']],
+    ['Wann beginnt der Film?',['Um 19.30 Uhr','Um 20 Uhr','Um 20.30 Uhr']],
+    ['Wann möchten sie sich treffen?',['Um 19.30 Uhr','Um 20 Uhr','Um 20.30 Uhr']],
+    ['Warum konnte Sara nicht kommen?',['Sie hatte keine Fahrkarte.','Sie hatte keine Zeit.','Das Schwimmbad war geschlossen.']],
+    ['Wo war Sara?',['Bei der Arbeit','Im Kino','Bei ihren Eltern']],
+    ['Was schlägt Sara vor?',['Am Sonntag schwimmen gehen','Heute ins Kino gehen','Am Sonntag arbeiten']],
+  ],
+  14: [
+    ['Wohin ist die Person gefahren?',['Nach Berlin','Nach Bonn','Nach Hamburg']],
+    ['Was haben sie zusammen gemacht?',['Gekocht','Fahrkarten gekauft','Einen Film gesehen']],
+    ['Wer ist in Bonn geblieben?',['Die Person, die erzählt','Beide','Die Schwester']],
+    ['Wann sind sie in Hamburg angekommen?',['Am Freitag','Am Samstag','Gestern']],
+    ['Was haben sie schon gekauft?',['Essen','Fahrkarten','Ein Auto']],
+    ['Wann fahren sie nach Hause?',['Gestern','Heute','Morgen']],
+  ],
+  15: [
+    ['Wann beginnt der Kurs morgen?',['Um neun Uhr','Um halb zehn','Um halb elf']],
+    ['In welchem Raum ist der Kurs jetzt?',['In Raum elf','In Raum zehn','In Raum zwölf']],
+    ['Was sollen die Teilnehmer mitbringen?',['Ihr Buch','Ihr Heft','Einen Stift']],
+    ['Welcher Kurs passt?',['Kurs A','Kurs B','Beide Kurse']],
+    ['Wann beginnt Kurs A?',['Am 6. Mai','Am 7. Mai','Am 8. Mai']],
+    ['Kann man sich am Sonntag im Büro anmelden?',['Ja','Nur im Mai','Nein']],
+  ],
+  16: [
+    ['Wann treffen sie sich?',['Am Samstag um elf Uhr','Am Samstag um zwölf Uhr','Heute Abend']],
+    ['Wo treffen sie sich?',['Im Café am Markt','Im Café am Bahnhof','In der Buchhandlung']],
+    ['Was soll Nora mitbringen?',['Die Fahrkarte','Die Jacke','Das Buch']],
+    ['Wie ist der Familienname?',['Alex','Brown','Kanada']],
+    ['Was gehört in das Feld Wohnort?',['Toronto','Bonn','Kanada']],
+    ['Wann möchte Alex einen Kurs besuchen?',['Am Morgen','Am Nachmittag','Am Abend']],
+  ],
+};
+const glosses = {
+  1:[['deutlich','clearly']], 2:[['geboren','born']], 3:[['Teilnehmer','participants'],['willkommen','welcome']],
+  4:[['bei uns','with us']], 5:[['abgeben','return; hand in']], 6:[['vorbeikommen','come over']],
+  7:[['enthält','includes']], 8:[['Rabatt','discount']], 9:[['ausleihen','borrow']],
+  10:[['Stock','floor of a building']], 11:[['informieren','inform']],
+  12:[['Anreise','arrival / check-in'],['Abreise','departure / check-out']],
+  13:[['Einladung','invitation']], 14:[['angekommen','arrived']],
+  15:[['Anmeldung','registration']], 16:[['eintragen','enter information in a field']],
+};
+for (const workshop of workshops) {
+  workshop.writing.modelAnswer = formatMessage(workshop.writing.modelAnswer);
+  workshop.glossary = glosses[workshop.id].map(([de,en])=>({de,en}));
+  if (germanQuestions[workshop.id]) {
+    workshop.questionLanguage = 'de';
+    [...workshop.listening.questions,...workshop.reading.questions].forEach((question,i) => {
+      [question.question,question.options] = germanQuestions[workshop.id][i];
+    });
+  }
+}

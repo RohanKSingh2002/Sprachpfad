@@ -148,3 +148,13 @@
   transform: translateX(-160%) skewX(-14deg);
   mix-blend-mode: soft-light;
 }
+.speaking-card {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 20px 32px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--surface);
+}

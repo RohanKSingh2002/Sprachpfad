@@ -34,7 +34,7 @@ The learner should be able to handle simple everyday situations, understand prac
 
 The course contains 32 sequenced lessons in 16 modules, with vocabulary, pronunciation, listening, reading, writing, interaction and a checkpoint in every module. Existing lesson identifiers remain stable so that older links and saved lesson results continue to refer to the same material. The visible course sequence starts with sound and spelling foundations and then develops communication progressively.
 
-The current course assets contain original lessons, 16 workshops and one original preparation assessment. External German-language educational review, natural recordings for newly added content, and assessment with real learners remain release-quality work. The curriculum describes those requirements explicitly rather than claiming they have already happened.
+The course contains original lessons, 16 supported workshops and one preparation assessment. The October 2026 tutor review led to revised grammar, clearer exercise prompts, accepted word-order alternatives, separate goals and speaking models for every lesson, and fuller vocabulary support. Locally generated German recordings cover the spoken course lines; the mock dialogues use two distinct voices. These are synthetic recordings. Independent listening review and assessment with real learners remain further quality work.
 
 ## Official exam reference
 
@@ -49,6 +49,8 @@ The official model paper shows a listening sequence of 6 dialogue items, 4 annou
 ## Study schedule and workload
 
 Plan 128 hours of module work and 16 hours of cumulative review: 144 hours overall. These are self-study planning estimates, not mandatory Goethe course hours or a promise that every learner will be ready at that point.
+
+The estimate includes repeated retrieval, partner conversation, reviewed writing, independent practice and different official papers. It is not a measurement of unique content or audio contained in the app.
 
 | Pace | Suggested duration | Weekly study | Suitable conditions |
 | --- | --- | --- | --- |
@@ -80,7 +82,7 @@ Teach structures through the communication they enable. The official learning-ob
 | Articles and possession | Modules 4, 7, 8 | Use definite, indefinite, possessive, negative and common demonstrative forms |
 | Sentence structure | Modules 3, 5, 6, 9, 14 | Maintain verb-second order, question order and simple sentence brackets |
 | Negation | Modules 8, 9 | Use nicht and kein in familiar contexts and understand negative permissions |
-| Accusative | Modules 4, 7–9 | Produce common noun and pronoun objects: einen, meinen, mich, dich, ihn, sie, es |
+| Accusative | Modules 7–9 | Produce common noun and pronoun objects: einen, meinen, mich, dich, ihn, sie, es |
 | Useful dative | Modules 9–12 | Understand common article forms and use familiar helping, thanking, travel and location phrases |
 | Pronouns | Modules 3, 4, 9 | Use subject and common object pronouns; recognise mir, dir and Ihnen in fixed everyday constructions |
 | Time | Modules 2, 5, 6 | Understand clock times, dates, days, months, seasons, durations and opening hours |
@@ -97,6 +99,8 @@ Teach structures through the communication they enable. The official learning-ob
 Build vocabulary by communicative domain: people and personal data; family; classroom; numbers and time; daily actions; food and meals; shopping and clothing; home; town and services; work; health; travel; weather; leisure; messages and exam instructions. Every original A1 topic is connected to a module, and an additional set covers essential instructions and form labels.
 
 For each entry, store the meaning needed in this course, a usable example and the grammatical information needed to use it. A noun needs its article and plural; a frequent irregular verb needs its changed present forms and, when introduced, auxiliary plus participle. Prepositions should be learned in usable phrases. A collection of words without these relationships is insufficient for a sentence generator.
+
+Flashcard backs display available du and er/sie/es verb forms, plus a past reference form for ordinary verbs. Modal and polite möchten cards concentrate on their present forms. Learn the past forms when the course reaches them. The new-word queue prioritises the active module, then missing vocabulary from earlier modules. The vocabulary bank is still not a verified audit of all meanings in the official list.
 
 Use four recall directions: hear German and understand; read German and understand; see a meaning or situation and say German; use German in a short sentence. A flashcard marked known once is an early encounter, not demonstrated mastery. Revisit missed items sooner and successful items at longer intervals.
 
@@ -126,7 +130,7 @@ Progress from supported short texts to unfamiliar practical tasks. Use names, nu
 
 An independent attempt comes before transcript access or translation. After checking, locate the evidence and explain why the other choices are wrong. Listen again with the transcript, then once without it. For reading, replace one practical detail and ask the learner to detect what changed.
 
-Use different voices and natural recordings before final rehearsals. The newly authored app content can use a browser German voice when a recording is unavailable; that is a training aid. Use official audio for exam-condition rehearsals and add reviewed recordings before presenting the app audio as a realistic exam simulation.
+Use different voices and official recordings before final rehearsals. The app includes generated German recordings and two voices in the six mock dialogues. Browser speech remains a fallback if a recording cannot play. The optional rehearsal setting applies the 2/1/2 listening playback limits and hides transcripts and models until the objective section is complete. Generated speech is a training aid; use official recordings and unfamiliar papers for further exam rehearsals.
 
 ## Writing programme and feedback
 
@@ -157,6 +161,8 @@ The curriculum supplies learning objectives, grammatical contexts, vocabulary do
 A daily set should remain stable during the day, save the attempt, avoid recent exact duplicates and include deliberate review of previous mistakes. Different exercise types assess different things: matching checks recognition, fill-in checks a constrained form, short translation checks controlled production, and a partner exchange checks interaction. Daily practice should not replace natural listening, open writing or spoken conversation.
 
 The current practice page still samples stored tasks and example sentences. This curriculum expansion does not claim to implement an unlimited daily generator. A finite template collection can offer broad variation, but its combination space is finite.
+
+Lesson multiple-choice options are shuffled without changing their answer keys. Word-order tasks accept authored natural alternatives. Free translation practice compares the learner’s text with one model and does not assign an automatic correctness score to unrestricted German.
 
 ## Maintenance and release review
 

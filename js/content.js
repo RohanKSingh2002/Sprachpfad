@@ -16,7 +16,7 @@ export const SETS = new Map();
 /** Every distinct German word, lowest level first. */
 export const ALL_WORDS = [];
 /**
- * Each German word's entry ({ de, en, pl?, ex? }) and `from`, the lesson or topic that introduces it:
+ * Each German word's entry ({ de, en, pl?, ex?, forms? }) and `from`, the lesson or topic that introduces it:
  * the lowest level that teaches the word, and within a level its lessons before its topics.
  */
 export const WORDS = new Map();
@@ -74,7 +74,7 @@ export async function loadContent() {
         if (!entry) WORDS.set(w.de, { ...w, from: set });
         // a lesson word that a topic of the same or a higher level also teaches: keep the lesson as its
         // home, but take the topic's plural and example sentence
-        else if (!entry.ex && w.ex) WORDS.set(w.de, { ...w, ...entry, ex: w.ex, pl: entry.pl ?? w.pl });
+        else if (!entry.ex && w.ex) WORDS.set(w.de, { ...w, ...entry, ex: w.ex, pl: entry.pl ?? w.pl, forms: entry.forms ?? w.forms });
       });
     }),
   );

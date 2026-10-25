@@ -28,11 +28,11 @@ function taskBody(task, i) {
       const lang = task.englishOptions ? "" : ' lang="de"';
       const player =
         task.type === "listen"
-          ? `<div class="row" style="margin:0 0 12px">${speakerButton(task.audioText)}<span class="muted small">Tap to play. You can replay it.</span></div>`
+          ? `<div class="row" style="margin:0 0 12px">${speakerButton(task.audioText, 'Play listening exercise')}<span class="muted small">Tap to play. You can replay it.</span></div>`
           : "";
-      const options = task.options
+      const options = shuffle(task.options.map((o, k) => ({ o, k })))
         .map(
-          (o, k) =>
+          ({ o, k }) =>
             `<button class="opt" type="button"${lang} data-mc="${i}" data-k="${k}">${esc(o)}</button>`,
         )
         .join("");
@@ -41,8 +41,9 @@ function taskBody(task, i) {
     case "fill":
       return `<div class="row" style="margin:0"><input class="fill" id="f${i}" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Your answer"><button class="btn small" type="button" data-fill="${i}">Check</button></div>`;
     case "order": {
-      const chips = shuffle(task.words)
-        .map((w) => `<button class="chip" type="button" lang="de" data-chip="${i}">${esc(w)}</button>`)
+      const words = task.words.map(word => word === task.neutralStart ? word[0].toLowerCase() + word.slice(1) : word);
+      const chips = shuffle(words)
+        .map((w) => `<button class="chip" type="button" lang="de" data-chip="${i}" data-word="${esc(w)}">${esc(w)}</button>`)
         .join("");
       return `<div class="built" id="b${i}" aria-label="Your sentence"></div><div class="opts" id="p${i}">${chips}</div>
         <div class="row"><button class="btn small" type="button" data-order="${i}">Check</button><button class="btn small ghost" type="button" data-clear="${i}">Clear</button></div>`;
@@ -211,12 +212,21 @@ function showScoreWhenDone() {
 /** Move word chips between the pool and the sentence, gliding them into place when motion is on. */
 function moveChips(i, chips, target) {
   const all = document.querySelectorAll(`#t${i} .chip`);
+  const labels = () => {
+    const built = document.getElementById(`b${i}`);
+    all.forEach(chip => {
+      const word = chip.dataset.word;
+      chip.textContent = chip === built.firstElementChild ? word[0].toUpperCase() + word.slice(1) : word;
+    });
+  };
   if (motionOK() && Flip) {
     const state = Flip.getState(all);
     chips.forEach((c) => target.appendChild(c));
+    labels();
     Flip.from(state, { duration: 0.32, ease: "power2.out" });
   } else {
     chips.forEach((c) => target.appendChild(c));
+    labels();
   }
 }
 
@@ -285,7 +295,7 @@ export function onClick(e, button) {
   } else if (d.write !== undefined) {
     const task = lesson.tasks[+d.write];
     document.getElementById(`fb${d.write}`).innerHTML =
-      `<div class="fb info"><b>Model:</b> <span lang="de">${esc(task.modelAnswer)}</span> ${speakerButton(task.modelAnswer)}</div>`;
+      `<div class="fb info"><b>Model:</b> <span lang="de" style="white-space:pre-line">${esc(task.modelAnswer)}</span> ${speakerButton(task.modelAnswer)}</div>`;
   }
 }
 

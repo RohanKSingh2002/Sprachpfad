@@ -29,6 +29,6 @@
   },
   {
     "question": "Where is my progress saved?",
-    "answer": "In this browser on this device. Clearing browser data or using Reset progress starts you over."
+    "answer": "Without signing in, progress stays in this browser. With a Google account, progress syncs across devices; your profile shows its save status. When you first sign in to an empty account, you can add the progress already saved on this device."
   }
 ]

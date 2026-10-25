@@ -64,16 +64,17 @@ function exerciseHTML() {
   const label = mode === "fill" ? "Fill in the missing word" : "Translate this sentence into German";
   const prompt = mode === "fill" ? current.question.replace(/_{2,}/g, "________") : current.question;
   const answer = mode === "fill" ? current.answers[0] : current.answer;
-  const hint = mode === "fill" ? current.hint : "Check the verb position and German capitalisation.";
+  const hint = mode === "fill" ? current.hint : "Compare meaning, verb position, noun capitals and du/Sie. Other correct translations and word orders are possible.";
   return `<div class="practice-card">
     <p class="practice-kicker">${label} <span>${queue.length + 1} in this round</span></p>
     <p class="practice-prompt"${mode === "fill" ? ' lang="de"' : ""}>${esc(prompt)}</p>
+    ${mode === 'translate' ? '<p class="muted small">Write your version, then compare it with one possible model. This practice is not graded.</p>' : ''}
     <div class="practice-answer">
       <label class="sr" for="practice-input">Your answer in German</label>
       <input id="practice-input" class="fill" autocomplete="off" autocapitalize="off" spellcheck="false"${solved ? " disabled" : ""}>
-      <button class="btn small" type="button" data-check${solved ? " disabled" : ""}>Check</button>
+      <button class="btn small" type="button" data-check${solved ? " disabled" : ""}>${mode === "translate" ? "Compare with a model" : "Check"}</button>
     </div>
-    <div class="fb-slot" aria-live="polite">${solved ? `<div class="fb ${current.wasRight ? "ok" : "no"}">${current.wasRight ? "Richtig." : `Answer: <b lang="de">${esc(answer)}</b>.`} ${esc(hint || "")}</div>` : ""}</div>
+    <div class="fb-slot" aria-live="polite">${solved ? mode === "translate" ? `<div class="fb info"><p>Your version: <span lang="de">${esc(current.response)}</span></p><p>One model: <b lang="de">${esc(answer)}</b></p>${esc(hint)} This translation is not automatically graded.</div>` : `<div class="fb ${current.wasRight ? "ok" : "no"}">${current.wasRight ? "Richtig." : `Answer: <b lang="de">${esc(answer)}</b>.`} ${esc(hint || "")}</div>` : ""}</div>
     ${solved ? '<button class="btn small ghost practice-next" type="button" data-next>Next question</button>' : ""}
   </div>`;
 }
@@ -94,9 +95,9 @@ function matchHTML() {
 function paintExercise() {
   const stage = document.getElementById("practice-stage");
   if (!stage) return;
-  stage.innerHTML = current ? exerciseHTML() : `<div class="practice-card"><p>That’s the end of this round. You answered ${score} ${score === 1 ? "question" : "questions"} correctly.</p><button class="btn small" type="button" data-next>Start another round</button></div>`;
+  stage.innerHTML = current ? exerciseHTML() : `<div class="practice-card"><p>That’s the end of this round. ${mode === 'translate' ? `You compared ${score} sentences with a model. These responses are not graded.` : `You answered ${score} ${score === 1 ? 'question' : 'questions'} correctly.`}</p><button class="btn small" type="button" data-next>Start another round</button></div>`;
   const tally = document.getElementById("practice-score");
-  if (tally) tally.textContent = `${score} correct`;
+  if (tally) tally.textContent = mode === "translate" ? `${score} sentences compared · not graded` : `${score} correct`;
   document.querySelectorAll(".practice-mode").forEach((tab) => {
     const active = tab.dataset.mode === mode;
     tab.classList.toggle("is-active", active);
@@ -136,7 +137,15 @@ function checkTextAnswer(input) {
     input.focus();
     return;
   }
-  const accepted = mode === "fill" ? current.answers : [current.answer];
+  if (mode === "translate") {
+    current.response = value;
+    solved = true;
+    score++;
+    logPractice();
+    paintExercise();
+    return;
+  }
+  const accepted = current.answers;
   const ok = accepted.some((item) => norm(item) === norm(value));
   current.wasRight = ok;
   solved = true;

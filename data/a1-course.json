@@ -4,87 +4,187 @@
   "title": "From your first German words to A1 exam preparation",
   "targetExam": "Goethe-Zertifikat A1: Start Deutsch 1 (adults)",
   "test": {
-    "version": 2,
+    "version": 3,
     "passMark": 28,
     "objectiveLabel": "listening, reading and form completion",
-    "reviewTip": "Use modules 15 and 16 to review the missed task types, then use an unfamiliar official practice set. Obtain feedback on writing and speaking.",
+    "reviewTip": "Review the missed task types in modules 15 and 16. Then attempt a different unfamiliar official paper and obtain feedback on writing and speaking.",
     "listening": [
       {
         "part": 1,
-        "audioText": "Guten Tag, was möchten Sie? Ich hätte gern einen Kaffee. Möchten Sie auch Kuchen? Nein, danke. Nur einen Kaffee mit Milch, bitte.",
+        "audioText": "Guten Tag, möchten Sie einen Kaffee oder einen Tee? Einen Tee, bitte. Haben Sie auch Kuchen? Ja, heute haben wir Apfelkuchen. Gut, dann nehme ich einen Tee und ein Stück Apfelkuchen.",
         "question": "Was bestellt der Gast?",
         "options": [
-          "Kaffee mit Milch",
+          "Tee und Kuchen",
           "Kaffee und Kuchen",
-          "Tee mit Milch"
+          "Nur Tee"
         ],
         "answer": 0,
-        "plays": 2
+        "plays": 2,
+        "segments": [
+          {
+            "text": "Guten Tag, möchten Sie einen Kaffee oder einen Tee?",
+            "voice": 0
+          },
+          {
+            "text": "Einen Tee, bitte. Haben Sie auch Kuchen?",
+            "voice": 1
+          },
+          {
+            "text": "Ja, heute haben wir Apfelkuchen.",
+            "voice": 0
+          },
+          {
+            "text": "Gut, dann nehme ich einen Tee und ein Stück Apfelkuchen.",
+            "voice": 1
+          }
+        ]
       },
       {
         "part": 1,
-        "audioText": "Wann beginnt der Film? Um acht Uhr. Gut, treffen wir uns um halb acht vor dem Kino? Ja, das machen wir.",
+        "audioText": "Unser Zug fährt um achtzehn Uhr. Treffen wir uns um halb sechs? Das ist mir zu früh. Ich kann erst um Viertel vor sechs am Bahnhof sein. Gut, dann treffen wir uns um Viertel vor sechs am Eingang.",
         "question": "Wann treffen sie sich?",
         "options": [
-          "Um 19 Uhr",
-          "Um 19.30 Uhr",
-          "Um 20 Uhr"
+          "Um 17.30 Uhr",
+          "Um 17.45 Uhr",
+          "Um 18 Uhr"
         ],
         "answer": 1,
-        "plays": 2
+        "plays": 2,
+        "segments": [
+          {
+            "text": "Unser Zug fährt um achtzehn Uhr. Treffen wir uns um halb sechs?",
+            "voice": 0
+          },
+          {
+            "text": "Das ist mir zu früh. Ich kann erst um Viertel vor sechs am Bahnhof sein.",
+            "voice": 1
+          },
+          {
+            "text": "Gut, dann treffen wir uns um Viertel vor sechs am Eingang.",
+            "voice": 0
+          }
+        ]
       },
       {
         "part": 1,
-        "audioText": "Was kostet die Jacke? Sie kostet vierzig Euro. Und das Hemd? Das Hemd kostet dreißig Euro. Dann nehme ich nur das Hemd.",
-        "question": "Was kauft der Kunde?",
+        "audioText": "Diese Tasche kostet dreißig Euro. Möchten Sie sie kaufen? Gibt es eine billigere Tasche? Die blaue kostet zwanzig Euro. Die kleine rote kostet fünfzehn Euro. Die rote ist zu klein. Ich nehme die blaue.",
+        "question": "Wie viel bezahlt die Kundin?",
         "options": [
-          "Eine Jacke",
-          "Ein Hemd",
-          "Eine Jacke und ein Hemd"
+          "15 Euro",
+          "30 Euro",
+          "20 Euro"
         ],
-        "answer": 1,
-        "plays": 2
+        "answer": 2,
+        "plays": 2,
+        "segments": [
+          {
+            "text": "Diese Tasche kostet dreißig Euro. Möchten Sie sie kaufen?",
+            "voice": 0
+          },
+          {
+            "text": "Gibt es eine billigere Tasche?",
+            "voice": 1
+          },
+          {
+            "text": "Die blaue kostet zwanzig Euro. Die kleine rote kostet fünfzehn Euro.",
+            "voice": 0
+          },
+          {
+            "text": "Die rote ist zu klein. Ich nehme die blaue.",
+            "voice": 1
+          }
+        ]
       },
       {
         "part": 1,
-        "audioText": "Entschuldigung, wo ist die Post? Die Post ist neben dem Bahnhof. Muss ich hier links gehen? Nein, gehen Sie geradeaus und dann rechts.",
+        "audioText": "Wo ist die Post? Ist sie neben der Bank? Nein, neben der Bank ist die Apotheke. Die Post ist gegenüber dem Hotel. Und wo ist der Bahnhof? Der ist hinter dem Hotel.",
         "question": "Wo ist die Post?",
         "options": [
-          "Neben dem Bahnhof",
-          "Links im Supermarkt",
-          "Im Kino"
+          "Gegenüber dem Hotel",
+          "Neben der Bank",
+          "Hinter dem Hotel"
         ],
         "answer": 0,
-        "plays": 2
+        "plays": 2,
+        "segments": [
+          {
+            "text": "Wo ist die Post? Ist sie neben der Bank?",
+            "voice": 0
+          },
+          {
+            "text": "Nein, neben der Bank ist die Apotheke. Die Post ist gegenüber dem Hotel.",
+            "voice": 1
+          },
+          {
+            "text": "Und wo ist der Bahnhof?",
+            "voice": 0
+          },
+          {
+            "text": "Der ist hinter dem Hotel.",
+            "voice": 1
+          }
+        ]
       },
       {
         "part": 1,
-        "audioText": "Können Sie morgen arbeiten? Morgen habe ich einen Termin beim Arzt. Am Freitag kann ich kommen. Gut, dann kommen Sie am Freitag.",
-        "question": "Wann kann die Person arbeiten?",
+        "audioText": "Kannst du am Montag im Café arbeiten? Am Montag habe ich einen Deutschkurs. Aber am Dienstag habe ich Zeit. Gut, dann komm bitte am Dienstag. Mittwoch arbeite ich allein.",
+        "question": "Wann soll die Person arbeiten?",
         "options": [
-          "Heute",
-          "Morgen",
-          "Am Freitag"
+          "Am Montag",
+          "Am Dienstag",
+          "Am Mittwoch"
         ],
-        "answer": 2,
-        "plays": 2
+        "answer": 1,
+        "plays": 2,
+        "segments": [
+          {
+            "text": "Kannst du am Montag im Café arbeiten?",
+            "voice": 0
+          },
+          {
+            "text": "Am Montag habe ich einen Deutschkurs. Aber am Dienstag habe ich Zeit.",
+            "voice": 1
+          },
+          {
+            "text": "Gut, dann komm bitte am Dienstag. Mittwoch arbeite ich allein.",
+            "voice": 0
+          }
+        ]
       },
       {
         "part": 1,
-        "audioText": "Wie viele Personen kommen zum Essen? Wir sind drei Erwachsene und zwei Kinder. Gut, ich reserviere einen Tisch für fünf Personen.",
-        "question": "Für wie viele Personen wird reserviert?",
+        "audioText": "Ein Tisch für fünf Personen am Samstag, bitte. Um sieben Uhr haben wir noch einen Tisch. Meine beiden Kinder kommen doch nicht mit. Wir sind nur drei Erwachsene. Gut, dann reserviere ich für drei Personen.",
+        "question": "Für wie viele Personen wird der Tisch reserviert?",
         "options": [
-          "Drei",
-          "Vier",
-          "Fünf"
+          "Fünf",
+          "Zwei",
+          "Drei"
         ],
         "answer": 2,
-        "plays": 2
+        "plays": 2,
+        "segments": [
+          {
+            "text": "Ein Tisch für fünf Personen am Samstag, bitte.",
+            "voice": 0
+          },
+          {
+            "text": "Um sieben Uhr haben wir noch einen Tisch.",
+            "voice": 1
+          },
+          {
+            "text": "Meine beiden Kinder kommen doch nicht mit. Wir sind nur drei Erwachsene.",
+            "voice": 0
+          },
+          {
+            "text": "Gut, dann reserviere ich für drei Personen.",
+            "voice": 1
+          }
+        ]
       },
       {
         "part": 2,
-        "audioText": "Liebe Kunden, unser Geschäft schließt heute schon um achtzehn Uhr. Morgen sind wir wieder ab neun Uhr für Sie da.",
-        "question": "Das Geschäft schließt heute um 18 Uhr.",
+        "audioText": "Liebe Kunden, unser Café im ersten Stock schließt um sechzehn Uhr. Das Geschäft bleibt heute bis achtzehn Uhr geöffnet. Morgen öffnen wir wieder um neun Uhr.",
+        "question": "Man kann heute nach 16 Uhr noch im Geschäft einkaufen.",
         "options": [
           "Richtig",
           "Falsch"
@@ -94,8 +194,8 @@
       },
       {
         "part": 2,
-        "audioText": "Achtung: Der Zug nach Kassel fährt heute von Gleis sechs. Bitte gehen Sie nicht zu Gleis drei.",
-        "question": "Der Zug fährt von Gleis drei.",
+        "audioText": "Achtung auf Gleis drei. Der Zug nach Kassel fährt heute von Gleis sechs. Auf Gleis drei steht der Zug nach Bremen. Bitte prüfen Sie Ihr Reiseziel.",
+        "question": "Der Zug nach Kassel steht auf Gleis drei.",
         "options": [
           "Richtig",
           "Falsch"
@@ -105,8 +205,8 @@
       },
       {
         "part": 2,
-        "audioText": "Herzlich willkommen. Bitte lassen Sie Ihre Taschen am Eingang. In der Ausstellung dürfen Sie keine Fotos machen.",
-        "question": "In der Ausstellung sind Fotos erlaubt.",
+        "audioText": "Willkommen im Museum. Im Garten dürfen Sie fotografieren. In den Ausstellungsräumen sind Fotos leider nicht erlaubt. Bitte lassen Sie große Taschen am Eingang.",
+        "question": "Besucher dürfen in den Ausstellungsräumen Fotos machen.",
         "options": [
           "Richtig",
           "Falsch"
@@ -116,8 +216,8 @@
       },
       {
         "part": 2,
-        "audioText": "Der Bus zum Flughafen hat zehn Minuten Verspätung. Bitte warten Sie an der Haltestelle vor dem Bahnhof.",
-        "question": "Die Fahrgäste sollen vor dem Bahnhof warten.",
+        "audioText": "Der Bus zum Flughafen hat zehn Minuten Verspätung. Er hält heute nicht vor dem Bahnhof, sondern an der Haltestelle am Markt. Bitte gehen Sie zum Markt.",
+        "question": "Die Fahrgäste müssen an einer anderen Haltestelle warten.",
         "options": [
           "Richtig",
           "Falsch"
@@ -127,62 +227,62 @@
       },
       {
         "part": 3,
-        "audioText": "Hallo Mia, hier ist Ben. Ich kann heute nicht zum Sport kommen. Ich muss bis sieben Uhr arbeiten. Können wir uns morgen treffen? Ruf mich bitte zurück.",
-        "question": "Warum kann Ben heute nicht kommen?",
+        "audioText": "Hallo Mia, hier ist Ben. Ich bin wieder gesund. Aber ich kann heute nicht zum Sport kommen, denn ich muss bis sieben Uhr arbeiten. Morgen habe ich frei. Ruf mich bitte zurück.",
+        "question": "Warum kommt Ben heute nicht zum Sport?",
         "options": [
           "Er ist krank.",
           "Er muss arbeiten.",
-          "Er fährt in den Urlaub."
+          "Er hat morgen keine Zeit."
         ],
         "answer": 1,
         "plays": 2
       },
       {
         "part": 3,
-        "audioText": "Guten Tag, Frau Wolf. Ihr Termin ist am Donnerstag um zehn Uhr. Bitte bringen Sie Ihren Ausweis mit. Vielen Dank.",
-        "question": "Was soll Frau Wolf mitbringen?",
+        "audioText": "Guten Tag, Frau Wolf. Hier ist die Fahrschule. Wir haben Ihren Ausweis schon gesehen. Bringen Sie morgen bitte ein Foto mit. Die Kursgebühr können Sie am Freitag bezahlen.",
+        "question": "Was muss Frau Wolf morgen mitbringen?",
         "options": [
+          "Ein Foto",
           "Einen Ausweis",
-          "Eine Fahrkarte",
-          "Einen Computer"
+          "Die Kursgebühr"
         ],
         "answer": 0,
         "plays": 2
       },
       {
         "part": 3,
-        "audioText": "Hallo Sara. Ich habe Brot und Milch gekauft. Kannst du bitte noch Obst kaufen? Wir brauchen keine Eier. Bis später.",
+        "audioText": "Hallo Sara, ich habe Brot und Milch gekauft. Eier sind noch im Kühlschrank. Kannst du auf dem Heimweg bitte Äpfel kaufen? Wir haben kein Obst mehr. Danke.",
         "question": "Was soll Sara kaufen?",
         "options": [
           "Eier",
           "Milch",
-          "Obst"
+          "Äpfel"
         ],
         "answer": 2,
         "plays": 2
       },
       {
         "part": 3,
-        "audioText": "Guten Tag. Das Zimmer ist vom dritten bis zum fünften Juni frei. Es kostet sechzig Euro pro Nacht. Frühstück kostet extra acht Euro.",
-        "question": "Was kostet das Zimmer pro Nacht ohne Frühstück?",
+        "audioText": "Guten Tag, hier ist das Hotel am Park. Das Zimmer kostet sechzig Euro pro Nacht. Das Frühstück kostet acht Euro extra. Die Garage kostet zehn Euro, aber Sie kommen ja mit dem Zug. Bitte bestätigen Sie Ihre Buchung.",
+        "question": "Was kostet eine Nacht mit Frühstück, ohne Garage?",
         "options": [
-          "8 Euro",
           "60 Euro",
-          "68 Euro"
+          "68 Euro",
+          "78 Euro"
         ],
         "answer": 1,
         "plays": 2
       },
       {
         "part": 3,
-        "audioText": "Hallo Paul, hier ist Nora. Die Party ist nicht bei mir zu Hause. Wir feiern im Garten bei meiner Schwester. Komm bitte um sechs Uhr.",
-        "question": "Wo ist die Party?",
+        "audioText": "Hallo Paul, wir feiern heute doch nicht im Garten bei meiner Schwester. Es regnet. Wir treffen uns im Restaurant neben ihrem Haus. Komm bitte um sechs Uhr. Meine Wohnung ist zu klein.",
+        "question": "Wo findet die Feier statt?",
         "options": [
-          "Bei Nora zu Hause",
-          "Im Garten bei Noras Schwester",
+          "In Noras Wohnung",
+          "Im Garten",
           "Im Restaurant"
         ],
-        "answer": 1,
+        "answer": 2,
         "plays": 2
       }
     ],
@@ -190,235 +290,235 @@
       "groups": [
         {
           "title": "Part 1 · Short messages",
-          "text": "Hallo Lina, ich bin jetzt in Bremen. Meine Wohnung ist klein, aber sie hat einen Balkon. Ich arbeite montags bis freitags im Café. Am Wochenende habe ich frei. Kommst du am Samstag zu Besuch? Viele Grüße, Nora",
           "items": [
             {
-              "question": "Nora wohnt jetzt in Bremen.",
-              "options": [
-                "Richtig",
-                "Falsch"
-              ],
-              "answer": 0,
-              "text": ""
-            },
-            {
-              "question": "Die Wohnung hat keinen Balkon.",
+              "question": "Nora arbeitet diesen Samstag im Café.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
               "answer": 1,
-              "text": ""
+              "text": "Hallo Lina, seit Montag wohne ich in Bremen. Meine Wohnung ist klein, aber sie hat einen Balkon. Ich arbeite von Dienstag bis Samstag im Café. Diesen Samstag habe ich frei, weil meine Eltern kommen. Kannst du uns am Sonntag besuchen? Viele Grüße, Nora"
             },
             {
-              "question": "Nora arbeitet am Samstag im Café.",
+              "question": "Nora lädt Lina für Sonntag ein.",
+              "options": [
+                "Richtig",
+                "Falsch"
+              ],
+              "answer": 0,
+              "text": "Hallo Lina, seit Montag wohne ich in Bremen. Meine Wohnung ist klein, aber sie hat einen Balkon. Ich arbeite von Dienstag bis Samstag im Café. Diesen Samstag habe ich frei, weil meine Eltern kommen. Kannst du uns am Sonntag besuchen? Viele Grüße, Nora"
+            },
+            {
+              "question": "Noras Eltern kommen am Montag.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
               "answer": 1,
-              "text": ""
+              "text": "Hallo Lina, seit Montag wohne ich in Bremen. Meine Wohnung ist klein, aber sie hat einen Balkon. Ich arbeite von Dienstag bis Samstag im Café. Diesen Samstag habe ich frei, weil meine Eltern kommen. Kannst du uns am Sonntag besuchen? Viele Grüße, Nora"
             },
             {
-              "question": "Der Kurs findet am Abend statt.",
+              "question": "Der Kurs findet morgen im Erdgeschoss statt.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
               "answer": 0,
-              "text": "Liebe Teilnehmer, unser Kurs findet ab Montag von 18 bis 20 Uhr statt. Der Raum ist jetzt im zweiten Stock. Bitte bringen Sie Ihr Buch mit."
+              "text": "Liebe Teilnehmer, morgen beginnt der Deutschkurs wie immer um 18 Uhr. Raum 21 im zweiten Stock ist geschlossen. Bitte kommen Sie in Raum 4 im Erdgeschoss. Dort liegen Bücher für alle bereit. Bringen Sie nur einen Stift mit."
             },
             {
-              "question": "Die Teilnehmer müssen ein Buch mitbringen.",
+              "question": "Die Teilnehmer müssen morgen ihr eigenes Buch mitbringen.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
-              "answer": 0,
-              "text": "Liebe Teilnehmer, unser Kurs findet ab Montag von 18 bis 20 Uhr statt. Der Raum ist jetzt im zweiten Stock. Bitte bringen Sie Ihr Buch mit."
+              "answer": 1,
+              "text": "Liebe Teilnehmer, morgen beginnt der Deutschkurs wie immer um 18 Uhr. Raum 21 im zweiten Stock ist geschlossen. Bitte kommen Sie in Raum 4 im Erdgeschoss. Dort liegen Bücher für alle bereit. Bringen Sie nur einen Stift mit."
             }
           ]
         },
         {
           "title": "Part 2 · Choose an advertisement",
-          "text": "",
           "items": [
             {
-              "question": "Sie suchen ein Zimmer ab April. Sie können höchstens 400 Euro bezahlen. Welche Anzeige passt?",
+              "question": "Sie brauchen ab April ein Zimmer. Sie können höchstens 400 Euro im Monat bezahlen. Welche Anzeige passt?",
               "options": [
                 "A",
                 "B"
               ],
               "answer": 1,
-              "text": "A: Zimmer frei ab Juni, 350 Euro. B: Zimmer frei ab April, 390 Euro."
+              "text": "A: Zimmer im Zentrum, 350 Euro. Ab 1. Juni frei. Küche und Bad gemeinsam.\nB: Zimmer nahe der Universität, 390 Euro. Ab 1. April frei. Bus vor dem Haus."
             },
             {
-              "question": "Sie möchten am Sonntag ein Fahrrad kaufen. Welche Anzeige passt?",
+              "question": "Sie möchten ein Fahrrad kaufen und es am Sonntag abholen. Welche Anzeige passt?",
               "options": [
                 "A",
                 "B"
               ],
               "answer": 0,
-              "text": "A: Fahrrad 60 Euro. Abholung am Wochenende möglich. B: Fahrrad 50 Euro. Abholung nur Montag bis Freitag."
+              "text": "A: Fahrrad für Erwachsene, 60 Euro. Besichtigung und Abholung Samstag oder Sonntag nach 14 Uhr. Bitte vorher anrufen.\nB: Fahrrad, fast neu, 50 Euro. Abholung Montag bis Freitag ab 17 Uhr. Am Wochenende bin ich nicht zu Hause."
             },
             {
-              "question": "Sie suchen einen Deutschkurs am Abend. Welche Anzeige passt?",
+              "question": "Sie arbeiten werktags bis 17 Uhr und suchen einen Deutschkurs. Welche Anzeige passt?",
               "options": [
                 "A",
                 "B"
               ],
               "answer": 1,
-              "text": "A: Deutsch für Anfänger, Dienstag und Donnerstag, 9–11 Uhr. B: Deutsch für Anfänger, Montag und Mittwoch, 18–20 Uhr."
+              "text": "A: Deutsch für Anfänger. Dienstag und Donnerstag von 9 bis 11 Uhr. Beginn 7. Mai.\nB: Deutsch für Anfänger. Montag und Mittwoch von 18 bis 20 Uhr. Beginn 6. Mai. Anmeldung auch online."
             },
             {
-              "question": "Sie reisen allein und suchen ein Zimmer mit Frühstück. Welche Anzeige passt?",
+              "question": "Sie reisen allein. Zimmer und Frühstück dürfen zusammen höchstens 70 Euro kosten. Welche Anzeige passt?",
               "options": [
                 "A",
                 "B"
               ],
               "answer": 0,
-              "text": "A: Einzelzimmer mit Frühstück ab 65 Euro. B: Nur Doppelzimmer, Frühstück nicht möglich."
+              "text": "A: Einzelzimmer 65 Euro einschließlich Frühstück. Bahnhof zu Fuß in fünf Minuten erreichbar. Anreise ab 14 Uhr.\nB: Einzelzimmer 62 Euro. Frühstück zusätzlich 12 Euro. Restaurant abends geöffnet."
             },
             {
-              "question": "Sie möchten heute nach 18 Uhr einkaufen. Welches Geschäft passt?",
+              "question": "Sie möchten heute um 18.30 Uhr Lebensmittel kaufen. Welches Geschäft passt?",
               "options": [
                 "A",
                 "B"
               ],
               "answer": 1,
-              "text": "A: Marktstraße, geöffnet bis 17 Uhr. B: Bahnhofsplatz, geöffnet bis 20 Uhr."
+              "text": "A: Lebensmittel am Markt. Heute 8 bis 17 Uhr geöffnet. Morgen bis 20 Uhr.\nB: Supermarkt am Bahnhof. Montag bis Samstag 7 bis 20 Uhr. Auch heute geöffnet."
             }
           ]
         },
         {
           "title": "Part 3 · Signs and notices",
-          "text": "",
           "items": [
             {
-              "question": "Sie können hier am Mittwoch um 10 Uhr einkaufen.",
+              "question": "Sie stehen am Mittwoch um 10 Uhr vor dieser Apotheke. Sie können jetzt hinein.",
+              "options": [
+                "Richtig",
+                "Falsch"
+              ],
+              "answer": 1,
+              "text": "An der Tür einer Apotheke: Montag bis Freitag 9–18 Uhr. Heute wegen Umbau erst ab 12 Uhr geöffnet. Die Apotheke am Bahnhof ist ab 9 Uhr für Sie da."
+            },
+            {
+              "question": "Sie sind im Garten dieses Cafés. Dort dürfen Sie rauchen.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
               "answer": 0,
-              "text": "Öffnungszeiten: Montag bis Freitag 9–18 Uhr. Samstag 9–13 Uhr. Sonntag geschlossen."
+              "text": "Im Café: Rauchen im Gastraum verboten. Im Garten ist Rauchen erlaubt. Bitte schließen Sie die Tür zum Garten."
             },
             {
-              "question": "Sie dürfen hier rauchen.",
-              "options": [
-                "Richtig",
-                "Falsch"
-              ],
-              "answer": 1,
-              "text": "Rauchen verboten."
-            },
-            {
-              "question": "Besucher können diesen Eingang benutzen.",
-              "options": [
-                "Richtig",
-                "Falsch"
-              ],
-              "answer": 1,
-              "text": "Eingang nur für Mitarbeiter. Besucher bitte zum Haupteingang."
-            },
-            {
-              "question": "Sie können in der Bibliothek heute keine Bücher ausleihen.",
+              "question": "Sie besuchen eine Firma und stehen an dieser Tür. Sie müssen einen anderen Eingang nehmen.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
               "answer": 0,
-              "text": "Bibliothek heute geschlossen. Morgen ab 9 Uhr wieder geöffnet."
+              "text": "An der Seitentür einer Firma: Eingang nur für Mitarbeiter. Besucher benutzen bitte den Haupteingang rechts. Dort melden Sie sich im Büro an."
             },
             {
-              "question": "Sie müssen hier bar bezahlen.",
+              "question": "Sie möchten am Sonntag ein Buch zurückgeben. Das geht hier auch bei geschlossener Bibliothek.",
+              "options": [
+                "Richtig",
+                "Falsch"
+              ],
+              "answer": 0,
+              "text": "Vor der Bibliothek: Sonntags geschlossen. Bücher können Sie jederzeit in den Kasten neben dem Eingang legen. Neue Bücher leihen Sie während der Öffnungszeiten aus."
+            },
+            {
+              "question": "Ihre Rechnung ist 7 Euro. Sie können mit Karte bezahlen.",
               "options": [
                 "Richtig",
                 "Falsch"
               ],
               "answer": 1,
-              "text": "Kartenzahlung möglich."
+              "text": "An der Kasse: Kartenzahlung ab 10 Euro. Kleinere Beträge bitte bar bezahlen. Vielen Dank."
             }
           ]
         }
       ]
     },
     "form": {
-      "profile": "Nora Becker ist am 14. März 1998 in Toronto geboren. Sie kommt aus Kanada und wohnt jetzt in Bonn. Sie möchte einen Deutschkurs am Abend besuchen.",
+      "profile": "Sie helfen Lea Sommer bei einer Hotelanmeldung. Lea ist am 14. März 1998 geboren. Sie kommt mit ihrem Mann; die Kinder bleiben zu Hause. Beide kommen am 3. Juni und fahren am 5. Juni wieder ab. Lea hat keine Kreditkarte dabei und möchte bar bezahlen.",
       "fields": [
         {
           "label": "Familienname",
           "answers": [
-            "Becker"
+            "Sommer"
           ]
         },
         {
           "label": "Geburtsdatum (TT.MM.JJJJ)",
           "answers": [
-            "14.03.1998",
-            "14.3.1998",
-            "14 März 1998",
-            "14. März 1998"
+            "14.03.1998"
+          ],
+          "match": "exact"
+        },
+        {
+          "label": "Anzahl der Personen",
+          "answers": [
+            "2",
+            "zwei"
           ]
         },
         {
-          "label": "Geburtsort",
+          "label": "Anzahl der Übernachtungen",
           "answers": [
-            "Toronto"
+            "2",
+            "zwei"
           ]
         },
         {
-          "label": "Wohnort",
+          "label": "Zahlungsweise: bar oder Kreditkarte?",
           "answers": [
-            "Bonn"
-          ]
-        },
-        {
-          "label": "Kurszeit: morgens oder abends?",
-          "answers": [
-            "abends",
-            "am Abend",
-            "Abend"
+            "bar",
+            "Barzahlung"
           ]
         }
       ]
     },
     "writing": {
-      "task": "Sie haben am Freitag einen Termin bei Frau Klein. Schreiben Sie eine kurze Nachricht (circa 30 Wörter). Schreiben Sie zu allen drei Punkten: 1. Sie können nicht kommen. 2. Sagen Sie warum. 3. Bitten Sie um einen neuen Termin am Montag.",
-      "placeholder": "Guten Tag Frau Klein, …",
+      "task": "Sie ziehen am Samstag in eine neue Wohnung. Schreiben Sie Ihrem Freund Tom eine Nachricht (circa 30 Wörter). Schreiben Sie zu allen drei Punkten: 1. Bitten Sie Tom um Hilfe. 2. Nennen Sie eine Uhrzeit. 3. Beschreiben Sie den Weg zu Ihrer neuen Wohnung.",
+      "placeholder": "Lieber Tom, …",
       "checklist": [
-        "I clearly said I cannot come on Friday.",
-        "I gave an understandable reason.",
-        "I asked for a new appointment on Monday.",
-        "I used a suitable greeting and ending.",
-        "I checked the verbs, capitals and recipient register."
+        "I asked Tom for help with moving.",
+        "I gave a clear time.",
+        "I gave useful directions to the new flat.",
+        "I used a greeting, ending and consistent du register.",
+        "I checked verbs, capitals and punctuation."
       ],
-      "modelAnswer": "Guten Tag Frau Klein, leider kann ich am Freitag nicht kommen. Ich muss arbeiten. Können wir uns am Montag treffen? Vielen Dank für Ihre Hilfe. Mit freundlichen Grüßen, Nora Becker"
+      "modelAnswer": "Lieber Tom,\nich ziehe am Samstag um. Kannst du mir bitte um zehn Uhr helfen? Meine neue Wohnung ist neben dem Bahnhof. Geh dort links in die Parkstraße.\nViele Grüße\nLea"
     },
     "speaking": [
       {
-        "task": "Teil 1: Stellen Sie sich vor. Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby. Buchstabieren Sie danach Ihren Familiennamen und nennen Sie eine Telefonnummer.",
-        "modelAnswer": "Ich heiße Nora Becker und bin 28 Jahre alt. Ich komme aus Kanada und wohne in Bonn. Ich spreche Englisch und Deutsch. Ich bin Verkäuferin. Ich lese gern. Becker: B, E, C, K, E, R. Meine Telefonnummer ist null eins sieben sechs, zwei null vier acht, drei eins fünf neun."
+        "task": "Teil 1: Stellen Sie sich vor: Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby. Buchstabieren Sie danach Ihren Familiennamen und nennen Sie eine Telefonnummer.",
+        "modelAnswer": "Ich heiße Lea Sommer und bin 28 Jahre alt. Ich komme aus Kanada und wohne in Bonn. Ich spreche Englisch und Deutsch. Ich bin Verkäuferin. Ich lese gern. Sommer: S, O, M, M, E, R. Meine Telefonnummer ist null eins sieben sechs, zwei null vier acht, drei eins fünf neun."
       },
       {
-        "task": "Teil 2: Thema Essen und Trinken, Karte Frühstück. Fragen Sie Ihren Partner. Der Partner antwortet und fragt dann Sie nach Getränken.",
-        "modelAnswer": "Was isst du zum Frühstück? Ich esse Brot und Obst. Was trinkst du gern? Ich trinke gern Tee."
+        "task": "Teil 2: Thema Reisen. Stellen Sie mit dieser Karte eine Frage. Ihr Partner antwortet. Tauschen Sie die Rollen und verwenden Sie eine neue Karte.",
+        "card": "Fahrkarte",
+        "modelAnswer": "Wo kaufst du deine Fahrkarte? Ich kaufe sie am Bahnhof. Was kostet die Fahrkarte nach Bonn? Zwölf Euro."
       },
       {
-        "task": "Teil 2: Thema Wochenende, Karte Samstag. Stellen und beantworten Sie Fragen zu Plänen.",
-        "modelAnswer": "Was machst du am Samstag? Ich besuche meine Schwester. Hast du am Abend Zeit? Ja, am Abend habe ich Zeit."
+        "task": "Teil 2: Thema Arbeit. Stellen und beantworten Sie Fragen mit dieser Karte.",
+        "card": "Samstag",
+        "modelAnswer": "Arbeitest du am Samstag? Nein, am Samstag habe ich frei. Wann arbeitest du? Von Montag bis Freitag."
       },
       {
-        "task": "Teil 3: Karte Stift. Bitten Sie um einen Stift. Der Partner reagiert. Tauschen Sie danach die Rollen.",
-        "modelAnswer": "Können Sie mir bitte einen Stift geben? Ja, gern. Hier, bitte. Vielen Dank."
+        "task": "Teil 3: Machen Sie mit dieser Karte eine Bitte. Ihr Partner reagiert. Tauschen Sie die Rollen.",
+        "card": "Schlüssel",
+        "modelAnswer": "Können Sie mir bitte den Schlüssel geben? Ja, gern. Hier, bitte. Vielen Dank."
       },
       {
-        "task": "Teil 3: Karte Fenster. Bitten Sie Ihren Partner, das Fenster zu schließen. Der Partner reagiert.",
-        "modelAnswer": "Können Sie bitte das Fenster schließen? Ja, natürlich. Vielen Dank."
+        "task": "Teil 3: Machen Sie mit dieser Karte eine andere Bitte. Ihr Partner reagiert.",
+        "card": "Wasser",
+        "modelAnswer": "Kann ich bitte ein Glas Wasser haben? Natürlich. Hier, bitte. Vielen Dank."
       }
     ]
   },
-  "updated": "2026-10-04",
+  "updated": "2026-10-08",
   "weeks": 16,
   "coreHours": 128,
   "reviewHours": 16,
@@ -553,13 +653,19 @@
         },
         "writing": {
           "task": "Introduce an invented student. Include their name, country and current town. Use three or four short sentences.",
-          "modelAnswer": "Hallo! Ich heiße Lina. Ich komme aus Italien. Ich wohne in Bonn und lerne Deutsch.",
+          "modelAnswer": "Hallo! Ich heiße Lina. Ich komme aus Italien. Jetzt wohne ich in Bonn. Ich lerne Deutsch und spreche auch Italienisch.",
           "wordGoal": 20
         },
         "speaking": {
           "task": "Introduce yourself without reading. Your partner asks your name and country. Spell a surname, then ask your partner to repeat their name.",
           "modelAnswer": "Wie heißen Sie? Ich heiße Lina Rossi. Können Sie Rossi bitte buchstabieren? R, O, S, S, I. Woher kommen Sie? Ich komme aus Italien. Können Sie Ihren Namen bitte wiederholen?"
-        }
+        },
+        "glossary": [
+          {
+            "de": "deutlich",
+            "en": "clearly"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -675,13 +781,19 @@
         },
         "writing": {
           "task": "Write a sample registration message with your name, current town and preferred course time. Use invented contact information.",
-          "modelAnswer": "Guten Tag, ich heiße Sara Pinto und wohne in Köln. Ich möchte einen Deutschkurs am Abend besuchen. Haben Sie einen Kurs am Montag? Vielen Dank. Viele Grüße, Sara Pinto",
+          "modelAnswer": "Guten Tag,\nich heiße Sara Pinto und wohne in Köln. Ich möchte einen Deutschkurs am Abend besuchen. Haben Sie einen Kurs am Montag? Vielen Dank. \nViele Grüße\nSara Pinto",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Give your age, a house number and a telephone number clearly. Ask your partner for their town and surname; spell the surname back to confirm it.",
-          "modelAnswer": "Wie alt sind Sie? Ich bin 23 Jahre alt. Wie ist Ihre Hausnummer? 18. Wie ist Ihre Telefonnummer? Null eins sieben sechs … Wie ist Ihr Familienname? Khan. K, H, A, N? Ja, genau."
-        }
+          "modelAnswer": "Wie alt sind Sie? Ich bin 23 Jahre alt. Wie ist Ihre Hausnummer? 18. Wie ist Ihre Telefonnummer? Null eins sieben sechs, zwei null vier acht, drei eins fünf neun. Wie ist Ihr Familienname? Khan. K, H, A, N? Ja, genau. Wo wohnen Sie? Ich wohne in Bonn."
+        },
+        "glossary": [
+          {
+            "de": "geboren",
+            "en": "born"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -761,9 +873,9 @@
             {
               "question": "What does the group practise?",
               "options": [
-                "Only maths",
+                "Writing and listening",
                 "Reading and speaking",
-                "Shopping"
+                "Reading and writing"
               ],
               "answer": 1,
               "evidence": "… lesen kurze Texte und sprechen Deutsch."
@@ -781,9 +893,9 @@
             {
               "question": "May new participants join?",
               "options": [
-                "Yes",
-                "No",
-                "Only teachers"
+                "Yes, new learners are welcome",
+                "No, the group is full",
+                "Only with a teacher"
               ],
               "answer": 0,
               "evidence": "Neue Teilnehmer sind willkommen."
@@ -792,13 +904,23 @@
         },
         "writing": {
           "task": "Ask a new classmate three questions: their languages, where they live, and what they do on Monday. Add a short introduction.",
-          "modelAnswer": "Hallo, ich heiße Amir und lerne Deutsch. Welche Sprachen sprichst du? Wo wohnst du? Was machst du am Montag? Ich möchte dich gern kennenlernen. Viele Grüße, Amir",
+          "modelAnswer": "Hallo,\nich heiße Amir und lerne Deutsch. Welche Sprachen sprichst du? Wo wohnst du? Was machst du am Montag? Ich möchte dich gern kennenlernen. \nViele Grüße\nAmir",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Ask and answer four new questions using wo, wann, was and which languages. Add one yes/no question; respond with useful information.",
           "modelAnswer": "Wo wohnst du? Ich wohne in Bonn. Wann lernst du Deutsch? Am Abend. Was machst du am Samstag? Ich arbeite. Welche Sprachen sprichst du? Englisch und Deutsch. Liest du gern? Ja, sehr gern."
-        }
+        },
+        "glossary": [
+          {
+            "de": "Teilnehmer",
+            "en": "participants"
+          },
+          {
+            "de": "willkommen",
+            "en": "welcome"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -915,8 +1037,14 @@
         },
         "speaking": {
           "task": "Tell your partner about two family members. Ask where their family lives. Choose three classroom objects and ask what they are and whose they are.",
-          "modelAnswer": "Das ist meine Schwester. Sie wohnt in Bonn. Wo wohnen deine Eltern? In Berlin. Was ist das? Das ist ein Heft. Ist das dein Heft? Ja, das ist mein Heft."
-        }
+          "modelAnswer": "Meine Schwester heißt Mia. Sie ist 19 und wohnt in Bonn. Mein Bruder heißt Ben. Er ist 16 und wohnt in Berlin. Wo wohnen deine Eltern? In Köln. Was ist das? Das ist ein Heft. Ist das dein Heft? Ja. Und das? Das ist ein Stift. Ist das dein Stift? Nein, das ist Pauls Stift. Und das? Das ist ein Buch. Ist das dein Buch? Ja, das ist mein Buch."
+        },
+        "glossary": [
+          {
+            "de": "bei uns",
+            "en": "with us"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1027,13 +1155,19 @@
         },
         "writing": {
           "task": "Write an appointment request. Say which day you can come, give a time and ask for confirmation.",
-          "modelAnswer": "Guten Tag, ich möchte gern einen Termin am Donnerstag. Ich kann um halb elf kommen. Haben Sie dann Zeit? Bitte schreiben Sie mir kurz. Vielen Dank. Viele Grüße, Lina",
+          "modelAnswer": "Guten Tag,\nich möchte gern einen Termin am Donnerstag. Ich kann um halb elf kommen. Haben Sie dann Zeit? Bitte schreiben Sie mir kurz. Vielen Dank. \nViele Grüße\nLina",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Arrange an appointment with a partner. Say a day and a time, repeat the arrangement to confirm, and ask about opening hours.",
           "modelAnswer": "Haben Sie am Donnerstag Zeit? Ja, um halb elf. Also am Donnerstag um zehn Uhr dreißig? Ja. Wann öffnet Ihr Büro? Um neun Uhr."
-        }
+        },
+        "glossary": [
+          {
+            "de": "abgeben",
+            "en": "return; hand in"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1073,7 +1207,7 @@
       "workshop": {
         "id": 6,
         "listening": {
-          "audioText": "Ich stehe jeden Tag um sieben Uhr auf. Um acht fahre ich zur Arbeit. Ich arbeite bis fünf. Am Abend kaufe ich oft ein. Am Sonntag stehe ich später auf.",
+          "audioText": "Ich stehe von Montag bis Freitag um sieben Uhr auf. Um acht fahre ich zur Arbeit. Ich arbeite bis fünf. Am Abend kaufe ich oft ein. Am Sonntag stehe ich später auf.",
           "questions": [
             {
               "question": "When does the speaker get up on working days?",
@@ -1144,13 +1278,19 @@
         },
         "writing": {
           "task": "Tell a friend about tomorrow. Include when you get up, one activity after work or class, and a time when they can visit.",
-          "modelAnswer": "Hallo Tim, morgen stehe ich um sieben Uhr auf. Nach dem Kurs kaufe ich ein. Du kannst um 19 Uhr kommen. Dann kochen wir zusammen. Hast du Zeit? Grüße, Lea",
+          "modelAnswer": "Hallo Tim,\nmorgen stehe ich um sieben Uhr auf. Nach dem Kurs kaufe ich ein. Du kannst um 19 Uhr kommen. Dann kochen wir zusammen. Hast du Zeit? \nGrüße\nLea",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Describe a usual weekday with three separable verbs. Ask your partner when they get up and what they do in the evening.",
           "modelAnswer": "Ich stehe um sieben Uhr auf. Nach der Arbeit kaufe ich ein. Am Abend rufe ich meine Mutter an. Wann stehst du auf? Um acht. Was machst du am Abend? Ich lese."
-        }
+        },
+        "glossary": [
+          {
+            "de": "vorbeikommen",
+            "en": "come over"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1261,13 +1401,19 @@
         },
         "writing": {
           "task": "Write a café enquiry for two people. Say when you want breakfast, ask whether tea is included and ask about card payment.",
-          "modelAnswer": "Guten Tag, wir möchten am Samstag um neun Uhr bei Ihnen frühstücken. Ist Tee im Frühstück dabei? Können wir mit Karte bezahlen? Vielen Dank für Ihre Antwort. Viele Grüße, Amir",
+          "modelAnswer": "Guten Tag,\nwir möchten am Samstag um neun Uhr bei Ihnen frühstücken. Ist beim Frühstück Tee dabei? Können wir mit Karte bezahlen? Vielen Dank für Ihre Antwort. \nViele Grüße\nAmir",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Play customer and server. Order food and a drink, answer an alternative offer, ask the price, and request the bill. Change roles.",
           "modelAnswer": "Ich hätte gern eine Suppe und einen Tee. Möchten Sie auch Brot? Ja, bitte. Was kostet das? Acht Euro. Können wir bitte bezahlen? Ja, natürlich."
-        }
+        },
+        "glossary": [
+          {
+            "de": "enthält",
+            "en": "includes"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1378,13 +1524,19 @@
         },
         "writing": {
           "task": "Write to a shop. Say which item and size you need, ask about one colour, and ask its price.",
-          "modelAnswer": "Guten Tag, ich suche eine Jacke in Größe 40. Haben Sie diese Jacke auch in Blau? Was kostet sie? Bitte schreiben Sie mir kurz. Vielen Dank. Viele Grüße, Nora",
+          "modelAnswer": "Guten Tag,\nich suche eine Jacke in Größe 40. Haben Sie diese Jacke auch in Blau? Was kostet sie? Bitte schreiben Sie mir kurz. Vielen Dank. \nViele Grüße\nNora",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Ask about a colour and size. The shop assistant says one item is unavailable. Ask for an alternative, then accept or decline and explain simply.",
           "modelAnswer": "Haben Sie die Jacke in Rot? Leider nicht. Haben Sie sie in Blau? Ja, in Größe 40. Sie ist zu klein. Ich brauche Größe 42. Dann nehme ich sie nicht."
-        }
+        },
+        "glossary": [
+          {
+            "de": "Rabatt",
+            "en": "discount"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1449,8 +1601,8 @@
             {
               "question": "Who can students ask?",
               "options": [
-                "The driver",
-                "The shop assistant",
+                "The course office",
+                "Other students only",
                 "The teacher"
               ],
               "answer": 2,
@@ -1495,13 +1647,19 @@
         },
         "writing": {
           "task": "Ask your teacher for help. Say which exercise you cannot do, ask them to explain it, and ask when you can speak to them.",
-          "modelAnswer": "Guten Tag, ich kann Aufgabe drei nicht machen. Können Sie mir die Aufgabe bitte erklären? Haben Sie morgen nach dem Kurs Zeit? Vielen Dank für Ihre Hilfe. Viele Grüße, Ben",
+          "modelAnswer": "Guten Tag,\nich kann Aufgabe drei nicht machen. Können Sie mir die Aufgabe bitte erklären? Haben Sie morgen nach dem Kurs Zeit? Vielen Dank für Ihre Hilfe. \nViele Grüße\nBen",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Make three requests using different objects. Respond to your partner’s requests. Include one permission question and a suitable refusal or alternative.",
-          "modelAnswer": "Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte die Tür öffnen? Natürlich. Darf ich hier telefonieren? Leider nicht. Bitte telefonieren Sie draußen."
-        }
+          "modelAnswer": "Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte die Tür öffnen? Natürlich. Können Sie bitte das Fenster schließen? Ja, gern. Darf ich hier telefonieren? Leider nicht. Bitte telefonieren Sie draußen."
+        },
+        "glossary": [
+          {
+            "de": "ausleihen",
+            "en": "borrow"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1577,7 +1735,7 @@
           ]
         },
         "reading": {
-          "text": "Wohnungsanzeige: Zwei Zimmer, Küche und Bad, 650 Euro im Monat. Die Wohnung liegt im ersten Stock. Sie ist ab Juni frei. Der Bus hält vor dem Haus. Ein Balkon ist nicht vorhanden.",
+          "text": "Wohnungsanzeige: Zwei Zimmer, Küche und Bad, 650 Euro im Monat. Die Wohnung liegt im ersten Stock. Sie ist ab Juni frei. Der Bus hält vor dem Haus. Die Wohnung hat keinen Balkon.",
           "questions": [
             {
               "question": "How many rooms are listed?",
@@ -1607,19 +1765,25 @@
                 "The text does not say"
               ],
               "answer": 0,
-              "evidence": "Ein Balkon ist nicht vorhanden."
+              "evidence": "Die Wohnung hat keinen Balkon."
             }
           ]
         },
         "writing": {
           "task": "Write about an advertised flat. Ask whether it is still available, give a viewing day, and ask about the monthly price.",
-          "modelAnswer": "Guten Tag, ist Ihre Wohnung noch frei? Ich möchte sie gern am Freitag sehen. Haben Sie um 16 Uhr Zeit? Was kostet die Wohnung im Monat? Viele Grüße, Sara",
+          "modelAnswer": "Guten Tag,\nist Ihre Wohnung noch frei? Ich möchte sie gern am Freitag sehen. Haben Sie um 16 Uhr Zeit? Was kostet die Wohnung im Monat? \nViele Grüße\nSara",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Give short directions to a place. Your partner asks one clarification question. Then describe two rooms and say where one object is.",
-          "modelAnswer": "Wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann links. Ist es weit? Nein, zehn Minuten. Meine Wohnung hat zwei Zimmer. Der Tisch steht in der Küche. Der Schlüssel liegt auf dem Tisch."
-        }
+          "modelAnswer": "Wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann links. Ist es weit? Nein, zehn Minuten. Meine Wohnung hat zwei Zimmer. Das Wohnzimmer ist groß. Die Küche ist klein. Der Tisch steht in der Küche. Der Schlüssel liegt auf dem Tisch."
+        },
+        "glossary": [
+          {
+            "de": "Stock",
+            "en": "floor of a building"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1674,8 +1838,8 @@
             {
               "question": "What should the patient bring?",
               "options": [
-                "A map",
-                "A book",
+                "Their identity document",
+                "Their appointment letter",
                 "Their card"
               ],
               "answer": 2,
@@ -1721,7 +1885,7 @@
               "options": [
                 "Frau Klein",
                 "The doctor",
-                "A driver"
+                "Amir’s colleague"
               ],
               "answer": 0,
               "evidence": "… Frau Klein informieren."
@@ -1730,13 +1894,19 @@
         },
         "writing": {
           "task": "Cancel a work appointment. Say that you are ill, explain that you cannot attend, and suggest a new day.",
-          "modelAnswer": "Guten Tag, ich bin heute krank und kann nicht zu unserem Termin kommen. Können wir uns am Freitag treffen? Bitte schreiben Sie mir. Vielen Dank. Viele Grüße, Nora",
+          "modelAnswer": "Guten Tag,\nich bin heute krank und kann nicht zu unserem Termin kommen. Können wir uns am Freitag treffen? Bitte schreiben Sie mir. Vielen Dank. \nViele Grüße\nNora",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Arrange a doctor’s appointment and describe one simple symptom. Then change a work appointment, giving a reason and a new proposed time.",
-          "modelAnswer": "Mir geht es nicht gut. Mein Hals tut weh. Ich brauche einen Termin. Können Sie morgen kommen? Ja. Können wir unseren Termin ändern? Ich muss arbeiten. Haben Sie am Freitag Zeit?"
-        }
+          "modelAnswer": "Mir geht es nicht gut. Mein Hals tut weh. Ich brauche einen Termin. Können Sie morgen kommen? Ja. Können wir unseren Termin ändern? Ich muss arbeiten. Haben Sie am Freitag Zeit? Können wir uns am Freitag um elf Uhr treffen? Ja, das geht."
+        },
+        "glossary": [
+          {
+            "de": "informieren",
+            "en": "inform"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1776,7 +1946,7 @@
       "workshop": {
         "id": 12,
         "listening": {
-          "audioText": "Der Zug nach Bonn fährt heute von Gleis vier. Er fährt um vierzehn Uhr zehn ab. Sie müssen nicht umsteigen. In Bonn ist es kalt und es regnet. Bitte nehmen Sie eine Jacke mit.",
+          "audioText": "Guten Tag, hier ist das Hotel Linden in Bonn. Ihr Zug kommt heute um vierzehn Uhr zehn an Gleis vier an. Sie müssen nicht umsteigen. In Bonn ist es kalt und es regnet. Bitte nehmen Sie eine Jacke mit.",
           "questions": [
             {
               "question": "Which platform is used?",
@@ -1786,7 +1956,7 @@
                 "Ten"
               ],
               "answer": 0,
-              "evidence": "… Gleis vier."
+              "evidence": "… an Gleis vier an."
             },
             {
               "question": "Must travellers change trains?",
@@ -1847,13 +2017,23 @@
         },
         "writing": {
           "task": "Ask a hotel about a stay. Give your arrival and departure dates, request a room for two people, and ask the price including breakfast.",
-          "modelAnswer": "Guten Tag, wir kommen am Freitag und fahren am Sonntag wieder. Haben Sie ein Doppelzimmer für uns? Was kostet das Zimmer mit Frühstück für zwei Personen? Vielen Dank. Grüße, Lea",
+          "modelAnswer": "Guten Tag,\nwir kommen am Freitag und fahren am Sonntag wieder. Haben Sie ein Doppelzimmer für uns? Was kostet das Zimmer mit Frühstück für zwei Personen? Vielen Dank. \nMit freundlichen Grüßen\nLea",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Buy a return ticket. Ask about departure time and changing trains. Your partner gives a corrected detail; repeat it to confirm. Then ask about the weather.",
           "modelAnswer": "Eine Fahrkarte nach Bonn hin und zurück, bitte. Wann fährt der Zug? Um vierzehn Uhr zehn. Muss ich umsteigen? Nein. Von Gleis fünf? Nein, Gleis vier. Also Gleis vier. Wie ist das Wetter? Es regnet."
-        }
+        },
+        "glossary": [
+          {
+            "de": "Anreise",
+            "en": "arrival / check-in"
+          },
+          {
+            "de": "Abreise",
+            "en": "departure / check-out"
+          }
+        ]
       },
       "pronunciationDrills": [
         {
@@ -1896,31 +2076,31 @@
           "audioText": "Hallo Mia, gestern war ich krank. Heute geht es mir besser. Möchtest du am Samstag ins Kino gehen? Der Film beginnt um acht. Wir können uns um halb acht vor dem Kino treffen.",
           "questions": [
             {
-              "question": "Why was the speaker unavailable yesterday?",
+              "question": "Warum hatte die Person gestern keine Zeit?",
               "options": [
-                "Work",
-                "Illness",
-                "Travel"
+                "Sie musste arbeiten.",
+                "Sie war krank.",
+                "Sie war auf einer Reise."
               ],
               "answer": 1,
               "evidence": "… war ich krank."
             },
             {
-              "question": "When does the film begin?",
+              "question": "Wann beginnt der Film?",
               "options": [
-                "19:30",
-                "20:00",
-                "20:30"
+                "Um 19.30 Uhr",
+                "Um 20 Uhr",
+                "Um 20.30 Uhr"
               ],
               "answer": 1,
               "evidence": "… um acht."
             },
             {
-              "question": "When is the proposed meeting?",
+              "question": "Wann möchten sie sich treffen?",
               "options": [
-                "19:30",
-                "20:00",
-                "20:30"
+                "Um 19.30 Uhr",
+                "Um 20 Uhr",
+                "Um 20.30 Uhr"
               ],
               "answer": 0,
               "evidence": "… um halb acht."
@@ -1931,31 +2111,31 @@
           "text": "Hallo Ben, vielen Dank für die Einladung. Leider hatte ich gestern keine Zeit. Ich war bei meinen Eltern. Am Sonntag habe ich frei. Möchtest du mit mir schwimmen gehen? Grüße, Sara",
           "questions": [
             {
-              "question": "What prevented Sara from attending?",
+              "question": "Warum konnte Sara nicht kommen?",
               "options": [
-                "No ticket",
-                "No time",
-                "A closed pool"
+                "Sie hatte keine Fahrkarte.",
+                "Sie hatte keine Zeit.",
+                "Das Schwimmbad war geschlossen."
               ],
               "answer": 1,
               "evidence": "… hatte ich … keine Zeit."
             },
             {
-              "question": "Where was she?",
+              "question": "Wo war Sara?",
               "options": [
-                "At work",
-                "At a cinema",
-                "With her parents"
+                "Bei der Arbeit",
+                "Im Kino",
+                "Bei ihren Eltern"
               ],
               "answer": 2,
               "evidence": "Ich war bei meinen Eltern."
             },
             {
-              "question": "What does she suggest?",
+              "question": "Was schlägt Sara vor?",
               "options": [
-                "Swimming on Sunday",
-                "Cinema yesterday",
-                "Work on Sunday"
+                "Am Sonntag schwimmen gehen",
+                "Heute ins Kino gehen",
+                "Am Sonntag arbeiten"
               ],
               "answer": 0,
               "evidence": "Am Sonntag … schwimmen gehen?"
@@ -1964,13 +2144,20 @@
         },
         "writing": {
           "task": "Reply to a friend’s invitation. Say you could not attend, give a simple past reason, and suggest a new activity and day.",
-          "modelAnswer": "Hallo Ben, leider war ich gestern nicht da. Ich war krank und hatte keine Zeit. Am Sonntag möchte ich schwimmen gehen. Hast du dann Zeit? Schreib mir bitte. Viele Grüße, Sara",
+          "modelAnswer": "Hallo Ben,\nleider war ich gestern nicht da. Ich war krank und hatte keine Zeit. Am Sonntag möchte ich schwimmen gehen. Hast du dann Zeit? Schreib mir bitte. \nViele Grüße\nSara",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Invite your partner to an activity with a clear time and place. Accept or decline, give a short reason, then agree on an alternative. Mention one past situation.",
           "modelAnswer": "Möchtest du am Samstag ins Kino gehen? Leider muss ich arbeiten. Hast du am Sonntag Zeit? Ja, gern. Treffen wir uns um sieben vor dem Kino? Gut. Gestern war ich krank, aber heute geht es mir besser."
-        }
+        },
+        "glossary": [
+          {
+            "de": "Einladung",
+            "en": "invitation"
+          }
+        ],
+        "questionLanguage": "de"
       },
       "pronunciationDrills": [
         {
@@ -2014,31 +2201,31 @@
           "audioText": "Gestern bin ich nach Bonn gefahren. Ich habe dort meine Schwester besucht. Wir haben zusammen gekocht. Am Abend bin ich nach Hause zurückgekommen. Meine Schwester ist in Bonn geblieben.",
           "questions": [
             {
-              "question": "Where did the speaker travel?",
+              "question": "Wohin ist die Person gefahren?",
               "options": [
-                "Berlin",
-                "Bonn",
-                "Hamburg"
+                "Nach Berlin",
+                "Nach Bonn",
+                "Nach Hamburg"
               ],
               "answer": 1,
               "evidence": "… nach Bonn gefahren."
             },
             {
-              "question": "What did they do together?",
+              "question": "Was haben sie zusammen gemacht?",
               "options": [
-                "Cooked",
-                "Bought tickets",
-                "Watched a film"
+                "Gekocht",
+                "Fahrkarten gekauft",
+                "Einen Film gesehen"
               ],
               "answer": 0,
               "evidence": "… zusammen gekocht."
             },
             {
-              "question": "Who stayed in Bonn?",
+              "question": "Wer ist in Bonn geblieben?",
               "options": [
-                "The speaker",
-                "Both",
-                "The sister"
+                "Die Person, die erzählt",
+                "Beide",
+                "Die Schwester"
               ],
               "answer": 2,
               "evidence": "Meine Schwester ist in Bonn geblieben."
@@ -2049,31 +2236,31 @@
           "text": "Liebe Eva, wir sind am Freitag in Hamburg angekommen. Am Samstag haben wir ein Museum besucht. Gestern haben wir Fahrkarten gekauft. Morgen fahren wir nach Hause. Das Hotel war sehr gut. Grüße, Tim",
           "questions": [
             {
-              "question": "When did they arrive?",
+              "question": "Wann sind sie in Hamburg angekommen?",
               "options": [
-                "Friday",
-                "Saturday",
-                "Tomorrow"
+                "Am Freitag",
+                "Am Samstag",
+                "Gestern"
               ],
               "answer": 0,
               "evidence": "… am Freitag … angekommen."
             },
             {
-              "question": "What have they already bought?",
+              "question": "Was haben sie schon gekauft?",
               "options": [
-                "Food",
-                "Tickets",
-                "A car"
+                "Essen",
+                "Fahrkarten",
+                "Ein Auto"
               ],
               "answer": 1,
               "evidence": "… Fahrkarten gekauft."
             },
             {
-              "question": "When will they go home?",
+              "question": "Wann fahren sie nach Hause?",
               "options": [
-                "Yesterday",
-                "Today",
-                "Tomorrow"
+                "Gestern",
+                "Heute",
+                "Morgen"
               ],
               "answer": 2,
               "evidence": "Morgen fahren wir nach Hause."
@@ -2082,13 +2269,20 @@
         },
         "writing": {
           "task": "Write a short account of an invented visit. Say where you went, describe one completed activity, and say when you returned.",
-          "modelAnswer": "Hallo Eva, ich bin am Freitag nach Bonn gefahren. Dort habe ich meine Schwester besucht. Wir haben zusammen gekocht. Am Sonntag bin ich nach Hause zurückgekommen. Viele Grüße, Tim",
+          "modelAnswer": "Hallo Eva,\nich bin am Freitag nach Bonn gefahren. Dort habe ich meine Schwester besucht. Wir haben zusammen gekocht. Am Sonntag bin ich nach Hause zurückgekommen. \nViele Grüße\nTim",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Ask your partner about yesterday and a recent short journey. Use haben and sein past forms for familiar verbs; ask a follow-up question about time or place.",
           "modelAnswer": "Was hast du gestern gemacht? Ich habe gearbeitet und gekocht. Wohin bist du am Freitag gefahren? Nach Bonn. Wen hast du besucht? Meine Schwester. Wann bist du zurückgekommen? Am Sonntag."
-        }
+        },
+        "glossary": [
+          {
+            "de": "angekommen",
+            "en": "arrived"
+          }
+        ],
+        "questionLanguage": "de"
       },
       "pronunciationDrills": [
         {
@@ -2134,31 +2328,31 @@
           "audioText": "Achtung, der Kurs beginnt morgen nicht um neun Uhr. Wir beginnen um halb zehn. Bitte kommen Sie in Raum zwölf. Der alte Raum elf ist geschlossen. Bringen Sie Ihr Buch mit.",
           "questions": [
             {
-              "question": "What is the new start time?",
+              "question": "Wann beginnt der Kurs morgen?",
               "options": [
-                "9:00",
-                "9:30",
-                "10:30"
+                "Um neun Uhr",
+                "Um halb zehn",
+                "Um halb elf"
               ],
               "answer": 1,
               "evidence": "… um halb zehn."
             },
             {
-              "question": "Which room is now used?",
+              "question": "In welchem Raum ist der Kurs jetzt?",
               "options": [
-                "Eleven",
-                "Ten",
-                "Twelve"
+                "In Raum elf",
+                "In Raum zehn",
+                "In Raum zwölf"
               ],
               "answer": 2,
               "evidence": "… Raum zwölf."
             },
             {
-              "question": "What should participants bring?",
+              "question": "Was sollen die Teilnehmer mitbringen?",
               "options": [
-                "Their book",
-                "A suitcase",
-                "A ticket"
+                "Ihr Buch",
+                "Ihr Heft",
+                "Einen Stift"
               ],
               "answer": 0,
               "evidence": "Bringen Sie Ihr Buch mit."
@@ -2169,31 +2363,31 @@
           "text": "Sie brauchen einen Abendkurs ab Mai. Angebot A: Deutschkurs Montag und Mittwoch 18–20 Uhr, Beginn 6. Mai. Angebot B: Deutschkurs Dienstag 9–12 Uhr, Beginn 7. Mai. Anmeldung: Montag bis Freitag. Am Wochenende ist das Büro geschlossen.",
           "questions": [
             {
-              "question": "Which course fits the stated need?",
+              "question": "Welcher Kurs passt?",
               "options": [
-                "A",
-                "B",
-                "Both"
+                "Kurs A",
+                "Kurs B",
+                "Beide Kurse"
               ],
               "answer": 0,
               "evidence": "A: 18–20 Uhr; B: 9–12 Uhr."
             },
             {
-              "question": "When does offer A start?",
+              "question": "Wann beginnt Kurs A?",
               "options": [
-                "6 May",
-                "7 May",
-                "Every Saturday"
+                "Am 6. Mai",
+                "Am 7. Mai",
+                "Am 8. Mai"
               ],
               "answer": 0,
               "evidence": "Beginn 6. Mai."
             },
             {
-              "question": "Can you register at the office on Sunday?",
+              "question": "Kann man sich am Sonntag im Büro anmelden?",
               "options": [
-                "Yes",
-                "Only in May",
-                "No"
+                "Ja",
+                "Nur im Mai",
+                "Nein"
               ],
               "answer": 2,
               "evidence": "Am Wochenende … geschlossen."
@@ -2202,13 +2396,20 @@
         },
         "writing": {
           "task": "Write to the course office. Say you want an evening course, ask its start date, and ask how to register.",
-          "modelAnswer": "Guten Tag, ich möchte einen Deutschkurs am Abend besuchen. Wann beginnt Ihr nächster Kurs? Wie kann ich mich anmelden? Bitte schicken Sie mir Informationen. Vielen Dank. Viele Grüße, Ben",
+          "modelAnswer": "Guten Tag,\nich möchte einen Deutschkurs am Abend besuchen. Wann beginnt Ihr nächster Kurs? Wie kann ich mich anmelden? Bitte schicken Sie mir Informationen. Vielen Dank. \nViele Grüße\nBen",
           "wordGoal": 30
         },
         "speaking": {
           "task": "Confirm a changed time and room. Ask for repetition when needed. Then use unfamiliar word cards from three A1 vocabulary topics to ask and answer new questions.",
-          "modelAnswer": "Der Kurs beginnt um halb zehn. Um neun Uhr? Nein, um halb zehn. Also um neun Uhr dreißig. In welchem Raum? In Raum zwölf. Können Sie das bitte wiederholen? Raum zwölf."
-        }
+          "modelAnswer": "Der Kurs beginnt um halb zehn. Um neun Uhr? Nein, um halb zehn. Also um neun Uhr dreißig. In welchem Raum? In Raum zwölf. Können Sie das bitte wiederholen? Raum zwölf. Thema Reisen: Wohin fährst du morgen? Nach Bonn. Thema Essen: Was isst du zum Frühstück? Brot und Käse. Thema Familie: Wo wohnt deine Schwester? In Berlin."
+        },
+        "glossary": [
+          {
+            "de": "Anmeldung",
+            "en": "registration"
+          }
+        ],
+        "questionLanguage": "de"
       },
       "pronunciationDrills": [
         {
@@ -2256,31 +2457,31 @@
           "audioText": "Hallo Nora, wir treffen uns am Samstag um elf im Café am Bahnhof. Nicht im Café am Markt. Bitte bring das Buch mit. Wenn du keine Zeit hast, ruf mich heute Abend an.",
           "questions": [
             {
-              "question": "When is the meeting?",
+              "question": "Wann treffen sie sich?",
               "options": [
-                "Saturday at eleven",
-                "Saturday at twelve",
-                "This evening"
+                "Am Samstag um elf Uhr",
+                "Am Samstag um zwölf Uhr",
+                "Heute Abend"
               ],
               "answer": 0,
               "evidence": "… am Samstag um elf."
             },
             {
-              "question": "Where is it?",
+              "question": "Wo treffen sie sich?",
               "options": [
-                "At the market café",
-                "At the station café",
-                "In a bookshop"
+                "Im Café am Markt",
+                "Im Café am Bahnhof",
+                "In der Buchhandlung"
               ],
               "answer": 1,
               "evidence": "… im Café am Bahnhof."
             },
             {
-              "question": "What should Nora bring?",
+              "question": "Was soll Nora mitbringen?",
               "options": [
-                "A ticket",
-                "A jacket",
-                "The book"
+                "Die Fahrkarte",
+                "Die Jacke",
+                "Das Buch"
               ],
               "answer": 2,
               "evidence": "Bitte bring das Buch mit."
@@ -2291,7 +2492,7 @@
           "text": "Anmeldung: Alex Brown kommt aus Kanada. Alex ist am 3. Februar 1999 in Toronto geboren und wohnt jetzt in Bonn, Parkstraße 14. Alex möchte einen Abendkurs besuchen. Bitte tragen Sie Familienname, Geburtsdatum, Geburtsort, Wohnort und Kurszeit in das Formular ein.",
           "questions": [
             {
-              "question": "What is the family name?",
+              "question": "Wie ist der Familienname?",
               "options": [
                 "Alex",
                 "Brown",
@@ -2301,7 +2502,7 @@
               "evidence": "Alex Brown."
             },
             {
-              "question": "Which town belongs in Wohnort?",
+              "question": "Was gehört in das Feld Wohnort?",
               "options": [
                 "Toronto",
                 "Bonn",
@@ -2311,11 +2512,11 @@
               "evidence": "… wohnt jetzt in Bonn."
             },
             {
-              "question": "Which course time is requested?",
+              "question": "Wann möchte Alex einen Kurs besuchen?",
               "options": [
-                "Morning",
-                "Afternoon",
-                "Evening"
+                "Am Morgen",
+                "Am Nachmittag",
+                "Am Abend"
               ],
               "answer": 2,
               "evidence": "… einen Abendkurs."
@@ -2324,13 +2525,20 @@
         },
         "writing": {
           "task": "You cannot attend a friend’s Saturday meeting. Write about 30 words: apologise, give a simple reason, and propose a new day and time. Include greeting and ending.",
-          "modelAnswer": "Hallo Nora, leider kann ich am Samstag nicht kommen. Ich muss arbeiten. Können wir uns am Sonntag um elf Uhr im Café treffen? Schreib mir bitte. Viele Grüße, Alex",
+          "modelAnswer": "Hallo Nora,\nes tut mir leid, ich kann ich am Samstag nicht kommen. Ich muss arbeiten. Können wir uns am Sonntag um elf Uhr im Café treffen? Schreib mir bitte. \nViele Grüße\nAlex",
           "wordGoal": 30
         },
         "speaking": {
           "task": "With a partner, do all speaking parts: introduction with spelling and a number; two information questions with answers; two different requests with suitable responses. Use new cards and avoid reading a full script.",
-          "modelAnswer": "Ich heiße Alex Brown. B, R, O, W, N. Ich wohne in Bonn. Meine Hausnummer ist 14. Was isst du zum Frühstück? Brot. Wann lernst du Deutsch? Am Abend. Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte das Fenster öffnen? Natürlich."
-        }
+          "modelAnswer": "Ich heiße Alex Brown und bin 27 Jahre alt. Ich komme aus Kanada und wohne in Bonn. Ich spreche Englisch und Deutsch. Ich bin Student. Ich spiele gern Fußball. Brown: B, R, O, W, N. Meine Hausnummer ist 14. Was isst du zum Frühstück? Brot. Wann lernst du Deutsch? Am Abend. Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte das Fenster öffnen? Natürlich."
+        },
+        "glossary": [
+          {
+            "de": "eintragen",
+            "en": "enter information in a field"
+          }
+        ],
+        "questionLanguage": "de"
       },
       "pronunciationDrills": [
         {
@@ -2388,8 +2596,8 @@
         "Listen, pause, repeat, then say the example without reading. Use short groups of words.",
         "German letter names differ from English ones. Practise a complete alphabet recording; pay special attention to E, G, J, V, W and Z.",
         "A long vowel and a short vowel can change a word: practise bieten / bitten and Stadt / Staat with a speaker.",
-        "Pronounce the end of a word clearly. Final b, d and g often sound like p, t and k.",
-        "Ask for help: Bitte langsam. Noch einmal, bitte. Können Sie das bitte buchstabieren?"
+        "In standard German, b, d and g at the end of a word or syllable are usually pronounced p, t and k: ab, Rad, Tag. The ending -ig often has an ich sound, as in zwanzig; regional pronunciations vary.",
+        "Ask for help: Langsamer, bitte. Noch einmal, bitte. Können Sie das bitte buchstabieren?"
       ],
       "examples": [
         {
@@ -2412,11 +2620,13 @@
       "vocab": [
         {
           "de": "buchstabieren",
-          "en": "to spell"
+          "en": "to spell",
+          "forms": "du buchstabierst · er/sie/es buchstabiert · hat buchstabiert"
         },
         {
           "de": "wiederholen",
-          "en": "to repeat"
+          "en": "to repeat",
+          "forms": "du wiederholst · er/sie/es wiederholt · hat wiederholt"
         },
         {
           "de": "langsam",
@@ -2424,7 +2634,7 @@
         },
         {
           "de": "der Buchstabe",
-          "en": "letter",
+          "en": "letter of the alphabet",
           "pl": "Buchstaben"
         },
         {
@@ -2439,11 +2649,13 @@
         },
         {
           "de": "verstehen",
-          "en": "to understand"
+          "en": "to understand",
+          "forms": "du verstehst · er/sie/es versteht · hat verstanden"
         },
         {
           "de": "sprechen",
-          "en": "to speak"
+          "en": "to speak",
+          "forms": "du sprichst · er/sie/es spricht · hat gesprochen"
         }
       ],
       "tasks": [
@@ -2477,9 +2689,11 @@
             "wiederholen"
           ],
           "answers": [
-            "Können Sie das bitte wiederholen"
+            "Können Sie das bitte wiederholen",
+            "Können Sie bitte das wiederholen"
           ],
-          "hint": "Können is first in this yes/no question; wiederholen finishes it."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Können"
         },
         {
           "type": "listen",
@@ -2538,7 +2752,7 @@
             "einundzwanzig / vierunddreißig"
           ],
           [
-            "100 / 1,000",
+            "100 / 1000",
             "hundert / tausend"
           ],
           [
@@ -2604,7 +2818,8 @@
         },
         {
           "de": "kosten",
-          "en": "to cost"
+          "en": "to cost",
+          "forms": "es kostet · hat gekostet"
         },
         {
           "de": "alt",
@@ -2648,7 +2863,8 @@
           "answers": [
             "Wie alt bist du"
           ],
-          "hint": "Wie alt comes before the verb."
+          "hint": "Wie alt comes before the verb.",
+          "neutralStart": "Wie"
         },
         {
           "type": "listen",
@@ -2817,7 +3033,8 @@
           "answers": [
             "Wie ist Ihr Familienname"
           ],
-          "hint": "Use Ihr with a formal address."
+          "hint": "Use Ihr with a formal address.",
+          "neutralStart": "Wie"
         },
         {
           "type": "listen",
@@ -2922,7 +3139,7 @@
             "seine"
           ],
           [
-            "sie",
+            "sie (she)",
             "ihr",
             "ihre"
           ],
@@ -2930,6 +3147,16 @@
             "wir",
             "unser",
             "unsere"
+          ],
+          [
+            "ihr",
+            "euer",
+            "eure"
+          ],
+          [
+            "sie (they)",
+            "ihr",
+            "ihre"
           ],
           [
             "Sie",
@@ -2940,7 +3167,7 @@
       },
       "rules": [
         "Possessive words take endings: mein Vater, meine Mutter, mein Kind, meine Eltern.",
-        "For a masculine object in the accusative use -en: Ich besuche meinen Bruder.",
+        "For this lesson, practise the nominative forms: mein Bruder, meine Schwester. Object endings such as meinen Bruder follow in the accusative lesson.",
         "A name can show possession with -s: Annas Schwester. Recognise this without learning a full genitive system.",
         "Describe people with sein + adjective: Meine Schwester ist freundlich. Predicate adjectives have no noun ending here.",
         "Use haben to describe family: Ich habe zwei Kinder."
@@ -2955,8 +3182,8 @@
           "en": "Our son is ten years old."
         },
         {
-          "de": "Ich besuche meinen Vater.",
-          "en": "I visit my father."
+          "de": "Mein Vater wohnt in Bonn.",
+          "en": "My father lives in Bonn."
         },
         {
           "de": "Lenas Bruder wohnt in Berlin.",
@@ -2995,7 +3222,8 @@
         },
         {
           "de": "besuchen",
-          "en": "to visit"
+          "en": "to visit",
+          "forms": "du besuchst · er/sie/es besucht · hat besucht"
         },
         {
           "de": "zusammen",
@@ -3013,14 +3241,14 @@
         },
         {
           "type": "choice",
-          "question": "Choose the correct form: Ich besuche ___ Bruder.",
+          "question": "Das ist ___ Bruder. (my)",
           "options": [
             "mein",
             "meine",
             "meinen"
           ],
-          "answer": 2,
-          "hint": "Bruder is a masculine object."
+          "answer": 0,
+          "hint": "Bruder is masculine; this naming sentence uses the nominative: mein Bruder."
         },
         {
           "type": "order",
@@ -3036,7 +3264,8 @@
           "answers": [
             "Unsere Tochter ist neun Jahre alt"
           ],
-          "hint": "The verb stays in position two."
+          "hint": "The verb stays in position two.",
+          "neutralStart": "Unsere"
         },
         {
           "type": "listen",
@@ -3111,9 +3340,10 @@
       "rules": [
         "W-questions put the question word before the conjugated verb. Yes/no questions start with the verb.",
         "Several common verbs change their stem for du and er/sie/es: sprechen → sprichst/spricht.",
-        "The stem normally stays unchanged for wir and formal Sie: wir sprechen, Sie sprechen.",
+        "For the e→i/ie and a→ä verbs shown here, the stem change affects du and er/sie/es. It does not affect ich, wir, ihr or sie/Sie: ich lese, ihr lest, wir lesen. Other irregular verbs have their own patterns.",
         "Subject pronouns include ich, du, er, sie, es, wir, ihr and sie/Sie.",
-        "Answer a question for its meaning: Wo? needs a place; Wann? needs a time."
+        "Answer a question for its meaning: Wo? needs a place; Wann? needs a time.",
+        "Use doch to contradict a negative question: Sprichst du kein Deutsch? — Doch, ich spreche Deutsch. Nein confirms the negative: Nein, ich spreche kein Deutsch."
       ],
       "examples": [
         {
@@ -3156,16 +3386,22 @@
         },
         {
           "de": "lesen",
-          "en": "to read"
+          "en": "to read",
+          "forms": "du liest · er/sie/es liest · hat gelesen"
         },
         {
           "de": "nehmen",
-          "en": "to take"
+          "en": "to take",
+          "forms": "du nimmst · er/sie/es nimmt · hat genommen"
         },
         {
           "de": "die Zeitung",
           "en": "newspaper",
           "pl": "Zeitungen"
+        },
+        {
+          "de": "doch",
+          "en": "yes (contradicting a negative question)"
         }
       ],
       "tasks": [
@@ -3200,7 +3436,8 @@
           "answers": [
             "Liest du die Zeitung"
           ],
-          "hint": "The verb comes first in a yes/no question."
+          "hint": "The verb comes first in a yes/no question.",
+          "neutralStart": "Liest"
         },
         {
           "type": "listen",
@@ -3324,7 +3561,7 @@
       "rules": [
         "A time phrase may come first, but the verb remains second: Am Montag arbeite ich.",
         "Use am with weekdays and many parts of the day, im with months and seasons, um with clock times.",
-        "Know date forms you need for appointments: am ersten, zweiten, dritten …; recognise them in speech.",
+        "Dates use ordinal endings: am ersten, zweiten, dritten, siebten Mai. From 20 use -sten: am zwanzigsten Mai. Written: am 3. Mai; spoken: am dritten Mai.",
         "Use von … bis … for opening hours and working periods.",
         "Give a routine first, then one exception: Normalerweise …, aber heute …"
       ],
@@ -3379,7 +3616,8 @@
         },
         {
           "de": "beginnen",
-          "en": "to begin"
+          "en": "to begin",
+          "forms": "du beginnst · er/sie/es beginnt · hat begonnen"
         }
       ],
       "tasks": [
@@ -3414,7 +3652,8 @@
           "answers": [
             "Am Montag arbeite ich"
           ],
-          "hint": "The subject comes after the verb when time comes first."
+          "hint": "The subject comes after the verb when time comes first.",
+          "neutralStart": "Am"
         },
         {
           "type": "listen",
@@ -3443,8 +3682,8 @@
             "Only on Friday"
           ],
           "answer": 1,
-          "hint": "kein Unterricht tells you there are no classes.",
-          "readingText": "Sprachkurs: Montag und Mittwoch, 18–20 Uhr. Im August gibt es keinen Unterricht. Der nächste Kurs beginnt am 2. September.",
+          "hint": "Im August ist die Schule geschlossen: the school is closed in August.",
+          "readingText": "Sprachkurs: Montag und Mittwoch, 18–20 Uhr. Im August ist die Schule geschlossen. Der nächste Kurs beginnt am 2. September.",
           "englishOptions": true
         }
       ]
@@ -3539,7 +3778,8 @@
         },
         {
           "de": "bezahlen",
-          "en": "to pay"
+          "en": "to pay",
+          "forms": "du bezahlst · er/sie/es bezahlt · hat bezahlt"
         },
         {
           "de": "lieber",
@@ -3554,7 +3794,7 @@
       "tasks": [
         {
           "type": "fill",
-          "question": "Ich nehme ___ Kaffee.",
+          "question": "Ich nehme ___ Kaffee. (a coffee)",
           "answers": [
             "einen"
           ],
@@ -3584,7 +3824,8 @@
           "answers": [
             "Ich hätte gern eine Suppe"
           ],
-          "hint": "Learn this polite expression as a unit."
+          "hint": "Learn this polite expression as a unit.",
+          "neutralStart": "Ich"
         },
         {
           "type": "listen",
@@ -3653,8 +3894,8 @@
         ]
       },
       "rules": [
-        "Use dieser/diese/dieses to point to a known item: diese Jacke, dieses Hemd.",
-        "Predicate colours and adjectives stay unchanged: Die Jacke ist blau.",
+        "Use dieser/diese/dieses with a subject: dieser Mantel, diese Jacke, dieses Hemd. A masculine object uses diesen: Ich nehme diesen Mantel. Feminine and neuter stay diese/dieses.",
+        "After sein, colours stay unchanged and lowercase: Die Jacke ist blau. A colour used as a noun after in has a capital: die Jacke in Blau, das Hemd in Weiß.",
         "Use es for a neuter noun, sie for a feminine noun and er for a masculine noun.",
         "Learn comparisons as useful phrases: größer, kleiner, billiger, lieber. Full adjective declension comes later.",
         "Ask for help politely and respond when an item is unavailable."
@@ -3713,7 +3954,8 @@
         },
         {
           "de": "passen",
-          "en": "to fit"
+          "en": "to fit",
+          "forms": "du passt · er/sie/es passt · hat gepasst"
         }
       ],
       "tasks": [
@@ -3749,7 +3991,8 @@
           "answers": [
             "Kann ich mit Karte bezahlen"
           ],
-          "hint": "The infinitive goes at the end."
+          "hint": "The infinitive goes at the end.",
+          "neutralStart": "Kann"
         },
         {
           "type": "listen",
@@ -3794,8 +4037,9 @@
           "Verb",
           "ich",
           "du",
-          "er / sie",
-          "wir / Sie"
+          "er / sie / es",
+          "wir / sie / Sie",
+          "ihr"
         ],
         "rows": [
           [
@@ -3803,47 +4047,53 @@
             "kann",
             "kannst",
             "kann",
-            "können"
+            "können",
+            "könnt"
           ],
           [
             "müssen",
             "muss",
             "musst",
             "muss",
-            "müssen"
+            "müssen",
+            "müsst"
           ],
           [
             "wollen",
             "will",
             "willst",
             "will",
-            "wollen"
+            "wollen",
+            "wollt"
           ],
           [
             "dürfen",
             "darf",
             "darfst",
             "darf",
-            "dürfen"
+            "dürfen",
+            "dürft"
           ],
           [
             "sollen",
             "soll",
             "sollst",
             "soll",
-            "sollen"
+            "sollen",
+            "sollt"
           ],
           [
             "möchten",
             "möchte",
             "möchtest",
             "möchte",
-            "möchten"
+            "möchten",
+            "möchtet"
           ]
         ]
       },
       "rules": [
-        "The conjugated modal takes position two; the other verb stays in the infinitive at the end.",
+        "In a statement the conjugated modal is second and the infinitive is last. In the plural, retain the umlauts in können, müssen, dürfen and in ihr könnt, müsst, dürft.",
         "In a yes/no question the modal is first: Kannst du morgen kommen?",
         "nicht dürfen means not allowed to; nicht müssen means not necessary. These are different.",
         "Use sollen for an instruction or advice received from someone else: Ich soll anrufen.",
@@ -3870,31 +4120,38 @@
       "vocab": [
         {
           "de": "können",
-          "en": "can; to be able"
+          "en": "can; to be able",
+          "forms": "du kannst · er/sie/es kann"
         },
         {
           "de": "müssen",
-          "en": "must; to have to"
+          "en": "must; to have to",
+          "forms": "du musst · er/sie/es muss"
         },
         {
           "de": "dürfen",
-          "en": "may; to be allowed"
+          "en": "may; to be allowed",
+          "forms": "du darfst · er/sie/es darf"
         },
         {
           "de": "wollen",
-          "en": "to want"
+          "en": "to want",
+          "forms": "du willst · er/sie/es will"
         },
         {
           "de": "sollen",
-          "en": "should; to be supposed"
+          "en": "should; to be supposed",
+          "forms": "du sollst · er/sie/es soll"
         },
         {
           "de": "möchten",
-          "en": "would like"
+          "en": "would like",
+          "forms": "du möchtest · er/sie/es möchte"
         },
         {
           "de": "rauchen",
-          "en": "to smoke"
+          "en": "to smoke",
+          "forms": "du rauchst · er/sie/es raucht · hat geraucht"
         },
         {
           "de": "erlaubt",
@@ -3931,9 +4188,11 @@
             "arbeiten"
           ],
           "answers": [
-            "Wir müssen morgen arbeiten"
+            "Wir müssen morgen arbeiten",
+            "Morgen müssen wir arbeiten"
           ],
-          "hint": "Modal second; infinitive last."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Wir"
         },
         {
           "type": "listen",
@@ -4006,7 +4265,7 @@
         ]
       },
       "rules": [
-        "Formal instructions use verb + Sie. Informal instructions have special short forms; learn frequent ones such as komm, nimm and gib.",
+        "Formal instruction: verb + Sie (Kommen Sie!). Informal du instructions usually use the stem without du: komm, mach. Learn irregular gib, nimm, lies and sei. fahren gives fahr (without ä); arbeiten gives arbeite. The ihr form stays as in the present tense: kommt, arbeitet.",
         "A separable prefix still comes last in an instruction: Mach die Tür zu.",
         "Replace a known object: der Schlüssel → ihn, die Tasche → sie, das Buch → es.",
         "Learn helfen + mir/dir/Ihnen and Danke as useful everyday chunks.",
@@ -4033,19 +4292,23 @@
       "vocab": [
         {
           "de": "helfen",
-          "en": "to help"
+          "en": "to help",
+          "forms": "du hilfst · er/sie/es hilft · hat geholfen"
         },
         {
           "de": "geben",
-          "en": "to give"
+          "en": "to give",
+          "forms": "du gibst · er/sie/es gibt · hat gegeben"
         },
         {
           "de": "öffnen",
-          "en": "to open"
+          "en": "to open",
+          "forms": "du öffnest · er/sie/es öffnet · hat geöffnet"
         },
         {
           "de": "schließen",
-          "en": "to close"
+          "en": "to close",
+          "forms": "du schließt · er/sie/es schließt · hat geschlossen"
         },
         {
           "de": "der Schlüssel",
@@ -4098,9 +4361,12 @@
             "Schlüssel"
           ],
           "answers": [
-            "Geben Sie mir bitte den Schlüssel"
+            "Geben Sie mir bitte den Schlüssel",
+            "Bitte geben Sie mir den Schlüssel",
+            "Geben Sie mir den Schlüssel bitte"
           ],
-          "hint": "A request can begin with the imperative verb."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Geben"
         },
         {
           "type": "listen",
@@ -4175,7 +4441,7 @@
       "rules": [
         "Learn common preposition phrases together with their case: mit dem Bus, zu der Schule → zur Schule.",
         "nach is used with many city and country names without articles: nach Bonn, nach Spanien.",
-        "Location and destination can differ: in der Stadt versus in die Stadt. Start with useful examples before generalising.",
+        "Where (Wo?): im Park, im Kino, in der Stadt, beim Arzt. Where to (Wohin?): in den Park, ins Kino, in die Stadt, zum Arzt. Contractions: im = in dem, ins = in das, beim = bei dem, zum = zu dem, zur = zu der. Learn each place phrase with its meaning.",
         "Use Wo ist …? for a location and Wie komme ich …? for directions.",
         "Ask someone to repeat a direction if you miss an important detail."
       ],
@@ -4268,7 +4534,8 @@
           "answers": [
             "Wie komme ich zum Bahnhof"
           ],
-          "hint": "Question word + verb + subject."
+          "hint": "Question word + verb + subject.",
+          "neutralStart": "Wie"
         },
         {
           "type": "listen",
@@ -4401,13 +4668,14 @@
         },
         {
           "de": "liegen",
-          "en": "to lie; to be located"
+          "en": "to lie; to be located",
+          "forms": "du liegst · er/sie/es liegt · hat gelegen"
         }
       ],
       "tasks": [
         {
           "type": "fill",
-          "question": "Es gibt ___ Balkon.",
+          "question": "Es gibt ___ Balkon. (a balcony)",
           "answers": [
             "einen"
           ],
@@ -4436,9 +4704,11 @@
             "Tisch"
           ],
           "answers": [
-            "Der Schlüssel liegt auf dem Tisch"
+            "Der Schlüssel liegt auf dem Tisch",
+            "Auf dem Tisch liegt der Schlüssel"
           ],
-          "hint": "Keep the verb second."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Der"
         },
         {
           "type": "listen",
@@ -4563,7 +4833,8 @@
         },
         {
           "de": "ändern",
-          "en": "to change"
+          "en": "to change",
+          "forms": "du änderst · er/sie/es ändert · hat geändert"
         },
         {
           "de": "denn",
@@ -4572,6 +4843,11 @@
         {
           "de": "dann",
           "en": "then"
+        },
+        {
+          "de": "die Besprechung",
+          "en": "meeting",
+          "pl": "Besprechungen"
         }
       ],
       "tasks": [
@@ -4607,7 +4883,8 @@
           "answers": [
             "Können wir den Termin ändern"
           ],
-          "hint": "The infinitive follows the object at the end."
+          "hint": "The infinitive follows the object at the end.",
+          "neutralStart": "Können"
         },
         {
           "type": "listen",
@@ -4625,7 +4902,7 @@
         {
           "type": "write",
           "question": "Write about 30 words: cancel an appointment, give a reason, and suggest another day.",
-          "modelAnswer": "Guten Tag Frau Klein, leider kann ich am Montag nicht kommen. Ich muss arbeiten. Können wir uns am Dienstag um elf Uhr treffen? Vielen Dank. Viele Grüße, Lina"
+          "modelAnswer": "Guten Tag Frau Klein,\nleider kann ich am Montag nicht kommen. Ich muss arbeiten. Können wir uns am Dienstag um elf Uhr treffen? Vielen Dank. \nViele Grüße\nLina"
         },
         {
           "type": "choice",
@@ -4741,7 +5018,8 @@
         },
         {
           "de": "wehtun",
-          "en": "to hurt"
+          "en": "to hurt",
+          "forms": "du tust weh · er/sie/es tut weh · hat wehgetan"
         }
       ],
       "tasks": [
@@ -4776,7 +5054,8 @@
           "answers": [
             "Ich brauche einen Termin"
           ],
-          "hint": "Termin is a masculine object."
+          "hint": "Termin is a masculine object.",
+          "neutralStart": "Ich"
         },
         {
           "type": "listen",
@@ -4794,7 +5073,7 @@
         {
           "type": "write",
           "question": "Write a short message to cancel a class: say you are ill, cannot come, and ask about homework.",
-          "modelAnswer": "Guten Tag, ich bin heute krank und kann nicht zum Kurs kommen. Welche Hausaufgaben soll ich machen? Vielen Dank für Ihre Hilfe. Viele Grüße, Amir"
+          "modelAnswer": "Guten Tag,\nich bin heute krank und kann nicht zum Kurs kommen. Welche Hausaufgaben soll ich machen? Vielen Dank für Ihre Hilfe. \nViele Grüße\nAmir"
         },
         {
           "type": "choice",
@@ -4881,20 +5160,23 @@
         },
         {
           "de": "das Gleis",
-          "en": "platform track",
+          "en": "track; platform in station announcements",
           "pl": "Gleise"
         },
         {
           "de": "umsteigen",
-          "en": "to change trains"
+          "en": "to change trains",
+          "forms": "du steigst um · er/sie/es steigt um · ist umgestiegen"
         },
         {
           "de": "ankommen",
-          "en": "to arrive"
+          "en": "to arrive",
+          "forms": "du kommst an · er/sie/es kommt an · ist angekommen"
         },
         {
           "de": "reservieren",
-          "en": "to reserve"
+          "en": "to reserve",
+          "forms": "du reservierst · er/sie/es reserviert · hat reserviert"
         },
         {
           "de": "das Einzelzimmer",
@@ -4964,7 +5246,7 @@
         {
           "type": "write",
           "question": "Write about 30 words to a hotel: give dates, request a double room, and ask the price.",
-          "modelAnswer": "Guten Tag, wir möchten von Freitag bis Sonntag in Bonn bleiben. Haben Sie ein Doppelzimmer für zwei Personen? Was kostet das Zimmer mit Frühstück? Vielen Dank. Viele Grüße, Anna"
+          "modelAnswer": "Guten Tag,\nwir möchten von Freitag bis Sonntag in Bonn bleiben. Haben Sie ein Doppelzimmer für zwei Personen? Was kostet das Zimmer mit Frühstück? Vielen Dank. \nViele Grüße\nAnna"
         },
         {
           "type": "choice",
@@ -5046,11 +5328,13 @@
       "vocab": [
         {
           "de": "regnen",
-          "en": "to rain"
+          "en": "to rain",
+          "forms": "es regnet · hat geregnet"
         },
         {
           "de": "schneien",
-          "en": "to snow"
+          "en": "to snow",
+          "forms": "es schneit · hat geschneit"
         },
         {
           "de": "der Regen",
@@ -5114,7 +5398,8 @@
           "answers": [
             "Ich brauche eine Jacke"
           ],
-          "hint": "Jacke is a feminine object."
+          "hint": "Jacke is a feminine object.",
+          "neutralStart": "Ich"
         },
         {
           "type": "listen",
@@ -5229,33 +5514,39 @@
         },
         {
           "de": "mitkommen",
-          "en": "to come along"
+          "en": "to come along",
+          "forms": "du kommst mit · er/sie/es kommt mit · ist mitgekommen"
         },
         {
           "de": "sich treffen",
-          "en": "to meet each other"
+          "en": "to meet each other",
+          "forms": "du triffst dich · er/sie/es trifft sich · hat sich getroffen"
         },
         {
           "de": "tanzen",
-          "en": "to dance"
+          "en": "to dance",
+          "forms": "du tanzt · er/sie/es tanzt · hat getanzt"
         },
         {
           "de": "schwimmen",
-          "en": "to swim"
+          "en": "to swim",
+          "forms": "du schwimmst · er/sie/es schwimmt · ist geschwommen"
         },
         {
           "de": "spazieren gehen",
-          "en": "to go for a walk"
+          "en": "to go for a walk",
+          "forms": "du gehst spazieren · er/sie/es geht spazieren · ist spazieren gegangen"
         }
       ],
       "tasks": [
         {
           "type": "fill",
-          "question": "Ich spiele ___ Fußball. (gladly)",
+          "question": "Ich spiele ___ Fußball. (like to)",
           "answers": [
-            "gern"
+            "gern",
+            "gerne"
           ],
-          "hint": "gern expresses enjoyment."
+          "hint": "gern and gerne both mean you enjoy the activity."
         },
         {
           "type": "choice",
@@ -5299,7 +5590,7 @@
         {
           "type": "write",
           "question": "Write about 30 words inviting a friend: say what you plan, give time and place, and ask for a reply.",
-          "modelAnswer": "Hallo Tim, möchtest du am Samstag mit ins Kino kommen? Wir treffen uns um halb acht vor dem Kino. Hast du Zeit? Schreib mir bitte. Viele Grüße, Lea"
+          "modelAnswer": "Hallo Tim,\nmöchtest du am Samstag mit ins Kino kommen? Wir treffen uns um halb acht vor dem Kino. Hast du Zeit? Schreib mir bitte. \nViele Grüße\nLea"
         },
         {
           "type": "choice",
@@ -5358,7 +5649,8 @@
         "Learn the participle with the verb. Some are regular, many common ones are irregular.",
         "A separable verb puts ge between prefix and stem: einkaufen → eingekauft.",
         "Verbs ending in -ieren do not add ge: telefonieren → telefoniert.",
-        "Ask about past actions: Was hast du gestern gemacht?"
+        "Ask about past actions: Was hast du gestern gemacht?",
+        "Verbs with inseparable be-, ver-, er- or ent- do not add ge-: besuchen → besucht, bezahlen → bezahlt, verstehen → verstanden. Verbs ending in -ieren also omit ge-: studieren → studiert."
       ],
       "examples": [
         {
@@ -5389,23 +5681,28 @@
         },
         {
           "de": "machen",
-          "en": "to do; to make"
+          "en": "to do; to make",
+          "forms": "du machst · er/sie/es macht · hat gemacht"
         },
         {
           "de": "lernen",
-          "en": "to learn"
+          "en": "to learn",
+          "forms": "du lernst · er/sie/es lernt · hat gelernt"
         },
         {
           "de": "essen",
-          "en": "to eat"
+          "en": "to eat",
+          "forms": "du isst · er/sie/es isst · hat gegessen"
         },
         {
           "de": "trinken",
-          "en": "to drink"
+          "en": "to drink",
+          "forms": "du trinkst · er/sie/es trinkt · hat getrunken"
         },
         {
           "de": "telefonieren",
-          "en": "to telephone"
+          "en": "to telephone",
+          "forms": "du telefonierst · er/sie/es telefoniert · hat telefoniert"
         },
         {
           "de": "die Hausaufgabe",
@@ -5444,9 +5741,11 @@
             "gekauft"
           ],
           "answers": [
-            "Ich habe gestern Brot gekauft"
+            "Ich habe gestern Brot gekauft",
+            "Gestern habe ich Brot gekauft"
           ],
-          "hint": "haben second; participle last."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Ich"
         },
         {
           "type": "listen",
@@ -5523,7 +5822,8 @@
         "bleiben and sein also use sein, although they do not describe movement.",
         "Keep the auxiliary conjugated and the participle at the end.",
         "Use an exact destination phrase: nach Berlin, zum Bahnhof, nach Hause.",
-        "Avoid treating every verb as regular. Learn gefahren, gekommen and gegangen as units."
+        "Avoid treating every verb as regular. Learn gefahren, gekommen and gegangen as units.",
+        "sein itself has the perfect form ist gewesen (ich bin gewesen). For a simple past state, A1 speakers usually use war: Ich war gestern in Bonn. Learn gewesen as a recognition form."
       ],
       "examples": [
         {
@@ -5546,27 +5846,33 @@
       "vocab": [
         {
           "de": "gehen",
-          "en": "to go"
+          "en": "to go",
+          "forms": "du gehst · er/sie/es geht · ist gegangen"
         },
         {
           "de": "kommen",
-          "en": "to come"
+          "en": "to come",
+          "forms": "du kommst · er/sie/es kommt · ist gekommen"
         },
         {
           "de": "fahren",
-          "en": "to travel; to drive"
+          "en": "to travel; to drive",
+          "forms": "du fährst · er/sie/es fährt · ist gefahren"
         },
         {
           "de": "bleiben",
-          "en": "to stay"
+          "en": "to stay",
+          "forms": "du bleibst · er/sie/es bleibt · ist geblieben"
         },
         {
           "de": "aufstehen",
-          "en": "to get up"
+          "en": "to get up",
+          "forms": "du stehst auf · er/sie/es steht auf · ist aufgestanden"
         },
         {
           "de": "zurückkommen",
-          "en": "to come back"
+          "en": "to come back",
+          "forms": "du kommst zurück · er/sie/es kommt zurück · ist zurückgekommen"
         },
         {
           "de": "die Reise",
@@ -5575,7 +5881,8 @@
         },
         {
           "de": "ankommen",
-          "en": "to arrive"
+          "en": "to arrive",
+          "forms": "du kommst an · er/sie/es kommt an · ist angekommen"
         }
       ],
       "tasks": [
@@ -5610,9 +5917,11 @@
             "aufgestanden"
           ],
           "answers": [
-            "Ich bin um sieben Uhr aufgestanden"
+            "Ich bin um sieben Uhr aufgestanden",
+            "Um sieben Uhr bin ich aufgestanden"
           ],
-          "hint": "The participle finishes the sentence."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Ich"
         },
         {
           "type": "listen",
@@ -5750,6 +6059,10 @@
         {
           "de": "da",
           "en": "there"
+        },
+        {
+          "de": "gestern",
+          "en": "yesterday"
         }
       ],
       "tasks": [
@@ -5803,7 +6116,7 @@
         {
           "type": "write",
           "question": "Write a short apology: say where you were, give a reason, and ask about the next class.",
-          "modelAnswer": "Guten Tag, gestern war ich nicht im Kurs. Ich war krank und hatte einen Termin beim Arzt. Wann ist der nächste Unterricht? Viele Grüße, Nora"
+          "modelAnswer": "Guten Tag,\ngestern war ich nicht im Kurs. Ich war krank und hatte einen Termin beim Arzt. Wann ist der nächste Unterricht? \nViele Grüße\nNora"
         },
         {
           "type": "choice",
@@ -5912,13 +6225,14 @@
         },
         {
           "de": "benutzen",
-          "en": "to use"
+          "en": "to use",
+          "forms": "du benutzt · er/sie/es benutzt · hat benutzt"
         }
       ],
       "tasks": [
         {
           "type": "choice",
-          "question": "Notice: Eintritt nur mit Fahrkarte. Who may enter?",
+          "question": "Notice: Zutritt nur mit Fahrkarte. Who may enter?",
           "options": [
             "Anyone",
             "People with a ticket",
@@ -5948,9 +6262,12 @@
             "links"
           ],
           "answers": [
-            "Bitte benutzen Sie den Eingang links"
+            "Bitte benutzen Sie den Eingang links",
+            "Benutzen Sie bitte den Eingang links",
+            "Benutzen Sie den Eingang links bitte"
           ],
-          "hint": "A polite formal instruction uses verb + Sie."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Bitte"
         },
         {
           "type": "listen",
@@ -6051,7 +6368,8 @@
         },
         {
           "de": "zurückrufen",
-          "en": "to call back"
+          "en": "to call back",
+          "forms": "du rufst zurück · er/sie/es ruft zurück · hat zurückgerufen"
         },
         {
           "de": "die Durchsage",
@@ -6110,11 +6428,11 @@
         },
         {
           "type": "fill",
-          "question": "Halb neun bedeutet ___ Uhr dreißig. (write the number as a word)",
+          "question": "halb neun am Morgen = ___ Uhr dreißig. (write the number as a word)",
           "answers": [
             "acht"
           ],
-          "hint": "halb points toward the next hour."
+          "hint": "In the morning, halb neun means acht Uhr dreißig (08:30)."
         },
         {
           "type": "order",
@@ -6126,14 +6444,16 @@
             "zurück"
           ],
           "answers": [
-            "Rufen Sie bitte zurück"
+            "Rufen Sie bitte zurück",
+            "Bitte rufen Sie zurück"
           ],
-          "hint": "The separated prefix comes last."
+          "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
+          "neutralStart": "Rufen"
         },
         {
           "type": "write",
           "question": "Write a short phone message: change a time and ask the listener to call back.",
-          "modelAnswer": "Guten Tag, unser Termin ist nicht um neun, sondern um zehn Uhr. Bitte rufen Sie zurück. Vielen Dank."
+          "modelAnswer": "Guten Tag,\nunser Termin ist nicht um neun, sondern um zehn Uhr. Bitte rufen Sie zurück. Vielen Dank."
         },
         {
           "type": "choice",
@@ -6192,7 +6512,8 @@
         "A short message of about 30 words is the usual model task. Communicating all requested information matters more than decorative complexity.",
         "For a form, use the supplied profile and keep numbers and spellings exact.",
         "Choose du or Sie consistently according to the recipient.",
-        "After writing, check verb position, noun capitals and whether every requested point is answered."
+        "After writing, check verb position, noun capitals and whether every requested point is answered.",
+        "Greeting examples: \"Liebe Anna,\" / \"Lieber Tom,\" / \"Sehr geehrte Frau Berg,\" / \"Sehr geehrter Herr Berg,\". Put the message on the next line. End with \"Viele Grüße\" or \"Mit freundlichen Grüßen\" (no comma), then your name on a new line."
       ],
       "examples": [
         {
@@ -6225,7 +6546,8 @@
         },
         {
           "de": "vereinbaren",
-          "en": "to arrange"
+          "en": "to arrange",
+          "forms": "du vereinbarst · er/sie/es vereinbart · hat vereinbart"
         },
         {
           "de": "der Betreff",
@@ -6239,7 +6561,8 @@
         },
         {
           "de": "schreiben",
-          "en": "to write"
+          "en": "to write",
+          "forms": "du schreibst · er/sie/es schreibt · hat geschrieben"
         },
         {
           "de": "freundlich",
@@ -6286,7 +6609,8 @@
           "answers": [
             "Können wir uns am Montag treffen"
           ],
-          "hint": "Keep the infinitive at the end."
+          "hint": "Keep the infinitive at the end.",
+          "neutralStart": "Können"
         },
         {
           "type": "listen",
@@ -6304,7 +6628,7 @@
         {
           "type": "write",
           "question": "Write about 30 words to a language school: ask about a beginner course, ask when it starts, and ask its price.",
-          "modelAnswer": "Guten Tag, ich möchte einen Deutschkurs für Anfänger machen. Wann beginnt der nächste Kurs? Wie viel kostet er? Bitte schicken Sie mir Informationen. Vielen Dank. Mit freundlichen Grüßen, Lina"
+          "modelAnswer": "Guten Tag,\nich möchte einen Deutschkurs für Anfänger machen. Wann beginnt der nächste Kurs? Wie viel kostet er? Bitte schicken Sie mir Informationen. Vielen Dank. \nMit freundlichen Grüßen\nLina"
         },
         {
           "type": "choice",
@@ -6386,7 +6710,8 @@
       "vocab": [
         {
           "de": "sich vorstellen",
-          "en": "to introduce oneself"
+          "en": "to introduce oneself",
+          "forms": "du stellst dich vor · er/sie/es stellt sich vor · hat sich vorgestellt"
         },
         {
           "de": "die Frage",
@@ -6395,11 +6720,13 @@
         },
         {
           "de": "antworten",
-          "en": "to answer"
+          "en": "to answer",
+          "forms": "du antwortest · er/sie/es antwortet · hat geantwortet"
         },
         {
           "de": "bitten",
-          "en": "to request"
+          "en": "to request",
+          "forms": "du bittest · er/sie/es bittet · hat gebeten"
         },
         {
           "de": "der Stift",
@@ -6455,7 +6782,8 @@
           "answers": [
             "Können Sie mir bitte einen Stift geben"
           ],
-          "hint": "Modal first, infinitive last."
+          "hint": "Modal first, infinitive last.",
+          "neutralStart": "Können"
         },
         {
           "type": "listen",
@@ -6485,7 +6813,7 @@
           ],
           "answer": 2,
           "hint": "Both roles are part of the exchange.",
-          "readingText": "Partnertraining: Person A zieht eine Karte und fragt. Person B antwortet und stellt dann eine neue Frage. Beide machen danach eine Bitte und reagieren auf die Bitte des Partners.",
+          "readingText": "Partnertraining: Person A zieht eine Karte und fragt. Person B antwortet und stellt dann eine neue Frage. Danach bitten beide um etwas und reagieren auf die Bitte des Partners.",
           "englishOptions": true
         }
       ]
@@ -6524,7 +6852,8 @@
           "ex": {
             "de": "Kreuzen Sie die richtige Antwort an.",
             "en": "Mark the correct answer."
-          }
+          },
+          "forms": "du kreuzt an · er/sie/es kreuzt an · hat angekreuzt"
         },
         {
           "de": "ausfüllen",
@@ -6532,7 +6861,8 @@
           "ex": {
             "de": "Füllen Sie bitte das Formular aus.",
             "en": "Please fill in the form."
-          }
+          },
+          "forms": "du füllst aus · er/sie/es füllt aus · hat ausgefüllt"
         },
         {
           "de": "ergänzen",
@@ -6540,7 +6870,8 @@
           "ex": {
             "de": "Ergänzen Sie die Wörter.",
             "en": "Complete the words."
-          }
+          },
+          "forms": "du ergänzt · er/sie/es ergänzt · hat ergänzt"
         },
         {
           "de": "zuordnen",
@@ -6548,7 +6879,8 @@
           "ex": {
             "de": "Ordnen Sie die Wörter den Bildern zu.",
             "en": "Match the words to the pictures."
-          }
+          },
+          "forms": "du ordnest zu · er/sie/es ordnet zu · hat zugeordnet"
         },
         {
           "de": "die Aufgabe",
@@ -6672,7 +7004,7 @@
         },
         {
           "de": "die Öffnungszeit",
-          "en": "opening time",
+          "en": "opening time; opening hours (plural)",
           "ex": {
             "de": "Die Öffnungszeiten stehen an der Tür.",
             "en": "The opening hours are on the door."
@@ -6738,7 +7070,8 @@
           "ex": {
             "de": "Bitte unterschreiben Sie hier.",
             "en": "Please sign here."
-          }
+          },
+          "forms": "du unterschreibst · er/sie/es unterschreibt · hat unterschrieben"
         },
         {
           "de": "verboten",
@@ -6776,7 +7109,7 @@
           "de": "die Dauer",
           "en": "duration",
           "ex": {
-            "de": "Die Dauer des Kurses ist vier Wochen.",
+            "de": "Der Kurs dauert vier Wochen.",
             "en": "The course duration is four weeks."
           },
           "pl": "-"
@@ -6812,8 +7145,8 @@
           "de": "die Verbindung",
           "en": "connection",
           "ex": {
-            "de": "Diese Verbindung geht nach Bonn.",
-            "en": "This connection goes to Bonn."
+            "de": "Gibt es eine direkte Verbindung nach Bonn?",
+            "en": "Is there a direct connection to Bonn?"
           },
           "pl": "Verbindungen"
         },
@@ -6823,7 +7156,8 @@
           "ex": {
             "de": "Ich hole dich am Bahnhof ab.",
             "en": "I will pick you up at the station."
-          }
+          },
+          "forms": "du holst ab · er/sie/es holt ab · hat abgeholt"
         }
       ]
     }
@@ -6832,35 +7166,25 @@
     "1": {
       "module": 1,
       "outcomes": [
-        "Greet and introduce yourself using du and Sie.",
-        "Spell your name and ask for repetition."
+        "Introduce yourself with name, origin and current town.",
+        "Choose du or Sie consistently."
       ],
-      "pronunciation": "ei / ie, sch, ich / ach, umlauts and word stress. Practise the alphabet aloud.",
+      "pronunciation": "Practise short introductions with clear pauses and name stress.",
       "pronunciationDrills": [
         {
-          "label": "Long and short vowels",
-          "text": "Miete. Mitte. Stadt. Staat.",
-          "instruction": "Listen for length; repeat each word with a pause."
-        },
-        {
-          "label": "ei, ie, eu and umlauts",
-          "text": "Mein. Drei. Sieben. Wie. Neun. Schön. Fünf.",
-          "instruction": "Keep ei and ie distinct; round your lips for ö and ü."
-        },
-        {
-          "label": "sch, sp, st and ch",
-          "text": "Schule. Sprechen. Straße. Ich. Nicht. Buch.",
-          "instruction": "Imitate the word model; ch differs in ich and Buch."
+          "label": "Say and apply",
+          "text": "Ich heiße Nora. Ich komme aus Kanada. Ich wohne in Bonn.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Introduce yourself; spell a surname; respond to Woher kommen Sie?",
-          "modelAnswer": "Guten Tag. Ich heiße Nora. Ich bin 24 Jahre alt. Ich komme aus Kanada und wohne in Bonn. Ich spreche Englisch und ein bisschen Deutsch. Ich bin Studentin. Mein Hobby ist Musik.",
+          "task": "Introduce yourself, answer Woher kommen Sie?, spell a surname and ask the other person their name.",
+          "modelAnswer": "Guten Tag. Ich heiße Nora Berg. Ich komme aus Kanada und wohne in Bonn. Berg: B, E, R, G. Wie heißen Sie? Ich heiße Luis. Woher kommen Sie? Aus Spanien.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -6882,30 +7206,25 @@
     "2": {
       "module": 3,
       "outcomes": [
-        "Describe familiar actions in the present tense.",
-        "Ask and answer W-questions and yes/no questions."
+        "Use regular present-tense endings in short statements.",
+        "Describe two everyday actions."
       ],
-      "pronunciation": "Final consonants and verb endings -e, -st, -t, -en. Speak a question with natural stress.",
+      "pronunciation": "Make -st, -t and -en endings audible without adding extra syllables.",
       "pronunciationDrills": [
         {
-          "label": "Verb endings",
-          "text": "Ich lerne. Du lernst. Er lernt. Wir lernen. Ihr lernt.",
-          "instruction": "Keep the final consonants audible."
-        },
-        {
-          "label": "Questions",
-          "text": "Wo wohnst du? Wohnst du in Bonn? Welche Sprachen sprichst du?",
-          "instruction": "Copy the phrase rhythm; make the question understandable."
+          "label": "Say and apply",
+          "text": "ich lerne. du lernst. er lernt. wir lernen. ihr lernt. sie lernen.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Exchange questions about home, language and daily actions.",
-          "modelAnswer": "Was machst du am Montag? Ich arbeite am Montag. Lernst du Deutsch? Ja, ich lerne jeden Tag Deutsch.",
+          "task": "Say what you do every day. Ask whether your partner learns German and when they work.",
+          "modelAnswer": "Ich lerne jeden Tag Deutsch. Am Montag arbeite ich. Lernst du Deutsch? Ja, ich lerne am Abend. Wann arbeitest du? Am Dienstag.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -6927,30 +7246,25 @@
     "3": {
       "module": 4,
       "outcomes": [
-        "Use articles and common plurals with familiar nouns.",
-        "Describe family members and identify possessions."
+        "Learn nouns with their articles.",
+        "Distinguish singular nouns from die with plurals."
       ],
-      "pronunciation": "Practise noun stress and distinguish singular / plural forms in speech.",
+      "pronunciation": "Stress the noun and hear the change from singular to plural.",
       "pronunciationDrills": [
         {
-          "label": "Nouns and plurals",
-          "text": "Der Sohn. Die Söhne. Die Tochter. Die Töchter. Der Stuhl. Die Stühle.",
-          "instruction": "Listen for the changed vowel and plural ending."
-        },
-        {
-          "label": "Possessive phrases",
-          "text": "Mein Vater. Meine Mutter. Meine Eltern. Meinen Bruder.",
-          "instruction": "Keep the endings audible inside the phrase."
+          "label": "Say and apply",
+          "text": "der Tisch, die Tische. die Lampe, die Lampen. das Buch, die Bücher.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Describe two family members and answer a question about each.",
-          "modelAnswer": "Was ist das? Das ist ein Stuhl. Ist das ein Buch? Ja, das ist ein Buch. Wie viele Stühle gibt es? Es gibt acht Stühle.",
+          "task": "Identify three classroom objects with their articles, then say a plural and ask a partner what an object is.",
+          "modelAnswer": "Was ist das? Das ist ein Tisch. Und das? Das ist eine Lampe. Hier ist ein Buch. Das sind zwei Bücher. Was ist das? Das ist ein Stuhl.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -6972,30 +7286,25 @@
     "4": {
       "module": 5,
       "outcomes": [
-        "Keep the finite verb in the correct sentence position.",
-        "Understand digital time, informal time and appointment dates."
+        "Keep the finite verb second in a statement.",
+        "Begin a statement with either a subject or a time phrase."
       ],
-      "pronunciation": "Sentence stress; contrast halb acht / acht Uhr and quarter-hour expressions.",
+      "pronunciation": "Say both orders smoothly, with a short phrase before the verb.",
       "pronunciationDrills": [
         {
-          "label": "Half hours",
-          "text": "Halb neun. Acht Uhr dreißig. Viertel nach acht. Viertel vor neun.",
-          "instruction": "Say the equivalent clock times to a partner."
-        },
-        {
-          "label": "Dates",
-          "text": "Am ersten Mai. Am zweiten Juni. Am dritten September.",
-          "instruction": "Group the date as one short phrase."
+          "label": "Say and apply",
+          "text": "Ich fahre morgen nach Bonn. Morgen fahre ich nach Bonn.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Ask for a time and repeat it back for confirmation.",
-          "modelAnswer": "Wann fährst du nach Bonn? Am Samstag fahre ich nach Bonn. Besuchst du deinen Bruder? Ja, ich besuche meinen Bruder.",
+          "task": "Describe two plans. Repeat each statement beginning with its time phrase, then ask about your partner’s plans.",
+          "modelAnswer": "Ich fahre morgen nach Bonn. Morgen fahre ich nach Bonn. Ich koche am Abend. Am Abend koche ich. Was machst du morgen? Ich arbeite.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7017,30 +7326,25 @@
     "5": {
       "module": 7,
       "outcomes": [
-        "Order food and ask for a quantity.",
-        "Use frequent accusative objects and polite ordering phrases."
+        "Choose den or einen for a masculine accusative object.",
+        "Say what you have or need for a class."
       ],
-      "pronunciation": "Long / short vowels in everyday food words; use polite request intonation.",
+      "pronunciation": "Compare the masculine article endings clearly.",
       "pronunciationDrills": [
         {
-          "label": "Orders",
-          "text": "Ich hätte gern einen Kaffee. Ein Glas Wasser, bitte.",
-          "instruction": "Use short groups and an understandable polite request."
-        },
-        {
-          "label": "Quantities",
-          "text": "Ein Kilo Äpfel. Zwei Flaschen Wasser. Ein Liter Milch.",
-          "instruction": "Practise quantity and noun together."
+          "label": "Say and apply",
+          "text": "ein Stift. einen Stift. der Stift. den Stift. ein Buch.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play customer and server, including paying.",
-          "modelAnswer": "Was brauchst du für den Kurs? Ich brauche einen Stift und ein Heft. Hast du ein Wörterbuch? Ja, ich habe ein Wörterbuch.",
+          "task": "Ask what your partner needs for a course. Say what you have and what you need, using a masculine and a neuter noun.",
+          "modelAnswer": "Was brauchst du für den Kurs? Ich brauche einen Stift und ein Heft. Hast du ein Wörterbuch? Ja, ich habe ein Wörterbuch. Und du? Ich habe einen Stift.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7062,30 +7366,25 @@
     "6": {
       "module": 8,
       "outcomes": [
-        "Choose nicht or kein in familiar contexts.",
-        "Ask about price, size, colour and payment."
+        "Choose kein for indefinite nouns and nicht for other negation.",
+        "Place nicht correctly in short familiar sentences."
       ],
-      "pronunciation": "Make negation audible; contrast fünfzehn / fünfzig in prices.",
+      "pronunciation": "Stress the negative word so that the meaning stays clear.",
       "pronunciationDrills": [
         {
-          "label": "Colours and sizes",
-          "text": "Blau. Schwarz. Rot. Größe vierzig. Größe zweiundvierzig.",
-          "instruction": "Distinguish colours and numbers without reading."
-        },
-        {
-          "label": "Availability",
-          "text": "In Blau, aber nicht in Rot. Größe vierzig, nicht zweiundvierzig.",
-          "instruction": "Stress the detail that changes the meaning."
+          "label": "Say and apply",
+          "text": "Ich habe kein Auto. Ich komme heute nicht. Das ist nicht teuer.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play buying an item and politely declining an unsuitable option.",
-          "modelAnswer": "Haben Sie diese Jacke in Blau? Leider nicht. Haben Sie eine andere Jacke? Ja, hier ist eine Jacke in Blau.",
+          "task": "Decline an unsuitable item politely and explain what you do not have or do not want.",
+          "modelAnswer": "Möchten Sie diese Jacke? Nein, danke. Sie ist nicht blau. Ich möchte keine rote Jacke. Haben Sie eine blaue Jacke? Leider nicht.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7107,30 +7406,25 @@
     "7": {
       "module": 5,
       "outcomes": [
-        "Keep the finite verb in the correct sentence position.",
-        "Understand digital time, informal time and appointment dates."
+        "Understand digital and informal clock times.",
+        "Ask for an appointment time and confirm it."
       ],
-      "pronunciation": "Sentence stress; contrast halb acht / acht Uhr and quarter-hour expressions.",
+      "pronunciation": "Contrast halb acht with acht Uhr; say the whole time expression.",
       "pronunciationDrills": [
         {
-          "label": "Half hours",
-          "text": "Halb neun. Acht Uhr dreißig. Viertel nach acht. Viertel vor neun.",
-          "instruction": "Say the equivalent clock times to a partner."
-        },
-        {
-          "label": "Dates",
-          "text": "Am ersten Mai. Am zweiten Juni. Am dritten September.",
-          "instruction": "Group the date as one short phrase."
+          "label": "Say and apply",
+          "text": "halb acht: sieben Uhr dreißig. Viertel nach acht. Viertel vor neun.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Ask for a time and repeat it back for confirmation.",
-          "modelAnswer": "Wann ist unser Termin? Am Freitag um halb elf. Also am Freitag um zehn Uhr dreißig? Ja, genau.",
+          "task": "Ask when an appointment is, repeat its time in another form and confirm the day.",
+          "modelAnswer": "Wann ist unser Termin? Am Freitag um halb elf. Also am Freitag um zehn Uhr dreißig? Ja, genau. Vielen Dank.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7152,30 +7446,25 @@
     "8": {
       "module": 6,
       "outcomes": [
-        "Describe a weekday and weekend routine.",
-        "Use common separable verbs and frequency expressions."
+        "Separate the prefix in statements and questions.",
+        "Describe a day using aufstehen, einkaufen and anrufen."
       ],
-      "pronunciation": "Stress the separable prefix: AUFstehen, EINkaufen, ANrufen. Link words in short groups.",
+      "pronunciation": "Stress the separable prefix and keep it audible at the end.",
       "pronunciationDrills": [
         {
-          "label": "Separable verbs",
-          "text": "Aufstehen. Ich stehe auf. Einkaufen. Ich kaufe ein. Anrufen. Ich rufe an.",
-          "instruction": "Hear the prefix stress and pronounce the final prefix."
-        },
-        {
-          "label": "Routine rhythm",
-          "text": "Am Montag arbeite ich. Am Abend kaufe ich ein.",
-          "instruction": "Pause between complete sentences."
+          "label": "Say and apply",
+          "text": "Ich stehe auf. Wir kaufen ein. Rufst du heute an?",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Describe your day and answer a follow-up question.",
-          "modelAnswer": "Wann stehst du auf? Ich stehe um sieben Uhr auf. Was machst du am Abend? Ich kaufe ein und rufe meine Mutter an.",
+          "task": "Describe three routine actions and ask when your partner gets up and calls a friend.",
+          "modelAnswer": "Ich stehe um sieben Uhr auf. Nach der Arbeit kaufe ich ein. Am Abend rufe ich meine Mutter an. Wann stehst du auf? Um acht. Rufst du heute einen Freund an? Ja.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7197,35 +7486,25 @@
     "9": {
       "module": 1,
       "outcomes": [
-        "Greet and introduce yourself using du and Sie.",
-        "Spell your name and ask for repetition."
+        "Recognise useful German sound contrasts.",
+        "Spell a surname and ask for repetition."
       ],
-      "pronunciation": "ei / ie, sch, ich / ach, umlauts and word stress. Practise the alphabet aloud.",
+      "pronunciation": "Say whole words, then spell a name using German letter names.",
       "pronunciationDrills": [
         {
-          "label": "Long and short vowels",
-          "text": "Miete. Mitte. Stadt. Staat.",
-          "instruction": "Listen for length; repeat each word with a pause."
-        },
-        {
-          "label": "ei, ie, eu and umlauts",
-          "text": "Mein. Drei. Sieben. Wie. Neun. Schön. Fünf.",
-          "instruction": "Keep ei and ie distinct; round your lips for ö and ü."
-        },
-        {
-          "label": "sch, sp, st and ch",
-          "text": "Schule. Sprechen. Straße. Ich. Nicht. Buch.",
-          "instruction": "Imitate the word model; ch differs in ich and Buch."
+          "label": "Say and apply",
+          "text": "mein, drei. sieben, wie. Schule. ich, Buch. schön, fünf.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Introduce yourself; spell a surname; respond to Woher kommen Sie?",
-          "modelAnswer": "Wie heißen Sie? Mein Name ist Berg. Können Sie das bitte buchstabieren? B, E, R, G. Können Sie das bitte wiederholen?",
+          "task": "Spell Weber and ask your partner to spell another surname. Ask for repetition.",
+          "modelAnswer": "Mein Name ist Weber: W, E, B, E, R. Wie schreibt man Ihren Namen? Berg: B, E, R, G. Können Sie das bitte wiederholen?",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7234,30 +7513,25 @@
     "10": {
       "module": 2,
       "outcomes": [
-        "Understand prices, ages and contact numbers.",
-        "Transfer someone else’s profile accurately to a form."
+        "Say ages, prices, postcodes and telephone digits accurately.",
+        "Distinguish -zehn and -zig."
       ],
-      "pronunciation": "Contrast dreizehn / dreißig and sechzehn / sechzig. Read numbers slowly, then naturally.",
+      "pronunciation": "Contrast teen and tens numbers, then read a postcode digit by digit.",
       "pronunciationDrills": [
         {
-          "label": "Teen and tens",
-          "text": "Dreizehn. Dreißig. Vierzehn. Vierzig. Sechzehn. Sechzig.",
-          "instruction": "Ask a partner to identify which number you said."
-        },
-        {
-          "label": "Prices and digits",
-          "text": "Zwei Euro fünfzig. Vierundzwanzig. Null, eins, sieben, sechs.",
-          "instruction": "Say telephone digits clearly and compare them with two-digit numbers."
+          "label": "Say and apply",
+          "text": "dreizehn, dreißig. sechzehn, sechzig. Postleitzahl: fünf, drei, eins, eins, eins.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Give an age, postcode and phone number; ask for contact details.",
-          "modelAnswer": "Wie alt sind Sie? Ich bin 24 Jahre alt. Wie ist Ihre Hausnummer? Meine Hausnummer ist 17. Wie ist Ihre Telefonnummer? Null eins sieben sechs, zwei null vier acht, drei eins fünf neun.",
+          "task": "Give an age, postcode and telephone number. Ask your partner for the same information.",
+          "modelAnswer": "Wie alt sind Sie? Ich bin 24 Jahre alt. Wie ist Ihre Postleitzahl? Fünf, drei, eins, eins, eins. Wie ist Ihre Telefonnummer? Null eins sieben sechs, zwei null vier acht, drei eins fünf neun. Und Ihre?",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7266,30 +7540,25 @@
     "11": {
       "module": 2,
       "outcomes": [
-        "Understand prices, ages and contact numbers.",
-        "Transfer someone else’s profile accurately to a form."
+        "Distinguish birthplace from current residence.",
+        "Transfer another person’s details to the right form fields."
       ],
-      "pronunciation": "Contrast dreizehn / dreißig and sechzehn / sechzig. Read numbers slowly, then naturally.",
+      "pronunciation": "Say form fields slowly, then practise short questions naturally.",
       "pronunciationDrills": [
         {
-          "label": "Teen and tens",
-          "text": "Dreizehn. Dreißig. Vierzehn. Vierzig. Sechzehn. Sechzig.",
-          "instruction": "Ask a partner to identify which number you said."
-        },
-        {
-          "label": "Prices and digits",
-          "text": "Zwei Euro fünfzig. Vierundzwanzig. Null, eins, sieben, sechs.",
-          "instruction": "Say telephone digits clearly and compare them with two-digit numbers."
+          "label": "Say and apply",
+          "text": "Vorname. Familienname. Geburtsort. Wohnort. Wie ist Ihr Familienname?",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Give an age, postcode and phone number; ask for contact details.",
-          "modelAnswer": "Woher kommen Sie? Ich komme aus Indien. Wo wohnen Sie? Ich wohne in Bonn. Welche Sprachen sprechen Sie? Ich spreche Hindi, Englisch und Deutsch.",
+          "task": "Ask for surname, birthplace and current town. Repeat the details to confirm a registration.",
+          "modelAnswer": "Wie ist Ihr Familienname? Ali. Wo sind Sie geboren? In Kairo. Wo wohnen Sie jetzt? In Bonn. Also: Familienname Ali, Geburtsort Kairo, Wohnort Bonn. Ja, genau.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7298,30 +7567,25 @@
     "12": {
       "module": 4,
       "outcomes": [
-        "Use articles and common plurals with familiar nouns.",
-        "Describe family members and identify possessions."
+        "Describe family members using possessive words.",
+        "Identify whose person or possession is meant."
       ],
-      "pronunciation": "Practise noun stress and distinguish singular / plural forms in speech.",
+      "pronunciation": "Say possessive words together with their nouns.",
       "pronunciationDrills": [
         {
-          "label": "Nouns and plurals",
-          "text": "Der Sohn. Die Söhne. Die Tochter. Die Töchter. Der Stuhl. Die Stühle.",
-          "instruction": "Listen for the changed vowel and plural ending."
-        },
-        {
-          "label": "Possessive phrases",
-          "text": "Mein Vater. Meine Mutter. Meine Eltern. Meinen Bruder.",
-          "instruction": "Keep the endings audible inside the phrase."
+          "label": "Say and apply",
+          "text": "mein Vater. meine Mutter. unser Sohn. unsere Tochter. euer Bruder. eure Schwester.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Describe two family members and answer a question about each.",
-          "modelAnswer": "Meine Mutter heißt Eva. Sie wohnt in Bonn. Mein Bruder heißt Paul und ist zwanzig Jahre alt. Wo wohnt dein Bruder?",
+          "task": "Describe two family members, including age and town. Ask and answer a question about each.",
+          "modelAnswer": "Meine Mutter heißt Eva. Sie ist 50 Jahre alt und wohnt in Bonn. Mein Bruder heißt Paul. Er ist 20 und wohnt in Köln. Wo wohnt deine Mutter? In Berlin. Wie alt ist dein Bruder? Er ist 18.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7330,30 +7594,25 @@
     "13": {
       "module": 3,
       "outcomes": [
-        "Describe familiar actions in the present tense.",
-        "Ask and answer W-questions and yes/no questions."
+        "Ask W-questions and yes/no questions.",
+        "Use the du and er/sie/es forms of frequent irregular verbs."
       ],
-      "pronunciation": "Final consonants and verb endings -e, -st, -t, -en. Speak a question with natural stress.",
+      "pronunciation": "Contrast unchanged stems with the changed du and er forms.",
       "pronunciationDrills": [
         {
-          "label": "Verb endings",
-          "text": "Ich lerne. Du lernst. Er lernt. Wir lernen. Ihr lernt.",
-          "instruction": "Keep the final consonants audible."
-        },
-        {
-          "label": "Questions",
-          "text": "Wo wohnst du? Wohnst du in Bonn? Welche Sprachen sprichst du?",
-          "instruction": "Copy the phrase rhythm; make the question understandable."
+          "label": "Say and apply",
+          "text": "ich lese. du liest. er liest. ihr lest. ich fahre. du fährst. er fährt.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Exchange questions about home, language and daily actions.",
-          "modelAnswer": "Welche Sprachen sprichst du? Ich spreche Englisch und Deutsch. Liest du gern? Ja, ich lese gern Zeitungen.",
+          "task": "Ask about language, reading and travel. Answer each question with useful information.",
+          "modelAnswer": "Welche Sprachen sprichst du? Englisch und Deutsch. Liest du gern? Ja, ich lese gern. Wohin fährst du heute? Nach Bonn. Fährt dein Bruder auch nach Bonn? Ja.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7362,30 +7621,25 @@
     "14": {
       "module": 6,
       "outcomes": [
-        "Describe a weekday and weekend routine.",
-        "Use common separable verbs and frequency expressions."
+        "Describe a routine with frequency and time phrases.",
+        "Say and write a simple appointment date."
       ],
-      "pronunciation": "Stress the separable prefix: AUFstehen, EINkaufen, ANrufen. Link words in short groups.",
+      "pronunciation": "Practise weekday stress and ordinal date endings.",
       "pronunciationDrills": [
         {
-          "label": "Separable verbs",
-          "text": "Aufstehen. Ich stehe auf. Einkaufen. Ich kaufe ein. Anrufen. Ich rufe an.",
-          "instruction": "Hear the prefix stress and pronounce the final prefix."
-        },
-        {
-          "label": "Routine rhythm",
-          "text": "Am Montag arbeite ich. Am Abend kaufe ich ein.",
-          "instruction": "Pause between complete sentences."
+          "label": "Say and apply",
+          "text": "am zweiten Mai. am dritten Mai. am siebten Mai. am zwanzigsten Mai.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Describe your day and answer a follow-up question.",
-          "modelAnswer": "Am Montag arbeite ich von neun bis fünf. Am Abend lerne ich oft Deutsch. Am Sonntag habe ich frei. Was machst du am Sonntag?",
+          "task": "Describe a working day and a free day. Ask for an appointment date and repeat it back.",
+          "modelAnswer": "Am Montag arbeite ich von neun bis fünf. Am Sonntag habe ich frei. Wann ist der Termin? Am dritten Mai. Also am 3. Mai? Ja, genau.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7394,30 +7648,25 @@
     "15": {
       "module": 7,
       "outcomes": [
-        "Order food and ask for a quantity.",
-        "Use frequent accusative objects and polite ordering phrases."
+        "Order food and drink politely.",
+        "Ask to pay and understand a simple price."
       ],
-      "pronunciation": "Long / short vowels in everyday food words; use polite request intonation.",
+      "pronunciation": "Use a calm request intonation with hätte gern.",
       "pronunciationDrills": [
         {
-          "label": "Orders",
-          "text": "Ich hätte gern einen Kaffee. Ein Glas Wasser, bitte.",
-          "instruction": "Use short groups and an understandable polite request."
-        },
-        {
-          "label": "Quantities",
-          "text": "Ein Kilo Äpfel. Zwei Flaschen Wasser. Ein Liter Milch.",
-          "instruction": "Practise quantity and noun together."
+          "label": "Say and apply",
+          "text": "Ich hätte gern eine Suppe. Einen Tee, bitte. Können wir bitte bezahlen?",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play customer and server, including paying.",
-          "modelAnswer": "Ich hätte gern eine Suppe und einen Tee. Möchten Sie auch Wasser? Ja, ein Glas Wasser, bitte. Können wir bitte bezahlen?",
+          "task": "Act as customer and server: order two items, ask their price and ask to pay.",
+          "modelAnswer": "Guten Tag, ich hätte gern eine Suppe und einen Tee. Gern. Was kostet das? Acht Euro. Können wir bitte bezahlen? Ja, natürlich.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7426,30 +7675,25 @@
     "16": {
       "module": 8,
       "outcomes": [
-        "Choose nicht or kein in familiar contexts.",
-        "Ask about price, size, colour and payment."
+        "Ask about size, colour, price and payment.",
+        "Use diesen with a masculine object."
       ],
-      "pronunciation": "Make negation audible; contrast fünfzehn / fünfzig in prices.",
+      "pronunciation": "Say sizes and prices clearly, then practise shopping questions.",
       "pronunciationDrills": [
         {
-          "label": "Colours and sizes",
-          "text": "Blau. Schwarz. Rot. Größe vierzig. Größe zweiundvierzig.",
-          "instruction": "Distinguish colours and numbers without reading."
-        },
-        {
-          "label": "Availability",
-          "text": "In Blau, aber nicht in Rot. Größe vierzig, nicht zweiundvierzig.",
-          "instruction": "Stress the detail that changes the meaning."
+          "label": "Say and apply",
+          "text": "diesen Pullover. diese Jacke. in Blau. fünfzehn Euro, fünfzig Euro.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play buying an item and politely declining an unsuitable option.",
-          "modelAnswer": "Was kostet die Jacke? Sie kostet 35 Euro. Haben Sie die Jacke in Blau? Ja. Kann ich mit Karte bezahlen? Ja, natürlich.",
+          "task": "Ask for a colour and size, check the price and choose how to pay.",
+          "modelAnswer": "Haben Sie diesen Pullover in Blau? Ja. Welche Größe brauchen Sie? Größe 40. Was kostet er? 35 Euro. Kann ich mit Karte bezahlen? Ja, natürlich.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7458,30 +7702,25 @@
     "17": {
       "module": 9,
       "outcomes": [
-        "Use modal verbs to express ability, need and permission.",
-        "Make and respond to requests; use useful object pronouns."
+        "Express ability, obligation and permission.",
+        "Distinguish nicht müssen from nicht dürfen."
       ],
-      "pronunciation": "Stress the important action and practise sentence brackets without long pauses.",
+      "pronunciation": "Contrast singular modal stems with the plural forms, retaining the umlauts.",
       "pronunciationDrills": [
         {
-          "label": "Obligation and permission",
-          "text": "Du musst nicht kommen. Du darfst nicht kommen.",
-          "instruction": "Stress the modal so the meaning stays clear."
-        },
-        {
-          "label": "Requests and responses",
-          "text": "Können Sie mir bitte helfen? Ja, gern. Tut mir leid.",
-          "instruction": "Practise both request and response with a partner."
+          "label": "Say and apply",
+          "text": "du kannst, ihr könnt. du musst, ihr müsst. du darfst, ihr dürft.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Take turns asking for an object, an action and help.",
-          "modelAnswer": "Kannst du morgen kommen? Leider nicht. Ich muss arbeiten. Wann kannst du kommen? Am Samstag kann ich kommen.",
+          "task": "Ask whether someone can come, explain an obligation and answer a negative question with doch when appropriate.",
+          "modelAnswer": "Kannst du morgen kommen? Ich muss arbeiten. Kannst du am Samstag nicht kommen? Doch, am Samstag kann ich kommen. Dürfen wir hier parken? Nein, hier dürft ihr nicht parken.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7490,30 +7729,25 @@
     "18": {
       "module": 9,
       "outcomes": [
-        "Use modal verbs to express ability, need and permission.",
-        "Make and respond to requests; use useful object pronouns."
+        "Make instructions for du, ihr and Sie.",
+        "Request an object or an action and respond politely."
       ],
-      "pronunciation": "Stress the important action and practise sentence brackets without long pauses.",
+      "pronunciation": "Practise short imperative forms and useful polite requests.",
       "pronunciationDrills": [
         {
-          "label": "Obligation and permission",
-          "text": "Du musst nicht kommen. Du darfst nicht kommen.",
-          "instruction": "Stress the modal so the meaning stays clear."
-        },
-        {
-          "label": "Requests and responses",
-          "text": "Können Sie mir bitte helfen? Ja, gern. Tut mir leid.",
-          "instruction": "Practise both request and response with a partner."
+          "label": "Say and apply",
+          "text": "komm, kommt, kommen Sie. nimm, nehmt, nehmen Sie. fahr, fahrt, fahren Sie.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Take turns asking for an object, an action and help.",
-          "modelAnswer": "Können Sie mir bitte den Schlüssel geben? Ja, gern. Hier, bitte. Vielen Dank. Können Sie bitte die Tür öffnen? Natürlich.",
+          "task": "Make one request for an object and one for an action. Respond positively to one and decline another with a reason.",
+          "modelAnswer": "Können Sie mir bitte einen Stift geben? Ja, gern. Hier, bitte. Können Sie bitte die Tür öffnen? Tut mir leid, ich habe keinen Schlüssel.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7522,30 +7756,25 @@
     "19": {
       "module": 10,
       "outcomes": [
-        "Follow directions and describe a location.",
-        "Understand a housing offer and use common dative phrases."
+        "Ask for and follow short directions.",
+        "Distinguish Wo? from Wohin? in familiar place phrases."
       ],
-      "pronunciation": "Practise dem / den clearly; group prepositions with their noun phrases.",
+      "pronunciation": "Keep the preposition and article together as a phrase.",
       "pronunciationDrills": [
         {
-          "label": "Directions",
-          "text": "Geradeaus. Dann links. Dann rechts. Zum Bahnhof.",
-          "instruction": "Say one clear step at a time."
-        },
-        {
-          "label": "Location phrases",
-          "text": "Mit dem Bus. In der Küche. Auf dem Tisch.",
-          "instruction": "Keep the article inside the phrase."
+          "label": "Say and apply",
+          "text": "im Kino. ins Kino. in der Stadt. in die Stadt. beim Arzt.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Ask for directions and describe where an object is.",
-          "modelAnswer": "Entschuldigung, wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann links. Ist es weit? Nein, es sind fünf Minuten.",
+          "task": "Ask for directions to the station, repeat two steps and ask whether it is far.",
+          "modelAnswer": "Entschuldigung, wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann links. Also geradeaus und links? Ja. Ist es weit? Nein, fünf Minuten.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7554,30 +7783,25 @@
     "20": {
       "module": 10,
       "outcomes": [
-        "Follow directions and describe a location.",
-        "Understand a housing offer and use common dative phrases."
+        "Describe a home and compare a basic housing offer.",
+        "Say where a familiar object is."
       ],
-      "pronunciation": "Practise dem / den clearly; group prepositions with their noun phrases.",
+      "pronunciation": "Say a location phrase as one unit, with a clear final noun.",
       "pronunciationDrills": [
         {
-          "label": "Directions",
-          "text": "Geradeaus. Dann links. Dann rechts. Zum Bahnhof.",
-          "instruction": "Say one clear step at a time."
-        },
-        {
-          "label": "Location phrases",
-          "text": "Mit dem Bus. In der Küche. Auf dem Tisch.",
-          "instruction": "Keep the article inside the phrase."
+          "label": "Say and apply",
+          "text": "auf dem Tisch. in der Küche. neben der Tür. Der Schlüssel liegt auf dem Tisch.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Ask for directions and describe where an object is.",
-          "modelAnswer": "Meine Wohnung hat zwei Zimmer und einen Balkon. Die Küche ist klein. Wo ist der Schlüssel? Er liegt auf dem Tisch.",
+          "task": "Describe the rooms and one feature of a flat. Ask where a key is and answer with a location.",
+          "modelAnswer": "Meine Wohnung hat zwei Zimmer und einen Balkon. Die Küche ist klein. Wo ist der Schlüssel? Er liegt auf dem Tisch. Wie viel kostet die Wohnung? 600 Euro.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7586,30 +7810,25 @@
     "21": {
       "module": 11,
       "outcomes": [
-        "Describe work and arrange or change an appointment.",
-        "Express a basic health need and ask for help."
+        "Explain a work schedule.",
+        "Change an appointment with a reason and a new proposal."
       ],
-      "pronunciation": "Practise clear reasons in short clauses; keep word endings audible.",
+      "pronunciation": "Stress the new appointment day and time.",
       "pronunciationDrills": [
         {
-          "label": "Practical needs",
-          "text": "Mein Hals tut weh. Ich brauche einen Termin beim Arzt.",
-          "instruction": "Practise final consonants and clear short pauses."
-        },
-        {
-          "label": "Appointment changes",
-          "text": "Heute um neun. Morgen um elf. Am Freitag habe ich Zeit.",
-          "instruction": "Stress the new day and time."
+          "label": "Say and apply",
+          "text": "Am Montag arbeite ich. Am Dienstag habe ich Zeit. Können wir den Termin ändern?",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play making an appointment and asking for assistance.",
-          "modelAnswer": "Können wir den Termin ändern? Ich muss am Montag arbeiten. Haben Sie am Dienstag Zeit? Ja, um elf Uhr. Vielen Dank.",
+          "task": "Change an appointment: explain why the old time does not work, propose a new time and confirm it.",
+          "modelAnswer": "Können wir den Termin ändern? Ich muss am Montag arbeiten. Haben Sie am Dienstag um elf Uhr Zeit? Ja. Dann am Dienstag um elf Uhr. Vielen Dank.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7618,30 +7837,25 @@
     "22": {
       "module": 11,
       "outcomes": [
-        "Describe work and arrange or change an appointment.",
-        "Express a basic health need and ask for help."
+        "Describe a basic health problem.",
+        "Request a doctor’s appointment and answer a timing question."
       ],
-      "pronunciation": "Practise clear reasons in short clauses; keep word endings audible.",
+      "pronunciation": "Practise understandable body-part words and short symptom phrases.",
       "pronunciationDrills": [
         {
-          "label": "Practical needs",
-          "text": "Mein Hals tut weh. Ich brauche einen Termin beim Arzt.",
-          "instruction": "Practise final consonants and clear short pauses."
-        },
-        {
-          "label": "Appointment changes",
-          "text": "Heute um neun. Morgen um elf. Am Freitag habe ich Zeit.",
-          "instruction": "Stress the new day and time."
+          "label": "Say and apply",
+          "text": "Mein Hals tut weh. Ich habe Kopfschmerzen. Ich brauche einen Termin.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play making an appointment and asking for assistance.",
-          "modelAnswer": "Guten Tag, mir geht es nicht gut. Ich brauche einen Termin. Wann haben Sie Zeit? Am Dienstag um neun Uhr kann ich kommen.",
+          "task": "Describe a symptom, ask for an appointment and confirm an available time.",
+          "modelAnswer": "Guten Tag, mein Hals tut weh. Ich brauche einen Termin. Können Sie morgen um neun Uhr kommen? Ja. Also morgen um neun Uhr. Vielen Dank.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7650,30 +7864,25 @@
     "23": {
       "module": 12,
       "outcomes": [
-        "Buy a ticket, enquire about a room and understand travel details.",
-        "Understand a simple forecast and describe practical needs."
+        "Buy a ticket and ask about connections.",
+        "Ask a hotel about availability and price."
       ],
-      "pronunciation": "Practise platform numbers, destination names and compound-word stress.",
+      "pronunciation": "Distinguish departure time, destination and track number.",
       "pronunciationDrills": [
         {
-          "label": "Travel details",
-          "text": "Gleis vier. Der Zug fährt um vierzehn Uhr zehn.",
-          "instruction": "Practise consonant groups and unambiguous numbers."
-        },
-        {
-          "label": "Weather",
-          "text": "Es regnet. Es ist kalt. Die Sonne scheint.",
-          "instruction": "Say whole weather phrases naturally."
+          "label": "Say and apply",
+          "text": "Gleis vier. vierzehn Uhr zehn. Hin und zurück, bitte.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play buying a ticket and asking about a hotel room.",
-          "modelAnswer": "Eine Fahrkarte nach Bonn, bitte. Hin und zurück? Ja. Muss ich umsteigen? Nein. Von welchem Gleis fährt der Zug?",
+          "task": "Buy a return ticket and ask about changing trains. Then ask a hotel for a room, its price and breakfast.",
+          "modelAnswer": "Eine Fahrkarte nach Bonn, bitte. Hin und zurück? Ja. Muss ich umsteigen? Nein. Haben Sie ein Einzelzimmer für Freitag? Ja. Was kostet es? 65 Euro. Ist Frühstück dabei? Ja.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7682,30 +7891,25 @@
     "24": {
       "module": 12,
       "outcomes": [
-        "Buy a ticket, enquire about a room and understand travel details.",
-        "Understand a simple forecast and describe practical needs."
+        "Understand and describe simple weather.",
+        "Choose suitable clothing for the conditions."
       ],
-      "pronunciation": "Practise platform numbers, destination names and compound-word stress.",
+      "pronunciation": "Say weather phrases naturally, making the final sounds of kalt and warm clear.",
       "pronunciationDrills": [
         {
-          "label": "Travel details",
-          "text": "Gleis vier. Der Zug fährt um vierzehn Uhr zehn.",
-          "instruction": "Practise consonant groups and unambiguous numbers."
-        },
-        {
-          "label": "Weather",
-          "text": "Es regnet. Es ist kalt. Die Sonne scheint.",
-          "instruction": "Say whole weather phrases naturally."
+          "label": "Say and apply",
+          "text": "Es regnet. Es ist kalt. Die Sonne scheint. Ich brauche eine Jacke.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Role-play buying a ticket and asking about a hotel room.",
-          "modelAnswer": "Wie ist das Wetter heute? Es ist kalt und es regnet. Ich brauche eine Jacke. Was machst du im Sommer? Ich schwimme gern.",
+          "task": "Ask about today’s weather and a season. Say what clothing you need and what activity you choose.",
+          "modelAnswer": "Wie ist das Wetter heute? Es ist kalt und es regnet. Ich brauche eine Jacke. Was machst du im Sommer? Ich schwimme gern. Und im Winter? Ich bleibe gern zu Hause.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7714,30 +7918,25 @@
     "25": {
       "module": 13,
       "outcomes": [
-        "Accept or decline an invitation and arrange a meeting.",
-        "Use war and hatte for simple past explanations."
+        "Invite someone and accept or decline.",
+        "Arrange a meeting place and time."
       ],
-      "pronunciation": "Practise friendly question intonation and clear past verb forms.",
+      "pronunciation": "Practise friendly invitations and responses without reading.",
       "pronunciationDrills": [
         {
-          "label": "Invitations",
+          "label": "Say and apply",
           "text": "Möchtest du mitkommen? Ja, gern. Leider habe ich keine Zeit.",
-          "instruction": "Practise an understandable invitation and response."
-        },
-        {
-          "label": "Past situations",
-          "text": "Ich war krank. Wir hatten keine Zeit.",
-          "instruction": "Keep the past verb distinct from the present form."
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Invite a partner, answer their invitation and give a short reason.",
-          "modelAnswer": "Möchtest du am Samstag ins Kino gehen? Ja, gern. Wann treffen wir uns? Um halb acht vor dem Kino. Gut, bis Samstag.",
+          "task": "Invite your partner to an activity, arrange a meeting and respond to another invitation with a reason.",
+          "modelAnswer": "Möchtest du am Samstag ins Kino gehen? Ja, gern. Wann treffen wir uns? Um halb acht vor dem Kino. Kommst du am Freitag auch mit? Leider nicht, ich muss arbeiten.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7746,30 +7945,25 @@
     "26": {
       "module": 14,
       "outcomes": [
-        "Understand common Perfekt forms and describe completed actions.",
-        "Give a short account of a familiar journey."
+        "Describe familiar completed actions with haben.",
+        "Recognise common irregular and prefix participles."
       ],
-      "pronunciation": "Say auxiliary and participle as one meaning unit; practise irregular participles aloud.",
+      "pronunciation": "Keep auxiliary and participle together as one meaning unit.",
       "pronunciationDrills": [
         {
-          "label": "Past sentence brackets",
-          "text": "Ich habe gekocht. Ich bin gefahren. Wir sind angekommen.",
-          "instruction": "Say the final participle clearly."
-        },
-        {
-          "label": "Past questions",
-          "text": "Was hast du gemacht? Wohin bist du gefahren?",
-          "instruction": "Use complete questions and wait for the answer."
+          "label": "Say and apply",
+          "text": "Ich habe gekocht. Ich habe bezahlt. Ich habe ein Buch gelesen.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Ask and answer Was hast du gestern gemacht? and Wann bist du angekommen?",
-          "modelAnswer": "Was hast du gestern gemacht? Ich habe gearbeitet. Am Abend habe ich gekocht und einen Film gesehen. Hast du Deutsch gelernt?",
+          "task": "Ask what someone did yesterday and when. Answer with two familiar haben past forms.",
+          "modelAnswer": "Was hast du gestern gemacht? Ich habe gearbeitet. Am Abend habe ich gekocht und einen Film gesehen. Wann hast du Deutsch gelernt? Am Morgen.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7778,30 +7972,25 @@
     "27": {
       "module": 14,
       "outcomes": [
-        "Understand common Perfekt forms and describe completed actions.",
-        "Give a short account of a familiar journey."
+        "Describe a short journey using sein past forms.",
+        "Learn each movement verb with its auxiliary and participle."
       ],
-      "pronunciation": "Say auxiliary and participle as one meaning unit; practise irregular participles aloud.",
+      "pronunciation": "Make the final participle clear in journey sentences.",
       "pronunciationDrills": [
         {
-          "label": "Past sentence brackets",
-          "text": "Ich habe gekocht. Ich bin gefahren. Wir sind angekommen.",
-          "instruction": "Say the final participle clearly."
-        },
-        {
-          "label": "Past questions",
-          "text": "Was hast du gemacht? Wohin bist du gefahren?",
-          "instruction": "Use complete questions and wait for the answer."
+          "label": "Say and apply",
+          "text": "Ich bin gefahren. Wir sind angekommen. Ich bin aufgestanden.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Ask and answer Was hast du gestern gemacht? and Wann bist du angekommen?",
-          "modelAnswer": "Wohin bist du gefahren? Ich bin nach Bonn gefahren. Wann bist du zurückgekommen? Am Sonntag. Ich bin zwei Tage geblieben.",
+          "task": "Ask where your partner travelled, when they arrived and when they returned. Switch roles.",
+          "modelAnswer": "Wohin bist du gefahren? Nach Bonn. Wann bist du angekommen? Am Freitag um zehn Uhr. Wann bist du zurückgekommen? Am Sonntag. Und du? Ich bin nach Köln gefahren.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7810,30 +7999,25 @@
     "28": {
       "module": 13,
       "outcomes": [
-        "Accept or decline an invitation and arrange a meeting.",
-        "Use war and hatte for simple past explanations."
+        "Use war and hatte for simple past situations.",
+        "Explain an absence and ask a follow-up question."
       ],
-      "pronunciation": "Practise friendly question intonation and clear past verb forms.",
+      "pronunciation": "Contrast present and past forms clearly.",
       "pronunciationDrills": [
         {
-          "label": "Invitations",
-          "text": "Möchtest du mitkommen? Ja, gern. Leider habe ich keine Zeit.",
-          "instruction": "Practise an understandable invitation and response."
-        },
-        {
-          "label": "Past situations",
-          "text": "Ich war krank. Wir hatten keine Zeit.",
-          "instruction": "Keep the past verb distinct from the present form."
+          "label": "Say and apply",
+          "text": "ich bin, ich war. ich habe, ich hatte. wir sind, wir waren.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Invite a partner, answer their invitation and give a short reason.",
-          "modelAnswer": "Warum warst du gestern nicht da? Ich war krank und hatte einen Termin beim Arzt. Geht es dir heute besser? Ja, danke.",
+          "task": "Explain why you were absent yesterday and ask how the other person is today.",
+          "modelAnswer": "Warum warst du gestern nicht da? Ich war krank und hatte einen Termin beim Arzt. Geht es dir heute besser? Ja, danke. Und wie war der Kurs? Sehr gut.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7842,30 +8026,25 @@
     "29": {
       "module": 15,
       "outcomes": [
-        "Read short messages, select advertisements and interpret signs.",
-        "Find details in dialogues, public announcements and phone messages."
+        "Check all relevant conditions in an advertisement.",
+        "Interpret notices in their stated location and situation."
       ],
-      "pronunciation": "Listen to several unfamiliar voices; practise number and time contrasts.",
+      "pronunciation": "Read practical notices aloud with clear pauses.",
       "pronunciationDrills": [
         {
-          "label": "Corrections",
-          "text": "Nicht um neun. Um halb zehn. Nicht Raum elf. Raum zwölf.",
-          "instruction": "Stress the corrected information."
-        },
-        {
-          "label": "Listening contrasts",
-          "text": "Fünfzehn. Fünfzig. Siebzehn. Siebzig. Dreißig. Dreizehn.",
-          "instruction": "Let a partner choose a number and ask you to identify it."
+          "label": "Say and apply",
+          "text": "Heute geschlossen. Geöffnet ab zehn Uhr. Bitte benutzen Sie den Eingang rechts.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Summarise a practical instruction and ask for clarification.",
-          "modelAnswer": "Ist die Bibliothek heute geöffnet? Nein, sie ist geschlossen. Wann öffnet sie wieder? Morgen um neun Uhr.",
+          "task": "Explain a notice to your partner, then ask when a place reopens and which entrance to use.",
+          "modelAnswer": "Ist die Bibliothek heute geöffnet? Nein, sie ist geschlossen. Wann öffnet sie wieder? Morgen um neun Uhr. Welchen Eingang benutzen wir? Den Eingang rechts.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7874,30 +8053,25 @@
     "30": {
       "module": 15,
       "outcomes": [
-        "Read short messages, select advertisements and interpret signs.",
-        "Find details in dialogues, public announcements and phone messages."
+        "Identify corrected details in a recording.",
+        "Ask for repetition and confirm a number or time."
       ],
-      "pronunciation": "Listen to several unfamiliar voices; practise number and time contrasts.",
+      "pronunciation": "Stress the final corrected information and contrast -zehn with -zig.",
       "pronunciationDrills": [
         {
-          "label": "Corrections",
-          "text": "Nicht um neun. Um halb zehn. Nicht Raum elf. Raum zwölf.",
-          "instruction": "Stress the corrected information."
-        },
-        {
-          "label": "Listening contrasts",
-          "text": "Fünfzehn. Fünfzig. Siebzehn. Siebzig. Dreißig. Dreizehn.",
-          "instruction": "Let a partner choose a number and ask you to identify it."
+          "label": "Say and apply",
+          "text": "Nicht um neun, sondern um zehn. fünfzehn, fünfzig. dreizehn, dreißig.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Summarise a practical instruction and ask for clarification.",
-          "modelAnswer": "Unser Termin ist um halb neun. Können Sie das bitte wiederholen? Um acht Uhr dreißig. Vielen Dank. Ich komme um halb neun.",
+          "task": "Tell your partner a time, correct it, then ask them to repeat the final arrangement.",
+          "modelAnswer": "Unser Termin ist um neun Uhr. Entschuldigung, nicht um neun, sondern um halb zehn. Können Sie das bitte wiederholen? Um neun Uhr dreißig. Also um halb zehn? Ja, genau.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7906,30 +8080,25 @@
     "31": {
       "module": 16,
       "outcomes": [
-        "Complete form fields and write a clear three-point short message.",
-        "Perform introduction, information exchange and request-response rounds."
+        "Write a message covering three requested points.",
+        "Choose a suitable greeting, ending and recipient register."
       ],
-      "pronunciation": "Focus on intelligibility, natural pauses and repair phrases; vary the practice partner.",
+      "pronunciation": "Read a short request aloud in clear sentence groups.",
       "pronunciationDrills": [
         {
-          "label": "Spelling and numbers",
-          "text": "Mein Name ist Berg. B, E, R, G. Meine Hausnummer ist vierzehn.",
-          "instruction": "Spell slowly and clearly; use German letter names."
-        },
-        {
-          "label": "Repair phrases",
-          "text": "Bitte langsam. Noch einmal, bitte. Können Sie das bitte wiederholen?",
-          "instruction": "Use these independently when you do not understand."
+          "label": "Say and apply",
+          "text": "Guten Tag Frau Klein. Haben Sie am Montag einen Termin für mich? Vielen Dank.",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Do all three speaking parts with a partner or tutor and obtain feedback.",
-          "modelAnswer": "Können wir uns am Montag treffen? Leider kann ich am Montag nicht kommen. Hast du am Dienstag Zeit? Ja, am Dienstag habe ich Zeit.",
+          "task": "Practise a formal appointment request aloud: cancel, give a reason and ask for a new appointment.",
+          "modelAnswer": "Guten Tag Frau Klein, leider kann ich am Freitag nicht kommen. Ich muss arbeiten. Haben Sie am Montag einen Termin für mich? Ja, um elf Uhr. Vielen Dank.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }
@@ -7938,30 +8107,25 @@
     "32": {
       "module": 16,
       "outcomes": [
-        "Complete form fields and write a clear three-point short message.",
-        "Perform introduction, information exchange and request-response rounds."
+        "Introduce yourself, spell a name and give a number.",
+        "Exchange an information question and a request without a script."
       ],
-      "pronunciation": "Focus on intelligibility, natural pauses and repair phrases; vary the practice partner.",
+      "pronunciation": "Use clear pauses and repair phrases when you need them.",
       "pronunciationDrills": [
         {
-          "label": "Spelling and numbers",
-          "text": "Mein Name ist Berg. B, E, R, G. Meine Hausnummer ist vierzehn.",
-          "instruction": "Spell slowly and clearly; use German letter names."
-        },
-        {
-          "label": "Repair phrases",
-          "text": "Bitte langsam. Noch einmal, bitte. Können Sie das bitte wiederholen?",
-          "instruction": "Use these independently when you do not understand."
+          "label": "Say and apply",
+          "text": "Langsamer, bitte. Noch einmal, bitte. Können Sie das bitte wiederholen?",
+          "instruction": "Listen, repeat, then change one detail and say the phrase from memory."
         }
       ],
       "speaking": [
         {
-          "task": "Do all three speaking parts with a partner or tutor and obtain feedback.",
-          "modelAnswer": "Ich heiße Amir und wohne in Bonn. Was isst du zum Frühstück? Ich esse Brot. Können Sie mir bitte einen Stift geben? Ja, gern. Hier, bitte.",
+          "task": "Give a short introduction, spell a surname and say a number. Exchange a question and answer, then a request and response.",
+          "modelAnswer": "Ich heiße Amir Khan. Ich bin 25 Jahre alt. Ich komme aus Indien und wohne in Bonn. Ich spreche Hindi und Deutsch. Ich bin Student. Mein Hobby ist Fußball. Khan: K, H, A, N. Meine Hausnummer ist 18. Was isst du zum Frühstück? Brot. Können Sie mir bitte einen Stift geben? Ja, gern.",
           "checklist": [
-            "I answered the actual task.",
-            "My partner could understand me.",
-            "I asked or answered a follow-up question.",
+            "I answered every part of the task.",
+            "My partner understood me.",
+            "I asked and answered a relevant question.",
             "I asked for repetition when needed."
           ]
         }

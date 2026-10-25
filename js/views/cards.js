@@ -121,7 +121,7 @@ function intro() {
     return `Words come back just before you'd forget them: after 1, 3, 7, 14 and 30 days when you know them, the same day when you don't. Due now: <b class="num" id="dueNum">${deck.length}</b>.`;
   }
   if (scope.fresh) {
-    return `Up to ${NEW_PER_DAY} new words a day from the ${scope.level.name} topics. Once you answer a card, the word joins your review queue. New words left today: <b class="num" id="newNum">${deck.length}</b>.`;
+    return `Up to ${NEW_PER_DAY} new words a day ${scope.level.course ? "from your current module and earlier vocabulary gaps" : `from the ${scope.level.name} topics`}. Once you answer a card, the word joins your review queue. New words left today: <b class="num" id="newNum">${deck.length}</b>.`;
   }
   return `Tap the card to see the meaning. Words known in this deck: <b class="num" id="knownNum">${knownIn(deckWords)}</b> of ${deckWords.length}.`;
 }
@@ -133,7 +133,7 @@ function wordList() {
   const rows = deck
     .map((w) => {
       const pl = pluralText(w);
-      const forms = pl ? `<span class="pl"${w.pl.length > 2 ? ' lang="de"' : ""}>${esc(pl)}</span>` : "";
+      const forms = (pl ? `<span class="pl"${w.pl.length > 2 ? ' lang="de"' : ""}>${esc(pl)}</span>` : "") + (w.forms ? `<span class="pl" lang="de">${esc(w.forms)}</span>` : "");
       const ex = w.ex
         ? `<div class="wl-ex">${speakerButton(w.ex.de)}<div><div class="de-line" lang="de">${esc(w.ex.de)}</div><div class="en-line">${esc(w.ex.en)}</div></div></div>`
         : "";
@@ -177,9 +177,9 @@ function emptyPanel() {
     const review = due ? `<a class="btn" href="#/karten?l=due">Review ${due} ${due === 1 ? "word" : "words"}</a>` : "";
     if (!topic) {
       return panel(
-        `Every ${level.name} topic started`,
-        `All the words from the ${level.name} topics are in your review queue.`,
-        review || `<a class="btn" href="#/karten?l=${level.id}">Practise all ${level.name} words</a>`,
+        level.course ? 'Module vocabulary in review' : `Every ${level.name} topic started`,
+        level.course ? 'The vocabulary for your current module is in your review queue. Complete its lessons and checkpoint to bring in the next module’s words.' : `All the words from the ${level.name} topics are in your review queue.`,
+        `<div class="btn-row">${review || `<a class="btn" href="#/karten?l=${level.id}">Practise all ${level.name} words</a>`}${level.course ? `<a class="btn ghost" href="#/${level.id}/roadmap">Continue your module</a>` : ''}</div>`,
       );
     }
     const more = `<a class="btn${review ? " ghost" : ""}" href="#/karten?l=${topic.key}">Keep going: ${esc(topic.title)}</a>`;
@@ -232,7 +232,8 @@ function backFace(card) {
   const ex = card.ex
     ? `<span class="ex"><span lang="de">${esc(card.ex.de)}</span><span class="ex-en">${esc(card.ex.en)}</span></span>`
     : "";
-  return `<div class="face back${card.ex ? " has-ex" : ""}"><span class="word${wordSize(card.en)}">${esc(card.en)}</span><span class="forms"><span lang="de">${esc(card.de)}</span>${plural}</span>${ex}</div>`;
+  const verbs = card.forms ? `<span class="verb-forms" lang="de">${esc(card.forms)}</span>` : "";
+  return `<div class="face back${card.ex ? " has-ex" : ""}"><span class="word${wordSize(card.en)}">${esc(card.en)}</span><span class="forms"><span lang="de">${esc(card.de)}</span>${plural}</span>${verbs}${ex}</div>`;
 }
 
 function drawCard() {
@@ -261,6 +262,7 @@ function drawCard() {
   document.getElementById("cardHint").hidden = false;
   const index = pos % deck.length;
   const card = deck[index];
+  box.classList.toggle('has-verb-forms', !!card.forms);
   const why = reason(card.de);
   const badge = why ? `<span class="why is-${why.kind}">${esc(why.text)}</span>` : "";
   const hint = !scope.due && !scope.fresh && knownIn([card.de]) ? "Marked known before" : "Tap to flip";

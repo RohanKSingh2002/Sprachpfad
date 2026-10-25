@@ -1,4 +1,11 @@
 /* Flashcards page */
+.verb-forms {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 8px;
+  opacity: 0.85;
+}
 
 /* Flashcards */
 .cards-head {
@@ -38,6 +45,9 @@ select {
   max-width: 460px;
   height: 290px;
   margin: 26px auto 0;
+}
+.deck.has-verb-forms {
+  height: 340px;
 }
 .deck:not(.empty)::before,
 .deck:not(.empty)::after {

@@ -6,6 +6,7 @@
 //   #/a2/test               mock test
 //   #/a2/zertifikat         certificate
 //   #/karten?l=a2-3         flashcards (l: due, all, a level or a lesson)
+//   #/profile               practice calendar, level progress and test results
 //
 // Pages read their own options from the query (?part=exercises on a lesson, ?l= on flashcards).
 //
@@ -13,6 +14,9 @@
 
 import { LEVEL_BY_ID } from "./content.js";
 import { currentLevel, setLevel } from "./state.js";
+import { currentUser } from "./auth.js";
+import { hasEnteredAsGuest } from "./entry.js";
+import { progressStatus } from "./progress.js";
 import { updateDueBadges } from "./ui/duebadge.js";
 import { slidePill } from "./ui/effects.js";
 import { gsap, motionOK, runCleanups, ScrollTrigger } from "./ui/motion.js";
@@ -23,9 +27,11 @@ import * as home from "./views/home.js";
 import * as lesson from "./views/lesson.js";
 import * as notFound from "./views/notfound.js";
 import * as practice from "./views/practice.js";
+import * as profile from "./views/profile.js";
 import * as roadmap from "./views/roadmap.js";
 import * as test from "./views/test.js";
 import * as workshop from "./views/workshop.js";
+import * as account from "./views/account.js";
 
 let active = null;
 let firstRoute = true;
@@ -45,6 +51,11 @@ function rewrite(path) {
 
 function resolve() {
   let path = location.hash.replace(/^#/, "") || "/";
+  if (!currentUser() && !hasEnteredAsGuest()) path = rewrite("/login");
+  if (currentUser() && progressStatus().blocked) {
+    return { path, view: account, param: "status", nav: "profile", title: "Your account" };
+  }
+  if (path.split("?")[0] === "/login" && currentUser()) path = rewrite("/profile");
   const oldLesson = path.match(/^\/lektion\/(\d+)$/);
   if (oldLesson) path = rewrite(`/a1/lektion/${oldLesson[1]}`);
   else if (path === "/zertifikat") path = rewrite("/a1/zertifikat");
@@ -54,10 +65,12 @@ function resolve() {
 }
 
 function match(path) {
+  if (path === "/login") return { view: account, param: "login", nav: "profile", title: "Sign in" };
   if (path === "/") return { view: home, param: currentLevel(), nav: "home" };
   if (path === "/karten") return { view: cards, nav: "karten", title: "Flashcards" };
   if (path === "/practice") return { view: practice, param: currentLevel(), nav: "practice", title: "Practice" };
-  if (path === "/roadmap") return { view: roadmap, param: LEVEL_BY_ID.a1, nav: "lessons", title: "A1 lessons" };
+  if (path === "/profile") return { view: profile, param: currentLevel(), nav: "profile", title: "Your profile" };
+  if (path === "/roadmap") return { view: roadmap, param: currentLevel(), nav: "lessons", title: `${currentLevel().name} lessons` };
 
   const [, id, rest = ""] = path.match(/^\/([a-z0-9]+)(\/.*)?$/) || [];
   const level = LEVEL_BY_ID[id];
@@ -114,14 +127,14 @@ function placeNavPills(animate) {
  * first; switching level on the same kind of page (home, test, flashcards) lets that page animate
  * the change itself.
  */
-export function route() {
+export function route(options = {}) {
   const next = resolve();
   const app = document.getElementById("app");
   const from = active;
   leaving?.kill();
   leaving = null;
   const sameKind = from === next.view && next.view.updatesInPlace;
-  if (motionOK() && !firstRoute && !sameKind && app.firstElementChild) {
+  if (!options.immediate && motionOK() && !firstRoute && !sameKind && app.firstElementChild) {
     app.classList.add("is-leaving");
     leaving = gsap.to(app, {
       autoAlpha: 0,
@@ -144,6 +157,7 @@ function show({ view, param, nav = "", title = "German A1–B1 practice", path }
   from?.unmount?.();
   app.classList.remove("is-leaving");
   gsap?.set(app, { clearProps: "opacity,visibility,transform" });
+  document.body.classList.toggle("entry-screen", view === account);
   app.innerHTML = view.render(param);
   app.dataset.route = path;
   active = view;

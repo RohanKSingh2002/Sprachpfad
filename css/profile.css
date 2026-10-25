@@ -1,0 +1,374 @@
+/* Profile: a calm progress overview, practice calendar, levels and saved mock test results. */
+.profile-page {
+  padding: 44px 0 28px;
+}
+.profile-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+.profile-head > div {
+  min-width: 0;
+}
+.profile-head h1 {
+  margin-bottom: 12px;
+}
+.profile-head p:last-child {
+  margin-bottom: 0;
+}
+.profile-head > .btn {
+  flex-shrink: 0;
+  margin-bottom: 3px;
+}
+.profile-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.profile-save-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 18px 0 28px;
+}
+.profile-save-note::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.profile-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 0 12px;
+  padding: 24px 28px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--highlight), var(--shadow-1);
+}
+.profile-metric + .profile-metric {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+.profile-metric dt {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.profile-metric dd {
+  margin: 0;
+}
+.profile-metric dd b {
+  display: block;
+  font: 700 clamp(36px, 5vw, 46px)/1 var(--cond);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 8px;
+}
+.profile-metric dd > span {
+  color: var(--muted);
+  font-size: 15px;
+}
+.profile-section {
+  padding: 40px 0;
+}
+.profile-section + .profile-section {
+  border-top: 1px solid var(--line);
+}
+.profile-section-head {
+  margin-bottom: 22px;
+}
+.profile-section-head h2 {
+  margin-bottom: 10px;
+}
+.profile-section-head p {
+  margin-bottom: 0;
+}
+.profile-practice {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 42px;
+}
+.profile-practice-copy h2 {
+  margin-bottom: 12px;
+}
+.profile-practice-copy > .muted {
+  margin-bottom: 14px;
+}
+.profile-activity-summary {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.profile-calendar {
+  min-width: 0;
+}
+.profile-calendar-chart {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+}
+.profile-weekdays {
+  display: grid;
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+  gap: 4px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+.profile-heat {
+  display: grid;
+  grid-template-rows: repeat(7, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 4px;
+}
+.profile-heat-cell {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--sunken);
+}
+.profile-heat-l1 {
+  background: color-mix(in srgb, var(--ok) 32%, var(--sunken));
+}
+.profile-heat-l2 {
+  background: color-mix(in srgb, var(--ok) 56%, var(--sunken));
+}
+.profile-heat-l3 {
+  background: color-mix(in srgb, var(--ok) 80%, var(--sunken));
+}
+.profile-heat-l4 {
+  background: var(--ok);
+}
+.profile-heat-today {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}
+.profile-heat-future {
+  visibility: hidden;
+}
+.profile-calendar-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 10px 0 14px 36px;
+}
+.profile-heat-legend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.profile-heat-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.profile-heat-legend .profile-heat-cell {
+  width: 12px;
+  height: 12px;
+  flex: none;
+}
+.profile-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.profile-level-card,
+.profile-test-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--highlight), var(--shadow-1);
+}
+.profile-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.profile-card-head h3 {
+  font-size: 26px;
+  margin: 0;
+}
+.profile-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--sunken);
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+.profile-status-complete {
+  color: var(--ok);
+  background: var(--ok-bg);
+}
+.profile-level-count {
+  margin-bottom: 14px;
+}
+.profile-level-count > b {
+  display: block;
+  font: 700 32px/1 var(--cond);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 6px;
+}
+.profile-level-count > b > span {
+  color: var(--muted);
+  font-size: 22px;
+  font-weight: 500;
+}
+.profile-level-count > span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.profile-progress {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--sunken);
+  overflow: hidden;
+}
+.profile-progress-fill {
+  display: block;
+  height: 100%;
+  background: var(--ok);
+  border-radius: inherit;
+}
+.profile-level-words {
+  margin: 12px 0 22px;
+}
+.profile-card-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px 18px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+.profile-secondary-link {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-bottom: 3px;
+}
+.profile-secondary-link:hover {
+  color: var(--text);
+}
+.profile-test-score {
+  font: 500 24px/1 var(--cond);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.profile-test-score b {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text);
+}
+.profile-test-date {
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+.profile-test-empty {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.profile-test-detail {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+.profile-test-note {
+  margin: 18px 0 0;
+}
+@media (max-width: 860px) {
+  .profile-practice {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .profile-practice-copy > .muted {
+    max-width: 65ch;
+  }
+  .profile-calendar {
+    max-width: 680px;
+  }
+  .profile-card-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .profile-card-head {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .profile-page {
+    padding-top: 28px;
+  }
+  .profile-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .profile-save-note {
+    margin: 18px 0 22px;
+  }
+  .profile-overview {
+    padding: 20px 16px;
+    gap: 12px;
+  }
+  .profile-metric + .profile-metric {
+    padding-left: 12px;
+  }
+  .profile-metric dt,
+  .profile-metric dd > span {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .profile-metric dt {
+    min-height: 35px;
+  }
+  .profile-metric dd b {
+    font-size: 36px;
+  }
+  .profile-section {
+    padding: 30px 0;
+  }
+  .profile-heat,
+  .profile-weekdays {
+    gap: 3px;
+  }
+  .profile-heat-legend {
+    justify-content: flex-start;
+    margin-left: 36px;
+    column-gap: 9px;
+  }
+  .profile-heat-legend > span:first-child {
+    flex-basis: 100%;
+  }
+  .profile-level-card,
+  .profile-test-card {
+    padding: 20px;
+  }
+}

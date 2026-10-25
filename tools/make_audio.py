@@ -7,8 +7,9 @@ the same, in every browser and offline. Run this after adding or changing German
     python tools/make_audio.py            # records only what's missing
     python tools/make_audio.py --prune    # also deletes recordings nothing uses any more
 
-The voice is Thorsten (Piper de_DE-thorsten-high: CC0 voice data, MIT model), run locally with
-sherpa-onnx. The model (about 115 MB) is downloaded once into tools/.models/ (kept out of git).
+The main voice is Thorsten (Piper de_DE-thorsten-high: CC0 voice data, MIT model).
+Authored dialogues alternate Thorsten and Kerstin (de_DE-kerstin-low, CC0 voice data).
+Both run locally with sherpa-onnx. Models are downloaded once into tools/.models/ (kept out of git).
 File names are a hash of the text, computed the same way in js/ui/audio.js.
 """
 
@@ -31,6 +32,7 @@ MODELS = Path(__file__).resolve().parent / ".models"
 VOICE = "vits-piper-de_DE-thorsten-high"
 VOICE_URL = f"https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/{VOICE}.tar.bz2"
 VOICE_LABEL = "Thorsten (Piper de_DE-thorsten-high)"
+SECOND_VOICE = "vits-piper-de_DE-kerstin-low"
 BITRATE = 48  # kbit/s, mono
 
 
@@ -82,6 +84,12 @@ def spoken_texts():
     return [t for t in texts if t.strip()]
 
 
+def dialogue_segments():
+    """Authored speaker turns; the combined file keeps the hash of the visible transcript."""
+    course = json.loads((DATA / "a1-course.json").read_text(encoding="utf-8"))
+    return {item["audioText"]: item["segments"] for item in course["test"]["listening"] if item.get("segments")}
+
+
 # Spellings the voice says more clearly than the written form (the file still belongs to the written form)
 SAY_AS = {
     "kennenlernen": "kennen lernen",
@@ -130,6 +138,11 @@ def for_speech(text):
     elif len(text) > 2 and text[1] == " " and text[0] in LETTER_NAMES and text[2:].startswith("wie "):
         text = f"{LETTER_NAMES[text[0]]}, {text[2:]}"
     text = SAY_AS.get(text, text)
+    # Read contact digits individually and spell surnames using German letter names.
+    digit_names = ["null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun"]
+    text = re.sub(r"(?<!\w)0\d{3,}(?: \d{2,})*(?!\w)", lambda m: ", ".join(digit_names[int(c)] for c in m[0] if c.isdigit()), text)
+    text = re.sub(r"(?<!\d)\d{5}(?!\d)", lambda m: ", ".join(digit_names[int(c)] for c in m[0]), text)
+    text = re.sub(r"(?<!\w)[A-ZÄÖÜ](?=\s*[,\.]|\s*$)", lambda m: LETTER_NAMES[m[0]], text)
     for pattern, spoken in RESPELL:
         text = re.sub(pattern, spoken, text)
     text = text.replace(" — ", " ").replace("—", ", ")
@@ -175,14 +188,15 @@ def clip_id(text):
 # ---------- voice ----------
 
 
-def ensure_model():
-    folder = MODELS / VOICE
+def ensure_model(voice=VOICE):
+    folder = MODELS / voice
     if (folder / "tokens.txt").exists():
         return folder
     MODELS.mkdir(parents=True, exist_ok=True)
-    archive = MODELS / f"{VOICE}.tar.bz2"
-    print(f"Downloading the voice (about 115 MB) from {VOICE_URL}")
-    urllib.request.urlretrieve(VOICE_URL, archive)
+    archive = MODELS / f"{voice}.tar.bz2"
+    url = f"https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/{voice}.tar.bz2"
+    print(f"Downloading the voice from {url}", flush=True)
+    urllib.request.urlretrieve(url, archive)
     with tarfile.open(archive, "r:bz2") as tar:
         try:
             tar.extractall(MODELS, filter="data")
@@ -196,7 +210,7 @@ def load_voice(folder):
     import sherpa_onnx
 
     vits = sherpa_onnx.OfflineTtsVitsModelConfig(
-        model=str(folder / "de_DE-thorsten-high.onnx"),
+        model=str(next(folder.glob("*.onnx"))),
         tokens=str(folder / "tokens.txt"),
         data_dir=str(folder / "espeak-ng-data"),
         lexicon="",
@@ -237,6 +251,20 @@ def to_mp3(pcm, rate):
     return encoder.encode(pcm) + encoder.flush()
 
 
+def record_dialogue(voices, segments, speed):
+    parts = []
+    output_rate = None
+    for segment in segments:
+        pcm, rate = record(voices[segment["voice"]], segment["text"], speed)
+        samples = np.frombuffer(pcm, dtype="<i2").astype(np.float32)
+        output_rate = output_rate or rate
+        if rate != output_rate:
+            count = round(len(samples) * output_rate / rate)
+            samples = np.interp(np.arange(count) * rate / output_rate, np.arange(len(samples)), samples)
+        parts.extend([samples.astype("<i2"), np.zeros(round(output_rate * 0.25), dtype="<i2")])
+    return np.concatenate(parts).tobytes(), output_rate
+
+
 # ---------- main ----------
 
 
@@ -248,6 +276,7 @@ def main():
     args = parser.parse_args()
 
     texts = spoken_texts()
+    dialogues = dialogue_segments()
     ids = {text: clip_id(text) for text in texts}
     if len(set(ids.values())) != len(ids):
         sys.exit("Two texts got the same file name; change one of them slightly.")
@@ -257,12 +286,13 @@ def main():
 
     if todo:
         tts = load_voice(ensure_model())
+        second = load_voice(ensure_model(SECOND_VOICE)) if any(t in dialogues for t in todo) else None
         start = time.time()
         for n, text in enumerate(todo, 1):
-            pcm, rate = record(tts, text, args.speed)
+            pcm, rate = record_dialogue([tts, second], dialogues[text], args.speed) if text in dialogues else record(tts, text, args.speed)
             (AUDIO / f"{ids[text]}.mp3").write_bytes(to_mp3(pcm, rate))
             if n % 25 == 0 or n == len(todo):
-                print(f"  {n}/{len(todo)} recorded ({time.time() - start:.0f}s)")
+                print(f"  {n}/{len(todo)} recorded ({time.time() - start:.0f}s)", flush=True)
 
     if args.prune:
         used = {f"{i}.mp3" for i in ids.values()}
@@ -271,7 +301,7 @@ def main():
             p.unlink()
         print(f"{len(stale)} unused recordings deleted")
 
-    manifest = {"voice": VOICE_LABEL, "speed": args.speed, "clips": sorted(ids.values())}
+    manifest = {"voice": VOICE_LABEL, "dialogueVoices": [VOICE_LABEL, "Kerstin (Piper de_DE-kerstin-low)"], "dialogues": [ids[t] for t in dialogues], "speed": args.speed, "clips": sorted(ids.values())}
     (AUDIO / "index.json").write_text(json.dumps(manifest, indent=0) + "\n", encoding="utf-8")
     print(f"audio/index.json lists {len(ids)} recordings")
 

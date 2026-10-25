@@ -74,16 +74,17 @@ function voicesReady() {
   });
 }
 
-async function speakWithVoice(text, button) {
+async function speakWithVoice(text, button, request) {
   if (!("speechSynthesis" in window)) {
     toast("Audio isn't available in this browser.");
-    return;
+    return false;
   }
   await voicesReady();
+  if (request !== playbackRequest) return false;
   pickVoice();
   if (!germanVoice) {
     toast("No German voice for this line in this browser. Add German in your system's speech settings.");
-    return;
+    return false;
   }
   const u = new SpeechSynthesisUtterance(text);
   u.voice = germanVoice;
@@ -94,6 +95,7 @@ async function speakWithVoice(text, button) {
     if (playing === button) markPlaying(null);
   };
   speechSynthesis.speak(u);
+  return true;
 }
 
 /* ---------- playing recordings ---------- */
@@ -102,6 +104,7 @@ async function speakWithVoice(text, button) {
 const player = new Audio();
 let owner = null; // button whose recording is in the player
 let playing = null; // button showing the "playing" ring
+let playbackRequest = 0;
 
 function markPlaying(button) {
   playing?.classList.remove("is-playing");
@@ -127,25 +130,28 @@ export function initAudio() {
 }
 
 /** Read German text aloud; the button that asked (if any) shows a pulsing ring while it plays. */
-export function speak(text, button = null) {
-  if (!text || !text.trim()) return;
+export async function speak(text, button = null) {
+  if (!text || !text.trim()) return false;
   stop();
+  const request = ++playbackRequest;
   const id = clipId(text);
   if (clips && !clips.has(id)) {
-    speakWithVoice(text, button);
-    return;
+    return speakWithVoice(text, button, request);
   }
   owner = button;
   markPlaying(button);
   player.src = new URL(`${id}.mp3`, AUDIO_DIR).href;
-  player.play().catch((err) => {
-    if (err.name === "AbortError" || owner !== button) return; // another line started
+  try {
+    await player.play();
+    return true;
+  } catch (err) {
+    if (err.name === "AbortError" || owner !== button) return false; // another line started
     // the recording is missing or can't be played here: use the browser's German voice instead
     if (playing === button) markPlaying(null);
-    speakWithVoice(text, button);
-  });
+    return speakWithVoice(text, button, request);
+  }
 }
 
 /** Round speaker button; any button with data-say is played by the click handler in main.js. */
-export const speakerButton = (text) =>
-  `<button class="spk" type="button" data-say="${esc(text)}" aria-label="Play audio: ${esc(text)}">${SPEAKER_ICON}</button>`;
+export const speakerButton = (text, label = `Play audio: ${text}`) =>
+  `<button class="spk" type="button" data-say="${esc(text)}" aria-label="${esc(label)}">${SPEAKER_ICON}</button>`;

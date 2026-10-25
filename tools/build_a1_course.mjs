@@ -5,6 +5,10 @@ import { fileURLToPath } from 'node:url';
 import { a1Test } from './a1_exam_content.mjs';
 import { curriculumDocument } from './a1_curriculum_document.mjs';
 import { workshops } from './a1_workshop_content.mjs';
+import { lessonSupport } from './a1_lesson_support.mjs';
+import { correctLessons } from './a1_review_corrections.mjs';
+import { enrichVocabulary, addEssentialVocabulary } from './a1_vocabulary_support.mjs';
+import { strengthenA1 } from './reference_learning_support.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pair = (de, en) => ({ de, en });
 const vocab = (rows) => rows.map(([de, en, pl]) => ({ de, en, ...(pl ? { pl } : {}) }));
@@ -204,7 +208,7 @@ lesson(29, 'Reading messages, advertisements and signs', 'Lesen im Alltag',
   ['Read the question first so you know what detail matters.', 'Circle dates, prices and opening hours mentally, then read the words around them.', 'A word appearing in both question and text does not prove the answer.', 'Beware of nicht, kein, nur, ab and geschlossen.', 'When choosing an advertisement, compare every important condition, including the time and place.'],
   [['Nur für Mitarbeiter.', 'For staff only.'], ['Heute geschlossen.', 'Closed today.'], ['Geöffnet ab zehn Uhr.', 'Open from ten o’clock.'], ['Bitte den anderen Eingang benutzen.', 'Please use the other entrance.']],
   [['geschlossen', 'closed'], ['geöffnet', 'open'], ['der Eingang', 'entrance', 'Eingänge'], ['der Ausgang', 'exit', 'Ausgänge'], ['nur', 'only'], ['ab', 'from; starting at'], ['die Anzeige', 'advertisement', 'Anzeigen'], ['benutzen', 'to use']],
-  [choice('Notice: Eintritt nur mit Fahrkarte. Who may enter?', ['Anyone', 'People with a ticket', 'Only drivers'], 1, 'nur mit makes the ticket a condition.', { englishOptions: true }), fill('Heute ___: Der Laden ist nicht offen.', 'geschlossen', 'Recognise the sign as a complete message.'), order('Form a simple instruction.', 'Bitte benutzen Sie den Eingang links', 'A polite formal instruction uses verb + Sie.'), listen('Die Bibliothek ist heute geschlossen. Morgen öffnen wir wieder um neun Uhr.', 'When will the library open again?', ['Today at nine', 'Tomorrow at nine', 'Tomorrow at ten'], 1), write('Write two short signs: one says closed today, one asks visitors to use another entrance.', 'Heute geschlossen. Bitte benutzen Sie den Eingang rechts.')],
+  [choice('Notice: Zutritt nur mit Fahrkarte. Who may enter?', ['Anyone', 'People with a ticket', 'Only drivers'], 1, 'nur mit makes the ticket a condition.', { englishOptions: true }), fill('Heute ___: Der Laden ist nicht offen.', 'geschlossen', 'Recognise the sign as a complete message.'), order('Form a simple instruction.', 'Bitte benutzen Sie den Eingang links', 'A polite formal instruction uses verb + Sie.'), listen('Die Bibliothek ist heute geschlossen. Morgen öffnen wir wieder um neun Uhr.', 'When will the library open again?', ['Today at nine', 'Tomorrow at nine', 'Tomorrow at ten'], 1), write('Write two short signs: one says closed today, one asks visitors to use another entrance.', 'Heute geschlossen. Bitte benutzen Sie den Eingang rechts.')],
   ['A: Zimmer im Zentrum, 420 Euro, frei ab Juni. B: Zimmer am Bahnhof, 380 Euro, frei ab April. Sie suchen ein Zimmer ab April für höchstens 400 Euro.', 'Which advertisement fits the stated need?', ['A', 'B', 'Neither'], 1, 'Both starting date and budget must match.']);
 
 lesson(30, 'Listening for key details and corrections', 'Hören im Alltag',
@@ -232,7 +236,7 @@ lesson(32, 'Speaking: introduction, questions and requests', 'Sprechen im Alltag
   [['Ich heiße Amir und bin 25 Jahre alt.', 'My name is Amir and I am 25 years old.'], ['Was machst du am Wochenende?', 'What do you do at the weekend?'], ['Können Sie mir bitte einen Stift geben?', 'Can you give me a pen, please?'], ['Ja, gern. Hier ist ein Stift.', 'Yes, gladly. Here is a pen.']],
   [['sich vorstellen', 'to introduce oneself'], ['die Frage', 'question', 'Fragen'], ['antworten', 'to answer'], ['bitten', 'to request'], ['der Stift', 'pen', 'Stifte'], ['der Partner', 'partner', 'Partner'], ['noch einmal', 'once again'], ['natürlich', 'of course']],
   [choice('Topic: Essen. Card: Frühstück. Which question fits?', ['Was isst du zum Frühstück?', 'Wo ist der Bahnhof?', 'Wie viel kostet dein Zimmer?'], 0, 'Match both the topic and the card.'), fill('Können Sie das bitte ___? (repeat)', 'wiederholen', 'Use a repair phrase when needed.'), order('Ask for a pen politely.', 'Können Sie mir bitte einen Stift geben', 'Modal first, infinitive last.'), listen('Ich heiße Ana, komme aus Portugal und wohne in Dresden. Ich bin Verkäuferin und höre gern Musik.', 'Where does Ana live?', ['Portugal', 'Dresden', 'Berlin'], 1), write('Prepare keywords for your introduction and write one question and one request. Then speak without reading the sentences.', 'Name: Amir. Alter: 25. Land: Indien. Wohnort: Bonn. Beruf: Student. Hobby: Fußball. Was machst du am Samstag? Können Sie mir bitte einen Stift geben?')],
-  ['Partnertraining: Person A zieht eine Karte und fragt. Person B antwortet und stellt dann eine neue Frage. Beide machen danach eine Bitte und reagieren auf die Bitte des Partners.', 'Who practises questions and responses?', ['Only person A', 'Only person B', 'Both people'], 2, 'Both roles are part of the exchange.']);
+  ['Partnertraining: Person A zieht eine Karte und fragt. Person B antwortet und stellt dann eine neue Frage. Danach bitten beide um etwas und reagieren auf die Bitte des Partners.', 'Who practises questions and responses?', ['Only person A', 'Only person B', 'Both people'], 2, 'Both roles are part of the exchange.']);
 
 const module = (id, title, lessonIds, topics, goals, pronunciation, listening, reading, writing, speaking, checkpoint) => ({ id, title, lessonIds, topics, goals, pronunciation, listening, reading, writing, speaking, checkpoint, hours: 8 });
 const modules = [
@@ -296,40 +300,6 @@ const sources = [
   { title: 'Goethe A1 learning objectives and test description', url: 'https://www.goethe.de/pro/relaunch/prf/en/Pruefungsziele_Testbeschreibung_A1_SD1.pdf' },
   { title: 'Goethe exam administration terms, September 2025', url: 'https://www.goethe.de/pro/relaunch/prf/id/Durchfuehrungsbestimmungen_A1_Start_Deutsch_1.pdf' },
 ];
-const speakingModels = {
-  1: 'Guten Tag. Ich heiße Nora. Ich bin 24 Jahre alt. Ich komme aus Kanada und wohne in Bonn. Ich spreche Englisch und ein bisschen Deutsch. Ich bin Studentin. Mein Hobby ist Musik.',
-  2: 'Was machst du am Montag? Ich arbeite am Montag. Lernst du Deutsch? Ja, ich lerne jeden Tag Deutsch.',
-  3: 'Was ist das? Das ist ein Stuhl. Ist das ein Buch? Ja, das ist ein Buch. Wie viele Stühle gibt es? Es gibt acht Stühle.',
-  4: 'Wann fährst du nach Bonn? Am Samstag fahre ich nach Bonn. Besuchst du deinen Bruder? Ja, ich besuche meinen Bruder.',
-  5: 'Was brauchst du für den Kurs? Ich brauche einen Stift und ein Heft. Hast du ein Wörterbuch? Ja, ich habe ein Wörterbuch.',
-  6: 'Haben Sie diese Jacke in Blau? Leider nicht. Haben Sie eine andere Jacke? Ja, hier ist eine Jacke in Blau.',
-  7: 'Wann ist unser Termin? Am Freitag um halb elf. Also am Freitag um zehn Uhr dreißig? Ja, genau.',
-  8: 'Wann stehst du auf? Ich stehe um sieben Uhr auf. Was machst du am Abend? Ich kaufe ein und rufe meine Mutter an.',
-  9: 'Wie heißen Sie? Mein Name ist Berg. Können Sie das bitte buchstabieren? B, E, R, G. Können Sie das bitte wiederholen?',
-  10: 'Wie alt sind Sie? Ich bin 24 Jahre alt. Wie ist Ihre Hausnummer? Meine Hausnummer ist 17. Wie ist Ihre Telefonnummer? Null eins sieben sechs, zwei null vier acht, drei eins fünf neun.',
-  11: 'Woher kommen Sie? Ich komme aus Indien. Wo wohnen Sie? Ich wohne in Bonn. Welche Sprachen sprechen Sie? Ich spreche Hindi, Englisch und Deutsch.',
-  12: 'Meine Mutter heißt Eva. Sie wohnt in Bonn. Mein Bruder heißt Paul und ist zwanzig Jahre alt. Wo wohnt dein Bruder?',
-  13: 'Welche Sprachen sprichst du? Ich spreche Englisch und Deutsch. Liest du gern? Ja, ich lese gern Zeitungen.',
-  14: 'Am Montag arbeite ich von neun bis fünf. Am Abend lerne ich oft Deutsch. Am Sonntag habe ich frei. Was machst du am Sonntag?',
-  15: 'Ich hätte gern eine Suppe und einen Tee. Möchten Sie auch Wasser? Ja, ein Glas Wasser, bitte. Können wir bitte bezahlen?',
-  16: 'Was kostet die Jacke? Sie kostet 35 Euro. Haben Sie die Jacke in Blau? Ja. Kann ich mit Karte bezahlen? Ja, natürlich.',
-  17: 'Kannst du morgen kommen? Leider nicht. Ich muss arbeiten. Wann kannst du kommen? Am Samstag kann ich kommen.',
-  18: 'Können Sie mir bitte den Schlüssel geben? Ja, gern. Hier, bitte. Vielen Dank. Können Sie bitte die Tür öffnen? Natürlich.',
-  19: 'Entschuldigung, wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann links. Ist es weit? Nein, es sind fünf Minuten.',
-  20: 'Meine Wohnung hat zwei Zimmer und einen Balkon. Die Küche ist klein. Wo ist der Schlüssel? Er liegt auf dem Tisch.',
-  21: 'Können wir den Termin ändern? Ich muss am Montag arbeiten. Haben Sie am Dienstag Zeit? Ja, um elf Uhr. Vielen Dank.',
-  22: 'Guten Tag, mir geht es nicht gut. Ich brauche einen Termin. Wann haben Sie Zeit? Am Dienstag um neun Uhr kann ich kommen.',
-  23: 'Eine Fahrkarte nach Bonn, bitte. Hin und zurück? Ja. Muss ich umsteigen? Nein. Von welchem Gleis fährt der Zug?',
-  24: 'Wie ist das Wetter heute? Es ist kalt und es regnet. Ich brauche eine Jacke. Was machst du im Sommer? Ich schwimme gern.',
-  25: 'Möchtest du am Samstag ins Kino gehen? Ja, gern. Wann treffen wir uns? Um halb acht vor dem Kino. Gut, bis Samstag.',
-  26: 'Was hast du gestern gemacht? Ich habe gearbeitet. Am Abend habe ich gekocht und einen Film gesehen. Hast du Deutsch gelernt?',
-  27: 'Wohin bist du gefahren? Ich bin nach Bonn gefahren. Wann bist du zurückgekommen? Am Sonntag. Ich bin zwei Tage geblieben.',
-  28: 'Warum warst du gestern nicht da? Ich war krank und hatte einen Termin beim Arzt. Geht es dir heute besser? Ja, danke.',
-  29: 'Ist die Bibliothek heute geöffnet? Nein, sie ist geschlossen. Wann öffnet sie wieder? Morgen um neun Uhr.',
-  30: 'Unser Termin ist um halb neun. Können Sie das bitte wiederholen? Um acht Uhr dreißig. Vielen Dank. Ich komme um halb neun.',
-  31: 'Können wir uns am Montag treffen? Leider kann ich am Montag nicht kommen. Hast du am Dienstag Zeit? Ja, am Dienstag habe ich Zeit.',
-  32: 'Ich heiße Amir und wohne in Bonn. Was isst du zum Frühstück? Ich esse Brot. Können Sie mir bitte einen Stift geben? Ja, gern. Hier, bitte.',
-};
 const examVocabulary = [
   ['ankreuzen','to mark a choice','Kreuzen Sie die richtige Antwort an.','Mark the correct answer.'],
   ['ausfüllen','to fill in','Füllen Sie bitte das Formular aus.','Please fill in the form.'],
@@ -361,18 +331,18 @@ const examVocabulary = [
   ['erlaubt','allowed','Fotos sind hier nicht erlaubt.','Photos are not allowed here.'],
   ['mindestens','at least','Der Kurs dauert mindestens vier Wochen.','The course lasts at least four weeks.'],
   ['ungefähr','approximately','Die Fahrt dauert ungefähr eine Stunde.','The journey takes about an hour.'],
-  ['die Dauer','duration','Die Dauer des Kurses ist vier Wochen.','The course duration is four weeks.','-'],
+  ['die Dauer','duration','Der Kurs dauert vier Wochen.','The course duration is four weeks.','-'],
   ['die Prüfung','exam','Die Prüfung beginnt um neun Uhr.','The exam starts at nine.','Prüfungen'],
   ['die Ansage','announcement','Hören Sie die Ansage.','Listen to the announcement.','Ansagen'],
   ['der Anruf','phone call','Vielen Dank für Ihren Anruf.','Thank you for your call.','Anrufe'],
-  ['die Verbindung','connection','Diese Verbindung geht nach Bonn.','This connection goes to Bonn.','Verbindungen'],
+  ['die Verbindung','connection','Gibt es eine direkte Verbindung nach Bonn?','Is there a direct connection to Bonn?','Verbindungen'],
   ['abholen','to pick up','Ich hole dich am Bahnhof ab.','I will pick you up at the station.'],
 ];
 const course = {
   id: 'a1', version: 1, title: 'From your first German words to A1 exam preparation', targetExam: 'Goethe-Zertifikat A1: Start Deutsch 1 (adults)', test: a1Test,
-  updated: '2026-10-04', weeks: 16, coreHours: 128, reviewHours: 16, lessonOrder: modules.flatMap(m => m.lessonIds), modules, lessons, sources,
+  updated: '2026-10-08', weeks: 16, coreHours: 128, reviewHours: 16, lessonOrder: modules.flatMap(m => m.lessonIds), modules, lessons, sources,
   topics: [{ id: 'exam', title: 'Exam instructions and essential forms', vocab: examVocabulary.map(([de,en,exDe,exEn,pl]) => ({ de,en,ex:{de:exDe,en:exEn}, ...(pl ? {pl} : {}) })) }],
-  support: Object.fromEntries(modules.flatMap(m => m.lessonIds.map(id => [id, { module: m.id, outcomes: m.goals, pronunciation: m.pronunciation, pronunciationDrills: m.pronunciationDrills, speaking: [{ task: m.speaking, modelAnswer: speakingModels[id], checklist: ['I answered the actual task.', 'My partner could understand me.', 'I asked or answered a follow-up question.', 'I asked for repetition when needed.'] }], ...(existingReading[id] ? { readingTask: choice(existingReading[id][1], existingReading[id][2], existingReading[id][3], existingReading[id][4], { readingText: existingReading[id][0], englishOptions: true }) } : {}) }]))),
+  support: Object.fromEntries(modules.flatMap(m => m.lessonIds.map(id => [id, { module: m.id, ...lessonSupport[id], ...(existingReading[id] ? { readingTask: choice(existingReading[id][1], existingReading[id][2], existingReading[id][3], existingReading[id][4], { readingText: existingReading[id][0], englishOptions: true }) } : {}) }]))),
   dailyPlan: [
     { minutes: 10, title: 'Recall vocabulary', description: 'Review due words. Say the article and plural with nouns; recall a usable phrase with verbs.' },
     { minutes: 15, title: 'Learn and apply', description: 'Study one small lesson section. Make two examples from memory, then check them.' },
@@ -398,8 +368,24 @@ const course = {
   exam: { listeningMinutes: 20, readingMinutes: 25, writingMinutes: 20, speakingMinutes: 15, officialPass: 60, courseTarget: 80, writtenMinutes: 65, description: 'All four sections must be taken. The official overall pass threshold is 60/100; the course uses an 80/100 preparation target to leave a margin.' },
   assessmentNote: 'Lesson scores measure objective exercise answers. Writing, pronunciation, interaction and speaking require review by a partner, tutor or qualified teacher. Completing the roadmap is not an official exam result.',
 };
+const original = JSON.parse(fs.readFileSync(path.join(root, 'data', 'a1.json'), 'utf8'));
+strengthenA1(course);
+correctLessons([...original.lessons, ...lessons]);
+addEssentialVocabulary(original.topics);
+for (const l of [...original.lessons, ...lessons]) enrichVocabulary(l.vocab);
+for (const t of [...original.topics, ...course.topics]) enrichVocabulary(t.vocab);
+// Preserve the compact topic entries used in the original authoring file.
+const compactRows = [];
+const originalText = JSON.stringify(original, (key,value) => {
+  if (value && typeof value === 'object' && 'de' in value && 'ex' in value) {
+    const token = `__A1_VOCAB_ROW_${compactRows.length}__`;
+    compactRows.push(JSON.stringify(value).replace(/":/g, '": ').replace(/,"/g, ', "'));
+    return token;
+  }
+  return value;
+}, 2).replace(/"__A1_VOCAB_ROW_(\d+)__"/g, (_,i) => compactRows[+i]);
+fs.writeFileSync(path.join(root, 'data', 'a1.json'), originalText + '\n');
 fs.writeFileSync(path.join(root, 'data', 'a1-course.json'), JSON.stringify(course, null, 2) + '\n');
 fs.mkdirSync(path.join(root, 'docs'), { recursive: true });
-const original = JSON.parse(fs.readFileSync(path.join(root, 'data', 'a1.json'), 'utf8'));
 fs.writeFileSync(path.join(root, 'docs', 'A1-CURRICULUM.md'), curriculumDocument(course, original));
 console.log(`Wrote ${lessons.length} new lessons and ${modules.length} course modules.`);

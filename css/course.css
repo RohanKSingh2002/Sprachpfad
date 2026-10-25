@@ -9,14 +9,20 @@
 .course-daily { padding-left: 22px; }
 .course-daily li { margin: 12px 0; }
 .course-daily span { display: block; color: var(--muted); }
+/* Week groups need list spacing, rather than the global page-section padding. */
+#course-weeks { display: grid; gap: 24px; }
+#course-weeks > section { padding: 0; min-width: 0; }
+#course-weeks > section > :last-child { margin-bottom: 0; }
 .course-module { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; margin: 12px 0; }
-.course-module summary { display: flex; align-items: center; gap: 14px; padding: 18px; cursor: pointer; }
+.course-module summary, .course-module-heading { display: flex; align-items: center; gap: 14px; padding: 18px; }
+.course-module summary { cursor: pointer; }
 .course-module summary::after { content: ""; flex: 0 0 9px; width: 9px; height: 9px; margin: -5px 6px 0 4px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform 0.2s ease; }
 .course-module[open] summary::after { transform: rotate(225deg); margin-top: 5px; }
 .course-module summary:focus-visible { outline: 3px solid color-mix(in srgb, var(--signal) 72%, white); outline-offset: -4px; border-radius: 12px; }
-.course-module summary > span:nth-child(2) { flex: 1; }
-.course-module summary b { display: block; font-size: 19px; }
-.course-module summary small { display: block; color: var(--muted); }
+.course-module summary > span:nth-child(2), .course-module-heading > span:nth-child(2) { flex: 1; }
+.course-module summary b, .course-module-heading b { display: block; font-size: 19px; }
+.course-module summary small, .course-module-heading small { display: block; color: var(--muted); }
+.course-module-continue { margin-top: 6px; }
 .course-module-number { display: grid; place-items: center; min-width: 38px; height: 38px; background: var(--signal); color: var(--on-signal); border-radius: 50%; font-weight: 700; }
 .course-module-status { color: var(--muted); font-size: 13px; }
 .course-module-body { padding: 0 22px 22px; border-top: 1px solid var(--line); }
@@ -31,15 +37,19 @@
 .course-checkpoint { background: var(--bg); padding: 16px; border-radius: 10px; margin-top: 22px; }
 .course-checkpoint h3 { margin-top: 0; }
 .course-exam-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.course-callout { margin-top: 16px; }
 .course-outcomes { margin-bottom: 22px; }
+.course-support { margin: 24px 0; }
+.course-support details + details { border-top: 1px solid var(--line); }
+.course-support summary, .course-transfer summary { cursor: pointer; padding: 12px 0; font-weight: 600; }
+.course-support li, .course-transfer li { margin: 8px 0; }
+.course-transfer { margin: 18px 0; border-top: 1px solid var(--line); }
 .course-speaking { margin-top: 30px; }
 .course-pronunciation .say { margin: 18px 0; align-items: start; }
 .course-pronunciation p { margin: 6px 0; }
 [data-route*="/checkpoint/"] > .panel { margin: 24px 0; }
 .course-resources { padding: 18px 0 34px; }
 @media (max-width: 600px) {
-  .course-module summary { flex-wrap: wrap; }
+  .course-module summary, .course-module-heading { flex-wrap: wrap; }
   .course-module-status { margin-left: 52px; }
   .course-lesson-links, .course-exam-grid { grid-template-columns: 1fr; }
   .course-skills > div { grid-template-columns: 1fr; gap: 2px; }

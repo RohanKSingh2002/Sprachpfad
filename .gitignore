@@ -4,4 +4,9 @@ Thumbs.db
 
 # voice model for tools/make_audio.py (downloaded on first run)
 tools/.models/
+tools/.audio-env/
 __pycache__/
+
+# Private reference books/notes and temporary PDF review renders.
+/Refrence Materials/
+/tmp/pdfs/

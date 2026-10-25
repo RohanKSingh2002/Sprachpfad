@@ -190,6 +190,7 @@ header.nav {
   height: var(--nav-h);
 }
 .logo {
+  flex-shrink: 0;
   font: 700 25px/1 var(--cond);
   text-decoration: none;
   display: flex;
@@ -210,6 +211,7 @@ header.nav {
   gap: 4px;
 }
 .topnav a {
+  white-space: nowrap;
   text-decoration: none;
   padding: 8px 13px;
   border-radius: 9px;
@@ -281,14 +283,14 @@ header.nav {
 .dock {
   display: none;
 }
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .topnav {
     display: none;
   }
   .dock {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
     position: fixed;
     left: 0;
     right: 0;
@@ -500,7 +502,7 @@ html.lenis {
   opacity: 1;
   transform: translate(-50%, 0);
 }
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .toast {
     bottom: calc(86px + env(safe-area-inset-bottom, 0px));
   }
