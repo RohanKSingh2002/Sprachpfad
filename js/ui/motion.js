@@ -4,6 +4,8 @@
 // Motion language: things enter with an expo ease-out (fast start, long soft landing), rise 12–24px,
 // and follow each other in short staggers. Only transform and opacity are animated.
 
+import { sitePreferences } from "../state.js";
+
 export const gsap = window.gsap;
 export const { Flip, Draggable, ScrollTrigger, SplitText } = window;
 
@@ -15,9 +17,16 @@ if (gsap) {
 const reduceQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const fineQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
 
-export const reducedMotion = () => reduceQuery.matches;
+export const reducedMotion = () => {
+  const { motion } = sitePreferences();
+  return motion === "reduced" || (motion === "device" && reduceQuery.matches);
+};
 /** True when animations should run: GSAP loaded and the visitor hasn't asked for reduced motion. */
-export const motionOK = () => !!gsap && !reduceQuery.matches;
+export const motionOK = () => !!gsap && !reducedMotion();
+export function applyDisplayPreferences() {
+  document.documentElement.dataset.appText = sitePreferences().text;
+  document.documentElement.dataset.motion = reducedMotion() ? "reduced" : "full";
+}
 /** A mouse or trackpad (hover effects make sense). */
 export const finePointer = () => fineQuery.matches;
 

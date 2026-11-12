@@ -1498,9 +1498,7 @@
         {"de": "hundert", "en": "a hundred (100)", "ex": {"de": "Das Fahrrad kostet hundert Euro.", "en": "The bike costs a hundred euros."}},
         {"de": "tausend", "en": "a thousand (1,000)", "ex": {"de": "Das Auto kostet tausend Euro.", "en": "The car costs a thousand euros."}},
         {"de": "die Zahl", "en": "number, figure", "pl": "Zahlen", "ex": {"de": "Schreib die Zahl bitte auf.", "en": "Please write the number down."}},
-        {"de": "die Nummer", "en": "number (phone, house)", "pl": "Nummern", "ex": {"de": "Wie ist deine Nummer?", "en": "What's your number?"}},
-        {"de": "wie viel", "en": "how much", "ex": {"de": "Wie viel kostet der Kaffee?", "en": "How much is the coffee?"}},
-        {"de": "wie viele", "en": "how many", "ex": {"de": "Wie viele Kinder hast du?", "en": "How many children have you got?"}}
+        {"de": "die Nummer", "en": "number (phone, house)", "pl": "Nummern", "ex": {"de": "Wie ist deine Nummer?", "en": "What's your number?"}}
       ]
     },
     {
@@ -1653,6 +1651,8 @@
         {"de": "der Durst", "en": "thirst", "pl": "-", "ex": {"de": "Hast du Durst?", "en": "Are you thirsty?"}},
         {"de": "frisch", "en": "fresh", "ex": {"de": "Die Brötchen sind ganz frisch.", "en": "The rolls are really fresh."}},
         {"de": "kosten", "en": "to cost", "ex": {"de": "Was kostet das Brot?", "en": "How much is the bread?"}, "forms": "es kostet · hat gekostet"},
+        {"de": "wie viel", "en": "how much", "ex": {"de": "Wie viel kostet der Kaffee?", "en": "How much is the coffee?"}},
+        {"de": "wie viele", "en": "how many", "ex": {"de": "Wie viele Kinder hast du?", "en": "How many children have you got?"}},
         {"de": "bezahlen", "en": "to pay", "ex": {"de": "Ich möchte bitte bezahlen.", "en": "I'd like to pay, please."}, "forms": "du bezahlst · er/sie/es bezahlt · hat bezahlt"},
         {"de": "das Geld", "en": "money", "pl": "-", "ex": {"de": "Ich habe kein Geld dabei.", "en": "I haven't got any money on me."}},
         {"de": "der Supermarkt", "en": "supermarket", "pl": "Supermärkte", "ex": {"de": "Ich kaufe im Supermarkt ein.", "en": "I do my shopping at the supermarket."}},

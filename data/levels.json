@@ -8,11 +8,13 @@
   {
     "id": "a2",
     "name": "A2",
-    "summary": "Modal verbs, the Perfekt, the dative, two-way prepositions and clauses with weil and dass."
+    "summary": "An 18-lesson everyday communication path with nine checkpoints: experiences, appointments, descriptions, interests and shared plans.",
+    "courseFile": "a2-course.json"
   },
   {
     "id": "b1",
     "name": "B1",
-    "summary": "Präteritum, Konjunktiv II, the passive, relative clauses, adjective endings and connectors."
+    "summary": "An 18-lesson communication path with nine checkpoints: stories, media, work, opinions, community life and travel.",
+    "courseFile": "b1-course.json"
   }
 ]

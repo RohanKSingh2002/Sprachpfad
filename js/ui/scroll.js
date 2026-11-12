@@ -4,12 +4,21 @@
 import { finePointer, gsap, reducedMotion, ScrollTrigger } from "./motion.js";
 
 let lenis = null;
+const tick = time => lenis?.raf(time * 1000);
 
 export function initSmoothScroll() {
-  if (!window.Lenis || !gsap || reducedMotion() || !finePointer()) return;
+  if (!window.Lenis || !gsap || reducedMotion() || !finePointer()) {
+    if (lenis) {
+      gsap.ticker.remove(tick);
+      lenis.destroy();
+      lenis = null;
+    }
+    return;
+  }
+  if (lenis) return;
   lenis = new window.Lenis({ lerp: 0.11, wheelMultiplier: 0.95 });
   if (ScrollTrigger) lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
+  gsap.ticker.add(tick);
   gsap.ticker.lagSmoothing(0);
 }
 

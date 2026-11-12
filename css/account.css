@@ -1,14 +1,15 @@
-/* Account pages use the same light palette and quiet motion as the study pages. */
+/* Account pages use the same dark palette and quiet motion as the study pages. */
 body.entry-screen { padding-bottom: 0; }
 .entry-screen > .nav, .entry-screen > .dock, .entry-screen > .foot { display: none; }
 .entry-screen .boot { margin: 0 auto; }
 .login-page { min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 48px 0; }
 .login-brand { justify-content: center; font-size: 28px; }
-.login-card { width: 100%; max-width: 440px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 12px 36px rgba(22,35,63,.035); }
+.login-information { justify-content: center; color: var(--muted); }
+.login-card { width: 100%; max-width: 440px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 40px; text-align: center; box-shadow: 0 12px 36px rgba(22,35,63,.035); }
 .login-card h1 { font-size: clamp(30px, 5vw, 38px); line-height: 1.15; letter-spacing: -.015em; margin: 0 0 12px; }
 .login-card > .muted { line-height: 1.6; margin: 0 0 28px; }
-.google-signin { font: 600 16px var(--sans); color: var(--text); background: white; display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 50px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; transition: border-color .2s, background .2s; }
-.google-signin:hover { background: var(--bg); border-color: var(--muted); }
+.google-signin { font: 600 16px var(--sans); color: var(--primary-foreground); background: var(--primary); display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 50px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; transition: border-color .2s, background .2s; }
+.google-signin:hover { background: color-mix(in srgb, var(--primary) 91%, var(--primary-foreground)); border-color: var(--muted); }
 .google-signin:disabled { opacity: .65; cursor: wait; }
 .login-note, .account-setup-note { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 12px 0 0; }
 .account-setup-note { border-left: 3px solid var(--signal); padding-left: 12px; }
@@ -17,7 +18,7 @@ body.entry-screen { padding-bottom: 0; }
 .login-continue { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 50px; padding: 12px 16px; border: 1px solid transparent; border-radius: 8px; background: var(--bg); color: var(--text); font: 600 16px var(--sans); cursor: pointer; transition: border-color .2s, background .2s; }
 .login-continue:hover { background: var(--sunken); border-color: var(--line); }
 .login-continue:disabled { opacity: .65; cursor: wait; }
-.account-strip { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 24px 0 12px; }
+.account-strip { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px; margin: 24px 0 12px; }
 .account-strip h2 { font: 600 20px var(--sans); margin: 0 0 6px; overflow-wrap: anywhere; }
 .account-strip p { margin: 0; line-height: 1.5; overflow-wrap: anywhere; }
 .account-strip .btn { flex-shrink: 0; }
@@ -30,7 +31,7 @@ body.entry-screen { padding-bottom: 0; }
 .account-import h2 { font-size: 24px; margin: 0 0 8px; }
 .account-import p { margin: 0 0 20px; max-width: 700px; line-height: 1.6; }
 .account-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
-.account-error { color: #a12c26; font-size: 15px; line-height: 1.5; margin-top: 16px; }
+.account-error { color: var(--err); font-size: 15px; line-height: 1.5; margin-top: 16px; }
 .account-error[hidden] { display: none; }
 .account-notice { max-width: 680px; min-height: 55vh; padding: 80px 0; margin: 0 auto; }
 .account-notice h1 { font-size: clamp(34px, 5vw, 48px); margin: 14px 0 24px; }

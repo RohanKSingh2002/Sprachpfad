@@ -69,7 +69,7 @@ export async function initAuth() {
     client.auth.onAuthStateChange((_event, session) => setAccount(session?.user));
     await providerCheck;
     if (callback) {
-      let next = "#/profile";
+      let next = "#/";
       try { next = sessionStorage.getItem(RETURN_KEY) || next; sessionStorage.removeItem(RETURN_KEY); } catch { /* optional */ }
       url.hash = account && /^#\/[a-z0-9/?=&%-]*$/i.test(next) ? next : "#/login";
     }
@@ -97,7 +97,7 @@ export async function signInWithGoogle() {
   const redirect = new URL(location.href);
   redirect.search = "";
   redirect.hash = "";
-  try { sessionStorage.setItem(RETURN_KEY, "#/profile"); } catch { /* profile is also the fallback */ }
+  try { sessionStorage.setItem(RETURN_KEY, "#/"); } catch { /* Home is also the fallback. */ }
   const { error } = await client.auth.signInWithOAuth({
     provider: "google",
     options: { redirectTo: redirect.href, queryParams: { prompt: "select_account" } },

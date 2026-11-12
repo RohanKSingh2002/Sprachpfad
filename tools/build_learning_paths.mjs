@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { b1Lessons } from './b1_extension_lessons.mjs';
+import { a2Lessons } from './a2_extension_lessons.mjs';
+import { a2ExtensionWorkshops } from './a2_extension_workshops.mjs';
 import { a2Workshops, b1Workshops } from './learning_path_workshops.mjs';
 import { reviewRoutine, skillStrategies, strengthenA1 } from './reference_learning_support.mjs';
 
@@ -18,6 +20,11 @@ const a2Units = [
   ['Journeys and asking for help', [3,4], ['traffic','holiday'], ['Tell someone how a journey went using haben and sein.', 'Ask for help and identify the recipient of an action.'], 'Keep the auxiliary audible and stress the important place or problem.', 'Ich bin angekommen. Eine Mitarbeiterin hat mir geholfen.', 'Follow a short journey account and identify who helped whom.', 'Read practical instructions and identify times and included services.', 'Describe a journey, a problem and the help received.', 'Ask for help at a station and confirm directions.', 'Explain a travel problem and relay the instructions accurately.', 'Recall common participles; distinguish the person receiving help from the object involved.'],
   ['Housing, locations and reasons', [5,6], ['flat','money'], ['Distinguish a location from a destination with two-way prepositions.', 'Give a reason, report an idea and discuss a condition.'], 'Pause before subordinate clauses and keep their final verb clear.', 'Der Tisch steht im Zimmer. Wir stellen ihn ins Zimmer.', 'Follow an explanation of where objects go and why.', 'Identify permitted locations and a delivery condition in a notice.', 'Make a practical proposal with a reason and a request.', 'Discuss two arrangements and respond to an objection.', 'Agree on a room arrangement and explain it clearly.', 'Movement alone does not determine the case: contrast movement within a place with movement to a destination.'],
   ['Wellbeing, preferences and choices', [7,8], ['sport','holiday','media'], ['Describe habits and feelings using common reflexive phrases.', 'Compare options and make a joint decision.'], 'Stress the contrast: günstiger, besser, am liebsten.', 'Ich fühle mich besser. Am liebsten bewege ich mich draußen.', 'Understand a change of routine and the reason for a preference.', 'Compare price, time and conditions in course descriptions.', 'Recommend an activity with reasons and an invitation.', 'Compare alternatives and ask about a partner’s preference.', 'Choose an activity using at least two relevant comparisons.', 'Recall personal pronouns and use als for differences, so ... wie for equality.'],
+  ['Past experiences and changed plans', [9,10], ['holiday','traffic'], ['Explain a past situation using common Präteritum forms.', 'Tell a short story with als, wenn and a clear order of events.'], 'Keep konnte and könnte distinct; pause between the time clause and main clause.', 'Als ich ankam, musste ich warten. Danach konnte ich weiterfahren.', 'Follow a travel problem, response and outcome.', 'Reconstruct the order of events in a short experience report.', 'Describe a changed plan and its outcome.', 'Tell a short story and ask follow-up questions about a partner’s story.', 'Tell a new past experience in order and explain how a problem was solved.', 'Review haben/sein in the Perfekt; distinguish a single past occasion from repeated occasions.'],
+  ['Information, appointments and polite alternatives', [11,12], ['media','traffic'], ['Ask for details with an indirect question.', 'Make a polite request and negotiate an alternative.'], 'Keep the final verb audible in an indirect question; pronounce the umlaut in könnte.', 'Könnten Sie mir sagen, ob noch ein Platz frei ist?', 'Distinguish an available option from a waiting-list offer.', 'Find booking conditions and distinguish free advice from a paid course.', 'Write a focused enquiry with availability and questions.', 'Ask for a course place and respond when the first option is unavailable.', 'Agree on a suitable appointment or course option and confirm the next step.', 'Review verb-final clauses and the difference between ob and wenn; contrast konnte with könnte.'],
+  ['Clothing, descriptions and practical choices', [13,14], ['holiday','money'], ['Describe a specific item with an adjective phrase.', 'Ask which item or kind is needed and compare suitable options.'], 'Keep article and adjective endings audible without stressing every ending.', 'Ich suche einen warmen Mantel. Den blauen möchte ich anprobieren.', 'Identify the requested item, a fitting problem and the final choice.', 'Understand conditions and times for a clothing exchange.', 'Describe needed items and ask to borrow something.', 'Ask about size and colour, explain a problem and choose another option.', 'Choose a suitable item and justify the choice using clear descriptions.', 'Review noun gender and accusative/dative articles; compare der blaue Mantel with ein blauer Mantel.'],
+  ['Interests, small goals and everyday habits', [15,16], ['media','holiday'], ['Describe an intention with a zu-infinitive.', 'Use common prepositional verbs and ask about people or things.'], 'Say the complete verb phrase together; keep the r-link in worauf and darauf clear.', 'Ich habe vor, öfter zu üben. Ich freue mich darauf.', 'Identify a course interest, required equipment and missing information.', 'Read a simple group project and identify how to join.', 'Write an enquiry explaining an interest and a practical goal.', 'Agree on a small change and respond to a practical obstacle.', 'Explain a realistic goal, ask a relevant question and agree on a next step.', 'Review separable verbs, modal infinitives and case after familiar prepositions.'],
+  ['Daily routines, messages and shared plans', [17,18], ['sport','media'], ['Distinguish familiar accusative and dative reflexive patterns.', 'Write a complete short message and negotiate a shared plan.'], 'Keep mir and mich distinct, and repeat important times slowly to confirm them.', 'Ich habe mir die Uhrzeit notiert. Wir treffen uns um halb elf.', 'Follow an invitation, responsibilities and a weather alternative.', 'Understand a reply with a time constraint and a practical question.', 'Reply to an invitation and cover all requested points.', 'Agree on time, place, responsibilities and an alternative.', 'Complete a new message and planning conversation using earlier grammar independently.', 'Revisit indirect questions, polite requests, reasons and time expressions; check all points before sending a practice message.'],
 ];
 const b1Units = [
   ['Experiences, stories and change', [1,6], ['past','job'], ['Tell a connected story and describe its background.', 'Explain which event happened before another.'], 'Group a longer sentence into meaningful phrases; stress time markers.', 'Als ich ankam, hatte der Kurs schon begonnen.', 'Follow a personal account and identify an earlier event.', 'Recognise a problem, response and outcome in an experience report.', 'Write a coherent short experience report.', 'Tell a story, answer questions and summarise a partner’s experience.', 'Tell a new story in order and explain what led to a change.', 'Recall Perfekt, war/hatte and verb-final clauses.'],
@@ -41,6 +48,16 @@ const lessonGoals = {
     6: ['Give a reason with weil and report an idea with dass.', 'Describe a condition using wenn.'],
     7: ['Describe a habit or feeling using a reflexive verb.', 'Ask a partner about a routine.'],
     8: ['Compare two practical options.', 'Explain a preference using a comparative or superlative.'],
+    9: ['Explain a past obligation or possibility.', 'Recognise common past forms in a short report.'],
+    10: ['Distinguish a single past occasion from repeated occasions.', 'Tell a short account in a clear sequence.'],
+    11: ['Ask a polite indirect W-question.', 'Use ob to check whether something is true.'],
+    12: ['Make a polite request using könnte, hätte or wäre.', 'Respond to a scheduling problem with an alternative.'],
+    13: ['Describe a specific item using a definite article and adjective.', 'Choose an ending using case, gender and number.'],
+    14: ['Describe a new item using ein and an adjective.', 'Ask about a type of item and recognise common article-free phrases.'],
+    15: ['Describe an intention with a zu-infinitive.', 'Distinguish that pattern from an infinitive after a modal verb.'],
+    16: ['Use familiar verbs with their preposition and case.', 'Ask about a person or thing and refer back to a topic.'],
+    17: ['Use mich or mir in familiar reflexive patterns.', 'Describe a routine using a reflexive phrase in the Perfekt.'],
+    18: ['Write a short message that covers every requested point.', 'Negotiate and confirm a shared plan.'],
   },
   b1: {
     1: ['Recognise common Präteritum forms in a narrative.', 'Describe the background to a past event.'],
@@ -100,24 +117,24 @@ function makeCourse(id, units, workshops, extraLessons, meta) {
   };
 }
 
-save('a2-course.json', makeCourse('a2', a2Units, a2Workshops, [], {
-  title: 'A2 foundation path', eyebrow: 'German A2 · Build on everyday German',
-  introduction: 'Connect the grammar you know to everyday tasks: describing experiences, solving small problems, explaining choices and arranging plans. Work through four modules with listening, reading, writing and speaking practice.',
-  scopeNote: 'This is an eight-lesson A2 foundation path. It is not yet a complete A2 syllabus.',
+save('a2-course.json', makeCourse('a2', a2Units, [...a2Workshops, ...a2ExtensionWorkshops], a2Lessons, {
+  title: 'A2 everyday communication path', eyebrow: 'German A2 · Handle everyday situations',
+  introduction: 'Build confidence across nine modules: describe past experiences, ask for help, compare options, arrange plans and write useful messages. Each module connects grammar to listening, reading, writing and speaking.',
+  scopeNote: 'This expanded 18-lesson path develops everyday A2 communication. Add unfamiliar texts, natural recordings and feedback on speaking and writing; completing the path alone does not establish full A2 proficiency.',
   entryReview: 'Before starting, check that you can introduce a fictional person, ask simple questions, arrange a time and write a short three-point message. Revisit the relevant A1 lesson if you need support.',
-  weeks: 8, coreHours: 48, reviewHours: 16,
-  sources: [{ title: 'Goethe A2 official practice materials', url: 'https://www.goethe.de/ins/de/en/prf/gzsd2/ueb.html' }],
+  weeks: 16, coreHours: 72, reviewHours: 18,
+  sources: [{ title: 'Goethe A2 official practice materials', url: 'https://www.goethe.de/ins/de/en/prf/gzsd2/ub2.html' }],
 }));
 save('b1-course.json', makeCourse('b1', b1Units, b1Workshops, b1Lessons, {
   title: 'B1 communication path', eyebrow: 'German B1 · Explain, discuss and act',
   introduction: 'Build longer, clearer communication around stories, media, work, relationships, community life and travel. Connect grammar to practical decisions, written messages and conversations that require a response.',
   scopeNote: 'This expanded path develops B1 communication. Use additional unfamiliar texts, natural recordings and independent feedback alongside it; completing these lessons alone does not establish full B1 coverage.',
-  entryReview: 'Before starting, practise a short account in the Perfekt, a reason with weil, a comparison and a polite request for help. Revisit the A2 foundation modules wherever these are still difficult.',
+  entryReview: 'Before starting, practise a short account in the Perfekt, a reason with weil, a comparison and a polite request for help. Revisit the relevant A2 modules wherever these are still difficult.',
   weeks: 16, coreHours: 90, reviewHours: 18,
   sources: [{ title: 'Goethe B1 official model papers and recordings', url: 'https://www.goethe.de/ins/de/en/prf/gzb1/ueb.html' }],
 }));
 const levels = read('levels.json');
-Object.assign(levels.find(l => l.id === 'a2'), { courseFile: 'a2-course.json', summary: 'An eight-lesson foundation path with four practical checkpoints: past experiences, housing, help, habits and choices.' });
+Object.assign(levels.find(l => l.id === 'a2'), { courseFile: 'a2-course.json', summary: 'An 18-lesson everyday communication path with nine checkpoints: experiences, appointments, descriptions, interests and shared plans.' });
 Object.assign(levels.find(l => l.id === 'b1'), { courseFile: 'b1-course.json', summary: 'An 18-lesson communication path with nine checkpoints: stories, media, work, opinions, community life and travel.' });
 save('levels.json', levels);
 console.log('Updated A1 learning support and generated the A2 and B1 learning paths.');

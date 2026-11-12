@@ -18,7 +18,7 @@
   font: 600 17px/1 var(--cond);
 }
 .fb-head span:first-child {
-  color: #8b6900;
+  color: var(--muted);
 }
 .fb-clock {
   font-variant-numeric: tabular-nums;
@@ -141,7 +141,7 @@
   min-height: 40px;
   padding: 0 12px;
   border-radius: 9px;
-  font: 700 18px/1 var(--cond);
+  font: 500 14px/1 var(--sans);
   text-decoration: none;
   color: var(--muted);
   transition:
@@ -181,7 +181,7 @@
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 20px 22px;
   box-shadow: var(--highlight), var(--shadow-1);
 }
@@ -226,10 +226,10 @@ th {
 /* Speaker button */
 .spk {
   flex: none;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 2px solid var(--line);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--input);
   background: transparent;
   cursor: pointer;
   display: grid;
@@ -246,11 +246,11 @@ th {
     scale 0.3s var(--ease-out);
 }
 .spk:hover {
-  border-color: var(--text);
-  scale: 1.06;
+  border-color: var(--ring);
+  background: var(--accent);
 }
 .spk:active {
-  scale: 0.95;
+  background: var(--secondary);
 }
 /* while a sentence is read aloud, its button glows and sends out a ring */
 .spk.is-playing {
@@ -261,7 +261,7 @@ th {
   content: "";
   position: absolute;
   inset: -2px;
-  border-radius: 50%;
+  border-radius: inherit;
   border: 2px solid var(--signal);
   animation: ring-out 1.3s var(--ease-out) infinite;
   pointer-events: none;
@@ -293,7 +293,7 @@ th {
 .task {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 18px 20px;
   margin-bottom: 14px;
   box-shadow: var(--highlight), var(--shadow-1);
@@ -321,9 +321,9 @@ th {
 }
 .opt {
   position: relative;
-  border: 2px solid var(--line);
+  border: 1px solid var(--input);
   background: var(--bg);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 8px 16px;
   cursor: pointer;
   font-weight: 500;
@@ -336,14 +336,12 @@ th {
     scale 0.3s var(--ease-out);
 }
 .opt:hover:not(:disabled) {
-  border-color: var(--text);
-  translate: 0 -1px;
+  border-color: var(--ring);
+  background: var(--accent);
   box-shadow: var(--shadow-1);
 }
 .opt:active:not(:disabled) {
-  translate: 0 0;
-  scale: 0.97;
-  transition-duration: 0.08s;
+  background: var(--secondary);
 }
 .opt:disabled {
   cursor: default;
@@ -388,8 +386,8 @@ textarea {
   font: inherit;
   color: var(--text);
   background: var(--bg);
-  border: 2px solid var(--line);
-  border-radius: 10px;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-md);
   padding: 9px 12px;
   width: 100%;
   max-width: 320px;
@@ -400,9 +398,9 @@ textarea {
 }
 input.fill:focus,
 textarea:focus {
-  border-color: var(--text);
+  border-color: var(--ring);
   outline: none;
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--signal) 32%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 35%, transparent);
 }
 input.fill.is-ok {
   border-color: var(--ok);
@@ -419,7 +417,7 @@ textarea {
 .built {
   min-height: 50px;
   border: 2px dashed var(--line);
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding: 6px;
   display: flex;
   flex-wrap: wrap;
@@ -433,7 +431,7 @@ textarea {
   padding: 6px;
 }
 .chip {
-  border: 2px solid var(--line);
+  border: 1px solid var(--input);
   background: var(--surface);
   border-radius: 8px;
   padding: 6px 12px;
@@ -450,7 +448,7 @@ textarea {
 .fb {
   margin-top: 12px;
   padding: 10px 14px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   font-size: 16px;
 }
 .fb.ok {
@@ -482,9 +480,10 @@ textarea {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  background: var(--signal);
-  color: var(--on-signal);
-  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
   padding: 18px 22px;
   margin: 26px 0;
 }

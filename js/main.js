@@ -3,14 +3,19 @@
 import { loadContent } from "./content.js";
 import { activeView, relayout, route } from "./router.js?v=20261112-weekcards1";
 import { initState, resetState } from "./state.js";
-import { initAudio, speak } from "./ui/audio.js";
+import { clearDevicePractice } from "./practice-progress.js";
+import { flushStudyTime, resetStudyClock, startStudyClock } from "./study-clock.js";
+import { initAudio, resetAudioSpeed, speak } from "./ui/audio.js";
 import { startClock } from "./ui/board.js";
 import { initSpotlight } from "./ui/effects.js";
+import { initProfileMenu } from "./ui/profile-menu.js";
 import { initSmoothScroll } from "./ui/scroll.js";
 import { toast } from "./ui/toast.js";
 import { esc } from "./utils.js";
 import { authClient, currentUser, initAuth, onAccountChange, signInWithGoogle, signOut } from "./auth.js";
 import { clearGuestEntry, enterAsGuest } from "./entry.js";
+import { registerStudyWorker } from "./offline-study.js";
+import { startStudyNotifications } from "./study-reminder.js";
 import {
   connectProgress, dismissBrowserImport, downloadProgress, flushProgress, importBrowserProgress,
   onProgressChange, progressStatus, resetAccountProgress, resolveProgressConflict, retryProgress,
@@ -26,6 +31,11 @@ function showLoadError(error) {
 /** Any button with data-say reads its text aloud; everything else goes to the page on screen. */
 async function onClick(e) {
   const button = e.target.closest("button");
+  if (button?.hasAttribute("data-reset-audio-speed")) {
+    resetAudioSpeed();
+    toast("Playback speed reset to 1×.");
+    return;
+  }
   if (button?.dataset.accountAction) {
     await onAccountAction(button);
     return;
@@ -33,52 +43,35 @@ async function onClick(e) {
   if (button && button.dataset.say !== undefined) {
     const view = activeView();
     if (view?.onAudioPlay?.(button) === false) return;
-    const started = await speak(button.dataset.say, button);
+    const started = await speak(button.dataset.say, button, { voice: button.dataset.voice });
     if (activeView() === view && button.isConnected) view?.onAudioStarted?.(button, started);
     return;
   }
   activeView()?.onClick?.(e, button);
 }
 
-/** Reset needs a second tap within three seconds. */
-let resetArmed = 0;
-async function onReset(e) {
-  const button = e.currentTarget;
-  if (currentUser()) {
+async function onReset() {
+  if (progressStatus().blocked) return;
+  const user = currentUser();
+  if (user) {
     if (!confirm("Reset all progress in this account, including lessons, words and test results? This also resets the progress used by your other devices.")) return;
-    button.disabled = true;
-    try { await resetAccountProgress(); toast("Account progress reset."); route(); }
-    catch (error) { toast(error.message); }
-    finally { button.disabled = false; }
-    return;
-  }
-  if (Date.now() - resetArmed < 3000) {
+    flushStudyTime();
+    await resetAccountProgress();
+    toast("Account progress reset.");
+  } else {
+    if (!confirm("Reset the learning progress saved on this device? This includes lessons, reviews, and test results.")) return;
+    resetStudyClock();
     resetState();
-    resetArmed = 0;
-    button.textContent = "Reset progress";
     toast("Progress reset.");
-    route();
-    return;
   }
-  resetArmed = Date.now();
-  button.textContent = "Tap again to reset everything";
-  setTimeout(() => {
-    if (Date.now() - resetArmed >= 2900) button.textContent = "Reset progress";
-  }, 3000);
+  clearDevicePractice(user);
+  route({ immediate: true });
 }
 
 function updateAccountUI() {
-  const user = currentUser();
   const status = progressStatus();
   document.getElementById("save-status").textContent = `Sprachpfad. ${status.message}`;
-  document.getElementById("reset").hidden = status.blocked;
   document.querySelectorAll("[data-sync-status]").forEach(el => { el.textContent = status.message; });
-  document.querySelectorAll('[data-nav="profile"]').forEach(link => {
-    link.href = user ? "#/profile" : "#/login";
-    // Preserve the mobile icon; replace only its label text.
-    const label = [...link.childNodes].findLast(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
-    if (label) label.textContent = user ? "Profile" : "Sign in";
-  });
 }
 
 async function onAccountAction(button) {
@@ -95,6 +88,7 @@ async function onAccountAction(button) {
       enterAsGuest();
       location.hash = "#/";
     } else if (action === "signout") {
+      flushStudyTime();
       if (progressStatus().pending) await flushProgress();
       const status = progressStatus();
       if (status.pending && !confirm(status.persistent
@@ -106,6 +100,16 @@ async function onAccountAction(button) {
       await retryProgress();
     } else if (action === "download") {
       downloadProgress();
+    } else if (action === "reset") {
+      await onReset();
+    } else if (action === "certificate") {
+      button.setAttribute("aria-busy", "true");
+      const user = currentUser();
+      const name = user?.user_metadata?.full_name || user?.user_metadata?.name;
+      const { downloadProgressCertificate } = await import('./progress-certificate.js');
+      if (currentUser()?.id !== user?.id) throw new Error('Your account changed. Please download the certificate again.');
+      await downloadProgressCertificate(name);
+      toast("Your progress certificate is ready to download.");
     } else if (action === "import") {
       await importBrowserProgress();
       route({ immediate: true });
@@ -142,15 +146,15 @@ async function start() {
   let wasBlocked = false;
   onProgressChange(status => {
     const needsRoute = status.blocked || wasBlocked;
+    if (status.blocked) resetStudyClock();
     wasBlocked = status.blocked;
     updateAccountUI();
     // Do not replace an exercise while a background save is finishing.
     if (started && needsRoute) route({ immediate: true });
   });
   onAccountChange(user => {
+    resetStudyClock();
     clearGuestEntry();
-    resetArmed = 0;
-    document.getElementById("reset").textContent = "Reset progress";
     connectProgress(authClient(), user);
     updateAccountUI();
     if (started) route({ immediate: true });
@@ -158,14 +162,17 @@ async function start() {
   // Account restoration starts in the background; the router shows a loading page until ready.
   connectProgress(authClient(), currentUser());
   initAudio();
+  void registerStudyWorker();
+  startStudyNotifications();
+  startStudyClock();
   startClock();
   initSmoothScroll();
   initSpotlight();
+  initProfileMenu();
   window.addEventListener("hashchange", route);
   document.addEventListener("click", onClick);
   document.addEventListener("keydown", (e) => activeView()?.onKeydown?.(e));
   document.addEventListener("change", (e) => activeView()?.onChange?.(e));
-  document.getElementById("reset").addEventListener("click", onReset);
   window.addEventListener("online", () => retryProgress());
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && currentUser()) retryProgress();

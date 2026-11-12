@@ -1,13 +1,19 @@
-// Lesson page: grammar table, rules, spoken examples, exercises with instant checking, word list.
+// Lesson page: grammar table, rules, spoken examples, word list, exercises with instant checking.
 
 import { gradedTasks, pluralText } from "../content.js";
-import { logPractice, markOpened, recordLesson } from "../state.js";
-import { speakerButton } from "../ui/audio.js";
+import { LESSON_SENTENCE_COLLECTION, audioPlaybackSpeed, isDone, isStudyPinned, lessonSentence, logPractice, markLessonSentenceSeen, markOpened, recordLesson, savedSentenceCollections, saveSentenceToCollection, sentencePreferences, toggleStudyPin } from "../state.js";
+import { playAudioLine, speakerButton, stopAudio } from "../ui/audio.js";
+import { downloadOfflineLesson, offlineLessonInfo, offlineSize } from "../offline-study.js";
+import { waitBetweenLines } from "../sentence-practice.js";
 import { ARROW_ICON } from "../ui/icons.js";
+import { toast } from "../ui/toast.js";
 import { drawIn, Flip, gsap, motionOK, onLeave, revealOnScroll, shake, splitReveal } from "../ui/motion.js";
 import { jumpTo, scrollToCenter } from "../ui/scroll.js";
 import { esc, germanDate, norm, shuffle } from "../utils.js";
 import { breadcrumb } from "./shared.js";
+import { applySentenceStar, copySentence, copySentenceButton, sentenceStars } from "../ui/sentence-controls.js";
+import { refreshSentencePrompts } from "../study-language.js";
+import { currentGuide, guidedContinue } from "../guided-study.js";
 
 const KIND = {
   choice: "Choose the answer",
@@ -20,6 +26,16 @@ const KIND = {
 let lesson = null; // lesson on screen
 let firstTry = {}; // task index → answered right on the first try?
 let scoreShown = false;
+let guide = null;
+let examplePlayback;
+
+function lessonSections(l) {
+  const sections = [["lesson-overview", "Overview"], ...(l.examples.length ? [["lesson-examples", "Examples"]] : []),
+    ...(l.vocab.length ? [["words-h", "Vocabulary"]] : []), ...(l.tasks.length ? [["ex-h", "Exercises"]] : []),
+    ...(l.speaking?.length ? [["speaking-h", "Speaking"]] : [])];
+  return `<nav class="lesson-sections" aria-label="Lesson sections">${sections.map(([id, name]) =>
+    `<button class="link-btn" type="button" data-lesson-section="${id}">${name}</button>`).join("")}</nav>`;
+}
 
 function taskBody(task, i) {
   switch (task.type) {
@@ -73,17 +89,28 @@ export function render(l) {
   lesson = l;
   firstTry = {};
   scoreShown = false;
+  guide = currentGuide();
   const { level } = l;
   const position = level.lessons.indexOf(l);
   const prev = level.lessons[position - 1];
   const next = level.lessons[position + 1];
   const graded = gradedTasks(l).length;
-  const examples = l.examples
-    .map(
-      (e) =>
-        `<div class="say">${speakerButton(e.de)}<div><div class="de-line" lang="de">${esc(e.de)}</div><div class="en-line">${esc(e.en)}</div></div></div>`,
-    )
-    .join("");
+  const collections = savedSentenceCollections();
+  const defaultCollection = collections.find(collection => collection.id === LESSON_SENTENCE_COLLECTION);
+  const collectionOptions = [
+    `<option value="${LESSON_SENTENCE_COLLECTION}">${esc(defaultCollection?.name ?? "Lesson sentences")}</option>`,
+    ...collections.filter(collection => collection.id !== LESSON_SENTENCE_COLLECTION).map(collection => `<option value="${esc(collection.id)}">${esc(collection.name)}</option>`),
+  ].join("");
+  const preferences = sentencePreferences();
+  const showTranslation = preferences.translation === true;
+  const examples = l.examples.map((example, index) => {
+    const item = lessonSentence(l, index);
+    return `<article class="shadow-card"><div class="say">${speakerButton(example.de)}<div><div class="de-line" lang="de">${esc(example.de)}</div>
+      <div class="en-line" id="shadow-meaning-${index}" data-study-prompt="${esc(example.en)}" lang="en"${showTranslation ? "" : " hidden"}>${esc(example.en)}</div></div></div>
+      <div class="shadow-card-actions"><button class="link-btn shadow-reveal" type="button" data-reveal-meaning="${index}" aria-expanded="${showTranslation}" aria-controls="shadow-meaning-${index}">${showTranslation ? "Hide meaning" : "Try to recall the meaning"}</button>
+      <button class="link-btn" type="button" data-save-example="${index}">Save sentence</button>${copySentenceButton(example.de)}
+      ${item ? sentenceStars(item.id, preferences.mode === "listen" ? "listen" : "recall") : ""}</div></article>`;
+  }).join("");
   const words = l.vocab
     .map((w) => {
       const pl = pluralText(w);
@@ -97,9 +124,12 @@ export function render(l) {
   const forward = next
     ? `<a class="btn btn-go" href="#/${level.id}/lektion/${next.id}">Lesson ${next.position}${ARROW_ICON}</a>`
     : `<a class="btn btn-go" href="#/${level.id}/test">${level.name} mock test${ARROW_ICON}</a>`;
+  const studyDone = guide && !wantsExercises() ? `<div class="panel study-guide-end"><p>When you’re ready, continue your guided session.</p>${guidedContinue(guide)}</div>` : "";
+  const exercisesDone = guide && wantsExercises() && isDone(l) ? `<p>These exercises are already complete.</p>${guidedContinue(guide)}` : "";
   return `
   ${breadcrumb(level, `Lesson ${l.position}`)}
-  <header class="lesson-head"><h1 lang="de">${esc(l.germanTitle)}</h1><div class="en">${esc(l.title)}</div></header>
+  <header class="lesson-head"><h1 id="lesson-overview" lang="de">${esc(l.germanTitle)}</h1><div class="en">${esc(l.title)}</div><button class="link-btn" type="button" data-pin-lesson aria-pressed="${isStudyPinned(l.key)}">${isStudyPinned(l.key) ? "★ Lesson favorited" : "☆ Favorite lesson"}</button></header>
+  ${lessonSections(l)}
   <p class="intro">${esc(l.intro)}</p>
   ${l.outcomes ? `<div class="panel course-outcomes"><a class="tlink" href="#/${level.id}/roadmap">Module ${l.module} · Course roadmap</a><h2 class="h3">What you will practise</h2><ul>${l.outcomes.map((goal) => `<li>${esc(goal)}</li>`).join("")}</ul><p class="muted small"><b>Pronunciation:</b> ${esc(l.pronunciation)}</p></div>` : ""}
   <div class="lesson-grid">
@@ -108,18 +138,34 @@ export function render(l) {
     ${l.pronunciationDrills ? `<section class="panel course-pronunciation"><h2>Listen and practise pronunciation</h2><p class="muted">Listen, repeat after a pause, then say the phrase without reading. Ask a partner which word or detail they understood.</p>${l.pronunciationDrills.map(drill => `<div class="say">${speakerButton(drill.text)}<div><b>${esc(drill.label)}</b><div class="de-line" lang="de">${esc(drill.text)}</div><p class="muted small">${esc(drill.instruction)}</p></div></div>`).join('')}</section>` : ''}
     <div class="panel spot"><h2 class="h3">Remember</h2><ul class="rules">${l.rules.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>
   </div>
-  <div class="panel spot say-panel"><h2 class="h3">Say it out loud</h2><p class="muted small">Tap the speaker, listen, then repeat the sentence.</p><div class="ex-list">${examples}</div></div>
+  <div class="panel spot say-panel"><h2 class="h3" id="lesson-examples">Listen, repeat, recall</h2><p class="muted small">Listen to each sentence and repeat it aloud. Then try to recall its meaning before revealing the translation.</p>
+    <div class="lesson-example-tools">
+      ${examples ? `<button class="btn small" type="button" data-play-examples>Play examples</button>
+      <a class="btn small ghost" href="#/sentences?lesson=${l.key}&amp;start=1">Practise these sentences</a>` : ""}
+      <button class="btn small ghost" type="button" data-download-lesson>Download lesson</button>
+      <a class="link-btn" href="#/settings?section=audio" aria-label="Open audio playback settings">Speed <span data-current-audio-speed>${audioPlaybackSpeed()}×</span></a>
+    </div>
+    <p class="small muted" data-lesson-download-status role="status"></p>
+    <div class="lesson-sentence-save"><label for="lesson-sentence-collection">Save to</label><select id="lesson-sentence-collection">${collectionOptions}</select>
+    <a href="#/sentences?lesson=${l.key}">Open sentence practice settings</a></div>
+    <p class="small muted shadow-progress" id="shadow-progress" aria-live="polite">${showTranslation ? l.examples.length : 0} of ${l.examples.length} meanings revealed</p>
+    <div class="ex-list sentence-size-${preferences.textSize}">${examples}</div></div>
+  <section class="lesson-words" aria-labelledby="words-h">
+    <h2 class="words-h" id="words-h" tabindex="-1">Words from this lesson</h2>
+    <p class="muted">Read the words and their meanings before you start. You can refer back to this list during the exercises.</p>
+    <div class="vocab">${words}</div>
+  </section>
+  ${studyDone}
   <section class="exercises" aria-labelledby="ex-h">
     <div class="lprog"><span id="lprog-txt" class="num">0 of ${graded} answered</span><span class="bar" aria-hidden="true"><i id="lprog-bar"></i></span></div>
     <h2 id="ex-h">Exercises</h2>
     <p class="muted">Your first try on each one counts toward your score.</p>
+    <button class="btn small ghost" type="button" data-lesson-words>Review lesson words</button>
     ${l.tasks.map(renderTask).join("")}
-    <div id="scorebox" aria-live="polite"></div>
+    <div id="scorebox" aria-live="polite">${exercisesDone}</div>
   </section>
-  ${l.speaking ? `<section class="course-speaking" aria-labelledby="speaking-h"><h2 id="speaking-h">Speak and interact</h2><p class="muted">Try the task before revealing the example. Use your own details and practise both roles with a partner.</p>${l.speaking.map((s, i) => `<div class="task"><div class="q">${esc(s.task)}</div><button type="button" class="btn small ghost" data-speech-model="${i}">Show and hear an example</button><div id="speech-model-${i}"></div><ul class="check-list">${s.checklist.map((item) => `<li><label><input type="checkbox">${esc(item)}</label></li>`).join("")}</ul></div>`).join("")}<p class="muted small">Writing and speaking need feedback. Your objective exercise score does not measure pronunciation or spoken interaction.</p></section>` : ""}
-  <h2 class="words-h">Words from this lesson</h2>
-  <div class="vocab">${words}</div>
-  <div class="pager">${back}${forward}</div>`;
+  ${l.speaking ? `<section class="course-speaking" aria-labelledby="speaking-h"><h2 id="speaking-h">Speak and interact</h2><p class="muted">Try the task before revealing the example. Invent the personal details and practise both roles with a partner.</p>${l.speaking.map((s, i) => `<div class="task"><div class="q">${esc(s.task)}</div><button type="button" class="btn small ghost" data-speech-model="${i}">Show and hear an example</button><div id="speech-model-${i}"></div><ul class="check-list">${s.checklist.map((item) => `<li><label><input type="checkbox">${esc(item)}</label></li>`).join("")}</ul></div>`).join("")}<p class="muted small">Writing and speaking need feedback. Your objective exercise score does not measure pronunciation or spoken interaction.</p></section>` : ""}
+  ${guide ? "" : `<div class="pager">${back}${forward}</div>`}`;
 }
 
 function updateProgress() {
@@ -174,14 +220,16 @@ function showScoreWhenDone() {
   const queued = recordLesson(lesson, score);
   const message =
     (score === total ? "Every answer right on the first try." : "Redo the ones you missed tomorrow.") +
-    (queued ? ` Its ${queued} words are now in your review queue.` : "");
+    (queued ? ` ${queued} ${queued === 1 ? "word joined" : "words joined"} your vocabulary review queue.` : "");
   const box = document.getElementById("scorebox");
   // With motion on, the visible number counts up; screen readers (this is a live region) get the
   // real score straight away.
   const number = motionOK()
     ? `<span aria-hidden="true">0/${total}</span><span class="sr">${score}/${total}</span>`
     : `${score}/${total}`;
-  box.innerHTML = `<div class="score"><div><strong class="num" id="scoreNum">${number}</strong><p>Lesson ${lesson.position}: objective exercises complete. ${message}</p><a class="btn small" href="#/karten?l=${lesson.key}">Practise these words</a></div><div class="stamp" id="stamp" aria-hidden="true">Erledigt<small>${germanDate(new Date(), true)}</small></div></div>`;
+  const actions = guide ? (wantsExercises() ? guidedContinue(guide) : "") :
+    `<a class="btn small" href="#/karten?l=${lesson.key}">Practise these words</a><a class="btn small ghost" href="#/sentences">Open sentence review</a>`;
+  box.innerHTML = `<div class="score"><div><strong class="num" id="scoreNum">${number}</strong><p>Lesson ${lesson.position}: objective exercises complete. ${message}</p><div class="sentence-actions">${actions}</div></div><div class="stamp" id="stamp" aria-hidden="true">Erledigt<small>${germanDate(new Date(), true)}</small></div></div>`;
   if (motionOK()) {
     const counter = { v: 0 };
     const digits = document.getElementById("scoreNum").firstChild;
@@ -233,7 +281,43 @@ function moveChips(i, chips, target) {
 export function onClick(e, button) {
   if (!button || !lesson) return;
   const d = button.dataset;
-  if (d.speechModel !== undefined) {
+  if (d.lessonSection) {
+    const heading = document.getElementById(d.lessonSection);
+    if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); jumpTo(heading); }
+    return;
+  }
+  if (d.playExamples !== undefined) { void playExamples(button); return; }
+  if (d.downloadLesson !== undefined) { void downloadLesson(button); return; }
+  if (d.starId) { applySentenceStar(button); return; }
+  if (d.copySentence) { void copySentence(d.copySentence); return; }
+  if (d.pinLesson !== undefined) {
+    const pinned = toggleStudyPin(lesson.key);
+    button.setAttribute("aria-pressed", String(pinned));
+    button.textContent = pinned ? "★ Lesson favorited" : "☆ Favorite lesson";
+    return;
+  }
+  if (d.lessonWords !== undefined) {
+    const heading = document.getElementById("words-h");
+    heading?.focus({ preventScroll: true });
+    jumpTo(heading);
+  } else if (d.revealMeaning !== undefined) {
+    const i = +d.revealMeaning;
+    const meaning = document.getElementById(`shadow-meaning-${i}`);
+    const reveal = meaning.hidden;
+    meaning.hidden = !reveal;
+    if (reveal) markLessonSentenceSeen(lesson, i);
+    button.setAttribute("aria-expanded", String(reveal));
+    button.textContent = reveal ? "Hide meaning" : "Try to recall the meaning";
+    const count = lesson.examples.filter((_, index) => !document.getElementById(`shadow-meaning-${index}`).hidden).length;
+    document.getElementById("shadow-progress").textContent = `${count} of ${lesson.examples.length} meanings revealed`;
+  } else if (d.saveExample !== undefined) {
+    const sentence = lessonSentence(lesson, +d.saveExample);
+    const collectionId = document.getElementById("lesson-sentence-collection")?.value || LESSON_SENTENCE_COLLECTION;
+    const result = sentence && saveSentenceToCollection(collectionId, sentence);
+    toast(result?.limit ? "Your collections have reached the 200 sentence limit. Remove a sentence before adding another."
+      : !result ? "This example needs both a German sentence and an English prompt."
+      : result.added ? "Sentence saved to your collection and review queue." : "That sentence is already in this collection.");
+  } else if (d.speechModel !== undefined) {
     const s = lesson.speaking[+d.speechModel];
     document.getElementById(`speech-model-${d.speechModel}`).innerHTML = `<div class="fb info"><span lang="de">${esc(s.modelAnswer)}</span> ${speakerButton(s.modelAnswer)}</div>`;
   } else if (d.mc !== undefined) {
@@ -314,7 +398,10 @@ const wantsExercises = () =>
 
 export function mount() {
   markOpened(lesson);
+  refreshSentencePrompts(document.querySelector(".say-panel"));
+  void showDownload(document.querySelector("[data-download-lesson]"), lesson.key);
   if (wantsExercises()) jumpTo(document.querySelector(".exercises"));
+  if (new URLSearchParams(location.hash.split("?")[1] || "").get("part") === "examples") jumpTo(document.getElementById("lesson-examples"));
   if (!motionOK()) return;
   splitReveal(document.querySelector(".lesson-head h1"), { duration: 0.9 });
   drawIn(document.querySelector(".lesson-head"));
@@ -334,3 +421,57 @@ export function mount() {
   revealOnScroll(".exercises .task", { y: 20, stagger: 0.08 });
   revealOnScroll(".vocab > div", { y: 10, stagger: 0.025 });
 }
+
+function stopExamples() {
+  if (!examplePlayback) return;
+  examplePlayback.abort();
+  examplePlayback = undefined;
+  stopAudio();
+}
+
+async function playExamples(button) {
+  if (examplePlayback) { stopExamples(); button.textContent = "Play examples"; return; }
+  const player = examplePlayback = new AbortController();
+  const lines = lesson.examples.filter(item => item.de);
+  button.textContent = "Stop examples";
+  try {
+    for (const item of lines) {
+      if (player.signal.aborted || !await playAudioLine(item.de, button)) break;
+      await waitBetweenLines(0.5, player.signal);
+    }
+  } finally {
+    if (examplePlayback === player) {
+      examplePlayback = undefined;
+      button.textContent = "Play examples";
+    }
+  }
+}
+
+async function showDownload(button, key) {
+  if (!button) return;
+  const note = button.closest(".say-panel").querySelector("[data-lesson-download-status]");
+  try {
+    const info = await offlineLessonInfo(key);
+    if (!button.isConnected || !info) return;
+    button.textContent = "Downloaded";
+    button.disabled = true;
+    note.textContent = `Ready offline on this device · ${offlineSize(info.bytes)} of audio`;
+  } catch { /* The download button will report storage issues when used. */ }
+}
+
+async function downloadLesson(button) {
+  const current = lesson;
+  const note = button.closest(".say-panel").querySelector("[data-lesson-download-status]");
+  button.disabled = true;
+  note.textContent = "Downloading the lesson and its recordings…";
+  try {
+    await downloadOfflineLesson(current);
+    await showDownload(button, current.key);
+  } catch (error) {
+    note.textContent = navigator.onLine ? error.message : "Connect to the internet to download this lesson.";
+  } finally {
+    if (button.textContent !== "Downloaded") button.disabled = false;
+  }
+}
+
+export function unmount() { stopExamples(); }

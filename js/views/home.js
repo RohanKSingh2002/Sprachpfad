@@ -1,650 +1,185 @@
-// Home page: the next stop on the departure board, today's session, the route across the levels, the
-// line of stops for one level, a compact progress summary, a ticker of the level's words, and questions.
-//
-// Motion: the first visit plays the full opening (headline words rise, board flips in, the session and
-// the line draw themselves). Coming back plays a shorter version, and switching level only animates
-// what changes. Further down, sections reveal as they scroll into view.
+// Home presents today's study suggestions and direct links to the study pages.
+import { LEVELS, FAQ } from "../content.js";
+import { dailyGoalProgress, dueCount, lessonSentenceProgress, sitePreferences, smartReviewPlan, nextLesson, openedToday, pinnedStudySets, recentStudyLessons } from "../state.js";
+import { ARROW_ICON } from "../ui/icons.js";
+import { esc } from "../utils.js";
+import { todayStudyPlan } from "../course-plan.js";
+import { sessionSteps } from "../home-activities.js";
+import { pendingPractice } from "../practice-progress.js";
+import { GUIDED_SENTENCE_LIMIT, guidedWords } from "../guided-study.js";
 
-import { LEVELS, ALL_LESSONS, ALL_WORDS, FAQ, gradedTasks } from "../content.js";
-import {
-  addedToday,
-  cardsToday,
-  courseChecks,
-  doneCount,
-  doneTotal,
-  dueCount,
-  isDone,
-  knownIn,
-  lessonScore,
-  NEW_PER_DAY,
-  newWords,
-  nextDue,
-  nextLesson,
-  nextTopic,
-  openedToday,
-  passed,
-  sessionLesson,
-  streak,
-} from "../state.js";
-import { boardHTML, runBoards } from "../ui/board.js";
-import { magnetic, slidePill } from "../ui/effects.js";
-import { ARROW_ICON, CHECK_ICON, PAUSE_ICON, PLAY_ICON } from "../ui/icons.js";
-import {
-  drawIn,
-  gsap,
-  motionOK,
-  onLeave,
-  revealOnScroll,
-  ScrollTrigger,
-  splitReveal,
-} from "../ui/motion.js";
-import { daysBetween, esc, shuffle, todayKey } from "../utils.js";
-import { levelSwitch } from "./shared.js";
-import { moduleReviewed, todayStudyPlan } from "../course-plan.js";
-
-const TICKER_WORDS = 24;
-let shown = null; // level on screen, used to place the green rail
-let openingPlayed = false; // the full opening plays once per visit
-
-/** Switching level on the home page is animated by this page itself (see router.js). */
 export const updatesInPlace = true;
+const ICONS = {
+  lesson: '<path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4V4Zm9 3a3 3 0 0 1 3-3h5v14h-5a3 3 0 0 0-3 3"/>',
+  cards: '<rect x="7" y="5" width="13" height="16" rx="2"/><path d="m4 17-2-12a2 2 0 0 1 2-2l9-1M11 10h5m-5 4h3"/>',
+  practice: '<path d="m5 14 9-10 5 5-9 10-6 1 1-6Zm7-8 5 5M4 23h17"/>',
+};
+const icon = kind => `<svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[kind]}</svg>`;
 
-/* ---------- next stop ---------- */
-
-function board(level, next) {
-  const total = level.lessons.length;
-  if (next) {
-    return boardHTML({
-      id: "home",
-      text: next.germanTitle,
-      foot: `<span>${level.name}, lesson ${next.position} of ${total}: ${esc(next.title)}</span><span>Gleis ${next.position}</span>`,
-      label: `Next stop: ${next.germanTitle}, ${level.name} lesson ${next.position} of ${total}`,
-    });
-  }
-  return boardHTML({
-    id: "home",
-    text: `${level.name} geschafft`,
-    foot: `<span>All ${total} ${level.name} lessons done</span><span>Endstation</span>`,
-    label: `${level.name} complete`,
-  });
+/** Choose an existing finite practice set; the current lesson keeps the choice stable. */
+function practiceChoice(level, lesson) {
+  const saved = pendingPractice(level)[0]?.session;
+  if (saved) return {
+    title: saved.set.title, href: `#/${level.id}/practice?set=${encodeURIComponent(saved.set.id)}${saved.review ? "&review=1" : ""}`,
+    resume: saved.position + 1, total: saved.indices.length,
+  };
+  const bank = (level.practice || []).filter(set => set.skill !== "writing" && set.items.length);
+  if (!bank.length) return { title: `${level.name} practice`, href: `#/${level.id}/practice`, min: 6 };
+  const set = bank[Math.min(bank.length - 1, Math.floor(((lesson?.position || 1) - 1) / 2))];
+  return { title: set.title, href: `#/${level.id}/practice?set=${encodeURIComponent(set.id)}`, min: set.minutes };
 }
 
-function actions(level, next) {
-  const after = LEVELS[level.index + 1];
-  const primary = (href, label) => `<a class="btn btn-go" href="${href}">${label}${ARROW_ICON}</a>`;
-  if (next) {
-    const label = doneCount(level) ? `Continue with lesson ${next.position}` : "Start lesson 1";
-    return `<a class="btn small ghost lesson-start spot" href="#/${level.id}/lektion/${next.id}">${label}</a>`;
-  }
-  if (!passed(level)) {
-    const second = after
-      ? `<a class="tlink" href="#/${after.id}">Continue to ${after.name}</a>`
-      : `<a class="tlink" href="#/karten?l=${level.id}">Review flashcards</a>`;
-    return `${primary(`#/${level.id}/test`, `Take the ${level.name} mock test`)}${second}`;
-  }
-  const certificate = `#/${level.id}/zertifikat`;
-  return after
-    ? `${primary(`#/${after.id}`, `Continue to ${after.name}`)}<a class="tlink" href="${certificate}">View your ${level.name} certificate</a>`
-    : `${primary(certificate, `View your ${level.name} certificate`)}<a class="tlink" href="#/karten?l=all">Review all flashcards</a>`;
-}
-
-/* ---------- today's session ---------- */
-
-// A realistic pace: seconds per flashcard (a new word takes longer) and per kind of exercise
-const CARD_SECONDS = 10;
-const NEW_CARD_SECONDS = 15;
-const TASK_SECONDS = { choice: 25, listen: 40, fill: 35, order: 50, write: 150 };
-
-const minutes = (seconds) => Math.max(1, Math.round(seconds / 60));
-const words = (text) => String(text).split(/\s+/).filter(Boolean).length;
-
-/** Reading the lesson's grammar at 90 words a minute, and saying each example out loud twice. */
-function grammarMinutes(lesson) {
-  const text = [
-    lesson.intro,
-    ...lesson.rules,
-    ...lesson.table.head,
-    ...lesson.table.rows.flat(),
-    ...lesson.examples.flatMap((e) => [e.de, e.en]),
-  ];
-  const reading = text.reduce((n, t) => n + words(t), 0) / 90;
-  return Math.max(2, Math.ceil(reading + (lesson.examples.length * 8) / 60));
-}
-
-const exerciseMinutes = (lesson) =>
-  minutes(lesson.tasks.reduce((s, t) => s + (TASK_SECONDS[t.type] || 40), 0));
-
-/** "tomorrow", "in 3 days" */
-function whenDue(date) {
-  const days = daysBetween(todayKey(), date);
-  return days === 1 ? "tomorrow" : `in ${days} days`;
-}
-
-/**
- * Review due words and introduce the day's vocabulary, then follow the scheduled course phase.
- * Levels without a course plan keep their short grammar-and-exercises session.
- */
-function sessionSteps(level, plan) {
-  const scheduled = plan?.session;
-  const lesson = plan ? scheduled?.unit.lesson : sessionLesson(level);
-  const due = dueCount();
-  const steps = [];
-  const learned = addedToday();
-  const reviewed = cardsToday() > learned;
-  if (due) {
-    steps.push({
-      title: `Review ${due} ${due === 1 ? "word" : "words"}`,
-      sub: "Due today in your review queue",
-      href: "#/karten?l=due",
-      min: minutes(due * CARD_SECONDS),
-    });
-  } else if (reviewed) {
-    steps.push({
-      title: "Review your words",
-      sub: "Nothing left due today",
-      href: "#/karten?l=due",
-      done: true,
-    });
-  }
-  const left = newWords(level).length;
-  const goal = Math.min(NEW_PER_DAY, learned + left);
-  if (goal && !scheduled?.rest) {
-    const topic = nextTopic(level);
-    const done = learned >= goal;
-    steps.push({
-      title: `Learn ${goal} new ${goal === 1 ? "word" : "words"}`,
-      sub: done ? `${learned} met today` : `From ${topic.title}${learned ? `, ${learned} of ${goal} done` : ""}`,
-      href: "#/karten?l=new",
-      min: minutes((goal - Math.min(learned, goal)) * NEW_CARD_SECONDS),
-      done,
-    });
-  } else if (!due && !reviewed) {
-    steps.push({
-      title: `Practise the ${level.name} words`,
-      sub: "Nothing is due today",
-      href: `#/karten?l=${level.id}`,
-      min: minutes(10 * CARD_SECONDS),
-    });
-  }
-  if (scheduled?.rest) {
-    steps.push({
-      title: "Optional review or rest",
-      sub: "Revisit familiar words or take a break before the next study day",
-      href: lesson ? `#/karten?l=${lesson.key}` : `#/karten?l=${level.id}`,
-      min: 10,
-      done: cardsToday() > 0,
-    });
-    return steps;
-  }
-  if (lesson && (!scheduled || ["all", "study"].includes(scheduled.phase))) {
-    steps.push({
-      title: "Study the grammar",
-      sub: `Lesson ${lesson.position}: ${lesson.germanTitle}`,
-      href: `#/${level.id}/lektion/${lesson.id}`,
-      min: grammarMinutes(lesson),
-      done: openedToday(lesson) || isDone(lesson),
-    });
-  }
-  if (lesson && (!scheduled || ["all", "exercises"].includes(scheduled.phase))) {
-    steps.push({
-      title: `Answer ${lesson.tasks.length} exercises`,
-      sub: `${gradedTasks(lesson).length} of them scored, on your first try`,
-      href: `#/${level.id}/lektion/${lesson.id}?part=exercises`,
-      min: exerciseMinutes(lesson),
-      done: isDone(lesson),
-    });
-  }
-  if (lesson && scheduled?.phase === "review") {
-    steps.push({
-      title: `Review lesson ${lesson.position}`,
-      sub: "Revisit the examples, repeat them aloud and correct any missed exercises",
-      href: `#/${level.id}/lektion/${lesson.id}`,
-      min: grammarMinutes(lesson) + exerciseMinutes(lesson),
-      done: openedToday(lesson),
-    });
-  }
-  if (scheduled?.unit.type === "checkpoint") {
-    const module = scheduled.unit.module;
-    const checks = courseChecks(level, module.id);
-    const href = `#/${level.id}/checkpoint/${module.id}`;
-    module.lessonIds.map(id => level.lessons.find(item => item.id === id)).filter(item => lessonScore(item) / gradedTasks(item).length < 0.8).forEach(item => {
-      steps.push({ title: `Review lesson ${item.position} exercises`, sub: "Reach 80% before completing this module's checkpoint", href: `#/${level.id}/lektion/${item.id}?part=exercises`, min: exerciseMinutes(item) });
-    });
-    if (["all", "comprehension"].includes(scheduled.phase) || !(checks.workshopScore >= 5)) {
-      steps.push({ title: `Module ${module.id}: listen and read`, sub: "Complete the six checkpoint questions and correct your mistakes", href, min: 15, done: checks.workshopScore >= 5 });
-    }
-    if (["all", "production", "feedback"].includes(scheduled.phase)) {
-      steps.push({ title: `Module ${module.id}: write and speak`, sub: "Complete the existing writing task and spoken exchange", href, min: 20, done: !!checks.writing && !!checks.speaking });
-      steps.push({ title: "Review feedback and record your practice", sub: `Module ${module.id} checkpoint on your lessons page`, href: `#/${level.id}/roadmap?module=${module.id}`, min: 10, done: moduleReviewed(level, module) });
-    }
-  } else if (!lesson && !passed(level)) {
-    steps.push({
-      title: `Take the ${level.name} mock test`,
-      sub: "Listening, reading, writing and speaking",
-      href: `#/${level.id}/test`,
-      min: 20,
-    });
-  } else if (!lesson && LEVELS[level.index + 1]) {
-    const after = LEVELS[level.index + 1];
-    steps.push({
-      title: `Start the ${after.name} line`,
-      sub: `${after.lessons.length} lessons`,
-      href: `#/${after.id}`,
-    });
-  }
-  return steps;
-}
-
-function sessionCard(level) {
+/** Prioritise due review, then scheduled course work; no choice is required to start. */
+export function homeActivities(level) {
   const plan = todayStudyPlan(level);
   const steps = sessionSteps(level, plan);
-  const open = steps.filter((s) => !s.done);
-  const total = open.reduce((n, s) => n + (s.min || 0), 0);
-  const first = steps.findIndex((s) => !s.done);
-  const status = open.length
-    ? `<span class="session-time">${total ? `about ${total} min` : ""}</span>`
-    : `<span class="session-time is-done">Done for today</span>`;
-  const items = steps
-    .map((s, i) => {
-      const cls = s.done ? "done" : i === first ? "next" : "";
-      const meta = s.done ? "Done" : s.min ? `${s.min} min` : "";
-      return `<li${cls ? ` class="${cls}"` : ""}><a href="${s.href}">
-        <span class="step-n" aria-hidden="true">${s.done ? CHECK_ICON : i + 1}</span>
-        <span class="step-t"><b>${esc(s.title)}</b><span>${esc(s.sub)}</span></span>
-        <span class="step-m">${meta}</span></a></li>`;
-    })
-    .join("");
-  let foot = "";
-  if (!open.length) {
-    const next = nextLesson(level);
-    const due = nextDue();
-    const back = due
-      ? `${due.count} ${due.count === 1 ? "word comes" : "words come"} back ${whenDue(due.date)}. `
-      : "";
-    const more = next
-      ? `<a class="tlink" href="#/${level.id}/lektion/${next.id}">Keep going: lesson ${next.position}</a>`
-      : "";
-    foot = `<p class="session-foot muted small">${back}${more}</p>`;
+  const open = steps.filter(step => !step.done);
+  const lesson = plan?.session?.unit.lesson || nextLesson(level);
+  const practice = practiceChoice(level, lesson);
+  const { home, cardMissed } = sitePreferences();
+  const dueWordsStep = open.find(step => step.href === "#/karten?l=due");
+  const words = !cardMissed || guidedWords().length ? dueWordsStep : null;
+  const course = open.find(step => !step.href.startsWith("#/karten"));
+  const review = smartReviewPlan();
+  const sentences = (home === "review" || !course) && review.due
+    ? { title: "Review due sentences", href: "#/sentences?mode=smart", sub: "Practise the sentences due today, then try a few new ones.", min: 5 } : null;
+  const primary = (home === "course" ? course || words || sentences : words || sentences || course)
+    || open.find(step => step !== dueWordsStep)
+    || { ...practice, sub: "Today's suggested activities are done. Try a short practice set if you feel like more." };
+  return { plan, steps, primary, lesson, practice, course, review, home };
+}
+
+function presentation(step, level) {
+  if (step.resume) return { kind: "practice", label: `${level.name} workbook`, title: step.title,
+    description: `Exercise ${step.resume} of ${step.total} · Saved on this device`, action: `Resume exercise ${step.resume}` };
+  if (step.href === "#/sentences?mode=smart") return { kind: "practice", label: "Sentence review", title: step.title, description: step.sub, action: "Start Smart Review" };
+  const lessonId = step.href.match(/\/lektion\/(\d+)/)?.[1];
+  const lesson = level.lessons.find(item => item.id === Number(lessonId));
+  if (step.href.startsWith("#/karten")) {
+    const review = step.href.includes("l=due");
+    return { kind: "cards", label: review ? "Word review" : "Flashcards", title: step.title,
+      description: review ? `${dueCount()} words are ready for another look. Recall the meaning, then flip to check.` : step.sub,
+      action: review ? "Start word review" : "Start flashcards" };
   }
-  return `<section class="session spot" aria-labelledby="session-h">
-    <div class="session-head"><h2 id="session-h">Today's session</h2>${status}</div>
-    ${plan?.session ? `<p class="muted small">${plan.weeks}-week plan · Week ${plan.session.week}, day ${plan.session.day}. ${plan.session.rest ? 'A flexible day for review or rest.' : `These tasks start your study day. Allow about ${plan.dailyMinutes} minutes including vocabulary, listening, speaking and writing practice.`} <a class="tlink" href="#/${level.id}/roadmap">View your weekly plan</a></p>` : ''}
-    <ol class="session-steps">${items}</ol>${foot}
+  if (lesson) {
+    const exercises = step.href.includes("part=exercises");
+    return { kind: "lesson", label: `${level.name} · Lesson ${lesson.position}`, title: lesson.title,
+      description: exercises ? "Put the lesson into practice with its exercises."
+        : step.title.startsWith("Review") ? "Revisit the examples and give the exercises another try."
+        : "Study the grammar, learn the words and read the examples.",
+      action: exercises ? "Open lesson exercises" : step.title.startsWith("Review") ? "Review lesson" : openedToday(lesson) ? "Continue lesson" : "Start lesson" };
+  }
+  if (step.href.includes("/checkpoint/")) return { kind: "practice", label: "Course practice", title: step.title, description: step.sub,
+    action: step.href.includes("part=feedback") ? "Open checkpoint feedback" : step.href.includes("part=writing") ? "Open writing task" : "Start checkpoint" };
+  if (step.href.endsWith("/test")) return { kind: "practice", label: `${level.name} · Mock test`, title: step.title, description: step.sub, action: "Start mock test" };
+  if (LEVELS.some(item => step.href === `#/${item.id}`)) return { kind: "lesson", label: "Your next level", title: step.title, description: "A new chapter is ready when you are.", action: "Continue learning" };
+  return { kind: "practice", label: "Extra practice", title: step.title, description: step.sub || "Work through a short practice set.", action: "Start practice" };
+}
+
+function suggestedSteps({ home, course, review }, level) {
+  if (home !== "mix" || !course?.href.includes("/lektion/")) return [];
+  const words = guidedWords().length;
+  const sentences = review.due ? Math.min(review.items.length, GUIDED_SENTENCE_LIMIT) : 0;
+  if (!words && !sentences) return [];
+  return [
+    ...(words ? [{ title: "Word review", detail: `${words} ${words === 1 ? "word" : "words"}`, min: Math.ceil(words / 6), href: "#/karten?l=due" }] : []),
+    { ...course, title: presentation(course, level).title, detail: course.href.includes("part=exercises") ? "Lesson exercises" : "Lesson study" },
+    ...(sentences ? [{ title: "Sentence review", detail: `${sentences} sentences`, min: Math.ceil(sentences / 4), href: "#/sentences?mode=smart" }] : []),
+  ];
+}
+
+function dailyGoal(goals, complete) {
+  const labels = { minutes: "study minutes", actions: "practice actions", repetitions: "audio repetitions" };
+  const fraction = Math.min(1, Math.max(...goals.map(goal => goal.value / goal.target)));
+  return `<section class="study-goal${complete ? " study-goal-complete" : ""}" aria-labelledby="daily-goal-title">
+    <div class="study-goal-summary"><h2 id="daily-goal-title">${complete ? "Daily goal reached" : "Daily goal"}</h2>
+    <p class="small">${goals.map(({ unit, target, value }) => `${value} of ${target} ${labels[unit]}`).join(" or ")}</p></div>
+    <progress value="${fraction}" max="1" aria-label="Daily study goal"></progress>
   </section>`;
 }
 
-/* ---------- the route across the levels ---------- */
-
-/** How far the green line runs along the route: a finished level carries it on to the next stop. */
-function routeProgress() {
-  let p = 0;
-  for (const lv of LEVELS.slice(0, -1)) {
-    const part = doneCount(lv) / lv.lessons.length;
-    p += part;
-    if (part < 1) break;
-  }
-  return p;
-}
-
-function routeMap(current) {
-  const stops = LEVELS.map((lv) => {
-    const done = doneCount(lv);
-    const total = lv.lessons.length;
-    const cls = [done === total ? "done" : "", lv === current ? "now" : ""].filter(Boolean).join(" ");
-    const here = lv === current ? '<span class="sr"> (the line you are on)</span>' : "";
-    const cert = passed(lv) ? `<a class="rm-cert" href="#/${lv.id}/zertifikat">Certificate</a>` : "";
-    return `<li${cls ? ` class="${cls}"` : ""}><span class="rm-dot" aria-hidden="true"></span><a class="rm-stop" href="#/${lv.id}"><b>${lv.name}</b>${here} <span class="num">${done}/${total} lessons</span></a>${cert}</li>`;
-  }).join("");
-  return `<nav class="routemap spot" aria-label="Your route through the levels" style="--p:${routeProgress().toFixed(3)}">
-    <span class="rm-label">Your route</span>
-    <div class="rm-track"><span class="rm-line" aria-hidden="true"></span><span class="rm-fill" aria-hidden="true"></span><ol>${stops}</ol></div>
+function studyPageLinks(level) {
+  return `<nav class="study-page-links" aria-label="Study pages">
+    <a class="btn" href="#/roadmap"><span>Lessons</span>${ARROW_ICON}</a>
+    <a class="btn" href="#/karten?l=${level.id}"><span>Flashcards</span>${ARROW_ICON}</a>
+    <a class="btn" href="#/practice"><span>Exercises</span>${ARROW_ICON}</a>
   </nav>`;
 }
 
-/* ---------- the line for one level ---------- */
-
-function stops(level, next) {
-  const nextIndex = next ? level.lessons.indexOf(next) : level.lessons.length;
-  const start = level.course ? Math.min(Math.max(0, level.lessons.length - 8), Math.max(0, nextIndex - 2)) : 0;
-  const visible = level.course ? level.lessons.slice(start, start + 8) : level.lessons;
-  return visible
-    .map((lesson) => {
-      const done = isDone(lesson);
-      const cls = done ? "done" : next === lesson ? "next" : "";
-      const label = done
-        ? `${lessonScore(lesson)}/${gradedTasks(lesson).length}`
-        : cls === "next"
-          ? "Next"
-          : "";
-      return `<li class="${cls}" data-lesson-key="${lesson.key}"><a href="#/${level.id}/lektion/${lesson.id}">
-        <span class="dot">${done ? CHECK_ICON : ""}</span>
-        <span><span class="st-title" lang="de">${lesson.position}. ${esc(lesson.germanTitle)}</span><span class="st-sub">${esc(lesson.title)}</span></span>
-        <span class="st">${label}</span></a></li>`;
-    })
-    .join("");
-}
-
-/* ---------- further down ---------- */
-
-/** A moving strip of the level's words, like the ticker on a station platform. Tap a word to hear it. */
-function ticker(level) {
-  const words = [...level.lessons, ...level.topics].flatMap((set) => set.vocab);
-  const list = shuffle(words.filter((w, i) => words.findIndex((x) => x.de === w.de) === i)).slice(0, TICKER_WORDS);
-  const items = (copy) =>
-    list
-      .map(
-        (w) =>
-          `<li><button class="tk" type="button" data-say="${esc(w.de)}"${copy ? ' tabindex="-1"' : ""}><b lang="de">${esc(w.de)}</b><span>${esc(w.en)}</span></button></li>`,
-      )
-      .join("");
-  return `<section class="ticker" aria-label="Words from the ${level.name} lessons and topics. Select a word to hear it.">
-    <div class="ticker-viewport">
-      <div class="ticker-track">
-        <ul class="ticker-set">${items(false)}</ul>
-        <ul class="ticker-set" aria-hidden="true">${items(true)}</ul>
-      </div>
-    </div>
-    <button class="ticker-toggle" type="button" aria-pressed="false" aria-label="Pause the moving words">${PAUSE_ICON}${PLAY_ICON}</button>
+function studyPlanCard(steps, links) {
+  const minutes = steps.reduce((total, step) => total + step.min, 0);
+  return `<section class="study-next study-plan-card" aria-labelledby="study-next-title">
+    <p class="study-next-label">Study plan</p><h2 id="study-next-title">About ${minutes} minutes of German</h2>
+    <ol class="study-plan-steps">${steps.map(({ title, detail, min }, index) =>
+      `<li><span class="study-step-number" aria-hidden="true">${index + 1}</span><div><b>${esc(title)}</b><small>${esc(detail)} · ${min} min</small></div></li>`
+    ).join("")}</ol>
+    ${links}
   </section>`;
 }
+
+const startLink = (href, label) => `<a class="btn study-start" data-home-start href="${esc(href)}">${esc(label)}${ARROW_ICON}</a>`;
+
+function singleCard(step, level, links, optional = false) {
+  const view = presentation(step, level);
+  return `<section class="study-next study-single${optional ? " study-optional" : ""}" aria-labelledby="study-next-title">
+    <div class="study-next-meta"><div class="study-next-type"><span class="study-next-icon">${icon(view.kind)}</span><span>${optional ? "If you want to keep going" : esc(view.label)}</span></div>
+      ${step.min && !optional ? `<span>About ${esc(step.min)} min</span>` : ""}</div>
+    <div class="study-next-copy"><h2 id="study-next-title">${esc(view.title)}</h2><p class="study-next-description">${esc(optional ? view.label : view.description)}</p></div>
+    ${startLink(step.href, optional && view.kind === "lesson" && !step.href.includes("part=exercises") && step.href.includes("/lektion/") ? "Continue lesson" : view.action)}
+    ${links}
+  </section>`;
+}
+
+function recentLessons(lessons) {
+  if (!lessons.length) return "";
+  return `<details class="study-help"><summary>Recent lessons</summary><ul>${lessons.map(lesson => {
+    const { opened, seen, total, next } = lessonSentenceProgress(lesson);
+    const percent = total ? Math.round(seen / total * 100) : 0;
+    const date = opened ? new Date(opened).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }) : "";
+    return `<li><a href="#/${lesson.level.id}/lektion/${lesson.id}">${safeStudyTitle(lesson)}</a>
+      ${date || total ? `<span class="small muted"> · ${date ? esc(date) : ""}${date && total ? " · " : ""}${total ? `${percent}% of sentences practised` : ""}</span>` : ""}
+      ${total ? `<a class="tlink small" href="#/sentences?lesson=${lesson.key}&amp;resume">${seen && seen < total ? `Continue from sentence ${next + 1}` : seen ? "Review sentences" : "Start sentence practice"}</a>` : ""}</li>`;
+  }).join("")}</ul></details>`;
+}
+
+function studyLinks(title, sets) {
+  if (!sets.length) return "";
+  return `<details class="study-help"><summary>${title}</summary><ul>${sets.map(set => {
+    const href = set.kind === "topic" ? `#/karten?l=${set.key}` : `#/${set.level.id}/lektion/${set.id}`;
+    return `<li><a href="${esc(href)}">${safeStudyTitle(set)}</a></li>`;
+  }).join("")}</ul></details>`;
+}
+
+const safeStudyTitle = set => `${esc(set.level.name)} · ${esc(set.title)}`;
 
 export function render(level) {
-  shown = level;
-  const next = nextLesson(level);
-  const days = streak();
-  const done = doneTotal();
-  const known = knownIn(ALL_WORDS);
-  const faq = FAQ.map((f) => `<dt>${esc(f.question)}</dt><dd>${esc(f.answer)}</dd>`).join("");
-  return `
-  <div class="hero">
-    <div class="hero-main">
-      <h1>A little German, every day.</h1>
-      ${board(level, next)}
-      <div class="hero-actions">${actions(level, next)}</div>
-      ${sessionCard(level)}
+  const activities = homeActivities(level);
+  const { plan, primary, course, review, home } = activities;
+  const goals = dailyGoalProgress();
+  const complete = goals.some(goal => goal.value >= goal.target);
+  const lesson = nextLesson(level);
+  const optional = course || (lesson ? { title: lesson.title, href: `#/${level.id}/lektion/${lesson.id}` } : null);
+  const suggestions = complete ? [] : suggestedSteps(activities, level);
+  const activeSteps = complete ? (optional ? [optional] : []) : suggestions.length ? suggestions : [primary];
+  const activePaths = new Set(activeSteps.map(({ href }) => href.includes("/lektion/") ? href.split("?")[0] : href));
+  const unused = set => !activePaths.has(set.kind === "topic" ? `#/karten?l=${set.key}` : `#/${set.level.id}/lektion/${set.id}`);
+  const recent = recentStudyLessons().filter(unused);
+  const favorites = pinnedStudySets().filter(set => unused(set) && !recent.includes(set));
+  const goal = dailyGoal(goals, complete);
+  const words = dueCount();
+  const dueCounts = [words ? `${words} ${words === 1 ? "word" : "words"}` : "", review.due ? `${review.due} ${review.due === 1 ? "sentence" : "sentences"}` : ""].filter(Boolean);
+  const due = home === "course" && course && dueCounts.length
+    ? `<div class="study-due"><b>Due today</b><p class="small muted">${dueCounts.join(" · ")}</p></div>` : "";
+  const links = studyPageLinks(level);
+  return `<div class="study-home">
+    <header class="study-home-header"><h1>Today</h1><span class="study-level">${esc(level.name)}${plan?.session ? ` · Week ${plan.session.week}` : ""}</span></header>
+    ${complete ? goal + (optional ? singleCard(optional, level, links, true) : links) :
+      (suggestions.length ? studyPlanCard(suggestions, links) : singleCard(primary, level, links)) + `<div class="study-status">${goal}${due}</div>`}
+    <div class="study-more">
+      ${recentLessons(recent)}
+      ${studyLinks("Favorites", favorites)}
+      <details class="study-help"><summary>Study settings</summary><ul><li><a href="#/settings?section=goal">Change goal</a></li><li><a href="#/settings?section=review">Review settings</a></li></ul></details>
+      <details class="study-help"><summary>Questions about studying</summary><dl>${FAQ.map(item => `<dt>${esc(item.question)}</dt><dd>${esc(item.answer)}</dd>`).join("")}</dl></details>
     </div>
-    <aside class="linecard spot" aria-labelledby="line-h">
-      <div class="line-head"><h2 id="line-h">${level.name} line</h2>${levelSwitch(level, "", "Choose a level")}</div>
-      <p class="muted small">${doneCount(level)} of ${level.lessons.length} stops reached</p>
-      <div class="stops-wrap"><span class="rail" aria-hidden="true"></span><span class="rail-fill" aria-hidden="true"></span><ol class="stops">${stops(level, next)}</ol></div>
-      ${level.course ? `<div class="line-course"><a class="btn small ghost" href="#/${level.id}/roadmap">Explore all ${level.name} lessons ${ARROW_ICON}</a></div>` : ''}
-    </aside>
-    ${routeMap(level)}
-  </div>
-
-  <aside class="home-progress" aria-label="Your progress">
-    <dl class="home-progress-metrics">
-      <div><dt>${days === 1 ? "Day" : "Days"} in a row</dt><dd>${days}</dd></div>
-      <div><dt>Lessons done</dt><dd>${done}<span>/${ALL_LESSONS.length}</span></dd></div>
-      <div><dt>Words known</dt><dd>${known}<span>/${ALL_WORDS.length}</span></dd></div>
-    </dl>
-    <a class="tlink" href="#/profile">View your progress ${ARROW_ICON}</a>
-  </aside>
-
-  ${ticker(level)}
-
-  <section aria-labelledby="faq-h">
-    <details class="faq-dropdown">
-      <summary class="faq-toggle"><h2 id="faq-h">Questions</h2></summary>
-      <div class="faq-content"><dl class="faq">${faq}</dl></div>
-    </details>
-  </section>`;
-}
-
-/* ---------- layout ---------- */
-
-/** Size the grey rail between the first and last stop, and the green part up to the next stop. */
-function fillRail() {
-  const wrap = document.querySelector(".stops-wrap");
-  if (!wrap || !shown) return;
-  const dots = [...wrap.querySelectorAll(".dot")];
-  if (!dots.length) return;
-  const base = wrap.getBoundingClientRect().top;
-  const middle = (el) => {
-    const r = el.getBoundingClientRect();
-    return r.top - base + r.height / 2;
-  };
-  const first = middle(dots[0]);
-  const last = middle(dots[dots.length - 1]);
-  const rail = wrap.querySelector(".rail");
-  const fill = wrap.querySelector(".rail-fill");
-  rail.style.top = `${first}px`;
-  rail.style.height = `${last - first}px`;
-  const next = nextLesson(shown);
-  const nextDot = next && dots.find(dot => dot.closest('li').dataset.lessonKey === next.key);
-  const target = doneCount(shown) === 0 ? first : !next ? last : nextDot ? middle(nextDot) : first;
-  fill.style.top = `${first}px`;
-  fill.style.height = `${Math.max(0, target - first)}px`;
-}
-
-/* ---------- motion ---------- */
-
-/** The line draws itself: rail, then the stops pop in one by one, then the green progress runs. */
-function lineCascade(speed = 1) {
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(
-    ".stops-wrap .rail",
-    { scaleY: 0, transformOrigin: "50% 0%", duration: 1.1 * speed, ease: "power3.inOut" },
-    0,
-  )
-    .from(
-      ".stops .dot",
-      { scale: 0, duration: 0.6, stagger: 0.06 * speed, ease: "back.out(2.4)" },
-      0.1 * speed,
-    )
-    .from(
-      ".stops .st-title, .stops .st-sub",
-      { autoAlpha: 0, x: -12, duration: 0.8, stagger: 0.03 * speed, clearProps: "transform" },
-      0.12 * speed,
-    )
-    .from(".stops .st", { autoAlpha: 0, duration: 0.6 }, 0.5 * speed)
-    .from(
-      ".stops-wrap .rail-fill",
-      { scaleY: 0, transformOrigin: "50% 0%", duration: 1.2 * speed, ease: "power2.inOut" },
-      0.5 * speed,
-    );
-  return tl;
-}
-
-/** The route across the levels: the line runs out, the stops pop, the green part follows. */
-function routeDraw(speed = 1) {
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(".routemap", { autoAlpha: 0, y: 16, duration: 0.9 * speed, clearProps: "transform" }, 0)
-    .from(
-      ".rm-line",
-      { scaleX: 0, transformOrigin: "0% 50%", duration: 1 * speed, ease: "power3.inOut" },
-      0.1,
-    )
-    .from(".rm-dot", { scale: 0, duration: 0.6, stagger: 0.12 * speed, ease: "back.out(2.4)" }, 0.2)
-    .from(
-      ".rm-fill",
-      { scaleX: 0, transformOrigin: "0% 50%", duration: 1.1 * speed, ease: "power2.inOut" },
-      0.45,
-    );
-  return tl;
-}
-
-/** Today's session: the card rises, then its steps follow one after another. */
-const sessionIn = (delay = 0) =>
-  gsap
-    .timeline({ defaults: { ease: "expo.out" }, delay })
-    .from(".session", { autoAlpha: 0, y: 22, duration: 0.9, clearProps: "transform" }, 0)
-    .from(
-      ".session-steps li",
-      { autoAlpha: 0, x: -10, duration: 0.7, stagger: 0.07, clearProps: "transform" },
-      0.12,
-    );
-
-function playOpening() {
-  splitReveal(document.querySelector(".hero h1"), { by: "words", duration: 1.15, stagger: 0.045 });
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(
-    ".hero .flapboard",
-    { autoAlpha: 0, y: 30, scale: 0.97, duration: 1.1, clearProps: "transform" },
-    0.3,
-  )
-    .from(
-      ".hero-actions > *",
-      { autoAlpha: 0, y: 14, duration: 0.9, stagger: 0.08, clearProps: "transform" },
-      0.55,
-    )
-    .add(sessionIn(), 0.65)
-    .from(".linecard", { autoAlpha: 0, y: 40, duration: 1.2, clearProps: "transform" }, 0.25)
-    .add(lineCascade(), 0.55)
-    .add(routeDraw(), 0.85);
-  runBoards(document, { delay: 0.65 });
-  onLeave(() => tl.kill());
-}
-
-function playReturn() {
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(
-    ".hero-main > :not(.session)",
-    { autoAlpha: 0, y: 16, duration: 0.8, stagger: 0.05, clearProps: "transform" },
-    0,
-  )
-    .add(sessionIn(), 0.12)
-    .from(".linecard", { autoAlpha: 0, y: 24, duration: 0.9, clearProps: "transform" }, 0.08)
-    .add(lineCascade(0.6), 0.2)
-    .add(routeDraw(0.6), 0.3);
-  runBoards(document, { delay: 0.3 });
-  onLeave(() => tl.kill());
-}
-
-/** Level switch: only what changed moves; the board flips from the old stop to the new one. */
-function playLevelChange() {
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(
-    ".hero-actions > *, .session-steps li",
-    { autoAlpha: 0, y: 10, duration: 0.6, stagger: 0.05, clearProps: "transform" },
-    0,
-  )
-    .from("#line-h, .linecard > .muted", { autoAlpha: 0, y: 8, duration: 0.5, stagger: 0.04 }, 0)
-    .add(lineCascade(0.6), 0)
-    .from(".routemap .now .rm-dot", { scale: 0, duration: 0.6, ease: "back.out(2.4)" }, 0.15);
-  runBoards(document, { delay: 0.05 });
-  onLeave(() => tl.kill());
-}
-
-/** Sections further down animate as they scroll into view. */
-function scrollScenes() {
-  splitReveal(document.querySelector("#faq-h"), { onScroll: true, duration: 1.1 });
-  revealOnScroll(".home-progress, .ticker", { y: 16 });
-}
-
-/** The word ticker glides slowly; it eases to a stop under the pointer or keyboard focus. */
-function runTicker() {
-  const box = document.querySelector(".ticker");
-  if (!box) return;
-  if (!motionOK()) {
-    box.classList.add("is-static");
-    return;
-  }
-  const loop = gsap.to(".ticker-track", { xPercent: -50, duration: 80, ease: "none", repeat: -1 });
-  const toggle = box.querySelector(".ticker-toggle");
-  let paused = false;
-  const speed = (v, duration) =>
-    gsap.to(loop, { timeScale: v, duration, ease: "power2.out", overwrite: true });
-  const hold = () => speed(0, 0.6);
-  const resume = () => {
-    if (!paused) speed(1, 1.2);
-  };
-  box.addEventListener("pointerenter", hold);
-  box.addEventListener("pointerleave", resume);
-  box.addEventListener("focusin", hold);
-  box.addEventListener("focusout", resume);
-  toggle.addEventListener("click", () => {
-    paused = !paused;
-    toggle.setAttribute("aria-pressed", String(paused));
-    toggle.setAttribute("aria-label", paused ? "Play the moving words" : "Pause the moving words");
-    if (paused) hold();
-    else speed(1, 1.2);
-  });
-  // No need to keep it moving while it's scrolled out of sight.
-  ScrollTrigger?.create({
-    trigger: box,
-    start: "top bottom",
-    end: "bottom top",
-    onToggle: (self) => (self.isActive ? loop.resume() : loop.pause()),
-  });
-  onLeave(() => loop.kill());
-}
-
-/** Keep the native disclosure open until its closing animation finishes. */
-function runQuestions() {
-  const faq = document.querySelector('.faq-dropdown');
-  if (!faq) return;
-  const toggle = faq.querySelector('.faq-toggle');
-  const content = faq.querySelector('.faq-content');
-  const list = faq.querySelector('.faq');
-  let expanded = faq.open;
-  let animation = null;
-
-  const finish = () => {
-    animation = null;
-    faq.open = expanded;
-    faq.classList.remove('is-closing');
-    toggle.removeAttribute('aria-expanded');
-    gsap.set(content, { clearProps: 'height' });
-    gsap.set(list, { clearProps: 'opacity,transform' });
-    ScrollTrigger?.refresh();
-  };
-  const onClick = (e) => {
-    // Native keyboard and disclosure behaviour remains available without motion.
-    if (!motionOK()) {
-      if (animation) { animation.kill(); finish(); }
-      return;
-    }
-    e.preventDefault();
-    animation?.kill();
-    const height = faq.open ? content.getBoundingClientRect().height : 0;
-    if (!faq.open) gsap.set(list, { opacity: 0, y: 12 });
-    expanded = !expanded;
-    faq.open = true;
-    faq.classList.toggle('is-closing', !expanded);
-    toggle.setAttribute('aria-expanded', String(expanded));
-    gsap.set(content, { height });
-    // Measuring the inner list lets interrupted transitions resume from their current height.
-    animation = gsap.timeline({ defaults: { ease: 'expo.out' }, onComplete: finish })
-      .to(content, { height: expanded ? list.getBoundingClientRect().height : 0, duration: expanded ? 0.65 : 0.5 }, 0)
-      .to(list, { opacity: expanded ? 1 : 0, y: expanded ? 0 : 8, duration: expanded ? 0.45 : 0.25 }, expanded ? 0.08 : 0);
-  };
-  const onFaqToggle = () => {
-    if (animation) return;
-    expanded = faq.open;
-    ScrollTrigger?.refresh();
-  };
-  toggle.addEventListener('click', onClick);
-  faq.addEventListener('toggle', onFaqToggle);
-  onLeave(() => {
-    animation?.kill();
-    toggle.removeEventListener('click', onClick);
-    faq.removeEventListener('toggle', onFaqToggle);
-  });
-}
-
-export function mount(level, { sameKind } = {}) {
-  fillRail();
-  runQuestions();
-  const scene = !motionOK() ? "still" : sameKind ? "level" : openingPlayed ? "return" : "opening";
-  openingPlayed = true;
-  slidePill(document.querySelector(".linecard .lvswitch"), "home-levels", { animate: scene === "level" });
-  if (scene === "opening") playOpening();
-  else if (scene === "return") playReturn();
-  else if (scene === "level") playLevelChange();
-  else runBoards();
-  if (motionOK()) scrollScenes();
-  runTicker();
-  magnetic(document.querySelector(".hero-actions .btn:not(.ghost)"));
-  document.fonts?.ready.then(fillRail); // web fonts can shift the stops
-  let timer;
-  const onResize = () => {
-    clearTimeout(timer);
-    timer = setTimeout(fillRail, 150);
-  };
-  window.addEventListener("resize", onResize);
-  onLeave(() => {
-    clearTimeout(timer);
-    window.removeEventListener("resize", onResize);
-  });
+  </div>`;
 }

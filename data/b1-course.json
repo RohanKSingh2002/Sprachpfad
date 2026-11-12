@@ -1,0 +1,3076 @@
+{
+  "id": "b1",
+  "version": 1,
+  "updated": "2026-10-25",
+  "title": "B1 communication path",
+  "eyebrow": "German B1 · Explain, discuss and act",
+  "introduction": "Build longer, clearer communication around stories, media, work, relationships, community life and travel. Connect grammar to practical decisions, written messages and conversations that require a response.",
+  "scopeNote": "This expanded path develops B1 communication. Use additional unfamiliar texts, natural recordings and independent feedback alongside it; completing these lessons alone does not establish full B1 coverage.",
+  "entryReview": "Before starting, practise a short account in the Perfekt, a reason with weil, a comparison and a polite request for help. Revisit the relevant A2 modules wherever these are still difficult.",
+  "weeks": 16,
+  "coreHours": 90,
+  "reviewHours": 18,
+  "sources": [
+    {
+      "title": "Goethe B1 official model papers and recordings",
+      "url": "https://www.goethe.de/ins/de/en/prf/gzb1/ueb.html"
+    }
+  ],
+  "lessonOrder": [
+    1,
+    6,
+    5,
+    10,
+    3,
+    11,
+    7,
+    12,
+    2,
+    4,
+    13,
+    14,
+    9,
+    15,
+    8,
+    16,
+    17,
+    18
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "title": "Experiences, stories and change",
+      "lessonIds": [
+        1,
+        6
+      ],
+      "topics": [
+        "past",
+        "job"
+      ],
+      "goals": [
+        "Tell a connected story and describe its background.",
+        "Explain which event happened before another."
+      ],
+      "pronunciation": "Group a longer sentence into meaningful phrases; stress time markers.",
+      "listening": "Follow a personal account and identify an earlier event.",
+      "reading": "Recognise a problem, response and outcome in an experience report.",
+      "writing": "Write a coherent short experience report.",
+      "speaking": "Tell a story, answer questions and summarise a partner’s experience.",
+      "checkpoint": "Tell a new story in order and explain what led to a change.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Als ich meine erste Stelle begann, war alles neu für mich. Ich kannte niemanden und hatte Angst, am Telefon Fehler zu machen. Nachdem eine Kollegin mir einige nützliche Sätze gezeigt hatte, wurde ich sicherer. Später habe ich neue Mitarbeiter selbst unterstützt. Heute bereite ich wichtige Gespräche noch immer mit Stichpunkten vor, aber ich lese keinen ganzen Text mehr ab.",
+          "questions": [
+            {
+              "question": "Was war am Anfang schwierig?",
+              "options": [
+                "Schriftliche Berichte verfassen",
+                "Das Telefonieren",
+                "Neue Kollegen einarbeiten"
+              ],
+              "answer": 1,
+              "evidence": "Ich hatte Angst, am Telefon Fehler zu machen."
+            },
+            {
+              "question": "Was half der Person?",
+              "options": [
+                "Nützliche Sätze einer Kollegin",
+                "Ein vollständig vorbereiteter Gesprächstext",
+                "Der Wechsel in eine andere Abteilung"
+              ],
+              "answer": 0,
+              "evidence": "Nachdem eine Kollegin mir einige nützliche Sätze gezeigt hatte ..."
+            },
+            {
+              "question": "Wie bereitet sie sich heute vor?",
+              "options": [
+                "Sie lernt einen Text auswendig.",
+                "Sie vermeidet alle Gespräche.",
+                "Sie notiert Stichpunkte."
+              ],
+              "answer": 2,
+              "evidence": "Mit Stichpunkten ... keinen ganzen Text mehr."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Erfahrungsbericht: Vor dem Auslandspraktikum hatte ich viel Grammatik gelernt, aber selten spontan gesprochen. In der ersten Woche verstand ich die Besprechungen nur teilweise. Ich begann, nach jedem Treffen drei wichtige Ausdrücke zu notieren. Nach einigen Wochen konnte ich selbst kurze Ergebnisse vorstellen. Hilfreich war vor allem, dass meine Kolleginnen mir Zeit zum Antworten gaben und nachfragten, statt sofort ins Englische zu wechseln.",
+          "questions": [
+            {
+              "question": "Was fehlte vor dem Praktikum?",
+              "options": [
+                "Spontanes Sprechen",
+                "Grammatikwissen",
+                "Eine Unterkunft"
+              ],
+              "answer": 0,
+              "evidence": "Aber selten spontan gesprochen."
+            },
+            {
+              "question": "Welche Lerngewohnheit entwickelte die Person?",
+              "options": [
+                "Alle Gespräche übersetzen",
+                "Drei Ausdrücke nach jedem Treffen notieren",
+                "Nur schriftlich kommunizieren"
+              ],
+              "answer": 1,
+              "evidence": "Nach jedem Treffen drei wichtige Ausdrücke zu notieren."
+            },
+            {
+              "question": "Wie unterstützten die Kolleginnen sie?",
+              "options": [
+                "Sie beantworteten alle Fragen selbst.",
+                "Sie wechselten sofort die Sprache.",
+                "Sie ließen Zeit zum Antworten."
+              ],
+              "answer": 2,
+              "evidence": "Zeit zum Antworten gaben und nachfragten."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write a fictional experience report about a first day in a course or job. Describe the initial difficulty, what happened before an improvement and what you learned.",
+          "wordGoal": 80,
+          "modelAnswer": "An meinem ersten Tag im Abendkurs war ich sehr nervös. Ich hatte vorher allein gelernt und kannte niemanden. Während der ersten Partneraufgabe fehlten mir viele Wörter. Nachdem mir mein Partner zwei Fragen erklärt hatte, konnte ich besser antworten. In der Pause sprachen wir noch einmal über die Aufgabe. Seitdem notiere ich vor einem Gespräch nur wenige Stichpunkte. Ich habe gelernt, dass ich nicht jeden Satz perfekt vorbereiten muss. Wichtig ist auch, nachzufragen und dem anderen wirklich zuzuhören. Das möchte ich weiter üben."
+        },
+        "speaking": {
+          "task": "Tell a fictional first-day story in order. Your partner asks what had happened beforehand and what changed. Then summarise your partner’s experience in two sentences.",
+          "modelAnswer": "A: Wie war dein erster Tag? B: Ich war unsicher, weil ich vorher nur allein gelernt hatte. A: Was hat dir geholfen? B: Eine Kollegin hat langsam gesprochen und Fragen gestellt. Danach habe ich mich häufiger am Gespräch beteiligt."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Als ich ankam, hatte der Kurs schon begonnen.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [],
+        "task": "Tell a new story in order and explain what led to a change. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall Perfekt, war/hatte and verb-final clauses."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Media, sources and useful questions",
+      "lessonIds": [
+        5,
+        10
+      ],
+      "topics": [
+        "tv"
+      ],
+      "goals": [
+        "Ask about information using prepositional and indirect questions.",
+        "Summarise useful information and identify what remains uncertain."
+      ],
+      "pronunciation": "Pronounce the r-link in worauf/darauf clearly; keep an indirect question together.",
+      "listening": "Identify the purpose and limitations of an information source.",
+      "reading": "Distinguish evidence, opinion and an unanswered question.",
+      "writing": "Write a focused information request.",
+      "speaking": "Recommend a source and respond to a reliability concern.",
+      "checkpoint": "Relay a short piece of information while making uncertainty explicit.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Für unser Lernprojekt suchen wir einen kurzen Podcast über den Alltag in einer Stadt. Der erste Beitrag dauert zwölf Minuten und enthält Gespräche mit Bewohnern. Der zweite ist nur vier Minuten lang, besteht aber fast nur aus Werbung. Ich würde den ersten wählen. Wir müssen noch prüfen, ob ein Transkript verfügbar ist und wer den Beitrag veröffentlicht hat.",
+          "questions": [
+            {
+              "question": "Was sucht die Gruppe?",
+              "options": [
+                "Einen Stadtplan",
+                "Einen Podcast über den Stadtalltag",
+                "Ein Werbevideo"
+              ],
+              "answer": 1,
+              "evidence": "Einen kurzen Podcast über den Alltag in einer Stadt."
+            },
+            {
+              "question": "Warum wird der zweite Beitrag nicht bevorzugt?",
+              "options": [
+                "Er besteht fast nur aus Werbung.",
+                "Er ist zu lang.",
+                "Er hat keine Musik."
+              ],
+              "answer": 0,
+              "evidence": "Besteht aber fast nur aus Werbung."
+            },
+            {
+              "question": "Was muss noch geprüft werden?",
+              "options": [
+                "Der genaue Inhalt der Werbung",
+                "Die Länge beider Beiträge",
+                "Transkript und Herausgeber"
+              ],
+              "answer": 2,
+              "evidence": "Ob ein Transkript verfügbar ist und wer den Beitrag veröffentlicht hat."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Medienprojekt: Zwei Gruppen vergleichen Nachrichten über denselben Stadtteil. Ein kurzer Beitrag berichtet von Beschwerden über Verkehrslärm. Ein anderer beschreibt neue Radwege, nennt aber keine Quelle für seine Zahlen. Die Gruppen sollen Datum, Herausgeber und Belege prüfen. Anschließend fassen sie übereinstimmende Informationen zusammen und kennzeichnen offene Fragen. Ziel ist nicht, den längsten Text zu finden, sondern nachvollziehbare Informationen weiterzugeben.",
+          "questions": [
+            {
+              "question": "Was vergleichen die Gruppen?",
+              "options": [
+                "Nachrichten über denselben Stadtteil",
+                "Verkehrszahlen verschiedener Jahre",
+                "Radwege in zwei verschiedenen Städten"
+              ],
+              "answer": 0,
+              "evidence": "Nachrichten über denselben Stadtteil."
+            },
+            {
+              "question": "Was fehlt im zweiten Beitrag?",
+              "options": [
+                "Eine Beschreibung der Radwege",
+                "Eine Quelle für die Zahlen",
+                "Eine Angabe zum Stadtteil"
+              ],
+              "answer": 1,
+              "evidence": "Nennt aber keine Quelle für seine Zahlen."
+            },
+            {
+              "question": "Was sollen die Gruppen mit offenen Fragen machen?",
+              "options": [
+                "Sie als Fakten weitergeben",
+                "Sie weglassen",
+                "Sie kennzeichnen"
+              ],
+              "answer": 2,
+              "evidence": "Kennzeichnen offene Fragen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write to a fictional podcast editor. Explain your project and ask about the original source, a transcript and permission to discuss the topic in your learning group.",
+          "wordGoal": 80,
+          "modelAnswer": "Guten Tag, unsere Lerngruppe beschäftigt sich gerade mit dem Alltag in verschiedenen Städten. Wir haben Ihren Podcast gefunden und möchten das Thema im Kurs besprechen. Können Sie uns sagen, wann die Gespräche aufgenommen wurden und auf welche Quellen sich die genannten Zahlen beziehen? Außerdem möchten wir wissen, ob ein Transkript verfügbar ist. Wir wollen die wichtigsten Informationen mit eigenen Worten zusammenfassen. Bitte teilen Sie uns mit, ob das in unserer kleinen Lerngruppe möglich ist. Vielen Dank für Ihre Unterstützung. Mit freundlichen Grüßen"
+        },
+        "speaking": {
+          "task": "Recommend one of two fictional information sources. Give a reason, ask an indirect question about reliability and summarise the other person’s concern.",
+          "modelAnswer": "A: Ich würde den längeren Beitrag wählen, weil er mehrere Perspektiven zeigt. B: Weißt du, wer ihn veröffentlicht hat? A: Das müssen wir noch prüfen. Dir ist also wichtig, dass die Quelle zuverlässig ist. B: Genau, und ich möchte wissen, ob die Zahlen aktuell sind."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Worauf achtest du? Weißt du, woher die Information kommt?",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          1,
+          6
+        ],
+        "task": "Relay a short piece of information while making uncertainty explicit. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall verb + preposition combinations and the difference between ob and wenn."
+      }
+    },
+    {
+      "id": 3,
+      "title": "Consumption, repair and the environment",
+      "lessonIds": [
+        3,
+        11
+      ],
+      "topics": [
+        "environment",
+        "shopping"
+      ],
+      "goals": [
+        "Describe a process without making the person the focus.",
+        "Understand relationships and reasons in more formal noun phrases."
+      ],
+      "pronunciation": "Keep wird/werden and the final participle audible.",
+      "listening": "Understand a service procedure and its restrictions.",
+      "reading": "Read rules for a reuse project and identify conditions.",
+      "writing": "Propose a small reuse project with practical rules.",
+      "speaking": "Compare repairing, sharing and replacing an item.",
+      "checkpoint": "Explain a process and justify one practical restriction.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "In unserem Haus werden kleine Elektrogeräte nicht mehr sofort weggeworfen. Einmal im Monat prüfen Freiwillige, ob eine Reparatur möglich ist. Wegen des begrenzten Platzes können sie keine großen Haushaltsgeräte annehmen. Ersatzteile werden nur nach Rücksprache bestellt. Die Nachbarn finden das Angebot hilfreich, auch wenn nicht jedes Gerät repariert werden kann.",
+          "questions": [
+            {
+              "question": "Wie oft gibt es das Angebot?",
+              "options": [
+                "Jede Woche",
+                "Einmal im Monat",
+                "Jeden Tag"
+              ],
+              "answer": 1,
+              "evidence": "Einmal im Monat."
+            },
+            {
+              "question": "Warum werden keine großen Geräte angenommen?",
+              "options": [
+                "Es gibt zu wenig Platz.",
+                "Ersatzteile sind grundsätzlich nicht erhältlich.",
+                "Die Reparaturen wären für Besucher zu teuer."
+              ],
+              "answer": 0,
+              "evidence": "Wegen des begrenzten Platzes."
+            },
+            {
+              "question": "Wann werden Ersatzteile bestellt?",
+              "options": [
+                "Vor der Prüfung des Geräts",
+                "Sobald das Gerät abgegeben wird",
+                "Nach Rücksprache"
+              ],
+              "answer": 2,
+              "evidence": "Nur nach Rücksprache bestellt."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Im Stadtteil wird ein Regal zum Tauschen eingerichtet. Saubere, funktionierende Gegenstände können dort kostenlos abgegeben werden. Lebensmittel und beschädigte Elektrogeräte sind ausgeschlossen. Auf einem Zettel soll der Zustand des Gegenstands beschrieben werden. Wegen des Erfolgs eines früheren Versuchs soll das Regal zunächst drei Monate bleiben. Danach entscheidet das Organisationsteam, ob es dauerhaft weitergeführt wird.",
+          "questions": [
+            {
+              "question": "Was darf ins Regal?",
+              "options": [
+                "Saubere, funktionierende Gegenstände",
+                "Alle kaputten Geräte",
+                "Frische Lebensmittel"
+              ],
+              "answer": 0,
+              "evidence": "Saubere, funktionierende Gegenstände."
+            },
+            {
+              "question": "Welche Information soll auf dem Zettel stehen?",
+              "options": [
+                "Der ursprüngliche Kaufpreis",
+                "Der Zustand des Gegenstands",
+                "Das Datum der nächsten Öffnung"
+              ],
+              "answer": 1,
+              "evidence": "Der Zustand des Gegenstands."
+            },
+            {
+              "question": "Was geschieht nach drei Monaten?",
+              "options": [
+                "Das Regal wird sicher verkauft.",
+                "Alle Gegenstände werden zurückgegeben.",
+                "Das Team entscheidet über die Fortsetzung."
+              ],
+              "answer": 2,
+              "evidence": "Danach entscheidet das Organisationsteam ... dauerhaft weitergeführt."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Suggest a small reuse project for a fictional community. Explain the idea, two rules and a reason for one rule. Use a passive sentence and a genitive phrase.",
+          "wordGoal": 80,
+          "modelAnswer": "Ich schlage vor, im Gemeinschaftsraum ein Regal für gebrauchte Bücher aufzustellen. Gut erhaltene Bücher können dort kostenlos getauscht werden. Der Zustand der Bücher sollte vorher geprüft werden. Wegen des begrenzten Platzes darf jede Person zunächst nur drei Bücher mitbringen. Zeitschriften nehmen wir nicht an. Nach einem Monat können wir gemeinsam entscheiden, ob das Angebot fortgesetzt wird. Ich würde mich um die erste Sortierung kümmern. So könnten wir weniger wegwerfen und gleichzeitig neue Gespräche in der Nachbarschaft beginnen. Wer möchte bei der Organisation helfen?"
+        },
+        "speaking": {
+          "task": "Compare repairing, sharing and buying a replacement for a fictional item. Discuss cost, usefulness and waste, then agree on a solution.",
+          "modelAnswer": "A: Der Drucker funktioniert nicht mehr. Sollen wir einen neuen kaufen? B: Zuerst könnte er in der Werkstatt geprüft werden. A: Gute Idee. Wenn die Reparatur zu teuer ist, könnten wir einen Drucker gemeinsam nutzen. B: Dann fragen wir nach den Kosten."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Das Gerät wird geprüft. Die Reparatur des Geräts beginnt morgen.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          5,
+          10
+        ],
+        "task": "Explain a process and justify one practical restriction. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall participles and noun gender before passive and genitive practice."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Learning, work and purposeful action",
+      "lessonIds": [
+        7,
+        12
+      ],
+      "topics": [
+        "job",
+        "office"
+      ],
+      "goals": [
+        "Use infinitive clauses to describe plans and intentions.",
+        "Distinguish the people involved in a purpose clause."
+      ],
+      "pronunciation": "Speak the whole infinitive group together, including zu.",
+      "listening": "Identify a learning opportunity and who benefits from an arrangement.",
+      "reading": "Read a training proposal and distinguish its purpose from assessment.",
+      "writing": "Make a reasoned request for training or support.",
+      "speaking": "Negotiate a practical learning plan.",
+      "checkpoint": "Explain a goal, the action it requires and the support needed.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Unsere Abteilung bietet ab November einen kurzen Schreibkurs an. Er findet während der Arbeitszeit statt, damit möglichst viele Kolleginnen und Kollegen teilnehmen können. Ich möchte mitmachen, um klarere E-Mails zu schreiben. Die Leitung bittet uns, vorher eine erfundene Beispielsituation zu notieren. Echte Kundendaten sollen nicht mitgebracht werden.",
+          "questions": [
+            {
+              "question": "Wann findet der Kurs statt?",
+              "options": [
+                "Nur am Wochenende",
+                "Während der Arbeitszeit",
+                "Immer nachts"
+              ],
+              "answer": 1,
+              "evidence": "Während der Arbeitszeit."
+            },
+            {
+              "question": "Was ist das persönliche Ziel?",
+              "options": [
+                "Klarere E-Mails schreiben",
+                "Kundengespräche am Telefon üben",
+                "Neue Mitarbeiter schriftlich bewerten"
+              ],
+              "answer": 0,
+              "evidence": "Um klarere E-Mails zu schreiben."
+            },
+            {
+              "question": "Was sollen die Teilnehmenden vorbereiten?",
+              "options": [
+                "Eine echte Kundenanfrage",
+                "Eine Zusammenfassung des fertigen Kurses",
+                "Eine erfundene Beispielsituation"
+              ],
+              "answer": 2,
+              "evidence": "Eine erfundene Beispielsituation ... Echte Kundendaten sollen nicht mitgebracht werden."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Weiterbildung im Betrieb: Beschäftigte können einen Lernpartner wählen, um neue Aufgaben gemeinsam zu üben. Die Treffen dauern jeweils 30 Minuten. Eine kurze Notiz hält fest, welches Ziel bearbeitet wurde und welche Frage offenbleibt. Die Notizen werden nicht zur Bewertung einzelner Personen verwendet. Sie helfen dem Team, passende weitere Übungen anzubieten. Wer eine Aufgabe noch nicht selbstständig ausführen kann, erhält zusätzliche Unterstützung.",
+          "questions": [
+            {
+              "question": "Warum gibt es Lernpartner?",
+              "options": [
+                "Um neue Aufgaben gemeinsam zu üben",
+                "Um Arbeitszeiten zu kontrollieren",
+                "Um Prüfungen zu ersetzen"
+              ],
+              "answer": 0,
+              "evidence": "Um neue Aufgaben gemeinsam zu üben."
+            },
+            {
+              "question": "Was wird notiert?",
+              "options": [
+                "Bewertungen einzelner Beschäftigter",
+                "Lernziel und offene Frage",
+                "Die Dauer aller Arbeitsaufgaben"
+              ],
+              "answer": 1,
+              "evidence": "Welches Ziel bearbeitet wurde und welche Frage offenbleibt."
+            },
+            {
+              "question": "Was passiert bei weiterem Unterstützungsbedarf?",
+              "options": [
+                "Die Person muss sofort aufhören.",
+                "Die Notizen werden veröffentlicht.",
+                "Es gibt zusätzliche Hilfe."
+              ],
+              "answer": 2,
+              "evidence": "Erhält zusätzliche Unterstützung."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write a short request to a fictional supervisor for a learning opportunity. Explain your goal, how the team could benefit and one practical arrangement.",
+          "wordGoal": 80,
+          "modelAnswer": "Guten Tag, ich möchte gern am internen Schreibkurs teilnehmen, um Kundenanfragen klarer beantworten zu können. Besonders die höfliche Formulierung von Rückfragen würde ich gern üben. Davon könnte auch unser Team profitieren, weil wir weniger unklare Nachrichten verschicken würden. Ich schlage vor, meine offenen Aufgaben am Kurstag vorher mit einer Kollegin abzustimmen, damit keine Anfrage liegen bleibt. Nach dem Kurs kann ich nützliche Formulierungen in einer kurzen Teambesprechung vorstellen. Wäre meine Teilnahme möglich? Vielen Dank für Ihre Rückmeldung und Ihre Unterstützung. Mit freundlichen Grüßen"
+        },
+        "speaking": {
+          "task": "Discuss a fictional training plan with a supervisor. Explain a goal, ask for support and negotiate how normal tasks will be covered.",
+          "modelAnswer": "A: Ich möchte den Kurs besuchen, um sicherer telefonieren zu können. B: Wie organisieren wir deine Aufgaben in dieser Zeit? A: Ich bereite die wichtigsten Antworten vorher vor, damit meine Kollegin übernehmen kann. B: Gut. Bitte sprich den Plan noch mit ihr ab."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich übe, um sicherer zu sprechen. Wir helfen, damit alle mitkommen.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          3,
+          11
+        ],
+        "task": "Explain a goal, the action it requires and the support needed. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall sentence brackets, separable verbs and weil-clauses."
+      }
+    },
+    {
+      "id": 5,
+      "title": "Relationships, requests and boundaries",
+      "lessonIds": [
+        2,
+        4
+      ],
+      "topics": [
+        "neighbours",
+        "insurance"
+      ],
+      "goals": [
+        "Make polite or hypothetical proposals.",
+        "Identify people and things precisely using relative clauses."
+      ],
+      "pronunciation": "Use a polite falling tone and a short pause around a relative clause.",
+      "listening": "Understand a proposal, a reason and a limit.",
+      "reading": "Read how a voluntary support arrangement works.",
+      "writing": "Write an invitation with an alternative.",
+      "speaking": "Negotiate a favour and respond respectfully to a limit.",
+      "checkpoint": "Reach an agreement without ignoring the other person’s constraint.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Wir überlegen, in unserem Wohnhaus einen gemeinsamen Abend zu organisieren. Eine Nachbarin, die erst vor Kurzem eingezogen ist, würde gern andere Bewohner kennenlernen. Wenn das Wetter besser wäre, könnten wir uns im Hof treffen. Da Regen angekündigt ist, schlagen wir den Gemeinschaftsraum vor. Jede Person könnte etwas Kleines mitbringen; niemand soll sich zu einer großen Ausgabe verpflichtet fühlen.",
+          "questions": [
+            {
+              "question": "Warum möchte eine Nachbarin teilnehmen?",
+              "options": [
+                "Sie möchte Hilfe beim Umzug.",
+                "Sie möchte andere Bewohner kennenlernen.",
+                "Sie möchte den Gemeinschaftsraum mieten."
+              ],
+              "answer": 1,
+              "evidence": "Würde gern andere Bewohner kennenlernen."
+            },
+            {
+              "question": "Warum wird der Gemeinschaftsraum vorgeschlagen?",
+              "options": [
+                "Weil Regen angekündigt ist",
+                "Weil im Hof bereits eine andere Feier stattfindet",
+                "Weil der Hof für neue Bewohner gesperrt ist"
+              ],
+              "answer": 0,
+              "evidence": "Da Regen angekündigt ist."
+            },
+            {
+              "question": "Was wird beim Mitbringen betont?",
+              "options": [
+                "Jeder muss ein teures Geschenk kaufen.",
+                "Nur Getränke sind erlaubt.",
+                "Niemand soll viel Geld ausgeben müssen."
+              ],
+              "answer": 2,
+              "evidence": "Niemand soll sich zu einer großen Ausgabe verpflichtet fühlen."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Eine Nachbarschaftsgruppe sucht Menschen, die gelegentlich kleine Aufgaben übernehmen möchten. Dazu gehören Pflanzen gießen, ein Paket annehmen oder beim Tragen helfen. Die Gruppe ist freiwillig; niemand muss ständig erreichbar sein. Wer eine Bitte erhält, kann ablehnen oder einen anderen Zeitpunkt vorschlagen. Persönliche Informationen werden nur mit den direkt beteiligten Personen geteilt. Ein erstes Treffen dient dazu, Wünsche und Grenzen zu besprechen.",
+          "questions": [
+            {
+              "question": "Welche Aufgaben sind gemeint?",
+              "options": [
+                "Kleine Alltagshilfen",
+                "Dauerhafte Pflegeverpflichtungen",
+                "Bezahlte Vollzeitarbeit"
+              ],
+              "answer": 0,
+              "evidence": "Pflanzen gießen, ein Paket annehmen oder beim Tragen helfen."
+            },
+            {
+              "question": "Wie kann man auf eine Bitte reagieren?",
+              "options": [
+                "Man muss immer zustimmen.",
+                "Man darf ablehnen oder einen anderen Zeitpunkt vorschlagen.",
+                "Man darf nicht nachfragen."
+              ],
+              "answer": 1,
+              "evidence": "Kann ablehnen oder einen anderen Zeitpunkt vorschlagen."
+            },
+            {
+              "question": "Wozu dient das erste Treffen?",
+              "options": [
+                "Zur Veröffentlichung aller Daten",
+                "Zum Kauf von Pflanzen",
+                "Zum Besprechen von Wünschen und Grenzen"
+              ],
+              "answer": 2,
+              "evidence": "Wünsche und Grenzen zu besprechen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Invite fictional neighbours to a small gathering. Explain whom it is for, make a polite suggestion and offer an alternative if the first arrangement does not suit them.",
+          "wordGoal": 80,
+          "modelAnswer": "Liebe Nachbarinnen und Nachbarn, wir würden gern am Freitag einen gemeinsamen Abend organisieren. Besonders Menschen, die erst vor Kurzem eingezogen sind, könnten dabei neue Kontakte knüpfen. Wie wäre es, wenn wir uns um sieben Uhr im Gemeinschaftsraum treffen? Wer möchte, kann eine Kleinigkeit zu essen mitbringen. Das ist aber keine Voraussetzung. Falls Freitag für viele ungünstig ist, könnten wir auch den Samstag wählen. Bitte sagt uns bis Mittwoch, welcher Tag besser passt. Wir freuen uns auf einen entspannten Abend mit euch."
+        },
+        "speaking": {
+          "task": "Make a polite request for a small favour. Your partner has a limit or conflict. Find an arrangement that works for both and confirm it.",
+          "modelAnswer": "A: Könntest du das Paket annehmen, das morgen kommt? B: Vormittags bin ich nicht da. Wenn es nach zwei Uhr kommt, helfe ich gern. A: Dann ändere ich die Lieferzeit. Danke! B: Sag mir bitte Bescheid, sobald der Termin bestätigt ist."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Könntest du der Person helfen, die neu eingezogen ist?",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          7,
+          12
+        ],
+        "task": "Reach an agreement without ignoring the other person’s constraint. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall dative and accusative before choosing relative pronouns."
+      }
+    },
+    {
+      "id": 6,
+      "title": "Digital life and reasoned opinions",
+      "lessonIds": [
+        13,
+        14
+      ],
+      "topics": [
+        "tv",
+        "office"
+      ],
+      "goals": [
+        "Connect causes, consequences and alternatives.",
+        "Give an opinion with evidence and respond to a counterargument."
+      ],
+      "pronunciation": "Stress the contrasted words in sowohl ... als auch and weder ... noch.",
+      "listening": "Understand a speaker’s benefit, limitation and conclusion.",
+      "reading": "Separate a recommendation from an unsupported claim.",
+      "writing": "Write a balanced forum contribution.",
+      "speaking": "Discuss a digital habit and negotiate a shared rule.",
+      "checkpoint": "Give a reason and example, respond to another view and state a conclusion.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Ich nutze eine Lern-App, die mich jeden Abend erinnert. Das hilft mir, regelmäßig zu üben. Manchmal kommen aber so viele Meldungen, dass ich mich kaum konzentrieren kann. Deshalb habe ich nur die Lernerinnerung eingeschaltet. Eine App kann meiner Meinung nach sowohl beim Wiederholen helfen als auch neue Themen zeigen. Ein echtes Gespräch ersetzt sie für mich trotzdem nicht.",
+          "questions": [
+            {
+              "question": "Was hilft beim regelmäßigen Lernen?",
+              "options": [
+                "Viele Werbemeldungen",
+                "Eine tägliche Erinnerung",
+                "Ein längeres Passwort"
+              ],
+              "answer": 1,
+              "evidence": "Die mich jeden Abend erinnert ... regelmäßig zu üben."
+            },
+            {
+              "question": "Was hat die Person geändert?",
+              "options": [
+                "Nur die Lernerinnerung bleibt eingeschaltet.",
+                "Sie hat alle Kurse gelöscht.",
+                "Sie lernt nur noch am Wochenende."
+              ],
+              "answer": 0,
+              "evidence": "Nur die Lernerinnerung eingeschaltet."
+            },
+            {
+              "question": "Was kann die App aus Sicht der Person nicht ersetzen?",
+              "options": [
+                "Neue Themen",
+                "Wiederholungen",
+                "Ein echtes Gespräch"
+              ],
+              "answer": 2,
+              "evidence": "Ein echtes Gespräch ersetzt sie ... nicht."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Im Kursforum wird über digitale Lernhilfen diskutiert. Einige Lernende schätzen schnelle Erklärungen und flexible Übungszeiten. Andere berichten, dass automatisch erzeugte Antworten manchmal ungenau sind. Die Kursleitung empfiehlt, schwierige Erklärungen mit einer verlässlichen Quelle abzugleichen und eigene Beispiele zu bilden. Für längere Texte sollen Lernende zuerst selbst schreiben, dann gezielte Rückfragen stellen. Ein fertiger Text allein zeigt noch nicht, ob man die Sprache selbst verwenden kann.",
+          "questions": [
+            {
+              "question": "Welcher Vorteil wird genannt?",
+              "options": [
+                "Flexible Übungszeiten",
+                "Garantiert fehlerfreie Antworten",
+                "Automatische Sprachbeherrschung"
+              ],
+              "answer": 0,
+              "evidence": "Schnelle Erklärungen und flexible Übungszeiten."
+            },
+            {
+              "question": "Was wird bei schwierigen Erklärungen empfohlen?",
+              "options": [
+                "Sie ungeprüft kopieren",
+                "Mit einer verlässlichen Quelle abgleichen",
+                "Alle Quellen vermeiden"
+              ],
+              "answer": 1,
+              "evidence": "Mit einer verlässlichen Quelle abzugleichen."
+            },
+            {
+              "question": "Was sollen Lernende bei längeren Texten zuerst tun?",
+              "options": [
+                "Eine fertige Antwort auswendig lernen",
+                "Nur Fehler zählen",
+                "Selbst schreiben"
+              ],
+              "answer": 2,
+              "evidence": "Zuerst selbst schreiben, dann gezielte Rückfragen stellen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write a forum contribution about digital learning. Give your opinion, one benefit, one limitation and a practical rule. Aim for about 80 words.",
+          "wordGoal": 80,
+          "modelAnswer": "Meiner Meinung nach sind digitale Lernhilfen nützlich, wenn man sie bewusst verwendet. Ich kann sowohl kurze Erklärungen finden als auch Wörter wiederholen. Ein Nachteil ist jedoch, dass nicht jede Antwort stimmt. Deshalb prüfe ich wichtige Regeln in einer zweiten Quelle. Beim Schreiben versuche ich zuerst selbst, meine Gedanken auszudrücken. Danach frage ich gezielt nach einer unklaren Formulierung. So bleibt die Aufgabe meine eigene Arbeit. Für mich ist außerdem wichtig, regelmäßig mit anderen Menschen zu sprechen und auf unerwartete Fragen zu reagieren."
+        },
+        "speaking": {
+          "task": "Discuss whether phones should be used during a language course. Give one reason and example each, respond to a counterargument and find a shared rule.",
+          "modelAnswer": "A: Ich finde Handys hilfreich, weil wir Wörter schnell nachschlagen können. B: Das stimmt, aber Nachrichten lenken ab. A: Dann könnten wir sie nur für bestimmte Aufgaben benutzen. B: Damit bin ich einverstanden. In Gesprächen bleiben sie in der Tasche."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Die App ist sowohl praktisch als auch leicht zu bedienen.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          2,
+          4
+        ],
+        "task": "Give a reason and example, respond to another view and state a conclusion. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall weil, dass and deshalb; identify what each connector does."
+      }
+    },
+    {
+      "id": 7,
+      "title": "Future plans and realistic priorities",
+      "lessonIds": [
+        9,
+        15
+      ],
+      "topics": [
+        "environment",
+        "paperwork"
+      ],
+      "goals": [
+        "Acknowledge a problem while explaining a different outcome.",
+        "Distinguish a plan, a prediction and an uncertain possibility."
+      ],
+      "pronunciation": "Stress contrast after trotzdem and certainty words such as vielleicht.",
+      "listening": "Identify a firm proposal and an unresolved condition.",
+      "reading": "Read a project description without turning intentions into promises.",
+      "writing": "Write a proposal with priorities and a limitation.",
+      "speaking": "Compare future projects and agree on a next step.",
+      "checkpoint": "Explain a realistic plan and state what still needs checking.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Unser Verein möchte künftig weniger Auto fahren. Für kurze Wege werden wir öfter Fahrräder nutzen. Bei größeren Veranstaltungen brauchen wir aber weiterhin einen Lieferwagen. Obwohl viele Mitglieder die Idee unterstützen, müssen wir die Organisation noch klären. Vielleicht können zwei Gruppen gemeinsam einen Wagen buchen. Ob das günstiger ist, prüfen wir vor dem nächsten Treffen.",
+          "questions": [
+            {
+              "question": "Was ist für kurze Wege geplant?",
+              "options": [
+                "Gemeinsame Fahrten mit dem Lieferwagen",
+                "Mehr Fahrradfahrten",
+                "Die Verlegung aller Treffen ins Internet"
+              ],
+              "answer": 1,
+              "evidence": "Für kurze Wege ... öfter Fahrräder nutzen."
+            },
+            {
+              "question": "Warum bleibt ein Lieferwagen nötig?",
+              "options": [
+                "Wegen größerer Veranstaltungen",
+                "Für alle Fahrten zum Verein",
+                "Weil nur wenige Mitglieder Rad fahren können"
+              ],
+              "answer": 0,
+              "evidence": "Bei größeren Veranstaltungen brauchen wir ... einen Lieferwagen."
+            },
+            {
+              "question": "Was ist noch zu prüfen?",
+              "options": [
+                "Ob der Lieferwagen ganz abgeschafft werden kann",
+                "Ob alle Gruppen ihre Treffen verschieben",
+                "Ob eine gemeinsame Buchung günstiger ist"
+              ],
+              "answer": 2,
+              "evidence": "Ob das günstiger ist, prüfen wir ..."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Eine Stadtteilgruppe sammelt Ideen für das nächste Jahr. Vorgeschlagen werden zusätzliche Sitzbänke, ein ruhiger Lernraum und längere Öffnungszeiten der Bibliothek. Obwohl viele Wünsche sinnvoll sind, reicht das Budget nicht für alles. Deshalb sollen die Bewohner zunächst zwei Prioritäten nennen und begründen. Die Ergebnisse werden öffentlich zusammengefasst. Eine Umsetzung aller Vorschläge wird ausdrücklich nicht versprochen; zuerst müssen Kosten und Zuständigkeiten geklärt werden.",
+          "questions": [
+            {
+              "question": "Was sollen Bewohner auswählen?",
+              "options": [
+                "Zwei begründete Prioritäten",
+                "Einen fertigen Bauplan",
+                "Alle Vorschläge gleichzeitig"
+              ],
+              "answer": 0,
+              "evidence": "Zunächst zwei Prioritäten nennen und begründen."
+            },
+            {
+              "question": "Warum kann nicht alles umgesetzt werden?",
+              "options": [
+                "Die Bewohner lehnen die Vorschläge ab.",
+                "Das Budget reicht nicht.",
+                "Die Bibliothek hat bereits genug Personal."
+              ],
+              "answer": 1,
+              "evidence": "Das Budget reicht nicht für alles."
+            },
+            {
+              "question": "Was ist ausdrücklich nicht versprochen?",
+              "options": [
+                "Eine Zusammenfassung",
+                "Eine Prüfung der Kosten",
+                "Die Umsetzung aller Vorschläge"
+              ],
+              "answer": 2,
+              "evidence": "Eine Umsetzung aller Vorschläge wird ... nicht versprochen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Suggest two improvements for a fictional neighbourhood. Explain priorities, recognise a limitation and distinguish a firm proposal from an uncertain prediction.",
+          "wordGoal": 80,
+          "modelAnswer": "Für unseren Stadtteil schlage ich einen ruhigen Lernraum und längere Öffnungszeiten der Bibliothek vor. Ein Lernraum wäre besonders für Menschen hilfreich, die zu Hause wenig Platz haben. Obwohl beide Ideen sinnvoll sind, wird das Geld vielleicht nicht für alles reichen. Deshalb sollten wir zuerst prüfen, ob ein vorhandener Raum genutzt werden kann. Ich vermute, dass dadurch weniger Kosten entstehen würden. Das ist jedoch noch keine gesicherte Zahl. Bei unserem nächsten Treffen könnten wir Aufgaben verteilen und konkrete Angebote vergleichen. Danach können wir besser entscheiden."
+        },
+        "speaking": {
+          "task": "Choose one of two future community projects. Discuss benefits, a budget limit and an uncertain assumption. Agree on the next piece of information to collect.",
+          "modelAnswer": "A: Ein Lernraum wäre sehr hilfreich. B: Trotzdem müssen wir die Kosten klären. A: Vielleicht können wir einen vorhandenen Raum nutzen. B: Dann fragen wir zuerst bei der Bibliothek nach. Danach entscheiden wir, wie es weitergeht."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Obwohl das Geld knapp ist, planen wir weiter. Vielleicht klappt es.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          13,
+          14
+        ],
+        "task": "Explain a realistic plan and state what still needs checking. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Contrast subordinate obwohl with main-clause trotzdem; recall werden + infinitive."
+      }
+    },
+    {
+      "id": 8,
+      "title": "Community, places and participation",
+      "lessonIds": [
+        8,
+        16
+      ],
+      "topics": [
+        "neighbours",
+        "paperwork",
+        "eating"
+      ],
+      "goals": [
+        "Describe people, places and roles with adjective phrases.",
+        "Explain abilities, interests and support needs in a community role."
+      ],
+      "pronunciation": "Give compound nouns a clear main stress and keep endings audible.",
+      "listening": "Understand a proposed role and the support requested.",
+      "reading": "Read role requirements and a training process.",
+      "writing": "Write a volunteer enquiry with availability and questions.",
+      "speaking": "Describe a role and handle an unanswered question honestly.",
+      "checkpoint": "Choose a suitable role and explain responsibilities and boundaries.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Ich möchte mich in der Nachbarschaft engagieren, aber ich kann nicht jede Woche helfen. Die Gruppe hat mir vorgeschlagen, einmal im Monat eine kurze Führung für neue Bewohner zu organisieren. Das traue ich mir zu, weil ich den Stadtteil gut kenne. Für den ersten Termin wünsche ich mir eine erfahrene Begleitung. Danach möchte ich die Rückmeldungen nutzen, um die nächste Führung zu verbessern.",
+          "questions": [
+            {
+              "question": "Wie oft kann die Person eine Führung übernehmen?",
+              "options": [
+                "Jeden Tag",
+                "Einmal im Monat",
+                "Jede Woche"
+              ],
+              "answer": 1,
+              "evidence": "Einmal im Monat eine kurze Führung."
+            },
+            {
+              "question": "Warum traut sie sich die Aufgabe zu?",
+              "options": [
+                "Sie kennt den Stadtteil gut.",
+                "Sie hat bereits viele Gruppen allein geführt.",
+                "Sie hat eine vollständige historische Ausbildung."
+              ],
+              "answer": 0,
+              "evidence": "Weil ich den Stadtteil gut kenne."
+            },
+            {
+              "question": "Was wünscht sie sich am Anfang?",
+              "options": [
+                "Einen wöchentlichen festen Termin",
+                "Die Verantwortung für mehrere Gruppen",
+                "Eine erfahrene Begleitung"
+              ],
+              "answer": 2,
+              "evidence": "Für den ersten Termin ... eine erfahrene Begleitung."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Ein kleines Stadtmuseum lädt neue Freiwillige zu einem Kennenlerntag ein. Die Aufgaben reichen von der Begrüßung der Gäste bis zur Unterstützung bei Veranstaltungen. Wer sich für Führungen interessiert, beobachtet zunächst eine erfahrene Person und übt danach einen kurzen Abschnitt. Gute Ortskenntnisse sind hilfreich, aber keine vollständige historische Ausbildung erforderlich. Wichtig sind verständliche Erklärungen, Zuverlässigkeit und die Bereitschaft, Fragen offen zu lassen, wenn eine Antwort noch geprüft werden muss.",
+          "questions": [
+            {
+              "question": "Wie beginnt die Vorbereitung auf Führungen?",
+              "options": [
+                "Mit Beobachten und kurzem Üben",
+                "Mit einer sofortigen Prüfung",
+                "Mit einer unbeaufsichtigten großen Führung"
+              ],
+              "answer": 0,
+              "evidence": "Beobachtet zunächst ... und übt danach einen kurzen Abschnitt."
+            },
+            {
+              "question": "Welche Eigenschaft wird ausdrücklich genannt?",
+              "options": [
+                "Perfekte Antworten auf alles",
+                "Zuverlässigkeit",
+                "Tägliche Verfügbarkeit"
+              ],
+              "answer": 1,
+              "evidence": "Verständliche Erklärungen, Zuverlässigkeit ..."
+            },
+            {
+              "question": "Wie soll man mit einer unsicheren Antwort umgehen?",
+              "options": [
+                "Etwas erfinden",
+                "Die Frage ignorieren",
+                "Offen sagen, dass man sie prüfen muss"
+              ],
+              "answer": 2,
+              "evidence": "Fragen offen zu lassen, wenn eine Antwort noch geprüft werden muss."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write a fictional volunteer enquiry. Describe a relevant ability, your availability and the support you need. Ask one practical follow-up question.",
+          "wordGoal": 80,
+          "modelAnswer": "Guten Tag, ich interessiere mich für die Mitarbeit in Ihrem Stadtmuseum. Ich kenne den Stadtteil gut und erkläre anderen gern interessante Orte. Einmal im Monat könnte ich am Samstag helfen. Die Begrüßung kleiner Gruppen traue ich mir zu. Bevor ich eine Führung übernehme, würde ich jedoch gern eine erfahrene Person begleiten und einen kurzen Abschnitt üben. Können Sie mir sagen, wann der nächste Kennenlerntag stattfindet? Außerdem möchte ich wissen, wie viel Vorbereitungszeit üblich ist. Vielen Dank für Ihre Informationen. Mit freundlichen Grüßen"
+        },
+        "speaking": {
+          "task": "Explain a fictional volunteer role to a partner. Discuss what you can do, what you need to learn and how to handle a question you cannot answer.",
+          "modelAnswer": "A: Welche Aufgabe traust du dir zu? B: Ich könnte Gäste begrüßen und den Weg erklären. Für eine Führung brauche ich noch Übung. A: Was machst du bei einer schwierigen Frage? B: Ich sage offen, dass ich die Antwort prüfen werde."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Eine erfahrene Person hilft mir. Ich traue mir diese Aufgabe zu.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          9,
+          15
+        ],
+        "task": "Choose a suitable role and explain responsibilities and boundaries. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall article/case patterns and reflexive pronouns before adding longer noun phrases."
+      }
+    },
+    {
+      "id": 9,
+      "title": "Travel, formal messages and joint planning",
+      "lessonIds": [
+        17,
+        18
+      ],
+      "topics": [
+        "journeys",
+        "shopping",
+        "insurance"
+      ],
+      "goals": [
+        "Write a clear formal enquiry or service complaint.",
+        "Negotiate a plan, present an idea and answer a follow-up question."
+      ],
+      "pronunciation": "Use pauses to mark stages of a presentation instead of reading a full script.",
+      "listening": "Follow a decision and recognise what must happen before booking.",
+      "reading": "Read a practical plan with a condition and a response deadline.",
+      "writing": "Write a formal request covering every required point.",
+      "speaking": "Plan together, give a short talk and respond to a question.",
+      "checkpoint": "Complete a new integrated communication task with independent feedback.",
+      "hours": 10,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Für unseren Gruppenausflug vergleichen wir zwei Unterkünfte. Die erste liegt direkt am Bahnhof, ist aber teurer. Die zweite ist günstiger, doch der letzte Bus fährt schon um acht Uhr abends. Wir haben uns für die Unterkunft am Bahnhof entschieden, weil unsere Gruppe spät ankommt. Ich frage schriftlich nach, ob wir nach zehn Uhr noch einchecken können. Erst danach buchen wir.",
+          "questions": [
+            {
+              "question": "Welche Unterkunft wurde ausgewählt?",
+              "options": [
+                "Die günstigere Unterkunft mit Busverbindung",
+                "Die Unterkunft am Bahnhof",
+                "Eine Unterkunft ohne späten Check-in"
+              ],
+              "answer": 1,
+              "evidence": "Für die Unterkunft am Bahnhof entschieden."
+            },
+            {
+              "question": "Warum wurde sie ausgewählt?",
+              "options": [
+                "Die Gruppe kommt spät an.",
+                "Sie ist günstiger als die andere.",
+                "Der späte Check-in ist bereits bestätigt."
+              ],
+              "answer": 0,
+              "evidence": "Weil unsere Gruppe spät ankommt."
+            },
+            {
+              "question": "Was geschieht vor der Buchung?",
+              "options": [
+                "Die Gruppe fährt schon los.",
+                "Der letzte Bus wird bestellt.",
+                "Die späte Anreise wird geklärt."
+              ],
+              "answer": 2,
+              "evidence": "Ob wir nach zehn Uhr noch einchecken können. Erst danach buchen wir."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Ausflugsplan: Treffpunkt ist am Samstag um 9 Uhr vor der Bibliothek. Bei gutem Wetter besucht die Gruppe zuerst den Park und danach das Museum. Bei starkem Regen geht sie direkt ins Museum. Eine Person prüft die Fahrkarten, eine andere reserviert die Führung. Bis Donnerstag sollen alle Rückmeldung geben. Die Organisatoren bestätigen am Freitag den endgültigen Ablauf. Wer später dazukommt, erhält den vereinbarten Treffpunkt in einer gesonderten Nachricht.",
+          "questions": [
+            {
+              "question": "Was ändert sich bei starkem Regen?",
+              "options": [
+                "Die Gruppe geht direkt ins Museum.",
+                "Der Ausflug wird automatisch abgesagt.",
+                "Alle fahren am Donnerstag."
+              ],
+              "answer": 0,
+              "evidence": "Bei starkem Regen geht sie direkt ins Museum."
+            },
+            {
+              "question": "Bis wann wird eine Rückmeldung erwartet?",
+              "options": [
+                "Bis Samstag",
+                "Bis Donnerstag",
+                "Bis Sonntag"
+              ],
+              "answer": 1,
+              "evidence": "Bis Donnerstag sollen alle Rückmeldung geben."
+            },
+            {
+              "question": "Wann wird der endgültige Ablauf bestätigt?",
+              "options": [
+                "Am Montag",
+                "Schon vor der Rückmeldung",
+                "Am Freitag"
+              ],
+              "answer": 2,
+              "evidence": "Bestätigen am Freitag den endgültigen Ablauf."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write a formal request to a fictional accommodation provider. Explain your group’s late arrival, ask about check-in and request confirmation before booking. Use invented details only.",
+          "wordGoal": 80,
+          "modelAnswer": "Sehr geehrte Damen und Herren, unsere kleine Lerngruppe plant einen Wochenendausflug und interessiert sich für Ihre Unterkunft. Wir kommen am Freitag voraussichtlich erst nach 22 Uhr am Bahnhof an. Könnten Sie uns bitte mitteilen, ob ein später Check-in möglich ist und wie die Schlüsselübergabe organisiert wird? Außerdem möchten wir wissen, ob zusätzliche Kosten entstehen. Wir würden erst nach Ihrer Rückmeldung verbindlich buchen. Bitte bestätigen Sie uns die Bedingungen schriftlich, damit alle Teilnehmenden ihre Anreise planen können. Vielen Dank für Ihre Hilfe. Mit freundlichen Grüßen"
+        },
+        "speaking": {
+          "task": "Plan a fictional group outing: agree on destination, transport, cost and responsibilities, including a rain alternative. Then give a short talk on travelling in a group: experience, advantages, disadvantages and opinion. Answer one follow-up question.",
+          "modelAnswer": "A: Ich schlage das Museum vor, weil wir auch bei Regen hingehen können. B: Gut. Wie kommen wir dorthin? A: Mit dem Zug. Ich prüfe die Fahrkarten. Könntest du die Führung reservieren? B: Ja. Wir bestätigen am Freitag noch einmal den Treffpunkt."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Zuerst erkläre ich den Plan. Danach vergleichen wir die Möglichkeiten.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          8,
+          16
+        ],
+        "task": "Complete a new integrated communication task with independent feedback. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall polite requests, indirect questions, reasons and alternatives."
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": 10,
+      "title": "Ask indirectly and check information",
+      "germanTitle": "Indirekte Fragen",
+      "intro": "Ask for information politely and explain what you still need to find out. Keep the question word, but use subordinate-clause word order.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Direct question",
+            "Wann beginnt der Vortrag?"
+          ],
+          [
+            "Indirect W-question",
+            "Wissen Sie, wann der Vortrag beginnt?"
+          ],
+          [
+            "Indirect yes/no question",
+            "Ich möchte wissen, ob der Eintritt frei ist."
+          ],
+          [
+            "Report uncertainty",
+            "Ich weiß nicht, welche Quelle zuverlässig ist."
+          ]
+        ]
+      },
+      "rules": [
+        "An indirect W-question keeps wann, wo, wie or another question word; the conjugated verb goes at the end of that clause.",
+        "Use ob when the direct question can be answered with yes or no. Ob means whether here; it does not introduce a condition.",
+        "The punctuation follows the whole sentence: Können Sie mir sagen, ...? is a question; Ich möchte wissen, ... . is a statement.",
+        "Separate an indirect question from the main clause with a comma. Verify information before passing it on."
+      ],
+      "examples": [
+        {
+          "de": "Können Sie mir sagen, wo ich das Programm finde?",
+          "en": "Can you tell me where I can find the programme?"
+        },
+        {
+          "de": "Ich frage mich, ob diese Meldung stimmt.",
+          "en": "I wonder whether this report is true."
+        },
+        {
+          "de": "Weißt du, wer den Artikel geschrieben hat?",
+          "en": "Do you know who wrote the article?"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "die Quelle",
+          "en": "source",
+          "pl": "Quellen"
+        },
+        {
+          "de": "die Meldung",
+          "en": "report; news item",
+          "pl": "Meldungen"
+        },
+        {
+          "de": "zuverlässig",
+          "en": "reliable"
+        },
+        {
+          "de": "überprüfen",
+          "en": "to check; verify"
+        },
+        {
+          "de": "behaupten",
+          "en": "to claim"
+        },
+        {
+          "de": "der Beitrag",
+          "en": "contribution; post",
+          "pl": "Beiträge"
+        },
+        {
+          "de": "veröffentlichen",
+          "en": "to publish"
+        },
+        {
+          "de": "ob",
+          "en": "whether"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Können Sie mir sagen, ___ der Kurs online stattfindet?",
+          "options": [
+            "ob",
+            "wenn",
+            "als"
+          ],
+          "answer": 0,
+          "hint": "This asks whether the course is online, not under what condition."
+        },
+        {
+          "type": "fill",
+          "question": "Wissen Sie, wann die Sendung ___? (beginnen)",
+          "answers": [
+            "beginnt"
+          ],
+          "hint": "The conjugated verb ends the indirect question."
+        },
+        {
+          "type": "choice",
+          "question": "Which indirect question has the correct word order?",
+          "options": [
+            "Ich weiß nicht, wo ist der Eingang.",
+            "Ich weiß nicht, wo der Eingang ist.",
+            "Ich weiß nicht, wo der ist Eingang."
+          ],
+          "answer": 1,
+          "hint": "The verb ist finishes the subordinate clause."
+        },
+        {
+          "type": "listen",
+          "audioText": "Die Meldung steht auf mehreren Seiten. Trotzdem weiß ich noch nicht, wer sie zuerst veröffentlicht hat. Ich prüfe die ursprüngliche Quelle, bevor ich sie weiterleite.",
+          "question": "Was macht die Person zuerst?",
+          "options": [
+            "Die Meldung weiterleiten",
+            "Die Quelle prüfen",
+            "Einen eigenen Artikel schreiben"
+          ],
+          "answer": 1,
+          "hint": "Ich prüfe die ursprüngliche Quelle comes before forwarding."
+        },
+        {
+          "type": "choice",
+          "question": "Infotext: Der Vortrag beginnt um 18 Uhr. Ob er auch online übertragen wird, entscheidet sich morgen. Was ist noch unklar?",
+          "options": [
+            "Die Anfangszeit",
+            "Die Online-Übertragung",
+            "Das Thema der Frage"
+          ],
+          "answer": 1,
+          "hint": "Ob ... übertragen wird is still undecided."
+        },
+        {
+          "type": "write",
+          "question": "Write a polite information request about a public talk. Ask when it starts, whether it is online and where to register. Use fictional details.",
+          "modelAnswer": "Guten Tag, ich interessiere mich für Ihren Vortrag. Können Sie mir sagen, wann er beginnt und ob ich online teilnehmen kann? Außerdem möchte ich wissen, wo ich mich anmelden kann. Vielen Dank!"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Describe ownership and understand formal reasons",
+      "germanTitle": "Genitiv im Alltag",
+      "intro": "Recognise genitive noun phrases in notices and articles. Use a few clear patterns to connect an object, a person and an organisation.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Masculine",
+            "die Reparatur des Druckers"
+          ],
+          [
+            "Neuter",
+            "die Öffnungszeiten des Geschäfts"
+          ],
+          [
+            "Feminine",
+            "die Leiterin der Werkstatt"
+          ],
+          [
+            "Plural",
+            "die Wünsche der Kunden"
+          ],
+          [
+            "Reason with wegen",
+            "wegen des Regens"
+          ]
+        ]
+      },
+      "rules": [
+        "In the genitive, der and das become des; die becomes der, both feminine singular and plural.",
+        "Many masculine and neuter nouns add -(e)s: des Druckers, des Kindes. Weak masculine nouns follow their own pattern: des Kunden.",
+        "Genitive noun phrases describe a relationship, not only physical ownership. In conversation a von + dative phrase is often possible: die Tür vom Büro.",
+        "Formal written German normally uses the genitive after wegen and trotz. Learn these as phrases before expanding the pattern."
+      ],
+      "examples": [
+        {
+          "de": "Die Reparatur des Fahrrads dauert zwei Tage.",
+          "en": "The bicycle repair takes two days."
+        },
+        {
+          "de": "Wegen des Regens findet die Aktion drinnen statt.",
+          "en": "Because of the rain, the event takes place indoors."
+        },
+        {
+          "de": "Die Öffnungszeiten der Werkstatt stehen im Internet.",
+          "en": "The workshop opening hours are online."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "die Reparatur",
+          "en": "repair",
+          "pl": "Reparaturen"
+        },
+        {
+          "de": "die Werkstatt",
+          "en": "workshop; repair shop",
+          "pl": "Werkstätten"
+        },
+        {
+          "de": "der Verbrauch",
+          "en": "consumption",
+          "pl": "-"
+        },
+        {
+          "de": "der Abfall",
+          "en": "waste",
+          "pl": "Abfälle"
+        },
+        {
+          "de": "wiederverwenden",
+          "en": "to reuse"
+        },
+        {
+          "de": "wegen",
+          "en": "because of"
+        },
+        {
+          "de": "trotz",
+          "en": "despite"
+        },
+        {
+          "de": "der Zustand",
+          "en": "condition",
+          "pl": "Zustände"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Die Tür ___ Geschäfts ist offen. (definite article, genitive)",
+          "answers": [
+            "des"
+          ],
+          "hint": "Geschäft is neuter: des Geschäfts."
+        },
+        {
+          "type": "choice",
+          "question": "Die Leiterin ___ Werkstatt hilft uns.",
+          "options": [
+            "des",
+            "der",
+            "dem"
+          ],
+          "answer": 1,
+          "hint": "Werkstatt is feminine; genitive uses der."
+        },
+        {
+          "type": "choice",
+          "question": "Which phrase means the repair of the bicycle?",
+          "options": [
+            "die Reparatur dem Fahrrad",
+            "die Reparatur des Fahrrads",
+            "die Reparatur der Fahrrad"
+          ],
+          "answer": 1,
+          "hint": "Das Fahrrad becomes des Fahrrads."
+        },
+        {
+          "type": "listen",
+          "audioText": "Wegen des großen Interesses öffnet die Werkstatt am Samstag eine Stunde früher. Die Reparatur kleiner Geräte ist kostenlos. Ersatzteile müssen die Besucher selbst bezahlen.",
+          "question": "Was müssen die Besucher bezahlen?",
+          "options": [
+            "Die Beratung",
+            "Die Reparatur",
+            "Die Ersatzteile"
+          ],
+          "answer": 2,
+          "hint": "Ersatzteile müssen ... selbst bezahlen."
+        },
+        {
+          "type": "choice",
+          "question": "Notice: Trotz des Regens bleibt der Markt geöffnet. Was bedeutet das?",
+          "options": [
+            "Der Markt ist geschlossen.",
+            "Der Markt ist auch bei Regen offen.",
+            "Der Markt öffnet erst morgen."
+          ],
+          "answer": 1,
+          "hint": "Trotz introduces a circumstance that does not stop the result."
+        },
+        {
+          "type": "write",
+          "question": "Write a short notice about a repair event. Include an opening time, the condition of accepted items and a reason for one rule.",
+          "modelAnswer": "Unsere Werkstatt öffnet am Samstag um zehn Uhr. Bitte beschreiben Sie den Zustand des Geräts. Wegen des begrenzten Platzes nehmen wir nur kleine Geräte an. Die Beratung ist kostenlos."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Explain goals and who benefits",
+      "germanTitle": "Ziele mit um … zu und damit",
+      "intro": "Explain why you are taking an action and what you want it to achieve. Choose a construction that makes the people involved clear.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Same person",
+            "Ich besuche einen Kurs, um sicherer zu sprechen."
+          ],
+          [
+            "Different people",
+            "Ich erkläre die Aufgabe, damit mein Kollege anfangen kann."
+          ],
+          [
+            "Separable verb",
+            "Ich notiere die Zeit, um pünktlich anzukommen."
+          ],
+          [
+            "Negated goal",
+            "Ich fahre früh los, um nicht zu spät zu kommen."
+          ]
+        ]
+      },
+      "rules": [
+        "Um ... zu introduces a purpose and usually shares its understood subject with the main clause. Do not add another subject inside it.",
+        "Damit has its own subject and a conjugated verb at the end. Use it when different people perform the two actions; it is also possible with the same subject.",
+        "With separable verbs, zu goes between prefix and stem: anzukommen. Modal verbs stand as the final infinitive: um teilnehmen zu können.",
+        "Distinguish a reason from a purpose: weil ich eine Prüfung habe explains the reason; um die Prüfung zu bestehen describes the intended goal."
+      ],
+      "examples": [
+        {
+          "de": "Ich übe täglich, um im Gespräch flüssiger zu werden.",
+          "en": "I practise daily to become more fluent in conversation."
+        },
+        {
+          "de": "Wir senden dir die Notizen, damit du nichts verpasst.",
+          "en": "We send you the notes so that you do not miss anything."
+        },
+        {
+          "de": "Sie spart Geld, um eine Weiterbildung bezahlen zu können.",
+          "en": "She saves money to be able to pay for further training."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "das Ziel",
+          "en": "goal",
+          "pl": "Ziele"
+        },
+        {
+          "de": "die Weiterbildung",
+          "en": "further training",
+          "pl": "Weiterbildungen"
+        },
+        {
+          "de": "die Voraussetzung",
+          "en": "requirement",
+          "pl": "Voraussetzungen"
+        },
+        {
+          "de": "die Fähigkeit",
+          "en": "ability; skill",
+          "pl": "Fähigkeiten"
+        },
+        {
+          "de": "erreichen",
+          "en": "to reach; achieve"
+        },
+        {
+          "de": "teilnehmen",
+          "en": "to participate"
+        },
+        {
+          "de": "sich vorbereiten",
+          "en": "to prepare oneself"
+        },
+        {
+          "de": "damit",
+          "en": "so that"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich lerne neue Wörter, ___ Texte besser zu verstehen.",
+          "options": [
+            "damit",
+            "um",
+            "weil"
+          ],
+          "answer": 1,
+          "hint": "The same person learns and understands; use um ... zu."
+        },
+        {
+          "type": "fill",
+          "question": "Wir sprechen langsam, damit alle uns ___ können. (verstehen)",
+          "answers": [
+            "verstehen"
+          ],
+          "hint": "The modal können is conjugated and finishes the clause."
+        },
+        {
+          "type": "choice",
+          "question": "Which sentence has a clear purpose with different subjects?",
+          "options": [
+            "Ich helfe dir, um du fertig zu werden.",
+            "Ich helfe dir, damit du fertig wirst.",
+            "Ich helfe dir, damit fertig werden."
+          ],
+          "answer": 1,
+          "hint": "Damit allows its own subject du and a conjugated verb."
+        },
+        {
+          "type": "listen",
+          "audioText": "Ich besuche abends einen Computerkurs, um mich beruflich weiterzuentwickeln. Meine Kollegin übernimmt am Dienstag den späten Dienst, damit ich pünktlich zum Unterricht komme.",
+          "question": "Warum übernimmt die Kollegin den Dienst?",
+          "options": [
+            "Damit der Sprecher pünktlich zum Kurs kommt",
+            "Damit sie selbst den Kurs besucht",
+            "Weil der Kurs ausfällt"
+          ],
+          "answer": 0,
+          "hint": "The purpose is expressed after damit."
+        },
+        {
+          "type": "choice",
+          "question": "What is the correct zu-form of anfangen?",
+          "options": [
+            "zu anfangen",
+            "anfangen zu",
+            "anzufangen"
+          ],
+          "answer": 2,
+          "hint": "Zu sits between the separable prefix an and fangen."
+        },
+        {
+          "type": "write",
+          "question": "Explain one fictional learning goal and two actions that support it. Include one um ... zu sentence and one damit sentence.",
+          "modelAnswer": "Ich möchte im Beruf sicherer Deutsch sprechen. Ich übe kurze Präsentationen, um meine Ideen klar zu erklären. Meine Lernpartnerin stellt Fragen, damit ich auch spontane Antworten üben kann."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Connect results and alternatives",
+      "germanTitle": "Folgen und zweiteilige Konnektoren",
+      "intro": "Build a connected explanation of a digital habit or everyday decision. Express a result, a choice, or two related points.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Result",
+            "Die Verbindung war schlecht, sodass wir später begannen."
+          ],
+          [
+            "Degree and result",
+            "Der Ton war so leise, dass ich nichts verstand."
+          ],
+          [
+            "Two positives",
+            "Die App ist sowohl einfach als auch praktisch."
+          ],
+          [
+            "Two negatives",
+            "Ich habe weder Zeit noch Geld."
+          ],
+          [
+            "Alternative",
+            "Wir treffen uns entweder online oder im Büro."
+          ]
+        ]
+      },
+      "rules": [
+        "Sodass introduces a result; its conjugated verb goes at the end. So ... dass links a degree or intensity to its result.",
+        "Sowohl ... als auch adds two matching elements. Weder ... noch excludes both; do not add an extra nicht to the same negative statement.",
+        "Entweder ... oder offers alternatives. Keep the connected elements grammatically parallel: two nouns, two adjectives or two clauses.",
+        "A clear explanation matters more than using many connectors. Choose the one that matches the relationship between your ideas."
+      ],
+      "examples": [
+        {
+          "de": "Ich habe die Benachrichtigungen ausgeschaltet, sodass ich ruhiger arbeiten kann.",
+          "en": "I switched off notifications so that I can work more calmly."
+        },
+        {
+          "de": "Das Gerät ist sowohl günstig als auch leicht.",
+          "en": "The device is both inexpensive and light."
+        },
+        {
+          "de": "Entweder rufen wir an oder wir schreiben eine Nachricht.",
+          "en": "Either we call or we write a message."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "die Benachrichtigung",
+          "en": "notification",
+          "pl": "Benachrichtigungen"
+        },
+        {
+          "de": "die Verbindung",
+          "en": "connection",
+          "pl": "Verbindungen"
+        },
+        {
+          "de": "die Folge",
+          "en": "consequence",
+          "pl": "Folgen"
+        },
+        {
+          "de": "abschalten",
+          "en": "to switch off"
+        },
+        {
+          "de": "ablenken",
+          "en": "to distract"
+        },
+        {
+          "de": "sowohl … als auch",
+          "en": "both ... and"
+        },
+        {
+          "de": "weder … noch",
+          "en": "neither ... nor"
+        },
+        {
+          "de": "entweder … oder",
+          "en": "either ... or"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Der Bildschirm ist so klein, ___ ich den Text kaum lesen kann.",
+          "options": [
+            "dass",
+            "ob",
+            "um"
+          ],
+          "answer": 0,
+          "hint": "So ... dass expresses degree and result."
+        },
+        {
+          "type": "fill",
+          "question": "Ich habe weder einen Drucker ___ einen Scanner.",
+          "answers": [
+            "noch"
+          ],
+          "hint": "The pair is weder ... noch."
+        },
+        {
+          "type": "choice",
+          "question": "Which sentence gives two positive features?",
+          "options": [
+            "Die App ist weder kostenlos noch einfach.",
+            "Die App ist sowohl kostenlos als auch einfach.",
+            "Die App ist entweder kostenlos oder einfach."
+          ],
+          "answer": 1,
+          "hint": "Sowohl ... als auch adds both features."
+        },
+        {
+          "type": "listen",
+          "audioText": "Seit ich beim Lernen mein Handy in die Tasche lege, werde ich seltener abgelenkt. Die Nachrichten lese ich erst in der Pause. So kann ich mich besser auf die Aufgabe konzentrieren.",
+          "question": "Was ist die Folge der neuen Gewohnheit?",
+          "options": [
+            "Mehr Nachrichten",
+            "Bessere Konzentration",
+            "Kürzere Pausen"
+          ],
+          "answer": 1,
+          "hint": "The final sentence states the result."
+        },
+        {
+          "type": "choice",
+          "question": "Text: Wir können uns entweder am Dienstag treffen oder am Donnerstag telefonieren. Welche Aussage stimmt?",
+          "options": [
+            "Beide Termine sind Pflicht.",
+            "Es gibt zwei Möglichkeiten.",
+            "Das Treffen ist abgesagt."
+          ],
+          "answer": 1,
+          "hint": "Entweder ... oder presents alternatives."
+        },
+        {
+          "type": "write",
+          "question": "Describe a fictional digital habit, one consequence and two alternatives for changing it. Use two different connectors.",
+          "modelAnswer": "Beim Lernen kommen oft Nachrichten, sodass ich meine Aufgabe vergesse. Ich kann entweder das Handy ausschalten oder es in ein anderes Zimmer legen. Eine feste Pause ist sowohl angenehm als auch hilfreich."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Explain and discuss an opinion",
+      "germanTitle": "Meinungen begründen",
+      "intro": "Move from a short opinion to a reason, an example and a response. Practise disagreement that keeps a conversation going.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Opinion",
+            "Meiner Meinung nach sind feste Pausen wichtig."
+          ],
+          [
+            "Reason",
+            "Ich finde das sinnvoll, weil man sich besser konzentrieren kann."
+          ],
+          [
+            "Example",
+            "Zum Beispiel arbeite ich nach einer Pause schneller."
+          ],
+          [
+            "Respond",
+            "Da stimme ich dir teilweise zu."
+          ],
+          [
+            "Invite a response",
+            "Wie siehst du das?"
+          ]
+        ]
+      },
+      "rules": [
+        "After Meiner Meinung nach, the finite verb occupies the next position: Meiner Meinung nach ist ... .",
+        "Support an opinion with a reason and a specific example. Distinguish a personal experience from a claim about everyone.",
+        "Repeat the point you are responding to before adding your own idea. Partial agreement is possible: Das stimmt, aber ... .",
+        "Acknowledge an advantage and a disadvantage, then state a conclusion. There can be more than one reasonable answer."
+      ],
+      "examples": [
+        {
+          "de": "Ein Vorteil ist, dass man von zu Hause lernen kann.",
+          "en": "One advantage is that you can learn from home."
+        },
+        {
+          "de": "Andererseits fehlt manchmal der direkte Kontakt.",
+          "en": "On the other hand, direct contact is sometimes missing."
+        },
+        {
+          "de": "Ich verstehe deinen Punkt, sehe aber auch ein Problem.",
+          "en": "I understand your point but also see a problem."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Vorteil",
+          "en": "advantage",
+          "pl": "Vorteile"
+        },
+        {
+          "de": "der Nachteil",
+          "en": "disadvantage",
+          "pl": "Nachteile"
+        },
+        {
+          "de": "das Argument",
+          "en": "argument; reason",
+          "pl": "Argumente"
+        },
+        {
+          "de": "zustimmen",
+          "en": "to agree"
+        },
+        {
+          "de": "widersprechen",
+          "en": "to disagree; contradict"
+        },
+        {
+          "de": "einerseits",
+          "en": "on the one hand"
+        },
+        {
+          "de": "andererseits",
+          "en": "on the other hand"
+        },
+        {
+          "de": "begründen",
+          "en": "to give reasons for"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Meiner Meinung nach ___ kurze Pausen hilfreich.",
+          "options": [
+            "sind",
+            "kurze",
+            "weil"
+          ],
+          "answer": 0,
+          "hint": "The finite verb follows the initial phrase."
+        },
+        {
+          "type": "choice",
+          "question": "Which response shows partial agreement?",
+          "options": [
+            "Da stimme ich dir teilweise zu.",
+            "Darüber haben wir nie gesprochen.",
+            "Wo ist mein Heft?"
+          ],
+          "answer": 0,
+          "hint": "Teilweise means partly."
+        },
+        {
+          "type": "fill",
+          "question": "Ein Vorteil ist, ___ wir flexibel lernen können.",
+          "answers": [
+            "dass"
+          ],
+          "hint": "Dass introduces the content of the advantage."
+        },
+        {
+          "type": "listen",
+          "audioText": "Onlinekurse sparen mir den Weg zur Schule. Das finde ich praktisch. Allerdings spreche ich dort manchmal zu wenig. Deshalb würde ich gern einmal pro Woche zusätzlich eine Lerngruppe besuchen.",
+          "question": "Was möchte die Person ergänzen?",
+          "options": [
+            "Einen längeren Schulweg",
+            "Eine Lerngruppe",
+            "Mehr Prüfungen"
+          ],
+          "answer": 1,
+          "hint": "Zusätzlich eine Lerngruppe besuchen is the proposal."
+        },
+        {
+          "type": "choice",
+          "question": "Forum: Ein digitales Wörterbuch ist schnell. Trotzdem sollte man neue Wörter auch in eigenen Sätzen benutzen. Was empfiehlt der Beitrag?",
+          "options": [
+            "Nur Übersetzungen lesen",
+            "Wörter im Kontext verwenden",
+            "Keine Wörterbücher benutzen"
+          ],
+          "answer": 1,
+          "hint": "Eigene Sätze puts vocabulary into a usable context."
+        },
+        {
+          "type": "write",
+          "question": "Write a short forum contribution about studying with a phone. Give your opinion, one advantage, one disadvantage and a conclusion. Aim for about 80 words.",
+          "modelAnswer": "Ich finde, dass ein Handy beim Deutschlernen helfen kann. Ein Vorteil ist, dass ich neue Wörter sofort nachschlagen kann. Außerdem höre ich im Bus kurze Texte. Andererseits lenken Nachrichten mich oft ab. Deshalb schalte ich beim Lernen die Benachrichtigungen aus. Für längere Schreibaufgaben benutze ich lieber ein Heft. Meiner Meinung nach kommt es darauf an, wie man das Gerät verwendet. Ein fester Lernplan hilft mir, wirklich bei der Aufgabe zu bleiben und regelmäßig zu üben."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Describe plans and cautious predictions",
+      "germanTitle": "Zukunft und Vermutungen",
+      "intro": "Talk about a future plan and distinguish it from a prediction. Use time phrases and words that show how certain you are.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Plan with present tense",
+            "Nächste Woche beginne ich einen Kurs."
+          ],
+          [
+            "Futur I",
+            "In Zukunft werde ich öfter mit dem Zug fahren."
+          ],
+          [
+            "Prediction",
+            "Vermutlich wird die Stadt mehr Radwege bauen."
+          ],
+          [
+            "Uncertainty",
+            "Vielleicht wird das Projekt später fertig."
+          ]
+        ]
+      },
+      "rules": [
+        "German often uses the present tense with a future time phrase for a planned event. Futur I is not required for every future reference.",
+        "Futur I uses werden plus an infinitive at the end: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden.",
+        "Compare future and passive: Der Verein wird den Raum öffnen (future, infinitive) versus Der Raum wird geöffnet (passive, participle).",
+        "Use vielleicht, vermutlich or wahrscheinlich when the result is uncertain. A prediction is not a confirmed fact."
+      ],
+      "examples": [
+        {
+          "de": "Morgen bespreche ich den Plan mit dem Team.",
+          "en": "Tomorrow I will discuss the plan with the team."
+        },
+        {
+          "de": "Wir werden weniger Papier verbrauchen.",
+          "en": "We will use less paper."
+        },
+        {
+          "de": "Vielleicht werden mehr Menschen von zu Hause arbeiten.",
+          "en": "Perhaps more people will work from home."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "die Zukunft",
+          "en": "future",
+          "pl": "-"
+        },
+        {
+          "de": "der Plan",
+          "en": "plan",
+          "pl": "Pläne"
+        },
+        {
+          "de": "die Entwicklung",
+          "en": "development",
+          "pl": "Entwicklungen"
+        },
+        {
+          "de": "vermutlich",
+          "en": "presumably"
+        },
+        {
+          "de": "wahrscheinlich",
+          "en": "probably"
+        },
+        {
+          "de": "vorhaben",
+          "en": "to plan; intend"
+        },
+        {
+          "de": "sich verändern",
+          "en": "to change"
+        },
+        {
+          "de": "die Vorhersage",
+          "en": "prediction",
+          "pl": "Vorhersagen"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Nächstes Jahr ___ ich eine Weiterbildung beginnen. (werden)",
+          "answers": [
+            "werde"
+          ],
+          "hint": "Ich takes werde; beginnen is the final infinitive."
+        },
+        {
+          "type": "choice",
+          "question": "Which is a prediction rather than a confirmed timetable?",
+          "options": [
+            "Der Bus fährt laut Plan um acht.",
+            "Vielleicht wird der Bus morgen voller sein.",
+            "Der Kurs beginnt am Montag um neun."
+          ],
+          "answer": 1,
+          "hint": "Vielleicht signals uncertainty."
+        },
+        {
+          "type": "choice",
+          "question": "What does Der Raum wird morgen geöffnet express?",
+          "options": [
+            "A passive action",
+            "An adjective comparison",
+            "A direct question"
+          ],
+          "answer": 0,
+          "hint": "Geöffnet is a participle; werden + participle forms the passive."
+        },
+        {
+          "type": "listen",
+          "audioText": "Die Stadt möchte nächstes Jahr einen neuen Radweg bauen. Die Finanzierung ist aber noch nicht sicher. Ob die Arbeiten wirklich im Frühjahr beginnen, wird erst im Dezember entschieden.",
+          "question": "Was ist noch unsicher?",
+          "options": [
+            "Ob im Frühjahr gebaut wird",
+            "Wo die Stadt liegt",
+            "Ob Fahrräder erlaubt sind"
+          ],
+          "answer": 0,
+          "hint": "The financing and the spring start are not confirmed."
+        },
+        {
+          "type": "choice",
+          "question": "Choose a natural way to state a fixed future appointment.",
+          "options": [
+            "Am Dienstag habe ich einen Termin.",
+            "Am Dienstag ich einen Termin haben.",
+            "Am Dienstag habe werden ich einen Termin."
+          ],
+          "answer": 0,
+          "hint": "A present-tense verb with a future time phrase is natural."
+        },
+        {
+          "type": "write",
+          "question": "Describe two fictional plans for next year and one uncertain prediction. Make the uncertainty clear.",
+          "modelAnswer": "Nächstes Jahr beginne ich einen Abendkurs. Außerdem werde ich regelmäßig mit einer Lernpartnerin sprechen. Vielleicht kann ich dann bei der Arbeit mehr Aufgaben auf Deutsch übernehmen. Das hängt davon ab, wie viel ich übe."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Get involved and explain what you need",
+      "germanTitle": "Sich engagieren und etwas zutrauen",
+      "intro": "Describe community activities, ask about responsibilities and choose a realistic role. Practise reflexive phrases with accusative and dative pronouns.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Accusative reflexive",
+            "Ich interessiere mich für das Projekt."
+          ],
+          [
+            "Dative reflexive with an object",
+            "Ich stelle mir die Aufgabe interessant vor."
+          ],
+          [
+            "Confidence",
+            "Ich traue mir diese Aufgabe zu."
+          ],
+          [
+            "Recall",
+            "Ich erinnere mich an die Besprechung."
+          ],
+          [
+            "Preparation",
+            "Ich bereite mich auf meinen ersten Einsatz vor."
+          ]
+        ]
+      },
+      "rules": [
+        "Learn a reflexive verb with its preposition and case: sich interessieren für + accusative, sich erinnern an + accusative.",
+        "When a reflexive pronoun is dative, ich and du use mir and dir. The forms sich, uns and euch can occur in either case.",
+        "In Ich stelle mir die Arbeit leicht vor, mir is dative and die Arbeit is the accusative object. Learn the complete pattern rather than guessing from the English translation.",
+        "Before accepting a role, ask about time, support and tasks. Explain your limits and suggest a realistic contribution."
+      ],
+      "examples": [
+        {
+          "de": "Ich interessiere mich für die Nachbarschaftshilfe.",
+          "en": "I am interested in neighbourhood support."
+        },
+        {
+          "de": "Ich traue mir die Organisation einer kleinen Gruppe zu.",
+          "en": "I feel capable of organising a small group."
+        },
+        {
+          "de": "Kannst du dir die Aufgabe genauer erklären lassen?",
+          "en": "Can you have the task explained to you in more detail?"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "das Ehrenamt",
+          "en": "voluntary role",
+          "pl": "Ehrenämter"
+        },
+        {
+          "de": "sich engagieren",
+          "en": "to get involved"
+        },
+        {
+          "de": "der Einsatz",
+          "en": "assignment; commitment",
+          "pl": "Einsätze"
+        },
+        {
+          "de": "die Unterstützung",
+          "en": "support",
+          "pl": "-"
+        },
+        {
+          "de": "die Verantwortung",
+          "en": "responsibility",
+          "pl": "-"
+        },
+        {
+          "de": "sich zutrauen",
+          "en": "to feel capable of"
+        },
+        {
+          "de": "die Nachbarschaft",
+          "en": "neighbourhood",
+          "pl": "Nachbarschaften"
+        },
+        {
+          "de": "zuverlässig",
+          "en": "reliable"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Ich interessiere ___ für die Nachbarschaftshilfe.",
+          "answers": [
+            "mich"
+          ],
+          "hint": "Sich interessieren takes an accusative reflexive pronoun."
+        },
+        {
+          "type": "fill",
+          "question": "Ich stelle ___ die Aufgabe spannend vor. (ich)",
+          "answers": [
+            "mir"
+          ],
+          "hint": "Die Aufgabe is the accusative object; the reflexive pronoun is dative."
+        },
+        {
+          "type": "choice",
+          "question": "Which question clarifies the time commitment?",
+          "options": [
+            "Wie viele Stunden pro Woche werden gebraucht?",
+            "Welche Farbe hat das Gebäude?",
+            "Wie heißt die Hauptstadt?"
+          ],
+          "answer": 0,
+          "hint": "Ask how much time the role requires."
+        },
+        {
+          "type": "listen",
+          "audioText": "Für die Lesegruppe suchen wir Unterstützung am Donnerstag. Sie müssen keine Lehrerin sein. Wichtig sind Geduld und regelmäßige Teilnahme. Neue Helfer arbeiten zunächst mit einer erfahrenen Person zusammen.",
+          "question": "Welche Unterstützung bekommen neue Helfer?",
+          "options": [
+            "Sie arbeiten zuerst mit jemandem zusammen.",
+            "Sie müssen sofort allein unterrichten.",
+            "Sie bekommen jeden Tag frei."
+          ],
+          "answer": 0,
+          "hint": "Zunächst mit einer erfahrenen Person zusammen is the support."
+        },
+        {
+          "type": "choice",
+          "question": "Notice: Sie können nur einmal im Monat helfen? Melden Sie sich trotzdem; für einzelne Veranstaltungen suchen wir ebenfalls Unterstützung. Wer kann sich melden?",
+          "options": [
+            "Nur tägliche Helfer",
+            "Auch Menschen mit wenig Zeit",
+            "Nur ausgebildete Lehrkräfte"
+          ],
+          "answer": 1,
+          "hint": "Occasional support is explicitly welcome."
+        },
+        {
+          "type": "write",
+          "question": "Write to a fictional community group. Say why you are interested, when you can help and what support you would need.",
+          "modelAnswer": "Guten Tag, ich interessiere mich für Ihre Lesegruppe. Ich kann zweimal im Monat am Donnerstag helfen. Die Organisation kleiner Treffen traue ich mir zu. Für den Anfang wünsche ich mir eine erfahrene Ansprechperson. Können Sie mir sagen, wann ich das Team kennenlernen kann?"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Make a formal request and solve a service problem",
+      "germanTitle": "Anfragen und Beschwerden",
+      "intro": "Write to a service provider with a clear purpose. Describe the issue factually and ask for a specific, reasonable next step.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Open politely",
+            "Sehr geehrte Damen und Herren,"
+          ],
+          [
+            "State the purpose",
+            "ich schreibe Ihnen wegen meiner Buchung."
+          ],
+          [
+            "Describe the issue",
+            "Die Bestätigung enthält ein falsches Datum."
+          ],
+          [
+            "Request action",
+            "Könnten Sie das Datum bitte korrigieren?"
+          ],
+          [
+            "Close",
+            "Vielen Dank für Ihre Hilfe. Mit freundlichen Grüßen"
+          ]
+        ]
+      },
+      "rules": [
+        "Choose the greeting and ending for the relationship. Use Sie, Ihnen and Ihr with a formal recipient.",
+        "After a greeting with a comma, the following word normally starts lower-case unless it is a noun or a formal Sie-form.",
+        "Give enough information to identify a fictional booking or order, explain the problem, and request a solution. Do not include real personal or payment details in practice tasks.",
+        "Use a model to compare coverage and tone, not as the only correct answer. Clear communication is more important than complicated sentences."
+      ],
+      "examples": [
+        {
+          "de": "Leider wurde ein anderes Zimmer bestätigt.",
+          "en": "Unfortunately a different room was confirmed."
+        },
+        {
+          "de": "Könnten Sie bitte prüfen, ob eine Änderung möglich ist?",
+          "en": "Could you please check whether a change is possible?"
+        },
+        {
+          "de": "Bitte teilen Sie mir mit, wie wir weiter vorgehen können.",
+          "en": "Please let me know how we can proceed."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "die Buchung",
+          "en": "booking",
+          "pl": "Buchungen"
+        },
+        {
+          "de": "die Bestätigung",
+          "en": "confirmation",
+          "pl": "Bestätigungen"
+        },
+        {
+          "de": "die Beschwerde",
+          "en": "complaint",
+          "pl": "Beschwerden"
+        },
+        {
+          "de": "die Erstattung",
+          "en": "refund; reimbursement",
+          "pl": "Erstattungen"
+        },
+        {
+          "de": "korrigieren",
+          "en": "to correct"
+        },
+        {
+          "de": "mitteilen",
+          "en": "to inform"
+        },
+        {
+          "de": "die Lösung",
+          "en": "solution",
+          "pl": "Lösungen"
+        },
+        {
+          "de": "versehentlich",
+          "en": "by mistake"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Which request is suitable in a formal message?",
+          "options": [
+            "Du musst das sofort machen!",
+            "Könnten Sie das Datum bitte prüfen?",
+            "Hey, was soll das?"
+          ],
+          "answer": 1,
+          "hint": "Könnten Sie ... bitte is polite and specific."
+        },
+        {
+          "type": "fill",
+          "question": "Bitte teilen Sie ___ mit, ob eine Änderung möglich ist. (to me)",
+          "answers": [
+            "mir"
+          ],
+          "hint": "Mitteilen names the recipient in the dative."
+        },
+        {
+          "type": "choice",
+          "question": "What makes a complaint useful?",
+          "options": [
+            "Only saying that everything is bad",
+            "Naming the problem and a requested solution",
+            "Adding unrelated private information"
+          ],
+          "answer": 1,
+          "hint": "Give the recipient enough information to act.",
+          "englishOptions": true
+        },
+        {
+          "type": "listen",
+          "audioText": "Wir haben Ihre Anfrage erhalten. Die Buchung ist für Freitag bestätigt, obwohl Sie Samstag gewählt hatten. Wir prüfen jetzt, ob am Samstag noch ein Zimmer frei ist, und antworten Ihnen bis morgen Mittag.",
+          "question": "Was wurde bereits zugesagt?",
+          "options": [
+            "Ein Zimmer am Samstag",
+            "Eine Antwort bis morgen Mittag",
+            "Eine kostenlose zweite Nacht"
+          ],
+          "answer": 1,
+          "hint": "The reply deadline is promised; Saturday availability is still being checked."
+        },
+        {
+          "type": "choice",
+          "question": "Message: Bitte senden Sie keine Ausweiskopie. Für die Änderung benötigen wir nur die Buchungsnummer. Was wird benötigt?",
+          "options": [
+            "Ein Ausweisfoto",
+            "Die Buchungsnummer",
+            "Die Bankkarte"
+          ],
+          "answer": 1,
+          "hint": "Nur die Buchungsnummer is needed; the other item is explicitly excluded."
+        },
+        {
+          "type": "write",
+          "question": "Write a formal message about a fictional booking for a Saturday that was confirmed for Friday. Explain the problem, request a correction and ask for confirmation. Aim for 60–80 words.",
+          "modelAnswer": "Sehr geehrte Damen und Herren, ich schreibe Ihnen wegen meiner Buchung mit der Beispielnummer X-42. Ich habe ein Zimmer für Samstag reserviert. In Ihrer Bestätigung steht jedoch Freitag. Könnten Sie das Datum bitte prüfen und die Buchung ändern? Bitte teilen Sie mir auch mit, ob sich dadurch der Preis verändert. Ich möchte die Einzelheiten vor meiner Reise klären. Über eine kurze schriftliche Bestätigung würde ich mich freuen. Vielen Dank für Ihre Hilfe. Mit freundlichen Grüßen"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Plan together and give a short presentation",
+      "germanTitle": "Gemeinsam planen und präsentieren",
+      "intro": "Combine the language you know in a longer task. Negotiate a practical plan, then present an idea using a simple, clear structure.",
+      "table": {
+        "head": [
+          "Purpose",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Propose",
+            "Wie wäre es, wenn wir mit dem Zug fahren?"
+          ],
+          [
+            "Give a reason",
+            "Das wäre praktisch, weil wir zusammen ankommen."
+          ],
+          [
+            "Offer an alternative",
+            "Wir könnten stattdessen einen früheren Zug nehmen."
+          ],
+          [
+            "Confirm roles",
+            "Du buchst die Fahrkarten, und ich suche eine Unterkunft."
+          ],
+          [
+            "Organise a talk",
+            "Zuerst … Danach … Zum Schluss …"
+          ]
+        ]
+      },
+      "rules": [
+        "Joint planning requires responses, not two separate speeches. Discuss time, place, cost and responsibilities, then confirm the agreement.",
+        "For a short presentation, introduce the topic, add an experience or example, discuss advantages and disadvantages, and finish with your opinion.",
+        "Use a few keywords as prompts. After speaking, answer a follow-up question and ask a relevant question about your partner’s presentation.",
+        "These are supported communication activities. For an exam rehearsal, use the official paper’s instructions and timing."
+      ],
+      "examples": [
+        {
+          "de": "Der spätere Zug wäre billiger, aber dann hätten wir weniger Zeit.",
+          "en": "The later train would be cheaper, but then we would have less time."
+        },
+        {
+          "de": "Damit bin ich einverstanden. Wer kümmert sich um die Tickets?",
+          "en": "I agree with that. Who will take care of the tickets?"
+        },
+        {
+          "de": "Zusammenfassend finde ich, dass beide Möglichkeiten Vorteile haben.",
+          "en": "In summary, I think both options have advantages."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Vorschlag",
+          "en": "suggestion",
+          "pl": "Vorschläge"
+        },
+        {
+          "de": "die Vereinbarung",
+          "en": "agreement",
+          "pl": "Vereinbarungen"
+        },
+        {
+          "de": "sich kümmern um",
+          "en": "to take care of"
+        },
+        {
+          "de": "die Unterkunft",
+          "en": "accommodation",
+          "pl": "Unterkünfte"
+        },
+        {
+          "de": "einverstanden",
+          "en": "in agreement"
+        },
+        {
+          "de": "zusammenfassend",
+          "en": "in summary"
+        },
+        {
+          "de": "die Rückfrage",
+          "en": "follow-up question",
+          "pl": "Rückfragen"
+        },
+        {
+          "de": "stattdessen",
+          "en": "instead"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Your partner rejects the first proposal. Which response helps planning?",
+          "options": [
+            "Dann machen wir gar nichts.",
+            "Welche andere Zeit würde dir passen?",
+            "Ich höre dir nicht zu."
+          ],
+          "answer": 1,
+          "hint": "Ask for an alternative so you can negotiate."
+        },
+        {
+          "type": "fill",
+          "question": "Wer kümmert sich ___ die Fahrkarten?",
+          "answers": [
+            "um"
+          ],
+          "hint": "The phrase is sich kümmern um."
+        },
+        {
+          "type": "choice",
+          "question": "What belongs in a final agreement?",
+          "options": [
+            "Only the first idea",
+            "The chosen plan and who does what",
+            "Every unrelated story"
+          ],
+          "answer": 1,
+          "hint": "Confirm the decision and responsibilities.",
+          "englishOptions": true
+        },
+        {
+          "type": "listen",
+          "audioText": "Der Bus ist günstiger, aber er fährt erst mittags. Wir nehmen deshalb den Zug um neun. Ich buche die Fahrkarten, und du fragst beim Museum nach einer Gruppenführung. Danach bestätigen wir die Uhrzeit noch einmal.",
+          "question": "Worauf haben sich die Personen geeinigt?",
+          "options": [
+            "Auf den Bus am Mittag",
+            "Auf den Zug um neun",
+            "Auf eine Fahrt am Abend"
+          ],
+          "answer": 1,
+          "hint": "Wir nehmen deshalb den Zug um neun is the final choice."
+        },
+        {
+          "type": "choice",
+          "question": "Which phrase signals a conclusion?",
+          "options": [
+            "Zum Schluss möchte ich sagen, dass …",
+            "Zunächst stelle ich das Thema vor.",
+            "Ich habe noch nicht angefangen."
+          ],
+          "answer": 0,
+          "hint": "Zum Schluss marks the final part."
+        },
+        {
+          "type": "write",
+          "question": "Write a short planning message for a fictional group outing: destination, transport, one alternative and responsibilities. Then prepare five keywords for a short talk about group travel.",
+          "modelAnswer": "Für unseren Ausflug schlage ich das Technikmuseum vor. Wir könnten den Zug um neun nehmen. Falls das zu früh ist, treffen wir uns direkt am Museum. Ich prüfe die Öffnungszeiten. Könntest du die Fahrkarten organisieren? Bitte sagt bis Donnerstag Bescheid, ob der Plan für euch passt."
+        }
+      ]
+    }
+  ],
+  "topics": [],
+  "support": {
+    "1": {
+      "module": 1,
+      "outcomes": [
+        "Recognise common Präteritum forms in a narrative.",
+        "Describe the background to a past event."
+      ],
+      "pronunciation": "Group a longer sentence into meaningful phrases; stress time markers.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Als Kind wohnte ich in einem kleinen Dorf.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Tell a fictional first-day story in order. Your partner asks what had happened beforehand and what changed. Then summarise your partner’s experience in two sentences.",
+          "modelAnswer": "A: Wie war dein erster Tag? B: Ich war unsicher, weil ich vorher nur allein gelernt hatte. A: Was hat dir geholfen? B: Eine Kollegin hat langsam gesprochen und Fragen gestellt. Danach habe ich mich häufiger am Gespräch beteiligt.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "2": {
+      "module": 5,
+      "outcomes": [
+        "Make a polite request or suggestion.",
+        "Discuss an imagined situation using hätte, wäre or würde."
+      ],
+      "pronunciation": "Use a polite falling tone and a short pause around a relative clause.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich hätte gern ein Glas Wasser.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Make a polite request for a small favour. Your partner has a limit or conflict. Find an arrangement that works for both and confirm it.",
+          "modelAnswer": "A: Könntest du das Paket annehmen, das morgen kommt? B: Vormittags bin ich nicht da. Wenn es nach zwei Uhr kommt, helfe ich gern. A: Dann ändere ich die Lieferzeit. Danke! B: Sag mir bitte Bescheid, sobald der Termin bestätigt ist.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "3": {
+      "module": 3,
+      "outcomes": [
+        "Explain a process using the passive.",
+        "Distinguish the action from the person performing it."
+      ],
+      "pronunciation": "Keep wird/werden and the final participle audible.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Hier wird Deutsch gesprochen.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Compare repairing, sharing and buying a replacement for a fictional item. Discuss cost, usefulness and waste, then agree on a solution.",
+          "modelAnswer": "A: Der Drucker funktioniert nicht mehr. Sollen wir einen neuen kaufen? B: Zuerst könnte er in der Werkstatt geprüft werden. A: Gute Idee. Wenn die Reparatur zu teuer ist, könnten wir einen Drucker gemeinsam nutzen. B: Dann fragen wir nach den Kosten.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "4": {
+      "module": 5,
+      "outcomes": [
+        "Add identifying information with a relative clause.",
+        "Choose a relative pronoun by its role inside the clause."
+      ],
+      "pronunciation": "Use a polite falling tone and a short pause around a relative clause.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Das ist die Frau, die neben uns wohnt.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Make a polite request for a small favour. Your partner has a limit or conflict. Find an arrangement that works for both and confirm it.",
+          "modelAnswer": "A: Könntest du das Paket annehmen, das morgen kommt? B: Vormittags bin ich nicht da. Wenn es nach zwei Uhr kommt, helfe ich gern. A: Dann ändere ich die Lieferzeit. Danke! B: Sag mir bitte Bescheid, sobald der Termin bestätigt ist.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "5": {
+      "module": 2,
+      "outcomes": [
+        "Use a verb with its required preposition.",
+        "Ask about and refer back to a topic using wo(r)- and da(r)-."
+      ],
+      "pronunciation": "Pronounce the r-link in worauf/darauf clearly; keep an indirect question together.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Worauf wartest du noch?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Recommend one of two fictional information sources. Give a reason, ask an indirect question about reliability and summarise the other person’s concern.",
+          "modelAnswer": "A: Ich würde den längeren Beitrag wählen, weil er mehrere Perspektiven zeigt. B: Weißt du, wer ihn veröffentlicht hat? A: Das müssen wir noch prüfen. Dir ist also wichtig, dass die Quelle zuverlässig ist. B: Genau, und ich möchte wissen, ob die Zahlen aktuell sind.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "6": {
+      "module": 1,
+      "outcomes": [
+        "Distinguish a one-time past event from repeated occasions.",
+        "Explain earlier events using nachdem and the appropriate past forms."
+      ],
+      "pronunciation": "Group a longer sentence into meaningful phrases; stress time markers.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Als ich nach Deutschland kam, konnte ich kein Wort Deutsch.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Tell a fictional first-day story in order. Your partner asks what had happened beforehand and what changed. Then summarise your partner’s experience in two sentences.",
+          "modelAnswer": "A: Wie war dein erster Tag? B: Ich war unsicher, weil ich vorher nur allein gelernt hatte. A: Was hat dir geholfen? B: Eine Kollegin hat langsam gesprochen und Fragen gestellt. Danach habe ich mich häufiger am Gespräch beteiligt.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "7": {
+      "module": 4,
+      "outcomes": [
+        "Describe a plan with a zu-infinitive.",
+        "Keep separable prefixes and zu in the correct positions."
+      ],
+      "pronunciation": "Speak the whole infinitive group together, including zu.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Hast du Lust, am Samstag wandern zu gehen?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Discuss a fictional training plan with a supervisor. Explain a goal, ask for support and negotiate how normal tasks will be covered.",
+          "modelAnswer": "A: Ich möchte den Kurs besuchen, um sicherer telefonieren zu können. B: Wie organisieren wir deine Aufgaben in dieser Zeit? A: Ich bereite die wichtigsten Antworten vorher vor, damit meine Kollegin übernehmen kann. B: Gut. Bitte sprich den Plan noch mit ihr ab.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "8": {
+      "module": 8,
+      "outcomes": [
+        "Describe a person or object with an adjective phrase.",
+        "Use article and case information to choose an ending."
+      ],
+      "pronunciation": "Give compound nouns a clear main stress and keep endings audible.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich suche eine günstige Wohnung mit einem großen Balkon.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Explain a fictional volunteer role to a partner. Discuss what you can do, what you need to learn and how to handle a question you cannot answer.",
+          "modelAnswer": "A: Welche Aufgabe traust du dir zu? B: Ich könnte Gäste begrüßen und den Weg erklären. Für eine Führung brauche ich noch Übung. A: Was machst du bei einer schwierigen Frage? B: Ich sage offen, dass ich die Antwort prüfen werde.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "9": {
+      "module": 7,
+      "outcomes": [
+        "Express a contrast with obwohl or trotzdem.",
+        "Choose main-clause or subordinate-clause word order."
+      ],
+      "pronunciation": "Stress contrast after trotzdem and certainty words such as vielleicht.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Obwohl ich wenig Zeit habe, mache ich jeden Tag Sport.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Choose one of two future community projects. Discuss benefits, a budget limit and an uncertain assumption. Agree on the next piece of information to collect.",
+          "modelAnswer": "A: Ein Lernraum wäre sehr hilfreich. B: Trotzdem müssen wir die Kosten klären. A: Vielleicht können wir einen vorhandenen Raum nutzen. B: Dann fragen wir zuerst bei der Bibliothek nach. Danach entscheiden wir, wie es weitergeht.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "10": {
+      "module": 2,
+      "outcomes": [
+        "Ask an indirect W-question politely.",
+        "Use ob to ask whether something is true."
+      ],
+      "pronunciation": "Pronounce the r-link in worauf/darauf clearly; keep an indirect question together.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Können Sie mir sagen, wo ich das Programm finde?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Recommend one of two fictional information sources. Give a reason, ask an indirect question about reliability and summarise the other person’s concern.",
+          "modelAnswer": "A: Ich würde den längeren Beitrag wählen, weil er mehrere Perspektiven zeigt. B: Weißt du, wer ihn veröffentlicht hat? A: Das müssen wir noch prüfen. Dir ist also wichtig, dass die Quelle zuverlässig ist. B: Genau, und ich möchte wissen, ob die Zahlen aktuell sind.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "11": {
+      "module": 3,
+      "outcomes": [
+        "Recognise common genitive noun phrases.",
+        "Understand a reason expressed with wegen."
+      ],
+      "pronunciation": "Keep wird/werden and the final participle audible.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Die Reparatur des Fahrrads dauert zwei Tage.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Compare repairing, sharing and buying a replacement for a fictional item. Discuss cost, usefulness and waste, then agree on a solution.",
+          "modelAnswer": "A: Der Drucker funktioniert nicht mehr. Sollen wir einen neuen kaufen? B: Zuerst könnte er in der Werkstatt geprüft werden. A: Gute Idee. Wenn die Reparatur zu teuer ist, könnten wir einen Drucker gemeinsam nutzen. B: Dann fragen wir nach den Kosten.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "12": {
+      "module": 4,
+      "outcomes": [
+        "Explain a purpose with um ... zu.",
+        "Use damit when the two actions have different subjects."
+      ],
+      "pronunciation": "Speak the whole infinitive group together, including zu.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich übe täglich, um im Gespräch flüssiger zu werden.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Discuss a fictional training plan with a supervisor. Explain a goal, ask for support and negotiate how normal tasks will be covered.",
+          "modelAnswer": "A: Ich möchte den Kurs besuchen, um sicherer telefonieren zu können. B: Wie organisieren wir deine Aufgaben in dieser Zeit? A: Ich bereite die wichtigsten Antworten vorher vor, damit meine Kollegin übernehmen kann. B: Gut. Bitte sprich den Plan noch mit ihr ab.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "13": {
+      "module": 6,
+      "outcomes": [
+        "Connect an event to its result.",
+        "Express two features or alternatives using paired connectors."
+      ],
+      "pronunciation": "Stress the contrasted words in sowohl ... als auch and weder ... noch.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich habe die Benachrichtigungen ausgeschaltet, sodass ich ruhiger arbeiten kann.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Discuss whether phones should be used during a language course. Give one reason and example each, respond to a counterargument and find a shared rule.",
+          "modelAnswer": "A: Ich finde Handys hilfreich, weil wir Wörter schnell nachschlagen können. B: Das stimmt, aber Nachrichten lenken ab. A: Dann könnten wir sie nur für bestimmte Aufgaben benutzen. B: Damit bin ich einverstanden. In Gesprächen bleiben sie in der Tasche.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "14": {
+      "module": 6,
+      "outcomes": [
+        "Support an opinion with a reason and example.",
+        "Respond constructively to another point of view."
+      ],
+      "pronunciation": "Stress the contrasted words in sowohl ... als auch and weder ... noch.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ein Vorteil ist, dass man von zu Hause lernen kann.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Discuss whether phones should be used during a language course. Give one reason and example each, respond to a counterargument and find a shared rule.",
+          "modelAnswer": "A: Ich finde Handys hilfreich, weil wir Wörter schnell nachschlagen können. B: Das stimmt, aber Nachrichten lenken ab. A: Dann könnten wir sie nur für bestimmte Aufgaben benutzen. B: Damit bin ich einverstanden. In Gesprächen bleiben sie in der Tasche.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "15": {
+      "module": 7,
+      "outcomes": [
+        "Describe a future plan naturally.",
+        "Make uncertainty explicit in a prediction."
+      ],
+      "pronunciation": "Stress contrast after trotzdem and certainty words such as vielleicht.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Morgen bespreche ich den Plan mit dem Team.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Choose one of two future community projects. Discuss benefits, a budget limit and an uncertain assumption. Agree on the next piece of information to collect.",
+          "modelAnswer": "A: Ein Lernraum wäre sehr hilfreich. B: Trotzdem müssen wir die Kosten klären. A: Vielleicht können wir einen vorhandenen Raum nutzen. B: Dann fragen wir zuerst bei der Bibliothek nach. Danach entscheiden wir, wie es weitergeht.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "16": {
+      "module": 8,
+      "outcomes": [
+        "Explain an interest, ability and support need.",
+        "Use common accusative and dative reflexive patterns."
+      ],
+      "pronunciation": "Give compound nouns a clear main stress and keep endings audible.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich interessiere mich für die Nachbarschaftshilfe.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Explain a fictional volunteer role to a partner. Discuss what you can do, what you need to learn and how to handle a question you cannot answer.",
+          "modelAnswer": "A: Welche Aufgabe traust du dir zu? B: Ich könnte Gäste begrüßen und den Weg erklären. Für eine Führung brauche ich noch Übung. A: Was machst du bei einer schwierigen Frage? B: Ich sage offen, dass ich die Antwort prüfen werde.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "17": {
+      "module": 9,
+      "outcomes": [
+        "Write a formal enquiry with a clear request.",
+        "Explain a service problem and propose a next step."
+      ],
+      "pronunciation": "Use pauses to mark stages of a presentation instead of reading a full script.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Leider wurde ein anderes Zimmer bestätigt.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Plan a fictional group outing: agree on destination, transport, cost and responsibilities, including a rain alternative. Then give a short talk on travelling in a group: experience, advantages, disadvantages and opinion. Answer one follow-up question.",
+          "modelAnswer": "A: Ich schlage das Museum vor, weil wir auch bei Regen hingehen können. B: Gut. Wie kommen wir dorthin? A: Mit dem Zug. Ich prüfe die Fahrkarten. Könntest du die Führung reservieren? B: Ja. Wir bestätigen am Freitag noch einmal den Treffpunkt.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "18": {
+      "module": 9,
+      "outcomes": [
+        "Negotiate a plan and confirm responsibilities.",
+        "Give a structured short presentation and answer a question."
+      ],
+      "pronunciation": "Use pauses to mark stages of a presentation instead of reading a full script.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Der spätere Zug wäre billiger, aber dann hätten wir weniger Zeit.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Plan a fictional group outing: agree on destination, transport, cost and responsibilities, including a rain alternative. Then give a short talk on travelling in a group: experience, advantages, disadvantages and opinion. Answer one follow-up question.",
+          "modelAnswer": "A: Ich schlage das Museum vor, weil wir auch bei Regen hingehen können. B: Gut. Wie kommen wir dorthin? A: Mit dem Zug. Ich prüfe die Fahrkarten. Könntest du die Führung reservieren? B: Ja. Wir bestätigen am Freitag noch einmal den Treffpunkt.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    }
+  },
+  "skillStrategies": [
+    {
+      "title": "Read with a purpose",
+      "steps": [
+        "Identify the text type and its purpose first: notice, message, advertisement or opinion.",
+        "Read the question, then locate the sentence that answers it. Check who, when, where and any restriction.",
+        "Explain why the other option is wrong. A repeated word alone is not enough evidence."
+      ]
+    },
+    {
+      "title": "Listen in two passes",
+      "steps": [
+        "Before playing, predict the situation and the kind of detail you need.",
+        "First listen for the situation and intention. On a second practice listen, note the requested details and corrections.",
+        "Check the transcript after answering. Repeat the difficult phrase, then try again without reading. Follow the stated playback limits in exam practice."
+      ]
+    },
+    {
+      "title": "Write, check, rewrite",
+      "steps": [
+        "Identify the recipient, purpose and all requested content points. Use fictional details for personal-data tasks.",
+        "Draft before opening a model. Use short sentences you can control and a suitable greeting and ending.",
+        "Check task coverage first, then verbs, word order and noun capitals. Get feedback and write a corrected version."
+      ]
+    },
+    {
+      "title": "Speak and respond",
+      "steps": [
+        "Prepare keywords instead of a complete script. Give an answer, a reason or example, then invite a response.",
+        "Ask a follow-up question and respond to your partner’s idea. Ask for clarification when needed.",
+        "Repeat with a changed situation and switch roles. Check whether the other person understood your intended meaning."
+      ]
+    }
+  ],
+  "reviewRoutine": [
+    "Next study day: recall three useful phrases without looking, then correct them.",
+    "About one week later: repeat the task with different details and no model.",
+    "About three weeks later: mix this topic with an earlier one and ask for feedback."
+  ],
+  "dailyPlan": [
+    {
+      "minutes": 10,
+      "title": "Retrieve earlier language",
+      "description": "Review due vocabulary and recall three phrases from an earlier module."
+    },
+    {
+      "minutes": 15,
+      "title": "Learn and apply",
+      "description": "Study one small grammar section and use it in your own examples."
+    },
+    {
+      "minutes": 15,
+      "title": "Listen and read",
+      "description": "Identify the main idea, find evidence for details, then check the transcript or explanation."
+    },
+    {
+      "minutes": 10,
+      "title": "Speak and respond",
+      "description": "Use a role task with changed details, ask a follow-up question and practise clarification."
+    },
+    {
+      "minutes": 10,
+      "title": "Write and revise",
+      "description": "Cover the requested points, compare with a model, seek feedback and rewrite one weak sentence."
+    }
+  ],
+  "vocabulary": {
+    "recognitionGoal": "Recognise the vocabulary in unfamiliar short texts and recordings, not only on a flashcard.",
+    "productionGoal": "Use useful phrases in a new spoken or written task. Word counts alone do not establish a CEFR level.",
+    "method": [
+      "Learn nouns with article, plural and a short phrase.",
+      "Learn verbs with their preposition, case pattern and a useful past form.",
+      "Retrieve before revealing a model; revisit errors on later study days.",
+      "Connect the current topic to an earlier one and practise in both directions."
+    ]
+  },
+  "readiness": [
+    "I can complete a new practical task without copying a model.",
+    "I can identify the main idea and support detail answers with evidence.",
+    "I can write a coherent message that covers all requested points.",
+    "I can ask a follow-up question, respond and clarify a misunderstanding.",
+    "I have practised with unfamiliar recordings and received feedback on writing and speaking."
+  ],
+  "assessmentNote": "The lesson and checkpoint scores measure supported objective practice. Writing and speaking need separate feedback. This learning path and the short in-app assessment do not certify a CEFR level or replace a full official practice paper."
+}

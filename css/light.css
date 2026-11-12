@@ -1,0 +1,65 @@
+/* Original light theme. Shared layout stays in the component stylesheets. */
+:root[data-theme="light"] {
+  --background: #f5f6f8; --foreground: #16233f;
+  --card: #fff; --card-foreground: #16233f;
+  --primary: #40577e; --primary-foreground: #fff;
+  --secondary: #e9edf2; --secondary-foreground: #16233f;
+  --muted-foreground: #566178; --accent: #e9edf2;
+  --border: #d9dfe8; --input: #8190a8; --ring: #40577e;
+  --destructive: #ba3a31; --brand: #f2c02a;
+  --signal: #f2c02a; --on-signal: #16233f;
+  --btn-bg: var(--primary); --btn-hover: #344a70;
+  --ok: #1e8757; --ok-bg: #e2f2e9; --err-bg: #fae7e5;
+  --stamp: #2d3a8c;
+  --shadow: 0 2px 6px -2px #16233f14, 0 26px 50px -28px #16233f8c;
+  --shadow-1: 0 1px 2px #16233f0f, 0 1px 1px #16233f08;
+  --shadow-2: 0 2px 4px -1px #16233f0f, 0 12px 28px -14px #16233f47;
+  --btn-shadow: 0 1px 2px #16233f3d, 0 10px 22px -12px #16233f99;
+  --highlight: inset 0 1px 0 #ffffffbf;
+  --spot: #f2c02a29;
+  --sans: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cond: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --radius-lg: 14px;
+  color-scheme: light;
+}
+:where([data-theme="light"]) body { font-size: 17px; line-height: 1.55; }
+:where([data-theme="light"]) h1,
+:where([data-theme="light"]) h2,
+:where([data-theme="light"]) h3 { font-weight: 700; line-height: 1.04; letter-spacing: -.01em; }
+:where([data-theme="light"]) h1 { font-size: clamp(40px, 6.2vw, 66px); }
+:where([data-theme="light"]) h2 { font-size: clamp(28px, 3.6vw, 38px); }
+:where([data-theme="light"]) h3 { font-size: 22px; letter-spacing: 0; }
+:where([data-theme="light"]) .logo { font: 700 25px/1 var(--cond); letter-spacing: 0; }
+:where([data-theme="light"]) .logo i { width: 14px; height: 14px; box-shadow: 0 0 0 3.5px var(--text); }
+:where([data-theme="light"]) .btn { font-size: 17px; font-weight: 600; padding: 12px 22px; border-radius: 12px; min-height: 48px; box-shadow: var(--btn-shadow); }
+:where([data-theme="light"]) .btn.ghost { background: transparent; box-shadow: none; }
+:where([data-theme="light"]) .btn.ghost:hover { background: var(--sunken); }
+:where([data-theme="light"]) .btn.small { min-height: 38px; padding: 7px 14px; font-size: 15px; border-radius: 10px; }
+:where([data-theme="light"]) .crumb { font-size: 15px; }
+:where([data-theme="light"]) .spk { width: 38px; height: 38px; border-radius: 50%; }
+:where([data-theme="light"]) .fb-head span:first-child { color: #8b6900; }
+:where([data-theme="light"]) .lvswitch a { font: 700 18px/1 var(--cond); }
+:where([data-theme="light"]) .score { background: var(--signal); color: var(--on-signal); }
+:where([data-theme="light"]) .face.back { background: var(--signal); color: var(--on-signal); }
+:where([data-theme="light"]) .face { border-radius: 20px; }
+:where([data-theme="light"]) .google-signin { background: #fff; color: var(--text); }
+:where([data-theme="light"]) .google-signin:hover { background: var(--sunken); }
+:where([data-theme="light"]) .study-plan-card { --plan-muted: #d8e1ee; --plan-rule: #475974; background: #182942; border-color: #182942; color: #fff; }
+:where([data-theme="light"]) .study-plan-card .study-step-number { background: #405773; color: #fff; }
+:where([data-theme="light"]) .study-plan-card li:first-child .study-step-number { background: var(--signal); color: var(--on-signal); }
+:where([data-theme="light"]) :is(.study-start.btn, .study-page-links .btn) { background: var(--signal); color: var(--on-signal); box-shadow: none; }
+:where([data-theme="light"]) :is(.study-start.btn, .study-page-links .btn):hover { background: #ffcf3e; }
+:where([data-theme="light"]) .study-optional .study-start.btn { background: var(--surface); color: var(--text); border-color: var(--line); }
+:where([data-theme="light"]) .study-optional .study-start.btn:hover { background: var(--sunken); }
+:where([data-theme="light"]) .practice-overview { background: var(--ink); color: var(--paper); border-radius: 18px; border: 0; border-top: 5px solid var(--signal); }
+:where([data-theme="light"]) .practice-overview p:last-child { color: #d8e0ee; }
+:where([data-theme="light"]) .practice-filters button { border-radius: 30px; }
+:where([data-theme="light"]) .practice-filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+:where([data-theme="light"]) .practice-set h2 { font: 600 27px/1.15 var(--cond); }
+:where([data-theme="light"]) .practice-source { background: var(--paper); }
+:where([data-theme="light"]) .practice-source h2 { font: 600 27px/1.2 var(--cond); }
+:where([data-theme="light"]) .practice-choice:has(input:checked) { background: #edf0ff; }
+:where([data-theme="light"]) .practice-choice.is-answer { background: var(--ok-bg); }
+:where([data-theme="light"]) .practice-built .practice-chunk { background: var(--ink); color: var(--paper); }
+:where([data-theme="light"]) .practice-model { background: var(--paper); }
+:where([data-theme="light"]) ::selection { background: #f2c02a; color: #16233f; }

@@ -1,0 +1,3244 @@
+{
+  "id": "a2",
+  "version": 1,
+  "updated": "2026-10-25",
+  "title": "A2 everyday communication path",
+  "eyebrow": "German A2 · Handle everyday situations",
+  "introduction": "Build confidence across nine modules: describe past experiences, ask for help, compare options, arrange plans and write useful messages. Each module connects grammar to listening, reading, writing and speaking.",
+  "scopeNote": "This expanded 18-lesson path develops everyday A2 communication. Add unfamiliar texts, natural recordings and feedback on speaking and writing; completing the path alone does not establish full A2 proficiency.",
+  "entryReview": "Before starting, check that you can introduce a fictional person, ask simple questions, arrange a time and write a short three-point message. Revisit the relevant A1 lesson if you need support.",
+  "weeks": 16,
+  "coreHours": 72,
+  "reviewHours": 18,
+  "sources": [
+    {
+      "title": "Goethe A2 official practice materials",
+      "url": "https://www.goethe.de/ins/de/en/prf/gzsd2/ub2.html"
+    }
+  ],
+  "lessonOrder": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "title": "Plans, obligations and recent activities",
+      "lessonIds": [
+        1,
+        2
+      ],
+      "topics": [
+        "media",
+        "money"
+      ],
+      "goals": [
+        "Explain what you can, must or want to do.",
+        "Describe completed activities and arrange a meeting."
+      ],
+      "pronunciation": "Listen for the modal verb and stress the final infinitive or participle.",
+      "listening": "Identify a change of plan and distinguish an obligation from an optional action.",
+      "reading": "Find the required action in a group message.",
+      "writing": "Write a message explaining an absence and proposing another time.",
+      "speaking": "Negotiate a study meeting and respond to a scheduling problem.",
+      "checkpoint": "Agree on a meeting and explain a recent change of plan.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Am Samstag wollte ich mit Freunden ins Kino gehen. Leider musste ich bis sechs Uhr arbeiten. Danach habe ich zu Hause gekocht und einen Film gesehen. Am Sonntag habe ich meine Freunde dann im Park getroffen. Nächstes Wochenende wollen wir wieder zusammen etwas machen.",
+          "questions": [
+            {
+              "question": "Warum war die Person am Samstag nicht im Kino?",
+              "options": [
+                "Sie musste arbeiten.",
+                "Sie war im Urlaub.",
+                "Sie hatte keine Freunde."
+              ],
+              "answer": 0,
+              "evidence": "Leider musste ich bis sechs Uhr arbeiten."
+            },
+            {
+              "question": "Was hat sie am Samstagabend gemacht?",
+              "options": [
+                "Im Park Fußball gespielt",
+                "Gekocht und einen Film gesehen",
+                "Im Kino gearbeitet"
+              ],
+              "answer": 1,
+              "evidence": "Danach habe ich zu Hause gekocht und einen Film gesehen."
+            },
+            {
+              "question": "Wann hat sie ihre Freunde getroffen?",
+              "options": [
+                "Am Freitag",
+                "Am Samstag",
+                "Am Sonntag"
+              ],
+              "answer": 2,
+              "evidence": "Am Sonntag habe ich meine Freunde dann im Park getroffen."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Nachricht in der Lerngruppe: Unser Treffen am Mittwoch beginnt diese Woche erst um 18:30 Uhr. Der Raum ist vorher besetzt. Bitte bringt eure Hefte mit. Ihr müsst die neue Aufgabe noch nicht fertig haben; wir bearbeiten sie gemeinsam. Wer nicht kommen kann, bekommt am Donnerstag eine kurze Zusammenfassung.",
+          "questions": [
+            {
+              "question": "Warum beginnt das Treffen später?",
+              "options": [
+                "Der Raum ist vorher besetzt.",
+                "Alle fahren in Urlaub.",
+                "Die Aufgabe ist zu schwer."
+              ],
+              "answer": 0,
+              "evidence": "Der Raum ist vorher besetzt."
+            },
+            {
+              "question": "Was sollen die Teilnehmenden mitbringen?",
+              "options": [
+                "Essen",
+                "Ihre Hefte",
+                "Eine fertige Zusammenfassung"
+              ],
+              "answer": 1,
+              "evidence": "Bitte bringt eure Hefte mit."
+            },
+            {
+              "question": "Muss die neue Aufgabe schon fertig sein?",
+              "options": [
+                "Ja, bis Dienstag.",
+                "Ja, vor dem Treffen.",
+                "Nein, sie wird gemeinsam bearbeitet."
+              ],
+              "answer": 2,
+              "evidence": "Ihr müsst die neue Aufgabe noch nicht fertig haben."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write to a fictional classmate. Say what you did yesterday, explain why you cannot meet on Wednesday and suggest another day. Include all three points.",
+          "wordGoal": 50,
+          "modelAnswer": "Hallo! Gestern habe ich lange gearbeitet und danach noch Deutsch gelernt. Am Mittwoch kann ich leider nicht zu unserem Treffen kommen, weil ich bis abends arbeiten muss. Können wir uns stattdessen am Donnerstag um sechs Uhr in der Bibliothek treffen? Bring bitte dein Heft mit. Wir können die neue Aufgabe zusammen machen. Viele Grüße!"
+        },
+        "speaking": {
+          "task": "Plan a study meeting. Partner A has time on Tuesday evening; partner B can only meet Thursday. Find a time, say what to bring and explain one thing you did last week.",
+          "modelAnswer": "A: Hast du am Dienstag Zeit? B: Leider muss ich arbeiten. Können wir uns am Donnerstag treffen? A: Ja, um sechs Uhr passt es. Bringst du dein Heft mit? B: Gern. Letzte Woche habe ich schon die ersten Aufgaben gemacht."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich muss heute arbeiten. Gestern habe ich lange gearbeitet.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [],
+        "task": "Agree on a meeting and explain a recent change of plan. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Review present-tense verb position and common A1 time phrases."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Journeys and asking for help",
+      "lessonIds": [
+        3,
+        4
+      ],
+      "topics": [
+        "traffic",
+        "holiday"
+      ],
+      "goals": [
+        "Tell someone how a journey went using haben and sein.",
+        "Ask for help and identify the recipient of an action."
+      ],
+      "pronunciation": "Keep the auxiliary audible and stress the important place or problem.",
+      "listening": "Follow a short journey account and identify who helped whom.",
+      "reading": "Read practical instructions and identify times and included services.",
+      "writing": "Describe a journey, a problem and the help received.",
+      "speaking": "Ask for help at a station and confirm directions.",
+      "checkpoint": "Explain a travel problem and relay the instructions accurately.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Gestern bin ich mit dem Zug nach Erfurt gefahren. Am Bahnhof habe ich einer Reisenden mit ihrem Koffer geholfen. Unser Zug ist zehn Minuten später angekommen. Deshalb habe ich meinem Freund eine Nachricht geschickt. Er hat am Ausgang auf mich gewartet, und wir sind zusammen zum Hotel gegangen.",
+          "questions": [
+            {
+              "question": "Wie ist die Person nach Erfurt gereist?",
+              "options": [
+                "Mit dem Auto",
+                "Mit dem Zug",
+                "Mit dem Flugzeug"
+              ],
+              "answer": 1,
+              "evidence": "Ich bin mit dem Zug nach Erfurt gefahren."
+            },
+            {
+              "question": "Wem hat sie geholfen?",
+              "options": [
+                "Einer Reisenden",
+                "Einem Kellner",
+                "Einer Lehrerin im Kurs"
+              ],
+              "answer": 0,
+              "evidence": "Einer Reisenden mit ihrem Koffer."
+            },
+            {
+              "question": "Wo hat der Freund gewartet?",
+              "options": [
+                "Im Hotelzimmer",
+                "Im Zug",
+                "Am Ausgang"
+              ],
+              "answer": 2,
+              "evidence": "Er hat am Ausgang auf mich gewartet."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Fahrradverleih: Ein Fahrrad kostet zwölf Euro pro Tag. Ein Helm ist im Preis enthalten. Bitte geben Sie das Fahrrad bis 19 Uhr zurück. Bei einer Panne rufen Sie den Verleih an; wir helfen Ihnen. Am Sonntag bleibt die Station geschlossen. Fahrräder für Montag können Sie am Samstag reservieren.",
+          "questions": [
+            {
+              "question": "Was ist im Preis enthalten?",
+              "options": [
+                "Ein Helm",
+                "Ein Mittagessen",
+                "Eine Zugfahrt"
+              ],
+              "answer": 0,
+              "evidence": "Ein Helm ist im Preis enthalten."
+            },
+            {
+              "question": "Bis wann muss man das Fahrrad zurückgeben?",
+              "options": [
+                "Bis 17 Uhr",
+                "Bis 19 Uhr",
+                "Bis Montag"
+              ],
+              "answer": 1,
+              "evidence": "Bis 19 Uhr zurück."
+            },
+            {
+              "question": "Was kann man am Samstag machen?",
+              "options": [
+                "Am Sonntag ein Fahrrad abholen",
+                "Den Verleih schließen",
+                "Ein Fahrrad für Montag reservieren"
+              ],
+              "answer": 2,
+              "evidence": "Fahrräder für Montag können Sie am Samstag reservieren."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write about a fictional short journey. Include how you travelled, a small problem and who helped you. Use both haben and sein in the Perfekt.",
+          "wordGoal": 50,
+          "modelAnswer": "Am Wochenende bin ich mit dem Zug nach Erfurt gefahren. Leider habe ich im Zug meine Tasche vergessen. Eine Mitarbeiterin hat mir geholfen und beim Fundbüro angerufen. Zum Glück war die Tasche noch da. Danach bin ich zum Hotel gegangen. Am nächsten Tag habe ich meinem Freund von der Reise erzählt. Er hat sich über das gute Ende gefreut."
+        },
+        "speaking": {
+          "task": "Ask for help at a station. Explain a fictional problem with luggage, ask where to go and repeat the instructions to confirm them. Switch roles.",
+          "modelAnswer": "A: Entschuldigung, ich habe meine Tasche im Zug vergessen. Können Sie mir helfen? B: Gehen Sie bitte zum Fundbüro neben dem Ausgang. A: Neben dem Ausgang, richtig? B: Ja. Sagen Sie der Mitarbeiterin, mit welchem Zug Sie gefahren sind."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich bin angekommen. Eine Mitarbeiterin hat mir geholfen.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          1,
+          2
+        ],
+        "task": "Explain a travel problem and relay the instructions accurately. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall common participles; distinguish the person receiving help from the object involved."
+      }
+    },
+    {
+      "id": 3,
+      "title": "Housing, locations and reasons",
+      "lessonIds": [
+        5,
+        6
+      ],
+      "topics": [
+        "flat",
+        "money"
+      ],
+      "goals": [
+        "Distinguish a location from a destination with two-way prepositions.",
+        "Give a reason, report an idea and discuss a condition."
+      ],
+      "pronunciation": "Pause before subordinate clauses and keep their final verb clear.",
+      "listening": "Follow an explanation of where objects go and why.",
+      "reading": "Identify permitted locations and a delivery condition in a notice.",
+      "writing": "Make a practical proposal with a reason and a request.",
+      "speaking": "Discuss two arrangements and respond to an objection.",
+      "checkpoint": "Agree on a room arrangement and explain it clearly.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Wir stellen das Sofa an die Wand, weil wir in der Mitte mehr Platz brauchen. Der kleine Tisch steht dann vor dem Sofa. Die Lampe hängt schon über dem Tisch. Wenn du morgen Zeit hast, können wir noch das Regal aufbauen. Ich glaube, dass wir danach ein gemütliches Wohnzimmer haben.",
+          "questions": [
+            {
+              "question": "Warum kommt das Sofa an die Wand?",
+              "options": [
+                "Es ist kaputt.",
+                "In der Mitte soll mehr Platz sein.",
+                "Die Wohnung wird verkauft."
+              ],
+              "answer": 1,
+              "evidence": "Weil wir in der Mitte mehr Platz brauchen."
+            },
+            {
+              "question": "Wo steht der kleine Tisch?",
+              "options": [
+                "Vor dem Sofa",
+                "Hinter der Tür",
+                "Auf dem Sofa"
+              ],
+              "answer": 0,
+              "evidence": "Der kleine Tisch steht dann vor dem Sofa."
+            },
+            {
+              "question": "Was möchten die Personen morgen machen?",
+              "options": [
+                "Eine Lampe kaufen",
+                "Umziehen",
+                "Das Regal aufbauen"
+              ],
+              "answer": 2,
+              "evidence": "Wenn du morgen Zeit hast, können wir noch das Regal aufbauen."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Hausnachricht: Am Freitag wird der Flur gereinigt. Bitte stellen Sie Ihre Schuhe bis acht Uhr in Ihre Wohnung. Fahrräder dürfen im Hof stehen, aber nicht vor dem Eingang. Wenn Sie ein großes Paket erwarten, informieren Sie bitte die Nachbarn. Der Lieferdienst kann es zwischen zehn und zwölf Uhr im Hof abstellen.",
+          "questions": [
+            {
+              "question": "Wohin sollen die Schuhe?",
+              "options": [
+                "In die Wohnung",
+                "Vor den Eingang",
+                "In den Hof"
+              ],
+              "answer": 0,
+              "evidence": "Bitte stellen Sie Ihre Schuhe ... in Ihre Wohnung."
+            },
+            {
+              "question": "Wo dürfen Fahrräder stehen?",
+              "options": [
+                "Vor dem Eingang",
+                "Im Hof",
+                "Im gereinigten Flur"
+              ],
+              "answer": 1,
+              "evidence": "Fahrräder dürfen im Hof stehen."
+            },
+            {
+              "question": "Wann kann der Lieferdienst ein Paket abstellen?",
+              "options": [
+                "Vor acht Uhr",
+                "Nur am Abend",
+                "Zwischen zehn und zwölf Uhr"
+              ],
+              "answer": 2,
+              "evidence": "Zwischen zehn und zwölf Uhr im Hof abstellen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write to a fictional neighbour about rearranging a shared room. Say where two objects should go, give a reason and ask for help at a proposed time.",
+          "wordGoal": 50,
+          "modelAnswer": "Hallo! Wir möchten unseren Gemeinschaftsraum am Samstag verändern. Das Sofa soll an die Wand, weil wir mehr Platz brauchen. Den kleinen Tisch stellen wir vor das Fenster. Kannst du uns am Samstag um zehn Uhr helfen? Wenn du keine Zeit hast, können wir auch am Nachmittag anfangen. Bitte sag mir kurz Bescheid. Vielen Dank und bis bald!"
+        },
+        "speaking": {
+          "task": "Arrange an imaginary room with a partner. One person proposes where to put three objects; the other explains one problem and suggests a different arrangement.",
+          "modelAnswer": "A: Stellen wir den Tisch vor das Fenster? B: Lieber nicht, weil dort die Heizung ist. A: Dann stellen wir ihn neben das Sofa. B: Das finde ich gut. Die Lampe kann auf dem Tisch stehen."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Der Tisch steht im Zimmer. Wir stellen ihn ins Zimmer.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          3,
+          4
+        ],
+        "task": "Agree on a room arrangement and explain it clearly. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Movement alone does not determine the case: contrast movement within a place with movement to a destination."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Wellbeing, preferences and choices",
+      "lessonIds": [
+        7,
+        8
+      ],
+      "topics": [
+        "sport",
+        "holiday",
+        "media"
+      ],
+      "goals": [
+        "Describe habits and feelings using common reflexive phrases.",
+        "Compare options and make a joint decision."
+      ],
+      "pronunciation": "Stress the contrast: günstiger, besser, am liebsten.",
+      "listening": "Understand a change of routine and the reason for a preference.",
+      "reading": "Compare price, time and conditions in course descriptions.",
+      "writing": "Recommend an activity with reasons and an invitation.",
+      "speaking": "Compare alternatives and ask about a partner’s preference.",
+      "checkpoint": "Choose an activity using at least two relevant comparisons.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Seit einem Monat bewege ich mich mehr. Früher habe ich mich nach der Arbeit oft müde gefühlt. Jetzt gehe ich zweimal pro Woche schwimmen. Das gefällt mir besser als das Training im Fitnessstudio. Am liebsten schwimme ich morgens, weil das Bad dann ruhiger ist. Meine Freundin interessiert sich auch dafür und kommt nächste Woche mit.",
+          "questions": [
+            {
+              "question": "Wie oft geht die Person schwimmen?",
+              "options": [
+                "Jeden Morgen",
+                "Zweimal pro Woche",
+                "Einmal im Monat"
+              ],
+              "answer": 1,
+              "evidence": "Zweimal pro Woche."
+            },
+            {
+              "question": "Warum schwimmt sie gern morgens?",
+              "options": [
+                "Das Bad ist ruhiger.",
+                "Es ist immer kostenlos.",
+                "Es gibt kein anderes Training."
+              ],
+              "answer": 0,
+              "evidence": "Weil das Bad dann ruhiger ist."
+            },
+            {
+              "question": "Was macht die Freundin nächste Woche?",
+              "options": [
+                "Sie arbeitet im Schwimmbad.",
+                "Sie zieht um.",
+                "Sie kommt mit."
+              ],
+              "answer": 2,
+              "evidence": "Meine Freundin ... kommt nächste Woche mit."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Kursvergleich: Der Bewegungskurs im Park kostet vier Euro pro Termin und findet dienstags um 18 Uhr statt. Bei starkem Regen fällt er aus. Der Kurs im Sportzentrum kostet sechs Euro und findet donnerstags um 19 Uhr statt. Dort können Sie sich auch bei schlechtem Wetter bewegen. Für beide Kurse ist eine Anmeldung erforderlich.",
+          "questions": [
+            {
+              "question": "Welcher Kurs ist günstiger?",
+              "options": [
+                "Der Kurs im Park",
+                "Der Kurs im Sportzentrum",
+                "Beide kosten gleich viel."
+              ],
+              "answer": 0,
+              "evidence": "Vier Euro im Park; sechs Euro im Sportzentrum."
+            },
+            {
+              "question": "Welcher Kurs findet auch bei starkem Regen statt?",
+              "options": [
+                "Beide",
+                "Der Kurs im Sportzentrum",
+                "Keiner"
+              ],
+              "answer": 1,
+              "evidence": "Dort können Sie sich auch bei schlechtem Wetter bewegen."
+            },
+            {
+              "question": "Was braucht man für beide Kurse?",
+              "options": [
+                "Eigene Geräte",
+                "Eine Mitgliedschaft",
+                "Eine Anmeldung"
+              ],
+              "answer": 2,
+              "evidence": "Für beide Kurse ist eine Anmeldung erforderlich."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Recommend one of two fictional leisure courses to a friend. Compare price and time, explain your preference and invite the friend to join you.",
+          "wordGoal": 50,
+          "modelAnswer": "Hallo! Ich habe zwei Bewegungskurse gefunden. Der Kurs im Park ist günstiger, aber er fällt bei starkem Regen aus. Deshalb gefällt mir der Kurs im Sportzentrum besser. Er beginnt donnerstags um sieben Uhr. Das passt gut nach der Arbeit. Interessierst du dich auch dafür? Wir müssen uns vorher anmelden. Ich würde mich freuen, wenn du mitkommst. Viele Grüße!"
+        },
+        "speaking": {
+          "task": "Choose between two leisure activities. Compare cost, time and your preferences. Ask your partner what they enjoy, and agree on one plan.",
+          "modelAnswer": "A: Interessierst du dich für Schwimmen? B: Ja, aber der Kurs ist teurer als der im Park. A: Das stimmt. Dafür können wir auch bei Regen hingehen. B: Gut, dann melden wir uns für Donnerstag an."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich fühle mich besser. Am liebsten bewege ich mich draußen.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          5,
+          6
+        ],
+        "task": "Choose an activity using at least two relevant comparisons. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Recall personal pronouns and use als for differences, so ... wie for equality."
+      }
+    },
+    {
+      "id": 5,
+      "title": "Past experiences and changed plans",
+      "lessonIds": [
+        9,
+        10
+      ],
+      "topics": [
+        "holiday",
+        "traffic"
+      ],
+      "goals": [
+        "Explain a past situation using common Präteritum forms.",
+        "Tell a short story with als, wenn and a clear order of events."
+      ],
+      "pronunciation": "Keep konnte and könnte distinct; pause between the time clause and main clause.",
+      "listening": "Follow a travel problem, response and outcome.",
+      "reading": "Reconstruct the order of events in a short experience report.",
+      "writing": "Describe a changed plan and its outcome.",
+      "speaking": "Tell a short story and ask follow-up questions about a partner’s story.",
+      "checkpoint": "Tell a new past experience in order and explain how a problem was solved.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Als ich im Sommer zum ersten Mal allein verreist bin, hatte ich nur einen kleinen Rucksack dabei. Am Bahnhof war der Fahrkartenautomat kaputt. Ich musste deshalb zum Schalter gehen. Dort konnte ich noch eine Fahrkarte kaufen. Danach habe ich kurz gewartet. Der Zug kam fünf Minuten später. Im Zug habe ich einen ruhigen Platz am Fenster gefunden. Die Reise war am Ende ganz entspannt.",
+          "questions": [
+            {
+              "question": "Warum musste die Person zum Schalter gehen?",
+              "options": [
+                "Sie hatte ihren Rucksack verloren.",
+                "Der Automat funktionierte nicht.",
+                "Der Zug war schon abgefahren."
+              ],
+              "answer": 1,
+              "evidence": "Am Bahnhof war der Fahrkartenautomat kaputt."
+            },
+            {
+              "question": "Was war nach dem Kauf der Fahrkarte?",
+              "options": [
+                "Die Person wartete kurz.",
+                "Die Person ging nach Hause.",
+                "Die Person kaufte einen Rucksack."
+              ],
+              "answer": 0,
+              "evidence": "Danach habe ich kurz gewartet."
+            },
+            {
+              "question": "Wie beschreibt die Person das Ende der Reise?",
+              "options": [
+                "Sehr anstrengend",
+                "Zu teuer",
+                "Entspannt"
+              ],
+              "answer": 2,
+              "evidence": "Die Reise war am Ende ganz entspannt."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Ausflug der Lerngruppe: Letzten Samstag wollten wir den Garten besuchen. Als wir ankamen, regnete es stark. Deshalb gingen wir zuerst ins kleine Museum neben dem Garten. Dort konnten wir kostenlos eine Ausstellung ansehen. Nach einer Stunde war der Regen vorbei. Danach haben wir draußen gegessen. Das geplante Gruppenfoto haben wir vergessen. Beim nächsten Ausflug möchten wir daran denken.",
+          "questions": [
+            {
+              "question": "Wohin ging die Gruppe zuerst nach ihrer Ankunft?",
+              "options": [
+                "In den Garten",
+                "Ins Museum",
+                "In ein Restaurant"
+              ],
+              "answer": 1,
+              "evidence": "Wegen des Regens ging die Gruppe zuerst ins Museum."
+            },
+            {
+              "question": "Was war kostenlos?",
+              "options": [
+                "Das Essen",
+                "Die Anreise",
+                "Die Ausstellung"
+              ],
+              "answer": 2,
+              "evidence": "Dort konnten wir kostenlos eine Ausstellung ansehen."
+            },
+            {
+              "question": "Was hat die Gruppe nicht gemacht?",
+              "options": [
+                "Ein Gruppenfoto",
+                "Draußen gegessen",
+                "Eine Ausstellung besucht"
+              ],
+              "answer": 0,
+              "evidence": "Das geplante Gruppenfoto haben wir vergessen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Tell a fictional friend about a day when a plan changed. Include the original plan, what happened, your solution and the outcome. Use als and two words that show the order of events. Aim for 50–70 words.",
+          "wordGoal": 60,
+          "modelAnswer": "Hallo! Am Sonntag wollte ich eine Ausstellung besuchen. Als ich am Museum ankam, war es leider geschlossen. Zuerst habe ich die Öffnungszeiten gelesen. Danach bin ich zum Park gegangen. Dort konnte ich eine Stunde spazieren gehen und Fotos machen. Zum Schluss habe ich im Café etwas gegessen. Der Tag war trotzdem schön. Nächsten Samstag versuche ich es noch einmal mit dem Museum. Viele Grüße!"
+        },
+        "speaking": {
+          "task": "Partner A describes a fictional journey with a small problem. Partner B asks what happened first, why the plan changed and how it ended. Then switch roles and use a different problem.",
+          "modelAnswer": "A: Als ich am Bahnhof ankam, war mein Zug schon weg. B: Was hast du dann gemacht? A: Zuerst habe ich am Schalter gefragt. Ich konnte eine Stunde später fahren. B: Musstest du eine neue Fahrkarte kaufen? A: Nein, meine Fahrkarte war noch gültig."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Als ich ankam, musste ich warten. Danach konnte ich weiterfahren.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          7,
+          8
+        ],
+        "task": "Tell a new past experience in order and explain how a problem was solved. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Review haben/sein in the Perfekt; distinguish a single past occasion from repeated occasions."
+      }
+    },
+    {
+      "id": 6,
+      "title": "Information, appointments and polite alternatives",
+      "lessonIds": [
+        11,
+        12
+      ],
+      "topics": [
+        "media",
+        "traffic"
+      ],
+      "goals": [
+        "Ask for details with an indirect question.",
+        "Make a polite request and negotiate an alternative."
+      ],
+      "pronunciation": "Keep the final verb audible in an indirect question; pronounce the umlaut in könnte.",
+      "listening": "Distinguish an available option from a waiting-list offer.",
+      "reading": "Find booking conditions and distinguish free advice from a paid course.",
+      "writing": "Write a focused enquiry with availability and questions.",
+      "speaking": "Ask for a course place and respond when the first option is unavailable.",
+      "checkpoint": "Agree on a suitable appointment or course option and confirm the next step.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Guten Tag, ich rufe wegen Ihrer Anfrage zum Sprachkurs an. Der Abendkurs beginnt am Dienstag um halb sieben. Leider ist er schon voll. Wir könnten Ihnen einen Platz am Donnerstagvormittag anbieten. Dieser Kurs beginnt um zehn Uhr. Wenn Sie lieber abends lernen möchten, können wir Sie auf die Warteliste setzen. Bitte teilen Sie uns bis Freitag mit, welche Möglichkeit Sie wählen.",
+          "questions": [
+            {
+              "question": "Warum kann die Person nicht sofort in den Abendkurs?",
+              "options": [
+                "Er ist schon voll.",
+                "Er beginnt erst nächsten Monat.",
+                "Er findet nur online statt."
+              ],
+              "answer": 0,
+              "evidence": "Leider ist er schon voll."
+            },
+            {
+              "question": "Wann beginnt der angebotene Vormittagskurs?",
+              "options": [
+                "Dienstag um halb sieben",
+                "Freitag um zehn",
+                "Donnerstag um zehn"
+              ],
+              "answer": 2,
+              "evidence": "Am Donnerstagvormittag ... um zehn Uhr."
+            },
+            {
+              "question": "Was kann man tun, wenn man nur abends Zeit hat?",
+              "options": [
+                "Sofort am Donnerstag teilnehmen",
+                "Um einen Platz auf der Warteliste bitten",
+                "Ohne Anmeldung am Dienstag kommen"
+              ],
+              "answer": 1,
+              "evidence": "Für einen Abendkurs kann das Büro die Person auf die Warteliste setzen."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Kursbüro: Persönliche Beratung gibt es montags von 14 bis 17 Uhr. Bitte vereinbaren Sie vorher einen Termin. Fragen zu freien Kursplätzen beantworten wir auch telefonisch. Eine Kamera oder anderes Material müssen Sie für die Beratung nicht mitbringen. Ein gebuchter Beratungstermin kann bis zum Vortag abgesagt werden. Die Beratung ist kostenlos; die Gebühren für den gewählten Kurs erfahren Sie im Gespräch.",
+          "questions": [
+            {
+              "question": "Was braucht man für die persönliche Beratung?",
+              "options": [
+                "Eine eigene Kamera",
+                "Eine Kursgebühr in bar",
+                "Einen vorher vereinbarten Termin"
+              ],
+              "answer": 2,
+              "evidence": "Bitte vereinbaren Sie vorher einen Termin."
+            },
+            {
+              "question": "Worüber bekommt man auch telefonisch Auskunft?",
+              "options": [
+                "Über freie Kursplätze",
+                "Nur über die Adresse",
+                "Nur über vergangene Kurse"
+              ],
+              "answer": 0,
+              "evidence": "Fragen zu freien Kursplätzen beantworten wir auch telefonisch."
+            },
+            {
+              "question": "Was ist sicher kostenlos?",
+              "options": [
+                "Jeder Kurs",
+                "Die Beratung",
+                "Alle Kursmaterialien"
+              ],
+              "answer": 1,
+              "evidence": "Die Beratung ist kostenlos; Kursgebühren werden separat besprochen."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write to a fictional course office. Explain when you are available, ask whether a place is free, ask about the course fee and request an appointment. Use a polite request and an indirect question. Aim for 50–70 words.",
+          "wordGoal": 60,
+          "modelAnswer": "Guten Tag, ich interessiere mich für Ihren Sprachkurs am Abend. Am Vormittag muss ich arbeiten, aber dienstags und donnerstags habe ich ab sechs Uhr Zeit. Könnten Sie mir sagen, ob noch ein Platz frei ist? Ich möchte auch wissen, wie viel der Kurs kostet. Wäre am Montag um drei Uhr ein Beratungstermin möglich? Vielen Dank für Ihre Hilfe. Mit freundlichen Grüßen"
+        },
+        "speaking": {
+          "task": "Role-play a call to a course office. The learner can attend only after 18:00. The first course is full. The office offers a waiting list or a later start date. Ask about cost, choose an option and confirm the next step.",
+          "modelAnswer": "A: Guten Tag, können Sie mir sagen, ob im Abendkurs noch ein Platz frei ist? B: Leider nicht. Sie könnten aber nächsten Monat beginnen. A: Das wäre möglich. Wie viel kostet der Kurs? B: Achtzig Euro. A: Gut. Könnten Sie mir die Anmeldung schicken? B: Gern, ich schicke Ihnen die Informationen heute."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Könnten Sie mir sagen, ob noch ein Platz frei ist?",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          9,
+          10
+        ],
+        "task": "Agree on a suitable appointment or course option and confirm the next step. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Review verb-final clauses and the difference between ob and wenn; contrast konnte with könnte."
+      }
+    },
+    {
+      "id": 7,
+      "title": "Clothing, descriptions and practical choices",
+      "lessonIds": [
+        13,
+        14
+      ],
+      "topics": [
+        "holiday",
+        "money"
+      ],
+      "goals": [
+        "Describe a specific item with an adjective phrase.",
+        "Ask which item or kind is needed and compare suitable options."
+      ],
+      "pronunciation": "Keep article and adjective endings audible without stressing every ending.",
+      "listening": "Identify the requested item, a fitting problem and the final choice.",
+      "reading": "Understand conditions and times for a clothing exchange.",
+      "writing": "Describe needed items and ask to borrow something.",
+      "speaking": "Ask about size and colour, explain a problem and choose another option.",
+      "checkpoint": "Choose a suitable item and justify the choice using clear descriptions.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Ich suche eine leichte Jacke für einen Ausflug. Die rote Jacke gefällt mir, aber sie ist nicht wasserdicht. Die grüne Jacke ist wasserdicht und kostet zehn Euro mehr. Sie hat auch größere Taschen. Ich probiere zuerst die grüne Jacke in Größe achtunddreißig an. Sie ist an den Armen zu eng. Die Verkäuferin bringt mir deshalb Größe vierzig. Diese Jacke passt gut, und ich nehme sie.",
+          "questions": [
+            {
+              "question": "Warum passt die rote Jacke nicht zum Wunsch?",
+              "options": [
+                "Sie hat zu große Taschen.",
+                "Sie ist nicht wasserdicht.",
+                "Sie ist teurer als die grüne."
+              ],
+              "answer": 1,
+              "evidence": "Die rote Jacke ... ist nicht wasserdicht."
+            },
+            {
+              "question": "Was ist mit der grünen Jacke in Größe 38?",
+              "options": [
+                "Sie ist an den Armen zu eng.",
+                "Sie ist zu lang.",
+                "Sie ist nicht mehr da."
+              ],
+              "answer": 0,
+              "evidence": "Sie ist an den Armen zu eng."
+            },
+            {
+              "question": "Welche Jacke kauft die Person?",
+              "options": [
+                "Die rote in Größe 38",
+                "Die grüne in Größe 38",
+                "Die grüne in Größe 40"
+              ],
+              "answer": 2,
+              "evidence": "Die Verkäuferin bringt Größe vierzig; diese Jacke passt und wird gekauft."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Tauschmarkt im Nachbarschaftshaus: Bringen Sie saubere Kleidung in gutem Zustand mit. Wir nehmen leichte Jacken, warme Pullover und bequeme Schuhe an. Schuhe müssen paarweise abgegeben werden. Für jedes abgegebene Kleidungsstück erhalten Sie eine Tauschkarte. Damit können Sie ein anderes Kleidungsstück auswählen. Die Annahme ist von 10 bis 11 Uhr, die Auswahl ab 11:30 Uhr. Geld wird nicht ausgezahlt.",
+          "questions": [
+            {
+              "question": "Welche Kleidung kann man mitbringen?",
+              "options": [
+                "Nur neue Kleidung",
+                "Saubere Kleidung in gutem Zustand",
+                "Nur Winterkleidung"
+              ],
+              "answer": 1,
+              "evidence": "Bringen Sie saubere Kleidung in gutem Zustand mit."
+            },
+            {
+              "question": "Was bekommt man für ein abgegebenes Kleidungsstück?",
+              "options": [
+                "Den früheren Kaufpreis",
+                "Zwei neue Kleidungsstücke",
+                "Eine Tauschkarte"
+              ],
+              "answer": 2,
+              "evidence": "Für jedes abgegebene Kleidungsstück erhalten Sie eine Tauschkarte."
+            },
+            {
+              "question": "Ab wann kann man etwas auswählen?",
+              "options": [
+                "Ab 11:30 Uhr",
+                "Ab 10 Uhr",
+                "Erst am nächsten Tag"
+              ],
+              "answer": 0,
+              "evidence": "Die Auswahl beginnt ab 11:30 Uhr."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write a fictional message about clothes for an outing. Describe two items you need, explain one reason, and ask a friend whether you can borrow one item. Use adjective phrases and a polite request. Aim for 50–70 words.",
+          "wordGoal": 60,
+          "modelAnswer": "Hallo! Für unseren Ausflug brauche ich eine leichte Jacke und bequeme Schuhe. Meine alte Jacke ist leider nicht wasserdicht. Du hast doch eine grüne Regenjacke. Könnte ich sie am Samstag ausleihen? Meine schwarzen Schuhe passen noch gut, deshalb kaufe ich keine neuen. Bitte sag mir bis Donnerstag Bescheid. Ich würde die Jacke am Sonntag sauber zurückbringen. Vielen Dank und bis bald!"
+        },
+        "speaking": {
+          "task": "In a fictional shop, describe the kind of jacket you need and compare two options. Ask about a colour or size, explain one problem after trying an item on, and choose an alternative. Switch roles.",
+          "modelAnswer": "A: Ich suche eine leichte, wasserdichte Jacke. B: Möchten Sie die blaue oder die grüne anprobieren? A: Die blaue bitte. Haben Sie sie in Größe vierzig? B: Ja, hier. A: Die Ärmel sind zu lang. Könnte ich die grüne probieren? B: Natürlich. A: Diese passt besser. Ich nehme die grüne Jacke."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich suche einen warmen Mantel. Den blauen möchte ich anprobieren.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          11,
+          12
+        ],
+        "task": "Choose a suitable item and justify the choice using clear descriptions. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Review noun gender and accusative/dative articles; compare der blaue Mantel with ein blauer Mantel."
+      }
+    },
+    {
+      "id": 8,
+      "title": "Interests, small goals and everyday habits",
+      "lessonIds": [
+        15,
+        16
+      ],
+      "topics": [
+        "media",
+        "holiday"
+      ],
+      "goals": [
+        "Describe an intention with a zu-infinitive.",
+        "Use common prepositional verbs and ask about people or things."
+      ],
+      "pronunciation": "Say the complete verb phrase together; keep the r-link in worauf and darauf clear.",
+      "listening": "Identify a course interest, required equipment and missing information.",
+      "reading": "Read a simple group project and identify how to join.",
+      "writing": "Write an enquiry explaining an interest and a practical goal.",
+      "speaking": "Agree on a small change and respond to a practical obstacle.",
+      "checkpoint": "Explain a realistic goal, ask a relevant question and agree on a next step.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Nächste Woche nehme ich an einem Gartenkurs teil. Ich interessiere mich besonders für Gemüse auf dem Balkon. Der Kurs beginnt um neun im Gemeinschaftsgarten. Wir sollen feste Schuhe mitbringen; die Geräte bekommen wir dort. Ich habe vor, mit dem Fahrrad zu fahren. Wenn es stark regnet, nehme ich den Bus. Ich warte noch auf die genaue Adresse. Die Kursleitung schickt sie morgen.",
+          "questions": [
+            {
+              "question": "Wofür interessiert sich die Person besonders?",
+              "options": [
+                "Für Balkonmöbel",
+                "Für Fahrradreparaturen",
+                "Für Gemüse auf dem Balkon"
+              ],
+              "answer": 2,
+              "evidence": "Ich interessiere mich besonders für Gemüse auf dem Balkon."
+            },
+            {
+              "question": "Was sollen Teilnehmende selbst mitbringen?",
+              "options": [
+                "Feste Schuhe",
+                "Alle Geräte",
+                "Gemüsepflanzen"
+              ],
+              "answer": 0,
+              "evidence": "Die Schuhe soll man mitbringen; Geräte gibt es vor Ort."
+            },
+            {
+              "question": "Worauf wartet die Person noch?",
+              "options": [
+                "Auf das Datum",
+                "Auf die genaue Adresse",
+                "Auf die Uhrzeit"
+              ],
+              "answer": 1,
+              "evidence": "Ich warte noch auf die genaue Adresse."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Kleine Schritte im Alltag: Unsere Gruppe möchte im November weniger Einwegverpackung benutzen. Wir versuchen, beim Einkauf eigene Taschen und Dosen mitzunehmen. Am ersten Montag treffen wir uns im Gemeinschaftsraum und sammeln Ideen. Jede Person wählt ein kleines Ziel für die Woche. Beim nächsten Treffen sprechen wir darüber, was gut funktioniert hat. Neue Teilnehmende sind willkommen. Eine Anmeldung ist nicht nötig.",
+          "questions": [
+            {
+              "question": "Was ist das Ziel der Gruppe?",
+              "options": [
+                "Weniger Einwegverpackung zu benutzen",
+                "Einen neuen Laden zu eröffnen",
+                "Im November nichts mehr einzukaufen"
+              ],
+              "answer": 0,
+              "evidence": "Die Gruppe möchte weniger Einwegverpackung benutzen."
+            },
+            {
+              "question": "Was wählt jede Person?",
+              "options": [
+                "Einen gemeinsamen Einkaufstag",
+                "Ein Ziel für das ganze Jahr",
+                "Ein kleines Ziel für die Woche"
+              ],
+              "answer": 2,
+              "evidence": "Jede Person wählt ein kleines Ziel für die Woche."
+            },
+            {
+              "question": "Was braucht man für das erste Treffen?",
+              "options": [
+                "Eine schriftliche Anmeldung",
+                "Keine Anmeldung",
+                "Eine abgeschlossene Aufgabe"
+              ],
+              "answer": 1,
+              "evidence": "Eine Anmeldung ist nicht nötig."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Write to a fictional activity group. Say what interests you, what you plan to try, which item you will bring and what you still need to know. Use a verb with its preposition and a zu-infinitive. Aim for 50–70 words.",
+          "wordGoal": 60,
+          "modelAnswer": "Hallo! Ich interessiere mich für euren Gartenkurs und möchte gern daran teilnehmen. Ich habe vor, im Frühling Gemüse auf meinem Balkon anzubauen. Im Kurs möchte ich lernen, wie ich damit anfangen kann. Feste Schuhe bringe ich mit. Könnt ihr mir bitte sagen, wo genau der Gemeinschaftsgarten ist? Ich freue mich auf eure Antwort und auf den Kurs. Viele Grüße!"
+        },
+        "speaking": {
+          "task": "Choose a small shared goal, such as using reusable bags or travelling by bicycle. Explain your interest, propose an action and respond to a practical difficulty. Confirm what each person will try before the next meeting.",
+          "modelAnswer": "A: Ich habe vor, öfter mit dem Fahrrad einzukaufen. B: Das möchte ich auch versuchen, aber ich habe keine große Tasche. A: Ich kann dir eine Tasche leihen. B: Danke. Dann probiere ich es am Samstag. A: Ich fahre am Freitag. Beim nächsten Treffen sprechen wir darüber, wie es war."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich habe vor, öfter zu üben. Ich freue mich darauf.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          13,
+          14
+        ],
+        "task": "Explain a realistic goal, ask a relevant question and agree on a next step. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Review separable verbs, modal infinitives and case after familiar prepositions."
+      }
+    },
+    {
+      "id": 9,
+      "title": "Daily routines, messages and shared plans",
+      "lessonIds": [
+        17,
+        18
+      ],
+      "topics": [
+        "sport",
+        "media"
+      ],
+      "goals": [
+        "Distinguish familiar accusative and dative reflexive patterns.",
+        "Write a complete short message and negotiate a shared plan."
+      ],
+      "pronunciation": "Keep mir and mich distinct, and repeat important times slowly to confirm them.",
+      "listening": "Follow an invitation, responsibilities and a weather alternative.",
+      "reading": "Understand a reply with a time constraint and a practical question.",
+      "writing": "Reply to an invitation and cover all requested points.",
+      "speaking": "Agree on time, place, responsibilities and an alternative.",
+      "checkpoint": "Complete a new message and planning conversation using earlier grammar independently.",
+      "hours": 8,
+      "workshop": {
+        "questionLanguage": "de",
+        "listening": {
+          "audioText": "Unsere Lerngruppe trifft sich am Samstag um halb elf vor der Bibliothek. Ich habe mir die neue Uhrzeit schon notiert. Wir wollen zuerst eine Stunde lernen und danach gemeinsam essen. Ich kümmere mich um Brot und Obst. Bitte bringt etwas zu trinken mit. Wenn es trocken ist, essen wir im Park. Bei Regen bleiben wir im Gruppenraum. Sagt bitte bis Donnerstag Bescheid, ob ihr kommt.",
+          "questions": [
+            {
+              "question": "Wann trifft sich die Gruppe?",
+              "options": [
+                "Um 11:30 Uhr",
+                "Um 10:30 Uhr",
+                "Um 10 Uhr"
+              ],
+              "answer": 1,
+              "evidence": "Halb elf bedeutet 10:30 Uhr."
+            },
+            {
+              "question": "Was ist vor dem Essen geplant?",
+              "options": [
+                "Eine Stunde lernen",
+                "Lebensmittel einkaufen",
+                "Im Park spazieren gehen"
+              ],
+              "answer": 0,
+              "evidence": "Zuerst eine Stunde lernen und danach gemeinsam essen."
+            },
+            {
+              "question": "Was passiert bei Regen?",
+              "options": [
+                "Das Treffen fällt aus.",
+                "Die Gruppe kommt erst am Sonntag.",
+                "Die Gruppe bleibt im Gruppenraum."
+              ],
+              "answer": 2,
+              "evidence": "Bei Regen bleiben wir im Gruppenraum."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Nachricht an die Lerngruppe: Danke für die Einladung! Ich kann am Samstag mitkommen, aber erst um zwölf. Am Vormittag muss ich noch arbeiten. Ich bringe Wasser und Saft mit. Könnt ihr mir sagen, ob ihr um zwölf noch in der Bibliothek seid oder schon im Park? Bitte wartet mit dem Lernen nicht auf mich. Ich habe mir die Aufgaben notiert und bereite mich am Freitag vor.",
+          "questions": [
+            {
+              "question": "Warum kommt die Person später?",
+              "options": [
+                "Sie muss noch arbeiten.",
+                "Sie hat die Aufgaben vergessen.",
+                "Sie findet die Bibliothek nicht."
+              ],
+              "answer": 0,
+              "evidence": "Am Vormittag muss ich noch arbeiten."
+            },
+            {
+              "question": "Was möchte die Person noch wissen?",
+              "options": [
+                "Welche Getränke fehlen",
+                "Welche Aufgaben es gibt",
+                "Wo die Gruppe um zwölf ist"
+              ],
+              "answer": 2,
+              "evidence": "Die Frage nennt Bibliothek oder Park um zwölf."
+            },
+            {
+              "question": "Soll die Gruppe mit dem Lernen warten?",
+              "options": [
+                "Ja, bis zwölf Uhr.",
+                "Nein, sie soll schon anfangen.",
+                "Ja, bis die Aufgaben fertig sind."
+              ],
+              "answer": 1,
+              "evidence": "Bitte wartet mit dem Lernen nicht auf mich."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Reply to a fictional group invitation. Accept or decline, explain a time constraint, say what you can bring or prepare, and ask one practical question. Keep a consistent friendly tone. Aim for 50–70 words.",
+          "wordGoal": 60,
+          "modelAnswer": "Hallo zusammen! Vielen Dank für die Einladung. Ich komme am Samstag gern mit, kann aber erst um zwölf da sein, weil ich vorher arbeiten muss. Ich bringe Wasser und Saft mit. Könnt ihr mir sagen, wo ihr dann seid? Mit dem Lernen könnt ihr schon anfangen. Ich habe mir die Aufgaben notiert und bereite mich am Freitag vor. Bis Samstag!"
+        },
+        "speaking": {
+          "task": "Plan a fictional study meeting and shared meal. One person arrives late, and rain is possible. Agree on a time, meeting point, food, an alternative location and who sends the final message. Then summarise the agreement without the model.",
+          "modelAnswer": "A: Können wir uns um halb elf vor der Bibliothek treffen? B: Ich kann erst um zwölf kommen. A: Dann lernen wir zuerst. Du kommst zum Essen dazu. B: Gern. Ich bringe Getränke mit. Wo essen wir bei Regen? A: Im Gruppenraum. Ich schreibe die Einzelheiten heute in die Gruppe."
+        }
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Phrase rhythm",
+          "text": "Ich habe mir die Uhrzeit notiert. Wir treffen uns um halb elf.",
+          "instruction": "Listen, pause, repeat, then say a new sentence with the same pattern."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          15,
+          16
+        ],
+        "task": "Complete a new message and planning conversation using earlier grammar independently. Change the situation and details from the workshop, and close the model before starting.",
+        "checklist": [
+          "I completed the task with new details.",
+          "I reused language from an earlier module.",
+          "I corrected one issue after feedback."
+        ],
+        "retry": "Revisit indirect questions, polite requests, reasons and time expressions; check all points before sending a practice message."
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "id": 9,
+      "title": "Explain what was possible in the past",
+      "germanTitle": "Früher: war, hatte, konnte, musste",
+      "intro": "Describe a past situation and explain why a plan changed. Start with the common past forms of sein, haben and modal verbs, then recognise a few forms in short written stories.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "sein",
+            "ich war · du warst · wir waren"
+          ],
+          [
+            "haben",
+            "ich hatte · du hattest · wir hatten"
+          ],
+          [
+            "können",
+            "ich konnte · du konntest · wir konnten"
+          ],
+          [
+            "müssen",
+            "ich musste · du musstest · wir mussten"
+          ],
+          [
+            "Other familiar modals",
+            "ich wollte · ich durfte · ich sollte"
+          ],
+          [
+            "Recognise in a story",
+            "machen → machte · gehen → ging · kommen → kam"
+          ]
+        ]
+      },
+      "rules": [
+        "War, hatte and past modal forms are common in conversation as well as writing. Many other completed actions are usually told with the Perfekt in everyday conversation.",
+        "Keep the main infinitive at the end with a modal: Wir mussten lange warten. Konnte means could in the past; könnte with an umlaut is a polite or hypothetical form.",
+        "For these past forms, ich and er/sie/es share the same form. Add -st for du, -n for wir/sie/Sie and -t for ihr: du warst, ihr wart; du musstest, ihr musstet.",
+        "Regular written past forms use -te, sometimes -ete: machte, arbeitete. Strong verbs may change their stem: ging, kam. Recognise these first; you do not need to memorise every narrative form here."
+      ],
+      "examples": [
+        {
+          "de": "Gestern hatte ich wenig Zeit und musste früh gehen.",
+          "en": "Yesterday I had little time and had to leave early."
+        },
+        {
+          "de": "Wir konnten den Termin nicht ändern.",
+          "en": "We could not change the appointment."
+        },
+        {
+          "de": "Der Bus kam später, aber wir waren noch pünktlich.",
+          "en": "The bus came later, but we were still on time."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "früher",
+          "en": "earlier; in the past"
+        },
+        {
+          "de": "damals",
+          "en": "at that time"
+        },
+        {
+          "de": "pünktlich",
+          "en": "on time"
+        },
+        {
+          "de": "die Verspätung",
+          "en": "delay",
+          "pl": "Verspätungen"
+        },
+        {
+          "de": "verschieben",
+          "en": "to postpone"
+        },
+        {
+          "de": "ausfallen",
+          "en": "to be cancelled"
+        },
+        {
+          "de": "warten",
+          "en": "to wait"
+        },
+        {
+          "de": "der Grund",
+          "en": "reason",
+          "pl": "Gründe"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Gestern ___ wir keine Zeit. (haben, Präteritum)",
+          "answers": [
+            "hatten"
+          ],
+          "hint": "Wir uses hatten in the Präteritum."
+        },
+        {
+          "type": "choice",
+          "question": "Früher ___ ich sonntags arbeiten. (müssen)",
+          "options": [
+            "musste",
+            "müsste",
+            "müssen"
+          ],
+          "answer": 0,
+          "hint": "Musste states a past obligation; müsste is hypothetical."
+        },
+        {
+          "type": "choice",
+          "question": "Which sentence keeps the modal sentence bracket?",
+          "options": [
+            "Wir konnten kommen nicht.",
+            "Wir konnten nicht kommen.",
+            "Wir nicht konnten kommen."
+          ],
+          "answer": 1,
+          "hint": "The conjugated modal is second and the main infinitive is last."
+        },
+        {
+          "type": "listen",
+          "audioText": "Am Freitag wollte ich zum Sport gehen. Der Bus hatte aber eine Panne. Ich musste auf den nächsten Bus warten und kam zu spät. Zum Glück konnte ich am Samstag an einem anderen Kurs teilnehmen.",
+          "question": "Warum kam die Person am Freitag zu spät?",
+          "options": [
+            "Der Sportkurs begann früher.",
+            "Sie hatte die Uhrzeit vergessen.",
+            "Der Bus hatte eine Panne."
+          ],
+          "answer": 2,
+          "hint": "A broken-down bus caused the delay."
+        },
+        {
+          "type": "choice",
+          "question": "Kurzer Bericht: Das Büro war geschlossen. Eine Mitarbeiterin kam um neun und öffnete die Tür. Was geschah um neun?",
+          "options": [
+            "Eine Mitarbeiterin öffnete das Büro.",
+            "Das Büro schloss wieder.",
+            "Die Mitarbeiterin ging nach Hause."
+          ],
+          "answer": 0,
+          "hint": "Kam and öffnete describe her arrival and opening the door."
+        },
+        {
+          "type": "write",
+          "question": "Invent a change of plan. In 35–50 words, say what you wanted to do, what the problem was and what you could do instead. Use two past forms from this lesson.",
+          "modelAnswer": "Gestern wollte ich mit dem Fahrrad zum Markt fahren. Leider war der Reifen kaputt. Ich hatte kein Werkzeug und konnte ihn nicht reparieren. Deshalb musste ich zu Fuß gehen. Auf dem Rückweg konnte ich zum Glück den Bus nehmen."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Tell when something happened",
+      "germanTitle": "Als, wenn und die Reihenfolge",
+      "intro": "Connect a past event to its situation, distinguish one occasion from repeated occasions, and put a short account in a clear order.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "One past occasion or period",
+            "Als ich neu im Kurs war, kannte ich niemanden."
+          ],
+          [
+            "Repeated occasions",
+            "Immer wenn ich Hilfe brauchte, fragte ich nach."
+          ],
+          [
+            "Present or future condition",
+            "Wenn ich Zeit habe, übe ich."
+          ],
+          [
+            "Time clause first",
+            "Als der Kurs begann, war ich schon da."
+          ],
+          [
+            "Sequence",
+            "Zuerst habe ich gelesen. Danach habe ich geübt."
+          ]
+        ]
+      },
+      "rules": [
+        "Use als for a single past occasion or a past period: Als ich ein Kind war, ... . A period can last years; it does not have to be a brief event.",
+        "Use wenn for repeated past occasions, often with immer, and for present or future conditions or occasions.",
+        "The conjugated verb ends the als/wenn clause. If this clause comes first, the main clause begins with its verb: Als ich ankam, begann der Kurs.",
+        "Use zuerst, dann, danach and zum Schluss to guide the listener. At the start of a main clause, these take the first position: Danach bin ich nach Hause gegangen."
+      ],
+      "examples": [
+        {
+          "de": "Als ich zum ersten Mal dort war, habe ich nach dem Weg gefragt.",
+          "en": "When I was there for the first time, I asked for directions."
+        },
+        {
+          "de": "Immer wenn es geregnet hat, sind wir mit dem Bus gefahren.",
+          "en": "Whenever it rained, we took the bus."
+        },
+        {
+          "de": "Zuerst habe ich eingekauft. Danach habe ich gekocht.",
+          "en": "First I went shopping. Then I cooked."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "zuerst",
+          "en": "first"
+        },
+        {
+          "de": "danach",
+          "en": "afterwards"
+        },
+        {
+          "de": "zum Schluss",
+          "en": "at the end"
+        },
+        {
+          "de": "zum ersten Mal",
+          "en": "for the first time"
+        },
+        {
+          "de": "jedes Mal",
+          "en": "every time"
+        },
+        {
+          "de": "die Erinnerung",
+          "en": "memory",
+          "pl": "Erinnerungen"
+        },
+        {
+          "de": "kennenlernen",
+          "en": "to get to know"
+        },
+        {
+          "de": "nachfragen",
+          "en": "to ask for clarification"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "___ ich gestern ankam, war die Tür schon offen. (one arrival)",
+          "options": [
+            "Wenn",
+            "Als",
+            "Ob"
+          ],
+          "answer": 1,
+          "hint": "One particular past arrival takes als."
+        },
+        {
+          "type": "fill",
+          "question": "Immer ___ ich früher frei hatte, ging ich schwimmen.",
+          "answers": [
+            "wenn"
+          ],
+          "hint": "Immer wenn introduces repeated occasions."
+        },
+        {
+          "type": "choice",
+          "question": "Which word order is correct?",
+          "options": [
+            "Als der Film begann, wir waren im Saal.",
+            "Als der Film begann, waren wir im Saal.",
+            "Als begann der Film, waren wir im Saal."
+          ],
+          "answer": 1,
+          "hint": "Begann ends the subordinate clause; waren starts the main clause."
+        },
+        {
+          "type": "listen",
+          "audioText": "Als ich zum ersten Mal im neuen Kurs war, habe ich den Raum nicht gefunden. Zuerst habe ich am Eingang gefragt. Dann hat mir ein Teilnehmer den Weg gezeigt. Zum Schluss haben wir zusammen eine Aufgabe gemacht.",
+          "question": "Was hat die Person zuerst gemacht?",
+          "options": [
+            "Eine Aufgabe bearbeitet",
+            "Einem Teilnehmer den Weg gezeigt",
+            "Am Eingang gefragt"
+          ],
+          "answer": 2,
+          "hint": "Zuerst habe ich am Eingang gefragt."
+        },
+        {
+          "type": "choice",
+          "question": "Nachricht: Zuerst holen wir die Karten ab. Danach essen wir etwas. Zum Schluss gehen wir in den Saal. Wann essen die Personen?",
+          "options": [
+            "Vor dem Abholen der Karten",
+            "Nach dem Abholen der Karten",
+            "Erst nach der Veranstaltung"
+          ],
+          "answer": 1,
+          "hint": "Danach places the meal between collecting tickets and entering the hall."
+        },
+        {
+          "type": "write",
+          "question": "Tell a fictional story about a first day somewhere. Use als for the first occasion and two sequence words. Aim for 40–60 words.",
+          "modelAnswer": "Als ich zum ersten Mal im Fotokurs war, kannte ich niemanden. Zuerst hat die Kursleiterin uns begrüßt. Danach haben wir draußen Fotos gemacht. Ein anderer Teilnehmer hat mir die Kamera erklärt. Zum Schluss haben wir unsere Bilder verglichen. Der Tag war interessant, und ich möchte wiederkommen."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Ask for information politely",
+      "germanTitle": "Indirekte Fragen mit ob und W-Wörtern",
+      "intro": "Ask about an opening time, a place or an uncertain detail. Turn a direct question into a polite request for information.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Direct W-question",
+            "Wo ist der Eingang?"
+          ],
+          [
+            "Indirect W-question",
+            "Können Sie mir sagen, wo der Eingang ist?"
+          ],
+          [
+            "Direct yes/no question",
+            "Ist der Kurs am Samstag?"
+          ],
+          [
+            "Indirect yes/no question",
+            "Ich möchte wissen, ob der Kurs am Samstag ist."
+          ],
+          [
+            "Uncertainty",
+            "Ich weiß nicht, wann die Anmeldung endet."
+          ]
+        ]
+      },
+      "rules": [
+        "Keep the question word in an indirect W-question, but put the conjugated verb last in that clause.",
+        "Use ob for whether when there is no W-word. Use wenn for a condition: Ich komme, wenn ich Zeit habe. Ob and wenn do different jobs.",
+        "Separate the indirect question from the main clause with a comma. The whole sentence determines the final punctuation: Können Sie mir sagen, ...? versus Ich möchte wissen, ... .",
+        "Ask about one or two details at a time. Repeat the answer in your own words to check that you understood."
+      ],
+      "examples": [
+        {
+          "de": "Wissen Sie, wo ich eine Fahrkarte kaufen kann?",
+          "en": "Do you know where I can buy a ticket?"
+        },
+        {
+          "de": "Können Sie mir sagen, ob der Aufzug funktioniert?",
+          "en": "Can you tell me whether the lift works?"
+        },
+        {
+          "de": "Ich möchte wissen, wann der Schalter öffnet.",
+          "en": "I would like to know when the counter opens."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Schalter",
+          "en": "service counter",
+          "pl": "Schalter"
+        },
+        {
+          "de": "die Auskunft",
+          "en": "information; enquiry desk",
+          "pl": "Auskünfte"
+        },
+        {
+          "de": "der Aufzug",
+          "en": "lift",
+          "pl": "Aufzüge"
+        },
+        {
+          "de": "die Anmeldung",
+          "en": "registration",
+          "pl": "Anmeldungen"
+        },
+        {
+          "de": "erklären",
+          "en": "to explain"
+        },
+        {
+          "de": "ob",
+          "en": "whether"
+        },
+        {
+          "de": "geöffnet",
+          "en": "open"
+        },
+        {
+          "de": "geschlossen",
+          "en": "closed"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Wissen Sie, wann der Kurs ___? (beginnen)",
+          "answers": [
+            "beginnt"
+          ],
+          "hint": "The conjugated verb finishes the indirect question."
+        },
+        {
+          "type": "choice",
+          "question": "Ich möchte wissen, ___ der Eintritt kostenlos ist.",
+          "options": [
+            "wenn",
+            "als",
+            "ob"
+          ],
+          "answer": 2,
+          "hint": "This asks whether entry is free."
+        },
+        {
+          "type": "choice",
+          "question": "Which question is correctly formed?",
+          "options": [
+            "Können Sie mir sagen, wo der Bus hält?",
+            "Können Sie mir sagen, wo hält der Bus?",
+            "Können Sie mir sagen, der Bus wo hält?"
+          ],
+          "answer": 0,
+          "hint": "Keep wo first and hält last in the indirect question."
+        },
+        {
+          "type": "listen",
+          "audioText": "Der Schalter öffnet am Montag erst um zehn Uhr. Fahrkarten können Sie vorher am Automaten kaufen. Wenn Sie Hilfe brauchen, fragen Sie bitte die Mitarbeiterin am Eingang.",
+          "question": "Wo bekommt man vor zehn Uhr eine Fahrkarte?",
+          "options": [
+            "Am Schalter",
+            "Am Automaten",
+            "Bei der Mitarbeiterin am Eingang"
+          ],
+          "answer": 1,
+          "hint": "The machine sells tickets before the counter opens; the employee offers help."
+        },
+        {
+          "type": "choice",
+          "question": "Aushang: Der Kurs beginnt am Dienstag. Ob noch Plätze frei sind, erfahren Sie am Montag im Büro. Welche Information fehlt noch?",
+          "options": [
+            "Der erste Kurstag",
+            "Der Ort für die Auskunft",
+            "Ob es freie Plätze gibt"
+          ],
+          "answer": 2,
+          "hint": "Availability can only be checked on Monday."
+        },
+        {
+          "type": "write",
+          "question": "Write a short enquiry about a fictional course. Ask when it begins, whether equipment is included and where to register. Use two indirect questions.",
+          "modelAnswer": "Guten Tag, ich interessiere mich für Ihren Fotokurs. Können Sie mir sagen, wann der Kurs beginnt? Ich möchte auch wissen, ob ich eine eigene Kamera brauche und wo ich mich anmelden kann. Vielen Dank für Ihre Hilfe!"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Make requests and agree on an alternative",
+      "germanTitle": "Höfliche Bitten und Vorschläge",
+      "intro": "Use familiar polite phrases to ask for help, make a suggestion and respond when the first plan is not possible.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Ask for help",
+            "Könnten Sie mir bitte helfen?"
+          ],
+          [
+            "State a wish",
+            "Ich hätte gern einen anderen Termin."
+          ],
+          [
+            "Propose an option",
+            "Wir könnten uns am Freitag treffen."
+          ],
+          [
+            "Ask about suitability",
+            "Wäre zehn Uhr für Sie möglich?"
+          ],
+          [
+            "Decline and suggest",
+            "Leider geht das nicht. Wie wäre es am Montag?"
+          ]
+        ]
+      },
+      "rules": [
+        "Learn könnte, hätte and wäre as useful polite forms. Their umlauts matter: konnte reports past ability; könnte makes a polite or hypothetical statement.",
+        "A second verb stays at the end: Könnten Sie das bitte wiederholen? Hätte gern can be followed directly by a noun.",
+        "Use Sie with a formal contact and du with a familiar person. Match the forms: Könntest du ...? Könnten Sie ...?",
+        "A useful reply acknowledges the request and gives an answer or alternative. Confirm the final time or action so both people understand the agreement."
+      ],
+      "examples": [
+        {
+          "de": "Könnten Sie bitte etwas langsamer sprechen?",
+          "en": "Could you please speak a little more slowly?"
+        },
+        {
+          "de": "Ich hätte gern einen Termin am Nachmittag.",
+          "en": "I would like an appointment in the afternoon."
+        },
+        {
+          "de": "Am Freitag kann ich nicht. Wäre Montag möglich?",
+          "en": "I cannot do Friday. Would Monday be possible?"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "wiederholen",
+          "en": "to repeat"
+        },
+        {
+          "de": "langsamer",
+          "en": "more slowly"
+        },
+        {
+          "de": "möglich",
+          "en": "possible"
+        },
+        {
+          "de": "stattdessen",
+          "en": "instead"
+        },
+        {
+          "de": "die Alternative",
+          "en": "alternative",
+          "pl": "Alternativen"
+        },
+        {
+          "de": "bestätigen",
+          "en": "to confirm"
+        },
+        {
+          "de": "absagen",
+          "en": "to cancel"
+        },
+        {
+          "de": "Bescheid sagen",
+          "en": "to let someone know"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Which form asks politely for help now?",
+          "options": [
+            "Konnte Sie mir helfen?",
+            "Könnten Sie mir helfen?",
+            "Konnten ich Ihnen helfen?"
+          ],
+          "answer": 1,
+          "hint": "Könnten Sie is the polite request form."
+        },
+        {
+          "type": "fill",
+          "question": "Ich ___ gern einen Termin am Freitag. (haben, polite form)",
+          "answers": [
+            "hätte"
+          ],
+          "hint": "Hätte gern expresses a polite wish."
+        },
+        {
+          "type": "choice",
+          "question": "Your friend cannot meet Tuesday. Which reply offers an alternative?",
+          "options": [
+            "Wie wäre es am Donnerstag?",
+            "Am Dienstag habe ich keine Zeit gehabt.",
+            "Ich kenne den Dienstag schon."
+          ],
+          "answer": 0,
+          "hint": "Wie wäre es ...? proposes another day."
+        },
+        {
+          "type": "listen",
+          "audioText": "Der Termin am Donnerstag ist leider nicht mehr frei. Ich könnte Ihnen Freitag um elf Uhr anbieten. Wenn das nicht passt, wäre Montag um drei möglich. Bitte sagen Sie kurz Bescheid, welchen Termin Sie möchten.",
+          "question": "Welche Zeit wird für Freitag angeboten?",
+          "options": [
+            "15 Uhr",
+            "10 Uhr",
+            "11 Uhr"
+          ],
+          "answer": 2,
+          "hint": "Friday at eleven is offered; Monday at three is the other option."
+        },
+        {
+          "type": "choice",
+          "question": "Nachricht: Freitag um elf passt mir gut. Bitte bestätigen Sie diesen Termin. Was möchte die Person?",
+          "options": [
+            "Einen neuen Vorschlag für Montag",
+            "Eine Bestätigung für Freitag",
+            "Eine Absage für alle Termine"
+          ],
+          "answer": 1,
+          "hint": "The person accepts Friday and asks for confirmation."
+        },
+        {
+          "type": "write",
+          "question": "Reply to a fictional appointment offer. Decline one time, give a short reason and suggest an alternative politely. Ask for confirmation.",
+          "modelAnswer": "Guten Tag, vielen Dank für Ihren Vorschlag. Am Donnerstag kann ich leider nicht, weil ich arbeiten muss. Wäre ein Termin am Freitagvormittag möglich? Ich hätte ab zehn Uhr Zeit. Könnten Sie mir bitte kurz Bescheid sagen? Vielen Dank!"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Describe and choose a particular item",
+      "germanTitle": "Adjektive nach der, die, das",
+      "intro": "Describe clothes and everyday objects precisely. Start with adjective endings after a definite article, using a few dependable patterns.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Nominative singular",
+            "der blaue Mantel · die rote Tasche · das kleine Hemd"
+          ],
+          [
+            "Accusative masculine",
+            "Ich nehme den blauen Mantel."
+          ],
+          [
+            "Accusative feminine / neuter",
+            "Ich nehme die rote Tasche / das kleine Hemd."
+          ],
+          [
+            "Dative singular",
+            "mit dem blauen Mantel · mit der roten Tasche"
+          ],
+          [
+            "Plural with die / den",
+            "die kleinen Schuhe · mit den kleinen Schuhen"
+          ],
+          [
+            "After sein",
+            "Der Mantel ist blau."
+          ]
+        ]
+      },
+      "rules": [
+        "An adjective before a noun takes an ending. After sein it normally has no ending: Die Tasche ist rot.",
+        "After der/die/das, use -e in the nominative singular; feminine and neuter accusative also use -e. Masculine accusative uses -en.",
+        "After a definite article, dative adjective forms and plural adjective forms use -en. Dative plural nouns often add -n too: mit den kleinen Schuhen.",
+        "Choose the case from the verb or preposition, then the noun gender and number, then the ending. Do not choose an ending only from the English word order."
+      ],
+      "examples": [
+        {
+          "de": "Der blaue Mantel ist zu groß.",
+          "en": "The blue coat is too big."
+        },
+        {
+          "de": "Ich probiere die schwarze Jacke an.",
+          "en": "I am trying on the black jacket."
+        },
+        {
+          "de": "Mit den neuen Schuhen kann ich gut laufen.",
+          "en": "I can walk comfortably in the new shoes."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "der Mantel",
+          "en": "coat",
+          "pl": "Mäntel"
+        },
+        {
+          "de": "die Jacke",
+          "en": "jacket",
+          "pl": "Jacken"
+        },
+        {
+          "de": "das Hemd",
+          "en": "shirt",
+          "pl": "Hemden"
+        },
+        {
+          "de": "die Größe",
+          "en": "size",
+          "pl": "Größen"
+        },
+        {
+          "de": "anprobieren",
+          "en": "to try on"
+        },
+        {
+          "de": "gestreift",
+          "en": "striped"
+        },
+        {
+          "de": "bequem",
+          "en": "comfortable"
+        },
+        {
+          "de": "eng",
+          "en": "tight"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Ich nehme den blau___ Mantel. (ending only)",
+          "answers": [
+            "en"
+          ],
+          "hint": "Masculine accusative after den takes -en."
+        },
+        {
+          "type": "choice",
+          "question": "Die Jacke ist ___.",
+          "options": [
+            "roten",
+            "rote",
+            "rot"
+          ],
+          "answer": 2,
+          "hint": "After ist the adjective is not before a noun, so it has no ending."
+        },
+        {
+          "type": "choice",
+          "question": "Which phrase is correct after mit?",
+          "options": [
+            "mit die neue Schuhe",
+            "mit den neuen Schuhen",
+            "mit den neue Schuhe"
+          ],
+          "answer": 1,
+          "hint": "Mit takes dative: den neuen Schuhen."
+        },
+        {
+          "type": "listen",
+          "audioText": "Ich suche die schwarze Jacke in Größe vierzig. Die blaue Jacke habe ich schon anprobiert, aber sie war zu eng. Könnten Sie bitte nachsehen, ob die schwarze noch da ist?",
+          "question": "Welche Jacke sucht die Person jetzt?",
+          "options": [
+            "Die schwarze in Größe vierzig",
+            "Die blaue in Größe vierzig",
+            "Die schwarze in Größe vierundvierzig"
+          ],
+          "answer": 0,
+          "hint": "The blue jacket was too tight; the request is for the black one in size forty."
+        },
+        {
+          "type": "choice",
+          "question": "Hinweis: Die roten Schuhe gibt es nur in Größe 38. Die schwarzen Schuhe sind auch in Größe 40 da. Was gibt es in Größe 40?",
+          "options": [
+            "Nur die roten Schuhe",
+            "Rote und schwarze Schuhe",
+            "Die schwarzen Schuhe"
+          ],
+          "answer": 2,
+          "hint": "The notice only lists the black shoes in size forty."
+        },
+        {
+          "type": "write",
+          "question": "Describe two fictional items in a shop. Say which one you want, describe its colour or size, and ask to try it on.",
+          "modelAnswer": "Ich möchte die grüne Jacke anprobieren. Die schwarze Jacke ist mir zu eng. Haben Sie die grüne Jacke auch in Größe vierzig? Ich suche etwas für den Frühling. Die großen Taschen finde ich sehr praktisch."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Describe something new and ask which kind",
+      "germanTitle": "Ein warmer Mantel: beschreiben und auswählen",
+      "intro": "Build short descriptions with ein, kein or a possessive, and ask whether someone means a particular item or a type of item.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Nominative with ein",
+            "ein warmer Mantel · eine leichte Jacke · ein weißes Hemd"
+          ],
+          [
+            "Accusative with ein",
+            "einen warmen Mantel · eine leichte Jacke · ein weißes Hemd"
+          ],
+          [
+            "Dative with ein",
+            "mit einem warmen Mantel · mit einer leichten Jacke"
+          ],
+          [
+            "Plural with possessive / kein",
+            "meine neuen Schuhe · keine neuen Schuhe"
+          ],
+          [
+            "Useful phrases without an article",
+            "frisches Brot · kaltes Wasser · bequeme Schuhe"
+          ],
+          [
+            "Which item / what kind",
+            "Welchen Mantel? Den blauen. Was für einen Mantel? Einen warmen."
+          ]
+        ]
+      },
+      "rules": [
+        "Where ein has no ending, the adjective shows gender: ein warmer Mantel, ein weißes Hemd. Compare der warme Mantel, das weiße Hemd.",
+        "Accusative masculine is einen warmen Mantel. Dative singular is einem warmen Mantel, einer leichten Jacke, einem weißen Hemd. Kein and possessives follow the same singular patterns.",
+        "Without an article, the adjective carries more information. Start with frequent shopping phrases such as frisches Brot and bequeme Schuhe; expand the full pattern later.",
+        "Welch- usually selects from known options; was für asks about a kind. The case still follows the sentence: Welchen Mantel suchen Sie? Was für einen Mantel suchen Sie?"
+      ],
+      "examples": [
+        {
+          "de": "Ich suche einen warmen Mantel für den Winter.",
+          "en": "I am looking for a warm coat for winter."
+        },
+        {
+          "de": "Welche Schuhe möchtest du? Die schwarzen.",
+          "en": "Which shoes would you like? The black ones."
+        },
+        {
+          "de": "Wir brauchen frisches Brot und kaltes Wasser.",
+          "en": "We need fresh bread and cold water."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "leicht",
+          "en": "light"
+        },
+        {
+          "de": "warm",
+          "en": "warm"
+        },
+        {
+          "de": "wasserdicht",
+          "en": "waterproof"
+        },
+        {
+          "de": "der Stoff",
+          "en": "fabric",
+          "pl": "Stoffe"
+        },
+        {
+          "de": "die Auswahl",
+          "en": "selection",
+          "pl": "-"
+        },
+        {
+          "de": "frisch",
+          "en": "fresh"
+        },
+        {
+          "de": "passend",
+          "en": "suitable; fitting"
+        },
+        {
+          "de": "umtauschen",
+          "en": "to exchange"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Das ist ein warm___ Mantel. (ending only)",
+          "answers": [
+            "er"
+          ],
+          "hint": "Ein has no masculine nominative ending, so the adjective carries -er."
+        },
+        {
+          "type": "choice",
+          "question": "Ich suche ___ für den Winter.",
+          "options": [
+            "ein warme Mantel",
+            "einen warmen Mantel",
+            "einen warmer Mantel"
+          ],
+          "answer": 1,
+          "hint": "Suchen takes an accusative object: einen warmen Mantel."
+        },
+        {
+          "type": "choice",
+          "question": "Which question asks about a type of coat?",
+          "options": [
+            "Was für einen Mantel suchen Sie?",
+            "Wann suchen Sie den Mantel?",
+            "Wie viel kostet dieser Mantel?"
+          ],
+          "answer": 0,
+          "hint": "Was für einen ...? asks about the kind of item."
+        },
+        {
+          "type": "listen",
+          "audioText": "Für die Reise brauche ich eine leichte Jacke. Sie soll wasserdicht sein, weil wir viel draußen sind. Die dicke Winterjacke bleibt zu Hause. Warme Schuhe nehme ich aber mit.",
+          "question": "Was soll die Reisejacke sein?",
+          "options": [
+            "Dick und sehr warm",
+            "Aus einem schweren Stoff",
+            "Leicht und wasserdicht"
+          ],
+          "answer": 2,
+          "hint": "The requested jacket is light and waterproof; the winter jacket stays home."
+        },
+        {
+          "type": "choice",
+          "question": "Einkaufsliste: frisches Brot, kaltes Wasser, keine süßen Getränke. Was soll man nicht kaufen?",
+          "options": [
+            "Frisches Brot",
+            "Süße Getränke",
+            "Kaltes Wasser"
+          ],
+          "answer": 1,
+          "hint": "Keine excludes sweet drinks from the list."
+        },
+        {
+          "type": "write",
+          "question": "Write a fictional shopping request. Describe two things you need and one thing you do not need, using adjectives. Ask about one option.",
+          "modelAnswer": "Für unseren Ausflug brauchen wir frisches Brot und kaltes Wasser. Süße Getränke brauchen wir nicht. Ich suche außerdem eine kleine Tasche für das Essen. Haben Sie eine leichte Tasche mit einem langen Griff? Die große Tasche ist mir zu schwer."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Talk about intentions and small goals",
+      "germanTitle": "Pläne mit zu + Infinitiv",
+      "intro": "Describe what you plan, try or forget to do. Use a short infinitive group when the surrounding phrase calls for it.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Plan",
+            "Ich habe vor, jeden Tag zu üben."
+          ],
+          [
+            "Try",
+            "Ich versuche, pünktlich zu kommen."
+          ],
+          [
+            "Time for something",
+            "Ich habe Zeit, ein Buch zu lesen."
+          ],
+          [
+            "Separable verb",
+            "Ich vergesse nicht, das Licht auszumachen."
+          ],
+          [
+            "Modal without zu",
+            "Ich möchte heute üben."
+          ]
+        ]
+      },
+      "rules": [
+        "Some verbs and expressions take a zu-infinitive: versuchen, vorhaben, Zeit haben. Learn the whole phrase rather than adding zu before every second verb.",
+        "Put the infinitive group after the main clause in these patterns. With a separable verb, insert zu between the prefix and the stem: anzurufen, aufzuräumen.",
+        "Modal verbs take an infinitive without zu: Ich muss lernen. Compare Ich versuche, zu lernen.",
+        "These examples separate the infinitive group with a comma. Keep the intended action realistic and ask what will help you complete it."
+      ],
+      "examples": [
+        {
+          "de": "Ich habe vor, jeden Abend zehn Minuten zu lesen.",
+          "en": "I plan to read for ten minutes every evening."
+        },
+        {
+          "de": "Vergiss bitte nicht, das Fenster zuzumachen.",
+          "en": "Please do not forget to close the window."
+        },
+        {
+          "de": "Wir versuchen, weniger Verpackung zu kaufen.",
+          "en": "We are trying to buy less packaging."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "vorhaben",
+          "en": "to plan; intend"
+        },
+        {
+          "de": "versuchen",
+          "en": "to try"
+        },
+        {
+          "de": "vergessen",
+          "en": "to forget"
+        },
+        {
+          "de": "aufhören",
+          "en": "to stop"
+        },
+        {
+          "de": "die Gewohnheit",
+          "en": "habit",
+          "pl": "Gewohnheiten"
+        },
+        {
+          "de": "die Verpackung",
+          "en": "packaging",
+          "pl": "Verpackungen"
+        },
+        {
+          "de": "sparen",
+          "en": "to save"
+        },
+        {
+          "de": "ausmachen",
+          "en": "to switch off"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "Ich versuche, jeden Tag Deutsch ___.",
+          "options": [
+            "lernen",
+            "zu lernen",
+            "zu lerne"
+          ],
+          "answer": 1,
+          "hint": "Versuchen takes a zu-infinitive here."
+        },
+        {
+          "type": "fill",
+          "question": "Ich vergesse nicht, dich ___. (anrufen + zu)",
+          "answers": [
+            "anzurufen"
+          ],
+          "hint": "Insert zu between the separable prefix an and rufen."
+        },
+        {
+          "type": "choice",
+          "question": "Which sentence needs no zu?",
+          "options": [
+            "Ich habe vor, heute zu lesen.",
+            "Ich versuche, heute zu lesen.",
+            "Ich möchte heute lesen."
+          ],
+          "answer": 2,
+          "hint": "Möchte is followed by an infinitive without zu."
+        },
+        {
+          "type": "listen",
+          "audioText": "Ich habe vor, öfter mit dem Fahrrad zu fahren. Für kurze Wege lasse ich das Auto stehen. Wenn es stark regnet, nehme ich den Bus. Am Sonntag versuche ich außerdem, mein Fahrrad zu reparieren.",
+          "question": "Was ist für Sonntag geplant?",
+          "options": [
+            "Das Fahrrad zu reparieren",
+            "Ein Auto zu kaufen",
+            "Immer den Bus zu nehmen"
+          ],
+          "answer": 0,
+          "hint": "The speaker plans to try repairing the bicycle on Sunday."
+        },
+        {
+          "type": "choice",
+          "question": "Notiz: Bitte nicht vergessen, die Mehrwegtasche mitzubringen. Was soll man tun?",
+          "options": [
+            "Eine neue Tasche kaufen",
+            "Die Tasche zu Hause lassen",
+            "Die Mehrwegtasche mitnehmen"
+          ],
+          "answer": 2,
+          "hint": "Mitzubringen means to bring it along."
+        },
+        {
+          "type": "write",
+          "question": "Invent two small goals for the coming week. Say what you plan to do and what you must remember. Use one zu-infinitive and one modal verb.",
+          "modelAnswer": "Ich habe vor, nächste Woche öfter selbst zu kochen. Dafür muss ich am Montag einkaufen. Ich versuche auch, weniger Verpackung zu benutzen. Ich darf nicht vergessen, meine Tasche mitzunehmen. Am Freitag möchte ich mit einem Freund ein neues Rezept ausprobieren."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Discuss interests and ask follow-up questions",
+      "germanTitle": "Verben mit Präpositionen",
+      "intro": "Learn useful verbs together with their prepositions, then ask about a person or a thing without translating the preposition from English.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Accusative patterns",
+            "warten auf den Bus · sich freuen auf den Kurs"
+          ],
+          [
+            "Dative patterns",
+            "sprechen mit der Lehrerin · teilnehmen an einem Kurs"
+          ],
+          [
+            "Interest",
+            "sich interessieren für Musik"
+          ],
+          [
+            "Ask about a thing",
+            "Worauf wartest du? Auf den Bus."
+          ],
+          [
+            "Ask about a person",
+            "Auf wen wartest du? Auf meinen Freund."
+          ],
+          [
+            "Refer back to a thing",
+            "Der Kurs beginnt morgen. Ich freue mich darauf."
+          ]
+        ]
+      },
+      "rules": [
+        "The verb selects the preposition and its case: warten auf + accusative, sprechen mit + dative, teilnehmen an + dative. Learn each as a phrase.",
+        "For a thing or topic, many questions use wo + preposition. Add r before a vowel: worauf, worüber; compare wofür, womit.",
+        "For a person, use the preposition with wen or wem as the case requires: auf wen, mit wem. The choice is about people versus things or topics, not a universal living/non-living rule.",
+        "Da(r)- forms refer back to a thing or topic: darauf, darüber, damit. For a person, use a personal pronoun: Ich warte auf ihn.",
+        "Sich freuen auf usually looks forward to something; sich freuen über expresses being pleased about something. Context, not only tense, determines which meaning you need."
+      ],
+      "examples": [
+        {
+          "de": "Ich interessiere mich für Fotografie und nehme an einem Kurs teil.",
+          "en": "I am interested in photography and am taking part in a course."
+        },
+        {
+          "de": "Worauf wartest du? Auf die Antwort vom Büro.",
+          "en": "What are you waiting for? The reply from the office."
+        },
+        {
+          "de": "Mit wem sprichst du? Mit meiner Nachbarin.",
+          "en": "Who are you speaking with? My neighbour."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "teilnehmen an",
+          "en": "to take part in"
+        },
+        {
+          "de": "warten auf",
+          "en": "to wait for"
+        },
+        {
+          "de": "sich interessieren für",
+          "en": "to be interested in"
+        },
+        {
+          "de": "sich freuen auf",
+          "en": "to look forward to"
+        },
+        {
+          "de": "sprechen mit",
+          "en": "to speak with"
+        },
+        {
+          "de": "die Fotografie",
+          "en": "photography",
+          "pl": "-"
+        },
+        {
+          "de": "die Antwort",
+          "en": "reply; answer",
+          "pl": "Antworten"
+        },
+        {
+          "de": "die Einladung",
+          "en": "invitation",
+          "pl": "Einladungen"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Wir nehmen ___ einem Kurs teil.",
+          "answers": [
+            "an"
+          ],
+          "hint": "Teilnehmen takes an + dative."
+        },
+        {
+          "type": "choice",
+          "question": "You want to ask which person someone is waiting for. Choose the question.",
+          "options": [
+            "Worauf wartest du?",
+            "Auf wen wartest du?",
+            "Womit wartest du?"
+          ],
+          "answer": 1,
+          "hint": "Auf wen asks about a person and uses accusative."
+        },
+        {
+          "type": "choice",
+          "question": "Der Ausflug ist morgen. Ich freue mich ___. (looking forward to it)",
+          "options": [
+            "darauf",
+            "daran",
+            "damit"
+          ],
+          "answer": 0,
+          "hint": "Darauf refers to the upcoming outing."
+        },
+        {
+          "type": "listen",
+          "audioText": "Ich interessiere mich für Fotografie. Ab nächster Woche nehme ich an einem Kurs teil. Ich freue mich schon darauf. Heute warte ich noch auf eine Antwort, weil ich eine Frage zur Kamera habe.",
+          "question": "Worauf wartet die Person heute?",
+          "options": [
+            "Auf den ersten Kurstag",
+            "Auf eine neue Kamera",
+            "Auf eine Antwort"
+          ],
+          "answer": 2,
+          "hint": "The person is waiting for a reply about the camera."
+        },
+        {
+          "type": "choice",
+          "question": "Nachricht: Sprich bitte mit der Kursleiterin über die Anmeldung. Mit wem soll man sprechen?",
+          "options": [
+            "Mit der Kursleiterin",
+            "Mit der Anmeldung",
+            "Mit allen Teilnehmenden"
+          ],
+          "answer": 0,
+          "hint": "Mit wem asks for the person, not the topic."
+        },
+        {
+          "type": "write",
+          "question": "Write about a fictional interest and a course. Say what interests you, what you look forward to and what you are waiting for. Ask one follow-up question.",
+          "modelAnswer": "Ich interessiere mich für Gartenarbeit. Nächste Woche nehme ich an einem Kurs im Park teil. Ich freue mich darauf, weil ich etwas Neues lernen möchte. Jetzt warte ich noch auf die genaue Uhrzeit. Interessierst du dich auch für Pflanzen?"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Describe routines and things you do for yourself",
+      "germanTitle": "Mich oder mir? Reflexive Muster",
+      "intro": "Extend the reflexive phrases you already know. Distinguish washing yourself from washing your hands, and use complete everyday patterns.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Person as the object",
+            "Ich wasche mich. Du wäschst dich."
+          ],
+          [
+            "Another accusative object",
+            "Ich wasche mir die Hände. Du wäschst dir die Hände."
+          ],
+          [
+            "Buying something for yourself",
+            "Ich kaufe mir ein Heft."
+          ],
+          [
+            "Plural pronouns",
+            "Wir waschen uns die Hände. Ihr wascht euch die Hände."
+          ],
+          [
+            "Reflexive in the Perfekt",
+            "Ich habe mich beeilt. Ich habe mir ein Heft gekauft."
+          ]
+        ]
+      },
+      "rules": [
+        "Accusative reflexive pronouns include mich and dich; their dative forms are mir and dir. Sich, uns and euch can be either case.",
+        "In Ich wasche mir die Hände, die Hände is the accusative object and mir identifies whose hands are involved. Compare Ich wasche mich, where mich itself is the accusative object.",
+        "Learn each verb pattern. Another noun in the sentence does not automatically make a reflexive pronoun dative: Ich interessiere mich für den Kurs still uses mich.",
+        "For these familiar reflexive actions, form the Perfekt with haben and keep the pronoun: Ich habe mich angezogen. Reuse the sentence bracket from the earlier Perfekt lessons."
+      ],
+      "examples": [
+        {
+          "de": "Morgens wasche ich mir die Hände und ziehe mich an.",
+          "en": "In the morning I wash my hands and get dressed."
+        },
+        {
+          "de": "Für den Kurs habe ich mir ein neues Heft gekauft.",
+          "en": "I bought myself a new exercise book for the course."
+        },
+        {
+          "de": "Wir haben uns beeilt, weil der Bus gleich kam.",
+          "en": "We hurried because the bus was about to arrive."
+        }
+      ],
+      "vocab": [
+        {
+          "de": "sich beeilen",
+          "en": "to hurry"
+        },
+        {
+          "de": "sich anziehen",
+          "en": "to get dressed"
+        },
+        {
+          "de": "sich ausruhen",
+          "en": "to rest"
+        },
+        {
+          "de": "sich die Hände waschen",
+          "en": "to wash one’s hands"
+        },
+        {
+          "de": "das Handtuch",
+          "en": "towel",
+          "pl": "Handtücher"
+        },
+        {
+          "de": "der Wecker",
+          "en": "alarm clock",
+          "pl": "Wecker"
+        },
+        {
+          "de": "vorbereiten",
+          "en": "to prepare"
+        },
+        {
+          "de": "sich merken",
+          "en": "to memorise; remember"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "fill",
+          "question": "Ich wasche ___ die Hände. (ich)",
+          "answers": [
+            "mir"
+          ],
+          "hint": "Die Hände is the accusative object; the reflexive pronoun is dative."
+        },
+        {
+          "type": "choice",
+          "question": "Du ziehst ___ an.",
+          "options": [
+            "dir",
+            "dich",
+            "mir"
+          ],
+          "answer": 1,
+          "hint": "Sich anziehen without a separate clothing object uses accusative."
+        },
+        {
+          "type": "choice",
+          "question": "Which sentence is correct?",
+          "options": [
+            "Ich interessiere mir für den Kurs.",
+            "Ich interessiere mich für den Kurs.",
+            "Ich interessiere für mich den Kurs."
+          ],
+          "answer": 1,
+          "hint": "Sich interessieren für keeps an accusative reflexive pronoun."
+        },
+        {
+          "type": "listen",
+          "audioText": "Heute habe ich mich früh angezogen. Dann habe ich mir ein Brot gemacht und meine Tasche gepackt. Ich musste mich nicht beeilen, weil mein Kurs erst um zehn begann.",
+          "question": "Warum musste sich die Person nicht beeilen?",
+          "options": [
+            "Der Kurs begann erst um zehn.",
+            "Die Tasche war schon gestern gepackt.",
+            "Der Kurs fiel aus."
+          ],
+          "answer": 0,
+          "hint": "The late start gave the person time; the course was not cancelled."
+        },
+        {
+          "type": "choice",
+          "question": "Nachricht: Ich habe mir die neue Uhrzeit notiert. Wir treffen uns erst um halb elf. Wann ist das Treffen?",
+          "options": [
+            "Um zehn Uhr",
+            "Um elf Uhr",
+            "Um zehn Uhr dreißig"
+          ],
+          "answer": 2,
+          "hint": "Halb elf means 10:30."
+        },
+        {
+          "type": "write",
+          "question": "Describe a fictional morning in 40–60 words. Use one accusative reflexive phrase, one dative reflexive phrase and one Perfekt sentence.",
+          "modelAnswer": "Heute habe ich mich früh angezogen. Danach habe ich mir ein Brot gemacht und in Ruhe gefrühstückt. Vor dem Essen wasche ich mir immer die Hände. Für den Kurs habe ich mir ein neues Heft gekauft. Ich muss mich nicht beeilen, weil der Bus erst in zwanzig Minuten fährt."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Write a clear message and make a shared plan",
+      "germanTitle": "Nachrichten, Einladungen und gemeinsame Pläne",
+      "intro": "Bring the A2 patterns together in a useful message and a short conversation. Cover each requested point and respond to the other person’s needs.",
+      "table": {
+        "head": [
+          "Pattern",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Friendly opening",
+            "Hallo! Vielen Dank für deine Nachricht."
+          ],
+          [
+            "Formal opening",
+            "Guten Tag, ich habe eine Frage zu meinem Termin."
+          ],
+          [
+            "Reason and alternative",
+            "Ich kann nicht kommen, weil ich arbeite. Wie wäre es am Freitag?"
+          ],
+          [
+            "Ask for a reply",
+            "Bitte sag mir bis Donnerstag Bescheid."
+          ],
+          [
+            "Confirm responsibilities",
+            "Ich bringe das Essen mit. Kannst du die Getränke besorgen?"
+          ]
+        ]
+      },
+      "rules": [
+        "Before writing, identify the reader and the required points: for example invitation, time, what to bring and a request for a reply. A short complete message is better than a long unrelated one.",
+        "Use du/dein with a familiar person and Sie/Ihr with a formal recipient. Keep the same form of address throughout.",
+        "Link ideas using the grammar you know: weil for a reason, wenn for a condition, danach for sequence. Check the verb position in each clause.",
+        "In a conversation, propose, listen, respond, suggest an alternative and confirm the agreement. Use fictional names, dates and contact details in all practice; no real personal information is needed.",
+        "The model is one possible response. Compare whether you covered the points, then rewrite one sentence and ask for feedback on clarity and language."
+      ],
+      "examples": [
+        {
+          "de": "Wir könnten am Samstag zusammen kochen. Hättest du Zeit?",
+          "en": "We could cook together on Saturday. Would you have time?"
+        },
+        {
+          "de": "Wenn du später kommst, sag mir bitte kurz Bescheid.",
+          "en": "If you arrive later, please let me know briefly."
+        },
+        {
+          "de": "Ich bringe das Brot mit. Könntest du etwas zu trinken besorgen?",
+          "en": "I will bring the bread. Could you get something to drink?"
+        }
+      ],
+      "vocab": [
+        {
+          "de": "besorgen",
+          "en": "to get; obtain"
+        },
+        {
+          "de": "mitbringen",
+          "en": "to bring along"
+        },
+        {
+          "de": "vereinbaren",
+          "en": "to arrange; agree"
+        },
+        {
+          "de": "die Rückmeldung",
+          "en": "reply; feedback",
+          "pl": "Rückmeldungen"
+        },
+        {
+          "de": "der Treffpunkt",
+          "en": "meeting point",
+          "pl": "Treffpunkte"
+        },
+        {
+          "de": "die Änderung",
+          "en": "change",
+          "pl": "Änderungen"
+        },
+        {
+          "de": "gemeinsam",
+          "en": "together"
+        },
+        {
+          "de": "die Aufgabe",
+          "en": "task",
+          "pl": "Aufgaben"
+        }
+      ],
+      "tasks": [
+        {
+          "type": "choice",
+          "question": "You are writing to a course office using Sie. Which request fits?",
+          "options": [
+            "Kannst du mir die Uhrzeit sagen?",
+            "Könnten Sie mir die Uhrzeit bestätigen?",
+            "Sag deinem Freund die Uhrzeit."
+          ],
+          "answer": 1,
+          "hint": "Keep the formal form of address in the request."
+        },
+        {
+          "type": "fill",
+          "question": "Ich komme später, ___ ich noch arbeiten muss. (give a reason)",
+          "answers": [
+            "weil"
+          ],
+          "hint": "Weil gives the reason and sends muss to the end."
+        },
+        {
+          "type": "choice",
+          "question": "A friend asks to meet at ten, but you work until eleven. Which reply helps?",
+          "options": [
+            "Um zehn kann ich nicht. Wäre zwölf möglich?",
+            "Ja, um zehn passt es, obwohl ich nicht kommen kann.",
+            "Ich habe die Frage über die Uhrzeit gelesen."
+          ],
+          "answer": 0,
+          "hint": "State the constraint and offer a workable alternative."
+        },
+        {
+          "type": "listen",
+          "audioText": "Treffen wir uns am Samstag um zwölf vor der Bibliothek? Ich bringe Brot und Obst mit. Könntest du die Getränke besorgen? Wenn es regnet, gehen wir ins Café nebenan. Bitte sag mir bis Freitag, ob du kommen kannst.",
+          "question": "Was soll die andere Person mitbringen?",
+          "options": [
+            "Brot",
+            "Obst",
+            "Getränke"
+          ],
+          "answer": 2,
+          "hint": "The speaker brings bread and fruit and asks the partner to get drinks."
+        },
+        {
+          "type": "choice",
+          "question": "Einladung: Sag bitte bis Donnerstag Bescheid, ob du am Samstag mitkommst. Wann soll man antworten?",
+          "options": [
+            "Am Samstag",
+            "Bis Donnerstag",
+            "Erst nach dem Ausflug"
+          ],
+          "answer": 1,
+          "hint": "The reply deadline and event day are different."
+        },
+        {
+          "type": "write",
+          "question": "Write an invitation for a fictional shared meal in 50–70 words. Include when and where, what you will bring, what your friend should bring and when you need a reply.",
+          "modelAnswer": "Hallo! Hast du am Samstag Zeit für ein gemeinsames Essen? Wir könnten uns um zwölf im Park treffen. Ich bringe Brot, Käse und Obst mit. Könntest du die Getränke besorgen? Wenn es regnet, essen wir bei mir zu Hause. Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst. Ich freue mich auf deine Antwort! Viele Grüße!"
+        }
+      ]
+    }
+  ],
+  "topics": [],
+  "support": {
+    "1": {
+      "module": 1,
+      "outcomes": [
+        "Explain permission, obligation and choice.",
+        "Respond to a practical request using a modal verb."
+      ],
+      "pronunciation": "Listen for the modal verb and stress the final infinitive or participle.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Kannst du heute Abend kommen?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Plan a study meeting. Partner A has time on Tuesday evening; partner B can only meet Thursday. Find a time, say what to bring and explain one thing you did last week.",
+          "modelAnswer": "A: Hast du am Dienstag Zeit? B: Leider muss ich arbeiten. Können wir uns am Donnerstag treffen? A: Ja, um sechs Uhr passt es. Bringst du dein Heft mit? B: Gern. Letzte Woche habe ich schon die ersten Aufgaben gemacht.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "2": {
+      "module": 1,
+      "outcomes": [
+        "Describe completed activities with haben.",
+        "Keep the auxiliary and participle in the correct positions."
+      ],
+      "pronunciation": "Listen for the modal verb and stress the final infinitive or participle.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Gestern habe ich lange gearbeitet.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Plan a study meeting. Partner A has time on Tuesday evening; partner B can only meet Thursday. Find a time, say what to bring and explain one thing you did last week.",
+          "modelAnswer": "A: Hast du am Dienstag Zeit? B: Leider muss ich arbeiten. Können wir uns am Donnerstag treffen? A: Ja, um sechs Uhr passt es. Bringst du dein Heft mit? B: Gern. Letzte Woche habe ich schon die ersten Aufgaben gemacht.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "3": {
+      "module": 2,
+      "outcomes": [
+        "Describe a journey using common sein verbs.",
+        "Choose haben or sein for familiar past events."
+      ],
+      "pronunciation": "Keep the auxiliary audible and stress the important place or problem.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich bin um sechs Uhr aufgestanden.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Ask for help at a station. Explain a fictional problem with luggage, ask where to go and repeat the instructions to confirm them. Switch roles.",
+          "modelAnswer": "A: Entschuldigung, ich habe meine Tasche im Zug vergessen. Können Sie mir helfen? B: Gehen Sie bitte zum Fundbüro neben dem Ausgang. A: Neben dem Ausgang, richtig? B: Ja. Sagen Sie der Mitarbeiterin, mit welchem Zug Sie gefahren sind.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "4": {
+      "module": 2,
+      "outcomes": [
+        "Identify a recipient or a person being helped.",
+        "Use dative articles and pronouns in everyday phrases."
+      ],
+      "pronunciation": "Keep the auxiliary audible and stress the important place or problem.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich fahre mit dem Bus zur Arbeit.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Ask for help at a station. Explain a fictional problem with luggage, ask where to go and repeat the instructions to confirm them. Switch roles.",
+          "modelAnswer": "A: Entschuldigung, ich habe meine Tasche im Zug vergessen. Können Sie mir helfen? B: Gehen Sie bitte zum Fundbüro neben dem Ausgang. A: Neben dem Ausgang, richtig? B: Ja. Sagen Sie der Mitarbeiterin, mit welchem Zug Sie gefahren sind.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "5": {
+      "module": 3,
+      "outcomes": [
+        "Describe where an object is.",
+        "Explain where someone is putting an object."
+      ],
+      "pronunciation": "Pause before subordinate clauses and keep their final verb clear.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Wir sitzen im Garten.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Arrange an imaginary room with a partner. One person proposes where to put three objects; the other explains one problem and suggests a different arrangement.",
+          "modelAnswer": "A: Stellen wir den Tisch vor das Fenster? B: Lieber nicht, weil dort die Heizung ist. A: Dann stellen wir ihn neben das Sofa. B: Das finde ich gut. Die Lampe kann auf dem Tisch stehen.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "6": {
+      "module": 3,
+      "outcomes": [
+        "Give a reason with weil and report an idea with dass.",
+        "Describe a condition using wenn."
+      ],
+      "pronunciation": "Pause before subordinate clauses and keep their final verb clear.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich lerne Deutsch, weil ich in Berlin arbeiten möchte.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Arrange an imaginary room with a partner. One person proposes where to put three objects; the other explains one problem and suggests a different arrangement.",
+          "modelAnswer": "A: Stellen wir den Tisch vor das Fenster? B: Lieber nicht, weil dort die Heizung ist. A: Dann stellen wir ihn neben das Sofa. B: Das finde ich gut. Die Lampe kann auf dem Tisch stehen.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "7": {
+      "module": 4,
+      "outcomes": [
+        "Describe a habit or feeling using a reflexive verb.",
+        "Ask a partner about a routine."
+      ],
+      "pronunciation": "Stress the contrast: günstiger, besser, am liebsten.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich freue mich auf das Wochenende.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Choose between two leisure activities. Compare cost, time and your preferences. Ask your partner what they enjoy, and agree on one plan.",
+          "modelAnswer": "A: Interessierst du dich für Schwimmen? B: Ja, aber der Kurs ist teurer als der im Park. A: Das stimmt. Dafür können wir auch bei Regen hingehen. B: Gut, dann melden wir uns für Donnerstag an.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "8": {
+      "module": 4,
+      "outcomes": [
+        "Compare two practical options.",
+        "Explain a preference using a comparative or superlative."
+      ],
+      "pronunciation": "Stress the contrast: günstiger, besser, am liebsten.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Berlin ist größer als München.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Choose between two leisure activities. Compare cost, time and your preferences. Ask your partner what they enjoy, and agree on one plan.",
+          "modelAnswer": "A: Interessierst du dich für Schwimmen? B: Ja, aber der Kurs ist teurer als der im Park. A: Das stimmt. Dafür können wir auch bei Regen hingehen. B: Gut, dann melden wir uns für Donnerstag an.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "9": {
+      "module": 5,
+      "outcomes": [
+        "Explain a past obligation or possibility.",
+        "Recognise common past forms in a short report."
+      ],
+      "pronunciation": "Keep konnte and könnte distinct; pause between the time clause and main clause.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Gestern hatte ich wenig Zeit und musste früh gehen.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Partner A describes a fictional journey with a small problem. Partner B asks what happened first, why the plan changed and how it ended. Then switch roles and use a different problem.",
+          "modelAnswer": "A: Als ich am Bahnhof ankam, war mein Zug schon weg. B: Was hast du dann gemacht? A: Zuerst habe ich am Schalter gefragt. Ich konnte eine Stunde später fahren. B: Musstest du eine neue Fahrkarte kaufen? A: Nein, meine Fahrkarte war noch gültig.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "10": {
+      "module": 5,
+      "outcomes": [
+        "Distinguish a single past occasion from repeated occasions.",
+        "Tell a short account in a clear sequence."
+      ],
+      "pronunciation": "Keep konnte and könnte distinct; pause between the time clause and main clause.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Als ich zum ersten Mal dort war, habe ich nach dem Weg gefragt.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Partner A describes a fictional journey with a small problem. Partner B asks what happened first, why the plan changed and how it ended. Then switch roles and use a different problem.",
+          "modelAnswer": "A: Als ich am Bahnhof ankam, war mein Zug schon weg. B: Was hast du dann gemacht? A: Zuerst habe ich am Schalter gefragt. Ich konnte eine Stunde später fahren. B: Musstest du eine neue Fahrkarte kaufen? A: Nein, meine Fahrkarte war noch gültig.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "11": {
+      "module": 6,
+      "outcomes": [
+        "Ask a polite indirect W-question.",
+        "Use ob to check whether something is true."
+      ],
+      "pronunciation": "Keep the final verb audible in an indirect question; pronounce the umlaut in könnte.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Wissen Sie, wo ich eine Fahrkarte kaufen kann?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Role-play a call to a course office. The learner can attend only after 18:00. The first course is full. The office offers a waiting list or a later start date. Ask about cost, choose an option and confirm the next step.",
+          "modelAnswer": "A: Guten Tag, können Sie mir sagen, ob im Abendkurs noch ein Platz frei ist? B: Leider nicht. Sie könnten aber nächsten Monat beginnen. A: Das wäre möglich. Wie viel kostet der Kurs? B: Achtzig Euro. A: Gut. Könnten Sie mir die Anmeldung schicken? B: Gern, ich schicke Ihnen die Informationen heute.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "12": {
+      "module": 6,
+      "outcomes": [
+        "Make a polite request using könnte, hätte or wäre.",
+        "Respond to a scheduling problem with an alternative."
+      ],
+      "pronunciation": "Keep the final verb audible in an indirect question; pronounce the umlaut in könnte.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Könnten Sie bitte etwas langsamer sprechen?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Role-play a call to a course office. The learner can attend only after 18:00. The first course is full. The office offers a waiting list or a later start date. Ask about cost, choose an option and confirm the next step.",
+          "modelAnswer": "A: Guten Tag, können Sie mir sagen, ob im Abendkurs noch ein Platz frei ist? B: Leider nicht. Sie könnten aber nächsten Monat beginnen. A: Das wäre möglich. Wie viel kostet der Kurs? B: Achtzig Euro. A: Gut. Könnten Sie mir die Anmeldung schicken? B: Gern, ich schicke Ihnen die Informationen heute.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "13": {
+      "module": 7,
+      "outcomes": [
+        "Describe a specific item using a definite article and adjective.",
+        "Choose an ending using case, gender and number."
+      ],
+      "pronunciation": "Keep article and adjective endings audible without stressing every ending.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Der blaue Mantel ist zu groß.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "In a fictional shop, describe the kind of jacket you need and compare two options. Ask about a colour or size, explain one problem after trying an item on, and choose an alternative. Switch roles.",
+          "modelAnswer": "A: Ich suche eine leichte, wasserdichte Jacke. B: Möchten Sie die blaue oder die grüne anprobieren? A: Die blaue bitte. Haben Sie sie in Größe vierzig? B: Ja, hier. A: Die Ärmel sind zu lang. Könnte ich die grüne probieren? B: Natürlich. A: Diese passt besser. Ich nehme die grüne Jacke.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "14": {
+      "module": 7,
+      "outcomes": [
+        "Describe a new item using ein and an adjective.",
+        "Ask about a type of item and recognise common article-free phrases."
+      ],
+      "pronunciation": "Keep article and adjective endings audible without stressing every ending.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich suche einen warmen Mantel für den Winter.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "In a fictional shop, describe the kind of jacket you need and compare two options. Ask about a colour or size, explain one problem after trying an item on, and choose an alternative. Switch roles.",
+          "modelAnswer": "A: Ich suche eine leichte, wasserdichte Jacke. B: Möchten Sie die blaue oder die grüne anprobieren? A: Die blaue bitte. Haben Sie sie in Größe vierzig? B: Ja, hier. A: Die Ärmel sind zu lang. Könnte ich die grüne probieren? B: Natürlich. A: Diese passt besser. Ich nehme die grüne Jacke.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "15": {
+      "module": 8,
+      "outcomes": [
+        "Describe an intention with a zu-infinitive.",
+        "Distinguish that pattern from an infinitive after a modal verb."
+      ],
+      "pronunciation": "Say the complete verb phrase together; keep the r-link in worauf and darauf clear.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich habe vor, jeden Abend zehn Minuten zu lesen.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Choose a small shared goal, such as using reusable bags or travelling by bicycle. Explain your interest, propose an action and respond to a practical difficulty. Confirm what each person will try before the next meeting.",
+          "modelAnswer": "A: Ich habe vor, öfter mit dem Fahrrad einzukaufen. B: Das möchte ich auch versuchen, aber ich habe keine große Tasche. A: Ich kann dir eine Tasche leihen. B: Danke. Dann probiere ich es am Samstag. A: Ich fahre am Freitag. Beim nächsten Treffen sprechen wir darüber, wie es war.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "16": {
+      "module": 8,
+      "outcomes": [
+        "Use familiar verbs with their preposition and case.",
+        "Ask about a person or thing and refer back to a topic."
+      ],
+      "pronunciation": "Say the complete verb phrase together; keep the r-link in worauf and darauf clear.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Ich interessiere mich für Fotografie und nehme an einem Kurs teil.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Choose a small shared goal, such as using reusable bags or travelling by bicycle. Explain your interest, propose an action and respond to a practical difficulty. Confirm what each person will try before the next meeting.",
+          "modelAnswer": "A: Ich habe vor, öfter mit dem Fahrrad einzukaufen. B: Das möchte ich auch versuchen, aber ich habe keine große Tasche. A: Ich kann dir eine Tasche leihen. B: Danke. Dann probiere ich es am Samstag. A: Ich fahre am Freitag. Beim nächsten Treffen sprechen wir darüber, wie es war.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "17": {
+      "module": 9,
+      "outcomes": [
+        "Use mich or mir in familiar reflexive patterns.",
+        "Describe a routine using a reflexive phrase in the Perfekt."
+      ],
+      "pronunciation": "Keep mir and mich distinct, and repeat important times slowly to confirm them.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Morgens wasche ich mir die Hände und ziehe mich an.",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Plan a fictional study meeting and shared meal. One person arrives late, and rain is possible. Agree on a time, meeting point, food, an alternative location and who sends the final message. Then summarise the agreement without the model.",
+          "modelAnswer": "A: Können wir uns um halb elf vor der Bibliothek treffen? B: Ich kann erst um zwölf kommen. A: Dann lernen wir zuerst. Du kommst zum Essen dazu. B: Gern. Ich bringe Getränke mit. Wo essen wir bei Regen? A: Im Gruppenraum. Ich schreibe die Einzelheiten heute in die Gruppe.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    },
+    "18": {
+      "module": 9,
+      "outcomes": [
+        "Write a short message that covers every requested point.",
+        "Negotiate and confirm a shared plan."
+      ],
+      "pronunciation": "Keep mir and mich distinct, and repeat important times slowly to confirm them.",
+      "pronunciationDrills": [
+        {
+          "label": "Say it in context",
+          "text": "Wir könnten am Samstag zusammen kochen. Hättest du Zeit?",
+          "instruction": "Repeat the phrase, then change one detail while keeping the grammar pattern."
+        }
+      ],
+      "speaking": [
+        {
+          "task": "Plan a fictional study meeting and shared meal. One person arrives late, and rain is possible. Agree on a time, meeting point, food, an alternative location and who sends the final message. Then summarise the agreement without the model.",
+          "modelAnswer": "A: Können wir uns um halb elf vor der Bibliothek treffen? B: Ich kann erst um zwölf kommen. A: Dann lernen wir zuerst. Du kommst zum Essen dazu. B: Gern. Ich bringe Getränke mit. Wo essen wir bei Regen? A: Im Gruppenraum. Ich schreibe die Einzelheiten heute in die Gruppe.",
+          "checklist": [
+            "I used this lesson’s language in a new sentence.",
+            "I asked a relevant question and responded to my partner.",
+            "My partner understood my intended meaning."
+          ]
+        }
+      ]
+    }
+  },
+  "skillStrategies": [
+    {
+      "title": "Read with a purpose",
+      "steps": [
+        "Identify the text type and its purpose first: notice, message, advertisement or opinion.",
+        "Read the question, then locate the sentence that answers it. Check who, when, where and any restriction.",
+        "Explain why the other option is wrong. A repeated word alone is not enough evidence."
+      ]
+    },
+    {
+      "title": "Listen in two passes",
+      "steps": [
+        "Before playing, predict the situation and the kind of detail you need.",
+        "First listen for the situation and intention. On a second practice listen, note the requested details and corrections.",
+        "Check the transcript after answering. Repeat the difficult phrase, then try again without reading. Follow the stated playback limits in exam practice."
+      ]
+    },
+    {
+      "title": "Write, check, rewrite",
+      "steps": [
+        "Identify the recipient, purpose and all requested content points. Use fictional details for personal-data tasks.",
+        "Draft before opening a model. Use short sentences you can control and a suitable greeting and ending.",
+        "Check task coverage first, then verbs, word order and noun capitals. Get feedback and write a corrected version."
+      ]
+    },
+    {
+      "title": "Speak and respond",
+      "steps": [
+        "Prepare keywords instead of a complete script. Give an answer, a reason or example, then invite a response.",
+        "Ask a follow-up question and respond to your partner’s idea. Ask for clarification when needed.",
+        "Repeat with a changed situation and switch roles. Check whether the other person understood your intended meaning."
+      ]
+    }
+  ],
+  "reviewRoutine": [
+    "Next study day: recall three useful phrases without looking, then correct them.",
+    "About one week later: repeat the task with different details and no model.",
+    "About three weeks later: mix this topic with an earlier one and ask for feedback."
+  ],
+  "dailyPlan": [
+    {
+      "minutes": 10,
+      "title": "Retrieve earlier language",
+      "description": "Review due vocabulary and recall three phrases from an earlier module."
+    },
+    {
+      "minutes": 15,
+      "title": "Learn and apply",
+      "description": "Study one small grammar section and use it in your own examples."
+    },
+    {
+      "minutes": 15,
+      "title": "Listen and read",
+      "description": "Identify the main idea, find evidence for details, then check the transcript or explanation."
+    },
+    {
+      "minutes": 10,
+      "title": "Speak and respond",
+      "description": "Use a role task with changed details, ask a follow-up question and practise clarification."
+    },
+    {
+      "minutes": 10,
+      "title": "Write and revise",
+      "description": "Cover the requested points, compare with a model, seek feedback and rewrite one weak sentence."
+    }
+  ],
+  "vocabulary": {
+    "recognitionGoal": "Recognise the vocabulary in unfamiliar short texts and recordings, not only on a flashcard.",
+    "productionGoal": "Use useful phrases in a new spoken or written task. Word counts alone do not establish a CEFR level.",
+    "method": [
+      "Learn nouns with article, plural and a short phrase.",
+      "Learn verbs with their preposition, case pattern and a useful past form.",
+      "Retrieve before revealing a model; revisit errors on later study days.",
+      "Connect the current topic to an earlier one and practise in both directions."
+    ]
+  },
+  "readiness": [
+    "I can complete a new practical task without copying a model.",
+    "I can identify the main idea and support detail answers with evidence.",
+    "I can write a coherent message that covers all requested points.",
+    "I can ask a follow-up question, respond and clarify a misunderstanding.",
+    "I have practised with unfamiliar recordings and received feedback on writing and speaking."
+  ],
+  "assessmentNote": "The lesson and checkpoint scores measure supported objective practice. Writing and speaking need separate feedback. This learning path and the short in-app assessment do not certify a CEFR level or replace a full official practice paper."
+}

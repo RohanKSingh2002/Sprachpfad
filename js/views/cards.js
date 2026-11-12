@@ -5,18 +5,24 @@
 // see now, and each of its cards says why it is back. "New words" is today's ten words from the
 // level's topics; once answered they join the queue too.
 
-import { ALL_WORDS, LEVELS, LEVEL_BY_ID, SETS, WORDS, pluralText, setLabel, wordsOfLevel } from "../content.js";
+import { ALL_WORDS, LEVELS, LEVEL_BY_ID, SETS, WORDS, isFlashcardSet, pluralText, setLabel, wordsOfLevel } from "../content.js";
 import {
   addedToday,
   currentLevel,
   dueCount,
   dueWords,
+  isStudyPinned,
   knownIn,
   NEW_PER_DAY,
   nextDue,
   nextTopic,
   rateWord,
   reviewOf,
+  setWordCue,
+  setSitePreferences,
+  sitePreferences,
+  toggleStudyPin,
+  wordCue,
   wordsToLearn,
 } from "../state.js";
 import { speakerButton } from "../ui/audio.js";
@@ -25,12 +31,16 @@ import { tilt } from "../ui/effects.js";
 import { SPEAKER_ICON } from "../ui/icons.js";
 import { Draggable, enter, gsap, motionOK } from "../ui/motion.js";
 import { daysBetween, esc, shuffle, todayKey } from "../utils.js";
+import { refreshInterface } from "../study-language.js";
+import { currentGuide, guidedContinue, guidedWords } from "../guided-study.js";
 import { breadcrumb } from "./shared.js";
 
 let scope = null; // the chosen deck, see deckScope()
+let guide = null;
 let deck = []; // cards still to go
 let deckWords = []; // every word in the chosen deck
 let pos = 0;
+let reverseWords = new Set();
 let lastDrag = 0;
 let deciding = false;
 let focusNext = false; // give the next card keyboard focus once it's dealt
@@ -62,38 +72,55 @@ function deckScope() {
   if (v === "all") return { value: v, words: ALL_WORDS, level: null };
   if (LEVEL_BY_ID[v]) return { value: v, words: wordsOfLevel(LEVEL_BY_ID[v]), level: LEVEL_BY_ID[v] };
   const set = SETS.get(v);
-  if (set) return { value: v, words: unique(set.vocab.map((w) => w.de)), level: set.level, set };
-  const level = currentLevel();
+  if (isFlashcardSet(set)) return { value: v, words: unique(set.vocab.map((w) => w.de)), level: set.level, set };
+  const level = set?.level || currentLevel();
   return { value: level.id, words: wordsOfLevel(level), level };
 }
 
 const dueLabel = () => `Due today (${dueCount()})`;
 const newLabel = () => `New words (${wordsToLearn(currentLevel()).length})`;
 
-function deckOptions(selected) {
-  const option = (value, label) =>
+function deckOptions(selected, search = "") {
+  const query = search.trim().toLocaleLowerCase();
+  const option = (value, label, alternate = "") => !`${label} ${alternate}`.toLocaleLowerCase().includes(query) ? "" :
     `<option value="${value}"${value === selected ? " selected" : ""}>${esc(label)}</option>`;
+  const group = (label, contents) => contents ? `<optgroup label="${label}">${contents}</optgroup>` : "";
   const groups = LEVELS.map((lv) => {
-    const lessons = lv.lessons.map((l) => option(l.key, `${lv.name} lesson ${l.position}: ${l.germanTitle}`)).join("");
-    const topics = lv.topics.map((t) => option(t.key, `${lv.name} topic: ${t.title}`)).join("");
-    return (
-      `<optgroup label="${lv.name}">${option(lv.id, `All ${lv.name} words`)}${lessons}</optgroup>` +
-      (topics ? `<optgroup label="${lv.name} topics">${topics}</optgroup>` : "")
-    );
+    const lessons = lv.lessons.map((l) => option(l.key, `${lv.name} lesson ${l.position}: ${l.germanTitle}`, l.title)).join("");
+    const topics = lv.topics.filter(isFlashcardSet).map((t) => option(t.key, `${lv.name} topic: ${t.title}`)).join("");
+    return group(lv.name, option(lv.id, `All ${lv.name} words`) + lessons) + group(`${lv.name} topics`, topics);
   }).join("");
-  return option("due", dueLabel()) + option("new", newLabel()) + option("all", "All levels") + groups;
+  const matches = option("due", dueLabel()) + option("new", newLabel()) + option("all", "All levels") + groups;
+  return matches ? (query ? '<option value="" disabled selected>Choose a matching deck</option>' : "") + matches
+    : '<option value="" disabled selected>No matching decks</option>';
 }
 
 function buildDeck() {
-  if (scope.due) deck = dueWords().map((w) => WORDS.get(w)); // most urgent first
+  if (scope.due) deck = (guide ? guidedWords() : dueWords()).map((w) => WORDS.get(w)); // most urgent first
   else if (scope.fresh) deck = scope.words.map((w) => WORDS.get(w)); // in topic order
   else deck = shuffle(scope.words.map((w) => WORDS.get(w)));
-  deckWords = deck.map((c) => c.de);
+  const { cardDirection, cardSize, cardMissed } = sitePreferences();
+  if (cardMissed && !scope.fresh) deck = deck.filter(card => reviewOf(card.de)?.missed);
+  if (cardSize) deck = deck.slice(0, cardSize);
+  deckWords = deck.map(card => card.de);
+  reverseWords = new Set(deckWords.filter((_, i) => cardDirection === "en" || (cardDirection === "mixed" && i % 2)));
   pos = 0;
 }
 
+function deckSettings() {
+  const { cardDirection, cardSize, cardMissed } = sitePreferences();
+  const option = (value, label, selected) => `<option value="${value}"${value === selected ? " selected" : ""}>${label}</option>`;
+  return `<details class="panel cards-settings"><summary>Deck settings</summary><p class="muted small">Choose how to practise this deck.</p>
+    <div class="settings-study-controls">
+      <label>Direction<select id="cards-direction">${[["de", "German → English"], ["en", "English → German"], ["mixed", "Mixed"]].map(([value, label]) => option(value, label, cardDirection)).join("")}</select></label>
+      <label>Round size<select id="cards-round-size">${[10, 20, 0].map(size => option(size, size || "All", cardSize)).join("")}</select></label>
+      ${scope.fresh ? "" : `<label class="setting-switch-label"><input class="setting-switch" type="checkbox" id="cards-missed"${cardMissed ? " checked" : ""}> <span>Only missed words</span></label>`}
+      <button class="btn small" type="button" data-start-card-round>Start round</button>
+    </div></details>`;
+}
+
 /** The topic a word is new from (for the "New words" deck): the first of the level's topics that has it. */
-const topicOf = (word) => scope.level.topics.find((t) => t.vocab.some((w) => w.de === word));
+const topicOf = (word) => scope.level.topics.find(t => isFlashcardSet(t) && t.vocab.some(w => w.de === word));
 
 /** Why a card is in the deck, shown on its front: { text, kind: "new" | "missed" | "seen" }, or null. */
 function reason(word) {
@@ -117,13 +144,14 @@ function whenDue(date) {
 }
 
 function intro() {
+  if (guide) return "Guided session · Review each word once. Missed words stay in your review queue.";
   if (scope.due) {
     return `Words come back just before you'd forget them: after 1, 3, 7, 14 and 30 days when you know them, the same day when you don't. Due now: <b class="num" id="dueNum">${deck.length}</b>.`;
   }
   if (scope.fresh) {
     return `Up to ${NEW_PER_DAY} new words a day ${scope.level.course ? "from your current module and earlier vocabulary gaps" : `from the ${scope.level.name} topics`}. Once you answer a card, the word joins your review queue. New words left today: <b class="num" id="newNum">${deck.length}</b>.`;
   }
-  return `Tap the card to see the meaning. Words known in this deck: <b class="num" id="knownNum">${knownIn(deckWords)}</b> of ${deckWords.length}.`;
+  return `Tap the card to check your answer. Words known in this round: <b class="num" id="knownNum">${knownIn(deckWords)}</b> of ${deckWords.length}.`;
 }
 
 /** Every word of a topic deck (or today's new words) with its plural and example, to read or hear. */
@@ -140,11 +168,12 @@ function wordList() {
       return `<li><div class="wl-word">${speakerButton(w.de)}<div><b lang="de">${esc(w.de)}</b>${forms}</div><span class="wl-en">${esc(w.en)}</span></div>${ex}</li>`;
     })
     .join("");
-  const label = scope.fresh ? "Today's new words" : `All ${deck.length} words in this topic`;
+  const label = scope.fresh ? "New words in this round" : `All ${deck.length} words in this round`;
   return `<details class="word-list"><summary>${label}</summary><ul>${rows}</ul></details>`;
 }
 
 export function render() {
+  guide = currentGuide();
   scope = deckScope();
   buildDeck();
   const home = scope.level || currentLevel();
@@ -152,17 +181,20 @@ export function render() {
   ${breadcrumb(home, "Flashcards")}
   <div class="cards-head">
     <div><h1>Flashcards</h1><p class="muted">${intro()}</p></div>
-    <label class="deck-select">Deck <select id="deck">${deckOptions(scope.value)}</select></label>
+    ${guide ? "" : `<div class="cards-deck-picker"><label class="cards-search">Find a deck<input id="deck-search" type="search" placeholder="Search by level, lesson, or topic"></label>
+    <label class="deck-select">Deck <select id="deck">${deckOptions(scope.value)}</select></label>${scope.set?.kind === "topic" ? `<button class="link-btn" type="button" data-pin-topic aria-pressed="${isStudyPinned(scope.set.key)}">${isStudyPinned(scope.set.key) ? "★ Topic favorited" : "☆ Favorite topic"}</button>` : ""}</div>`}
   </div>
+  ${guide ? "" : deckSettings()}
   <div class="deck" id="deckbox"></div>
   <div class="card-actions" id="cardActions">
-    <button class="btn ghost" type="button" data-again>Again</button>
+    <button class="btn ghost" type="button" data-again>${guide ? "Review later" : "Again"}</button>
     <button class="spk big" type="button" id="cardSay" data-say="" aria-label="Play audio">${SPEAKER_ICON}</button>
     <button class="btn" type="button" data-known>I knew it</button>
   </div>
   <div class="meter" aria-hidden="true"><i id="cardMeter"></i></div>
   <p class="muted center small num" id="cardCount" style="margin-top:10px"></p>
-  <p class="muted center small" id="cardHint">Swipe right if you knew it, left to see it again. With the card selected, the arrow keys work too.</p>
+  <p class="muted center small" id="cardHint">${guide ? "Swipe right if you knew it, left to review it later." : "Swipe right if you knew it, left to see it again. With the card selected, the arrow keys work too."}</p>
+  <div id="card-cue"></div>
   ${wordList()}`;
 }
 
@@ -170,6 +202,15 @@ export function render() {
 function emptyPanel() {
   const panel = (title, text, links) =>
     `<div class="panel center"><h2 class="h3">${title}</h2><p class="center">${text}</p>${links}</div>`;
+  if (guide) return panel(deckWords.length ? "Word review complete" : "Nothing due right now",
+    deckWords.length ? `You reviewed ${deckWords.length} ${deckWords.length === 1 ? "word" : "words"}.` : "Continue with the next activity.",
+    guidedContinue(guide));
+  if (sitePreferences().cardMissed && !scope.fresh && !deckWords.length) {
+    return panel("No missed words in this deck", "Turn off Only missed words in Deck settings or choose a different deck.", "");
+  }
+  if (sitePreferences().cardSize && deckWords.length) {
+    return panel("Round complete", `You finished ${deckWords.length} cards.`, '<button class="btn" type="button" data-reshuffle>Start another round</button>');
+  }
   if (scope.fresh) {
     const level = scope.level;
     const topic = nextTopic(level);
@@ -226,14 +267,16 @@ function wordSize(text) {
   return longest > 15 ? " xlong" : longest > 11 ? " long" : "";
 }
 
-function backFace(card) {
+function backFace(card, reverse) {
   const pl = pluralText(card);
   const plural = pl ? ` · <span${card.pl.length > 2 ? ' lang="de"' : ""}>${esc(pl)}</span>` : "";
   const ex = card.ex
     ? `<span class="ex"><span lang="de">${esc(card.ex.de)}</span><span class="ex-en">${esc(card.ex.en)}</span></span>`
     : "";
   const verbs = card.forms ? `<span class="verb-forms" lang="de">${esc(card.forms)}</span>` : "";
-  return `<div class="face back${card.ex ? " has-ex" : ""}"><span class="word${wordSize(card.en)}">${esc(card.en)}</span><span class="forms"><span lang="de">${esc(card.de)}</span>${plural}</span>${verbs}${ex}</div>`;
+  const answer = reverse ? card.de : card.en;
+  const cue = reverse ? card.en : card.de;
+  return `<div class="face back${card.ex ? " has-ex" : ""}"><span class="word${wordSize(answer)}" lang="${reverse ? "de" : "en"}">${esc(answer)}</span><span class="forms"><span lang="${reverse ? "en" : "de"}">${esc(cue)}</span>${plural}</span>${verbs}${ex}</div>`;
 }
 
 function drawCard() {
@@ -244,6 +287,7 @@ function drawCard() {
   const actions = document.getElementById("cardActions");
   const count = document.getElementById("cardCount");
   const meter = document.getElementById("cardMeter");
+  const cueBox = document.getElementById("card-cue");
   const cleared = deckWords.length ? (deckWords.length - deck.length) / deckWords.length : 1;
   meter.style.width = `${Math.round(cleared * 100)}%`;
   if (!deck.length) {
@@ -253,6 +297,7 @@ function drawCard() {
     actions.hidden = true;
     document.getElementById("cardHint").hidden = true;
     count.textContent = "";
+    cueBox.innerHTML = "";
     if (focusNext) box.querySelector("a, button")?.focus({ preventScroll: true });
     focusNext = false;
     return;
@@ -262,17 +307,27 @@ function drawCard() {
   document.getElementById("cardHint").hidden = false;
   const index = pos % deck.length;
   const card = deck[index];
+  const reverse = reverseWords.has(card.de);
+  const prompt = reverse ? card.en : card.de;
+  const cue = wordCue(card.de);
+  cueBox.innerHTML = `<details class="panel vocabulary-cue"><summary>${cue ? "Your memory cue" : "Add a memory cue"}</summary>
+    <label for="vocabulary-cue-text">A connection to remember <span lang="de">${esc(card.de)}</span></label>
+    <div class="sentence-form-row"><input id="vocabulary-cue-text" maxlength="120" value="${esc(cue)}"><button class="btn small ghost" type="button" data-save-word-cue>Save cue</button></div>
+    <p id="vocabulary-cue-status" class="small muted" role="status">${cue ? "Clear the text and save to remove the cue." : "Try an image, phrase, or association that makes the word easier to recall."}</p>
+  </details>`;
   box.classList.toggle('has-verb-forms', !!card.forms);
   const why = reason(card.de);
   const badge = why ? `<span class="why is-${why.kind}">${esc(why.text)}</span>` : "";
   const hint = !scope.due && !scope.fresh && knownIn([card.de]) ? "Marked known before" : "Tap to flip";
-  box.innerHTML = `<div class="flash" id="flash" tabindex="0" role="button" aria-label="${esc(card.de)}. Press Enter to flip.">
+  box.innerHTML = `<div class="flash" id="flash" tabindex="0" role="button" aria-label="${esc(prompt)}. Press Enter to flip.">
     <span class="swipe yes" aria-hidden="true">Wusste ich</span><span class="swipe no" aria-hidden="true">Nochmal</span>
     <div class="flash-inner">
-      <div class="face front">${badge}<span class="word${wordSize(card.de)}" lang="de">${esc(card.de)}</span><span class="hint">${hint}</span></div>
-      ${backFace(card)}
+      <div class="face front">${badge}<span class="word${wordSize(prompt)}" lang="${reverse ? "en" : "de"}">${esc(prompt)}</span><span class="hint">${hint}</span></div>
+      ${backFace(card, reverse)}
     </div></div>`;
-  document.getElementById("cardSay").dataset.say = card.de;
+  const audio = document.getElementById("cardSay");
+  audio.dataset.say = card.de;
+  audio.disabled = reverse;
   count.textContent = `${index + 1} of ${deck.length}`;
   const el = document.getElementById("flash");
   if (focusNext) el.focus({ preventScroll: true });
@@ -300,7 +355,11 @@ function drawCard() {
 }
 
 function flipCard() {
-  document.getElementById("flash")?.classList.toggle("flipped");
+  const card = document.getElementById("flash");
+  if (!card) return;
+  const flipped = card.classList.toggle("flipped");
+  const audio = document.getElementById("cardSay");
+  audio.disabled = reverseWords.has(audio.dataset.say) && !flipped;
 }
 
 /**
@@ -316,7 +375,7 @@ function decide(dir, { focusCard = false } = {}) {
   const done = () => {
     const index = pos % deck.length;
     rateWord(deck[index].de, dir > 0);
-    if (dir > 0) {
+    if (dir > 0 || guide) {
       deck.splice(index, 1);
       pos = deck.length ? index % deck.length : 0;
     } else {
@@ -343,12 +402,17 @@ function decide(dir, { focusCard = false } = {}) {
 export const updatesInPlace = true;
 
 export function mount(param, { sameKind } = {}) {
+  document.getElementById("deck-search")?.addEventListener("input", searchDecks);
   drawCard();
   if (focusDeckMenu) document.getElementById("deck")?.focus({ preventScroll: true });
   focusDeckMenu = false;
   if (sameKind) return;
   enter(".crumb, .cards-head > div, .deck-select", { y: 14, stagger: 0.06 });
   enter("#cardActions > *, .meter, #cardCount, #cardHint, .word-list", { y: 10, stagger: 0.05, delay: 0.25 });
+}
+
+function searchDecks(event) {
+  document.getElementById("deck").innerHTML = deckOptions(scope.value, event.target.value);
 }
 
 export function unmount() {
@@ -366,11 +430,41 @@ export function onClick(e, button) {
     return;
   }
   const d = button.dataset;
+  if (d.startCardRound !== undefined) {
+    setSitePreferences({
+      cardDirection: document.getElementById("cards-direction").value,
+      cardSize: Number(document.getElementById("cards-round-size").value),
+      cardMissed: document.getElementById("cards-missed")?.checked ?? sitePreferences().cardMissed,
+    });
+    gsap?.killTweensOf(document.getElementById("flash"));
+    const app = document.getElementById("app");
+    app.innerHTML = render();
+    refreshInterface(app);
+    mount(undefined, { sameKind: true });
+    document.getElementById("flash")?.focus({ preventScroll: true });
+    return;
+  }
+  if (d.pinTopic !== undefined && scope.set?.kind === "topic") {
+    const pinned = toggleStudyPin(scope.set.key);
+    button.setAttribute("aria-pressed", String(pinned));
+    button.textContent = pinned ? "★ Topic favorited" : "☆ Favorite topic";
+    return;
+  }
+  if (d.saveWordCue !== undefined && deck.length && !deciding) {
+    const field = document.getElementById("vocabulary-cue-text");
+    setWordCue(deck[pos % deck.length].de, field.value);
+    const status = document.getElementById("vocabulary-cue-status");
+    status.textContent = field.value.trim() ? "Memory cue saved." : "Memory cue removed.";
+    field.closest("details").querySelector("summary").textContent = field.value.trim() ? "Your memory cue" : "Add a memory cue";
+    return;
+  }
   // e.detail is 0 when a button is pressed from the keyboard: keep focus on it then
   if (d.known !== undefined) decide(1, { focusCard: e.detail > 0 });
   else if (d.again !== undefined) decide(-1, { focusCard: e.detail > 0 });
   else if (d.reshuffle !== undefined) {
-    document.getElementById("app").innerHTML = render();
+    const app = document.getElementById("app");
+    app.innerHTML = render();
+    refreshInterface(app);
     mount();
   }
 }
@@ -395,7 +489,7 @@ export function onKeydown(e) {
 }
 
 export function onChange(e) {
-  if (e.target.id !== "deck") return;
+  if (e.target.id !== "deck" || !e.target.value) return;
   focusDeckMenu = !menuByPointer;
   location.hash = `#/karten?l=${e.target.value}`;
 }

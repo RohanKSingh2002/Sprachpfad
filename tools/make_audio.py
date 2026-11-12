@@ -81,6 +81,13 @@ def spoken_texts():
             texts.setdefault(item["audioText"])
         for item in test["speaking"]:
             texts.setdefault(item["modelAnswer"])
+    practice_file = DATA / "practice.json"
+    if practice_file.exists():
+        practice = json.loads(practice_file.read_text(encoding="utf-8"))
+        for sets in practice["levels"].values():
+            for practice_set in sets:
+                if practice_set.get("audioText"):
+                    texts.setdefault(practice_set["audioText"])
     return [t for t in texts if t.strip()]
 
 

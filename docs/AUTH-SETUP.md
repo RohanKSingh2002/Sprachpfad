@@ -6,9 +6,15 @@ The website contains Google sign-in, account details and sign-out, plus private 
 
 Both SQL migrations in `supabase/migrations/` have been applied to that project. The public project URL and publishable key are in `js/config.js`. The official Supabase browser SDK is pinned to **2.118.0** in `js/vendor/`, with its MIT license alongside it. No build step is required.
 
-**Local Google sign-in is working.** On 25 October 2026, the public Supabase settings confirmed that Google was enabled, and the user completed a Google sign-in and reported reaching their profile. The user also confirmed saving the local redirect URLs, Google test-user entry and basic identity scopes. The website is still in local development, with Google's audience set to Testing.
+**Local Google sign-in is working.** On 25 October 2026, the public Supabase settings confirmed that Google was enabled, and the user completed a Google sign-in and reported reaching their profile. The user also confirmed saving the local redirect URLs, Google test-user entry and basic identity scopes.
 
-Cross-device progress sync has not been verified yet. No automated tests were added or run for this change. Complete the checks under **Before publishing** before a public release.
+The public website is hosted at **https://sprachpfad-learn-deutsch.pages.dev**. On 27 October 2026, that origin was added to the existing **Sprachpfad Web** Google OAuth client and saved as the app homepage. The existing localhost origin and Supabase callback were preserved. Supabase's Site URL is now `https://sprachpfad-learn-deutsch.pages.dev/`, with that root and `/index.html` added to its redirect allowlist alongside the two localhost URLs.
+
+**Production Google sign-in is working.** The existing Google account completed sign-in on the Cloudflare site and returned to `/#/profile`. Its existing progress loaded with 10 known words, 14 practice answers and the saved-to-account status. A normal A2 navigation saved successfully: a read-only database check confirmed the account revision advanced from 17 to 18 and the selected level changed to A2. A1 was selected again afterward. No lesson answers or completion records were entered for this check.
+
+Google's external audience was moved to **In production** on 28 October 2026. The client has only the basic email, profile and openid scopes; Verification Center confirms that data-access verification is not required. The approved public About, Privacy policy and Terms pages are live and saved in Google Branding. Search Console confirms website ownership, but Google's separate branding check requests a 24-hour wait for its ownership record to update before retrying. The app's branding is not approved or shown to users yet. See [the release record and remaining step](PUBLIC-RELEASE-REVIEW.md).
+
+**The basic cross-device progress check passed on 27 October 2026.** The user signed in with the same Google account on their phone and confirmed both 10 known words and “Progress saved to your account,” matching the desktop profile. Combined with the verified desktop database writes, this confirms account saving and progress retrieval on a second physical device. Concurrent edits, offline recovery and conflicts were not exercised in this check. No automated tests were added or run for this configuration-only change. The broader checks under **Before publishing** remain a release checklist, not completed test results.
 
 ## 1. Create the Google sign-in client
 
@@ -26,12 +32,13 @@ Under **Clients**, create an OAuth client of type **Web application**:
 
 Save its **Client ID** and **Client secret** privately. Enter them directly into Supabase's Google provider settings, enable Google, and save. The secret belongs in Supabase, never in this website, Git, or a chat message. [Official Google provider setup](https://supabase.com/docs/guides/auth/social-sign-in/auth-google)
 
-## 2. Allow the local website address in Supabase
+## 2. Allow production and local website addresses in Supabase
 
 Open the Sprachpfad project → **Authentication → URL Configuration**.
 
-- Site URL: `http://localhost:8000/`
-- Redirect URLs: `http://localhost:8000/` and `http://localhost:8000/index.html`
+- Site URL: `https://sprachpfad-learn-deutsch.pages.dev/`
+- Production redirect URLs: `https://sprachpfad-learn-deutsch.pages.dev/` and `https://sprachpfad-learn-deutsch.pages.dev/index.html`
+- Local redirect URLs: `http://localhost:8000/` and `http://localhost:8000/index.html`
 
 These are the website addresses Supabase returns to after Google finishes. Keep the host and port consistent: `localhost` and `127.0.0.1` have different browser storage. If you use another port, add its exact addresses before starting sign-in. [Supabase redirect configuration](https://supabase.com/docs/guides/auth/redirect-urls)
 

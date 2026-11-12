@@ -15,14 +15,15 @@ export function profileAccount() {
   if (!user) return `<section class="account-strip" aria-label="Save your progress">
     <div><h2>Make your progress feel at home.</h2><p class="muted">Sign in to keep your learning together across devices.</p></div>
     <a class="btn small" href="#/login">Sign in with Google</a>
-  </section><p class="profile-save-note">You're practising on this device. Your existing progress stays here until you choose to add it to an account.</p>`;
+  </section><p class="profile-save-note">You're practising on this device. Your existing progress stays here until you choose to add it to an account.</p>
+  <div class="account-sync-row"><button class="link-btn" data-account-action="certificate">Download progress certificate (PDF)</button></div>`;
   const name = String(user.user_metadata?.full_name || user.user_metadata?.name || "Your account");
   return `<section class="account-strip" aria-label="Your account">
     <div class="account-identity"><span class="account-initial" aria-hidden="true">${esc(Array.from(name)[0])}</span>
       <div><h2>${esc(name)}</h2><p class="muted">${esc(user.email || "Signed in with Google")}</p></div></div>
-    <button class="btn small ghost" data-account-action="signout">Sign out</button>
+    <a class="btn small ghost" href="#/settings">Settings</a>
   </section>
-  <div class="account-sync-row">${saveStatus()}<button class="link-btn" data-account-action="retry">Sync now</button><button class="link-btn" data-account-action="download">Download progress</button></div>
+  <div class="account-sync-row">${saveStatus()}<button class="link-btn" data-account-action="retry">Sync now</button><button class="link-btn" data-account-action="certificate">Download progress certificate (PDF)</button></div>
   ${canImportBrowserProgress() ? `<section class="account-import" aria-labelledby="import-title">
     <h2 id="import-title">Already been practising here?</h2><p>Add this browser's existing progress to your empty account, or start fresh. Your browser's original copy is kept.</p>
     <div class="account-actions"><button class="btn small" data-account-action="import">Use this browser's progress</button><button class="btn small ghost" data-account-action="skip-import">Start fresh</button></div>
@@ -34,7 +35,7 @@ export function render(mode = "login") {
   const message = authMessage();
   return `<section class="login-page" aria-labelledby="login-title">
     <div class="logo login-brand"><i aria-hidden="true"></i><span>Sprachpfad</span></div>
-    <div class="login-card"><h1 id="login-title">Welcome to Sprachpfad</h1><p class="muted">Sign in or create an account to keep your German learning with you.</p>
+    <div class="login-card"><h1 id="login-title">Welcome to Sprachpfad</h1><p class="muted">Practise German A1–B1 with lessons, listening, flashcards and mock tests. Sign in to keep your learning with you.</p>
       <button class="google-signin" type="button" data-account-action="signin">${GOOGLE}<span>Continue with Google</span></button>
       <p class="login-note">New here? Your first Google sign-in creates your account.</p>
       <p id="account-error" class="account-error" role="alert"${message ? "" : " hidden"}>${esc(message)}</p>
@@ -43,6 +44,7 @@ export function render(mode = "login") {
       <button class="login-continue" type="button" data-account-action="continue-device">Continue on this device <span aria-hidden="true">→</span></button>
       <p class="login-note">Your progress stays in this browser.</p>
     </div>
+    <nav class="site-information login-information" aria-label="Site information"><a href="about.html">About</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></nav>
   </section>`;
 }
 
@@ -58,7 +60,7 @@ function renderStatus() {
       <button class="link-btn" data-account-action="download">Download this device's copy</button>`
     : !loading ? '<button class="btn" data-account-action="retry">Try again</button>' : '<span class="account-loading" aria-hidden="true"></span>'}
     <p id="account-error" class="account-error" role="alert" hidden></p>
-    <button class="link-btn account-notice-signout" data-account-action="signout">Sign out</button>
+    <a class="link-btn account-notice-signout" href="#/settings">Open Settings</a>
   </section>`;
 }
 

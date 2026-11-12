@@ -1,33 +1,54 @@
 /* Base: colour tokens, reset, typography, layout, navigation, buttons, toast and footer */
 
-/* Colour tokens */
+/* Dark theme with the Sprachpfad yellow for primary actions and study indicators.
+   Existing view tokens below are aliases, so every study page shares the theme. */
 :root {
-  --bg: #f5f6f8;
-  --surface: #ffffff;
-  --sunken: #e9edf2;
-  --text: #16233f;
-  --muted: #566178;
-  --line: #d9dfe8;
-  --signal: #f2c02a;
-  --on-signal: #16233f;
-  --btn-bg: #40577e;
-  --btn-fg: #ffffff;
-  --btn-hover: #344a70;
-  --ok: #1e8757;
-  --ok-bg: #e2f2e9;
-  --err: #ba3a31;
-  --err-bg: #fae7e5;
-  --board: #e9edf2;
-  --flap: #ffffff;
-  --flap-ink: #16233f;
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --primary: #fafafa;
+  --primary-foreground: #18181b;
+  --secondary: #27272a;
+  --secondary-foreground: #f4f4f5;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --border: #2e2e32;
+  --input: #71717a;
+  --ring: var(--brand);
+  --destructive: #fca5a5;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --brand: #f2c02a;
+  --bg: var(--background);
+  --surface: var(--card);
+  --sunken: var(--secondary);
+  --text: var(--foreground);
+  --muted: var(--muted-foreground);
+  --line: var(--border);
+  --signal: var(--brand);
+  --on-signal: var(--primary-foreground);
+  --btn-bg: var(--signal);
+  --btn-fg: var(--primary-foreground);
+  --btn-hover: #ffd35b;
+  --ok: #6ee7b7;
+  --ok-bg: #102c23;
+  --err: var(--destructive);
+  --err-bg: #35191e;
+  --board: var(--secondary);
+  --flap: var(--surface);
+  --flap-ink: var(--text);
+  /* Certificates keep a printable paper palette. */
   --paper: #fbfaf7;
   --ink: #16233f;
-  --stamp: #2d3a8c;
-  --shadow: 0 2px 6px -2px rgba(22, 35, 63, 0.08), 0 26px 50px -28px rgba(22, 35, 63, 0.55);
-  --grain: 0.06;
-  --sans: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --cond: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
-  --nav-h: 60px;
+  --stamp: #d4d4d8;
+  --shadow: 0 8px 24px -12px #0009;
+  --grain: 0;
+  --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cond: var(--sans);
+  --nav-h: 68px;
   --z-sticky: 10;
   --z-nav: 20;
   --z-toast: 30;
@@ -35,16 +56,16 @@
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
-  color-scheme: light;
+  color-scheme: dark;
   /* motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   /* depth: hairline highlight on top edges, then shadow sizes */
-  --highlight: inset 0 1px 0 rgba(255, 255, 255, 0.75);
-  --shadow-1: 0 1px 2px rgba(22, 35, 63, 0.06), 0 1px 1px rgba(22, 35, 63, 0.03);
-  --shadow-2: 0 2px 4px -1px rgba(22, 35, 63, 0.06), 0 12px 28px -14px rgba(22, 35, 63, 0.28);
-  --btn-shadow: 0 1px 2px rgba(22, 35, 63, 0.24), 0 10px 22px -12px rgba(22, 35, 63, 0.6);
-  --spot: rgba(242, 192, 42, 0.16);
+  --highlight: inset 0 1px 0 #ffffff03;
+  --shadow-1: 0 1px 2px #0003;
+  --shadow-2: 0 4px 12px #0003;
+  --btn-shadow: 0 1px 2px #0003;
+  --spot: #ffffff06;
 }
 
 /* Reset and page */
@@ -68,17 +89,8 @@ body {
   min-height: 100%;
   background: var(--bg);
   color: var(--text);
-  font: 400 17px/1.55 var(--sans);
+  font: 400 16px/1.65 var(--sans);
   -webkit-font-smoothing: antialiased;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: var(--grain);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 img,
 svg {
@@ -92,8 +104,8 @@ button {
   color: inherit;
 }
 :focus-visible {
-  outline: 3px solid var(--signal);
-  outline-offset: 2px;
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
 }
 main:focus {
   outline: none;
@@ -132,22 +144,22 @@ h1,
 h2,
 h3 {
   font-family: var(--cond);
-  font-weight: 700;
-  line-height: 1.04;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
   margin: 0 0 0.4em;
   text-wrap: balance;
 }
 h1 {
-  font-size: clamp(40px, 6.2vw, 66px);
+  font-size: clamp(30px, 4.2vw, 42px);
 }
 h2 {
-  font-size: clamp(28px, 3.6vw, 38px);
+  font-size: clamp(23px, 3vw, 30px);
 }
 h3,
 .h3 {
-  font-size: 22px;
-  letter-spacing: 0;
+  font-size: 20px;
+  letter-spacing: -0.02em;
 }
 p {
   margin: 0 0 1em;
@@ -191,18 +203,19 @@ header.nav {
 }
 .logo {
   flex-shrink: 0;
-  font: 700 25px/1 var(--cond);
+  font: 600 20px/1 var(--sans);
+  letter-spacing: -0.04em;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 9px;
 }
 .logo i {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--signal);
-  box-shadow: 0 0 0 3.5px var(--text);
+  background: var(--brand);
+  box-shadow: 0 0 0 3px var(--secondary);
   display: inline-block;
 }
 .topnav {
@@ -214,8 +227,9 @@ header.nav {
   white-space: nowrap;
   text-decoration: none;
   padding: 8px 13px;
-  border-radius: 9px;
-  font-weight: 600;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 14px;
   color: var(--muted);
   transition:
     color 0.2s,
@@ -223,6 +237,7 @@ header.nav {
 }
 .topnav a:hover {
   color: var(--text);
+  background: var(--accent);
 }
 .topnav a[aria-current="page"] {
   color: var(--text);
@@ -328,43 +343,31 @@ header.nav {
   }
 }
 
-/* Buttons and links: lift on hover, press down on click */
+/* Shared primary, outline and text actions. */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border: 0;
+  border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
   background: var(--btn-bg);
   color: var(--btn-fg);
-  font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 12px;
-  min-height: 48px;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    var(--btn-shadow);
-  transition:
-    background-color 0.25s,
-    box-shadow 0.35s var(--ease-out),
-    translate 0.35s var(--ease-out),
-    scale 0.35s var(--ease-out);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  min-height: 44px;
+  box-shadow: var(--shadow-1);
+  transition: background-color .15s, border-color .15s, color .15s;
 }
-/* hover and press use the translate/scale properties, so they never fight GSAP's transforms */
+/* Keep controls steady while their colour responds to interaction. */
 .btn:hover {
   background: var(--btn-hover);
-  translate: 0 -2px;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    var(--btn-shadow),
-    0 16px 30px -18px color-mix(in srgb, var(--btn-bg) 70%, transparent);
 }
 .btn:active {
-  translate: 0 0;
-  scale: 0.97;
-  transition-duration: 0.08s;
+  filter: brightness(.94);
 }
 .btn-arrow {
   width: 18px;
@@ -376,18 +379,20 @@ header.nav {
   transform: translateX(3px);
 }
 .btn.ghost {
-  background: transparent;
+  background: var(--surface);
   color: var(--text);
-  box-shadow: inset 0 0 0 2px var(--line);
+  border-color: var(--input);
+  box-shadow: none;
 }
 .btn.ghost:hover {
-  box-shadow: inset 0 0 0 2px var(--text);
+  background: var(--accent);
+  border-color: var(--ring);
 }
 .btn.small {
   min-height: 38px;
   padding: 7px 14px;
-  font-size: 15px;
-  border-radius: 10px;
+  font-size: 14px;
+  border-radius: var(--radius-md);
 }
 .btn:disabled {
   opacity: 0.45;
@@ -395,7 +400,7 @@ header.nav {
   translate: none;
   scale: none;
 }
-/* Text link: yellow underline; on hover a dark line sweeps across it from the left */
+/* Text links share the same quiet hierarchy as secondary actions. */
 .tlink {
   font-weight: 600;
   color: var(--text);
@@ -432,7 +437,7 @@ header.nav {
 
 /* Breadcrumb */
 .crumb {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--muted);
   margin: 28px 0 10px;
 }
@@ -520,6 +525,11 @@ html.lenis {
   gap: 16px;
   flex-wrap: wrap;
 }
+.site-information { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; font-size: 14px; }
+.site-information a { text-underline-offset: 4px; }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--btn-bg); }
+::selection { background: #52525b; color: #fff; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

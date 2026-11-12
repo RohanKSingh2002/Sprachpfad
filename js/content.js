@@ -13,13 +13,18 @@ export const ALL_LESSONS = [];
 export const ALL_TOPICS = [];
 /** Lessons and topics by key: "a2-3" is A2 lesson 3, "a1-food" the A1 topic "food". */
 export const SETS = new Map();
-/** Every distinct German word, lowest level first. */
+/** Every distinct word available in flashcards, lowest level first. */
 export const ALL_WORDS = [];
 /**
  * Each German word's entry ({ de, en, pl?, ex?, forms? }) and `from`, the lesson or topic that introduces it:
  * the lowest level that teaches the word, and within a level its lessons before its topics.
  */
 export const WORDS = new Map();
+const excludedFlashcardTopics = new Set(["a1-alphabet", "a1-numbers"]);
+const archivedFlashcardWords = new Set();
+export const isFlashcardSet = set => Boolean(set) && !excludedFlashcardTopics.has(set.key);
+/** Existing saves may still contain cards from a retired deck. */
+export const isSavedWord = word => WORDS.has(word) || archivedFlashcardWords.has(word);
 /** Home page questions and answers. */
 export const FAQ = [];
 
@@ -30,7 +35,7 @@ async function getJSON(file) {
 }
 
 export async function loadContent() {
-  const [levels, faq] = await Promise.all([getJSON("levels.json"), getJSON("faq.json")]);
+  const [levels, faq, practice] = await Promise.all([getJSON("levels.json"), getJSON("faq.json"), getJSON("practice.json")]);
   const files = await Promise.all(levels.map((lv) => getJSON(`${lv.id}.json`)));
   const courses = await Promise.all(levels.map((lv) => lv.courseFile ? getJSON(lv.courseFile) : null));
 
@@ -42,7 +47,7 @@ export async function loadContent() {
     const lessons = course ? course.lessonOrder.map((id) => byId.get(id)) : baseLessons;
     if (lessons.some((l) => !l)) throw new Error(`The ${meta.name} course references a missing lesson`);
     const test = course?.test || baseTest;
-    const level = { ...meta, index, lessons, topics, test, course };
+    const level = { ...meta, index, lessons, topics, test, course, practice: practice.levels[meta.id] || [] };
     test.total = test.listening.length + (test.reading.groups ? test.reading.groups.reduce((n, g) => n + g.items.length, 0) : test.reading.statements.length) + (test.form?.fields.length || 0);
     lessons.forEach((lesson, position) => {
       lesson.level = level;
@@ -69,6 +74,10 @@ export async function loadContent() {
   LEVELS.forEach((level) =>
     [...level.lessons, ...level.topics].forEach((set) => {
       SETS.set(set.key, set);
+      if (!isFlashcardSet(set)) {
+        set.vocab.forEach(word => archivedFlashcardWords.add(word.de));
+        return;
+      }
       set.vocab.forEach((w) => {
         const entry = WORDS.get(w.de);
         if (!entry) WORDS.set(w.de, { ...w, from: set });

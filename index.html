@@ -2,49 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="google-site-verification" content="W5liFwU3gXPZowmWTqvEG51VyeEx2mwh6NXR4Mh5_Gg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Sprachpfad: German A1–B1 practice</title>
     <meta
       name="description"
-      content="Personal German practice from A1 to B1: grammar lessons, fill-in and translation practice, vocabulary matching, swipeable flashcards and mock tests."
+      content="Personal German practice from A1 to B1: grammar lessons, original practice workbooks, reading, listening, guided writing, flashcards and mock tests."
     />
-    <meta name="theme-color" content="#16233F" />
+    <meta name="theme-color" content="#f5f6f8" />
     <meta property="og:title" content="Sprachpfad: German A1–B1 practice" />
-    <meta property="og:description" content="Grammar lessons, fill-in and translation practice, vocabulary matching, flashcards and mock tests for German A1, A2 and B1." />
+    <meta property="og:description" content="Grammar lessons, original practice workbooks, reading, listening, guided writing, flashcards and mock tests for German A1, A2 and B1." />
     <meta property="og:type" content="website" />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%23F2C02A' stroke='%2316233F' stroke-width='5'/%3E%3C/svg%3E"
     />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/lesson.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/test.css" />
-    <link rel="stylesheet" href="css/practice.css" />
+    <script src="js/theme-init.js?v=20261106-study3"></script>
+    <link rel="stylesheet" href="css/base.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/components.css?v=20261104-settings1" />
+    <link rel="stylesheet" href="css/home.css?v=20261112-shortcuts2" />
+    <link rel="stylesheet" href="css/lesson.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/cards.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/test.css?v=20261104-settings1" />
+    <link rel="stylesheet" href="css/practice.css?v=20261112-dark1" />
     <link rel="stylesheet" href="css/course.css?v=20261112-weekcards1" />
-    <link rel="stylesheet" href="css/profile.css" />
-    <link rel="stylesheet" href="css/account.css" />
+    <link rel="stylesheet" href="css/profile.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/account.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/light.css?v=20261112-shortcuts2" />
+    <link rel="stylesheet" href="css/settings.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/sentences.css?v=20261112-dark1" />
   </head>
   <body class="entry-screen">
     <a class="skip" href="#app">Skip to content</a>
     <header class="nav">
       <div class="wrap">
         <a class="logo" href="#/" aria-label="Sprachpfad home"><i aria-hidden="true"></i><span>Sprachpfad</span></a>
-        <nav class="topnav" aria-label="Main">
-          <a href="#/" data-nav="home">Home</a>
-          <a href="#/a1/roadmap" data-nav="lessons">Lessons</a>
-          <a href="#/karten" data-nav="karten">Flashcards</a>
-          <a href="#/practice" data-nav="practice">Practice</a>
-          <a href="#/test" data-nav="test">Mock test</a>
-          <a href="#/profile" data-nav="profile">Profile</a>
+        <div class="profile-navigation">
+          <button class="profile-menu-button" id="profile-menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="profile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></button>
+          <nav class="profile-menu" id="profile-menu" aria-label="Main navigation" hidden>
+            <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+            <a href="#/roadmap" data-nav="lessons"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 3h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v16h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z"/></svg><span>Lessons</span></a>
+            <a href="#/karten" data-nav="karten"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="7.5" width="13" height="13" rx="2"/><path d="M7.5 4h10.5a2 2 0 0 1 2 2v10.5"/></svg><span>Flashcards</span></a>
+            <a href="#/practice" data-nav="exercises"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16M4 12h10M4 18.5h7m5-2.5 2 2 4-5"/></svg><span>Exercises</span></a>
+            <a href="#/sentences" data-nav="sentences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16M4 10h11M4 15h16M4 20h9"/><path d="m17 8 3 2-3 2"/></svg><span>Sentence practice</span></a>
+            <a href="#/test" data-nav="test"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="16.5" rx="2"/><path d="M9 3h6v3H9zm-.2 10.2 2.3 2.3 4.4-4.6"/></svg><span>Mock test</span></a>
+            <hr><a href="#/profile" data-nav="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>Profile</span></a>
+            <a href="#/settings" data-nav="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 3-.7 2-2 .9-2-.4-2 3.5 1.3 1.6v2.8L2.8 15l2 3.5 2-.4 2 .9.7 2h4l.7-2 2-.9 2 .4 2-3.5-1.3-1.6v-2.8L20.2 9l-2-3.5-2 .4-2-.9-.7-2z"/><circle cx="11.5" cy="12" r="3"/></svg><span>Settings</span></a>
+          </nav>
+        </div>
+        <nav class="primary-nav" aria-label="Quick navigation">
+          <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+          <a href="#/roadmap" data-nav="lessons"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16M3 3h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v16h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z"/></svg><span>Lessons</span></a>
+          <a href="#/practice" data-nav="exercises"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16M4 12h10M4 18.5h7m5-2.5 2 2 4-5"/></svg><span>Practice</span></a>
+          <a href="#/profile" data-nav="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg><span>Profile</span></a>
         </nav>
       </div>
     </header>
@@ -52,6 +69,8 @@
     <main id="app" class="wrap" tabindex="-1">
       <section class="boot" id="boot">
         <p class="muted">Opening Sprachpfad…</p>
+        <p>German A1–B1 practice with grammar lessons, listening, flashcards and mock tests.</p>
+        <nav class="site-information" aria-label="Site information"><a href="about.html">About</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></nav>
         <noscript><p>Sprachpfad needs JavaScript to run.</p></noscript>
       </section>
     </main>
@@ -59,49 +78,11 @@
     <footer class="foot">
       <div class="wrap">
         <span id="save-status">Sprachpfad. Your progress is saved on this device.</span>
-        <button class="link-btn" id="reset" type="button">Reset progress</button>
+        <nav class="site-information" aria-label="Site information"><a href="about.html">About</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></nav>
       </div>
     </footer>
 
-    <nav class="dock" aria-label="Main, mobile">
-      <a href="#/" data-nav="home">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z" />
-        </svg>
-        Home
-      </a>
-      <a href="#/karten" data-nav="karten">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3.5" y="7.5" width="13" height="13" rx="2" />
-          <path d="M7.5 4h10.5a2 2 0 0 1 2 2v10.5" />
-        </svg>
-        Cards
-      </a>
-      <a href="#/practice" data-nav="practice">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 5.5h16M4 12h10M4 18.5h7" />
-          <path d="m16 16 2 2 4-5" />
-        </svg>
-        Practice
-      </a>
-      <a href="#/test" data-nav="test">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="4.5" y="4.5" width="15" height="16.5" rx="2" />
-          <path d="M9 3h6v3H9z" />
-          <path d="m8.8 13.2 2.3 2.3 4.4-4.6" />
-        </svg>
-        Test
-      </a>
-      <a href="#/profile" data-nav="profile">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="8" r="3.5" />
-          <path d="M5 21v-2a7 7 0 0 1 14 0v2" />
-        </svg>
-        Profile
-      </a>
-    </nav>
-
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
       // Browsers block JavaScript modules on pages opened straight from disk, so explain how to open the site.

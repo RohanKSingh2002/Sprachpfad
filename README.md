@@ -1,29 +1,35 @@
 # Sprachpfad
 
-A personal German practice site from A1 to B1, themed as a train line: every lesson is a stop, and each level is a stretch of the line that ends in a mock exam. Plain HTML, CSS and JavaScript modules, no build step.
+A personal German practice site from A1 to B1 with a focused study home, the original light theme and a neutral dark option inspired by shadcn/ui. Plain HTML, CSS and JavaScript modules, no build step for development.
+
+**Live website:** [Open Sprachpfad](https://sprachpfad-learn-deutsch.pages.dev), hosted on Cloudflare Pages. Guest access, Google sign-in and account saves work on the live site. The user confirmed the same saved progress on their phone on 27 October 2026. Google sign-in is **In production**, and the approved About, Privacy policy and Terms pages are published. Google's separate branding approval awaits an ownership-record update and a retry after 24 hours. See [hosting and update instructions](docs/HOSTING.md).
 
 ## Features
 
-- **Three levels, all open**: A1 (32 sequenced lessons), A2 (8 lessons) and B1 (9 lessons). Switch levels next to the line on the home page; the site remembers the one you last worked on
+- **Three levels, all open**: A1 (32 sequenced lessons), A2 (18 lessons) and B1 (18 lessons). Switch levels on the Lessons or Practice page; the site remembers the one you last worked on
+- **Appearance settings**: the original light theme is the default; Settings offers a dark theme with charcoal cards and Inter typography. Theme choice is saved per browser. Sign-out also lives in Settings. See [the theme reference and validation](docs/DARK-THEME.md).
 - **A1 curriculum and roadmap**: 16 modules arranged into 8-, 16- or 24-week plans. Changing pace regroups the existing lessons and checkpoints into weekly targets, with six study days and one flexible review or rest day. Progress is preserved; the remaining daily plan starts at the first unfinished target. Each module has an original listening/reading workshop plus writing and partner-speaking tasks. [Read the complete curriculum](docs/A1-CURRICULUM.md)
-- **Split-flap departure board** that flips from the last stop to your next lesson, with a live station clock
-- **Today's session** at the top of the home page: A1 follows the selected pace with study, exercise, review and checkpoint days, alongside the existing vocabulary queue. Suggestions stay in place when completed that day, and earlier unfinished targets take priority after missed days. The 144-hour estimate includes repeated practice, partner conversation, reviewed writing and different official papers; it is not the amount of unique content in the app. A2 and B1 keep their short vocabulary, grammar and exercise sessions
+- **A2/B1 learning paths**: nine A2 everyday communication modules and nine B1 communication modules, each with an original four-skill checkpoint, pronunciation practice, outcomes and a study plan. A1 also has 16 transfer activities with review links; all three levels include learning strategies. The A2 path includes ten additional lessons developed after reviewing the A2 notebook's teaching topics. [Read the reference-based update and its scope](docs/COURSE-REFERENCE-UPDATE.md)
+- **A focused home page** with one recommended Start action: due vocabulary review first, otherwise the next course activity. Three smaller shortcuts open a lesson, flashcards or a practice set directly. The daily plan and study questions expand only when needed; course maps live on Lessons and activity statistics on Profile.
+- **Today's plan** follows the selected pace with study, exercise, review and checkpoint days. Earlier unfinished targets take priority after missed days. Planned study hours include repeated practice, partner conversation and reviewed writing; they are not the amount of unique content in the app
 - **Word topics**: 42 sets of everyday vocabulary (25 for A1, 6 for A2, 11 for B1), from the alphabet, numbers and dates to housing, work, health and exam instructions. Entries include an English meaning, noun plurals, example sentences and A1 verb reference forms
 - **Review queue (spaced repetition)**: new words join the queue when you first answer them, and a finished lesson adds all its words. A word you know comes back after 1, 3, 7, 14 and then 30 days; a word you miss comes back the same day. The **Due today** deck shows what's due, each card says why it's back ("Missed last time", "Last seen 3 days ago"), and the Flashcards link shows how many are waiting
+- **Sentence practice and personal collections**: save lesson examples, review checkpoint text imports, or add your own bilingual pairs. Under **Home → Sentence review**, choose active recall, listening, or word building. Filter by text, favorites, due status or rating, sort by difficulty, or choose a range. Listening supports repeat counts, speed, pauses, looping, round playback and optional English prompts. Recall ratings schedule the next review. Collections, settings and review dates sync with account progress.
+- **Personal study tools**: choose a daily goal in minutes or practice actions and download a repeating calendar reminder from Settings. Home shows goal progress, recent lessons and favorite lessons or topics. Profile shows 7- or 30-day study activity. Flashcards can store a private memory cue for each word.
 - **Route map**: one line showing your progress through A1, A2 and B1, with links to each level and any certificates
-- **Word ticker** further down the home page: words from your level glide past like a platform display; tap one to hear it
-- **Grammar lessons** with tables, rules and example sentences read aloud in German
+- **Grammar lessons** with tables, rules and example sentences read aloud in German. The sentence practice asks learners to listen, repeat aloud and recall the English meaning before revealing it
 - **German audio**: locally generated recordings cover the spoken course lines. A1 mock dialogues alternate two distinct German voices. Browser speech is a fallback; official exam recordings are linked for further rehearsals. [Voice credits](audio/VOICE-CREDITS.md)
 - **Exercises**: shuffled multiple choice, clearly cued fill-in tasks, word order with accepted natural alternatives, listening and writing with model answers
-- **Level-wide practice**: extra fill-in questions, English-to-German sentence translation with ungraded model comparison, and vocabulary matching for A1, A2 and B1
+- **Practice workbook**: 30 original focused sets across A1, A2 and B1, with 126 exercise cards covering grammar, vocabulary, reading, listening and writing. Includes connected cloze, sentence building, matching, contextual choices, three recorded messages and six guided writing tasks. Finite rounds preserve answers, explain corrections and offer separate retries for missed exercises. Writing uses model comparison and self-review. [Read the practice update](docs/PRACTICE-UPDATE.md)
 - **Instant answer checking**, including umlaut spellings like ae/oe/ue/ss
 - **Swipeable flashcards** for what's due, today's new words, a topic, a lesson, a level or everything: swipe right if you knew it, left to see it again. With the card selected, the arrow keys work too (they leave buttons, menus and the browser's Alt+← alone). The back of a card shows the meaning, plural, available A1 verb forms and an example sentence; new A1 words follow the active module, then earlier gaps; under a topic deck, a word list lets you hear every word and example
-- **Profile and progress**: a dedicated Profile page with the 17-week practice calendar, day streak, lessons completed, words known, progress by level and mock test results. The home page keeps a compact progress summary
+- **Profile and progress**: a dedicated Profile page with the 17-week practice calendar, day streak, lessons completed, words known, progress by level and mock test results
+- **Downloadable progress certificate**: the Profile button creates a minimal PDF with the learner's name, issue date, saved totals, level progress and best current mock-test scores. Extra pages list completed lessons and recorded checkpoint reviews. Generation stays in the browser and does not change progress; the recovery screen retains its separate JSON backup action. Validate with `node tools/check_progress_certificate.mjs`.
 - **Welcome screen**: new visitors choose Google sign-in/sign-up or **Continue on this device** before entering the website. Navigation appears after the choice; guest access lasts for the tab's session, and returning signed-in users go straight into the site
-- **Google accounts**: a sign-in page and account controls, with private Supabase progress sync, explicit import of existing browser progress, offline save status and conflict handling. Local Google sign-in has been completed successfully; cross-device sync and production setup remain to be verified. See [account setup](docs/AUTH-SETUP.md)
+- **Google accounts**: a sign-in page and account controls, with private Supabase progress sync, explicit import of existing browser progress, offline save status and conflict handling. Google sign-in, existing progress loading and saving have been checked on the Cloudflare website. The user also confirmed 10 known words and the saved-to-account status on their phone using the same Google account. See [account setup](docs/AUTH-SETUP.md)
 - **A mock test for each level**: A1 has 15 listening items, 15 reading items, five form fields, a short-message task, word-card speaking rounds and a written-practice timer. Optional rehearsal mode applies listening playback limits and hides transcripts/models until the objective section is complete. Reviewed writing/speaking scores can produce a practice estimate; automatic scores and certificates describe objective practice only
-- **Motion**: the home page opens with a short sequence (the headline rises, the board flips, the line draws itself stop by stop), pages fade into each other, sections reveal as you scroll, and desktop wheel scrolling is smoothed. Lessons and tests move calmly so studying stays easy
-- Mobile bottom navigation, German text tagged for screen readers. With reduced motion turned on in your system settings, everything appears without animation
+- **Motion**: Home shows its Start button immediately. Other pages use gentle transitions, flashcards flip, and desktop wheel scrolling is smoothed.
+- A circular profile button opens navigation on desktop and mobile, including the separate Settings page. German text is tagged for screen readers. With reduced motion turned on in your system settings, everything appears without animation
 - Guest progress is saved in the browser (localStorage); account progress uses a separate cache and Supabase. Saves from earlier versions are converted automatically
 
 ## What each level covers
@@ -31,8 +37,8 @@ A personal German practice site from A1 to B1, themed as a train line: every les
 | Level | Lessons |
 | --- | --- |
 | A1 | Sounds and spelling, personal details, present verbs and questions, articles and possession, time, routines, food, shopping, modals and requests, common object pronouns and dative phrases, directions, housing, work, health, travel, weather, invitations, selected past forms, reading/listening strategies, forms, short messages and spoken interaction |
-| A2 | modal verbs, Perfekt with haben, Perfekt with sein (and war, hatte), dative, two-way prepositions, weil/dass/wenn, reflexive verbs, comparisons |
-| B1 | Präteritum, Konjunktiv II, passive, relative clauses, verbs with prepositions, als/wenn/nachdem, zu and um … zu, adjective endings, obwohl/trotzdem/deshalb |
+| A2 | Modal verbs, Perfekt, dative, two-way prepositions, weil/dass/wenn, comparisons, common Präteritum forms, als/wenn, indirect questions, polite requests, adjective endings, zu-infinitives, prepositional verbs, accusative/dative reflexive patterns, short messages and joint planning |
+| B1 | Präteritum, Konjunktiv II, passive, relative clauses, verbs with prepositions, als/wenn/nachdem, infinitives and purpose clauses, adjective endings, concession, indirect questions, genitive, consequences and paired connectors, future reference, reflexives, opinions, formal requests and joint planning |
 
 | Level | Word topics |
 | --- | --- |
@@ -49,6 +55,8 @@ The site loads JavaScript modules and JSON files, which browsers only allow over
 - **Node**: run `npx serve`
 
 The learning material works on GitHub Pages or any static host. Account sign-in also needs Google and Supabase configuration; see [AUTH-SETUP.md](docs/AUTH-SETUP.md).
+
+The local `Refrence Materials` folder contains private study references and is excluded from Git. Keep it, temporary files and internal documents outside the published website directory; do not upload the whole project folder. The release script publishes only `index.html`, the About/Privacy/Terms HTML pages, `css/`, `js/`, `data/`, required `audio/` assets and the MIT licence as `LICENSE.txt`.
 
 Check all three A1 schedules, progress preservation and Home session selection with `node tools/check_course_plan.mjs`.
 
@@ -71,7 +79,7 @@ sprachpfad/
 │   ├── cards.css         flashcards
 │   ├── test.css          mock test and certificate
 │   ├── practice.css      level-wide practice page
-│   └── course.css        A1 roadmap and course sections
+│   └── course.css        shared course roadmaps and learning sections
 ├── js/
 │   ├── main.js           entry point: loads the content, restores progress, starts the router
 │   ├── content.js        loads data/*.json and builds the lookups (levels, lessons, topics, words)
@@ -97,7 +105,9 @@ sprachpfad/
 │   ├── a1.json           A1 lessons, word topics and mock test
 │   ├── a1-course.json    generated A1 extension, sequence, workshops and assessment
 │   ├── a2.json           A2 lessons, word topics and mock test
+│   ├── a2-course.json    A2 extension lessons, modules, support and checkpoints
 │   ├── b1.json           B1 lessons, word topics and mock test
+│   ├── b1-course.json    expanded B1 sequence, lessons, support and checkpoints
 │   └── faq.json          home page questions
 ├── docs/A1-CURRICULUM.md complete curriculum, weekly plan, skill standards and source references
 └── tools/

@@ -1,0 +1,10 @@
+{
+  "name": "Sprachpfad German Practice",
+  "short_name": "Sprachpfad",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#16233f",
+  "theme_color": "#16233f",
+  "icons": [{ "src": "app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

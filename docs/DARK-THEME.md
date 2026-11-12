@@ -1,0 +1,15 @@
+# Light and dark themes, navigation and Settings
+
+4 November 2026
+
+The owner's reference was [shadcn/ui](https://ui.shadcn.com/docs/components). The update applies its [semantic theme approach](https://ui.shadcn.com/docs/theming), [button hierarchy](https://ui.shadcn.com/docs/components/base/button) and [card spacing](https://ui.shadcn.com/docs/components/base/card) to the existing HTML/CSS app. This is a visual adaptation, not an installation of React or the shadcn component package.
+
+The shared palette uses a zinc-black background, charcoal cards, off-white primary actions and muted secondary text. Inter replaces the condensed display font. Buttons have a shared radius, steady hover states, outlined alternatives and visible focus treatment. Form controls, flashcard backs, study panels, feedback, navigation and profile cards follow the same palette. The yellow brand dot remains a small identifying accent. Home stays focused on one recommended activity and three shortcuts, without a level selector.
+
+The original light theme remains the default, including its navy/yellow palette and Barlow typography. Settings (`#/settings`) provides two native radio choices with visual previews. The preference is applied before styles load, stored under `sprachpfad.theme`, and shared between tabs on the same origin. Storage failures still allow changing the theme for the current visit and display an accurate save message. Public information pages inherit the selected theme. Certificates retain their printable palette.
+
+A circular profile button opens navigation to Home, Lessons, Flashcards, Practice, Mock test, Profile and Settings on desktop and mobile. Native links support Tab; arrow keys move between links, Escape returns focus to the button, and outside clicks or navigation dismiss the popup. Home stays the default after Google sign-in. Settings is a separate page containing Appearance and Account; sign-out lives here instead of Profile and retains the existing pending-save guard and local-device scope. Recovery screens link to Settings, which remains reachable while progress is blocked.
+
+The release versions stylesheet URLs in all four public HTML entry points. Release preparation also versions the entire JavaScript module graph with one content hash, preventing cached router/view code from hiding newly added routes. Future style releases should update the stylesheet version.
+
+Validation: `check_theme.mjs`, `check_navigation.mjs`, course-plan and practice checks pass. Theme tests cover defaults, persistence, other-tab events and blocked storage; navigation tests use a fake auth client to verify Home returns and local sign-out without signing out the real user. Browser checks cover the separate Settings route, actual signed-in account controls, theme persistence after reload, menu keyboard/outside-click dismissal, route dismissal and 390px phone layout. Dark study pages were also checked for lessons, practice feedback, flashcard flip and Profile. Dark main text contrast is 19.06:1; muted text on cards is 6.91:1; primary button text is 16.97:1. These spot checks are not a full accessibility audit.

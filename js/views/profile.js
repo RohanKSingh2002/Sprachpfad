@@ -9,13 +9,15 @@ import {
   knownIn,
   nextLesson,
   passed,
+  sentenceStats,
   streak,
+  studySecondsOn,
   testResult,
 } from "../state.js";
 import { ARROW_ICON } from "../ui/icons.js";
 import { countUp, enter, gsap, motionOK, onLeave, revealOnScroll } from "../ui/motion.js";
 import { esc } from "../utils.js";
-import { profileAccount } from "./account.js";
+import { profileAccount } from "./account.js?v=20261104-settings1";
 
 const WEEKS = 17;
 const dateLabel = (date) => date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -58,6 +60,35 @@ function overview() {
     <div class="profile-metric"><dt>Lessons completed</dt><dd><b data-profile-count="${done}">${done}</b><span>of ${ALL_LESSONS.length} lessons</span></dd></div>
     <div class="profile-metric"><dt>Words known</dt><dd><b data-profile-count="${known}">${known}</b><span>of ${ALL_WORDS.length} words</span></dd></div>
   </dl>`;
+}
+
+function activityHistory(days) {
+  const today = new Date();
+  const history = Array.from({ length: days }, (_, index) => {
+    const date = new Date(today);
+    date.setDate(today.getDate() - days + 1 + index);
+    return { date, actions: answersOn(date), seconds: studySecondsOn(date) };
+  });
+  const totals = history.reduce((sum, day) => ({ actions: sum.actions + day.actions, seconds: sum.seconds + day.seconds }), { actions: 0, seconds: 0 });
+  const maxTime = Math.max(1, ...history.map(day => day.seconds));
+  const maxActions = Math.max(1, ...history.map(day => day.actions));
+  const bars = history.map(day => `<div title="${esc(dateLabel(day.date))}: ${Math.floor(day.seconds / 60)} min, ${day.actions} actions"><i style="--bar:${day.seconds / maxTime * 100}%"></i><b style="--bar:${day.actions / maxActions * 100}%"></b></div>`).join("");
+  return `<p>${Math.floor(totals.seconds / 60)} study minutes · ${totals.actions} practice actions</p>
+    <div class="profile-study-bars" aria-hidden="true">${bars}</div>
+    <p class="small muted profile-study-legend"><span>Study time</span><span>Practice actions</span></p>
+    <details><summary>View daily values</summary><div class="profile-study-table"><table><thead><tr><th scope="col">Date</th><th scope="col">Study time</th><th scope="col">Actions</th></tr></thead><tbody>${history.slice().reverse().map(day => `<tr><th scope="row">${esc(dateLabel(day.date))}</th><td>${Math.floor(day.seconds / 60)} min ${day.seconds % 60} s</td><td>${day.actions}</td></tr>`).join("")}</tbody></table></div></details>`;
+}
+
+function sentenceActivity(days, lesson) {
+  const stats = sentenceStats(days, new Date(), lesson);
+  const metrics = [
+    ["Unique sentences", stats.unique], ["Shadowing completions", stats.listen], ["Recall completions", stats.recall],
+    ["Build completions", stats.build], ["Audio repetitions", stats.reps],
+    ["Listening time", `${Math.floor(stats.audioSeconds / 60)} min ${stats.audioSeconds % 60} s`],
+    ["Challenge points", stats.challenge],
+  ];
+  return `<dl class="profile-sentence-stats">${metrics.map(([label, value]) =>
+    `<div><dt>${label}</dt><dd>${value}</dd></div>`).join("")}</dl>`;
 }
 
 function practice(level) {
@@ -126,11 +157,26 @@ export function render(level = currentLevel()) {
   return `<div class="profile-page">
     <div class="profile-head">
       <div><p class="profile-eyebrow">Your learning, at a glance</p><h1>Your profile</h1><p class="muted">See your progress, revisit a level and keep your practice going.</p></div>
-      <a class="btn small ghost" href="#/${level.id}">Back to today's session${ARROW_ICON}</a>
+      <a class="btn small ghost" href="#/settings">Settings${ARROW_ICON}</a>
     </div>
     ${profileAccount()}
     ${overview()}
     ${practice(level)}
+    <section class="profile-section" aria-labelledby="profile-activity-heading">
+      <div class="profile-activity-head"><h2 id="profile-activity-heading">Activity details</h2>
+        <label>Period <select id="profile-activity-period"><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label>
+      </div>
+      <div class="profile-activity-grid">
+        <article class="panel" aria-labelledby="profile-study-heading"><h3 id="profile-study-heading">Study activity</h3>
+          <div id="profile-study-history">${activityHistory(7)}</div>
+        </article>
+        <article class="panel" aria-labelledby="profile-sentences-heading"><h3 id="profile-sentences-heading">Sentence practice activity</h3>
+          <label class="profile-lesson-filter">Lesson<select id="profile-sentence-lesson"><option value="">All lessons and collections</option>${ALL_LESSONS.map(lesson =>
+            `<option value="${lesson.key}">${esc(lesson.level.name)} · ${esc(lesson.title)}</option>`).join("")}</select></label>
+          <div id="profile-sentence-activity" aria-live="polite">${sentenceActivity(7, "")}</div>
+        </article>
+      </div>
+    </section>
     <section class="profile-section" aria-labelledby="profile-levels-h">
       <div class="profile-section-head"><h2 id="profile-levels-h">Level progress</h2><p class="muted">Every completed lesson is another stop reached.</p></div>
       <div class="profile-card-grid">${LEVELS.map(levelCard).join("")}</div>
@@ -141,6 +187,15 @@ export function render(level = currentLevel()) {
       <p class="profile-test-note muted small">Practice certificates record your own practice. They are not official exam results.</p>
     </section>
   </div>`;
+}
+
+export function onChange(event) {
+  const periodChanged = event.target.id === "profile-activity-period";
+  if (!periodChanged && event.target.id !== "profile-sentence-lesson") return;
+  const days = Number(document.getElementById("profile-activity-period").value);
+  const lesson = document.getElementById("profile-sentence-lesson").value;
+  if (periodChanged) document.getElementById("profile-study-history").innerHTML = activityHistory(days);
+  document.getElementById("profile-sentence-activity").innerHTML = sentenceActivity(days, lesson);
 }
 
 /** A small entrance and section reveals; the complete page stays visible without motion support. */

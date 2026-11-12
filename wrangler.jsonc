@@ -1,0 +1,6 @@
+{
+  "$schema": "./hosting/cloudflare-cli/node_modules/wrangler/config-schema.json",
+  "name": "sprachpfad-learn-deutsch",
+  "pages_build_output_dir": "./hosting/cloudflare/dist",
+  "compatibility_date": "2026-10-27"
+}

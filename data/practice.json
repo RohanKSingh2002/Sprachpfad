@@ -1,0 +1,1798 @@
+{
+  "version": 1,
+  "levels": {
+    "a1": [
+      {
+        "id": "a1-start",
+        "title": "A first day at the workshop",
+        "skill": "grammar",
+        "focus": "Present tense · sein · haben",
+        "description": "Complete a connected text about a new ceramics class.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "1. Ich ___ Nora. (heißen)",
+            "answers": [
+              "heiße"
+            ],
+            "explanation": "With ich, heißen becomes heiße. You can also type heisse.",
+            "hint": "Use the ich form."
+          },
+          {
+            "type": "fill",
+            "prompt": "2. Ich ___ heute im Keramikkurs. (sein)",
+            "answers": [
+              "bin"
+            ],
+            "explanation": "The present form of sein with ich is bin.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "3. Unser Lehrer ___ aus Bremen. (kommen)",
+            "answers": [
+              "kommt"
+            ],
+            "explanation": "Unser Lehrer is singular: er kommt.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "4. Wir ___ kleine Tassen. (machen)",
+            "answers": [
+              "machen"
+            ],
+            "explanation": "Wir takes the infinitive-shaped form machen.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "5. Meine Nachbarin ___ eine Frage. (haben)",
+            "answers": [
+              "hat"
+            ],
+            "explanation": "With a singular person, haben becomes hat.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "6. Du ___ sehr sorgfältig. (arbeiten)",
+            "answers": [
+              "arbeitest"
+            ],
+            "explanation": "Arbeiten adds -est with du because the stem ends in -t.",
+            "hint": ""
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Im Keramikkurs",
+        "passage": "Ich (1) ___ Nora. Ich (2) ___ heute im Keramikkurs. Unser Lehrer (3) ___ aus Bremen. Wir (4) ___ kleine Tassen. Meine Nachbarin (5) ___ eine Frage. Du (6) ___ sehr sorgfältig.",
+        "instruction": "Ergänzen Sie die Verben. Complete each numbered gap using the verb in brackets."
+      },
+      {
+        "id": "a1-bag",
+        "title": "What is in the bag?",
+        "skill": "grammar",
+        "focus": "Articles · accusative · negation",
+        "description": "Choose or supply the article that fits the meaning and case.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "Ich kaufe ___ Apfel. (ein; der Apfel)",
+            "answers": [
+              "einen"
+            ],
+            "explanation": "The masculine direct object takes einen.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Hier ist ___ Flasche Wasser. (ein; die Flasche)",
+            "answers": [
+              "eine"
+            ],
+            "explanation": "Eine Flasche is feminine singular.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Wir brauchen ___ Brot. (ein; das Brot)",
+            "answers": [
+              "ein"
+            ],
+            "explanation": "Neuter ein does not change in the accusative.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Ich habe ___ Schlüssel. (kein; der Schlüssel, singular)",
+            "answers": [
+              "keinen"
+            ],
+            "explanation": "The masculine accusative of kein is keinen.",
+            "hint": ""
+          },
+          {
+            "type": "choice",
+            "prompt": "Choose the sentence meaning “The tea is not hot.”",
+            "options": [
+              "Der Tee ist kein heiß.",
+              "Der Tee ist nicht heiß.",
+              "Der Tee nicht ist heiß."
+            ],
+            "answer": 1,
+            "explanation": "Nicht negates the adjective heiß. Kein is used with nouns."
+          },
+          {
+            "type": "fill",
+            "prompt": "Das sind ___ Bücher. (kein; plural)",
+            "answers": [
+              "keine"
+            ],
+            "explanation": "The plural form here is keine: keine Bücher.",
+            "hint": ""
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a1-time",
+        "title": "A day with a plan",
+        "skill": "grammar",
+        "focus": "Time · separable verbs · modal verbs",
+        "description": "Practise the small words that organise a day.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "Der Kurs beginnt ___ Montag. (on)",
+            "answers": [
+              "am"
+            ],
+            "explanation": "Days take am: am Montag.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Wir treffen uns ___ 17 Uhr. (at)",
+            "answers": [
+              "um"
+            ],
+            "explanation": "An exact clock time takes um.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Ich stehe jeden Tag um sieben Uhr ___. (aufstehen)",
+            "answers": [
+              "auf"
+            ],
+            "explanation": "In a main clause, the separable prefix moves to the end.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Du ___ hier leise sprechen. (müssen)",
+            "answers": [
+              "musst"
+            ],
+            "explanation": "Du musst is the present form. Sprechen stays in the infinitive.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Mila ___ gut schwimmen. (können)",
+            "answers": [
+              "kann"
+            ],
+            "explanation": "Mila is third-person singular: sie kann.",
+            "hint": ""
+          },
+          {
+            "type": "choice",
+            "prompt": "Which question asks WHEN the shop closes?",
+            "options": [
+              "Wo schließt der Laden?",
+              "Wann schließt der Laden?",
+              "Wie viel schließt der Laden?"
+            ],
+            "answer": 1,
+            "explanation": "Wann asks about time; wo asks about place."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a1-order",
+        "title": "Put the sentence together",
+        "skill": "grammar",
+        "focus": "Verb position · questions · sentence brackets",
+        "description": "Tap the chunks in order. The requested opening makes the answer clear.",
+        "items": [
+          {
+            "type": "order",
+            "prompt": "Emil visits his sister today. Start with Heute.",
+            "tokens": [
+              "Heute",
+              "besucht",
+              "Emil",
+              "seine Schwester."
+            ],
+            "answers": [
+              "Heute besucht Emil seine Schwester."
+            ],
+            "explanation": "Heute occupies position one; besucht is the second element. Emil is the person doing the visiting."
+          },
+          {
+            "type": "order",
+            "prompt": "Make a yes/no question. Start with Kommst.",
+            "tokens": [
+              "Kommst",
+              "du",
+              "morgen",
+              "mit?"
+            ],
+            "answers": [
+              "Kommst du morgen mit?"
+            ],
+            "explanation": "In a yes/no question the conjugated verb comes first; mit closes the sentence."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Wir.",
+            "tokens": [
+              "Wir",
+              "möchten",
+              "am Samstag",
+              "wandern."
+            ],
+            "answers": [
+              "Wir möchten am Samstag wandern."
+            ],
+            "explanation": "The modal verb möchten is conjugated; wandern goes at the end."
+          },
+          {
+            "type": "order",
+            "prompt": "Ask where the bus stops. Start with Wo.",
+            "tokens": [
+              "Wo",
+              "hält",
+              "der Bus?"
+            ],
+            "answers": [
+              "Wo hält der Bus?"
+            ],
+            "explanation": "The question word comes first, followed by the conjugated verb."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a1-phrases",
+        "title": "Words that belong together",
+        "skill": "vocabulary",
+        "focus": "Everyday combinations · question words",
+        "description": "Match useful German phrases instead of memorising isolated translations.",
+        "items": [
+          {
+            "type": "match",
+            "prompt": "Match each beginning with its natural ending. Use each ending once.",
+            "pairs": [
+              {
+                "left": "eine Fahrkarte",
+                "right": "kaufen"
+              },
+              {
+                "left": "einen Film",
+                "right": "ansehen"
+              },
+              {
+                "left": "eine E-Mail",
+                "right": "schreiben"
+              },
+              {
+                "left": "das Fenster",
+                "right": "öffnen"
+              },
+              {
+                "left": "den Tisch",
+                "right": "decken"
+              }
+            ],
+            "explanation": "These combinations mean buy a ticket, watch a film, write an email, open the window and set the table."
+          },
+          {
+            "type": "match",
+            "prompt": "Match each question with the answer that gives the requested information.",
+            "pairs": [
+              {
+                "left": "Wo wohnen Sie?",
+                "right": "In Erfurt."
+              },
+              {
+                "left": "Wann beginnt der Film?",
+                "right": "Um acht Uhr."
+              },
+              {
+                "left": "Wie heißen Sie?",
+                "right": "Tarek Sommer."
+              },
+              {
+                "left": "Wie viel kostet das Heft?",
+                "right": "Zwei Euro."
+              },
+              {
+                "left": "Woher kommen Sie?",
+                "right": "Aus Tunesien."
+              }
+            ],
+            "explanation": "Wo asks for a place, wann for time, wie heißen for a name, wie viel for a price and woher for origin."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a1-dialogue",
+        "title": "What would you say?",
+        "skill": "vocabulary",
+        "focus": "Requests · greetings · everyday replies",
+        "description": "Choose the reply that fits the situation and the person.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "At a bakery: „Was möchten Sie?“",
+            "options": [
+              "Zwei Brötchen, bitte.",
+              "Ich bin zwei Jahre alt.",
+              "Am Dienstag."
+            ],
+            "answer": 0,
+            "explanation": "Name the item and quantity when ordering."
+          },
+          {
+            "type": "choice",
+            "prompt": "You did not understand a stranger. Ask politely.",
+            "options": [
+              "Wie alt bist du?",
+              "Können Sie das bitte wiederholen?",
+              "Ich wiederhole morgen."
+            ],
+            "answer": 1,
+            "explanation": "Können Sie … bitte …? is a polite request using Sie."
+          },
+          {
+            "type": "choice",
+            "prompt": "A friend asks: „Hast du am Freitag Zeit?“ You are free.",
+            "options": [
+              "Ja, das kostet zehn Euro.",
+              "Nein, ich heiße nicht Freitag.",
+              "Ja, am Nachmittag."
+            ],
+            "answer": 2,
+            "explanation": "A time answers the invitation question directly."
+          },
+          {
+            "type": "choice",
+            "prompt": "You want to pay in a café. What do you say?",
+            "options": [
+              "Die Rechnung, bitte.",
+              "Guten Morgen, morgen.",
+              "Ich suche die Haltestelle."
+            ],
+            "answer": 0,
+            "explanation": "Die Rechnung, bitte asks for the bill."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a1-message",
+        "title": "Read a change of plan",
+        "skill": "reading",
+        "focus": "Short messages · exact details",
+        "description": "Read the whole message, then check each statement against the text.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Lea und Karim treffen sich am Sonntag.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": 0,
+            "explanation": "The message begins with the plan for Sonntag."
+          },
+          {
+            "type": "choice",
+            "prompt": "Lea wartet direkt vor dem Museum.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": 1,
+            "explanation": "She will wait at the bookshop beside the museum, not directly outside the museum."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wann treffen sie sich?",
+            "options": [
+              "Um 11 Uhr.",
+              "Um 12 Uhr.",
+              "Um 13 Uhr."
+            ],
+            "answer": 2,
+            "explanation": "13 Uhr is the new meeting time. 12 Uhr is when the bookshop opens."
+          },
+          {
+            "type": "choice",
+            "prompt": "Was soll Karim mitbringen?",
+            "options": [
+              "Ein Buch.",
+              "Zwei Eintrittskarten.",
+              "Eine Wasserflasche."
+            ],
+            "answer": 2,
+            "explanation": "Lea asks Karim to bring water. She already has the tickets."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Eine Nachricht von Lea",
+        "passage": "Hallo Karim, unser Museumsbesuch am Sonntag klappt! Wir treffen uns um 13 Uhr am Buchladen neben dem Museum. Der Buchladen öffnet um 12 Uhr. Ich habe schon zwei Eintrittskarten. Bring bitte eine Wasserflasche mit. Danach können wir im Park sitzen. Bis Sonntag! Lea"
+      },
+      {
+        "id": "a1-notices",
+        "title": "Find the right place",
+        "skill": "reading",
+        "focus": "Notices · opening times · practical choices",
+        "description": "Choose the notice that meets every detail of the request.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Sie möchten am Samstag ein Fahrrad reparieren lassen.",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 0,
+            "explanation": "A offers bicycle repairs on Saturdays from 9 to 13."
+          },
+          {
+            "type": "choice",
+            "prompt": "Sie möchten am Sonntag Brot kaufen.",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 2,
+            "explanation": "C is the bakery, open Sunday morning."
+          },
+          {
+            "type": "choice",
+            "prompt": "Kann man bei B am Montag ein Paket abholen?",
+            "options": [
+              "Ja",
+              "Nein"
+            ],
+            "answer": 0,
+            "explanation": "Monday is included in Montag–Freitag."
+          },
+          {
+            "type": "choice",
+            "prompt": "Sie kommen am Samstag um 14 Uhr zu A. Ist geöffnet?",
+            "options": [
+              "Ja",
+              "Nein"
+            ],
+            "answer": 1,
+            "explanation": "A closes at 13 Uhr on Saturdays."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Drei Aushänge",
+        "passage": "A · RADPUNKT\nReparaturen und Zubehör. Montag–Freitag 9–18 Uhr, Samstag 9–13 Uhr.\n\nB · PAKET-ECKE\nPakete abholen: Montag–Freitag 10–19 Uhr. Am Wochenende geschlossen.\n\nC · BÄCKEREI KORN\nFrisches Brot auch am Sonntag! Sonntag 7–11 Uhr. Montag Ruhetag."
+      },
+      {
+        "id": "a1-listening",
+        "title": "A message from the sports centre",
+        "skill": "listening",
+        "focus": "Times · rooms · what to bring",
+        "description": "Listen for the changed time and the practical details.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Wann beginnt der Kurs heute?",
+            "options": [
+              "Um 17 Uhr.",
+              "Um 17:30 Uhr.",
+              "Um 18:30 Uhr."
+            ],
+            "answer": 1,
+            "explanation": "The speaker corrects the start from fünf to halb sechs: 17:30."
+          },
+          {
+            "type": "choice",
+            "prompt": "In welchem Raum ist der Kurs?",
+            "options": [
+              "Raum drei.",
+              "Raum vier.",
+              "Raum fünf."
+            ],
+            "answer": 0,
+            "explanation": "The message specifies Raum drei."
+          },
+          {
+            "type": "choice",
+            "prompt": "Was sollen die Teilnehmenden mitbringen?",
+            "options": [
+              "Eine Tasse.",
+              "Ein Buch.",
+              "Ein Handtuch."
+            ],
+            "answer": 2,
+            "explanation": "The requested item is ein Handtuch."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wo wartet die Lehrerin?",
+            "options": [
+              "Vor dem Eingang.",
+              "Im Café.",
+              "An der Bushaltestelle."
+            ],
+            "answer": 0,
+            "explanation": "She waits vor dem Eingang."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Nachricht zum Sportkurs",
+        "audioText": "Guten Tag! Hier ist das Sportzentrum. Ihr Kurs beginnt heute nicht um fünf Uhr, sondern um halb sechs. Wir treffen uns in Raum drei. Bringen Sie bitte ein Handtuch mit. Ihre Lehrerin wartet vor dem Eingang auf Sie. Bis später!",
+        "instruction": "Hören Sie die Nachricht. Listen once for the situation, then again for the details. You can replay it or open the transcript for support."
+      },
+      {
+        "id": "a1-writing",
+        "title": "Write a useful little message",
+        "skill": "writing",
+        "focus": "Invitations · appointments · self-review",
+        "description": "Write your own message, compare a model, then revise against the checklist.",
+        "items": [
+          {
+            "type": "write",
+            "prompt": "Invite your friend Ben to a picnic on Saturday. Say where and when you will meet, ask him to bring fruit, and include a greeting and ending.",
+            "checklist": [
+              "I greeted Ben and ended the message.",
+              "I included Saturday, a place and a time.",
+              "I asked Ben to bring fruit.",
+              "I checked the verb positions and capital letters for nouns."
+            ],
+            "model": "Hallo Ben, hast du am Samstag Zeit? Wir machen ein Picknick im Stadtpark. Wir treffen uns um 14 Uhr am Eingang. Kannst du bitte Obst mitbringen? Ich bringe Wasser und Brot mit. Liebe Grüße, Mia",
+            "target": [
+              30,
+              45
+            ],
+            "explanation": "This is one possible response. Use the checklist to review your own meaning and language; different correct responses are possible."
+          },
+          {
+            "type": "write",
+            "prompt": "Write to your German teacher, Frau Adler. You cannot attend class tomorrow. Give a reason and ask for the homework. Use a polite greeting and ending.",
+            "checklist": [
+              "I used a polite greeting and ending.",
+              "I said I cannot attend tomorrow.",
+              "I gave a reason.",
+              "I asked for the homework."
+            ],
+            "model": "Guten Tag Frau Adler, ich kann morgen leider nicht zum Deutschkurs kommen. Ich habe einen Arzttermin. Können Sie mir bitte die Hausaufgaben schicken? Vielen Dank für Ihre Hilfe. Mit freundlichen Grüßen, Sami",
+            "target": [
+              30,
+              45
+            ],
+            "explanation": "This is one possible response. Use the checklist to review your own meaning and language; different correct responses are possible."
+          }
+        ],
+        "minutes": "15–20"
+      }
+    ],
+    "a2": [
+      {
+        "id": "a2-trip",
+        "title": "A weekend that changed",
+        "skill": "grammar",
+        "focus": "Perfekt · auxiliaries · participles",
+        "description": "Complete a short account of a journey using the supplied verbs.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "1. Am Samstag ___ wir nach Jena gefahren. (sein)",
+            "answers": [
+              "sind"
+            ],
+            "explanation": "Fahren describes a change of place here, so the Perfekt uses sein: wir sind gefahren.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "2. Der Zug ___ zehn Minuten später angekommen. (sein)",
+            "answers": [
+              "ist"
+            ],
+            "explanation": "Der Zug is singular: ist angekommen. Ankommen uses sein.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "3. Im Zug haben wir Karten ___. (spielen)",
+            "answers": [
+              "gespielt"
+            ],
+            "explanation": "The regular participle of spielen is gespielt.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "4. Am Bahnhof hat uns Leni ___. (abholen)",
+            "answers": [
+              "abgeholt"
+            ],
+            "explanation": "For the separable verb abholen, ge goes between ab and holt.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "5. Danach haben wir zusammen ___. (essen)",
+            "answers": [
+              "gegessen"
+            ],
+            "explanation": "Essen has the irregular participle gegessen.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "6. Am Abend sind wir zu Hause ___. (bleiben)",
+            "answers": [
+              "geblieben"
+            ],
+            "explanation": "Bleiben uses sein, even though it does not describe movement.",
+            "hint": ""
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Unser Samstag",
+        "passage": "Am Samstag (1) ___ wir nach Jena gefahren. Der Zug (2) ___ zehn Minuten später angekommen. Im Zug haben wir Karten (3) ___. Am Bahnhof hat uns Leni (4) ___. Danach haben wir zusammen (5) ___. Am Abend sind wir zu Hause (6) ___.",
+        "instruction": "Complete each gap with the correct auxiliary or participle. Use the verb given in the exercise."
+      },
+      {
+        "id": "a2-home",
+        "title": "Moving things, describing things",
+        "skill": "grammar",
+        "focus": "Dative · accusative · adjective endings",
+        "description": "Use the direction, position and article to choose the ending.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "Ich stelle die Lampe auf ___ Tisch. (der)",
+            "answers": [
+              "den"
+            ],
+            "explanation": "Stellen describes a destination: auf + accusative, den Tisch.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Die Lampe steht auf ___ Tisch. (der)",
+            "answers": [
+              "dem"
+            ],
+            "explanation": "Stehen describes a position: auf + dative, dem Tisch.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Das ist ein klein___ Zimmer. Write only the ending.",
+            "answers": [
+              "es"
+            ],
+            "explanation": "After ein, a neuter adjective in this nominative phrase takes -es: ein kleines Zimmer.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Wir suchen eine ruhig___ Wohnung. Write only the ending.",
+            "answers": [
+              "e"
+            ],
+            "explanation": "With eine and a feminine noun, ruhig takes -e.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Ich helfe ___ Nachbarin. (die)",
+            "answers": [
+              "der"
+            ],
+            "explanation": "Helfen takes the dative: der Nachbarin.",
+            "hint": ""
+          },
+          {
+            "type": "choice",
+            "prompt": "You are choosing between two rooms. Which comparison is correct?",
+            "options": [
+              "Dieses Zimmer ist größer als das andere.",
+              "Dieses Zimmer ist größer wie das andere.",
+              "Dieses Zimmer ist am größer das andere."
+            ],
+            "answer": 0,
+            "explanation": "A comparative uses als: größer als."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a2-reasons",
+        "title": "Explain and ask politely",
+        "skill": "grammar",
+        "focus": "Connectors · indirect questions · requests",
+        "description": "Choose a connector or verb form for a clear everyday purpose.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Ich nehme den Bus, ___ mein Fahrrad kaputt ist.",
+            "options": [
+              "weil",
+              "aber",
+              "denn"
+            ],
+            "answer": 0,
+            "explanation": "Weil introduces a reason with the conjugated verb at the end. Denn would require different word order."
+          },
+          {
+            "type": "choice",
+            "prompt": "We do not know whether the shop opens tomorrow: Wissen Sie, ___ der Laden morgen öffnet?",
+            "options": [
+              "dass",
+              "ob",
+              "weil"
+            ],
+            "answer": 1,
+            "explanation": "An indirect yes/no question uses ob."
+          },
+          {
+            "type": "fill",
+            "prompt": "___ Sie mir bitte den Weg zeigen? Use können in the polite Konjunktiv II form.",
+            "answers": [
+              "Könnten"
+            ],
+            "explanation": "Könnten Sie …? makes a polite request.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Ich freue mich ___ den Urlaub nächste Woche. (auf / über)",
+            "answers": [
+              "auf"
+            ],
+            "explanation": "Sich freuen auf refers to something still to come.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Ich versuche, früher ___ schlafen. Complete the infinitive construction.",
+            "answers": [
+              "zu"
+            ],
+            "explanation": "Versuchen is followed here by a zu-infinitive.",
+            "hint": ""
+          },
+          {
+            "type": "choice",
+            "prompt": "You describe one event in your childhood: ___ ich sechs war, bekam ich ein Fahrrad.",
+            "options": [
+              "Wenn",
+              "Als",
+              "Ob"
+            ],
+            "answer": 1,
+            "explanation": "Als introduces a single past event or period; wenn is used for repeated situations."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a2-order",
+        "title": "Connect your ideas",
+        "skill": "grammar",
+        "focus": "Subordinate clauses · indirect questions",
+        "description": "Build each sentence with the requested opening.",
+        "items": [
+          {
+            "type": "order",
+            "prompt": "Start with Ich bleibe zu Hause, and give the reason.",
+            "tokens": [
+              "Ich bleibe zu Hause,",
+              "weil",
+              "ich",
+              "müde",
+              "bin."
+            ],
+            "answers": [
+              "Ich bleibe zu Hause, weil ich müde bin."
+            ],
+            "explanation": "In the weil clause, the conjugated verb bin comes last."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Weißt du, and ask about the departure time.",
+            "tokens": [
+              "Weißt du,",
+              "wann",
+              "der nächste Bus",
+              "abfährt?"
+            ],
+            "answers": [
+              "Weißt du, wann der nächste Bus abfährt?"
+            ],
+            "explanation": "An indirect question has the verb at the end."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Wenn es regnet, and put wir immediately after gehen.",
+            "tokens": [
+              "Wenn es regnet,",
+              "gehen",
+              "wir",
+              "ins Museum."
+            ],
+            "answers": [
+              "Wenn es regnet, gehen wir ins Museum."
+            ],
+            "explanation": "The whole wenn clause is position one. The main-clause verb follows it."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Ich habe vor, and put am Sonntag before the final verb.",
+            "tokens": [
+              "Ich habe vor,",
+              "am Sonntag",
+              "zu wandern."
+            ],
+            "answers": [
+              "Ich habe vor, am Sonntag zu wandern."
+            ],
+            "explanation": "Vorhaben can introduce a zu-infinitive for a plan."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a2-vocabulary",
+        "title": "Useful words in context",
+        "skill": "vocabulary",
+        "focus": "Services · everyday meanings",
+        "description": "Match words and phrases with the precise meaning supplied.",
+        "items": [
+          {
+            "type": "match",
+            "prompt": "Match each term with its meaning.",
+            "pairs": [
+              {
+                "left": "die Quittung",
+                "right": "Beleg dafür, dass man bezahlt hat"
+              },
+              {
+                "left": "die Haltestelle",
+                "right": "Ort, an dem ein Bus hält"
+              },
+              {
+                "left": "der Umzug",
+                "right": "Wechsel in eine andere Wohnung"
+              },
+              {
+                "left": "die Bewerbung",
+                "right": "Unterlagen, mit denen man eine Stelle sucht"
+              },
+              {
+                "left": "die Miete",
+                "right": "Geld, das man regelmäßig für eine Wohnung bezahlt"
+              }
+            ],
+            "explanation": "Keep these service and housing words in meaningful contexts."
+          },
+          {
+            "type": "match",
+            "prompt": "Match each expression with the situation it describes.",
+            "pairs": [
+              {
+                "left": "einen Termin verschieben",
+                "right": "Ein Treffen findet zu einer anderen Zeit statt."
+              },
+              {
+                "left": "sich entschuldigen",
+                "right": "Man sagt, dass einem ein Fehler leidtut."
+              },
+              {
+                "left": "etwas zurückgeben",
+                "right": "Man bringt einen gekauften Artikel wieder ins Geschäft."
+              },
+              {
+                "left": "sich ausruhen",
+                "right": "Man macht eine Pause und erholt sich."
+              },
+              {
+                "left": "sich anmelden",
+                "right": "Man trägt sich für einen Kurs ein."
+              }
+            ],
+            "explanation": "These expressions help with appointments, purchases and personal plans."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a2-dialogue",
+        "title": "Keep the conversation going",
+        "skill": "vocabulary",
+        "focus": "Alternatives · clarification · polite requests",
+        "description": "Choose a reply that deals with the actual situation.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "A colleague suggests 10:00, but you have an appointment then. Suggest 11:00.",
+            "options": [
+              "Um zehn habe ich schon einen Termin. Passt Ihnen elf Uhr?",
+              "Zehn Uhr passt gut. Bis dann!",
+              "Ich habe um elf schon einen Termin. Können wir uns um zehn treffen?"
+            ],
+            "answer": 0,
+            "explanation": "Acknowledge the conflict, then offer a specific alternative."
+          },
+          {
+            "type": "choice",
+            "prompt": "A shop assistant says an item is sold out. Ask when it will be available again.",
+            "options": [
+              "Kann ich den Artikel zurückgeben?",
+              "Wissen Sie, wann der Artikel wieder da ist?",
+              "Gibt es diesen Artikel auch in einer anderen Farbe?"
+            ],
+            "answer": 1,
+            "explanation": "Wann … wieder da ist asks for availability, with the verb at the end of the indirect question."
+          },
+          {
+            "type": "choice",
+            "prompt": "Your neighbour asks you to water her plants. You agree and ask for the key.",
+            "options": [
+              "Ja, gern. Wann können Sie mir den Schlüssel geben?",
+              "Leider bin ich selbst nicht da. Fragen Sie bitte Herrn Roth.",
+              "Können Sie bitte auch meine Pflanzen gießen?"
+            ],
+            "answer": 0,
+            "explanation": "The reply accepts the request and asks for the information needed to help."
+          },
+          {
+            "type": "choice",
+            "prompt": "You heard “fünfzehn” or “fünfzig” euros. Clarify the amount.",
+            "options": [
+              "Meinen Sie fünfzehn oder fünfzig Euro?",
+              "Kann ich mit Karte bezahlen?",
+              "Ist die Rechnung schon bezahlt?"
+            ],
+            "answer": 0,
+            "explanation": "Repeating the two possible amounts helps clarify the detail."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "a2-message",
+        "title": "A new course arrangement",
+        "skill": "reading",
+        "focus": "Email · conditions · changed plans",
+        "description": "Distinguish what changed from what remains the same.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Warum findet der Kurs nicht in Raum 8 statt?",
+            "options": [
+              "Der Raum wird gestrichen.",
+              "Die Lehrerin ist krank.",
+              "Es gibt zu wenige Teilnehmende."
+            ],
+            "answer": 0,
+            "explanation": "The email states that Raum 8 is being painted."
+          },
+          {
+            "type": "choice",
+            "prompt": "Welche Uhrzeit gilt am Mittwoch?",
+            "options": [
+              "17:00 Uhr.",
+              "17:15 Uhr.",
+              "18:15 Uhr."
+            ],
+            "answer": 1,
+            "explanation": "The course starts at 17:15 as usual; the room changes, not the time."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wer muss einen Laptop mitbringen?",
+            "options": [
+              "Alle.",
+              "Niemand.",
+              "Nur Personen, die bereits einen besitzen."
+            ],
+            "answer": 2,
+            "explanation": "Bring a laptop only if you already have one; the school has loan devices."
+          },
+          {
+            "type": "choice",
+            "prompt": "Bis wann soll man einen Leihcomputer bestellen?",
+            "options": [
+              "Dienstag um 12 Uhr.",
+              "Mittwoch um 12 Uhr.",
+              "Donnerstag um 17 Uhr."
+            ],
+            "answer": 0,
+            "explanation": "The deadline is Dienstagmittag, meaning Tuesday at noon."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Nachricht der Kursleitung",
+        "passage": "Liebe Kursteilnehmende,\nRaum 8 wird diese Woche gestrichen. Unser Computerkurs am Mittwoch findet deshalb im zweiten Stock in Raum 12 statt. Wir beginnen wie immer um 17:15 Uhr. Wenn Sie schon einen Laptop haben, bringen Sie ihn bitte mit. Sie müssen aber kein Gerät kaufen: Wir verleihen Computer kostenlos. Schreiben Sie uns bis Dienstagmittag, wenn Sie einen brauchen. Die Kursgebühr bleibt gleich.\nViele Grüße\nIhre Kursleitung"
+      },
+      {
+        "id": "a2-notices",
+        "title": "Choose an activity that fits",
+        "skill": "reading",
+        "focus": "Schedules · requirements · prices",
+        "description": "Use all the conditions, not just one familiar word.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Sie haben nur am Sonntag Zeit und möchten draußen aktiv sein. Was passt?",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 1,
+            "explanation": "B is the Sunday walk. A is Saturday and C is indoors."
+          },
+          {
+            "type": "choice",
+            "prompt": "Sie möchten etwas kochen lernen und haben am Samstag Zeit.",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 0,
+            "explanation": "A offers a Saturday cooking workshop."
+          },
+          {
+            "type": "choice",
+            "prompt": "Für welches Angebot muss man sich nicht vorher anmelden?",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 2,
+            "explanation": "C says Ohne Anmeldung."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wie viel bezahlen zwei Erwachsene für B zusammen?",
+            "options": [
+              "0 Euro.",
+              "6 Euro.",
+              "12 Euro."
+            ],
+            "answer": 2,
+            "explanation": "B costs 6 euros per adult, so two adults pay 12 euros."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Das Wochenendprogramm",
+        "passage": "A · GEMÜSEKÜCHE\nSamstag 10–13 Uhr. Gemeinsam drei einfache Gerichte kochen. 18 Euro inklusive Zutaten. Anmeldung bis Donnerstag.\n\nB · WALDRUNDE\nSonntag 9–12 Uhr. Geführte Wanderung, sechs Kilometer. 6 Euro pro erwachsener Person. Feste Schuhe erforderlich. Anmeldung bis Freitag.\n\nC · SPIELETREFF\nSonntag 15–18 Uhr im Nachbarschaftshaus. Brettspiele für Erwachsene und Familien. Kostenlos und ohne Anmeldung."
+      },
+      {
+        "id": "a2-listening",
+        "title": "Collect the repaired bicycle",
+        "skill": "listening",
+        "focus": "A phone message · price · collection",
+        "description": "Listen for the final arrangement, not the first time mentioned.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Warum ist das Fahrrad heute noch nicht fertig?",
+            "options": [
+              "Ein Ersatzteil fehlt.",
+              "Die Werkstatt ist geschlossen.",
+              "Der Kunde hat abgesagt."
+            ],
+            "answer": 0,
+            "explanation": "The replacement part arrives tomorrow morning."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wann kann die Kundin das Rad abholen?",
+            "options": [
+              "Morgen ab 10 Uhr.",
+              "Morgen ab 16 Uhr.",
+              "Heute ab 18 Uhr."
+            ],
+            "answer": 1,
+            "explanation": "The customer can collect it tomorrow from 16 Uhr; 10 Uhr is the delivery time for the part."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wie viel kostet die Reparatur insgesamt?",
+            "options": [
+              "28 Euro.",
+              "38 Euro.",
+              "48 Euro."
+            ],
+            "answer": 1,
+            "explanation": "The speaker gives a total of achtunddreißig Euro."
+          },
+          {
+            "type": "choice",
+            "prompt": "Was soll die Kundin mitbringen?",
+            "options": [
+              "Die Quittung von der Abgabe.",
+              "Einen neuen Reifen.",
+              "Einen Ausweis und ein Foto."
+            ],
+            "answer": 0,
+            "explanation": "The message asks for the receipt given when the bicycle was dropped off."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Anruf aus der Werkstatt",
+        "audioText": "Guten Tag, Frau Winter. Hier spricht die Fahrradwerkstatt. Leider fehlt uns noch ein Ersatzteil für Ihr Rad. Es kommt morgen um zehn Uhr an. Sie können Ihr Fahrrad dann ab sechzehn Uhr abholen. Wir schließen um achtzehn Uhr. Die Reparatur kostet insgesamt achtunddreißig Euro. Bitte bringen Sie die Quittung mit, die Sie bei der Abgabe bekommen haben. Vielen Dank!"
+      },
+      {
+        "id": "a2-writing",
+        "title": "Explain a change and make a request",
+        "skill": "writing",
+        "focus": "Connected messages · reasons · politeness",
+        "description": "Cover every point, then use the model to improve your own message.",
+        "items": [
+          {
+            "type": "write",
+            "prompt": "Write to your friend Kim. Cancel a planned cinema visit because you must help your brother move. Suggest Sunday afternoon instead and ask which film Kim wants to see.",
+            "checklist": [
+              "I apologised and cancelled the original plan.",
+              "I explained that I must help my brother move.",
+              "I suggested Sunday afternoon.",
+              "I asked about the film and checked connectors and verb positions."
+            ],
+            "model": "Liebe Kim, leider kann ich am Samstag nicht mit ins Kino kommen. Mein Bruder zieht um, und ich muss ihm beim Tragen der Möbel helfen. Es tut mir leid, dass ich so spät absage. Hast du am Sonntagnachmittag Zeit? Dann könnten wir zusammen ins Kino gehen. Welchen Film möchtest du gern sehen? Schreib mir bitte kurz. Liebe Grüße, Alex",
+            "target": [
+              50,
+              75
+            ],
+            "explanation": "This is one possible response. Use the checklist to review your own meaning and language; different correct responses are possible."
+          },
+          {
+            "type": "write",
+            "prompt": "Write to a language school. You want an evening course but work until 18:00. Ask about starting times, the price and a trial lesson. Use a polite greeting and ending.",
+            "checklist": [
+              "I explained my interest and working hours.",
+              "I asked when the evening courses begin.",
+              "I asked about the price and a trial lesson.",
+              "I used a polite greeting and ending."
+            ],
+            "model": "Sehr geehrte Damen und Herren, ich möchte gern einen Deutschkurs am Abend besuchen. Ich arbeite jeden Tag bis 18 Uhr und kann deshalb nicht früher kommen. Wann beginnen Ihre Abendkurse? Außerdem möchte ich wissen, wie viel ein Kurs kostet. Ist es möglich, zuerst an einer Probestunde teilzunehmen? Über eine Antwort würde ich mich freuen. Mit freundlichen Grüßen, Robin Berg",
+            "target": [
+              50,
+              75
+            ],
+            "explanation": "This is one possible response. Use the checklist to review your own meaning and language; different correct responses are possible."
+          }
+        ],
+        "minutes": "15–20"
+      }
+    ],
+    "b1": [
+      {
+        "id": "b1-project",
+        "title": "A repair project takes shape",
+        "skill": "grammar",
+        "focus": "Connectors · connected-text gaps",
+        "description": "Complete a report using each connector from the word bank once.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "1. Wir wollten ein Reparaturtreffen organisieren, ___ viele Geräte zu früh weggeworfen werden.",
+            "answers": [
+              "weil"
+            ],
+            "explanation": "Weil gives the reason and sends werden to the end.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "2. ___ wir einen Raum gefunden hatten, suchten wir Helfer.",
+            "answers": [
+              "Nachdem"
+            ],
+            "explanation": "Nachdem places finding the room before looking for helpers.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "3. ___ wir wenig Geld hatten, konnten wir Werkzeug ausleihen.",
+            "answers": [
+              "Obwohl"
+            ],
+            "explanation": "Obwohl introduces a difficulty that did not prevent borrowing tools.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "4. Einige Gäste brachten Lampen, ___ andere ihre Fahrräder reparieren wollten.",
+            "answers": [
+              "während"
+            ],
+            "explanation": "Während contrasts what the two groups of guests wanted to do.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "5. Wir fotografierten die Arbeitsschritte, ___ die Gäste sie zu Hause wiederholen konnten.",
+            "answers": [
+              "damit"
+            ],
+            "explanation": "Damit expresses the purpose, with a different subject in the second clause.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "6. Die Nachfrage war groß; ___ planen wir ein zweites Treffen.",
+            "answers": [
+              "deshalb"
+            ],
+            "explanation": "Deshalb gives the consequence and is followed immediately by the conjugated verb planen.",
+            "hint": ""
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Reparieren statt wegwerfen",
+        "passage": "Wir wollten ein Reparaturtreffen organisieren, (1) ___ viele Geräte zu früh weggeworfen werden. (2) ___ wir einen Raum gefunden hatten, suchten wir Helfer. (3) ___ wir wenig Geld hatten, konnten wir Werkzeug ausleihen. Einige Gäste brachten Lampen, (4) ___ andere ihre Fahrräder reparieren wollten. Wir fotografierten die Arbeitsschritte, (5) ___ die Gäste sie zu Hause wiederholen konnten. Die Nachfrage war groß; (6) ___ planen wir ein zweites Treffen.",
+        "wordBank": [
+          "damit",
+          "obwohl",
+          "nachdem",
+          "deshalb",
+          "während",
+          "weil"
+        ],
+        "instruction": "Use every word in the bank once. Read both clauses before choosing a connector."
+      },
+      {
+        "id": "b1-details",
+        "title": "Describe processes and people",
+        "skill": "grammar",
+        "focus": "Passive · relative pronouns · genitive",
+        "description": "Use the grammatical role inside each clause to select the form.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "Die kaputten Stühle ___ in der Werkstatt repariert. Use werden in the present passive.",
+            "answers": [
+              "werden"
+            ],
+            "explanation": "Stühle is plural: werden repariert.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Der Antrag wird morgen ___. (prüfen)",
+            "answers": [
+              "geprüft"
+            ],
+            "explanation": "The passive combines werden with the past participle: wird geprüft.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Das ist die Kollegin, ___ den Workshop leitet. (der / die / das)",
+            "answers": [
+              "die"
+            ],
+            "explanation": "The feminine relative pronoun is the subject of leitet: die.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Das ist der Nachbar, ___ ich beim Umzug geholfen habe. (der / dem / den)",
+            "answers": [
+              "dem"
+            ],
+            "explanation": "Helfen takes the dative within the relative clause: dem.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Wegen des stark___ Regens bleiben wir drinnen. Write only the adjective ending.",
+            "answers": [
+              "en"
+            ],
+            "explanation": "After des in this genitive phrase, the adjective takes -en.",
+            "hint": ""
+          },
+          {
+            "type": "choice",
+            "prompt": "Which sentence describes a process in the passive?",
+            "options": [
+              "Die Gruppe hat den Raum gereinigt.",
+              "Der Raum wird gerade gereinigt.",
+              "Der Raum ist sehr sauber."
+            ],
+            "answer": 1,
+            "explanation": "Wird gereinigt describes the cleaning process. Ist sehr sauber describes a state without a passive construction."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "b1-transform",
+        "title": "Say it another way",
+        "skill": "grammar",
+        "focus": "Purpose · polite requests · consequences",
+        "description": "Complete a controlled transformation without changing its meaning.",
+        "items": [
+          {
+            "type": "fill",
+            "prompt": "Ich spare Geld, weil ich ein Fahrrad kaufen möchte. → Ich spare Geld, ___ ein Fahrrad zu kaufen.",
+            "answers": [
+              "um"
+            ],
+            "explanation": "With the same subject, um … zu can express the purpose.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Sie spricht langsam. Alle sollen sie verstehen. → Sie spricht langsam, ___ alle sie verstehen.",
+            "answers": [
+              "damit"
+            ],
+            "explanation": "Different subjects require a full purpose clause with damit.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Make the request more polite: Können Sie mir helfen? → ___ Sie mir helfen?",
+            "answers": [
+              "Könnten"
+            ],
+            "explanation": "Könnten is the Konjunktiv II form of können and softens the request.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Er hat wenig Zeit. Trotzdem hilft er mit. → ___ er wenig Zeit hat, hilft er mit.",
+            "answers": [
+              "Obwohl"
+            ],
+            "explanation": "Obwohl introduces the concession and moves hat to the end of its clause.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Both tea and coffee are available. → Es gibt ___ Tee als auch Kaffee.",
+            "answers": [
+              "sowohl"
+            ],
+            "explanation": "The paired connector is sowohl … als auch.",
+            "hint": ""
+          },
+          {
+            "type": "fill",
+            "prompt": "Neither the bus nor the train is running. → Es fährt weder ein Bus ___ ein Zug.",
+            "answers": [
+              "noch"
+            ],
+            "explanation": "The negative pair is weder … noch.",
+            "hint": ""
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "b1-order",
+        "title": "Build a more precise sentence",
+        "skill": "grammar",
+        "focus": "Concession · relatives · purpose clauses",
+        "description": "Use every chunk and keep the requested opening.",
+        "items": [
+          {
+            "type": "order",
+            "prompt": "Start with Obwohl es spät war, and put wir immediately after blieben.",
+            "tokens": [
+              "Obwohl es spät war,",
+              "blieben",
+              "wir",
+              "noch eine Stunde."
+            ],
+            "answers": [
+              "Obwohl es spät war, blieben wir noch eine Stunde."
+            ],
+            "explanation": "The subordinate clause is followed by the main-clause verb, then its subject."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Das ist das Gerät, and complete the relative clause.",
+            "tokens": [
+              "Das ist das Gerät,",
+              "das",
+              "ich",
+              "gestern",
+              "repariert habe."
+            ],
+            "answers": [
+              "Das ist das Gerät, das ich gestern repariert habe."
+            ],
+            "explanation": "Das refers to das Gerät; the relative clause ends with repariert habe."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Wir treffen uns früher, and put in Ruhe before the final verb.",
+            "tokens": [
+              "Wir treffen uns früher,",
+              "um",
+              "in Ruhe",
+              "zu planen."
+            ],
+            "answers": [
+              "Wir treffen uns früher, um in Ruhe zu planen."
+            ],
+            "explanation": "Um … zu expresses the purpose when both actions have the same subject."
+          },
+          {
+            "type": "order",
+            "prompt": "Start with Je öfter du übst, and complete the comparison.",
+            "tokens": [
+              "Je öfter du übst,",
+              "desto leichter",
+              "fällt",
+              "dir",
+              "das Sprechen."
+            ],
+            "answers": [
+              "Je öfter du übst, desto leichter fällt dir das Sprechen."
+            ],
+            "explanation": "Je … desto links two changing quantities. The conjugated verb follows the desto phrase."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "b1-vocabulary",
+        "title": "Meaning beyond individual words",
+        "skill": "vocabulary",
+        "focus": "Argumentation · practical expressions",
+        "description": "Match definitions and communicative functions, not just similar-looking words.",
+        "items": [
+          {
+            "type": "match",
+            "prompt": "Match each word with its meaning in an everyday discussion.",
+            "pairs": [
+              {
+                "left": "die Voraussetzung",
+                "right": "Bedingung, die zuerst erfüllt sein muss"
+              },
+              {
+                "left": "der Nachteil",
+                "right": "ungünstige Seite einer Möglichkeit"
+              },
+              {
+                "left": "der Vorschlag",
+                "right": "Idee, was man tun könnte"
+              },
+              {
+                "left": "die Rückmeldung",
+                "right": "Reaktion auf eine Frage oder Arbeit"
+              },
+              {
+                "left": "die Ausnahme",
+                "right": "Fall, für den eine allgemeine Regel nicht gilt"
+              }
+            ],
+            "explanation": "These nouns help you explain requirements, evaluate choices and respond to other people."
+          },
+          {
+            "type": "match",
+            "prompt": "Match each expression with the intention behind it.",
+            "pairs": [
+              {
+                "left": "Meiner Ansicht nach …",
+                "right": "eine persönliche Meinung einleiten"
+              },
+              {
+                "left": "Dafür spricht, dass …",
+                "right": "ein unterstützendes Argument nennen"
+              },
+              {
+                "left": "Dagegen spricht, dass …",
+                "right": "ein Gegenargument nennen"
+              },
+              {
+                "left": "Zum Beispiel …",
+                "right": "einen konkreten Fall nennen"
+              },
+              {
+                "left": "Zusammenfassend lässt sich sagen, dass …",
+                "right": "die wichtigsten Gedanken am Ende bündeln"
+              }
+            ],
+            "explanation": "An opinion becomes clearer when you signal the role of each sentence."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "b1-dialogue",
+        "title": "Respond with tact",
+        "skill": "vocabulary",
+        "focus": "Register · negotiation · clarification",
+        "description": "Choose a response that is clear, relevant and suitable for the relationship.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "A colleague proposes an expensive venue. Disagree politely and suggest the community hall.",
+            "options": [
+              "Das ist eine interessante Idee. Allerdings ist der Raum teuer. Könnten wir stattdessen das Nachbarschaftshaus nutzen?",
+              "Der Raum gefällt mir sehr gut. Ich schlage vor, ihn sofort zu buchen.",
+              "Könnten Sie bitte bestätigen, dass im Preis auch Getränke enthalten sind?"
+            ],
+            "answer": 0,
+            "explanation": "Only the first response both raises the cost concern and proposes the requested alternative."
+          },
+          {
+            "type": "choice",
+            "prompt": "A delivery is a week late. Politely explain that it has not arrived and ask for the delivery date.",
+            "options": [
+              "Sehr geehrte Damen und Herren, vielen Dank für die schnelle Lieferung. Ich möchte den Artikel zurückgeben.",
+              "Sehr geehrte Damen und Herren, meine Bestellung ist bisher nicht angekommen. Könnten Sie mir den Liefertermin mitteilen?",
+              "Sehr geehrte Damen und Herren, ich möchte eine neue Bestellung aufgeben. Bitte nennen Sie mir den Preis."
+            ],
+            "answer": 1,
+            "explanation": "A factual description of the missing order plus a request for its delivery date fulfils both requirements."
+          },
+          {
+            "type": "choice",
+            "prompt": "You are unsure whether a task must be finished today or merely started. Clarify.",
+            "options": [
+              "Verstehe ich Sie richtig, dass die Aufgabe heute vollständig fertig sein soll?",
+              "Ich habe verstanden und beginne morgen mit der Aufgabe.",
+              "Die Aufgabe ist bereits fertig. Möchten Sie sie gleich sehen?"
+            ],
+            "answer": 0,
+            "explanation": "Restating the uncertain requirement lets the other person confirm or correct it."
+          },
+          {
+            "type": "choice",
+            "prompt": "A friend wants to cancel a group project because one person cannot attend. Suggest making a start while still including that person.",
+            "options": [
+              "Dann sagen wir das gesamte Projekt ab und informieren alle Beteiligten.",
+              "Wir könnten die Aufgaben heute verteilen und die fehlende Person morgen telefonisch einbeziehen.",
+              "Wir treffen alle Entscheidungen heute und informieren die fehlende Person erst nach Abschluss des Projekts."
+            ],
+            "answer": 1,
+            "explanation": "The compromise keeps the project moving and gives the absent person a chance to contribute."
+          }
+        ],
+        "minutes": "6–10"
+      },
+      {
+        "id": "b1-opinions",
+        "title": "A shared tool cupboard",
+        "skill": "reading",
+        "focus": "Viewpoints · reasons · evidence",
+        "description": "Separate support, concerns and the actual proposal.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Warum unterstützt Nele den Werkzeugschrank?",
+            "options": [
+              "Sie möchte neue Geräte verkaufen.",
+              "Selten benutzte Geräte könnten gemeinsam genutzt werden.",
+              "Sie braucht jeden Tag alle Werkzeuge."
+            ],
+            "answer": 1,
+            "explanation": "Nele says that many tools are only used a few times a year and could be shared."
+          },
+          {
+            "type": "choice",
+            "prompt": "Welche Sorge äußert Jonas?",
+            "options": [
+              "Niemand besitzt Werkzeuge.",
+              "Die Ausleihe könnte zu Streit über Schäden führen.",
+              "Das Haus hat zu viele freie Räume."
+            ],
+            "answer": 1,
+            "explanation": "Jonas asks who would pay if a tool came back damaged."
+          },
+          {
+            "type": "choice",
+            "prompt": "Was schlägt Farid vor?",
+            "options": [
+              "Sofort einen großen Raum zu mieten.",
+              "Einen befristeten Versuch mit klaren Regeln.",
+              "Nur neue Maschinen aufzunehmen."
+            ],
+            "answer": 1,
+            "explanation": "Farid proposes testing the idea for three months with a list and responsibilities."
+          },
+          {
+            "type": "choice",
+            "prompt": "Welche Aussage wird durch den Text gestützt?",
+            "options": [
+              "Alle Beteiligten lehnen die Idee ab.",
+              "Die Gruppe hat bereits eine Versicherung abgeschlossen.",
+              "Unterstützung für die Idee schließt organisatorische Bedenken nicht aus."
+            ],
+            "answer": 2,
+            "explanation": "Nele supports it, Jonas raises a concern, and Farid suggests a way to test it. No insurance contract is mentioned."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Diskussion im Hausforum",
+        "passage": "Nele: In unserem Haus stehen viele Bohrmaschinen und andere Werkzeuge ungenutzt herum. Manche brauchen wir nur zweimal im Jahr. Ein gemeinsamer Werkzeugschrank wäre praktisch: Wir müssten nicht alles selbst kaufen und hätten mehr Platz in unseren Wohnungen. Ich würde meinen Akkuschrauber gern zur Verfügung stellen.\n\nJonas: Die Idee gefällt mir grundsätzlich. Trotzdem möchte ich vorher wissen, wer verantwortlich ist, wenn ein Gerät beschädigt zurückkommt. Außerdem müsste jemand kontrollieren, ob alle Teile wieder da sind. Ohne klare Absprachen könnte es schnell Streit geben.\n\nFarid: Wir sollten klein anfangen und das Ganze drei Monate ausprobieren. Zuerst nehmen wir nur wenige einfache Werkzeuge auf. Wer etwas ausleiht, trägt sich in eine Liste ein. Für jedes Gerät notieren wir den Zustand. Nach drei Monaten besprechen wir gemeinsam, ob das System funktioniert. Einen zusätzlichen Raum müssen wir dafür nicht mieten; im Keller gibt es schon einen freien Schrank."
+      },
+      {
+        "id": "b1-notices",
+        "title": "Compare opportunities carefully",
+        "skill": "reading",
+        "focus": "Advertisements · constraints · inference",
+        "description": "Find an option that satisfies the whole request.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Mara arbeitet werktags bis 18 Uhr und möchte regelmäßig vor Ort helfen. Welches Angebot passt?",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 0,
+            "explanation": "A takes place on Saturdays on site. B conflicts with her hours; C is remote."
+          },
+          {
+            "type": "choice",
+            "prompt": "Omar wohnt weit entfernt, schreibt gern und kann seine Zeit selbst einteilen.",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ],
+            "answer": 2,
+            "explanation": "C allows remote editing with flexible hours."
+          },
+          {
+            "type": "choice",
+            "prompt": "Was ist bei B erforderlich?",
+            "options": [
+              "Erfahrung im Programmieren.",
+              "Zeit an einem festen Wochentag und eine Einführung.",
+              "Ein eigenes Auto."
+            ],
+            "answer": 1,
+            "explanation": "B specifies Wednesdays and an introductory session. It does not require programming skills or a car."
+          },
+          {
+            "type": "choice",
+            "prompt": "Welche Aussage ist richtig?",
+            "options": [
+              "Bei A muss man schon Reparaturen beherrschen.",
+              "Bei C kann man ausschließlich am Samstag arbeiten.",
+              "Bei A können auch Anfängerinnen und Anfänger mithelfen."
+            ],
+            "answer": 2,
+            "explanation": "A explicitly welcomes beginners and provides an introduction."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Freiwillig mitmachen",
+        "passage": "A · REPARATURCAFÉ\nWir suchen Hilfe am ersten Samstag jedes Monats von 10 bis 14 Uhr. Auch ohne Reparaturerfahrung sind Sie willkommen: Sie können Gäste empfangen oder Werkzeug sortieren. Einführung vor Ort.\n\nB · LERNTREFF\nBegleiten Sie mittwochs von 15 bis 17 Uhr ältere Menschen bei einfachen Computerfragen. Sie sollten regelmäßig kommen können. Eine Einführung ist verpflichtend; Programmierkenntnisse sind nicht nötig.\n\nC · STADTTEILBRIEF\nFür unseren monatlichen Newsletter suchen wir Menschen, die kurze Texte überarbeiten. Sie arbeiten von zu Hause und teilen Ihre Zeit frei ein. Texte müssen jeweils bis zum 20. des Monats fertig sein."
+      },
+      {
+        "id": "b1-listening",
+        "title": "A community event is reorganised",
+        "skill": "listening",
+        "focus": "Announcements · reasons · responsibilities",
+        "description": "Listen for the reason for a change and the resulting arrangements.",
+        "items": [
+          {
+            "type": "choice",
+            "prompt": "Warum zieht die Veranstaltung in die Turnhalle um?",
+            "options": [
+              "Wegen einer schlechten Wettervorhersage.",
+              "Weil der Park verkauft wurde.",
+              "Weil sich niemand angemeldet hat."
+            ],
+            "answer": 0,
+            "explanation": "Heavy rain is forecast for Saturday afternoon."
+          },
+          {
+            "type": "choice",
+            "prompt": "Was bleibt unverändert?",
+            "options": [
+              "Der Aufbau beginnt um 11 Uhr.",
+              "Die Veranstaltung beginnt um 14 Uhr.",
+              "Alle Stände bleiben draußen."
+            ],
+            "answer": 1,
+            "explanation": "The event still begins at 14 Uhr. Set-up changes from 11 to 12."
+          },
+          {
+            "type": "choice",
+            "prompt": "Wer soll sich bis Donnerstag melden?",
+            "options": [
+              "Alle Besucher.",
+              "Nur die Musiker.",
+              "Helferinnen und Helfer, die beim Transport helfen können."
+            ],
+            "answer": 2,
+            "explanation": "The organiser asks people who can help with transport to get in touch by Thursday."
+          },
+          {
+            "type": "choice",
+            "prompt": "Welche Aufgabe übernimmt die Schule?",
+            "options": [
+              "Sie stellt Tische bereit.",
+              "Sie kocht das gesamte Essen.",
+              "Sie verkauft Eintrittskarten."
+            ],
+            "answer": 0,
+            "explanation": "The school provides tables; the stalls bring their own food."
+          }
+        ],
+        "minutes": "6–10",
+        "passageTitle": "Planänderung für das Nachbarschaftsfest",
+        "audioText": "Liebe Helferinnen und Helfer, für Samstagnachmittag ist starker Regen angekündigt. Deshalb verlegen wir unser Nachbarschaftsfest vom Park in die Turnhalle der Schule. Der Beginn bleibt bei vierzehn Uhr. Mit dem Aufbau starten wir aber erst um zwölf statt um elf Uhr, weil die Halle vorher noch belegt ist. Die Schule stellt uns Tische zur Verfügung. Die einzelnen Stände bringen ihr Essen selbst mit. Wer beim Transport vom Park zur Schule helfen kann, meldet sich bitte bis Donnerstag bei mir. Besucherinnen und Besucher müssen sich nicht anmelden. Vielen Dank für Ihre Unterstützung!"
+      },
+      {
+        "id": "b1-writing",
+        "title": "Write with a clear purpose",
+        "skill": "writing",
+        "focus": "A reasoned opinion · a formal request",
+        "description": "Plan, write, compare and revise. The model is an example, not an answer key.",
+        "items": [
+          {
+            "type": "write",
+            "prompt": "Your neighbourhood forum is discussing a monthly car-free Sunday. Write your opinion. Give one benefit, mention a concern for people who depend on cars, and propose a practical compromise.",
+            "checklist": [
+              "I clearly stated my opinion.",
+              "I explained a benefit with a reason or example.",
+              "I considered people who depend on cars.",
+              "I proposed a practical compromise and checked paragraph links."
+            ],
+            "model": "Ich finde einen autofreien Sonntag im Monat grundsätzlich sinnvoll. Kinder könnten sicherer draußen spielen, und wir hätten Gelegenheit, unsere Nachbarn ohne Verkehrslärm zu treffen. Allerdings brauchen manche Menschen ihr Auto, zum Beispiel für den Weg zur Arbeit oder wegen einer eingeschränkten Mobilität. Ihre Situation dürfen wir nicht vergessen. Deshalb würde ich zunächst nur zwei Straßen für einige Stunden sperren. Für notwendige Fahrten sollte es Ausnahmen geben. Außerdem könnte die Stadt an diesem Tag zusätzliche Busse anbieten. Nach drei Monaten sollten wir die Erfahrungen der Anwohner sammeln und gemeinsam entscheiden, ob wir das Angebot fortsetzen oder verändern möchten.",
+            "target": [
+              90,
+              120
+            ],
+            "explanation": "This is one possible response. Use the checklist to review your own meaning and language; different correct responses are possible."
+          },
+          {
+            "type": "write",
+            "prompt": "You booked a room for a study group, but its projector did not work. Write to the centre: describe the problem and its effect, explain that you reported it on the day, and request a practical solution for your next booking.",
+            "checklist": [
+              "I used a suitable formal greeting and ending.",
+              "I described the broken projector and its effect.",
+              "I said that I reported the problem on the day.",
+              "I requested a concrete solution for the next booking."
+            ],
+            "model": "Sehr geehrte Damen und Herren, am vergangenen Freitag hat unsere Lerngruppe Ihren Seminarraum genutzt. Leider funktionierte der Projektor nicht, obwohl er in der Buchungsbeschreibung aufgeführt war. Deshalb konnten wir unsere vorbereiteten Präsentationen nicht zeigen und mussten einen Teil des Programms verschieben. Ich habe das Problem noch am selben Tag an der Rezeption gemeldet. Wir haben den Raum bereits für nächsten Freitag reserviert. Bitte bestätigen Sie uns, dass dann ein funktionierender Projektor zur Verfügung steht. Falls eine Reparatur nicht möglich ist, bitten wir um einen anderen geeigneten Raum. Vielen Dank für Ihre Unterstützung und eine zeitnahe Rückmeldung. Mit freundlichen Grüßen, Dana Falk",
+            "target": [
+              90,
+              120
+            ],
+            "explanation": "This is one possible response. Use the checklist to review your own meaning and language; different correct responses are possible."
+          }
+        ],
+        "minutes": "15–20"
+      }
+    ]
+  }
+}

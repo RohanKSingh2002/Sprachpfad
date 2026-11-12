@@ -534,6 +534,12 @@ Lesson multiple-choice options are shuffled without changing their answer keys. 
 
 ## Maintenance and release review
 
+### Learning-support update, 25 October 2026
+
+Each module now includes an original transfer task with a short success checklist, targeted review advice and links to earlier lessons where useful. These activities are ungraded, so the original scored tasks, lesson IDs and module-check version stay stable. The roadmap also includes guidance for finding the main idea and evidence, drafting and revising messages, and responding to a conversation partner. Suggested later review intervals are guidance rather than an additional automatic reminder system.
+
+Private reference material informed the topic and skill review. No scans, notebook examples, names or personal details were copied into the course. See `docs/COURSE-REFERENCE-UPDATE.md` for the scope of the review and the related A2/B1 changes.
+
 Before public claims of comprehensive A1 preparation, have a German educator review the syllabus, new lessons, translations, distractors and models; audit vocabulary and meanings against the official reference; review natural audio; and have beginners complete the path and unfamiliar assessment tasks. Correct ambiguous prompts and false rejections of acceptable answers.
 
 The site can initially save progress in the browser. Learners should understand that this belongs to that browser. Add accounts and a backend when the product needs progress across devices. Keep the content model separate from the views so a later A2/B1 curriculum can use the same lesson, roadmap and assessment structure.

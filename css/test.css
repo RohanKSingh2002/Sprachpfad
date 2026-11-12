@@ -43,6 +43,8 @@
   margin: 26px auto 18px;
 }
 .cert {
+  --stamp: #2d3a8c;
+  --signal: var(--brand);
   position: relative;
   background: var(--paper);
   color: var(--ink);
@@ -158,3 +160,13 @@
   font-weight: 700;
   background: var(--surface);
 }
+.test-setup { max-width: 640px; margin: 20px 0; }
+.test-setup > h2 { margin-bottom: 7px; }
+.test-setup-field { min-inline-size: 0; border: 0; margin: 15px 0 6px; padding: 0; }
+.test-setup-field legend { margin-bottom: 6px; font-weight: 700; }
+.test-setup > .btn { margin-top: 14px; }
+.test-attempt-tools { margin: 18px 0; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.test-attempt-tools p { margin: 7px 0; }
+.test-timer-length { display: flex; align-items: center; gap: 8px; padding: 8px 0; }
+.test-timer-length[hidden] { display: none; }
+.test-timer-length input { width: 85px; }
