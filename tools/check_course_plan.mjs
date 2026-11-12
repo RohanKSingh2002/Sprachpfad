@@ -59,7 +59,12 @@ for (const weeks of [8, 16, 24]) {
     if (weeks === 24) assert.ok(lessonCount >= 1 && lessonCount <= 2);
   }
   const html = roadmap.render(level);
-  assert.equal((html.match(/<h3 id="course-week-/g) || []).length, weeks);
+  const weekCards = [...html.matchAll(/<section class="course-week" aria-labelledby="course-week-(\d+)">\s*<div class="course-week-header">\s*<h3 id="course-week-\1">Week \1<\/h3>\s*<p class="muted small" data-week-status="\1">[^<]+<\/p>\s*<\/div>([\s\S]*?)<\/section>/g)];
+  assert.deepEqual(weekCards.map(([, number]) => Number(number)), plan.schedule.map(week => week.number));
+  for (const [, , modules] of weekCards) {
+    assert.ok(modules.includes('class="course-module'), 'Every week card contains its module rows or continuation links.');
+    assert.doesNotMatch(modules, /<small>Week \d+ · \d+ lessons/);
+  }
   assert.equal((html.match(/id="course-module-\d+"/g) || []).length, 16);
   const dropdowns = html.match(/<details class="course-module"[\s\S]*?<\/details>/g) || [];
   const outsideDropdowns = html.replace(/<details class="course-module"[\s\S]*?<\/details>/g, '');
@@ -73,6 +78,7 @@ for (const weeks of [8, 16, 24]) {
     assert.ok(html.includes('Lesson 1 · Week 1 · Days 1–3'));
     assert.ok(html.includes('Lesson 4 · Week 3 · Days 1–3'));
     assert.ok(html.includes('Continue module 2 from Week 2'));
+    assert.ok(html.includes('Weeks 2–3 · 2 lessons'), 'A module spanning two weeks still shows its full range.');
     for (const moduleId of [2, 4, 6, 8, 10, 12, 14, 16]) {
       const dropdown = dropdowns.find(item => item.includes(`id="course-module-${moduleId}"`));
       const header = dropdown.split('</summary>')[0];

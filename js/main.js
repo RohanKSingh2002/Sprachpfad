@@ -1,7 +1,7 @@
 // Entry point: load the content, restore progress, then hand over to the router.
 
 import { loadContent } from "./content.js";
-import { activeView, relayout, route } from "./router.js";
+import { activeView, relayout, route } from "./router.js?v=20261112-weekcards1";
 import { initState, resetState } from "./state.js";
 import { initAudio, speak } from "./ui/audio.js";
 import { startClock } from "./ui/board.js";

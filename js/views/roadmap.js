@@ -24,8 +24,8 @@ function moduleHeadingHTML(module, plan, continuationLinks = []) {
   const targets = plan.units.filter(unit => unit.module.id === module.id);
   const firstWeek = targets[0].week;
   const lastWeek = targets[targets.length - 1].lastWeek;
-  const timing = firstWeek === lastWeek ? `Week ${firstWeek}` : `Weeks ${firstWeek}–${lastWeek}`;
-  return `<span class="course-module-number">${module.id}</span><span><b>${esc(module.title)}</b><small>${timing} · ${lessons.length} lessons · ${module.hours} hours of study and practice</small>${continuationLinks.map(link => `<small class="course-module-continue">${link}</small>`).join('')}</span><span class="course-module-status" data-module-status="${module.id}">${reviewed(module) ? 'Practice reviewed' : `${lessons.filter(isDone).length}/${lessons.length} exercises complete`}</span>`;
+  const timing = firstWeek === lastWeek ? '' : `Weeks ${firstWeek}–${lastWeek} · `;
+  return `<span class="course-module-number">${module.id}</span><span><b>${esc(module.title)}</b><small>${timing}${lessons.length} lessons · ${module.hours} hours of study and practice</small>${continuationLinks.map(link => `<small class="course-module-continue">${link}</small>`).join('')}</span><span class="course-module-status" data-module-status="${module.id}">${reviewed(module) ? 'Practice reviewed' : `${lessons.filter(isDone).length}/${lessons.length} exercises complete`}</span>`;
 }
 function moduleHTML(module, plan, open, continuationLinks = []) {
   const checks = courseChecks(level, module.id);
@@ -46,6 +46,10 @@ function moduleHTML(module, plan, open, continuationLinks = []) {
     </div></details>`;
 }
 
+function weekStatus(week) {
+  return `${week.units.filter(unit => unit.done).length}/${week.units.length} targets complete · Day 7: flexible review or rest`;
+}
+
 function weeksHTML(plan, openModules = new Set([1])) {
   return plan.schedule.map(week => {
     const starts = level.course.modules.filter(module => plan.units.find(unit => unit.module === module).week === week.number);
@@ -56,7 +60,13 @@ function weeksHTML(plan, openModules = new Set([1])) {
     });
     // Continuation-only weeks share the module header layout and link back to its full dropdown.
     const continuationCards = starts.length ? '' : continuing.map((module, index) => `<div class="course-module course-module-reference"><div class="course-module-heading">${moduleHeadingHTML(module, plan, [references[index]])}</div></div>`).join('');
-    return `<section aria-labelledby="course-week-${week.number}"><h3 id="course-week-${week.number}">Week ${week.number}</h3><p class="muted small" data-week-status="${week.number}">${week.units.filter(unit => unit.done).length}/${week.units.length} targets complete · Day 7: flexible review or rest</p>${continuationCards}${starts.map((module, index) => moduleHTML(module, plan, openModules.has(module.id), index === 0 ? references : [])).join('')}</section>`;
+    return `<section class="course-week" aria-labelledby="course-week-${week.number}">
+      <div class="course-week-header">
+        <h3 id="course-week-${week.number}">Week ${week.number}</h3>
+        <p class="muted small" data-week-status="${week.number}">${weekStatus(week)}</p>
+      </div>
+      ${continuationCards}${starts.map((module, index) => moduleHTML(module, plan, openModules.has(module.id), index === 0 ? references : [])).join('')}
+    </section>`;
   }).join('');
 }
 
@@ -97,7 +107,7 @@ export function onChange(e) {
     document.getElementById('modules-reviewed').textContent = `${level.course.modules.filter(reviewed).length}/${level.course.modules.length}`;
     const plan = studyPlan(level);
     plan.schedule.forEach(week => {
-      document.querySelector(`[data-week-status="${week.number}"]`).textContent = `${week.units.filter(unit => unit.done).length}/${week.units.length} targets complete · Day 7: flexible review or rest`;
+      document.querySelector(`[data-week-status="${week.number}"]`).textContent = weekStatus(week);
     });
   }
 }

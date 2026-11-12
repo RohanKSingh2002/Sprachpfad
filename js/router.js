@@ -28,7 +28,7 @@ import * as lesson from "./views/lesson.js";
 import * as notFound from "./views/notfound.js";
 import * as practice from "./views/practice.js";
 import * as profile from "./views/profile.js";
-import * as roadmap from "./views/roadmap.js";
+import * as roadmap from "./views/roadmap.js?v=20261112-weekcards1";
 import * as test from "./views/test.js";
 import * as workshop from "./views/workshop.js";
 import * as account from "./views/account.js";
