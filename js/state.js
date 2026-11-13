@@ -2,11 +2,13 @@
 
 import { LEVELS, LEVEL_BY_ID, ALL_LESSONS, ALL_WORDS, SETS, gradedTasks, isFlashcardSet, isSavedWord } from "./content.js";
 import { addDays, dayKey, todayKey } from "./utils.js";
+import { validProfilePhoto } from "./profile-photo.js";
 import { DEFAULT_GERMAN_VOICE, GERMAN_VOICES } from "./german-voices.js";
 
 const KEY = "sprachpfad-v1";
 
 const fresh = () => ({
+  profilePhoto: "",
   lessons: {}, // "a2-3": { done: true, score: 5 }
   known: [], // German words marked as known in the flashcards at least once
   review: {}, // "der Tisch": { box: 0–5, due: "2026-10-04", seen: "2026-10-01" | null, missed: false, from?: "a1-3" }
@@ -263,6 +265,7 @@ function load(value) {
     const known = Array.isArray(s.known) ? [...new Set(s.known.filter(isSavedWord))] : [];
     return {
       lessons,
+      profilePhoto: validProfilePhoto(s.profilePhoto),
       known,
       review: s.review && typeof s.review === "object" ? entries(s.review, (value, word) => {
         const r = object(value);
@@ -326,18 +329,32 @@ export const hasProgress = (s) => !!(s && (Object.keys(s.lessons || {}).length |
 function save() {
   if (accountSave) {
     accountSave(stateSnapshot());
-    return;
+    return true;
   }
   try {
     localStorage.setItem(KEY, JSON.stringify(S));
+    return true;
   } catch (e) {
     // Storage can be full or blocked (private mode); the app keeps working without it.
+    return false;
   }
 }
 
 export function resetState() {
-  S = fresh();
+  S = { ...fresh(), profilePhoto: S.profilePhoto };
   save();
+}
+
+export const profilePhoto = () => S.profilePhoto;
+
+export function setProfilePhoto(value) {
+  const photo = validProfilePhoto(value);
+  if (value && !photo) return false;
+  const previous = S.profilePhoto;
+  S.profilePhoto = photo;
+  if (save()) return true;
+  S.profilePhoto = previous;
+  return false;
 }
 
 /* ---------- practice log ---------- */

@@ -1,14 +1,14 @@
 // Entry point: load the content, restore progress, then hand over to the router.
 
 import { loadContent } from "./content.js";
-import { activeView, currentTeacherPage, relayout, route } from "./router.js?v=20261113-teacher1";
-import { initState, resetState } from "./state.js";
+import { activeView, currentTeacherPage, relayout, route } from "./router.js?v=20261113-profile-header1";
+import { initState, profilePhoto, resetState } from "./state.js";
 import { clearDevicePractice } from "./practice-progress.js";
 import { flushStudyTime, resetStudyClock, startStudyClock } from "./study-clock.js";
 import { initAudio, resetAudioSpeed, speak } from "./ui/audio.js";
 import { startClock } from "./ui/board.js";
 import { initSpotlight } from "./ui/effects.js?v=20261113-polish1";
-import { initProfileMenu, setProfileMenuSignedIn } from "./ui/profile-menu.js?v=20261113-signout1";
+import { initProfileMenu, setProfileMenuSignedIn, showProfileMenuPhoto } from "./ui/profile-menu.js?v=20261113-profile-photo1";
 import { initSmoothScroll } from "./ui/scroll.js?v=20261113-polish1";
 import { toast } from "./ui/toast.js";
 import { initTeacher } from "./ui/teacher.js";
@@ -79,6 +79,7 @@ function updateAccountUI() {
   document.getElementById("save-status").textContent = `Sprachpfad. ${status.message}`;
   document.querySelectorAll("[data-sync-status]").forEach(el => { el.textContent = status.message; });
   setProfileMenuSignedIn(Boolean(currentUser()));
+  showProfileMenuPhoto(status.blocked ? "" : profilePhoto());
 }
 
 function confirmSignOut({ pending, persistent }) {
@@ -197,6 +198,7 @@ async function start() {
   initSmoothScroll();
   initSpotlight();
   initProfileMenu();
+  document.addEventListener('profilephotochange', updateAccountUI);
   window.addEventListener("hashchange", route);
   document.addEventListener("click", onClick);
   document.addEventListener("keydown", (e) => { if (!e.target.closest?.('#teacher, #signout-dialog')) activeView()?.onKeydown?.(e); });

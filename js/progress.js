@@ -227,7 +227,7 @@ export function dismissBrowserImport() {
 export async function importBrowserProgress() {
   if (!canImportBrowserProgress()) return false;
   const ctx = active;
-  ctx.cache.state = browserProgress();
+  ctx.cache.state = { ...browserProgress(), profilePhoto: ctx.cache.state.profilePhoto || "" };
   ctx.cache.dirty = true;
   persist(ctx);
   install(ctx);
@@ -278,7 +278,7 @@ export async function resetAccountProgress() {
   ctx.resetting = true;
   announce(ctx, "loading", "Resetting your account progress…");
   try {
-    ctx.cache.state = emptyProgress();
+    ctx.cache.state = { ...emptyProgress(), profilePhoto: ctx.cache.state.profilePhoto || "" };
     ctx.cache.dirty = true;
     persist(ctx);
     install(ctx);

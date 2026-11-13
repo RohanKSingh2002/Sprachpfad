@@ -25,6 +25,22 @@ body.entry-screen { padding-bottom: 0; }
 .account-identity { display: flex; gap: 16px; align-items: center; min-width: 0; }
 .account-identity > div { min-width: 0; }
 .account-initial { display: grid; place-items: center; width: 48px; height: 48px; flex-shrink: 0; border-radius: 50%; background: var(--sunken); font: 600 24px var(--cond); }
+.profile-picture-strip { flex-wrap: wrap; }
+.profile-picture-avatar { position: relative; border: 0; padding: 0; color: var(--text); box-shadow: 0 0 0 2px var(--signal); cursor: pointer; transition: transform var(--motion-fast) var(--ease-standard); }
+.profile-picture-avatar:disabled { opacity: .65; cursor: wait; }
+.profile-picture-avatar:focus-visible { outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .profile-picture-avatar:hover:not(:disabled) { transform: scale(1.06); }
+}
+.profile-picture-avatar:active { transform: scale(.97); }
+.profile-picture-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+.profile-picture-camera { position: absolute; inset-inline-end: -3px; inset-block-end: -2px; display: grid; place-items: center; width: 22px; height: 22px; border: 2px solid var(--surface); border-radius: 50%; background: var(--signal); color: var(--on-signal); }
+.profile-picture-camera svg { width: 12px; height: 12px; }
+.profile-picture-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.profile-picture-actions:not(:has(:not([hidden]))) { display: none; }
+.profile-picture-strip [hidden] { display: none; }
+.profile-picture-strip .profile-picture-status { width: 100%; font-size: .875rem; color: var(--muted); }
+.profile-picture-status:empty { display: none; }
 .account-sync-row { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: baseline; margin: 0 0 24px; font-size: 14px; }
 .account-save { color: var(--muted); margin: 0; flex: 1 1 260px; }
 .account-import { border-left: 3px solid var(--signal); background: var(--surface); padding: 20px 24px; margin: 24px 0; }

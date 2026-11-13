@@ -9,7 +9,9 @@ import {
   knownIn,
   nextLesson,
   passed,
+  profilePhoto,
   sentenceStats,
+  setProfilePhoto,
   streak,
   studySecondsOn,
   testResult,
@@ -17,7 +19,9 @@ import {
 import { ARROW_ICON } from "../ui/icons.js";
 import { countUp, enter, gsap, motionOK, onLeave, revealOnScroll } from "../ui/motion.js?v=20261113-polish1";
 import { esc } from "../utils.js";
-import { profileAccount } from "./account.js?v=20261104-settings1";
+import { profileAccount } from "./account.js?v=20261113-profile-photo7";
+import { prepareProfilePhoto } from "../profile-photo.js?v=20261113-profile-photo7";
+import { localInstruction } from "../study-language.js";
 
 const WEEKS = 17;
 const dateLabel = (date) => date.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
@@ -157,7 +161,6 @@ export function render(level = currentLevel()) {
   return `<div class="profile-page">
     <div class="profile-head">
       <div><p class="profile-eyebrow">Your learning, at a glance</p><h1>Your profile</h1><p class="muted">See your progress, revisit a level and keep your practice going.</p></div>
-      <a class="btn small ghost" href="#/settings">Settings${ARROW_ICON}</a>
     </div>
     ${profileAccount()}
     ${overview()}
@@ -189,7 +192,58 @@ export function render(level = currentLevel()) {
   </div>`;
 }
 
+function paintProfilePhoto(strip, message) {
+  const photo = profilePhoto();
+  const image = strip.querySelector('img');
+  if (photo) image.src = photo;
+  else image.removeAttribute('src');
+  image.hidden = !photo;
+  strip.querySelector('[data-profile-picture-label]').textContent = localInstruction(photo ? 'Change profile picture' : 'Add profile picture');
+  strip.querySelector('[data-profile-picture-remove]').hidden = !photo;
+  strip.querySelector('.profile-picture-status').textContent = localInstruction(message);
+  document.dispatchEvent(new Event('profilephotochange'));
+}
+
+export function onClick(_event, button) {
+  if (button?.hasAttribute('data-profile-picture-choose')) {
+    const input = document.getElementById('profile-picture-file');
+    input.value = '';
+    input.click();
+    return;
+  }
+  if (!button?.hasAttribute('data-profile-picture-remove')) return;
+  const strip = button.closest('.profile-picture-strip');
+  if (setProfilePhoto('')) {
+    paintProfilePhoto(strip, 'Profile picture removed.');
+    strip.querySelector('[data-profile-picture-choose]').focus();
+  }
+  else strip.querySelector('.profile-picture-status').textContent = localInstruction('The picture could not be saved in this browser.');
+}
+
+async function changeProfilePicture(input) {
+  const file = input.files?.[0];
+  if (!file) return;
+  const strip = input.closest('.profile-picture-strip');
+  const choose = strip.querySelector('[data-profile-picture-choose]');
+  const remove = strip.querySelector('[data-profile-picture-remove]');
+  const status = strip.querySelector('.profile-picture-status');
+  choose.disabled = remove.disabled = true;
+  status.textContent = localInstruction('Preparing picture…');
+  try {
+    const photo = await prepareProfilePhoto(file);
+    if (!strip.isConnected) return;
+    if (!setProfilePhoto(photo)) throw new Error('The picture could not be saved in this browser.');
+    paintProfilePhoto(strip, 'Profile picture updated.');
+  } catch (error) {
+    if (strip.isConnected) status.textContent = localInstruction(error.message);
+  } finally {
+    choose.disabled = remove.disabled = false;
+    if (strip.isConnected && document.activeElement === document.body) choose.focus();
+  }
+}
+
 export function onChange(event) {
+  if (event.target.id === 'profile-picture-file') { void changeProfilePicture(event.target); return; }
   const periodChanged = event.target.id === "profile-activity-period";
   if (!periodChanged && event.target.id !== "profile-sentence-lesson") return;
   const days = Number(document.getElementById("profile-activity-period").value);

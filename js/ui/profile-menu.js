@@ -42,3 +42,12 @@ export function setProfileMenuSignedIn(signedIn) {
   const signout = document.querySelector('#profile-menu [data-account-action="signout"]');
   if (signout) signout.hidden = !signedIn;
 }
+
+export function showProfileMenuPhoto(photo) {
+  const button = document.getElementById('profile-menu-button');
+  const image = button.querySelector('img');
+  if (photo && image.getAttribute('src') !== photo) image.src = photo;
+  if (!photo) image.removeAttribute('src');
+  image.hidden = !photo;
+  button.querySelector('svg').toggleAttribute('hidden', Boolean(photo));
+}
