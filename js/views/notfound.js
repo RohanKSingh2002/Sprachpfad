@@ -1,7 +1,7 @@
 // Page for unknown addresses: "Zug fällt aus" is what German stations announce for a cancelled train.
 
 import { boardHTML, runBoards } from "../ui/board.js";
-import { enter, splitReveal } from "../ui/motion.js";
+import { enter, splitReveal } from "../ui/motion.js?v=20261113-polish1";
 
 export function render() {
   const board = boardHTML({
@@ -22,7 +22,7 @@ export function render() {
 
 export function mount() {
   runBoards(document, { delay: 0.3 });
-  enter(".notfound .flapboard", { y: 24, scale: 0.97, duration: 1 });
+  enter(".notfound .flapboard", { y: 10, scale: 0.99, duration: 0.5 });
   splitReveal(document.querySelector(".notfound h1"), { delay: 0.15 });
-  enter(".notfound .muted, .notfound .btn", { y: 14, delay: 0.3, stagger: 0.08 });
+  enter(".notfound .muted, .notfound .btn", { y: 8, delay: 0.08, stagger: 0.04 });
 }

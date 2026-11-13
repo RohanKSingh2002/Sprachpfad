@@ -1,6 +1,6 @@
 // Original workbook-style practice sets. Learning activity uses the existing account calendar.
 import { logPractice } from '../state.js';
-import { enter, motionOK, splitReveal } from '../ui/motion.js';
+import { enter, motionOK, splitReveal } from '../ui/motion.js?v=20261113-polish1';
 import { speakerButton, stopAudio } from '../ui/audio.js';
 import { esc } from '../utils.js';
 import { breadcrumb, levelSwitch } from './shared.js';
@@ -236,8 +236,8 @@ export function mount(lv, { sameKind } = {}) {
   level = lv; document.addEventListener('input', onInput);
   if (session) persist();
   if (!motionOK()) return;
-  if (sameKind) enter('.page-head h1, .practice-overview', { y: 14, duration: 0.55 });
-  else splitReveal(document.querySelector('.page-head h1'), { duration: 0.8 });
+  if (sameKind) enter('.page-head h1, .practice-overview', { y: 8, duration: 0.42 });
+  else splitReveal(document.querySelector('.page-head h1'), { duration: 0.62 });
 }
 export function unmount() { document.removeEventListener('input', onInput); stopAudio(); }
 export const updatesInPlace = true;

@@ -1,9 +1,9 @@
 export function curriculumDocument(course, original) {
   const lessons = new Map([...original.lessons, ...course.lessons].map(l => [l.id, l]));
   const positions = new Map(course.lessonOrder.map((id, i) => [id, i + 1]));
-  const roadmap = course.modules.map(m => `### Module ${m.id}: ${m.title}
+  const roadmap = course.modules.map((m, moduleIndex) => `### Module ${moduleIndex + 1}: ${m.title}
 
-**Regular pace:** week ${m.id}; ${m.hours} hours plus one hour of cumulative review.
+**Regular pace:** week ${moduleIndex + 1}; ${m.hours} hours plus one hour of cumulative review.
 
 ${m.lessonIds.map(id => `- Lesson ${positions.get(id)}: **${lessons.get(id).title}** — ${lessons.get(id).intro}`).join('\n')}
 
@@ -20,7 +20,7 @@ ${m.lessonIds.map(id => `- Lesson ${positions.get(id)}: **${lessons.get(id).titl
 
 **Checkpoint:** ${m.checkpoint}
 
-Open the module’s four-skill workshop at \`#/a1/checkpoint/${m.id}\`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: ${m.workshop.writing.task} Speaking prompt: ${m.workshop.speaking.task}
+Open the module’s four-skill workshop at \`#/a1/checkpoint/${m.id}\` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: ${m.workshop.writing.task} Speaking prompt: ${m.workshop.speaking.task}
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 `).join('\n');
@@ -32,7 +32,7 @@ Prepared: ${course.updated}. Target: ${course.targetExam}. Audience: adult begin
 
 The learner should be able to handle simple everyday situations, understand practical information, give personal details, ask and answer basic questions, make requests, complete forms and write short messages. A correct grammar exercise is one part of that outcome. The learner must also use the language with an unfamiliar prompt, recording or conversation partner.
 
-The course contains 32 sequenced lessons in 16 modules, with vocabulary, pronunciation, listening, reading, writing, interaction and a checkpoint in every module. Existing lesson identifiers remain stable so that older links and saved lesson results continue to refer to the same material. The visible course sequence starts with sound and spelling foundations and then develops communication progressively.
+The course contains 32 sequenced lessons in 16 modules, with vocabulary, pronunciation, listening, reading, writing, interaction and a checkpoint in every module. Existing lesson and checkpoint identifiers remain stable so that older links and saved results continue to refer to the same material. The visible sequence follows the learner's A1 notebook from spelling and personal information through present-tense grammar, family and articles, food and shopping, time and routines, housing, requests and case patterns, past events, and four-skill exam preparation.
 
 The course contains original lessons, 16 supported workshops and one preparation assessment. The October 2026 tutor review led to revised grammar, clearer exercise prompts, accepted word-order alternatives, separate goals and speaking models for every lesson, and fuller vocabulary support. Locally generated German recordings cover the spoken course lines; the mock dialogues use two distinct voices. These are synthetic recordings. Independent listening review and assessment with real learners remain further quality work.
 
@@ -168,15 +168,19 @@ Lesson multiple-choice options are shuffled without changing their answer keys. 
 
 ### Learning-support update, 25 October 2026
 
-Each module now includes an original transfer task with a short success checklist, targeted review advice and links to earlier lessons where useful. These activities are ungraded, so the original scored tasks, lesson IDs and module-check version stay stable. The roadmap also includes guidance for finding the main idea and evidence, drafting and revising messages, and responding to a conversation partner. Suggested later review intervals are guidance rather than an additional automatic reminder system.
+Each module now includes an original transfer task with a short success checklist, targeted review advice and links to earlier lessons where useful. These activities are ungraded; lesson and checkpoint IDs stay stable. The roadmap also includes guidance for finding the main idea and evidence, drafting and revising messages, and responding to a conversation partner. Suggested later review intervals are guidance rather than an additional automatic reminder system.
 
 Private reference material informed the topic and skill review. No scans, notebook examples, names or personal details were copied into the course. See docs/COURSE-REFERENCE-UPDATE.md for the scope of the review and the related A2/B1 changes.
+
+### A1 notebook alignment, 12 November 2026
+
+The 123-page A1 notebook was reviewed for its topic progression and recurring practice forms. The roadmap now places food and negation before time and routines, then housing before modal requests and health. The course explicitly teaches the notebook's location-versus-destination distinction, common accusative and dative object pronouns, imperative forms, and bounded clothing adjective endings. Every lesson now ends with one additional, scored notebook-style drill such as a conjugation or case gap, a word-order build, or a short meaning check. These drills and all example sentences were independently written; notebook answers and personal examples were not copied. Lesson and checkpoint IDs remain stable, while the displayed module numbers follow the new order.
 
 Before public claims of comprehensive A1 preparation, have a German educator review the syllabus, new lessons, translations, distractors and models; audit vocabulary and meanings against the official reference; review natural audio; and have beginners complete the path and unfamiliar assessment tasks. Correct ambiguous prompts and false rejections of acceptable answers.
 
 The site can initially save progress in the browser. Learners should understand that this belongs to that browser. Add accounts and a backend when the product needs progress across devices. Keep the content model separate from the views so a later A2/B1 curriculum can use the same lesson, roadmap and assessment structure.
 
-Official sources checked on ${course.updated}:
+Official source references last reviewed on 2026-10-08:
 
 ${course.sources.map(source => `- [${source.title}](${source.url})`).join('\n')}
 `;

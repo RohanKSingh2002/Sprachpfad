@@ -3,7 +3,7 @@ export function initProfileMenu() {
   const root = document.querySelector(".profile-navigation");
   const button = document.getElementById("profile-menu-button");
   const menu = document.getElementById("profile-menu");
-  const links = [...menu.querySelectorAll("a")];
+  const menuItems = () => [...menu.querySelectorAll("a, button:not([hidden])")];
   function close(restoreFocus = false) {
     menu.hidden = true;
     button.setAttribute("aria-expanded", "false");
@@ -23,16 +23,22 @@ export function initProfileMenu() {
       event.preventDefault();
       event.stopPropagation();
       open();
-      const index = links.indexOf(document.activeElement);
-      const next = index < 0 ? (event.key === "ArrowDown" ? 0 : links.length - 1)
-        : (index + (event.key === "ArrowDown" ? 1 : -1) + links.length) % links.length;
-      links[next].focus();
+      const items = menuItems();
+      const index = items.indexOf(document.activeElement);
+      const next = index < 0 ? (event.key === "ArrowDown" ? 0 : items.length - 1)
+        : (index + (event.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+      items[next]?.focus();
     }
   });
   menu.addEventListener("click", event => {
-    if (event.target.closest("a")) close(true);
+    if (event.target.closest('a, button[data-account-action="signout"]')) close(true);
   });
   document.addEventListener("click", event => { if (!root.contains(event.target)) close(); });
   root.addEventListener("focusout", event => { if (!root.contains(event.relatedTarget)) close(); });
   window.addEventListener("hashchange", () => close());
+}
+
+export function setProfileMenuSignedIn(signedIn) {
+  const signout = document.querySelector('#profile-menu [data-account-action="signout"]');
+  if (signout) signout.hidden = !signedIn;
 }

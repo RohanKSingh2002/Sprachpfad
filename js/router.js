@@ -20,21 +20,21 @@ import { currentUser } from "./auth.js";
 import { hasEnteredAsGuest } from "./entry.js";
 import { progressStatus } from "./progress.js";
 import { updateDueBadges } from "./ui/duebadge.js";
-import { applyDisplayPreferences, gsap, motionOK, runCleanups, ScrollTrigger } from "./ui/motion.js";
-import { initSmoothScroll, scrollToTop } from "./ui/scroll.js";
-import * as cards from "./views/cards.js?v=20261108-home1";
-import * as cert from "./views/cert.js";
+import { applyDisplayPreferences, gsap, motionOK, onLeave, runCleanups, ScrollTrigger } from "./ui/motion.js?v=20261113-polish1";
+import { initSmoothScroll, scrollToTop } from "./ui/scroll.js?v=20261113-polish1";
+import * as cards from "./views/cards.js?v=20261113-polish1";
+import * as cert from "./views/cert.js?v=20261113-polish1";
 import * as home from "./views/home.js?v=20261112-shortcuts2";
-import * as lesson from "./views/lesson.js?v=20261108-home1";
-import * as notFound from "./views/notfound.js";
-import * as practice from "./views/practice.js?v=20261107-study4";
-import * as profile from "./views/profile.js?v=20261107-study4";
+import * as lesson from "./views/lesson.js?v=20261113-polish1";
+import * as notFound from "./views/notfound.js?v=20261113-polish1";
+import * as practice from "./views/practice.js?v=20261113-polish1";
+import * as profile from "./views/profile.js?v=20261113-polish1";
 import * as roadmap from "./views/roadmap.js?v=20261112-weekcards1";
-import * as test from "./views/test.js";
+import * as test from "./views/test.js?v=20261113-polish1";
 import * as workshop from "./views/workshop.js?v=20261108-home1";
 import * as account from "./views/account.js?v=20261104-settings1";
-import * as settings from "./views/settings.js?v=20261112-shortcuts2";
-import * as sentences from "./views/sentences.js?v=20261108-home1";
+import * as settings from "./views/settings.js?v=20261113-signout1";
+import * as sentences from "./views/sentences.js?v=20261113-polish1";
 
 let active = null;
 let firstRoute = true;
@@ -134,24 +134,25 @@ export function route(options = {}) {
   leaving?.kill();
   leaving = null;
   const sameKind = from === next.view && next.view.updatesInPlace;
+  const animateEnter = !options.immediate && motionOK() && !sameKind;
   if (!options.immediate && motionOK() && !firstRoute && !sameKind && app.firstElementChild) {
     app.classList.add("is-leaving");
     leaving = gsap.to(app, {
       autoAlpha: 0,
-      y: -10,
-      duration: 0.18,
+      y: -5,
+      duration: 0.12,
       ease: "power2.in",
       onComplete: () => {
         leaving = null;
-        show(next, from);
+        show(next, from, { animateEnter: true });
       },
     });
   } else {
-    show(next, from);
+    show(next, from, { animateEnter });
   }
 }
 
-function show({ view, param, nav = "", title = "German A1–B1 practice", path }, from) {
+function show({ view, param, nav = "", title = "German A1–B1 practice", path }, from, { animateEnter = false } = {}) {
   const app = document.getElementById("app");
   setStudyView([cards, lesson, practice, sentences, test, workshop].includes(view));
   runCleanups();
@@ -163,6 +164,16 @@ function show({ view, param, nav = "", title = "German A1–B1 practice", path }
   applyDisplayPreferences();
   initSmoothScroll();
   app.innerHTML = view.render(param);
+  if (animateEnter && motionOK()) {
+    const tween = gsap.from(app, {
+      autoAlpha: 0,
+      y: 6,
+      duration: 0.24,
+      ease: "power3.out",
+      clearProps: "opacity,visibility,transform",
+    });
+    onLeave(() => tween.kill());
+  }
   app.dataset.route = path;
   active = view;
   document.title = `${title} | Sprachpfad`;

@@ -1,15 +1,15 @@
 // Entry point: load the content, restore progress, then hand over to the router.
 
 import { loadContent } from "./content.js";
-import { activeView, relayout, route } from "./router.js?v=20261112-weekcards1";
+import { activeView, relayout, route } from "./router.js?v=20261113-polish1";
 import { initState, resetState } from "./state.js";
 import { clearDevicePractice } from "./practice-progress.js";
 import { flushStudyTime, resetStudyClock, startStudyClock } from "./study-clock.js";
 import { initAudio, resetAudioSpeed, speak } from "./ui/audio.js";
 import { startClock } from "./ui/board.js";
-import { initSpotlight } from "./ui/effects.js";
-import { initProfileMenu } from "./ui/profile-menu.js";
-import { initSmoothScroll } from "./ui/scroll.js";
+import { initSpotlight } from "./ui/effects.js?v=20261113-polish1";
+import { initProfileMenu, setProfileMenuSignedIn } from "./ui/profile-menu.js?v=20261113-signout1";
+import { initSmoothScroll } from "./ui/scroll.js?v=20261113-polish1";
 import { toast } from "./ui/toast.js";
 import { esc } from "./utils.js";
 import { authClient, currentUser, initAuth, onAccountChange, signInWithGoogle, signOut } from "./auth.js";
@@ -72,6 +72,7 @@ function updateAccountUI() {
   const status = progressStatus();
   document.getElementById("save-status").textContent = `Sprachpfad. ${status.message}`;
   document.querySelectorAll("[data-sync-status]").forEach(el => { el.textContent = status.message; });
+  setProfileMenuSignedIn(Boolean(currentUser()));
 }
 
 async function onAccountAction(button) {

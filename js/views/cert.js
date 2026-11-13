@@ -1,8 +1,8 @@
 // Practice certificate for a level, shown once its mock test is passed.
 
 import { doneCount, passed, testResult } from "../state.js";
-import { tilt } from "../ui/effects.js";
-import { enter, gsap, motionOK, onLeave, splitReveal } from "../ui/motion.js";
+import { tilt } from "../ui/effects.js?v=20261113-polish1";
+import { enter, gsap, motionOK, onLeave, splitReveal } from "../ui/motion.js?v=20261113-polish1";
 import { germanDate } from "../utils.js";
 import { breadcrumb } from "./shared.js";
 
@@ -44,21 +44,21 @@ export function mount() {
     enter("#app > .crumb, #app > .muted, #app > .btn", { y: 12, stagger: 0.08, delay: 0.1 });
     return;
   }
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(".crumb", { autoAlpha: 0, y: 8, duration: 0.6 }, 0)
-    .from(cert, { y: 60, rotationX: 18, autoAlpha: 0, duration: 1.2, transformPerspective: 1400 }, 0.05)
+  const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+  tl.from(".crumb", { autoAlpha: 0, y: 5, duration: 0.34 }, 0)
+    .from(cert, { y: 18, rotationX: 5, autoAlpha: 0, duration: 0.58, transformPerspective: 1400 }, 0.03)
     .from(
       "#certStamp",
-      { scale: 2.6, autoAlpha: 0, rotation: -30, duration: 0.55, ease: "back.out(1.8)" },
-      0.8,
+      { scale: 1.5, autoAlpha: 0, rotation: -14, duration: 0.38, ease: "power3.out" },
+      0.32,
     )
     .fromTo(
       ".cert-sheen",
       { xPercent: -160, skewX: -14 },
-      { xPercent: 420, skewX: -14, duration: 1.4, ease: "power2.inOut" },
-      1.05,
+      { xPercent: 420, skewX: -14, duration: 0.78, ease: "power2.inOut" },
+      0.42,
     )
-    .from("#app > .muted", { autoAlpha: 0, y: 10, duration: 0.8 }, 0.9);
+    .from("#app > .muted", { autoAlpha: 0, y: 8, duration: 0.42 }, 0.34);
   onLeave(() => tl.kill());
-  onLeave(tilt(cert, { max: 5 }));
+  onLeave(tilt(cert, { max: 2.5 }));
 }

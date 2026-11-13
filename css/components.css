@@ -148,8 +148,8 @@
     background-color 0.2s,
     color 0.2s;
 }
-.lvswitch a:hover {
-  color: var(--text);
+@media (hover: hover) and (pointer: fine) {
+  .lvswitch a:hover { color: var(--text); }
 }
 .lvswitch a[aria-current="true"] {
   background: var(--signal);
@@ -184,6 +184,10 @@
   border-radius: var(--radius-lg);
   padding: 20px 22px;
   box-shadow: var(--highlight), var(--shadow-1);
+  transition:
+    border-color var(--motion-ui) var(--ease-standard),
+    box-shadow var(--motion-ui) var(--ease-standard),
+    background-color var(--motion-ui) var(--ease-standard);
 }
 .panel h2 {
   margin-bottom: 12px;
@@ -245,9 +249,8 @@ th {
     background-color 0.2s,
     scale 0.3s var(--ease-out);
 }
-.spk:hover {
-  border-color: var(--ring);
-  background: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+  .spk:hover { border-color: var(--ring); background: var(--accent); }
 }
 .spk:active {
   background: var(--secondary);
@@ -298,12 +301,15 @@ th {
   margin-bottom: 14px;
   box-shadow: var(--highlight), var(--shadow-1);
   transition:
-    box-shadow 0.4s var(--ease-out),
-    border-color 0.3s;
+    box-shadow var(--motion-ui) var(--ease-standard),
+    border-color var(--motion-ui) var(--ease-standard),
+    background-color var(--motion-ui) var(--ease-standard);
 }
-.task:hover {
-  border-color: color-mix(in srgb, var(--text) 14%, var(--line));
-  box-shadow: var(--highlight), var(--shadow-2);
+@media (hover: hover) and (pointer: fine) {
+  .task:hover {
+    border-color: color-mix(in srgb, var(--text) 14%, var(--line));
+    box-shadow: var(--highlight), var(--shadow-2);
+  }
 }
 .task .kind {
   font-size: 14px;
@@ -329,19 +335,23 @@ th {
   font-weight: 500;
   min-height: 44px;
   transition:
-    border-color 0.2s,
-    background-color 0.2s,
-    box-shadow 0.3s var(--ease-out),
-    translate 0.3s var(--ease-out),
-    scale 0.3s var(--ease-out);
+    border-color var(--motion-fast) var(--ease-standard),
+    background-color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-ui) var(--ease-standard),
+    translate var(--motion-ui) var(--ease-standard),
+    scale var(--motion-fast) var(--ease-standard);
 }
-.opt:hover:not(:disabled) {
-  border-color: var(--ring);
-  background: var(--accent);
-  box-shadow: var(--shadow-1);
+@media (hover: hover) and (pointer: fine) {
+  .opt:hover:not(:disabled) {
+    border-color: var(--ring);
+    background: var(--accent);
+    box-shadow: var(--shadow-1);
+    translate: 0 -1px;
+  }
 }
 .opt:active:not(:disabled) {
   background: var(--secondary);
+  scale: .985;
 }
 .opt:disabled {
   cursor: default;
@@ -438,12 +448,18 @@ textarea {
   cursor: pointer;
   font-weight: 500;
   transition:
-    border-color 0.2s,
-    box-shadow 0.3s var(--ease-out);
+    border-color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-ui) var(--ease-standard),
+    scale var(--motion-fast) var(--ease-standard);
 }
-.chip:hover:not(:disabled) {
-  border-color: var(--text);
-  box-shadow: var(--shadow-1);
+@media (hover: hover) and (pointer: fine) {
+  .chip:hover:not(:disabled) {
+    border-color: var(--text);
+    box-shadow: var(--shadow-1);
+  }
+}
+.chip:active:not(:disabled) {
+  scale: .97;
 }
 .fb {
   margin-top: 12px;
@@ -533,8 +549,8 @@ textarea {
     transparent 62%
   );
 }
-.spot:hover::before {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .spot:hover::before { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

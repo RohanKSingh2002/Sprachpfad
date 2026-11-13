@@ -17,7 +17,7 @@
   border-radius: 2px;
   background: var(--signal);
   transform-origin: 50% 0;
-  transition: transform 0.9s var(--ease-out);
+  transition: transform 0.42s var(--ease-out);
 }
 .lesson-head.pre-draw::before {
   transform: scaleY(0);
@@ -107,6 +107,11 @@ ul.rules li {
 .exercises {
   padding: 36px 0 20px;
 }
+.notebook-practice-heading {
+  margin: 32px 0 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
 .lprog {
   position: sticky;
   top: calc(env(safe-area-inset-top, 0px) + var(--nav-h));
@@ -132,7 +137,7 @@ ul.rules li {
   height: 100%;
   width: 0;
   background: var(--ok);
-  transition: width 0.4s;
+  transition: width var(--motion-ui) var(--ease-standard);
 }
 :where([data-theme="dark"]) .lprog .bar i { background: var(--signal); }
 
@@ -162,10 +167,12 @@ ul.rules li {
     box-shadow 0.3s var(--ease-out),
     translate 0.3s var(--ease-out);
 }
-.vocab div:hover {
-  border-color: color-mix(in srgb, var(--text) 16%, var(--line));
-  box-shadow: var(--shadow-1);
-  translate: 0 -1px;
+@media (hover: hover) and (pointer: fine) {
+  .vocab div:hover {
+    border-color: color-mix(in srgb, var(--text) 16%, var(--line));
+    box-shadow: var(--shadow-1);
+    translate: 0 -1px;
+  }
 }
 .vocab div > span:last-child {
   color: var(--muted);

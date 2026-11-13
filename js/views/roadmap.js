@@ -7,7 +7,7 @@ import { esc } from '../utils.js';
 import { breadcrumb, levelSwitch } from './shared.js';
 import { strategiesHTML, transferHTML } from './course-support.js';
 import { COURSE_SKILLS, moduleReviewed, objectiveComplete, paceGuidance, studyPlan } from '../course-plan.js';
-import { jumpTo } from '../ui/scroll.js';
+import { jumpTo } from '../ui/scroll.js?v=20261113-polish1';
 
 let level;
 const skills = COURSE_SKILLS;
@@ -24,8 +24,9 @@ function targetStarted({ lesson, module }) {
 
 function targetRow(unit, next) {
   const { lesson, module } = unit;
+  const moduleNumber = level.course.modules.indexOf(module) + 1;
   const href = lesson ? `lektion/${lesson.id}` : `checkpoint/${module.id}`;
-  const title = lesson?.title || `Module ${module.id} checkpoint`;
+  const title = lesson?.title || `Module ${moduleNumber} checkpoint`;
   const started = !unit.done && targetStarted(unit);
   const status = unit.done ? 'done' : unit.key === next?.key ? 'next' : started ? 'started' : 'open';
   const label = filters.find(([key]) => key === status)?.[1] || 'Ready';
@@ -52,13 +53,13 @@ function targetTiming(unit) {
   const days = firstDay === lastDay ? `Day ${firstDay}` : `Days ${firstDay}–${lastDay}`;
   return `Week ${unit.week} · ${days}`;
 }
-function moduleHeadingHTML(module, plan, continuationLinks = []) {
+function moduleHeadingHTML(module, plan, sequence, continuationLinks = []) {
   const lessons = module.lessonIds.map(id => level.lessons.find(item => item.id === id));
   const targets = plan.units.filter(unit => unit.module.id === module.id);
   const firstWeek = targets[0].week;
   const lastWeek = targets[targets.length - 1].lastWeek;
   const timing = firstWeek === lastWeek ? '' : `Weeks ${firstWeek}–${lastWeek} · `;
-  return `<span class="course-module-number">${module.id}</span><span><b>${esc(module.title)}</b><small>${timing}${lessons.length} lessons · ${module.hours} hours of study and practice</small>${continuationLinks.map(link => `<small class="course-module-continue">${link}</small>`).join('')}</span><span class="course-module-status" data-module-status="${module.id}">${reviewed(module) ? 'Practice reviewed' : `${lessons.filter(isDone).length}/${lessons.length} exercises complete`}</span>`;
+  return `<span class="course-module-number">${sequence}</span><span><b>${esc(module.title)}</b><small>${timing}${lessons.length} lessons · ${module.hours} hours of study and practice</small>${continuationLinks.map(link => `<small class="course-module-continue">${link}</small>`).join('')}</span><span class="course-module-status" data-module-status="${module.id}">${reviewed(module) ? 'Practice reviewed' : `${lessons.filter(isDone).length}/${lessons.length} exercises complete`}</span>`;
 }
 function moduleHTML(module, plan, open, continuationLinks = []) {
   const checks = courseChecks(level, module.id);
@@ -66,8 +67,9 @@ function moduleHTML(module, plan, open, continuationLinks = []) {
   const topics = module.topics.map(id => level.topics.find(topic => topic.id === id)).filter(isFlashcardSet);
   const targets = plan.units.filter(unit => unit.module.id === module.id);
   const next = nextTarget(plan);
+  const sequence = level.course.modules.indexOf(module) + 1;
   return `<details class="course-module" id="course-module-${module.id}"${open ? ' open' : ''}>
-    <summary>${moduleHeadingHTML(module, plan, continuationLinks)}</summary>
+    <summary>${moduleHeadingHTML(module, plan, sequence, continuationLinks)}</summary>
     <div class="course-module-body">
       <div class="course-lesson-links">${targets.map(unit => targetRow(unit, next)).join('')}</div>
       <details class="course-module-guide"><summary>Module guidance and feedback</summary>
@@ -91,10 +93,11 @@ function weeksHTML(plan, openModules = new Set([nextTarget(plan)?.module.id || 1
     const continuing = [...new Set(week.units.map(unit => unit.module))].filter(module => !starts.includes(module));
     const references = continuing.map(module => {
       const firstWeek = plan.units.find(unit => unit.module === module).week;
-      return `<a class="tlink" href="#/${level.id}/roadmap?module=${module.id}">Continue module ${module.id} from Week ${firstWeek}</a>`;
+      const sequence = level.course.modules.indexOf(module) + 1;
+      return `<a class="tlink" href="#/${level.id}/roadmap?module=${module.id}">Continue module ${sequence} from Week ${firstWeek}</a>`;
     });
     // Continuation-only weeks share the module header layout and link back to its full dropdown.
-    const continuationCards = starts.length ? '' : continuing.map((module, index) => `<div class="course-module course-module-reference"><div class="course-module-heading">${moduleHeadingHTML(module, plan, [references[index]])}</div></div>`).join('');
+    const continuationCards = starts.length ? '' : continuing.map((module, index) => `<div class="course-module course-module-reference"><div class="course-module-heading">${moduleHeadingHTML(module, plan, level.course.modules.indexOf(module) + 1, [references[index]])}</div></div>`).join('');
     return `<section class="course-week" aria-labelledby="course-week-${week.number}">
       <div class="course-week-header">
         <h3 id="course-week-${week.number}">Week ${week.number}</h3>

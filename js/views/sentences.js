@@ -10,8 +10,8 @@ import {
 import { selectSentenceBatch, waitBetweenLines } from "../sentence-practice.js";
 import { noteStudyActivity } from "../study-clock.js";
 import { audioSpeedControl, playAudioLine, setMediaControls, speakerButton, stopAudio } from "../ui/audio.js";
-import { enter, motionOK, splitReveal } from "../ui/motion.js";
-import { scrollToTop } from "../ui/scroll.js";
+import { enter, motionOK, splitReveal } from "../ui/motion.js?v=20261113-polish1";
+import { scrollToTop } from "../ui/scroll.js?v=20261113-polish1";
 import { toast } from "../ui/toast.js";
 import { esc, norm, shuffle } from "../utils.js";
 import { mountSentenceImport, sentenceImport } from "./sentence-import.js";
@@ -1017,8 +1017,8 @@ export function mount() {
   const title = document.getElementById("sentence-focus-title");
   title?.focus({ preventScroll: true });
   if (!motionOK()) return;
-  if (document.querySelector(".sentence-page-head, .sentence-review-banner")) enter(".sentence-page-head, .sentence-review-banner", { y: 14, duration: 0.5 });
-  if (title && sentencePreferences().language === "en") splitReveal(title, { duration: 0.65 });
+  if (document.querySelector(".sentence-page-head, .sentence-review-banner")) enter(".sentence-page-head, .sentence-review-banner", { y: 8, duration: 0.42 });
+  if (title && sentencePreferences().language === "en") splitReveal(title, { duration: 0.58 });
 }
 
 export function unmount() {

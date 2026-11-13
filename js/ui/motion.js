@@ -59,7 +59,7 @@ export function shake(el) {
 }
 
 /** Fade and rise elements into place, one after another. Returns the tween (or null). */
-export function enter(targets, { y = 18, x = 0, duration = 0.8, stagger = 0.06, delay = 0, scale = 1 } = {}) {
+export function enter(targets, { y = 10, x = 0, duration = 0.5, stagger = 0.045, delay = 0, scale = 1 } = {}) {
   if (!motionOK()) return null;
   const list = gsap.utils.toArray(targets);
   if (!list.length) return null;
@@ -71,7 +71,7 @@ export function enter(targets, { y = 18, x = 0, duration = 0.8, stagger = 0.06, 
     duration,
     stagger,
     delay,
-    ease: "expo.out",
+    ease: "power3.out",
     clearProps: RESET,
   });
   onLeave(() => tween.kill());
@@ -85,7 +85,7 @@ export function enter(targets, { y = 18, x = 0, duration = 0.8, stagger = 0.06, 
  * Waiting elements are only transparent (opacity, not visibility), so keyboard and screen reader
  * users can still reach them; whatever receives focus is shown at once.
  */
-export function revealOnScroll(targets, { y = 22, duration = 0.8, stagger = 0.07, start = "top 92%" } = {}) {
+export function revealOnScroll(targets, { y = 12, duration = 0.5, stagger = 0.04, start = "top 94%" } = {}) {
   if (!motionOK() || !ScrollTrigger) return;
   const list = gsap.utils.toArray(targets);
   if (!list.length) return;
@@ -99,7 +99,7 @@ export function revealOnScroll(targets, { y = 22, duration = 0.8, stagger = 0.07
       y: 0,
       duration,
       stagger,
-      ease: "expo.out",
+      ease: "power3.out",
       overwrite: true,
       clearProps: RESET,
     });
@@ -147,7 +147,7 @@ export function revealOnScroll(targets, { y = 22, duration = 0.8, stagger = 0.07
  */
 export function splitReveal(
   el,
-  { by = "lines", onScroll = false, delay = 0, duration = 1, stagger = 0.08 } = {},
+  { by = "lines", onScroll = false, delay = 0, duration = 0.62, stagger = 0.045 } = {},
 ) {
   if (!motionOK() || !SplitText || !el) return;
   const split = SplitText.create(el, {
@@ -162,7 +162,7 @@ export function splitReveal(
         duration,
         stagger,
         delay,
-        ease: "expo.out",
+        ease: "power3.out",
         scrollTrigger: onScroll ? { trigger: el, start: "top 90%", once: true } : undefined,
       });
     },
@@ -174,7 +174,7 @@ export function splitReveal(
  * Count a number up from zero, when it scrolls into view. `format` turns the number into text.
  * Screen readers get the final number straight away; only the visible digits count.
  */
-export function countUp(el, to, { duration = 1.4, delay = 0, format = String } = {}) {
+export function countUp(el, to, { duration = 0.95, delay = 0, format = String } = {}) {
   if (!el) return;
   el.textContent = format(to);
   if (!motionOK() || !to) return;

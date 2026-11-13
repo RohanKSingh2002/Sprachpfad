@@ -127,6 +127,15 @@
           "type": "write",
           "question": "Introduce yourself in 3 sentences: name, country, city.",
           "modelAnswer": "Ich heiße Maya. Ich komme aus Brasilien. Ich wohne in Leipzig."
+        },
+        {
+          "type": "fill",
+          "question": "Complete the introduction: Ich ___ aus Spanien. (kommen)",
+          "answers": [
+            "komme"
+          ],
+          "hint": "Conjugate kommen for ich.",
+          "notebookPractice": true
         }
       ],
       "vocab": [
@@ -174,7 +183,8 @@
           "en": "country",
           "pl": "Länder"
         }
-      ]
+      ],
+      "module": 1
     },
     {
       "id": 2,
@@ -309,6 +319,15 @@
           ],
           "hint": "Keep the conjugated verb in the correct position. More than one natural order is accepted.",
           "neutralStart": "Ich"
+        },
+        {
+          "type": "fill",
+          "question": "Complete the sentence: Meine Freunde ___ heute Deutsch. (lernen)",
+          "answers": [
+            "lernen"
+          ],
+          "hint": "Freunde is plural.",
+          "notebookPractice": true
         }
       ],
       "vocab": [
@@ -364,7 +383,8 @@
           "en": "Wednesday",
           "pl": "Mittwoche"
         }
-      ]
+      ],
+      "module": 3
     },
     {
       "id": 3,
@@ -484,6 +504,18 @@
           ],
           "answer": 1,
           "hint": "die Kinder"
+        },
+        {
+          "type": "choice",
+          "question": "Choose the correct article and noun: ___ Bücher (plural)",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "answer": 1,
+          "hint": "German plural nouns use die.",
+          "notebookPractice": true
         }
       ],
       "vocab": [
@@ -537,7 +569,8 @@
           "en": "to need",
           "forms": "du brauchst · er/sie/es braucht · hat gebraucht"
         }
-      ]
+      ],
+      "module": 4
     },
     {
       "id": 4,
@@ -671,6 +704,22 @@
           "type": "write",
           "question": "Write two sentences about your day that start with a time: Heute… / Am Abend…",
           "modelAnswer": "Heute arbeite ich bis fünf Uhr. Am Abend lerne ich Deutsch."
+        },
+        {
+          "type": "order",
+          "question": "Put the time-first sentence in order.",
+          "words": [
+            "heute",
+            "Deutsch",
+            "Ich",
+            "lerne"
+          ],
+          "answers": [
+            "Heute lerne ich Deutsch"
+          ],
+          "hint": "When a time phrase comes first, the verb stays in position two.",
+          "notebookPractice": true,
+          "neutralStart": "Heute"
         }
       ],
       "vocab": [
@@ -718,7 +767,8 @@
           "en": "course",
           "pl": "Kurse"
         }
-      ]
+      ],
+      "module": 7
     },
     {
       "id": 5,
@@ -833,6 +883,15 @@
           "type": "write",
           "question": "Order in a café: say what you'd like to drink and eat.",
           "modelAnswer": "Ich möchte einen Tee und ein Brötchen, bitte."
+        },
+        {
+          "type": "fill",
+          "question": "Complete the object: Ich kaufe ___ Apfel. (a)",
+          "answers": [
+            "einen"
+          ],
+          "hint": "Apfel is masculine and the direct object.",
+          "notebookPractice": true
         }
       ],
       "vocab": [
@@ -885,7 +944,8 @@
           "de": "bitte",
           "en": "please"
         }
-      ]
+      ],
+      "module": 5
     },
     {
       "id": 6,
@@ -1006,6 +1066,15 @@
             "kein"
           ],
           "hint": "das Auto → kein"
+        },
+        {
+          "type": "fill",
+          "question": "Complete the negation: Ich habe ___ Zeit. (no)",
+          "answers": [
+            "keine"
+          ],
+          "hint": "Negate the noun Zeit with kein; Zeit is feminine.",
+          "notebookPractice": true
         }
       ],
       "vocab": [
@@ -1050,7 +1119,8 @@
           "de": "klein",
           "en": "small"
         }
-      ]
+      ],
+      "module": 6
     },
     {
       "id": 7,
@@ -1174,6 +1244,24 @@
           ],
           "answer": 0,
           "hint": "halb sieben = 6:30"
+        },
+        {
+          "type": "order",
+          "question": "Put the appointment sentence in order.",
+          "words": [
+            "beginnt",
+            "Der",
+            "um",
+            "Kurs",
+            "neun",
+            "Uhr"
+          ],
+          "answers": [
+            "Der Kurs beginnt um neun Uhr"
+          ],
+          "hint": "Keep the conjugated verb in position two.",
+          "notebookPractice": true,
+          "neutralStart": "Der"
         }
       ],
       "vocab": [
@@ -1226,7 +1314,8 @@
           "en": "train",
           "pl": "Züge"
         }
-      ]
+      ],
+      "module": 7
     },
     {
       "id": 8,
@@ -1349,6 +1438,15 @@
           "type": "write",
           "question": "Describe your morning in two sentences using aufstehen and one other separable verb.",
           "modelAnswer": "Ich stehe um sieben Uhr auf. Dann rufe ich meine Mutter an."
+        },
+        {
+          "type": "fill",
+          "question": "Complete the separable verb: Ich ___ um sieben Uhr ___. (aufstehen)",
+          "answers": [
+            "stehe auf"
+          ],
+          "hint": "Conjugate the first part; place auf at the end.",
+          "notebookPractice": true
         }
       ],
       "vocab": [
@@ -1401,7 +1499,8 @@
           "en": "to go out",
           "forms": "du gehst aus · er/sie/es geht aus · ist ausgegangen"
         }
-      ]
+      ],
+      "module": 8
     }
   ],
   "topics": [

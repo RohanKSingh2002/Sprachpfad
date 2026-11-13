@@ -6,7 +6,7 @@ Updated: 25 October 2026.
 
 | Level | Structure | Added learning support |
 | --- | --- | --- |
-| A1 | Existing 32 lessons and 16 modules retained | 16 original transfer activities, success criteria, targeted recovery advice, links to earlier lessons, and reading/listening/writing/speaking strategies |
+| A1 | Existing 32 lessons and 16 modules retained; roadmap order aligned to the A1 notebook | 16 original transfer activities, success criteria, targeted recovery advice, links to earlier lessons, four-skill strategies, notebook-style drills in every lesson, and clearer coverage of case patterns |
 | A2 | 18 lessons in 9 modules, including the original 8 lessons | 10 new lessons, 9 original four-skill checkpoints, lesson outcomes, pronunciation practice, spoken interaction, review links and a weekly plan |
 | B1 | 18 lessons in 9 modules, including the original 9 lessons | 9 new lessons, 9 original four-skill checkpoints, outcomes, pronunciation practice, spoken interaction, review links and a weekly plan |
 
@@ -47,7 +47,7 @@ The supplied B1 material covers units 21–30 of its series and combines course 
 
 ## How the references were used
 
-- The A1 notebook was surveyed visually for general teaching topics: spelling, question formation, verb patterns, time expressions, possession, objects and prepositions. Its personal examples and handwritten answers were not used.
+- The 123-page A1 notebook was surveyed visually for topic order and exercise patterns. Its spelling, personal details, present-tense forms, articles and possession, food, time and routines, housing, modal verbs, instructions, case patterns, past forms, two-way prepositions, colours and clothing informed the reordered curriculum. One additional original grammar or sentence drill now appears after each lesson. The notebook's personal examples and handwritten answers were not used.
 - The A1 exam-preparation book’s contents and selected strategy pages informed the progression from identifying a situation, to locating details, to completing a communicative task. This is a targeted curriculum review, not a page-by-page transcription or exercise import.
 - The A2 notebook's 72 pages were surveyed visually for grammar headings and general themes. It informed the ten new lessons and five additional checkpoints. Personal examples, biographical material and handwritten answers were excluded; simplified rules were rewritten with appropriate limits rather than imported.
 - The two B1 parts were reviewed through their contents, printed headings and topic structure. Themes such as media, consumption, work, relationships, digital life, community participation and travel informed the new path.
@@ -58,7 +58,7 @@ The reference files remain unchanged in the local `Refrence Materials` folder. T
 
 ## Progress and authoring
 
-- Existing lesson IDs and objective task arrays were not changed. The original A1 lesson order, module IDs and course version were retained.
+- Existing A1 lesson and checkpoint IDs remain stable. The 16 A1 modules and their checkpoint IDs remain the same; their visible order now follows the notebook sequence. The original objective tasks are retained, with one independently written notebook-style drill added to every lesson. Existing saved progress and checkpoint records therefore retain their identifiers.
 - New B1 lessons use IDs 10–18. The displayed B1 order is thematic; old links still resolve by their stable IDs. A lower percentage after adding lessons means there is new material to study, not that completed lessons were deleted.
 - New A2 lessons use IDs 9–18 and new modules use IDs 5–9. A2 course version 1 and modules 1–4 are unchanged, preserving their checkpoint keys. Existing A2 lesson tasks and checkpoint questions were not rewritten. A2 progress percentages now use 18 lessons and nine modules; the extra unfinished content can reduce the percentage without removing saved work.
 - The new A2 and B1 course data is loaded through the existing `courseFile` mechanism. Checkpoints use separate per-level progress keys.

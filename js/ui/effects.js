@@ -1,6 +1,6 @@
 // Pointer effects and sliding indicators.
 
-import { finePointer, gsap, motionOK, onLeave } from "./motion.js";
+import { finePointer, gsap, motionOK, onLeave } from "./motion.js?v=20261113-polish1";
 
 /* ---------- spotlight: a soft light that follows the pointer over .spot elements ---------- */
 
@@ -37,7 +37,7 @@ export function magnetic(el, strength = 0.28) {
     toX((e.clientX - (r.left + r.width / 2)) * strength);
     toY((e.clientY - (r.top + r.height / 2)) * strength);
   };
-  const release = () => gsap.to(el, { x: 0, y: 0, duration: 0.9, ease: "elastic.out(1, 0.45)" });
+  const release = () => gsap.to(el, { x: 0, y: 0, duration: 0.32, ease: "power3.out" });
   el.addEventListener("pointermove", move);
   el.addEventListener("pointerleave", release);
   onLeave(() => {
@@ -54,11 +54,11 @@ export function magnetic(el, strength = 0.28) {
 const noop = () => {};
 
 /** Returns a function that stops the effect; call it before the element is thrown away. */
-export function tilt(el, { max = 7, while: isAllowed = () => true } = {}) {
+export function tilt(el, { max = 3.5, while: isAllowed = () => true } = {}) {
   if (!el || !motionOK() || !finePointer()) return noop;
   gsap.set(el, { transformPerspective: 900 });
-  const toX = gsap.quickTo(el, "rotationX", { duration: 0.6, ease: "power3" });
-  const toY = gsap.quickTo(el, "rotationY", { duration: 0.6, ease: "power3" });
+  const toX = gsap.quickTo(el, "rotationX", { duration: 0.32, ease: "power3.out" });
+  const toY = gsap.quickTo(el, "rotationY", { duration: 0.32, ease: "power3.out" });
   const move = (e) => {
     if (!isAllowed()) return;
     const r = el.getBoundingClientRect();
@@ -115,5 +115,5 @@ export function slidePill(container, key, { animate = true } = {}) {
     gsap.set(pill, { ...to, autoAlpha: 1 });
     return;
   }
-  gsap.fromTo(pill, { ...from, autoAlpha: 1 }, { ...to, autoAlpha: 1, duration: 0.55, ease: "expo.out" });
+  gsap.fromTo(pill, { ...from, autoAlpha: 1 }, { ...to, autoAlpha: 1, duration: 0.36, ease: "power3.out" });
 }

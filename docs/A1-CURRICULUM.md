@@ -1,12 +1,12 @@
 # Sprachpfad: complete A1 curriculum and learning roadmap
 
-Prepared: 2026-10-08. Target: Goethe-Zertifikat A1: Start Deutsch 1 (adults). Audience: adult beginners studying with English explanations. This is an independently written preparation course, not an official Goethe course or an exam-pass guarantee.
+Prepared: 2026-11-12. Target: Goethe-Zertifikat A1: Start Deutsch 1 (adults). Audience: adult beginners studying with English explanations. This is an independently written preparation course, not an official Goethe course or an exam-pass guarantee.
 
 ## Purpose and course boundaries
 
 The learner should be able to handle simple everyday situations, understand practical information, give personal details, ask and answer basic questions, make requests, complete forms and write short messages. A correct grammar exercise is one part of that outcome. The learner must also use the language with an unfamiliar prompt, recording or conversation partner.
 
-The course contains 32 sequenced lessons in 16 modules, with vocabulary, pronunciation, listening, reading, writing, interaction and a checkpoint in every module. Existing lesson identifiers remain stable so that older links and saved lesson results continue to refer to the same material. The visible course sequence starts with sound and spelling foundations and then develops communication progressively.
+The course contains 32 sequenced lessons in 16 modules, with vocabulary, pronunciation, listening, reading, writing, interaction and a checkpoint in every module. Existing lesson and checkpoint identifiers remain stable so that older links and saved results continue to refer to the same material. The visible sequence follows the learner's A1 notebook from spelling and personal information through present-tense grammar, family and articles, food and shopping, time and routines, housing, requests and case patterns, past events, and four-skill exam preparation.
 
 The course contains original lessons, 16 supported workshops and one preparation assessment. The October 2026 tutor review led to revised grammar, clearer exercise prompts, accepted word-order alternatives, separate goals and speaking models for every lesson, and fuller vocabulary support. Locally generated German recordings cover the spoken course lines; the mock dialogues use two distinct voices. These are synthetic recordings. Independent listening review and assessment with real learners remain further quality work.
 
@@ -66,7 +66,7 @@ Use the seventh day for light recall or rest. If a checkpoint reveals a gap, ext
 
 **Checkpoint:** Give an understandable 45-second introduction and spell a supplied name without reading a sentence.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/1`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Introduce an invented student. Include their name, country and current town. Use three or four short sentences. Speaking prompt: Introduce yourself without reading. Your partner asks your name and country. Spell a surname, then ask your partner to repeat their name.
+Open the module’s four-skill workshop at `#/a1/checkpoint/1` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Introduce an invented student. Include their name, country and current town. Use three or four short sentences. Speaking prompt: Introduce yourself without reading. Your partner asks your name and country. Spell a surname, then ask your partner to repeat their name.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -90,7 +90,7 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Complete five profile fields accurately and understand four of five spoken number details.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/2`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write a sample registration message with your name, current town and preferred course time. Use invented contact information. Speaking prompt: Give your age, a house number and a telephone number clearly. Ask your partner for their town and surname; spell the surname back to confirm it.
+Open the module’s four-skill workshop at `#/a1/checkpoint/2` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write a sample registration message with your name, current town and preferred course time. Use invented contact information. Speaking prompt: Give your age, a house number and a telephone number clearly. Ask your partner for their town and surname; spell the surname back to confirm it.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -114,7 +114,7 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Produce four relevant questions with the right question word and answer them independently.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/3`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Ask a new classmate three questions: their languages, where they live, and what they do on Monday. Add a short introduction. Speaking prompt: Ask and answer four new questions using wo, wann, was and which languages. Add one yes/no question; respond with useful information.
+Open the module’s four-skill workshop at `#/a1/checkpoint/3` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Ask a new classmate three questions: their languages, where they live, and what they do on Monday. Add a short introduction. Speaking prompt: Ask and answer four new questions using wo, wann, was and which languages. Add one yes/no question; respond with useful information.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -138,64 +138,16 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Retrieve ten nouns with their articles and describe a family without relying on a full script.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/4`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Describe two invented family members. Include their relationships, ages and where they live. Use possessive words. Speaking prompt: Tell your partner about two family members. Ask where their family lives. Choose three classroom objects and ask what they are and whose they are.
+Open the module’s four-skill workshop at `#/a1/checkpoint/4` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Describe two invented family members. Include their relationships, ages and where they live. Use possessive words. Speaking prompt: Tell your partner about two family members. Ask where their family lives. Choose three classroom objects and ask what they are and whose they are.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
-### Module 5: Word order, time and appointments
+### Module 5: Food, quantities and the accusative
 
 **Regular pace:** week 5; 8 hours plus one hour of cumulative review.
 
-- Lesson 9: **Word order** — The single most important rule in German: in a statement, the verb is always in position 2. Whatever comes first, the verb comes next.
-- Lesson 10: **Time and appointments** — Appointments are everywhere in German life: doctors, offices, courses. Here is how to say and understand the time.
-
-**Outcomes:** Keep the finite verb in the correct sentence position. Understand digital time, informal time and appointment dates.
-
-| Practice area | Work to complete |
-| --- | --- |
-| Vocabulary | Days and months; Little words |
-| Pronunciation | Sentence stress; contrast halb acht / acht Uhr and quarter-hour expressions. |
-| Listening | Identify five appointment times, including a corrected time. |
-| Reading | Read opening hours and appointment cards. |
-| Writing | Write a short appointment confirmation. |
-| Speaking and interaction | Ask for a time and repeat it back for confirmation. |
-
-**Checkpoint:** Interpret four of five time expressions and confirm a date and place accurately.
-
-Open the module’s four-skill workshop at `#/a1/checkpoint/5`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write an appointment request. Say which day you can come, give a time and ask for confirmation. Speaking prompt: Arrange an appointment with a partner. Say a day and a time, repeat the arrangement to confirm, and ask about opening hours.
-
-Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
-
-### Module 6: Routines and separable verbs
-
-**Regular pace:** week 6; 8 hours plus one hour of cumulative review.
-
-- Lesson 11: **Daily routines, frequency and dates** — Explain your week and understand schedules. Combine a time expression with a present-tense action, and recognise frequent date phrases.
-- Lesson 12: **Separable verbs** — Some verbs split in two. In a main-clause statement, the conjugated part is second and the separable prefix comes at the end. In a yes/no question or instruction, the conjugated verb comes first.
-
-**Outcomes:** Describe a weekday and weekend routine. Use common separable verbs and frequency expressions.
-
-| Practice area | Work to complete |
-| --- | --- |
-| Vocabulary | More everyday verbs; Days and months |
-| Pronunciation | Stress the separable prefix: AUFstehen, EINkaufen, ANrufen. Link words in short groups. |
-| Listening | Follow a daily routine and identify the order of activities. |
-| Reading | Read a weekly schedule. |
-| Writing | Write a six-sentence routine with at least two time phrases. |
-| Speaking and interaction | Describe your day and answer a follow-up question. |
-
-**Checkpoint:** Explain a routine clearly using time, a frequency word and two separable verbs.
-
-Open the module’s four-skill workshop at `#/a1/checkpoint/6`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Tell a friend about tomorrow. Include when you get up, one activity after work or class, and a time when they can visit. Speaking prompt: Describe a usual weekday with three separable verbs. Ask your partner when they get up and what they do in the evening.
-
-Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
-
-### Module 7: Food, quantities and the accusative
-
-**Regular pace:** week 7; 8 hours plus one hour of cumulative review.
-
-- Lesson 13: **The accusative** — The accusative marks many objects: the person or thing you have, want or buy. Among the definite and indefinite articles, only the masculine forms change from nominative to accusative.
-- Lesson 14: **Food, quantities and ordering politely** — Order food, ask for quantities and express a simple preference. Learn useful polite phrases as complete expressions.
+- Lesson 9: **The accusative** — The accusative marks many objects: the person or thing you have, want or buy. Among the definite and indefinite articles, only the masculine forms change from nominative to accusative.
+- Lesson 10: **Food, quantities and ordering politely** — Order food, ask for quantities and express a simple preference. Learn useful polite phrases as complete expressions.
 
 **Outcomes:** Order food and ask for a quantity. Use frequent accusative objects and polite ordering phrases.
 
@@ -210,16 +162,16 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Order two items, understand an alternative and ask to pay without a script.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/7`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write a café enquiry for two people. Say when you want breakfast, ask whether tea is included and ask about card payment. Speaking prompt: Play customer and server. Order food and a drink, answer an alternative offer, ask the price, and request the bill. Change roles.
+Open the module’s four-skill workshop at `#/a1/checkpoint/7` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write a café enquiry for two people. Say when you want breakfast, ask whether tea is included and ask about card payment. Speaking prompt: Play customer and server. Order food and a drink, answer an alternative offer, ask the price, and request the bill. Change roles.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
-### Module 8: Negation and shopping
+### Module 6: Negation and shopping
 
-**Regular pace:** week 8; 8 hours plus one hour of cumulative review.
+**Regular pace:** week 6; 8 hours plus one hour of cumulative review.
 
-- Lesson 15: **Saying no** — Use kein to negate an indefinite noun or an ordinary noun without an article. Use nicht for an action, an adjective or a specific person or place.
-- Lesson 16: **Shopping, clothes and prices** — Ask a shop assistant about prices, colours and sizes. Understand a simple advertisement and compare items with familiar phrases.
+- Lesson 11: **Saying no** — Use kein to negate an indefinite noun or an ordinary noun without an article. Use nicht for an action, an adjective or a specific person or place.
+- Lesson 12: **Shopping, clothes and prices** — Ask a shop assistant about prices, colours and sizes. Understand a simple advertisement and compare items with familiar phrases.
 
 **Outcomes:** Choose nicht or kein in familiar contexts. Ask about price, size, colour and payment.
 
@@ -234,40 +186,64 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Select a suitable offer and explain a simple problem such as zu groß or zu teuer.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/8`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write to a shop. Say which item and size you need, ask about one colour, and ask its price. Speaking prompt: Ask about a colour and size. The shop assistant says one item is unavailable. Ask for an alternative, then accept or decline and explain simply.
+Open the module’s four-skill workshop at `#/a1/checkpoint/8` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write to a shop. Say which item and size you need, ask about one colour, and ask its price. Speaking prompt: Ask about a colour and size. The shop assistant says one item is unavailable. Ask for an alternative, then accept or decline and explain simply.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
-### Module 9: Abilities, obligations and requests
+### Module 7: Word order, time and appointments
 
-**Regular pace:** week 9; 8 hours plus one hour of cumulative review.
+**Regular pace:** week 7; 8 hours plus one hour of cumulative review.
 
-- Lesson 17: **Abilities, obligations and permissions** — Say what you can, want or must do, and understand permission or prohibition. Build the sentence bracket with a modal verb and an infinitive.
-- Lesson 18: **Requests, instructions and object pronouns** — Ask someone to do something and respond to their request. Practise formal and informal instructions, and replace familiar objects with pronouns.
+- Lesson 13: **Word order** — The single most important rule in German: in a statement, the verb is always in position 2. Whatever comes first, the verb comes next.
+- Lesson 14: **Time and appointments** — Appointments are everywhere in German life: doctors, offices, courses. Here is how to say and understand the time.
 
-**Outcomes:** Use modal verbs to express ability, need and permission. Make and respond to requests; use useful object pronouns.
+**Outcomes:** Keep the finite verb in the correct sentence position. Understand digital time, informal time and appointment dates.
 
 | Practice area | Work to complete |
 | --- | --- |
-| Vocabulary | In class; Little words |
-| Pronunciation | Stress the important action and practise sentence brackets without long pauses. |
-| Listening | Recognise instructions and prohibitions. |
-| Reading | Read classroom and public rules. |
-| Writing | Write three clear requests and a short instruction. |
-| Speaking and interaction | Take turns asking for an object, an action and help. |
+| Vocabulary | Days and months; Little words |
+| Pronunciation | Sentence stress; contrast halb acht / acht Uhr and quarter-hour expressions. |
+| Listening | Identify five appointment times, including a corrected time. |
+| Reading | Read opening hours and appointment cards. |
+| Writing | Write a short appointment confirmation. |
+| Speaking and interaction | Ask for a time and repeat it back for confirmation. |
 
-**Checkpoint:** Make two different requests, respond suitably and distinguish prohibition from lack of obligation.
+**Checkpoint:** Interpret four of five time expressions and confirm a date and place accurately.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/9`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Ask your teacher for help. Say which exercise you cannot do, ask them to explain it, and ask when you can speak to them. Speaking prompt: Make three requests using different objects. Respond to your partner’s requests. Include one permission question and a suitable refusal or alternative.
+Open the module’s four-skill workshop at `#/a1/checkpoint/5` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write an appointment request. Say which day you can come, give a time and ask for confirmation. Speaking prompt: Arrange an appointment with a partner. Say a day and a time, repeat the arrangement to confirm, and ask about opening hours.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
-### Module 10: Directions and housing
+### Module 8: Routines and separable verbs
 
-**Regular pace:** week 10; 8 hours plus one hour of cumulative review.
+**Regular pace:** week 8; 8 hours plus one hour of cumulative review.
 
-- Lesson 19: **Places, directions and useful prepositions** — Ask where a place is and follow simple directions. Learn common place and travel phrases with their correct articles.
-- Lesson 20: **Home, rooms and location** — Describe a home, locate everyday objects and understand a simple accommodation advertisement. Use frequent location phrases and es gibt.
+- Lesson 15: **Daily routines, frequency and dates** — Explain your week and understand schedules. Combine a time expression with a present-tense action, and recognise frequent date phrases.
+- Lesson 16: **Separable verbs** — Some verbs split in two. In a main-clause statement, the conjugated part is second and the separable prefix comes at the end. In a yes/no question or instruction, the conjugated verb comes first.
+
+**Outcomes:** Describe a weekday and weekend routine. Use common separable verbs and frequency expressions.
+
+| Practice area | Work to complete |
+| --- | --- |
+| Vocabulary | More everyday verbs; Days and months |
+| Pronunciation | Stress the separable prefix: AUFstehen, EINkaufen, ANrufen. Link words in short groups. |
+| Listening | Follow a daily routine and identify the order of activities. |
+| Reading | Read a weekly schedule. |
+| Writing | Write a six-sentence routine with at least two time phrases. |
+| Speaking and interaction | Describe your day and answer a follow-up question. |
+
+**Checkpoint:** Explain a routine clearly using time, a frequency word and two separable verbs.
+
+Open the module’s four-skill workshop at `#/a1/checkpoint/6` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Tell a friend about tomorrow. Include when you get up, one activity after work or class, and a time when they can visit. Speaking prompt: Describe a usual weekday with three separable verbs. Ask your partner when they get up and what they do in the evening.
+
+Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
+
+### Module 9: Directions and housing
+
+**Regular pace:** week 9; 8 hours plus one hour of cumulative review.
+
+- Lesson 17: **Places, directions and useful prepositions** — Ask where a place is and follow simple directions. Learn common place and travel phrases with their correct articles.
+- Lesson 18: **Home, rooms and location** — Describe a home, locate everyday objects and understand a simple accommodation advertisement. Use frequent location phrases and es gibt.
 
 **Outcomes:** Follow directions and describe a location. Understand a housing offer and use common dative phrases.
 
@@ -282,7 +258,31 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Match a housing need to an offer and give or follow three simple directions.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/10`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write about an advertised flat. Ask whether it is still available, give a viewing day, and ask about the monthly price. Speaking prompt: Give short directions to a place. Your partner asks one clarification question. Then describe two rooms and say where one object is.
+Open the module’s four-skill workshop at `#/a1/checkpoint/10` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write about an advertised flat. Ask whether it is still available, give a viewing day, and ask about the monthly price. Speaking prompt: Give short directions to a place. Your partner asks one clarification question. Then describe two rooms and say where one object is.
+
+Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
+
+### Module 10: Abilities, obligations and requests
+
+**Regular pace:** week 10; 8 hours plus one hour of cumulative review.
+
+- Lesson 19: **Abilities, obligations and permissions** — Say what you can, want or must do, and understand permission or prohibition. Build the sentence bracket with a modal verb and an infinitive.
+- Lesson 20: **Requests, instructions and object pronouns** — Ask someone to do something and respond to their request. Practise formal and informal instructions, and replace familiar objects with pronouns.
+
+**Outcomes:** Use modal verbs to express ability, need and permission. Make and respond to requests; use useful object pronouns.
+
+| Practice area | Work to complete |
+| --- | --- |
+| Vocabulary | In class; Little words |
+| Pronunciation | Stress the important action and practise sentence brackets without long pauses. |
+| Listening | Recognise instructions and prohibitions. |
+| Reading | Read classroom and public rules. |
+| Writing | Write three clear requests and a short instruction. |
+| Speaking and interaction | Take turns asking for an object, an action and help. |
+
+**Checkpoint:** Make two different requests, respond suitably and distinguish prohibition from lack of obligation.
+
+Open the module’s four-skill workshop at `#/a1/checkpoint/9` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Ask your teacher for help. Say which exercise you cannot do, ask them to explain it, and ask when you can speak to them. Speaking prompt: Make three requests using different objects. Respond to your partner’s requests. Include one permission question and a suitable refusal or alternative.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -306,40 +306,16 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Handle an appointment change and write a complete three-point cancellation.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/11`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Cancel a work appointment. Say that you are ill, explain that you cannot attend, and suggest a new day. Speaking prompt: Arrange a doctor’s appointment and describe one simple symptom. Then change a work appointment, giving a reason and a new proposed time.
+Open the module’s four-skill workshop at `#/a1/checkpoint/11` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Cancel a work appointment. Say that you are ill, explain that you cannot attend, and suggest a new day. Speaking prompt: Arrange a doctor’s appointment and describe one simple symptom. Then change a work appointment, giving a reason and a new proposed time.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
-### Module 12: Travel, weather and everyday choices
+### Module 12: Friends, invitations and past situations
 
 **Regular pace:** week 12; 8 hours plus one hour of cumulative review.
 
-- Lesson 23: **Travel, tickets and accommodation** — Buy a ticket, understand station information and ask about accommodation. Practise destinations, return journeys and travel dates.
-- Lesson 24: **Weather, clothes and simple descriptions** — Understand a basic forecast, describe what you need and compare simple choices. Practise es as the subject of weather expressions.
-
-**Outcomes:** Buy a ticket, enquire about a room and understand travel details. Understand a simple forecast and describe practical needs.
-
-| Practice area | Work to complete |
-| --- | --- |
-| Vocabulary | Travel; Weather and seasons |
-| Pronunciation | Practise platform numbers, destination names and compound-word stress. |
-| Listening | Identify a platform change, departure time and forecast detail. |
-| Reading | Read travel notices and hotel advertisements. |
-| Writing | Write a three-point hotel enquiry. |
-| Speaking and interaction | Role-play buying a ticket and asking about a hotel room. |
-
-**Checkpoint:** Explain a travel request, identify a changed detail and ask a relevant follow-up question.
-
-Open the module’s four-skill workshop at `#/a1/checkpoint/12`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Ask a hotel about a stay. Give your arrival and departure dates, request a room for two people, and ask the price including breakfast. Speaking prompt: Buy a return ticket. Ask about departure time and changing trains. Your partner gives a corrected detail; repeat it to confirm. Then ask about the weather.
-
-Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
-
-### Module 13: Friends, invitations and past situations
-
-**Regular pace:** week 13; 8 hours plus one hour of cumulative review.
-
-- Lesson 25: **Hobbies, invitations and arrangements** — Talk about free time, invite someone and respond. Use short explanations, clear questions and a suitable greeting and ending in messages.
-- Lesson 26: **Simple past descriptions: war and hatte** — Use two common past verbs to give a short reason or describe a previous situation. Keep your explanation simple and understandable.
+- Lesson 23: **Hobbies, invitations and arrangements** — Talk about free time, invite someone and respond. Use short explanations, clear questions and a suitable greeting and ending in messages.
+- Lesson 24: **Simple past descriptions: war and hatte** — Use two common past verbs to give a short reason or describe a previous situation. Keep your explanation simple and understandable.
 
 **Outcomes:** Accept or decline an invitation and arrange a meeting. Use war and hatte for simple past explanations.
 
@@ -354,16 +330,16 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Cover all requested content points in a message and negotiate a meeting orally.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/13`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Reply to a friend’s invitation. Say you could not attend, give a simple past reason, and suggest a new activity and day. Speaking prompt: Invite your partner to an activity with a clear time and place. Accept or decline, give a short reason, then agree on an alternative. Mention one past situation.
+Open the module’s four-skill workshop at `#/a1/checkpoint/13` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Reply to a friend’s invitation. Say you could not attend, give a simple past reason, and suggest a new activity and day. Speaking prompt: Invite your partner to an activity with a clear time and place. Accept or decline, give a short reason, then agree on an alternative. Mention one past situation.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
-### Module 14: Yesterday and short journeys
+### Module 13: Yesterday and short journeys
 
-**Regular pace:** week 14; 8 hours plus one hour of cumulative review.
+**Regular pace:** week 13; 8 hours plus one hour of cumulative review.
 
-- Lesson 27: **Talking about completed actions with haben** — Recognise and use a small set of useful past actions. The goal is to understand everyday messages and give a short account of yesterday.
-- Lesson 28: **Travel and completed actions with sein** — Understand a short account of a journey and learn the auxiliary with common verbs. Use a limited set of familiar past forms accurately.
+- Lesson 25: **Talking about completed actions with haben** — Recognise and use a small set of useful past actions. The goal is to understand everyday messages and give a short account of yesterday.
+- Lesson 26: **Travel and completed actions with sein** — Understand a short account of a journey and learn the auxiliary with common verbs. Use a limited set of familiar past forms accurately.
 
 **Outcomes:** Understand common Perfekt forms and describe completed actions. Give a short account of a familiar journey.
 
@@ -378,7 +354,31 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Use a small reliable past-tense repertoire; recognise common past forms in a new text.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/14`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write a short account of an invented visit. Say where you went, describe one completed activity, and say when you returned. Speaking prompt: Ask your partner about yesterday and a recent short journey. Use haben and sein past forms for familiar verbs; ask a follow-up question about time or place.
+Open the module’s four-skill workshop at `#/a1/checkpoint/14` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write a short account of an invented visit. Say where you went, describe one completed activity, and say when you returned. Speaking prompt: Ask your partner about yesterday and a recent short journey. Use haben and sein past forms for familiar verbs; ask a follow-up question about time or place.
+
+Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
+
+### Module 14: Travel, weather and everyday choices
+
+**Regular pace:** week 14; 8 hours plus one hour of cumulative review.
+
+- Lesson 27: **Travel, tickets and accommodation** — Buy a ticket, understand station information and ask about accommodation. Practise destinations, return journeys and travel dates.
+- Lesson 28: **Weather, clothes and simple descriptions** — Understand a basic forecast, describe what you need and compare simple choices. Practise es as the subject of weather expressions.
+
+**Outcomes:** Buy a ticket, enquire about a room and understand travel details. Understand a simple forecast and describe practical needs.
+
+| Practice area | Work to complete |
+| --- | --- |
+| Vocabulary | Travel; Weather and seasons |
+| Pronunciation | Practise platform numbers, destination names and compound-word stress. |
+| Listening | Identify a platform change, departure time and forecast detail. |
+| Reading | Read travel notices and hotel advertisements. |
+| Writing | Write a three-point hotel enquiry. |
+| Speaking and interaction | Role-play buying a ticket and asking about a hotel room. |
+
+**Checkpoint:** Explain a travel request, identify a changed detail and ask a relevant follow-up question.
+
+Open the module’s four-skill workshop at `#/a1/checkpoint/12` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Ask a hotel about a stay. Give your arrival and departure dates, request a room for two people, and ask the price including breakfast. Speaking prompt: Buy a return ticket. Ask about departure time and changing trains. Your partner gives a corrected detail; repeat it to confirm. Then ask about the weather.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -402,7 +402,7 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Reach at least 12/15 separately in unfamiliar listening and reading practice on two occasions.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/15`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write to the course office. Say you want an evening course, ask its start date, and ask how to register. Speaking prompt: Confirm a changed time and room. Ask for repetition when needed. Then use unfamiliar word cards from three A1 vocabulary topics to ask and answer new questions.
+Open the module’s four-skill workshop at `#/a1/checkpoint/15` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: Write to the course office. Say you want an evening course, ask its start date, and ask how to register. Speaking prompt: Confirm a changed time and room. Ask for repetition when needed. Then use unfamiliar word cards from three A1 vocabulary topics to ask and answer new questions.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -426,7 +426,7 @@ Do the unfamiliar transfer task before calling the module complete. Keep a sampl
 
 **Checkpoint:** Complete two different full rehearsals, aim for at least 80/100 with writing and speaking reviewed, and have no persistent task-completion gap.
 
-Open the module’s four-skill workshop at `#/a1/checkpoint/16`: three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: You cannot attend a friend’s Saturday meeting. Write about 30 words: apologise, give a simple reason, and propose a new day and time. Include greeting and ending. Speaking prompt: With a partner, do all speaking parts: introduction with spelling and a number; two information questions with answers; two different requests with suitable responses. Use new cards and avoid reading a full script.
+Open the module’s four-skill workshop at `#/a1/checkpoint/16` (the route ID remains stable): three listening questions, three reading questions, one practical writing brief and a partner speaking task. Aim for at least 5/6 in comprehension. Writing prompt: You cannot attend a friend’s Saturday meeting. Write about 30 words: apologise, give a simple reason, and propose a new day and time. Include greeting and ending. Speaking prompt: With a partner, do all speaking parts: introduction with spelling and a number; two information questions with answers; two different requests with suitable responses. Use new cards and avoid reading a full script.
 
 Do the unfamiliar transfer task before calling the module complete. Keep a sample of your writing and obtain feedback on the spoken exchange.
 
@@ -536,15 +536,19 @@ Lesson multiple-choice options are shuffled without changing their answer keys. 
 
 ### Learning-support update, 25 October 2026
 
-Each module now includes an original transfer task with a short success checklist, targeted review advice and links to earlier lessons where useful. These activities are ungraded, so the original scored tasks, lesson IDs and module-check version stay stable. The roadmap also includes guidance for finding the main idea and evidence, drafting and revising messages, and responding to a conversation partner. Suggested later review intervals are guidance rather than an additional automatic reminder system.
+Each module now includes an original transfer task with a short success checklist, targeted review advice and links to earlier lessons where useful. These activities are ungraded; lesson and checkpoint IDs stay stable. The roadmap also includes guidance for finding the main idea and evidence, drafting and revising messages, and responding to a conversation partner. Suggested later review intervals are guidance rather than an additional automatic reminder system.
 
-Private reference material informed the topic and skill review. No scans, notebook examples, names or personal details were copied into the course. See `docs/COURSE-REFERENCE-UPDATE.md` for the scope of the review and the related A2/B1 changes.
+Private reference material informed the topic and skill review. No scans, notebook examples, names or personal details were copied into the course. See docs/COURSE-REFERENCE-UPDATE.md for the scope of the review and the related A2/B1 changes.
+
+### A1 notebook alignment, 12 November 2026
+
+The 123-page A1 notebook was reviewed for its topic progression and recurring practice forms. The roadmap now places food and negation before time and routines, then housing before modal requests and health. The course explicitly teaches the notebook's location-versus-destination distinction, common accusative and dative object pronouns, imperative forms, and bounded clothing adjective endings. Every lesson now ends with one additional, scored notebook-style drill such as a conjugation or case gap, a word-order build, or a short meaning check. These drills and all example sentences were independently written; notebook answers and personal examples were not copied. Lesson and checkpoint IDs remain stable, while the displayed module numbers follow the new order.
 
 Before public claims of comprehensive A1 preparation, have a German educator review the syllabus, new lessons, translations, distractors and models; audit vocabulary and meanings against the official reference; review natural audio; and have beginners complete the path and unfamiliar assessment tasks. Correct ambiguous prompts and false rejections of acceptable answers.
 
 The site can initially save progress in the browser. Learners should understand that this belongs to that browser. Add accounts and a backend when the product needs progress across devices. Keep the content model separate from the views so a later A2/B1 curriculum can use the same lesson, roadmap and assessment structure.
 
-Official sources checked on 2026-10-08:
+Official source references last reviewed on 2026-10-08:
 
 - [Goethe exam overview and durations](https://www.goethe.de/ins/de/en/prf/prf/gzsd1/inf.html)
 - [Goethe official model and practice sets with audio](https://www.goethe.de/ins/de/en/prf/prf/gzsd1/ueb.html)

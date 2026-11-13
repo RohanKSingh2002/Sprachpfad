@@ -2,9 +2,9 @@
 
 import { audioPlaybackSpeed, logPractice, recordTest } from "../state.js";
 import { speakerButton, stopAudio } from "../ui/audio.js";
-import { slidePill } from "../ui/effects.js";
-import { enter, gsap, motionOK, onLeave, shake, splitReveal } from "../ui/motion.js";
-import { jumpTo, scrollToCenter } from "../ui/scroll.js";
+import { slidePill } from "../ui/effects.js?v=20261113-polish1";
+import { enter, gsap, motionOK, onLeave, shake, splitReveal } from "../ui/motion.js?v=20261113-polish1";
+import { jumpTo, scrollToCenter } from "../ui/scroll.js?v=20261113-polish1";
 import { esc, norm } from "../utils.js";
 import { refreshInterface } from "../study-language.js";
 import { breadcrumb, levelSwitch } from "./shared.js";
@@ -200,7 +200,7 @@ function showScoreWhenDone() {
     });
   }
   if (motionOK())
-    gsap.from(box.firstChild, { y: 24, scale: 0.98, opacity: 0, duration: 0.7, ease: "expo.out" });
+    gsap.from(box.firstChild, { y: 10, scale: 0.99, opacity: 0, duration: 0.46, ease: "power3.out" });
   scrollToCenter(box);
 }
 
@@ -346,10 +346,10 @@ export function mount(lv, { sameKind } = {}) {
     enter("#app > h1, .page-head h1, #app > .muted", { y: 12, duration: 0.6, stagger: 0.05 });
     return;
   }
-  splitReveal(document.querySelector(".page-head h1"), { duration: 0.9 });
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(".crumb", { autoAlpha: 0, y: 8, duration: 0.6 }, 0)
-    .from(".page-head .lvswitch", { autoAlpha: 0, y: 10, duration: 0.7 }, 0.1)
-    .from("#app > .muted", { autoAlpha: 0, y: 12, duration: 0.8 }, 0.15);
+  splitReveal(document.querySelector(".page-head h1"), { duration: 0.62 });
+  const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+  tl.from(".crumb", { autoAlpha: 0, y: 5, duration: 0.34 }, 0)
+    .from(".page-head .lvswitch", { autoAlpha: 0, y: 6, duration: 0.38 }, 0.04)
+    .from("#app > .muted", { autoAlpha: 0, y: 8, duration: 0.42 }, 0.08);
   onLeave(() => tl.kill());
 }

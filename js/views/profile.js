@@ -15,7 +15,7 @@ import {
   testResult,
 } from "../state.js";
 import { ARROW_ICON } from "../ui/icons.js";
-import { countUp, enter, gsap, motionOK, onLeave, revealOnScroll } from "../ui/motion.js";
+import { countUp, enter, gsap, motionOK, onLeave, revealOnScroll } from "../ui/motion.js?v=20261113-polish1";
 import { esc } from "../utils.js";
 import { profileAccount } from "./account.js?v=20261104-settings1";
 
@@ -203,8 +203,8 @@ export function mount() {
   const page = document.querySelector(".profile-page");
   if (!page || !motionOK()) return;
   const scene = gsap.context(() => {
-    enter(".profile-head, .profile-save-note, .profile-overview", { y: 12, duration: 0.65, stagger: 0.05 });
-    revealOnScroll(".profile-section", { y: 12, duration: 0.65, stagger: 0.05 });
+    enter(".profile-head, .profile-save-note, .profile-overview", { y: 8, duration: 0.46, stagger: 0.035 });
+    revealOnScroll(".profile-section", { y: 8, duration: 0.46, stagger: 0.035 });
     page.querySelectorAll("[data-profile-count]").forEach((el) => {
       countUp(el, Number(el.dataset.profileCount), { duration: 0.9 });
     });

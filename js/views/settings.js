@@ -9,8 +9,8 @@ import { setReminderPaused, setStudyNotification, studyNotification, studyRemind
 import { offlineLessons, offlineSize, removeOfflineLesson } from "../offline-study.js";
 import { localInstruction, prepareStudyLanguage, refreshInterface, STUDY_LANGUAGES } from "../study-language.js";
 import { audioSpeedControl, stopAudio } from "../ui/audio.js";
-import { applyDisplayPreferences } from "../ui/motion.js";
-import { initSmoothScroll } from "../ui/scroll.js";
+import { applyDisplayPreferences } from "../ui/motion.js?v=20261113-polish1";
+import { initSmoothScroll } from "../ui/scroll.js?v=20261113-polish1";
 import { esc } from "../utils.js";
 
 const SECTIONS = {
@@ -160,7 +160,7 @@ function accountPanel() {
       ${user ? '<button class="btn small ghost" type="button" data-account-action="retry">Sync now</button>' : ""}</div>
     <div class="settings-actions">
       <button class="btn small ghost" type="button" data-account-action="download">Download backup</button>
-      ${user ? '<button class="btn small ghost" type="button" data-account-action="signout">Sign out</button>' : '<a class="btn small ghost" href="#/login">Sign in</a>'}
+      ${user ? '' : '<a class="btn small ghost" href="#/login">Sign in</a>'}
     </div>
     <div class="setting-row settings-danger"><div><strong>Reset learning progress</strong><p>Requires confirmation.</p></div>
       <button class="btn small ghost" type="button" data-account-action="reset"${status.blocked ? " disabled" : ""}>Reset progress</button></div>

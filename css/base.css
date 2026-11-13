@@ -59,7 +59,11 @@
   color-scheme: dark;
   /* motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --motion-fast: 160ms;
+  --motion-ui: 240ms;
+  --motion-page: 280ms;
   /* depth: hairline highlight on top edges, then shadow sizes */
   --highlight: inset 0 1px 0 #ffffff03;
   --shadow-1: 0 1px 2px #0003;
@@ -360,23 +364,31 @@ header.nav {
   border-radius: var(--radius-md);
   min-height: 44px;
   box-shadow: var(--shadow-1);
-  transition: background-color .15s, border-color .15s, color .15s;
+  transition:
+    background-color var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-ui) var(--ease-standard),
+    translate var(--motion-ui) var(--ease-standard),
+    scale var(--motion-fast) var(--ease-standard);
 }
-/* Keep controls steady while their colour responds to interaction. */
-.btn:hover {
-  background: var(--btn-hover);
+.btn:active:not(:disabled) {
+  scale: .98;
+  filter: brightness(.97);
 }
-.btn:active {
-  filter: brightness(.94);
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover:not(:disabled) {
+    background: var(--btn-hover);
+    translate: 0 -1px;
+    box-shadow: var(--shadow-2);
+  }
+  .btn:hover:not(:disabled) .btn-arrow { transform: translateX(3px); }
 }
 .btn-arrow {
   width: 18px;
   height: 18px;
   margin-right: -4px;
-  transition: transform 0.35s var(--ease-out);
-}
-.btn:hover .btn-arrow {
-  transform: translateX(3px);
+  transition: transform var(--motion-ui) var(--ease-standard);
 }
 .btn.ghost {
   background: var(--surface);
@@ -384,9 +396,11 @@ header.nav {
   border-color: var(--input);
   box-shadow: none;
 }
-.btn.ghost:hover {
-  background: var(--accent);
-  border-color: var(--ring);
+@media (hover: hover) and (pointer: fine) {
+  .btn.ghost:hover:not(:disabled) {
+    background: var(--accent);
+    border-color: var(--ring);
+  }
 }
 .btn.small {
   min-height: 38px;
@@ -415,12 +429,12 @@ header.nav {
     0 100%,
     0 100%;
   background-repeat: no-repeat;
-  transition: background-size 0.5s var(--ease-out);
+  transition: background-size var(--motion-ui) var(--ease-standard);
 }
-.tlink:hover {
-  background-size:
-    100% 2px,
-    100% 2px;
+@media (hover: hover) and (pointer: fine) {
+  .tlink:hover {
+    background-size: 100% 2px, 100% 2px;
+  }
 }
 .link-btn {
   background: none;
@@ -431,9 +445,10 @@ header.nav {
   cursor: pointer;
   color: var(--muted);
 }
-.link-btn:hover {
-  color: var(--text);
+@media (hover: hover) and (pointer: fine) {
+  .link-btn:hover { color: var(--text); }
 }
+.link-btn { transition: color var(--motion-fast) var(--ease-standard); }
 
 /* Breadcrumb */
 .crumb {
@@ -500,8 +515,8 @@ html.lenis {
   max-width: calc(100% - 32px);
   box-shadow: var(--shadow-2);
   transition:
-    opacity 0.25s,
-    transform 0.5s var(--ease-spring);
+    opacity var(--motion-ui) var(--ease-standard),
+    transform 0.3s var(--ease-spring);
 }
 .toast.show {
   opacity: 1;
@@ -536,4 +551,18 @@ input[type="checkbox"], input[type="radio"] { accent-color: var(--btn-bg); }
   .toast {
     transition: none;
   }
+}
+
+/* The in-app motion setting should reduce CSS motion just like the OS preference. */
+:root[data-motion="reduced"] *,
+:root[data-motion="reduced"] *::before,
+:root[data-motion="reduced"] *::after {
+  scroll-behavior: auto !important;
+  animation-duration: .01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: .01ms !important;
+}
+button,
+[role="button"] {
+  touch-action: manipulation;
 }

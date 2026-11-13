@@ -9,6 +9,7 @@ import { lessonSupport } from './a1_lesson_support.mjs';
 import { correctLessons } from './a1_review_corrections.mjs';
 import { enrichVocabulary, addEssentialVocabulary } from './a1_vocabulary_support.mjs';
 import { strengthenA1 } from './reference_learning_support.mjs';
+import { alignA1Notebook } from './a1_notebook_alignment.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pair = (de, en) => ({ de, en });
 const vocab = (rows) => rows.map(([de, en, pl]) => ({ de, en, ...(pl ? { pl } : {}) }));
@@ -370,6 +371,7 @@ const course = {
 };
 const original = JSON.parse(fs.readFileSync(path.join(root, 'data', 'a1.json'), 'utf8'));
 strengthenA1(course);
+alignA1Notebook(course, original);
 correctLessons([...original.lessons, ...lessons]);
 addEssentialVocabulary(original.topics);
 for (const l of [...original.lessons, ...lessons]) enrichVocabulary(l.vocab);

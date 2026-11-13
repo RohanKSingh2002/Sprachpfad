@@ -4,7 +4,7 @@ import { COURSE_SKILLS } from '../course-plan.js';
 import { wordCount } from '../practice-engine.js';
 import { checkpointDraft, saveCheckpointDraft } from '../practice-progress.js';
 import { speakerButton } from '../ui/audio.js';
-import { jumpTo } from '../ui/scroll.js';
+import { jumpTo } from '../ui/scroll.js?v=20261113-polish1';
 import { esc, shuffle } from '../utils.js';
 import { breadcrumb } from './shared.js';
 import { transferHTML } from './course-support.js';
@@ -21,11 +21,12 @@ export function render(param) {
   module = param.module;
   pack = module.workshop;
   answers = {};
+  const moduleNumber = level.course.modules.indexOf(module) + 1;
   const checks = courseChecks(level, module.id);
   const previous = checks.workshopScore;
   const draft = checkpointDraft(level, module);
   const saveLines = (part, label) => `<a class="tlink" href="#/sentences?checkpoint=${level.id}-${module.id}&amp;part=${part}">${label}</a>`;
-  return `${breadcrumb(level, `Module ${module.id} practice`)}<header class="course-header"><p class="course-eyebrow">${level.name} · Module ${module.id} checkpoint</p><h1>${esc(module.title)}</h1><p class="intro">Complete the module’s lessons first. Attempt these original practice tasks before revealing the models, then use feedback to review the gaps. Use invented details in personal-data tasks.</p><a class="tlink" href="#/${level.id}/roadmap">Back to your learning roadmap</a></header>
+  return `${breadcrumb(level, `Module ${moduleNumber} practice`)}<header class="course-header"><p class="course-eyebrow">${level.name} · Module ${moduleNumber} checkpoint</p><h1>${esc(module.title)}</h1><p class="intro">Complete the module’s lessons first. Attempt these original practice tasks before revealing the models, then use feedback to review the gaps. Use invented details in personal-data tasks.</p><a class="tlink" href="#/${level.id}/roadmap">Back to your learning roadmap</a></header>
     <section class="panel"><h2>1. Listen for meaning</h2><p class="muted">Listen without a transcript and answer all three questions. You can replay this supported practice.</p><div class="row">${speakerButton(pack.listening.audioText, 'Play checkpoint listening text')}</div>${questions(pack.listening.questions,'L')}<details><summary>Transcript · open after your attempt</summary><p class="reading" lang="de">${esc(pack.listening.audioText)}</p>${saveLines('listening', 'Import transcript sentences')}</details></section>
     <section class="panel"><h2>2. Read for meaning</h2>${pack.glossary?.length ? `<details><summary>Vocabulary help</summary><ul>${pack.glossary.map(w=>`<li><span lang="de">${esc(w.de)}</span> — ${esc(w.en)}</li>`).join('')}</ul></details>` : ''}<div class="reading" lang="de">${esc(pack.reading.text)}</div>${questions(pack.reading.questions,'R')}${saveLines('reading', 'Import reading sentences')}</section>
     <section class="panel" id="workshop-part-writing"><h2>3. Write a practical response</h2><p>${esc(pack.writing.task)}</p><label for="workshop-writing" class="muted small">Aim for about ${pack.writing.wordGoal} words. Clear task completion matters more than an exact count.</label><textarea id="workshop-writing" aria-describedby="workshop-wordcount workshop-draft-status" maxlength="6000" placeholder="Schreib auf Deutsch…" data-lenis-prevent>

@@ -1,7 +1,7 @@
 {
   "id": "a1",
   "version": 1,
-  "title": "From your first German words to A1 exam preparation",
+  "title": "A1 German: a notebook-aligned learning path",
   "targetExam": "Goethe-Zertifikat A1: Start Deutsch 1 (adults)",
   "test": {
     "version": 3,
@@ -518,7 +518,7 @@
       }
     ]
   },
-  "updated": "2026-10-08",
+  "updated": "2026-11-12",
   "weeks": 16,
   "coreHours": 128,
   "reviewHours": 16,
@@ -531,26 +531,26 @@
     13,
     3,
     12,
-    4,
-    7,
-    14,
-    8,
     5,
     15,
     6,
     16,
-    17,
-    18,
+    4,
+    7,
+    14,
+    8,
     19,
     20,
+    17,
+    18,
     21,
     22,
-    23,
-    24,
     25,
     28,
     26,
     27,
+    23,
+    24,
     29,
     30,
     31,
@@ -1109,278 +1109,6 @@
       }
     },
     {
-      "id": 5,
-      "title": "Word order, time and appointments",
-      "lessonIds": [
-        4,
-        7
-      ],
-      "topics": [
-        "time",
-        "little"
-      ],
-      "goals": [
-        "Keep the finite verb in the correct sentence position.",
-        "Understand digital time, informal time and appointment dates."
-      ],
-      "pronunciation": "Sentence stress; contrast halb acht / acht Uhr and quarter-hour expressions.",
-      "listening": "Identify five appointment times, including a corrected time.",
-      "reading": "Read opening hours and appointment cards.",
-      "writing": "Write a short appointment confirmation.",
-      "speaking": "Ask for a time and repeat it back for confirmation.",
-      "checkpoint": "Interpret four of five time expressions and confirm a date and place accurately.",
-      "hours": 8,
-      "workshop": {
-        "id": 5,
-        "listening": {
-          "audioText": "Unser Termin ist am Donnerstag, dem dritten Mai, um zehn Uhr dreißig. Bitte kommen Sie zehn Minuten früher. Am Freitag ist unser Büro geschlossen.",
-          "questions": [
-            {
-              "question": "Which day is the appointment?",
-              "options": [
-                "Tuesday",
-                "Thursday",
-                "Friday"
-              ],
-              "answer": 1,
-              "evidence": "… am Donnerstag."
-            },
-            {
-              "question": "What is the appointment time?",
-              "options": [
-                "10:20",
-                "10:30",
-                "10:40"
-              ],
-              "answer": 1,
-              "evidence": "… zehn Uhr dreißig."
-            },
-            {
-              "question": "When is the office closed?",
-              "options": [
-                "Thursday",
-                "Wednesday",
-                "Friday"
-              ],
-              "answer": 2,
-              "evidence": "Am Freitag ist unser Büro geschlossen."
-            }
-          ]
-        },
-        "reading": {
-          "text": "Bibliothek: Montag bis Freitag 9–18 Uhr, Samstag 10–13 Uhr. Am Sonntag geschlossen. Am 1. Mai bleibt die Bibliothek geschlossen. Bücher können Sie am Montag wieder abgeben.",
-          "questions": [
-            {
-              "question": "When does the library open on Saturday?",
-              "options": [
-                "9",
-                "10",
-                "13"
-              ],
-              "answer": 1,
-              "evidence": "Samstag 10–13 Uhr."
-            },
-            {
-              "question": "Is it open on Sunday?",
-              "options": [
-                "Yes",
-                "Only in the morning",
-                "No"
-              ],
-              "answer": 2,
-              "evidence": "Am Sonntag geschlossen."
-            },
-            {
-              "question": "When may books be returned after the holiday?",
-              "options": [
-                "Monday",
-                "Sunday",
-                "1 May"
-              ],
-              "answer": 0,
-              "evidence": "… am Montag wieder abgeben."
-            }
-          ]
-        },
-        "writing": {
-          "task": "Write an appointment request. Say which day you can come, give a time and ask for confirmation.",
-          "modelAnswer": "Guten Tag,\nich möchte gern einen Termin am Donnerstag. Ich kann um halb elf kommen. Haben Sie dann Zeit? Bitte schreiben Sie mir kurz. Vielen Dank. \nViele Grüße\nLina",
-          "wordGoal": 30
-        },
-        "speaking": {
-          "task": "Arrange an appointment with a partner. Say a day and a time, repeat the arrangement to confirm, and ask about opening hours.",
-          "modelAnswer": "Haben Sie am Donnerstag Zeit? Ja, um halb elf. Also am Donnerstag um zehn Uhr dreißig? Ja. Wann öffnet Ihr Büro? Um neun Uhr."
-        },
-        "glossary": [
-          {
-            "de": "abgeben",
-            "en": "return; hand in"
-          }
-        ]
-      },
-      "pronunciationDrills": [
-        {
-          "label": "Half hours",
-          "text": "Halb neun. Acht Uhr dreißig. Viertel nach acht. Viertel vor neun.",
-          "instruction": "Say the equivalent clock times to a partner."
-        },
-        {
-          "label": "Dates",
-          "text": "Am ersten Mai. Am zweiten Juni. Am dritten September.",
-          "instruction": "Group the date as one short phrase."
-        }
-      ],
-      "transfer": {
-        "lessonIds": [
-          10,
-          13
-        ],
-        "task": "Agree on a library meeting. One person can come at 14:15; the other can only come at 14:45. Agree on a final time and write a short confirmation.",
-        "checklist": [
-          "We agree on one time.",
-          "I use um for clock times and am for a weekday.",
-          "My confirmation matches the agreement."
-        ],
-        "retry": "Compare official clock times with Viertel nach and Viertel vor."
-      }
-    },
-    {
-      "id": 6,
-      "title": "Routines and separable verbs",
-      "lessonIds": [
-        14,
-        8
-      ],
-      "topics": [
-        "verbs2",
-        "time"
-      ],
-      "goals": [
-        "Describe a weekday and weekend routine.",
-        "Use common separable verbs and frequency expressions."
-      ],
-      "pronunciation": "Stress the separable prefix: AUFstehen, EINkaufen, ANrufen. Link words in short groups.",
-      "listening": "Follow a daily routine and identify the order of activities.",
-      "reading": "Read a weekly schedule.",
-      "writing": "Write a six-sentence routine with at least two time phrases.",
-      "speaking": "Describe your day and answer a follow-up question.",
-      "checkpoint": "Explain a routine clearly using time, a frequency word and two separable verbs.",
-      "hours": 8,
-      "workshop": {
-        "id": 6,
-        "listening": {
-          "audioText": "Ich stehe von Montag bis Freitag um sieben Uhr auf. Um acht fahre ich zur Arbeit. Ich arbeite bis fünf. Am Abend kaufe ich oft ein. Am Sonntag stehe ich später auf.",
-          "questions": [
-            {
-              "question": "When does the speaker get up on working days?",
-              "options": [
-                "7",
-                "8",
-                "5"
-              ],
-              "answer": 0,
-              "evidence": "… um sieben Uhr auf."
-            },
-            {
-              "question": "When does work finish?",
-              "options": [
-                "8",
-                "12",
-                "5"
-              ],
-              "answer": 2,
-              "evidence": "Ich arbeite bis fünf."
-            },
-            {
-              "question": "What often happens in the evening?",
-              "options": [
-                "Shopping",
-                "Going to work",
-                "Getting up"
-              ],
-              "answer": 0,
-              "evidence": "Am Abend kaufe ich oft ein."
-            }
-          ]
-        },
-        "reading": {
-          "text": "Hallo Tim, ich arbeite morgen bis 16 Uhr. Danach kaufe ich ein. Um 18 Uhr rufe ich meine Mutter an. Kannst du um 19 Uhr vorbeikommen? Wir können zusammen kochen. Grüße, Lea",
-          "questions": [
-            {
-              "question": "What does Lea do after work?",
-              "options": [
-                "Phones Tim",
-                "Shops",
-                "Sleeps"
-              ],
-              "answer": 1,
-              "evidence": "Danach kaufe ich ein."
-            },
-            {
-              "question": "Who receives a phone call?",
-              "options": [
-                "Lea’s mother",
-                "Tim’s father",
-                "A teacher"
-              ],
-              "answer": 0,
-              "evidence": "… meine Mutter."
-            },
-            {
-              "question": "When is Tim invited?",
-              "options": [
-                "16:00",
-                "18:00",
-                "19:00"
-              ],
-              "answer": 2,
-              "evidence": "… um 19 Uhr vorbeikommen?"
-            }
-          ]
-        },
-        "writing": {
-          "task": "Tell a friend about tomorrow. Include when you get up, one activity after work or class, and a time when they can visit.",
-          "modelAnswer": "Hallo Tim,\nmorgen stehe ich um sieben Uhr auf. Nach dem Kurs kaufe ich ein. Du kannst um 19 Uhr kommen. Dann kochen wir zusammen. Hast du Zeit? \nGrüße\nLea",
-          "wordGoal": 30
-        },
-        "speaking": {
-          "task": "Describe a usual weekday with three separable verbs. Ask your partner when they get up and what they do in the evening.",
-          "modelAnswer": "Ich stehe um sieben Uhr auf. Nach der Arbeit kaufe ich ein. Am Abend rufe ich meine Mutter an. Wann stehst du auf? Um acht. Was machst du am Abend? Ich lese."
-        },
-        "glossary": [
-          {
-            "de": "vorbeikommen",
-            "en": "come over"
-          }
-        ]
-      },
-      "pronunciationDrills": [
-        {
-          "label": "Separable verbs",
-          "text": "Aufstehen. Ich stehe auf. Einkaufen. Ich kaufe ein. Anrufen. Ich rufe an.",
-          "instruction": "Hear the prefix stress and pronounce the final prefix."
-        },
-        {
-          "label": "Routine rhythm",
-          "text": "Am Montag arbeite ich. Am Abend kaufe ich ein.",
-          "instruction": "Pause between complete sentences."
-        }
-      ],
-      "transfer": {
-        "lessonIds": [
-          4,
-          7
-        ],
-        "task": "Explain a fictional Saturday in four sentences. Change one activity into a question and put a time phrase first in another sentence.",
-        "checklist": [
-          "The finite verb stays in second position in statements.",
-          "A separable prefix finishes the main clause.",
-          "The routine can be understood in order."
-        ],
-        "retry": "Underline the conjugated verb and circle the separable prefix."
-      }
-    },
-    {
       "id": 7,
       "title": "Food, quantities and the accusative",
       "lessonIds": [
@@ -1653,139 +1381,275 @@
       }
     },
     {
-      "id": 9,
-      "title": "Abilities, obligations and requests",
+      "id": 5,
+      "title": "Word order, time and appointments",
       "lessonIds": [
-        17,
-        18
+        4,
+        7
       ],
       "topics": [
-        "class",
+        "time",
         "little"
       ],
       "goals": [
-        "Use modal verbs to express ability, need and permission.",
-        "Make and respond to requests; use useful object pronouns."
+        "Keep the finite verb in the correct sentence position.",
+        "Understand digital time, informal time and appointment dates."
       ],
-      "pronunciation": "Stress the important action and practise sentence brackets without long pauses.",
-      "listening": "Recognise instructions and prohibitions.",
-      "reading": "Read classroom and public rules.",
-      "writing": "Write three clear requests and a short instruction.",
-      "speaking": "Take turns asking for an object, an action and help.",
-      "checkpoint": "Make two different requests, respond suitably and distinguish prohibition from lack of obligation.",
+      "pronunciation": "Sentence stress; contrast halb acht / acht Uhr and quarter-hour expressions.",
+      "listening": "Identify five appointment times, including a corrected time.",
+      "reading": "Read opening hours and appointment cards.",
+      "writing": "Write a short appointment confirmation.",
+      "speaking": "Ask for a time and repeat it back for confirmation.",
+      "checkpoint": "Interpret four of five time expressions and confirm a date and place accurately.",
       "hours": 8,
       "workshop": {
-        "id": 9,
+        "id": 5,
         "listening": {
-          "audioText": "Im Kurs dürfen Sie Wasser trinken. Sie dürfen aber nicht telefonieren. Morgen müssen Sie ein Buch mitbringen. Wenn Sie eine Frage haben, können Sie den Lehrer fragen.",
+          "audioText": "Unser Termin ist am Donnerstag, dem dritten Mai, um zehn Uhr dreißig. Bitte kommen Sie zehn Minuten früher. Am Freitag ist unser Büro geschlossen.",
           "questions": [
             {
-              "question": "What is permitted?",
+              "question": "Which day is the appointment?",
               "options": [
-                "Drinking water",
-                "Phone calls",
-                "Smoking"
-              ],
-              "answer": 0,
-              "evidence": "… dürfen Sie Wasser trinken."
-            },
-            {
-              "question": "What must students bring tomorrow?",
-              "options": [
-                "A phone",
-                "A book",
-                "A ticket"
+                "Tuesday",
+                "Thursday",
+                "Friday"
               ],
               "answer": 1,
-              "evidence": "… ein Buch mitbringen."
+              "evidence": "… am Donnerstag."
             },
             {
-              "question": "Who can students ask?",
+              "question": "What is the appointment time?",
               "options": [
-                "The course office",
-                "Other students only",
-                "The teacher"
+                "10:20",
+                "10:30",
+                "10:40"
+              ],
+              "answer": 1,
+              "evidence": "… zehn Uhr dreißig."
+            },
+            {
+              "question": "When is the office closed?",
+              "options": [
+                "Thursday",
+                "Wednesday",
+                "Friday"
               ],
               "answer": 2,
-              "evidence": "… den Lehrer fragen."
+              "evidence": "Am Freitag ist unser Büro geschlossen."
             }
           ]
         },
         "reading": {
-          "text": "Kursraum: Bitte schließen Sie nach dem Unterricht die Fenster. Lassen Sie die Tür offen. Essen ist hier nicht erlaubt. Getränke dürfen Sie mitbringen. Der Raum muss um 18 Uhr frei sein.",
+          "text": "Bibliothek: Montag bis Freitag 9–18 Uhr, Samstag 10–13 Uhr. Am Sonntag geschlossen. Am 1. Mai bleibt die Bibliothek geschlossen. Bücher können Sie am Montag wieder abgeben.",
           "questions": [
             {
-              "question": "What should be closed?",
+              "question": "When does the library open on Saturday?",
               "options": [
-                "The windows",
-                "The door",
-                "The books"
-              ],
-              "answer": 0,
-              "evidence": "… die Fenster."
-            },
-            {
-              "question": "Is eating allowed?",
-              "options": [
-                "Yes",
-                "No",
-                "Only at 18:00"
+                "9",
+                "10",
+                "13"
               ],
               "answer": 1,
-              "evidence": "Essen ist hier nicht erlaubt."
+              "evidence": "Samstag 10–13 Uhr."
             },
             {
-              "question": "When must the room be free?",
+              "question": "Is it open on Sunday?",
               "options": [
-                "8:00",
-                "16:00",
-                "18:00"
+                "Yes",
+                "Only in the morning",
+                "No"
               ],
               "answer": 2,
-              "evidence": "… um 18 Uhr frei."
+              "evidence": "Am Sonntag geschlossen."
+            },
+            {
+              "question": "When may books be returned after the holiday?",
+              "options": [
+                "Monday",
+                "Sunday",
+                "1 May"
+              ],
+              "answer": 0,
+              "evidence": "… am Montag wieder abgeben."
             }
           ]
         },
         "writing": {
-          "task": "Ask your teacher for help. Say which exercise you cannot do, ask them to explain it, and ask when you can speak to them.",
-          "modelAnswer": "Guten Tag,\nich kann Aufgabe drei nicht machen. Können Sie mir die Aufgabe bitte erklären? Haben Sie morgen nach dem Kurs Zeit? Vielen Dank für Ihre Hilfe. \nViele Grüße\nBen",
+          "task": "Write an appointment request. Say which day you can come, give a time and ask for confirmation.",
+          "modelAnswer": "Guten Tag,\nich möchte gern einen Termin am Donnerstag. Ich kann um halb elf kommen. Haben Sie dann Zeit? Bitte schreiben Sie mir kurz. Vielen Dank. \nViele Grüße\nLina",
           "wordGoal": 30
         },
         "speaking": {
-          "task": "Make three requests using different objects. Respond to your partner’s requests. Include one permission question and a suitable refusal or alternative.",
-          "modelAnswer": "Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte die Tür öffnen? Natürlich. Können Sie bitte das Fenster schließen? Ja, gern. Darf ich hier telefonieren? Leider nicht. Bitte telefonieren Sie draußen."
+          "task": "Arrange an appointment with a partner. Say a day and a time, repeat the arrangement to confirm, and ask about opening hours.",
+          "modelAnswer": "Haben Sie am Donnerstag Zeit? Ja, um halb elf. Also am Donnerstag um zehn Uhr dreißig? Ja. Wann öffnet Ihr Büro? Um neun Uhr."
         },
         "glossary": [
           {
-            "de": "ausleihen",
-            "en": "borrow"
+            "de": "abgeben",
+            "en": "return; hand in"
           }
         ]
       },
       "pronunciationDrills": [
         {
-          "label": "Obligation and permission",
-          "text": "Du musst nicht kommen. Du darfst nicht kommen.",
-          "instruction": "Stress the modal so the meaning stays clear."
+          "label": "Half hours",
+          "text": "Halb neun. Acht Uhr dreißig. Viertel nach acht. Viertel vor neun.",
+          "instruction": "Say the equivalent clock times to a partner."
         },
         {
-          "label": "Requests and responses",
-          "text": "Können Sie mir bitte helfen? Ja, gern. Tut mir leid.",
-          "instruction": "Practise both request and response with a partner."
+          "label": "Dates",
+          "text": "Am ersten Mai. Am zweiten Juni. Am dritten September.",
+          "instruction": "Group the date as one short phrase."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          10,
+          13
+        ],
+        "task": "Agree on a library meeting. One person can come at 14:15; the other can only come at 14:45. Agree on a final time and write a short confirmation.",
+        "checklist": [
+          "We agree on one time.",
+          "I use um for clock times and am for a weekday.",
+          "My confirmation matches the agreement."
+        ],
+        "retry": "Compare official clock times with Viertel nach and Viertel vor."
+      }
+    },
+    {
+      "id": 6,
+      "title": "Routines and separable verbs",
+      "lessonIds": [
+        14,
+        8
+      ],
+      "topics": [
+        "verbs2",
+        "time"
+      ],
+      "goals": [
+        "Describe a weekday and weekend routine.",
+        "Use common separable verbs and frequency expressions."
+      ],
+      "pronunciation": "Stress the separable prefix: AUFstehen, EINkaufen, ANrufen. Link words in short groups.",
+      "listening": "Follow a daily routine and identify the order of activities.",
+      "reading": "Read a weekly schedule.",
+      "writing": "Write a six-sentence routine with at least two time phrases.",
+      "speaking": "Describe your day and answer a follow-up question.",
+      "checkpoint": "Explain a routine clearly using time, a frequency word and two separable verbs.",
+      "hours": 8,
+      "workshop": {
+        "id": 6,
+        "listening": {
+          "audioText": "Ich stehe von Montag bis Freitag um sieben Uhr auf. Um acht fahre ich zur Arbeit. Ich arbeite bis fünf. Am Abend kaufe ich oft ein. Am Sonntag stehe ich später auf.",
+          "questions": [
+            {
+              "question": "When does the speaker get up on working days?",
+              "options": [
+                "7",
+                "8",
+                "5"
+              ],
+              "answer": 0,
+              "evidence": "… um sieben Uhr auf."
+            },
+            {
+              "question": "When does work finish?",
+              "options": [
+                "8",
+                "12",
+                "5"
+              ],
+              "answer": 2,
+              "evidence": "Ich arbeite bis fünf."
+            },
+            {
+              "question": "What often happens in the evening?",
+              "options": [
+                "Shopping",
+                "Going to work",
+                "Getting up"
+              ],
+              "answer": 0,
+              "evidence": "Am Abend kaufe ich oft ein."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Hallo Tim, ich arbeite morgen bis 16 Uhr. Danach kaufe ich ein. Um 18 Uhr rufe ich meine Mutter an. Kannst du um 19 Uhr vorbeikommen? Wir können zusammen kochen. Grüße, Lea",
+          "questions": [
+            {
+              "question": "What does Lea do after work?",
+              "options": [
+                "Phones Tim",
+                "Shops",
+                "Sleeps"
+              ],
+              "answer": 1,
+              "evidence": "Danach kaufe ich ein."
+            },
+            {
+              "question": "Who receives a phone call?",
+              "options": [
+                "Lea’s mother",
+                "Tim’s father",
+                "A teacher"
+              ],
+              "answer": 0,
+              "evidence": "… meine Mutter."
+            },
+            {
+              "question": "When is Tim invited?",
+              "options": [
+                "16:00",
+                "18:00",
+                "19:00"
+              ],
+              "answer": 2,
+              "evidence": "… um 19 Uhr vorbeikommen?"
+            }
+          ]
+        },
+        "writing": {
+          "task": "Tell a friend about tomorrow. Include when you get up, one activity after work or class, and a time when they can visit.",
+          "modelAnswer": "Hallo Tim,\nmorgen stehe ich um sieben Uhr auf. Nach dem Kurs kaufe ich ein. Du kannst um 19 Uhr kommen. Dann kochen wir zusammen. Hast du Zeit? \nGrüße\nLea",
+          "wordGoal": 30
+        },
+        "speaking": {
+          "task": "Describe a usual weekday with three separable verbs. Ask your partner when they get up and what they do in the evening.",
+          "modelAnswer": "Ich stehe um sieben Uhr auf. Nach der Arbeit kaufe ich ein. Am Abend rufe ich meine Mutter an. Wann stehst du auf? Um acht. Was machst du am Abend? Ich lese."
+        },
+        "glossary": [
+          {
+            "de": "vorbeikommen",
+            "en": "come over"
+          }
+        ]
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Separable verbs",
+          "text": "Aufstehen. Ich stehe auf. Einkaufen. Ich kaufe ein. Anrufen. Ich rufe an.",
+          "instruction": "Hear the prefix stress and pronounce the final prefix."
+        },
+        {
+          "label": "Routine rhythm",
+          "text": "Am Montag arbeite ich. Am Abend kaufe ich ein.",
+          "instruction": "Pause between complete sentences."
         }
       ],
       "transfer": {
         "lessonIds": [
           4,
-          8
+          7
         ],
-        "task": "Ask a partner for help carrying a box. They cannot help now. Agree on a later time and check whether you are allowed to leave it near the door.",
+        "task": "Explain a fictional Saturday in four sentences. Change one activity into a question and put a time phrase first in another sentence.",
         "checklist": [
-          "A request receives a suitable response.",
-          "The main verb follows the modal at the end.",
-          "Not having to do something is different from not being allowed to."
+          "The finite verb stays in second position in statements.",
+          "A separable prefix finishes the main clause.",
+          "The routine can be understood in order."
         ],
-        "retry": "Compare nicht müssen and nicht dürfen with two clearly different situations."
+        "retry": "Underline the conjugated verb and circle the separable prefix."
       }
     },
     {
@@ -1926,6 +1790,142 @@
       }
     },
     {
+      "id": 9,
+      "title": "Abilities, obligations and requests",
+      "lessonIds": [
+        17,
+        18
+      ],
+      "topics": [
+        "class",
+        "little"
+      ],
+      "goals": [
+        "Use modal verbs to express ability, need and permission.",
+        "Make and respond to requests; use useful object pronouns."
+      ],
+      "pronunciation": "Stress the important action and practise sentence brackets without long pauses.",
+      "listening": "Recognise instructions and prohibitions.",
+      "reading": "Read classroom and public rules.",
+      "writing": "Write three clear requests and a short instruction.",
+      "speaking": "Take turns asking for an object, an action and help.",
+      "checkpoint": "Make two different requests, respond suitably and distinguish prohibition from lack of obligation.",
+      "hours": 8,
+      "workshop": {
+        "id": 9,
+        "listening": {
+          "audioText": "Im Kurs dürfen Sie Wasser trinken. Sie dürfen aber nicht telefonieren. Morgen müssen Sie ein Buch mitbringen. Wenn Sie eine Frage haben, können Sie den Lehrer fragen.",
+          "questions": [
+            {
+              "question": "What is permitted?",
+              "options": [
+                "Drinking water",
+                "Phone calls",
+                "Smoking"
+              ],
+              "answer": 0,
+              "evidence": "… dürfen Sie Wasser trinken."
+            },
+            {
+              "question": "What must students bring tomorrow?",
+              "options": [
+                "A phone",
+                "A book",
+                "A ticket"
+              ],
+              "answer": 1,
+              "evidence": "… ein Buch mitbringen."
+            },
+            {
+              "question": "Who can students ask?",
+              "options": [
+                "The course office",
+                "Other students only",
+                "The teacher"
+              ],
+              "answer": 2,
+              "evidence": "… den Lehrer fragen."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Kursraum: Bitte schließen Sie nach dem Unterricht die Fenster. Lassen Sie die Tür offen. Essen ist hier nicht erlaubt. Getränke dürfen Sie mitbringen. Der Raum muss um 18 Uhr frei sein.",
+          "questions": [
+            {
+              "question": "What should be closed?",
+              "options": [
+                "The windows",
+                "The door",
+                "The books"
+              ],
+              "answer": 0,
+              "evidence": "… die Fenster."
+            },
+            {
+              "question": "Is eating allowed?",
+              "options": [
+                "Yes",
+                "No",
+                "Only at 18:00"
+              ],
+              "answer": 1,
+              "evidence": "Essen ist hier nicht erlaubt."
+            },
+            {
+              "question": "When must the room be free?",
+              "options": [
+                "8:00",
+                "16:00",
+                "18:00"
+              ],
+              "answer": 2,
+              "evidence": "… um 18 Uhr frei."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Ask your teacher for help. Say which exercise you cannot do, ask them to explain it, and ask when you can speak to them.",
+          "modelAnswer": "Guten Tag,\nich kann Aufgabe drei nicht machen. Können Sie mir die Aufgabe bitte erklären? Haben Sie morgen nach dem Kurs Zeit? Vielen Dank für Ihre Hilfe. \nViele Grüße\nBen",
+          "wordGoal": 30
+        },
+        "speaking": {
+          "task": "Make three requests using different objects. Respond to your partner’s requests. Include one permission question and a suitable refusal or alternative.",
+          "modelAnswer": "Können Sie mir bitte einen Stift geben? Ja, gern. Können Sie bitte die Tür öffnen? Natürlich. Können Sie bitte das Fenster schließen? Ja, gern. Darf ich hier telefonieren? Leider nicht. Bitte telefonieren Sie draußen."
+        },
+        "glossary": [
+          {
+            "de": "ausleihen",
+            "en": "borrow"
+          }
+        ]
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Obligation and permission",
+          "text": "Du musst nicht kommen. Du darfst nicht kommen.",
+          "instruction": "Stress the modal so the meaning stays clear."
+        },
+        {
+          "label": "Requests and responses",
+          "text": "Können Sie mir bitte helfen? Ja, gern. Tut mir leid.",
+          "instruction": "Practise both request and response with a partner."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          4,
+          8
+        ],
+        "task": "Ask a partner for help carrying a box. They cannot help now. Agree on a later time and check whether you are allowed to leave it near the door.",
+        "checklist": [
+          "A request receives a suitable response.",
+          "The main verb follows the modal at the end.",
+          "Not having to do something is different from not being allowed to."
+        ],
+        "retry": "Compare nicht müssen and nicht dürfen with two clearly different situations."
+      }
+    },
+    {
       "id": 11,
       "title": "Work, appointments and health",
       "lessonIds": [
@@ -2059,146 +2059,6 @@
           "The recipient knows what to do next."
         ],
         "retry": "Reduce the message to reason, new proposal and request for confirmation."
-      }
-    },
-    {
-      "id": 12,
-      "title": "Travel, weather and everyday choices",
-      "lessonIds": [
-        23,
-        24
-      ],
-      "topics": [
-        "travel",
-        "weather"
-      ],
-      "goals": [
-        "Buy a ticket, enquire about a room and understand travel details.",
-        "Understand a simple forecast and describe practical needs."
-      ],
-      "pronunciation": "Practise platform numbers, destination names and compound-word stress.",
-      "listening": "Identify a platform change, departure time and forecast detail.",
-      "reading": "Read travel notices and hotel advertisements.",
-      "writing": "Write a three-point hotel enquiry.",
-      "speaking": "Role-play buying a ticket and asking about a hotel room.",
-      "checkpoint": "Explain a travel request, identify a changed detail and ask a relevant follow-up question.",
-      "hours": 8,
-      "workshop": {
-        "id": 12,
-        "listening": {
-          "audioText": "Guten Tag, hier ist das Hotel Linden in Bonn. Ihr Zug kommt heute um vierzehn Uhr zehn an Gleis vier an. Sie müssen nicht umsteigen. In Bonn ist es kalt und es regnet. Bitte nehmen Sie eine Jacke mit.",
-          "questions": [
-            {
-              "question": "Which platform is used?",
-              "options": [
-                "Four",
-                "Five",
-                "Ten"
-              ],
-              "answer": 0,
-              "evidence": "… an Gleis vier an."
-            },
-            {
-              "question": "Must travellers change trains?",
-              "options": [
-                "Yes",
-                "No",
-                "Only in Cologne"
-              ],
-              "answer": 1,
-              "evidence": "Sie müssen nicht umsteigen."
-            },
-            {
-              "question": "What is the weather in Bonn?",
-              "options": [
-                "Warm and sunny",
-                "Snowy",
-                "Cold and rainy"
-              ],
-              "answer": 2,
-              "evidence": "… kalt und es regnet."
-            }
-          ]
-        },
-        "reading": {
-          "text": "Hotel Linden: Doppelzimmer 80 Euro pro Nacht. Frühstück kostet 9 Euro pro Person. Das Hotel liegt neben dem Bahnhof. Anreise ab 14 Uhr, Abreise bis 11 Uhr. Hunde sind nicht erlaubt.",
-          "questions": [
-            {
-              "question": "What does the double room cost per night?",
-              "options": [
-                "80 euros",
-                "89 euros",
-                "98 euros"
-              ],
-              "answer": 0,
-              "evidence": "Doppelzimmer 80 Euro pro Nacht."
-            },
-            {
-              "question": "Is breakfast included?",
-              "options": [
-                "Yes",
-                "No",
-                "Only for one person"
-              ],
-              "answer": 1,
-              "evidence": "Frühstück kostet 9 Euro pro Person."
-            },
-            {
-              "question": "By when must guests leave?",
-              "options": [
-                "9:00",
-                "14:00",
-                "11:00"
-              ],
-              "answer": 2,
-              "evidence": "Abreise bis 11 Uhr."
-            }
-          ]
-        },
-        "writing": {
-          "task": "Ask a hotel about a stay. Give your arrival and departure dates, request a room for two people, and ask the price including breakfast.",
-          "modelAnswer": "Guten Tag,\nwir kommen am Freitag und fahren am Sonntag wieder. Haben Sie ein Doppelzimmer für uns? Was kostet das Zimmer mit Frühstück für zwei Personen? Vielen Dank. \nMit freundlichen Grüßen\nLea",
-          "wordGoal": 30
-        },
-        "speaking": {
-          "task": "Buy a return ticket. Ask about departure time and changing trains. Your partner gives a corrected detail; repeat it to confirm. Then ask about the weather.",
-          "modelAnswer": "Eine Fahrkarte nach Bonn hin und zurück, bitte. Wann fährt der Zug? Um vierzehn Uhr zehn. Muss ich umsteigen? Nein. Von Gleis fünf? Nein, Gleis vier. Also Gleis vier. Wie ist das Wetter? Es regnet."
-        },
-        "glossary": [
-          {
-            "de": "Anreise",
-            "en": "arrival / check-in"
-          },
-          {
-            "de": "Abreise",
-            "en": "departure / check-out"
-          }
-        ]
-      },
-      "pronunciationDrills": [
-        {
-          "label": "Travel details",
-          "text": "Gleis vier. Der Zug fährt um vierzehn Uhr zehn.",
-          "instruction": "Practise consonant groups and unambiguous numbers."
-        },
-        {
-          "label": "Weather",
-          "text": "Es regnet. Es ist kalt. Die Sonne scheint.",
-          "instruction": "Say whole weather phrases naturally."
-        }
-      ],
-      "transfer": {
-        "lessonIds": [
-          7,
-          19
-        ],
-        "task": "Plan a short trip using an invented forecast and timetable. Choose a departure, say what clothes to bring and tell your partner about one change.",
-        "checklist": [
-          "I select the final departure rather than a cancelled one.",
-          "Clothes match the stated weather.",
-          "I confirm the arrival or meeting place."
-        ],
-        "retry": "Listen specifically for nicht, aber and a corrected time."
       }
     },
     {
@@ -2474,6 +2334,146 @@
           "Events follow a clear order."
         ],
         "retry": "Practise fahren/sein and machen/haben in separate examples."
+      }
+    },
+    {
+      "id": 12,
+      "title": "Travel, weather and everyday choices",
+      "lessonIds": [
+        23,
+        24
+      ],
+      "topics": [
+        "travel",
+        "weather"
+      ],
+      "goals": [
+        "Buy a ticket, enquire about a room and understand travel details.",
+        "Understand a simple forecast and describe practical needs."
+      ],
+      "pronunciation": "Practise platform numbers, destination names and compound-word stress.",
+      "listening": "Identify a platform change, departure time and forecast detail.",
+      "reading": "Read travel notices and hotel advertisements.",
+      "writing": "Write a three-point hotel enquiry.",
+      "speaking": "Role-play buying a ticket and asking about a hotel room.",
+      "checkpoint": "Explain a travel request, identify a changed detail and ask a relevant follow-up question.",
+      "hours": 8,
+      "workshop": {
+        "id": 12,
+        "listening": {
+          "audioText": "Guten Tag, hier ist das Hotel Linden in Bonn. Ihr Zug kommt heute um vierzehn Uhr zehn an Gleis vier an. Sie müssen nicht umsteigen. In Bonn ist es kalt und es regnet. Bitte nehmen Sie eine Jacke mit.",
+          "questions": [
+            {
+              "question": "Which platform is used?",
+              "options": [
+                "Four",
+                "Five",
+                "Ten"
+              ],
+              "answer": 0,
+              "evidence": "… an Gleis vier an."
+            },
+            {
+              "question": "Must travellers change trains?",
+              "options": [
+                "Yes",
+                "No",
+                "Only in Cologne"
+              ],
+              "answer": 1,
+              "evidence": "Sie müssen nicht umsteigen."
+            },
+            {
+              "question": "What is the weather in Bonn?",
+              "options": [
+                "Warm and sunny",
+                "Snowy",
+                "Cold and rainy"
+              ],
+              "answer": 2,
+              "evidence": "… kalt und es regnet."
+            }
+          ]
+        },
+        "reading": {
+          "text": "Hotel Linden: Doppelzimmer 80 Euro pro Nacht. Frühstück kostet 9 Euro pro Person. Das Hotel liegt neben dem Bahnhof. Anreise ab 14 Uhr, Abreise bis 11 Uhr. Hunde sind nicht erlaubt.",
+          "questions": [
+            {
+              "question": "What does the double room cost per night?",
+              "options": [
+                "80 euros",
+                "89 euros",
+                "98 euros"
+              ],
+              "answer": 0,
+              "evidence": "Doppelzimmer 80 Euro pro Nacht."
+            },
+            {
+              "question": "Is breakfast included?",
+              "options": [
+                "Yes",
+                "No",
+                "Only for one person"
+              ],
+              "answer": 1,
+              "evidence": "Frühstück kostet 9 Euro pro Person."
+            },
+            {
+              "question": "By when must guests leave?",
+              "options": [
+                "9:00",
+                "14:00",
+                "11:00"
+              ],
+              "answer": 2,
+              "evidence": "Abreise bis 11 Uhr."
+            }
+          ]
+        },
+        "writing": {
+          "task": "Ask a hotel about a stay. Give your arrival and departure dates, request a room for two people, and ask the price including breakfast.",
+          "modelAnswer": "Guten Tag,\nwir kommen am Freitag und fahren am Sonntag wieder. Haben Sie ein Doppelzimmer für uns? Was kostet das Zimmer mit Frühstück für zwei Personen? Vielen Dank. \nMit freundlichen Grüßen\nLea",
+          "wordGoal": 30
+        },
+        "speaking": {
+          "task": "Buy a return ticket. Ask about departure time and changing trains. Your partner gives a corrected detail; repeat it to confirm. Then ask about the weather.",
+          "modelAnswer": "Eine Fahrkarte nach Bonn hin und zurück, bitte. Wann fährt der Zug? Um vierzehn Uhr zehn. Muss ich umsteigen? Nein. Von Gleis fünf? Nein, Gleis vier. Also Gleis vier. Wie ist das Wetter? Es regnet."
+        },
+        "glossary": [
+          {
+            "de": "Anreise",
+            "en": "arrival / check-in"
+          },
+          {
+            "de": "Abreise",
+            "en": "departure / check-out"
+          }
+        ]
+      },
+      "pronunciationDrills": [
+        {
+          "label": "Travel details",
+          "text": "Gleis vier. Der Zug fährt um vierzehn Uhr zehn.",
+          "instruction": "Practise consonant groups and unambiguous numbers."
+        },
+        {
+          "label": "Weather",
+          "text": "Es regnet. Es ist kalt. Die Sonne scheint.",
+          "instruction": "Say whole weather phrases naturally."
+        }
+      ],
+      "transfer": {
+        "lessonIds": [
+          7,
+          19
+        ],
+        "task": "Plan a short trip using an invented forecast and timetable. Choose a departure, say what clothes to bring and tell your partner about one change.",
+        "checklist": [
+          "I select the final departure rather than a cancelled one.",
+          "Clothes match the stated weather.",
+          "I confirm the arrival or meeting place."
+        ],
+        "retry": "Listen specifically for nicht, aber and a corrected time."
       }
     },
     {
@@ -2932,8 +2932,21 @@
           "hint": "Look for the two fields: Namen and Telefonnummer.",
           "readingText": "Anmeldung: Bitte schreiben Sie Ihren Namen deutlich. Schreiben Sie auch Ihre Telefonnummer. Bei Fragen sprechen Sie mit Frau Weber.",
           "englishOptions": true
+        },
+        {
+          "type": "choice",
+          "question": "Which pair shows the long /i:/ sound in German spelling?",
+          "options": [
+            "ie, as in sieben",
+            "ei, as in mein",
+            "eu, as in heute"
+          ],
+          "answer": 0,
+          "hint": "ie commonly represents a long ee sound.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 1
     },
     {
       "id": 10,
@@ -3103,8 +3116,18 @@
           "hint": "Identify the number after the street name.",
           "readingText": "Kontakt: Nina Wolf, Gartenstraße 18, 04109 Leipzig. Telefon: 0341 582019. Bitte rufen Sie am Nachmittag an.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Write 24 in German.",
+          "answers": [
+            "vierundzwanzig"
+          ],
+          "hint": "Say the units before the tens.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 2
     },
     {
       "id": 11,
@@ -3273,6 +3296,15 @@
           "hint": "The birthplace and the current town are different.",
           "readingText": "Mila Novak ist am 14. Juni 1998 in Prag geboren. Sie wohnt jetzt in Köln und ist ledig. Ihre Telefonnummer ist 0221 450871.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the origin phrase: Ich komme ___ Italien.",
+          "answers": [
+            "aus"
+          ],
+          "hint": "Use aus with this country name.",
+          "notebookPractice": true
         }
       ],
       "tables": [
@@ -3316,7 +3348,8 @@
             ]
           ]
         }
-      ]
+      ],
+      "module": 2
     },
     {
       "id": 12,
@@ -3504,8 +3537,18 @@
           "hint": "Tochter means daughter.",
           "readingText": "Ich heiße Tim. Meine Frau heißt Sara. Wir haben eine Tochter, Mia. Sie ist fünf Jahre alt. Meine Eltern wohnen nicht bei uns.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the possessive: Das ist ___ Bruder. (my)",
+          "answers": [
+            "mein"
+          ],
+          "hint": "Bruder is masculine; here it is the subject complement.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 4
     },
     {
       "id": 13,
@@ -3676,6 +3719,15 @@
           "hint": "Identify the activities rather than only the day.",
           "readingText": "Deutschgruppe: Treffen am Dienstag um 18 Uhr. Wir lesen kurze Texte und sprechen Deutsch. Neue Teilnehmer sind willkommen.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the irregular verb: Du ___ gern Tee. (trinken)",
+          "answers": [
+            "trinkst"
+          ],
+          "hint": "The du ending is -st.",
+          "notebookPractice": true
         }
       ],
       "tables": [
@@ -3726,7 +3778,8 @@
             ]
           ]
         }
-      ]
+      ],
+      "module": 3
     },
     {
       "id": 14,
@@ -3892,8 +3945,25 @@
           "hint": "Im August ist die Schule geschlossen: the school is closed in August.",
           "readingText": "Sprachkurs: Montag und Mittwoch, 18–20 Uhr. Im August ist die Schule geschlossen. Der nächste Kurs beginnt am 2. September.",
           "englishOptions": true
+        },
+        {
+          "type": "order",
+          "question": "Put the routine sentence in order.",
+          "words": [
+            "jeden",
+            "Ich",
+            "morgen",
+            "frühstücke"
+          ],
+          "answers": [
+            "Ich frühstücke jeden Morgen"
+          ],
+          "hint": "Use a capital for the first word; the verb stays second.",
+          "notebookPractice": true,
+          "neutralStart": "Ich"
         }
-      ]
+      ],
+      "module": 8
     },
     {
       "id": 15,
@@ -4064,8 +4134,18 @@
           "hint": "Find the time range after gilt.",
           "readingText": "Mittagsangebot: Suppe 4 Euro, Salat 6 Euro, Kaffee 2 Euro. Das Angebot gilt von 12 bis 14 Uhr. Kartenzahlung ist möglich.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the order: Ich hätte gern ___ Suppe. (a)",
+          "answers": [
+            "eine"
+          ],
+          "hint": "Suppe is feminine.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 5
     },
     {
       "id": 16,
@@ -4103,9 +4183,9 @@
       "rules": [
         "Use dieser/diese/dieses with a subject: dieser Mantel, diese Jacke, dieses Hemd. A masculine object uses diesen: Ich nehme diesen Mantel. Feminine and neuter stay diese/dieses.",
         "After sein, colours stay unchanged and lowercase: Die Jacke ist blau. A colour used as a noun after in has a capital: die Jacke in Blau, das Hemd in Weiß.",
-        "Use es for a neuter noun, sie for a feminine noun and er for a masculine noun.",
-        "Learn comparisons as useful phrases: größer, kleiner, billiger, lieber. Full adjective declension comes later.",
-        "Ask for help politely and respond when an item is unavailable."
+        "In the masculine accusative after einen, use -en: Ich suche einen warmen Mantel. Feminine eine warme Jacke; neuter ein warmes Hemd.",
+        "Predicate colours stay unchanged: Die Jacke ist blau.",
+        "Use dieser/diese/dieses to point to a known item and answer politely when a size is unavailable."
       ],
       "examples": [
         {
@@ -4163,6 +4243,30 @@
           "de": "passen",
           "en": "to fit",
           "forms": "du passt · er/sie/es passt · hat gepasst"
+        },
+        {
+          "de": "rot",
+          "en": "red"
+        },
+        {
+          "de": "blau",
+          "en": "blue"
+        },
+        {
+          "de": "grün",
+          "en": "green"
+        },
+        {
+          "de": "schwarz",
+          "en": "black"
+        },
+        {
+          "de": "weiß",
+          "en": "white"
+        },
+        {
+          "de": "warm",
+          "en": "warm"
         }
       ],
       "tasks": [
@@ -4231,6 +4335,47 @@
           "hint": "Separate the collection day from the telephone time.",
           "readingText": "Fahrrad zu verkaufen: 70 Euro. Farbe: rot. Abholung nur am Samstag. Bitte rufen Sie ab 18 Uhr an.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Add the correct adjective ending: Ich suche einen ___ Mantel. (warm)",
+          "answers": [
+            "warmen"
+          ],
+          "hint": "After einen, a masculine accusative adjective takes -en.",
+          "notebookPractice": true
+        }
+      ],
+      "module": 6,
+      "tables": [
+        {
+          "title": "Adjective endings for a simple clothing description",
+          "head": [
+            "Noun phrase",
+            "Example"
+          ],
+          "rows": [
+            [
+              "der + masculine nominative",
+              "der warme Mantel"
+            ],
+            [
+              "die + feminine nominative",
+              "die warme Jacke"
+            ],
+            [
+              "das + neuter nominative",
+              "das warme Hemd"
+            ],
+            [
+              "einen + masculine accusative",
+              "einen warmen Mantel"
+            ],
+            [
+              "eine / ein + feminine / neuter accusative",
+              "eine warme Jacke / ein warmes Hemd"
+            ]
+          ]
         }
       ]
     },
@@ -4431,8 +4576,18 @@
           "hint": "Look for nicht with dürfen.",
           "readingText": "Bibliothek: Bitte leise sprechen. Sie dürfen hier nicht essen. Bücher können Sie für drei Wochen ausleihen.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the modal sentence: Wir müssen heute ___ (arbeiten).",
+          "answers": [
+            "arbeiten"
+          ],
+          "hint": "The infinitive goes at the end.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 10
     },
     {
       "id": 18,
@@ -4473,10 +4628,10 @@
       },
       "rules": [
         "Formal instruction: verb + Sie (Kommen Sie!). Informal du instructions usually use the stem without du: komm, mach. Learn irregular gib, nimm, lies and sei. fahren gives fahr (without ä); arbeiten gives arbeite. The ihr form stays as in the present tense: kommt, arbeitet.",
-        "A separable prefix still comes last in an instruction: Mach die Tür zu.",
-        "Replace a known object: der Schlüssel → ihn, die Tasche → sie, das Buch → es.",
-        "Learn helfen + mir/dir/Ihnen and Danke as useful everyday chunks.",
-        "Respond to requests: Ja, gern. Hier, bitte. Tut mir leid, das geht nicht."
+        "Formal instructions use the infinitive stem + Sie. Learn common informal forms as chunks: komm, nimm, gib.",
+        "A separable prefix stays at the end: Mach die Tür bitte zu.",
+        "An accusative pronoun replaces the direct object: Ich sehe den Bus → Ich sehe ihn.",
+        "A dative pronoun marks the person receiving help or an item: Hilfst du mir? Gibst du mir den Schlüssel?"
       ],
       "examples": [
         {
@@ -4605,6 +4760,73 @@
           "hint": "Ausweis is an identity document.",
           "readingText": "Bitte bringen Sie Ihren Ausweis mit. Kommen Sie zehn Minuten vor Ihrem Termin. Bei Fragen helfen wir Ihnen gern.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Replace the object with a pronoun: Ich sehe den Bus. Ich sehe ___.",
+          "answers": [
+            "ihn"
+          ],
+          "hint": "Bus is masculine; use the accusative pronoun.",
+          "notebookPractice": true
+        }
+      ],
+      "module": 10,
+      "tables": [
+        {
+          "title": "Object pronouns: accusative and dative",
+          "head": [
+            "Subject",
+            "Accusative (who/what?)",
+            "Dative (to/for whom?)"
+          ],
+          "rows": [
+            [
+              "ich",
+              "mich",
+              "mir"
+            ],
+            [
+              "du",
+              "dich",
+              "dir"
+            ],
+            [
+              "er",
+              "ihn",
+              "ihm"
+            ],
+            [
+              "sie (singular)",
+              "sie",
+              "ihr"
+            ],
+            [
+              "es",
+              "es",
+              "ihm"
+            ],
+            [
+              "wir",
+              "uns",
+              "uns"
+            ],
+            [
+              "ihr",
+              "euch",
+              "euch"
+            ],
+            [
+              "Sie",
+              "Sie",
+              "Ihnen"
+            ],
+            [
+              "sie (plural)",
+              "sie",
+              "ihnen"
+            ]
+          ]
         }
       ]
     },
@@ -4646,11 +4868,11 @@
         ]
       },
       "rules": [
-        "Learn common preposition phrases together with their case: mit dem Bus, zu der Schule → zur Schule.",
-        "nach is used with many city and country names without articles: nach Bonn, nach Spanien.",
+        "Learn fixed preposition phrases with their case: mit dem Bus, zu der Schule → zur Schule.",
+        "With an, auf, hinter, in, neben, über, unter, vor and zwischen, Wo? describes a position (dative); Wohin? describes a destination (accusative).",
         "Where (Wo?): im Park, im Kino, in der Stadt, beim Arzt. Where to (Wohin?): in den Park, ins Kino, in die Stadt, zum Arzt. Contractions: im = in dem, ins = in das, beim = bei dem, zum = zu dem, zur = zu der. Learn each place phrase with its meaning.",
-        "Use Wo ist …? for a location and Wie komme ich …? for directions.",
-        "Ask someone to repeat a direction if you miss an important detail."
+        "nach is used with many city and country names without articles: nach Bonn, nach Spanien.",
+        "Ask for directions with Wie komme ich …? and confirm a detail if needed."
       ],
       "examples": [
         {
@@ -4774,6 +4996,81 @@
           "hint": "The notice announces a change of location.",
           "readingText": "Neue Haltestelle: Der Bus hält ab Montag vor dem Bahnhof. Die alte Haltestelle am Markt ist geschlossen.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the location: Das Buch liegt auf ___ Tisch.",
+          "answers": [
+            "dem"
+          ],
+          "hint": "Wo? describes a location and takes dative here.",
+          "notebookPractice": true
+        }
+      ],
+      "module": 9,
+      "tables": [
+        {
+          "title": "Two-way prepositions: location or destination?",
+          "head": [
+            "Question",
+            "Case",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Wo? (where?)",
+              "Dative: position",
+              "Das Buch liegt auf dem Tisch."
+            ],
+            [
+              "Wohin? (where to?)",
+              "Accusative: destination",
+              "Ich lege das Buch auf den Tisch."
+            ],
+            [
+              "Wo? (where?)",
+              "Dative: position",
+              "Die Tasche ist in der Küche."
+            ],
+            [
+              "Wohin? (where to?)",
+              "Accusative: destination",
+              "Ich stelle die Tasche in die Küche."
+            ]
+          ]
+        },
+        {
+          "title": "Prepositions that take a fixed case",
+          "head": [
+            "Accusative",
+            "Dative"
+          ],
+          "rows": [
+            [
+              "durch den Park",
+              "aus dem Haus"
+            ],
+            [
+              "für den Kurs",
+              "bei einer Freundin"
+            ],
+            [
+              "gegen die Wand",
+              "mit dem Bus"
+            ],
+            [
+              "ohne einen Termin",
+              "nach der Arbeit"
+            ],
+            [
+              "um den Tisch",
+              "seit einem Monat"
+            ],
+            [
+              "",
+              "von der Schule / zum Arzt"
+            ]
+          ]
         }
       ]
     },
@@ -4816,27 +5113,27 @@
       },
       "rules": [
         "es gibt takes an accusative object: Es gibt einen Tisch.",
-        "Learn common location phrases as whole chunks: auf dem Tisch, in der Küche, unter dem Bett.",
+        "Use Wo? + dative to say where something is: Der Schlüssel liegt auf dem Tisch.",
+        "Use Wohin? + accusative to say where something is being put: Ich lege den Schlüssel auf den Tisch.",
         "zu Hause describes being at home; nach Hause describes going home.",
-        "Predicate adjectives stay unchanged: Das Zimmer ist klein.",
-        "When reading advertisements check price, rooms, location and availability separately."
+        "Predicate adjectives stay unchanged: Das Zimmer ist klein."
       ],
       "examples": [
         {
-          "de": "Unsere Wohnung hat zwei Zimmer.",
-          "en": "Our flat has two rooms."
-        },
-        {
           "de": "Der Schlüssel liegt auf dem Tisch.",
-          "en": "The key is on the table."
+          "en": "The key is lying on the table."
         },
         {
-          "de": "Es gibt einen Balkon.",
-          "en": "There is a balcony."
+          "de": "Ich lege den Schlüssel auf den Tisch.",
+          "en": "I put the key onto the table."
         },
         {
-          "de": "Ich gehe jetzt nach Hause.",
-          "en": "I am going home now."
+          "de": "Die Lampe steht neben dem Bett.",
+          "en": "The lamp is next to the bed."
+        },
+        {
+          "de": "Ich stelle die Lampe neben das Bett.",
+          "en": "I put the lamp next to the bed."
         }
       ],
       "vocab": [
@@ -4947,8 +5244,18 @@
           "hint": "gemeinsam means shared in this context.",
           "readingText": "Zimmer frei: 18 Quadratmeter, 350 Euro im Monat. Küche und Bad sind gemeinsam. Frei ab 1. Mai. Kontakt per E-Mail.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the destination: Ich stelle die Lampe auf ___ Tisch.",
+          "answers": [
+            "den"
+          ],
+          "hint": "Wohin? describes movement to a place; Tisch is masculine.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 9
     },
     {
       "id": 21,
@@ -5123,8 +5430,28 @@
           "hint": "The advertisement specifies a short email.",
           "readingText": "Bürohilfe gesucht: Montag bis Freitag, 9–13 Uhr. Gute Deutschkenntnisse sind wichtig. Bitte schreiben Sie eine kurze E-Mail an unser Büro.",
           "englishOptions": true
+        },
+        {
+          "type": "order",
+          "question": "Connect the ideas with aber.",
+          "words": [
+            "Zeit",
+            "habe",
+            "ich",
+            "aber",
+            "Heute",
+            "arbeite",
+            "ich"
+          ],
+          "answers": [
+            "Heute arbeite ich, aber ich habe Zeit"
+          ],
+          "hint": "The verb remains in position two in both clauses.",
+          "notebookPractice": true,
+          "neutralStart": "Heute"
         }
-      ]
+      ],
+      "module": 11
     },
     {
       "id": 22,
@@ -5294,8 +5621,18 @@
           "hint": "telefonische Anmeldung means registration by telephone.",
           "readingText": "Praxis Dr. Wolf: Montag bis Freitag 8–12 Uhr. Mittwoch auch 15–18 Uhr. Termine nur nach telefonischer Anmeldung.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the dative phrase: Kannst du ___ bitte helfen? (to me)",
+          "answers": [
+            "mir"
+          ],
+          "hint": "helfen takes a dative person.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 11
     },
     {
       "id": 23,
@@ -5467,8 +5804,18 @@
           "hint": "A separate breakfast price means an additional charge.",
           "readingText": "Hotel Linden: Einzelzimmer ab 55 Euro, Doppelzimmer ab 80 Euro. Frühstück kostet 9 Euro pro Person. Hunde sind nicht erlaubt.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the past sentence: Gestern ___ ich nach Bonn gefahren. (sein)",
+          "answers": [
+            "bin"
+          ],
+          "hint": "A journey takes sein in the Perfekt.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 14
     },
     {
       "id": 24,
@@ -5571,6 +5918,33 @@
         {
           "de": "warm",
           "en": "warm"
+        },
+        {
+          "de": "der Frühling",
+          "en": "spring"
+        },
+        {
+          "de": "der Herbst",
+          "en": "autumn"
+        },
+        {
+          "de": "die Jacke",
+          "en": "jacket",
+          "pl": "Jacken"
+        },
+        {
+          "de": "der Mantel",
+          "en": "coat",
+          "pl": "Mäntel"
+        },
+        {
+          "de": "das Hemd",
+          "en": "shirt",
+          "pl": "Hemden"
+        },
+        {
+          "de": "die Schuhe",
+          "en": "shoes"
         }
       ],
       "tasks": [
@@ -5638,8 +6012,18 @@
           "hint": "Answer from the notice, not from what you might personally pack.",
           "readingText": "Ausflug am Sonntag: Bitte bringen Sie eine Jacke mit. Es regnet am Nachmittag. Wir treffen uns um 9 Uhr am Bahnhof.",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the weather phrase: Im Herbst ___ es oft. (regnen)",
+          "answers": [
+            "regnet"
+          ],
+          "hint": "Use the third-person singular form with es.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 14
     },
     {
       "id": 25,
@@ -5811,8 +6195,18 @@
           "hint": "The proposed new day follows the cancellation.",
           "readingText": "Hallo Sam, ich kann heute nicht schwimmen gehen. Ich muss bis 18 Uhr arbeiten. Hast du morgen Zeit? Dann können wir ins Schwimmbad gehen. Grüße, Alex",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the preference: Ich ___ gern Musik. (listen to)",
+          "answers": [
+            "höre"
+          ],
+          "hint": "Conjugate hören for ich.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 12
     },
     {
       "id": 26,
@@ -5984,8 +6378,18 @@
           "hint": "Separate a completed action from tomorrow’s plan.",
           "readingText": "Hallo Mia, ich habe die Fahrkarten gekauft. Der Zug fährt morgen um 8 Uhr. Hast du das Hotel reserviert? Grüße, Ben",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the Perfekt sentence: Wir haben gestern ___ (lernen).",
+          "answers": [
+            "gelernt"
+          ],
+          "hint": "Regular participles commonly end in -t.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 13
     },
     {
       "id": 27,
@@ -6160,8 +6564,18 @@
           "hint": "angekommen describes the completed arrival.",
           "readingText": "Liebe Eva, wir sind gestern in Berlin angekommen. Das Hotel ist schön. Heute besuchen wir ein Museum. Am Freitag fahren wir nach Hause. Grüße, Tom",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the Perfekt sentence: Sie ist spät ___. (kommen)",
+          "answers": [
+            "gekommen"
+          ],
+          "hint": "kommen forms its participle with ge- and -en.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 13
     },
     {
       "id": 28,
@@ -6337,8 +6751,18 @@
           "hint": "Leider warst du nicht da makes the absence clear.",
           "readingText": "Hallo Paul, die Party war sehr schön. Leider warst du nicht da. Hattest du keine Zeit? Wir treffen uns nächste Woche wieder. Grüße, Sara",
           "englishOptions": true
+        },
+        {
+          "type": "fill",
+          "question": "Complete the past description: Letzte Woche ___ ich krank. (sein)",
+          "answers": [
+            "war"
+          ],
+          "hint": "Use war for ich in the simple past.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 12
     },
     {
       "id": 29,
@@ -6506,8 +6930,22 @@
           "hint": "Both starting date and budget must match.",
           "readingText": "A: Zimmer im Zentrum, 420 Euro, frei ab Juni. B: Zimmer am Bahnhof, 380 Euro, frei ab April. Sie suchen ein Zimmer ab April für höchstens 400 Euro.",
           "englishOptions": true
+        },
+        {
+          "type": "choice",
+          "question": "A sign says: Eintritt frei. What does it tell you?",
+          "options": [
+            "Entry is free",
+            "The entrance is closed",
+            "Tickets are only online"
+          ],
+          "answer": 0,
+          "englishOptions": true,
+          "hint": "frei means free of charge here.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 15
     },
     {
       "id": 30,
@@ -6674,8 +7112,22 @@
           "hint": "Make an independent listening attempt first.",
           "readingText": "Training: Hören Sie zuerst ohne Text. Wählen Sie eine Antwort. Lesen Sie dann die Nachricht und prüfen Sie den wichtigen Satz.",
           "englishOptions": true
+        },
+        {
+          "type": "choice",
+          "question": "A timetable notice says: Der Zug fährt nicht um acht, sondern um neun Uhr. When does it leave?",
+          "options": [
+            "At eight",
+            "At nine",
+            "At ten"
+          ],
+          "answer": 1,
+          "englishOptions": true,
+          "hint": "Read for the correction after sondern.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 15
     },
     {
       "id": 31,
@@ -6849,8 +7301,24 @@
           "hint": "Wohnort is the present town of residence.",
           "readingText": "Profil: Ben Walter, geboren am 8. April 1999 in Kiel, wohnt in Bremen. Er möchte einen Kurs am Abend machen.",
           "englishOptions": true
+        },
+        {
+          "type": "order",
+          "question": "Put the short message opening in order.",
+          "words": [
+            "Guten",
+            "Frau",
+            "Tag,",
+            "Klein,"
+          ],
+          "answers": [
+            "Guten Tag, Frau Klein"
+          ],
+          "hint": "Use a suitable formal greeting and the recipient’s name.",
+          "notebookPractice": true
         }
-      ]
+      ],
+      "module": 16
     },
     {
       "id": 32,
@@ -7022,8 +7490,26 @@
           "hint": "Both roles are part of the exchange.",
           "readingText": "Partnertraining: Person A zieht eine Karte und fragt. Person B antwortet und stellt dann eine neue Frage. Danach bitten beide um etwas und reagieren auf die Bitte des Partners.",
           "englishOptions": true
+        },
+        {
+          "type": "order",
+          "question": "Put the polite request in order.",
+          "words": [
+            "Sie",
+            "mir",
+            "Können",
+            "bitte",
+            "helfen"
+          ],
+          "answers": [
+            "Können Sie mir bitte helfen"
+          ],
+          "hint": "Start the yes/no question with the conjugated verb.",
+          "notebookPractice": true,
+          "neutralStart": "Können"
         }
-      ]
+      ],
+      "module": 16
     }
   ],
   "sources": [
@@ -7491,7 +7977,7 @@
       }
     },
     "4": {
-      "module": 5,
+      "module": 7,
       "outcomes": [
         "Keep the finite verb second in a statement.",
         "Begin a statement with either a subject or a time phrase."
@@ -7531,7 +8017,7 @@
       }
     },
     "5": {
-      "module": 7,
+      "module": 5,
       "outcomes": [
         "Choose den or einen for a masculine accusative object.",
         "Say what you have or need for a class."
@@ -7571,7 +8057,7 @@
       }
     },
     "6": {
-      "module": 8,
+      "module": 6,
       "outcomes": [
         "Choose kein for indefinite nouns and nicht for other negation.",
         "Place nicht correctly in short familiar sentences."
@@ -7611,7 +8097,7 @@
       }
     },
     "7": {
-      "module": 5,
+      "module": 7,
       "outcomes": [
         "Understand digital and informal clock times.",
         "Ask for an appointment time and confirm it."
@@ -7651,7 +8137,7 @@
       }
     },
     "8": {
-      "module": 6,
+      "module": 8,
       "outcomes": [
         "Separate the prefix in statements and questions.",
         "Describe a day using aufstehen, einkaufen and anrufen."
@@ -7826,7 +8312,7 @@
       ]
     },
     "14": {
-      "module": 6,
+      "module": 8,
       "outcomes": [
         "Describe a routine with frequency and time phrases.",
         "Say and write a simple appointment date."
@@ -7853,7 +8339,7 @@
       ]
     },
     "15": {
-      "module": 7,
+      "module": 5,
       "outcomes": [
         "Order food and drink politely.",
         "Ask to pay and understand a simple price."
@@ -7880,7 +8366,7 @@
       ]
     },
     "16": {
-      "module": 8,
+      "module": 6,
       "outcomes": [
         "Ask about size, colour, price and payment.",
         "Use diesen with a masculine object."
@@ -7907,7 +8393,7 @@
       ]
     },
     "17": {
-      "module": 9,
+      "module": 10,
       "outcomes": [
         "Express ability, obligation and permission.",
         "Distinguish nicht müssen from nicht dürfen."
@@ -7934,7 +8420,7 @@
       ]
     },
     "18": {
-      "module": 9,
+      "module": 10,
       "outcomes": [
         "Make instructions for du, ihr and Sie.",
         "Request an object or an action and respond politely."
@@ -7961,7 +8447,7 @@
       ]
     },
     "19": {
-      "module": 10,
+      "module": 9,
       "outcomes": [
         "Ask for and follow short directions.",
         "Distinguish Wo? from Wohin? in familiar place phrases."
@@ -7988,7 +8474,7 @@
       ]
     },
     "20": {
-      "module": 10,
+      "module": 9,
       "outcomes": [
         "Describe a home and compare a basic housing offer.",
         "Say where a familiar object is."
@@ -8069,7 +8555,7 @@
       ]
     },
     "23": {
-      "module": 12,
+      "module": 14,
       "outcomes": [
         "Buy a ticket and ask about connections.",
         "Ask a hotel about availability and price."
@@ -8096,7 +8582,7 @@
       ]
     },
     "24": {
-      "module": 12,
+      "module": 14,
       "outcomes": [
         "Understand and describe simple weather.",
         "Choose suitable clothing for the conditions."
@@ -8123,7 +8609,7 @@
       ]
     },
     "25": {
-      "module": 13,
+      "module": 12,
       "outcomes": [
         "Invite someone and accept or decline.",
         "Arrange a meeting place and time."
@@ -8150,7 +8636,7 @@
       ]
     },
     "26": {
-      "module": 14,
+      "module": 13,
       "outcomes": [
         "Describe familiar completed actions with haben.",
         "Recognise common irregular and prefix participles."
@@ -8177,7 +8663,7 @@
       ]
     },
     "27": {
-      "module": 14,
+      "module": 13,
       "outcomes": [
         "Describe a short journey using sein past forms.",
         "Learn each movement verb with its auxiliary and participle."
@@ -8204,7 +8690,7 @@
       ]
     },
     "28": {
-      "module": 13,
+      "module": 12,
       "outcomes": [
         "Use war and hatte for simple past situations.",
         "Explain an absence and ask a follow-up question."

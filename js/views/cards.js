@@ -27,9 +27,9 @@ import {
 } from "../state.js";
 import { speakerButton } from "../ui/audio.js";
 import { updateDueBadges } from "../ui/duebadge.js";
-import { tilt } from "../ui/effects.js";
+import { tilt } from "../ui/effects.js?v=20261113-polish1";
 import { SPEAKER_ICON } from "../ui/icons.js";
-import { Draggable, enter, gsap, motionOK } from "../ui/motion.js";
+import { Draggable, enter, gsap, motionOK } from "../ui/motion.js?v=20261113-polish1";
 import { daysBetween, esc, shuffle, todayKey } from "../utils.js";
 import { refreshInterface } from "../study-language.js";
 import { currentGuide, guidedContinue, guidedWords } from "../guided-study.js";
@@ -334,8 +334,8 @@ function drawCard() {
   focusNext = false;
   if (!motionOK()) return;
   // the next card is dealt off the top of the stack (opacity, not visibility: it may already have focus)
-  gsap.from(el, { y: 26, scale: 0.94, rotation: -1.5, opacity: 0, duration: 0.65, ease: "expo.out" });
-  stopTilt = tilt(el, { max: 6, while: () => !drag?.isDragging });
+  gsap.from(el, { y: 12, scale: 0.985, opacity: 0, duration: 0.42, ease: "power3.out" });
+  stopTilt = tilt(el, { max: 2.5, while: () => !drag?.isDragging });
   if (!Draggable) return;
   drag = Draggable.create(el, {
     type: "x",
@@ -349,7 +349,7 @@ function drawCard() {
       el.classList.remove("lean-yes", "lean-no");
       if (this.x > 110) decide(1);
       else if (this.x < -110) decide(-1);
-      else gsap.to(el, { x: 0, rotation: 0, duration: 0.4, ease: "back.out(1.7)" });
+      else gsap.to(el, { x: 0, rotation: 0, duration: 0.28, ease: "power3.out" });
     },
   })[0];
 }

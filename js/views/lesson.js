@@ -7,8 +7,8 @@ import { downloadOfflineLesson, offlineLessonInfo, offlineSize } from "../offlin
 import { waitBetweenLines } from "../sentence-practice.js";
 import { ARROW_ICON } from "../ui/icons.js";
 import { toast } from "../ui/toast.js";
-import { drawIn, Flip, gsap, motionOK, onLeave, revealOnScroll, shake, splitReveal } from "../ui/motion.js";
-import { jumpTo, scrollToCenter } from "../ui/scroll.js";
+import { drawIn, Flip, gsap, motionOK, onLeave, revealOnScroll, shake, splitReveal } from "../ui/motion.js?v=20261113-polish1";
+import { jumpTo, scrollToCenter } from "../ui/scroll.js?v=20261113-polish1";
 import { esc, germanDate, norm, shuffle } from "../utils.js";
 import { breadcrumb } from "./shared.js";
 import { applySentenceStar, copySentence, copySentenceButton, sentenceStars } from "../ui/sentence-controls.js";
@@ -161,7 +161,7 @@ export function render(l) {
     <h2 id="ex-h">Exercises</h2>
     <p class="muted">Your first try on each one counts toward your score.</p>
     <button class="btn small ghost" type="button" data-lesson-words>Review lesson words</button>
-    ${l.tasks.map(renderTask).join("")}
+    ${l.tasks.map((task, index) => `${task.notebookPractice ? '<h3 class="h3 notebook-practice-heading">Practice from your A1 notes</h3>' : ''}${renderTask(task, index)}`).join("")}
     <div id="scorebox" aria-live="polite">${exercisesDone}</div>
   </section>
   ${l.speaking ? `<section class="course-speaking" aria-labelledby="speaking-h"><h2 id="speaking-h">Speak and interact</h2><p class="muted">Try the task before revealing the example. Invent the personal details and practise both roles with a partner.</p>${l.speaking.map((s, i) => `<div class="task"><div class="q">${esc(s.task)}</div><button type="button" class="btn small ghost" data-speech-model="${i}">Show and hear an example</button><div id="speech-model-${i}"></div><ul class="check-list">${s.checklist.map((item) => `<li><label><input type="checkbox">${esc(item)}</label></li>`).join("")}</ul></div>`).join("")}<p class="muted small">Writing and speaking need feedback. Your objective exercise score does not measure pronunciation or spoken interaction.</p></section>` : ""}
@@ -194,7 +194,7 @@ function mark(i, ok, hint, answer, el) {
       paddingBottom: 0,
       opacity: 0,
       duration: 0.45,
-      ease: "expo.out",
+      ease: "power3.out",
       clearProps: "all",
     });
     if (el) {
@@ -202,7 +202,7 @@ function mark(i, ok, hint, answer, el) {
         gsap.fromTo(
           el,
           { scale: 0.94 },
-          { scale: 1, duration: 0.5, ease: "back.out(3)", clearProps: "transform" },
+          { scale: 1, duration: 0.28, ease: "power3.out", clearProps: "transform" },
         );
       else shake(el);
     }
@@ -234,12 +234,12 @@ function showScoreWhenDone() {
     const counter = { v: 0 };
     const digits = document.getElementById("scoreNum").firstChild;
     const tl = gsap.timeline();
-    tl.from(box.firstChild, { y: 24, scale: 0.98, opacity: 0, duration: 0.7, ease: "expo.out" })
+    tl.from(box.firstChild, { y: 10, scale: 0.99, opacity: 0, duration: 0.46, ease: "power3.out" })
       .to(
         counter,
         {
           v: score,
-          duration: 0.9,
+          duration: 0.62,
           ease: "power2.out",
           onUpdate: () => {
             digits.textContent = `${Math.round(counter.v)}/${total}`;
@@ -249,7 +249,7 @@ function showScoreWhenDone() {
       )
       .from(
         "#stamp",
-        { scale: 2.4, opacity: 0, rotation: -28, duration: 0.42, ease: "back.out(1.8)" },
+        { scale: 1.55, opacity: 0, rotation: -12, duration: 0.34, ease: "power3.out" },
         ">-.1",
       );
     onLeave(() => tl.kill());
@@ -403,23 +403,23 @@ export function mount() {
   if (wantsExercises()) jumpTo(document.querySelector(".exercises"));
   if (new URLSearchParams(location.hash.split("?")[1] || "").get("part") === "examples") jumpTo(document.getElementById("lesson-examples"));
   if (!motionOK()) return;
-  splitReveal(document.querySelector(".lesson-head h1"), { duration: 0.9 });
+  splitReveal(document.querySelector(".lesson-head h1"), { duration: 0.62 });
   drawIn(document.querySelector(".lesson-head"));
-  const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
-  tl.from(".crumb", { autoAlpha: 0, y: 8, duration: 0.6 }, 0)
-    .from(".lesson-head .en", { autoAlpha: 0, y: 10, duration: 0.7 }, 0.12)
-    .from(".intro", { autoAlpha: 0, y: 14, duration: 0.8 }, 0.18)
+  const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+  tl.from(".crumb", { autoAlpha: 0, y: 5, duration: 0.34 }, 0)
+    .from(".lesson-head .en", { autoAlpha: 0, y: 6, duration: 0.38 }, 0.04)
+    .from(".intro", { autoAlpha: 0, y: 8, duration: 0.42 }, 0.08)
     .from(
       ".lesson-grid > .panel",
-      { autoAlpha: 0, y: 22, duration: 0.9, stagger: 0.08, clearProps: "transform" },
-      0.22,
+      { autoAlpha: 0, y: 10, duration: 0.48, stagger: 0.045, clearProps: "transform" },
+      0.12,
     )
-    .from(".tbl tbody tr", { autoAlpha: 0, x: -8, duration: 0.6, stagger: 0.035 }, 0.45)
-    .from(".rules li", { autoAlpha: 0, y: 8, duration: 0.6, stagger: 0.05 }, 0.45);
+    .from(".tbl tbody tr", { autoAlpha: 0, x: -5, duration: 0.34, stagger: 0.02 }, 0.24)
+    .from(".rules li", { autoAlpha: 0, y: 5, duration: 0.36, stagger: 0.03 }, 0.24);
   onLeave(() => tl.kill());
-  revealOnScroll(".say-panel, .exercises > h2, .exercises > .muted, .words-h, .pager", { y: 18 });
-  revealOnScroll(".exercises .task", { y: 20, stagger: 0.08 });
-  revealOnScroll(".vocab > div", { y: 10, stagger: 0.025 });
+  revealOnScroll(".say-panel, .exercises > h2, .exercises > .muted, .words-h, .pager", { y: 10, duration: 0.46 });
+  revealOnScroll(".exercises .task", { y: 10, duration: 0.46, stagger: 0.035 });
+  revealOnScroll(".vocab > div", { y: 6, duration: 0.38, stagger: 0.018 });
 }
 
 function stopExamples() {

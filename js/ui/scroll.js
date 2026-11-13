@@ -1,7 +1,7 @@
 // Smooth, weighted wheel scrolling on desktop (Lenis), kept in sync with GSAP ScrollTrigger.
 // Touch devices, reduced motion and offline visits keep the browser's own scrolling.
 
-import { finePointer, gsap, reducedMotion, ScrollTrigger } from "./motion.js";
+import { finePointer, gsap, reducedMotion, ScrollTrigger } from "./motion.js?v=20261113-polish1";
 
 let lenis = null;
 const tick = time => lenis?.raf(time * 1000);
@@ -16,7 +16,7 @@ export function initSmoothScroll() {
     return;
   }
   if (lenis) return;
-  lenis = new window.Lenis({ lerp: 0.11, wheelMultiplier: 0.95 });
+  lenis = new window.Lenis({ lerp: 0.13, wheelMultiplier: 0.95 });
   if (ScrollTrigger) lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.add(tick);
   gsap.ticker.lagSmoothing(0);
@@ -55,7 +55,7 @@ export function scrollToCenter(el) {
   if (!el) return;
   if (lenis) {
     const r = el.getBoundingClientRect();
-    lenis.scrollTo(el, { offset: -(window.innerHeight - r.height) / 2, duration: 1.2 });
+    lenis.scrollTo(el, { offset: -(window.innerHeight - r.height) / 2, duration: 0.62 });
   } else {
     el.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "center" });
   }

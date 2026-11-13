@@ -2,7 +2,7 @@
 // text: each changed cell rattles through a few letters before landing; unchanged cells stay still.
 
 import { clockText, esc } from "../utils.js";
-import { gsap, motionOK, onLeave } from "./motion.js";
+import { gsap, motionOK, onLeave } from "./motion.js?v=20261113-polish1";
 
 const UPPER = "ABCDEFGHIJKLMNOPRSTUVWZÄÖÜ";
 const LOWER = "abcdefghiklmnoprstuvwzäöüß";
