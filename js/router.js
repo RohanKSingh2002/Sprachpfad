@@ -41,6 +41,13 @@ let firstRoute = true;
 
 /** The view on screen; main.js passes clicks and key presses to it. */
 export const activeView = () => active;
+let teacherPage;
+export function currentTeacherPage() {
+  if (!teacherPage) return null;
+  const { view, param, title } = teacherPage;
+  return { label: title, level: param?.level?.name || param?.name || currentLevel().name,
+    mode: 'study', text: '', ...view.teacherContext?.() };
+}
 
 /** Replace the address without adding a history entry. */
 function rewrite(path) {
@@ -176,6 +183,7 @@ function show({ view, param, nav = "", title = "German A1–B1 practice", path }
   }
   app.dataset.route = path;
   active = view;
+  teacherPage = view === account ? null : { view, param, title };
   document.title = `${title} | Sprachpfad`;
   document.querySelectorAll("[data-nav]").forEach((a) => {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page");
@@ -186,6 +194,7 @@ function show({ view, param, nav = "", title = "German A1–B1 practice", path }
   refreshInterface(app);
   scrollToTop();
   view.mount?.(param, { from, first: firstRoute, sameKind: from === view });
+  document.dispatchEvent(new Event('teacherpagechange'));
   ScrollTrigger?.refresh();
   // Move focus to the new page, unless the page itself put it somewhere (e.g. back on a menu just used)
   const placed = document.activeElement !== app && app.contains(document.activeElement);

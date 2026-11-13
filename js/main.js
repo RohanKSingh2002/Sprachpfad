@@ -1,7 +1,7 @@
 // Entry point: load the content, restore progress, then hand over to the router.
 
 import { loadContent } from "./content.js";
-import { activeView, relayout, route } from "./router.js?v=20261113-lesson-review1";
+import { activeView, currentTeacherPage, relayout, route } from "./router.js?v=20261113-teacher1";
 import { initState, resetState } from "./state.js";
 import { clearDevicePractice } from "./practice-progress.js";
 import { flushStudyTime, resetStudyClock, startStudyClock } from "./study-clock.js";
@@ -11,7 +11,9 @@ import { initSpotlight } from "./ui/effects.js?v=20261113-polish1";
 import { initProfileMenu, setProfileMenuSignedIn } from "./ui/profile-menu.js?v=20261113-signout1";
 import { initSmoothScroll } from "./ui/scroll.js?v=20261113-polish1";
 import { toast } from "./ui/toast.js";
+import { initTeacher } from "./ui/teacher.js";
 import { esc } from "./utils.js";
+import { refreshInterface } from "./study-language.js";
 import { authClient, currentUser, initAuth, onAccountChange, signInWithGoogle, signOut } from "./auth.js";
 import { clearGuestEntry, enterAsGuest } from "./entry.js";
 import { registerStudyWorker } from "./offline-study.js";
@@ -30,6 +32,7 @@ function showLoadError(error) {
 
 /** Any button with data-say reads its text aloud; everything else goes to the page on screen. */
 async function onClick(e) {
+  if (e.target.closest('#teacher, #signout-dialog')) return;
   const button = e.target.closest("button");
   if (button?.hasAttribute("data-reset-audio-speed")) {
     resetAudioSpeed();
@@ -78,6 +81,21 @@ function updateAccountUI() {
   setProfileMenuSignedIn(Boolean(currentUser()));
 }
 
+function confirmSignOut({ pending, persistent }) {
+  const dialog = document.getElementById("signout-dialog");
+  if (dialog.open) return Promise.resolve(false);
+  const message = !pending ? "Sign out of Sprachpfad on this device?" : persistent
+    ? "Some progress is still waiting to sync. A copy will stay in this browser for your account."
+    : "Some progress is only saved in this tab. If you sign out now, you’ll lose it. Cancel to download a backup first.";
+  dialog.querySelector("#signout-message").textContent = message;
+  refreshInterface(dialog);
+  dialog.returnValue = "cancel";
+  dialog.showModal();
+  return new Promise(resolve => {
+    dialog.addEventListener("close", () => resolve(dialog.returnValue === "signout"), { once: true });
+  });
+}
+
 async function onAccountAction(button) {
   const action = button.dataset.accountAction;
   if (button.disabled) return;
@@ -92,12 +110,17 @@ async function onAccountAction(button) {
       enterAsGuest();
       location.hash = "#/";
     } else if (action === "signout") {
+      const user = currentUser();
+      if (!user) return;
+      button.setAttribute("aria-busy", "true");
+      const before = progressStatus();
+      if (!await confirmSignOut(before) || currentUser()?.id !== user.id) return;
       flushStudyTime();
       if (progressStatus().pending) await flushProgress();
-      const status = progressStatus();
-      if (status.pending && !confirm(status.persistent
-        ? "Some progress hasn't synced yet. Its copy will stay in this browser for this account. Sign out anyway?"
-        : "Some progress is only held in this tab and will be lost on sign-out. Cancel and download a backup first, or sign out anyway?")) return;
+      if (currentUser()?.id !== user.id) return;
+      const after = progressStatus();
+      if (after.pending && !after.persistent && !(before.pending && !before.persistent) && !await confirmSignOut(after)) return;
+      if (currentUser()?.id !== user.id) return;
       await signOut();
       location.hash = "#/login";
     } else if (action === "retry") {
@@ -166,6 +189,7 @@ async function start() {
   // Account restoration starts in the background; the router shows a loading page until ready.
   connectProgress(authClient(), currentUser());
   initAudio();
+  initTeacher(currentTeacherPage);
   void registerStudyWorker();
   startStudyNotifications();
   startStudyClock();
@@ -175,8 +199,8 @@ async function start() {
   initProfileMenu();
   window.addEventListener("hashchange", route);
   document.addEventListener("click", onClick);
-  document.addEventListener("keydown", (e) => activeView()?.onKeydown?.(e));
-  document.addEventListener("change", (e) => activeView()?.onChange?.(e));
+  document.addEventListener("keydown", (e) => { if (!e.target.closest?.('#teacher, #signout-dialog')) activeView()?.onKeydown?.(e); });
+  document.addEventListener("change", (e) => { if (!e.target.closest?.('#teacher')) activeView()?.onChange?.(e); });
   window.addEventListener("online", () => retryProgress());
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && currentUser()) retryProgress();

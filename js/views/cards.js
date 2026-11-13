@@ -354,6 +354,11 @@ function drawCard() {
   })[0];
 }
 
+export function teacherContext() {
+  const card = deck.length && deck[pos % deck.length];
+  return card ? { label: `Flashcard · ${card.de}`, text: [card.de, card.en, card.pl, card.forms, card.ex?.de, card.ex?.en].filter(Boolean).join('\n') } : null;
+}
+
 function flipCard() {
   const card = document.getElementById("flash");
   if (!card) return;

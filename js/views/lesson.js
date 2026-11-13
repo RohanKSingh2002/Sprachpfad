@@ -33,6 +33,7 @@ let missed = [];
 let guide = null;
 let lessonPlayback;
 let feedbackAudio;
+let teacherTask;
 
 function lessonSections(l, dialogue) {
   const sections = [["lesson-overview", "Overview"], ...(l.examples.length ? [["lesson-examples", "Examples"]] : []),
@@ -113,6 +114,7 @@ function grammarTable({ head, rows }) {
 export function render(l) {
   lesson = l;
   firstTry = {};
+  teacherTask = undefined;
   scoreShown = false;
   exerciseIndex = l.tasks.length && sitePreferences().lessonLayout === "focus" ? 0 : null;
   retry = null;
@@ -660,12 +662,33 @@ export function onChange(e) {
 
 export function onAudioPlay() { stopLessonPlayback(); }
 
+export function teacherContext() {
+  const index = retry ? retry.items[retry.position] : exerciseIndex ?? teacherTask;
+  const task = lesson.tasks[index];
+  const checked = retry ? retry.answers.has(index) : index in firstTry;
+  const reference = lesson.rules.concat(lesson.examples.slice(0, 5).map(({ de, en }) => `${de} — ${en}`),
+    [lesson.table.head.join(' | '), ...lesson.table.rows.slice(0, 7).map(row => row.join(' | '))]);
+  return {
+    label: task ? `${lesson.title} · Exercise ${index + 1}` : lesson.title,
+    mode: task && !checked ? 'hint' : 'study',
+    text: [task && `Exercise: ${task.question}`, task?.readingText, task && checked && document.getElementById(`${retry ? 'retry-' : ''}fb${index}`)?.textContent,
+      ...reference].filter(Boolean).join('\n'),
+  };
+}
+
+function trackTeacherTask(event) {
+  if (!document.getElementById('app').contains(event.target)) return;
+  const item = event.target.closest('[data-exercise-index]');
+  teacherTask = item ? Number(item.dataset.exerciseIndex) : undefined;
+}
+
 /* ---------- motion: calm, so studying stays easy ---------- */
 
 /** Today's session links straight to a lesson's exercises with ?part=exercises. */
 const wantsExercises = () => lessonPart() === "exercises";
 
 export function mount() {
+  document.addEventListener('focusin', trackTeacherTask);
   markOpened(lesson);
   showExerciseView();
   refreshSentencePrompts(document.querySelector(".say-panel"));
@@ -758,4 +781,4 @@ async function downloadLesson(button) {
   }
 }
 
-export function unmount() { stopLessonPlayback(); stopAudio(); }
+export function unmount() { document.removeEventListener('focusin', trackTeacherTask); stopLessonPlayback(); stopAudio(); }

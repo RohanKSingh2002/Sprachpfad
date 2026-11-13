@@ -398,6 +398,14 @@ function backLabel() {
   return localInstruction(session.lessonBack ? "Back to lesson" : libraryTab === "collections" ? "Back to collections" : libraryTab === "browse" ? "Back to browse" : "Back to review");
 }
 
+export function teacherContext() {
+  const item = session?.items[session.index];
+  if (!item) return null;
+  const hidden = session.mode !== 'listen' && !session.revealed;
+  return { label: `Sentence practice · ${session.index + 1}`, mode: hidden ? 'hint' : 'study',
+    text: [!hidden && item.de, item.en].filter(Boolean).join('\n') };
+}
+
 function focusSession() {
   const item = session.items[session.index];
   if (!item) return roundSummary();

@@ -11,6 +11,9 @@ import { transferHTML } from './course-support.js';
 
 let level, module, pack;
 let answers = {};
+export function teacherContext() {
+  return { label: module.title, mode: 'hint', text: module.goals.join('\n') };
+}
 const writingChecks = ['I covered every requested point.', 'My sentences communicate the intended meaning.', 'I checked verbs, articles, capitals and punctuation.', 'I reviewed a correction with a tutor or proficient speaker.'];
 function questions(items, section) {
   const lang = pack.questionLanguage === 'de' ? ' lang="de"' : '';

@@ -18,6 +18,13 @@ const filters = [['all', 'All'], ['next', 'Next up'], ['started', 'In progress']
 let statusFilter;
 const nextTarget = plan => plan.units.find(unit => !unit.done);
 
+export function teacherContext() {
+  if (!level?.course) return null;
+  const target = nextTarget(studyPlan(level));
+  return { label: `${level.name} course`, text: target ?
+    [`Next study topic: ${target.lesson?.title || target.module.title}`, ...target.module.goals].join('\n') : '' };
+}
+
 function targetStarted({ lesson, module }) {
   if (lesson) return Boolean(lessonSentenceProgress(lesson).opened || lessonScore(lesson));
   return Boolean(checkpointDraft(level, module).text.trim()) ||

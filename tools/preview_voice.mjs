@@ -4,6 +4,7 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { cloudVoices, pocketVoices, samples } from '../js/voice-preview-samples.js';
+import { answerTeacher } from './teacher_service.mjs';
 
 const host = '127.0.0.1';
 const port = Number(process.argv.slice(2).find(arg => arg !== '--app') || 8766);
@@ -14,6 +15,8 @@ const pocketPort = Number(process.env.SPRACHPFAD_POCKET_PORT);
 const pocket = Number.isInteger(pocketPort) && pocketPort > 0 && pocketPort <= 65535;
 const pocketBase = `http://${host}:${pocketPort}`;
 const app = process.argv.includes('--app');
+const teacherPort = Number(process.env.SPRACHPFAD_TEACHER_PORT);
+const teacherEnabled = Number.isInteger(teacherPort) && teacherPort > 0 && teacherPort <= 65535;
 const staticTypes = { html: 'text/html', css: 'text/css', js: 'text/javascript', json: 'application/json', svg: 'image/svg+xml', mp3: 'audio/mpeg', webmanifest: 'application/manifest+json' };
 const assets = new Map(await Promise.all([
   ['/voice-preview.html', 'text/html; charset=utf-8'],
@@ -67,9 +70,14 @@ createServer(async (request, response) => {
     if (body) { reply(response, 200, body, staticTypes[path.split('.').at(-1)]); return; }
   }
   const live = app && path === '/api/german-speech';
+  const teacher = app && path === '/api/teacher';
   const local = path === '/api/pocket-preview';
-  if (!live && !local && path !== '/api/voice-preview') { reply(response, 404, 'Page not found.'); return; }
-  if (!local && request.method === 'GET') {
+  if (!teacher && !live && !local && path !== '/api/voice-preview') { reply(response, 404, 'Page not found.'); return; }
+  if (teacher && request.method === 'GET') {
+    reply(response, 200, JSON.stringify({ available: teacherEnabled }), 'application/json');
+    return;
+  }
+  if (!teacher && !local && request.method === 'GET') {
     const ready = pocket && await fetch(`${pocketBase}/health`, { signal: AbortSignal.timeout(1000) }).then(res => res.ok).catch(() => false);
     reply(response, 200, JSON.stringify(live ? { available: ready } : { cloud, pocket: ready }), 'application/json');
     return;
@@ -79,18 +87,23 @@ createServer(async (request, response) => {
     reply(response, 403, 'Open the local preview to play a sample.');
     return;
   }
-  if (!(local || live ? pocket : cloud)) { reply(response, 503, 'This speech source is not configured.'); return; }
+  if (!(teacher ? teacherEnabled : local || live ? pocket : cloud)) { reply(response, 503, 'This service is not configured.'); return; }
   const controller = new AbortController();
   response.on('close', () => controller.abort());
   try {
     let input = '';
     for await (const chunk of request) {
       input += chunk;
-      if (input.length > (live ? 8192 : 512)) { reply(response, 413, 'Request too large.'); return; }
+      if (input.length > (teacher ? 12000 : live ? 8192 : 512)) { reply(response, 413, 'Request too large.'); return; }
     }
     let settings;
     try { settings = JSON.parse(input); } catch { reply(response, 400, 'Invalid request.'); return; }
-    const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(20000)]);
+    const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(teacher ? 55000 : 20000)]);
+    if (teacher) {
+      const result = await answerTeacher(settings, teacherPort, signal);
+      reply(response, result.status, JSON.stringify(result.body), 'application/json');
+      return;
+    }
     if (live) {
       const lines = settings?.lines;
       if (!Array.isArray(lines) || !lines.length || lines.length > 12 || lines.some(line =>
@@ -132,6 +145,6 @@ createServer(async (request, response) => {
     if (!upstream.ok) { reply(response, 502, 'Azure Speech could not generate this sample.'); return; }
     reply(response, 200, Buffer.from(await upstream.arrayBuffer()), 'audio/mpeg');
   } catch {
-    if (!response.destroyed) reply(response, 502, 'Speech preview is unavailable.');
+    if (!response.destroyed) reply(response, 502, teacher ? 'Teacher unavailable.' : 'Speech preview is unavailable.');
   }
 }).listen(port, host, () => console.log(`Voice preview: ${origin}/voice-preview.html (${cloud ? 'Azure and browser' : 'browser voices'})`));

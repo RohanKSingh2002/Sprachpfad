@@ -1,0 +1,28 @@
+#teacher { position: fixed; z-index: 28; inset-inline-end: max(18px, env(safe-area-inset-right)); bottom: calc(18px + env(safe-area-inset-bottom)); display: grid; justify-items: end; gap: 10px; }
+#teacher[hidden], #teacher [hidden] { display: none; }
+.teacher-toggle { display: grid; place-items: center; border: 1px solid transparent; border-radius: 50%; width: 54px; height: 54px; padding: 12px; background: var(--signal); color: var(--on-signal); box-shadow: 0 6px 24px #0004; cursor: pointer; }
+.teacher-toggle svg { width: 27px; height: 27px; }
+.teacher-panel { width: min(410px, calc(100vw - 36px)); height: min(620px, calc(100dvh - 105px)); display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 17px; box-shadow: 0 12px 42px #0004; overflow: hidden; animation: teacher-in .22s var(--ease-out, ease-out) both; }
+@keyframes teacher-in { from { opacity: 0; translate: 0 10px; } }
+.teacher-header, .teacher-scope, .teacher-form { padding: 10px 14px; }
+.teacher-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
+.teacher-header h2 { margin: 0; font-size: 17px; }
+.teacher-scope { border-bottom: 1px solid var(--line); }
+.teacher-context, .teacher-status { margin: 5px 0 0; color: var(--muted); font-size: .83rem; }
+.teacher-status { margin: 0 0 6px; }
+.teacher-status:empty { display: none; }
+.teacher-panel select, .teacher-panel textarea { font: inherit; font-size: max(16px, .9rem); color: var(--text); background: var(--bg); border: 1px solid var(--input); border-radius: 8px; padding: 7px 9px; }
+.teacher-panel textarea { width: 100%; resize: none; min-height: 56px; }
+.teacher-messages { overflow: auto; overscroll-behavior: contain; padding: 12px 14px; display: grid; align-content: start; gap: 10px; }
+.teacher-message { border-radius: 11px; background: var(--sunken); padding: 9px 11px; overflow-wrap: anywhere; }
+.teacher-user { justify-self: end; background: color-mix(in srgb, var(--signal) 16%, var(--surface)); }
+.teacher-message strong { display: block; font-size: .8rem; }
+.teacher-message p { white-space: pre-wrap; margin: 3px 0; line-height: 1.45; }
+.teacher-message button { margin-top: 4px; }
+.teacher-form { border-top: 1px solid var(--line); }
+.teacher-actions { display: flex; align-items: center; gap: 6px; }
+.teacher-actions [type="submit"] { margin-inline-start: auto; }
+@media (max-width: 860px) {
+  #teacher { inset-inline-end: max(12px, env(safe-area-inset-right)); bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .teacher-panel { width: min(410px, calc(100vw - 24px)); height: min(560px, calc(100dvh - 148px)); }
+}

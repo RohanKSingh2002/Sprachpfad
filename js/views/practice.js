@@ -19,6 +19,14 @@ const sets = () => [...(level.practice || []), ...matchingSets];
 const levelPath = () => `/practice${tab === 'grammar' ? '?tab=grammar' : ''}`;
 const libraryLabel = () => tab === 'grammar' ? 'Back to grammar review' : 'Back to practice library';
 
+export function teacherContext() {
+  if (!session || session.finished) return null;
+  const item = activeItem(session);
+  const checked = Boolean(currentRecord());
+  return { label: `${session.set.title} · Exercise ${session.position + 1}`, mode: checked ? 'study' : 'hint',
+    text: [item.prompt, item.readingText, session.set.passage, checked && item.explanation, checked && modelAnswer(item)].filter(Boolean).join('\n') };
+}
+
 function header() {
   return `${breadcrumb(level, 'Practice')}<div class="page-head"><h1>${esc(level.name)} practice</h1>${levelSwitch(level, levelPath(), 'Choose a practice level')}</div>`;
 }

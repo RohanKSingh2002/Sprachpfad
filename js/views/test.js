@@ -19,6 +19,11 @@ const pendingAudio = new Set();
 const SECTIONS = ["Listening", "Reading", "Writing", "Speaking"];
 const playLimit = item => Number.isInteger(item.plays) && item.plays > 0 ? item.plays : 2;
 
+export function teacherContext() {
+  const waiting = attemptStarted && rehearsal && Object.keys(answers).length < level.test.total;
+  return { label: `${level.name} mock test`, mode: waiting ? 'locked' : 'study', text: waiting ? '' : 'German mock test. Explain general skills, exam vocabulary and grammar.' };
+}
+
 function listeningPart(test) {
   return test.listening
     .map(

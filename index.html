@@ -34,10 +34,11 @@
     <link rel="stylesheet" href="css/practice.css?v=20261113-lesson-review1" />
     <link rel="stylesheet" href="css/course.css?v=20261113-lesson-review1" />
     <link rel="stylesheet" href="css/profile.css?v=20261112-dark1" />
-    <link rel="stylesheet" href="css/account.css?v=20261112-dark1" />
+    <link rel="stylesheet" href="css/account.css?v=20261113-signout-confirm1" />
     <link rel="stylesheet" href="css/light.css?v=20261112-shortcuts2" />
     <link rel="stylesheet" href="css/settings.css?v=20261113-signout1" />
     <link rel="stylesheet" href="css/sentences.css?v=20261113-study-ui1" />
+    <link rel="stylesheet" href="css/teacher.css?v=20261113-teacher1" />
   </head>
   <body class="entry-screen">
     <a class="skip" href="#app">Skip to content</a>
@@ -76,6 +77,36 @@
       </section>
     </main>
 
+    <aside id="teacher" hidden aria-label="AI German teacher">
+      <section class="teacher-panel" id="teacher-panel" aria-labelledby="teacher-title" hidden>
+        <header class="teacher-header"><h2 id="teacher-title">AI German teacher</h2><button class="btn small ghost" type="button" data-teacher-close aria-label="Close teacher">×</button></header>
+        <div class="teacher-scope"><label><span class="sr">What to ask about</span><select><option value="page">Ask about this page</option><option value="general">Ask a German question</option></select></label><p class="teacher-context"></p></div>
+        <div class="teacher-messages" role="log" aria-label="Conversation"></div>
+        <form class="teacher-form">
+          <p class="teacher-status" role="status"></p>
+          <label class="sr" for="teacher-question">Your German question</label>
+          <textarea id="teacher-question" rows="2" maxlength="800" placeholder="Ask in English or German" required></textarea>
+          <div class="teacher-actions">
+            <label class="teacher-mic-language"><span class="sr">Dictation language</span><select data-teacher-dictation><option value="de-DE">German mic</option><option value="en-US">English mic</option></select></label>
+            <button class="btn small ghost" type="button" data-teacher-mic aria-label="Dictate a question">Dictate</button>
+            <button class="btn small" type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+      <button class="teacher-toggle" type="button" data-teacher-open aria-expanded="false" aria-controls="teacher-panel" aria-label="Ask the German teacher" title="Ask the German teacher">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-3.4-.7L4 21l1.6-4.4a8.5 8.5 0 1 1 14.9-5.1Z"/><path d="M9.5 9.4a2.6 2.6 0 1 1 4.6 1.7c-1.2 1-2.1 1.1-2.1 2.5M12 16.5h.01"/></svg>
+      </button>
+    </aside>
+    <dialog class="signout-dialog" id="signout-dialog" aria-labelledby="signout-title" aria-describedby="signout-message">
+      <form method="dialog">
+        <h2 id="signout-title">Sign out?</h2>
+        <p id="signout-message"></p>
+        <div class="signout-actions">
+          <button class="btn ghost" type="submit" value="cancel" autofocus>Cancel</button>
+          <button class="btn" type="submit" value="signout">Sign out</button>
+        </div>
+      </form>
+    </dialog>
     <footer class="foot">
       <div class="wrap">
         <span id="save-status">Sprachpfad. Your progress is saved on this device.</span>
@@ -103,6 +134,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/Draggable.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
     <script src="js/vendor/supabase-2.118.0.js"></script>
-    <script type="module" src="js/main.js?v=20261113-lesson-review1"></script>
+    <script type="module" src="js/main.js?v=20261113-signout-confirm1"></script>
   </body>
 </html>
