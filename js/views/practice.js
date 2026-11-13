@@ -1,33 +1,91 @@
 // Original workbook-style practice sets. Learning activity uses the existing account calendar.
-import { logPractice } from '../state.js';
+import { dueCount, logPractice, smartReviewPlan } from '../state.js';
 import { enter, motionOK, splitReveal } from '../ui/motion.js?v=20261113-polish1';
 import { speakerButton, stopAudio } from '../ui/audio.js';
 import { esc } from '../utils.js';
 import { breadcrumb, levelSwitch } from './shared.js';
 import { SKILLS, FORMAT, makeSession, itemIndex, activeItem, orderedChoices, submit, advance, summary, wordCount } from '../practice-engine.js';
-import { pendingPractice, practiceProgress, savePracticeProgress } from '../practice-progress.js';
+import { lessonMistakes, pendingPractice, practiceProgress, savePracticeProgress } from '../practice-progress.js';
 import { refreshInterface } from '../study-language.js';
+import { grammarReviewSets } from '../grammar-review.js';
 
-let level, session = null, filter = 'all', search = '', message = '';
-let progress, tab, savedOnDevice;
-const tabs = [['sets', 'Practice sets'], ['progress', 'In progress'], ['missed', 'Missed exercises']];
+let level, session = null, filter = 'all', search = '', message = '', activePair = null;
+let progress, tab, savedOnDevice, grammarSets, allSets, matchingSets;
+const tabs = [['sets', 'Practice sets'], ['grammar', 'Grammar review'], ['progress', 'In progress'], ['missed', 'Missed exercises']];
 const paragraphs = text => String(text || '').split('\n\n').map(p => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`).join('');
 const currentRecord = () => session.records[itemIndex(session)];
 const draft = () => session.drafts[itemIndex(session)] ||= { text: '', choice: null, pairs: {}, tokens: [], reviewed: false, checks: [] };
-const sets = () => level.practice || [];
+const sets = () => [...(level.practice || []), ...matchingSets];
+const levelPath = () => `/practice${tab === 'grammar' ? '?tab=grammar' : ''}`;
+const libraryLabel = () => tab === 'grammar' ? 'Back to grammar review' : 'Back to practice library';
 
 function header() {
-  return `${breadcrumb(level, 'Practice')}<div class="page-head"><h1>${esc(level.name)} practice</h1>${levelSwitch(level, '/practice', 'Choose a practice level')}</div>
-    <p class="muted practice-intro">Make the language yours. Work through a short set, understand each answer, then revisit what needs another try.</p><p><a class="btn small ghost" href="#/sentences">Build a sentence collection</a></p>`;
+  return `${breadcrumb(level, 'Practice')}<div class="page-head"><h1>${esc(level.name)} practice</h1>${levelSwitch(level, levelPath(), 'Choose a practice level')}</div>`;
+}
+
+function phraseMatchingSets() {
+  const usedGerman = new Set(), usedEnglish = new Set();
+  const items = [];
+  for (const lesson of level.lessons) {
+    const pairs = [];
+    for (const { de, en } of lesson.examples) {
+      if (!de?.trim() || !en?.trim() || usedGerman.has(de) || usedEnglish.has(en)) continue;
+      usedGerman.add(de);
+      usedEnglish.add(en);
+      pairs.push({ left: de, right: en });
+      if (pairs.length === 4) break;
+    }
+    if (pairs.length > 1) items.push({ type: 'match', prompt: lesson.title, pairs, explanation: 'Compare each German phrase with its English meaning.' });
+    if (items.length === 5) break;
+  }
+  if (!items.length) return [];
+  return [
+    { id: `${level.id}-listen-and-match`, skill: 'listening', title: 'Listen and match', description: 'Match spoken German phrases to their English meanings.' },
+    { id: `${level.id}-read-and-match`, skill: 'reading', title: 'Read and match', description: 'Match written German phrases to their English meanings.' },
+  ].map(set => ({ ...set, phraseMatching: true, focus: `${level.name} course phrases`, minutes: 4, items }));
 }
 function library() {
-  const pending = pendingPractice(level, set => progress.get(set.id));
-  const missed = sets().filter(set => progress.get(set.id).missed.length);
+  const pending = pendingPractice(level, set => progress.get(set.id), allSets);
+  const missed = allSets.filter(set => progress.get(set.id).missed.length);
+  const lessons = level.lessons.map(lesson => ({ lesson, count: lessonMistakes(lesson).length })).filter(item => item.count);
+  const totalMissed = lessons.reduce((sum, item) => sum + item.count, 0) + missed.reduce((sum, set) => sum + progress.get(set.id).missed.length, 0);
   return `<div class="study-tabs" role="group" aria-label="Exercise library">${tabs.map(([id, label]) =>
-    `<button class="btn small ghost" type="button" data-practice-tab="${id}" aria-pressed="${tab === id}">${label}</button>`).join('')}</div>
-    ${tab !== 'missed' ? continueCards(tab === 'progress' ? pending : pending.slice(0, 1)) : ''}
-    ${tab === 'sets' ? practiceSets() : tab === 'missed' ? missedSets(missed) : pending.length ? '' :
+    `<button class="btn small ghost" type="button" data-practice-tab="${id}" aria-pressed="${tab === id}"><span>${label}</span>${id === 'missed' && totalMissed ? `<small class="practice-tab-count">${totalMissed}</small>` : ''}</button>`).join('')}</div>
+    ${tab === 'progress' ? continueCards(pending) : tab === 'sets' ? continueCards(pending.slice(0, 1)) : ''}
+    ${tab === 'sets' ? practiceShortcuts(totalMissed) + practiceSets() : tab === 'grammar' ? grammarLibrary() : tab === 'missed' ? missedSets(missed, lessons) : pending.length ? '' :
       '<section class="panel"><h2>No unfinished sets</h2><p>Your current exercise will appear here once you start a set.</p></section>'}`;
+}
+
+function practiceShortcuts(totalMissed) {
+  const words = dueCount();
+  const sentences = smartReviewPlan(false).due;
+  return `<section class="practice-shortcuts" aria-label="Review options">
+    <a href="#/karten${words ? '?l=due' : `?l=${level.id}`}"><strong>Flashcards</strong><small>${words ? `${words} due today` : `${level.name} vocabulary`}</small><span aria-hidden="true">›</span></a>
+    <a href="#/sentences"><strong>Sentence practice</strong><small>${sentences ? `${sentences} due today` : 'Listen, recall or build'}</small><span aria-hidden="true">›</span></a>
+    ${matchingSets.length ? `<button type="button" data-set="${matchingSets[0].id}"><strong>Listen and match</strong><small>Match audio to meaning</small><span aria-hidden="true">›</span></button>` : ''}
+    ${totalMissed ? `<button type="button" data-practice-tab="missed"><strong>Retry mistakes</strong><small>${totalMissed} to revisit</small><span aria-hidden="true">›</span></button>` : ''}
+  </section>`;
+}
+
+function grammarLibrary() {
+  const ordered = [...grammarSets].sort((a, b) => grammarPriority(b) - grammarPriority(a));
+  return `<section class="grammar-library" aria-labelledby="grammar-heading"><h2 id="grammar-heading">Review by topic</h2>
+    <p class="muted">Topics with missed answers appear first, followed by unfinished rounds.</p>
+    <div class="practice-library">${ordered.map(set => {
+      const { normal, missed, result } = progress.get(set.id);
+      const inProgress = normal && !normal.finished;
+      const status = missed.length ? `${missed.length} to retry` : inProgress ? `Exercise ${normal.position + 1} of ${set.items.length}` : result ? `Last result ${result.earned}/${result.total}` : `${set.items.length} exercises`;
+      const lessonLinks = set.grammarLessons.map(lesson => `<a class="tlink" href="#/${level.id}/lektion/${lesson.id}">${esc(lesson.title)}</a>`).join('');
+      return `<article class="practice-set grammar-topic${missed.length ? ' grammar-topic-due' : ''}"><h3>${esc(set.title)}</h3><p>${esc(set.description)}</p><details><summary>Related lessons</summary><div>${lessonLinks}</div></details>
+        <div class="practice-set-bottom"><span class="small muted">${status}</span><button class="btn small${inProgress ? '' : ' ghost'}" type="button" data-set="${set.id}">${inProgress ? 'Continue topic' : result ? 'Practise again' : 'Practise'}<span class="sr">: ${esc(set.title)}</span></button>
+        ${missed.length ? `<button class="link-btn small" type="button" data-set="${set.id}" data-missed>Retry missed<span class="sr">: ${esc(set.title)}</span></button>` : ''}</div></article>`;
+    }).join('')}</div></section>`;
+}
+
+function grammarPriority(set) {
+  const { normal, missed } = progress.get(set.id);
+  if (missed.length) return missed.length + 1;
+  return normal && !normal.finished ? 1 : 0;
 }
 
 function continueCards(pending) {
@@ -38,18 +96,20 @@ function continueCards(pending) {
   </section>`).join('');
 }
 
-function missedSets(setsWithMisses) {
-  return `<section aria-labelledby="missed-heading"><h2 id="missed-heading">Review missed exercises</h2><p class="muted">Incorrect or skipped exercises appear here by set. A correct retry removes the exercise from this list.</p>
-    ${setsWithMisses.map(set => {
+function missedSets(setsWithMisses, lessonsWithMisses) {
+  const lessons = lessonsWithMisses.map(({ lesson, count }) => `<article class="panel practice-resume"><div><h3>${esc(lesson.title)}</h3><p class="small muted">Lesson ${lesson.position} · ${count} ${count === 1 ? 'exercise' : 'exercises'} to retry</p></div><a class="btn small" href="#/${level.id}/lektion/${lesson.id}?part=mistakes">Retry lesson mistakes</a></article>`).join('');
+  const sets = setsWithMisses.map(set => {
       const { missed, review } = progress.get(set.id);
       return `<article class="panel practice-missed"><h3>${esc(set.title)}</h3><ul>${missed.map(index => `<li>${esc(set.items[index].prompt)}</li>`).join('')}</ul>
         <button class="btn small" type="button" data-set="${set.id}" data-missed>${review && !review.finished ? 'Continue review' : `Review ${missed.length} ${missed.length === 1 ? 'exercise' : 'exercises'}`}</button></article>`;
-    }).join('') || '<p>No missed exercises to review.</p>'}</section>`;
+    }).join('');
+  return `<section aria-labelledby="missed-heading"><h2 id="missed-heading">Review missed exercises</h2><p class="muted">Your missed lesson and practice answers are saved on this device. Correct a mistake to clear it from review.</p>
+    ${lessons || sets ? lessons + sets : '<p>No missed exercises to review.</p>'}</section>`;
 }
 
 function practiceSets() {
   const list = sets().filter(s => (filter === 'all' || s.skill === filter) && `${s.title} ${s.focus} ${s.description}`.toLowerCase().includes(search.toLowerCase().trim()));
-  return `<section class="practice-overview" aria-label="Practice library introduction"><div><p class="practice-eyebrow">YOUR PRACTICE WORKBOOK</p><h2>One focus. A little more confidence.</h2><p>Original texts, everyday situations and useful grammar. Choose your next small step.</p></div><div class="practice-library-count"><strong>${sets().length}</strong><span>focused sets<br>across five skills</span></div></section>
+  return `<h2 class="practice-library-heading">Practice sets</h2>
     <div class="practice-tools"><div class="practice-filters" role="group" aria-label="Filter practice by skill"><button type="button" data-filter="all" aria-pressed="${filter === 'all'}">All sets</button>${Object.entries(SKILLS).map(([key, label]) => `<button type="button" data-filter="${key}" aria-pressed="${filter === key}">${label}</button>`).join('')}</div><label class="practice-search">Find a topic<input type="search" id="practice-search" value="${esc(search)}" placeholder="e.g. articles, requests, messages"></label></div>
     <p class="practice-list-count" role="status">${list.length} ${list.length === 1 ? 'set' : 'sets'}${filter !== 'all' ? ` · ${SKILLS[filter]}` : ''}</p>
     <div class="practice-library">${list.map((s) => {
@@ -65,12 +125,27 @@ function stimulus() {
 }
 function answerControls(item, record) {
   const d = draft(), disabled = record ? ' disabled' : '';
-  if (item.type === 'choice') return `<fieldset class="practice-choices"${disabled}><legend class="sr">Choose one answer</legend>${orderedChoices(session).map((i) => `<label class="practice-choice${record && i === item.answer ? ' is-answer' : ''}"><input type="radio" name="practice-choice" value="${i}"${d.choice === i ? ' checked' : ''}><span lang="de">${esc(item.options[i])}</span></label>`).join('')}</fieldset>`;
+  if (item.type === 'choice') return `<fieldset class="practice-choices"${disabled}><legend class="sr">Choose one answer</legend>${orderedChoices(session).map((i) => `<label class="practice-choice${record && i === item.answer ? ' is-answer' : ''}"><input type="radio" name="practice-choice" value="${i}"${d.choice === i ? ' checked' : ''}><span${item.englishOptions ? ' lang="en"' : ' lang="de"'}>${esc(item.options[i])}</span></label>`).join('')}</fieldset>`;
+  if (item.type === 'match' && session.set.phraseMatching) return phraseMatchingControls(item, record);
   if (item.type === 'match') return `<p class="small muted">Choose one ending for each line. Each ending belongs to one line.</p><div class="practice-match">${item.pairs.map((pair, i) => `<label class="practice-match-row"><span lang="de">${esc(pair.left)}</span><select data-pair="${i}" aria-label="Match for ${esc(pair.left)}"${disabled}><option value="">Choose a match…</option>${orderedChoices(session).map(j => `<option value="${j}"${String(d.pairs[i]) === String(j) ? ' selected' : ''}>${esc(item.pairs[j].right)}</option>`).join('')}</select></label>`).join('')}</div>`;
   if (item.type === 'order') return `<p class="small muted">Tap chunks to build the sentence. Tap a placed chunk to remove it.</p><div class="practice-built" aria-label="Your sentence" lang="de">${d.tokens.map((i, pos) => `<button type="button" class="practice-chunk" data-remove-token="${pos}"${disabled} aria-label="Remove ${esc(item.tokens[i])}">${esc(item.tokens[i])}</button>`).join('') || '<span class="muted">Your sentence will appear here.</span>'}</div><div class="practice-chunks" aria-label="Available chunks" lang="de">${orderedChoices(session).map(i => `<button type="button" class="practice-chunk" data-token="${i}"${record || d.tokens.includes(i) ? ' disabled' : ''}>${esc(item.tokens[i])}</button>`).join('')}</div><button class="practice-text-button" type="button" data-clear-tokens${disabled}>Clear sentence</button>`;
   if (item.type === 'write') return `<label class="practice-input-label" for="practice-response">Your message in German <span class="muted">· aim for ${item.target[0]}–${item.target[1]} words</span></label><textarea class="practice-writing" id="practice-response" lang="de" maxlength="6000" rows="8"${disabled}>
 ${esc(d.text)}</textarea><p class="small muted" id="practice-word-count">${wordCount(d.text)} words · a guide, not an automatic grade</p>${d.reviewed || record ? `<section class="practice-model"><h3 tabindex="-1">One possible response</h3><div lang="de">${paragraphs(item.model)}</div><p class="small muted">${esc(item.explanation)}</p><h3>${record ? 'Your self-review' : 'Review and revise your message'}</h3><p class="small muted">${record ? 'Your reviewed draft is shown above.' : 'Tick what your message covers. You can still edit your text above.'} Unticked points show what to improve next.</p>${item.checklist.map((point, i) => `<label class="practice-review-check"><input type="checkbox" data-review-point="${i}"${d.checks.includes(i) ? ' checked' : ''}${disabled}>${esc(point)}</label>`).join('')}</section>` : `<div class="practice-writing-brief"><h3>Include these points</h3><ul>${item.checklist.map(point => `<li>${esc(point)}</li>`).join('')}</ul></div>`}`;
   return `<label class="practice-input-label" for="practice-response">Your answer in German</label><input class="fill practice-fill" id="practice-response" lang="de" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="300" value="${esc(d.text)}"${disabled}><p class="small muted">You can type ä/ö/ü/ß or ae/oe/ue/ss. Capitalisation and final punctuation do not affect the score.</p>`;
+}
+
+function phraseMatchingControls(item, record) {
+  const listening = session.set.skill === 'listening';
+  const selected = draft().pairs;
+  const disabled = record ? ' disabled' : '';
+  const left = item.pairs.map((pair, i) => `<div class="phrase-match-line">
+    ${listening ? speakerButton(pair.left, `Play clip ${i + 1}`) : ''}
+    <button class="btn ghost phrase-match-choice" type="button" data-match-phrase="${i}" aria-pressed="${activePair === i}"${disabled}>
+      <span${listening ? '' : ' lang="de"'}>${listening ? `Clip ${i + 1}` : esc(pair.left)}</span>
+      ${selected[i] !== undefined && selected[i] !== '' ? `<small lang="en">${esc(item.pairs[Number(selected[i])].right)}</small>` : ''}</button></div>`).join('');
+  const right = orderedChoices(session).map(index => `<button class="btn ghost phrase-match-choice" type="button" data-match-meaning="${index}"${disabled || (activePair === null ? ' disabled' : '')} lang="en">${esc(item.pairs[index].right)}</button>`).join('');
+  return `<p class="small muted">${listening ? 'Play a clip, select its number, then choose the English meaning.' : 'Select a German phrase, then choose its English meaning.'} You can change pairs before checking.</p>
+    <div class="phrase-match-grid"><div role="group" aria-label="German phrases">${left}</div><div role="group" aria-label="English meanings">${right}</div></div>`;
 }
 function modelAnswer(item) {
   if (item.type === 'choice') return item.options[item.answer];
@@ -86,12 +161,12 @@ function feedback(item, record) {
 function round() {
   if (session.finished) return completed();
   const item = activeItem(session), record = currentRecord(), count = Object.keys(session.records).length;
-  return `<div class="practice-round-top"><button type="button" class="practice-text-button" data-library>← All practice sets</button><span>${session.review ? 'Mistake review' : 'First attempt'} · ${session.position + 1} of ${session.indices.length}</span></div><p id="practice-device-status" class="small muted"></p><div class="practice-round-heading"><p class="practice-eyebrow">${SKILLS[session.set.skill]} · ${esc(session.set.focus)}</p><h2>${esc(session.set.title)}</h2><p>${esc(session.set.instruction || session.set.description)}</p><progress max="${session.indices.length}" value="${count}" aria-label="Exercises completed">${count}/${session.indices.length}</progress></div>
-    <div class="practice-workspace${session.set.passage || session.set.audioText ? ' has-source' : ''}">${stimulus()}<section class="practice-card" aria-label="Current exercise"><p class="practice-eyebrow">EXERCISE ${session.position + 1} · ${FORMAT[item.type]}</p><h3 class="practice-prompt" tabindex="-1" id="practice-prompt">${esc(item.prompt)}</h3>${answerControls(item, record)}${item.hint && !record ? `<details class="practice-hint"><summary>Need a hint?</summary><p>${esc(item.hint)}</p></details>` : ''}<div class="practice-feedback" aria-live="polite">${message ? `<p class="practice-validation" role="alert">${esc(message)}</p>` : ''}${feedback(item, record)}</div><div class="practice-actions">${record ? `<button class="btn" type="button" data-next>${session.position + 1 === session.indices.length ? 'See results' : 'Next exercise'}</button>` : `<button class="btn" type="button" data-check>${item.type === 'write' ? draft().reviewed ? 'Finish self-review' : 'Compare with a model' : 'Check answer'}</button><button class="btn ghost small" type="button" data-skip>Skip for now</button>`}</div></section></div>`;
+  return `<div class="practice-round-top"><button type="button" class="practice-text-button" data-library>← ${libraryLabel()}</button><span>${session.review ? 'Mistake review' : 'First attempt'} · ${session.position + 1} of ${session.indices.length}</span></div><p id="practice-device-status" class="small muted"></p><div class="practice-round-heading"><p class="practice-eyebrow">${session.set.grammarLessons ? 'Grammar review' : `${SKILLS[session.set.skill]} · ${esc(session.set.focus)}`}</p><h2>${esc(session.set.title)}</h2><p>${esc(session.set.instruction || session.set.description)}</p>${session.set === matchingSets[0] ? `<button class="link-btn" type="button" data-set="${matchingSets[1].id}">Can’t listen? Practise by reading</button>` : ''}<progress max="${session.indices.length}" value="${count}" aria-label="Exercises completed">${count}/${session.indices.length}</progress></div>
+    <div class="practice-workspace${session.set.passage || session.set.audioText ? ' has-source' : ''}">${stimulus()}<section class="practice-card" aria-label="Current exercise"><p class="practice-eyebrow">EXERCISE ${session.position + 1} · ${FORMAT[item.type]}</p>${item.readingText ? `<div class="reading" lang="de">${esc(item.readingText)}</div>` : ''}<h3 class="practice-prompt" tabindex="-1" id="practice-prompt">${esc(item.prompt)}</h3>${answerControls(item, record)}${item.hint && !record ? `<details class="practice-hint"><summary>Need a hint?</summary><p>${esc(item.hint)}</p></details>` : ''}<div class="practice-feedback" aria-live="polite">${message ? `<p class="practice-validation" role="alert">${esc(message)}</p>` : ''}${feedback(item, record)}</div><div class="practice-actions">${record ? `<button class="btn" type="button" data-next>${session.position + 1 === session.indices.length ? 'See results' : 'Next exercise'}</button>` : `<button class="btn" type="button" data-check>${item.type === 'write' ? draft().reviewed ? 'Finish self-review' : 'Compare with a model' : 'Check answer'}</button><button class="btn ghost small" type="button" data-skip>Skip for now</button>`}</div></section></div>`;
 }
 function completed() {
   const result = summary(session);
-  return `<button type="button" class="practice-text-button" data-library>← All practice sets</button><section class="practice-finish" tabindex="-1"><p class="practice-eyebrow">${session.review ? 'REVIEW COMPLETE' : 'SET COMPLETE'}</p><h2>${esc(session.set.title)}</h2><div class="practice-result-number">${result.total ? `${result.earned}<span> / ${result.total}</span>` : result.reviewed}<small>${result.total ? 'points on this attempt' : 'writing tasks self-reviewed'}</small></div><p>${result.retry.length ? 'A few things to revisit. Read the explanations below, then try those exercises again.' : 'You have worked through this set. Choose another focus when you are ready.'}</p><p class="small muted">${result.skipped} skipped${result.reviewed ? ` · ${result.reviewed} self-reviewed` : ''}. Review attempts do not replace your first-attempt result.</p><div class="practice-actions">${result.retry.length ? '<button type="button" class="btn" data-retry>Practise missed exercises</button>' : ''}<button type="button" class="btn ghost" data-restart>Repeat the whole set</button><button type="button" class="btn ghost" data-library>Choose another set</button></div></section><section class="practice-review"><h2>Your answer review</h2>${session.indices.map(index => {
+  return `<button type="button" class="practice-text-button" data-library>← ${libraryLabel()}</button><section class="practice-finish" tabindex="-1"><p class="practice-eyebrow">${session.review ? 'REVIEW COMPLETE' : 'SET COMPLETE'}</p><h2>${esc(session.set.title)}</h2><div class="practice-result-number">${result.total ? `${result.earned}<span> / ${result.total}</span>` : result.reviewed}<small>${result.total ? 'points on this attempt' : 'writing tasks self-reviewed'}</small></div><p>${result.retry.length ? 'A few things to revisit. Read the explanations below, then try those exercises again.' : 'You have worked through this set. Choose another focus when you are ready.'}</p><p class="small muted">${result.skipped} skipped${result.reviewed ? ` · ${result.reviewed} self-reviewed` : ''}. Review attempts do not replace your first-attempt result.</p><div class="practice-actions">${result.retry.length ? '<button type="button" class="btn" data-retry>Practise missed exercises</button>' : ''}<button type="button" class="btn ghost" data-restart>Repeat the whole set</button><button type="button" class="btn ghost" data-library>${session.set.grammarLessons ? 'Choose another topic' : 'Choose another set'}</button></div></section><section class="practice-review"><h2>Your answer review</h2>${session.indices.map(index => {
     const item = session.set.items[index], r = session.records[index];
     const response = r.skipped ? 'Skipped' : item.type === 'choice' ? item.options[r.response] : item.type === 'match' ? item.pairs.map((p, i) => `${p.left} → ${item.pairs[Number(r.response[i])]?.right || '—'}`).join('\n') : r.response;
     return `<details${r.correct === false ? ' open' : ''}><summary>${esc(item.prompt)} <span>${r.skipped ? 'Skipped' : r.correct === null ? 'Self-reviewed' : `${r.earned}/${r.total}`}</span></summary><p><b>Your response</b></p><p class="practice-review-response" lang="de">${esc(response)}</p><p><b>${item.type === 'write' ? 'One possible model' : 'Answer'}</b></p><p class="practice-review-response" lang="de">${esc(modelAnswer(item))}</p><p>${esc(item.explanation)}</p></details>`;
@@ -156,6 +231,7 @@ function openSet(set, review = false, indices) {
     session.review = review;
   }
   message = '';
+  activePair = null;
   updateAddress();
   paint('#practice-prompt');
   document.getElementById('practice-stage')?.scrollIntoView({ block: 'start' });
@@ -166,7 +242,7 @@ function check() {
   const item = activeItem(session), d = draft();
   const response = item.type === 'choice' ? d.choice : item.type === 'match' ? { ...d.pairs } : item.type === 'order' ? d.tokens.map(i => item.tokens[i]).join(' ') : d.text.trim();
   const missing = item.type === 'choice' ? response === null : item.type === 'match' ? item.pairs.some((_, i) => !Object.hasOwn(response, i) || response[i] === '') : item.type === 'order' ? d.tokens.length !== item.tokens.length : !response;
-  if (missing) { message = item.type === 'match' ? 'Choose a match for every line before checking.' : item.type === 'order' ? 'Use every chunk before checking the sentence.' : 'Add your answer first, or choose Skip for now.'; paint('#practice-response, .practice-choice input, .practice-chunk, select'); return; }
+  if (missing) { message = item.type === 'match' ? 'Choose a match for every line before checking.' : item.type === 'order' ? 'Use every chunk before checking the sentence.' : 'Add your answer first, or choose Skip for now.'; paint('#practice-response, .practice-choice input, .practice-chunk, select, [data-match-phrase]'); return; }
   message = '';
   if (item.type === 'write' && !d.reviewed) { d.reviewed = true; paint('.practice-model h3'); return; }
   if (submit(session, response)) { persist(true); logPractice(); }
@@ -174,12 +250,17 @@ function check() {
 }
 export function render(lv) {
   level = lv; session = null; filter = 'all'; search = ''; message = ''; savedOnDevice = true;
-  progress = new Map(sets().map(set => [set.id, practiceProgress(level, set)]));
+  activePair = null;
+  matchingSets = phraseMatchingSets();
+  grammarSets = grammarReviewSets(level);
+  allSets = [...sets(), ...grammarSets];
+  progress = new Map(allSets.map(set => [set.id, practiceProgress(level, set)]));
   const params = new URLSearchParams(location.hash.split('?')[1] || '');
   tab = tabs.some(([id]) => id === params.get('tab')) ? params.get('tab') : 'sets';
   const selectedId = params.get('set');
-  const selected = sets().find(set => set.id === selectedId);
+  const selected = allSets.find(set => set.id === selectedId);
   if (selected) {
+    if (selected.grammarLessons && tab === 'sets') tab = 'grammar';
     const data = progress.get(selected.id);
     session = params.has('review') ? data.review : data.normal || makeSession(selected);
   }
@@ -188,11 +269,17 @@ export function render(lv) {
 export function onClick(e, button) {
   if (!button) return;
   const data = button.dataset;
-  if (data.practiceTab) { tab = data.practiceTab; updateAddress(); paint(`[data-practice-tab="${tab}"]`); return; }
+  if (data.practiceTab) {
+    tab = data.practiceTab;
+    document.querySelector('.page-head .lvswitch').outerHTML = levelSwitch(level, levelPath(), 'Choose a practice level');
+    updateAddress();
+    paint(`[aria-pressed="true"][data-practice-tab="${tab}"]`);
+    return;
+  }
   if (data.filter !== undefined) { filter = data.filter; paint(`[data-filter="${filter}"]`); return; }
   if (data.clearSearch !== undefined) { search = ''; filter = 'all'; paint('#practice-search'); return; }
   if (data.set) {
-    const selected = sets().find(s => s.id === data.set);
+    const selected = allSets.find(s => s.id === data.set);
     if (!selected) return;
     openSet(selected, data.missed !== undefined);
     return;
@@ -206,9 +293,28 @@ export function onClick(e, button) {
   if (session.finished) return;
   if (data.next !== undefined) {
     if (!advance(session)) return;
-    message = ''; paint(session.finished ? '.practice-finish' : '#practice-prompt'); return;
+    message = ''; activePair = null; paint(session.finished ? '.practice-finish' : '#practice-prompt'); return;
   }
   if (currentRecord()) return;
+  if (data.matchPhrase !== undefined) {
+    activePair = Number(data.matchPhrase);
+    const card = button.closest('.practice-card');
+    card.querySelectorAll('[data-match-phrase]').forEach(phrase => phrase.setAttribute('aria-pressed', String(phrase === button)));
+    const meanings = card.querySelectorAll('[data-match-meaning]');
+    meanings.forEach(meaning => { meaning.disabled = false; });
+    meanings[0]?.focus({ preventScroll: true });
+    return;
+  }
+  if (data.matchMeaning !== undefined && activePair !== null) {
+    const pairs = draft().pairs;
+    const previous = Object.keys(pairs).find(index => pairs[index] === data.matchMeaning);
+    if (previous !== undefined && Number(previous) !== activePair) delete pairs[previous];
+    pairs[activePair] = data.matchMeaning;
+    const next = activeItem(session).pairs.findIndex((_, i) => !pairs[i]);
+    activePair = null;
+    paint(next < 0 ? '[data-check]' : `[data-match-phrase="${next}"]`);
+    return;
+  }
   if (data.check !== undefined) { check(); return; }
   if (data.skip !== undefined) { captureDraft(); submit(session, '', { skipped: true }); persist(true); message = ''; paint('[data-next]'); return; }
   if (data.token !== undefined || data.removeToken !== undefined || data.clearTokens !== undefined) {
@@ -236,7 +342,7 @@ export function mount(lv, { sameKind } = {}) {
   level = lv; document.addEventListener('input', onInput);
   if (session) persist();
   if (!motionOK()) return;
-  if (sameKind) enter('.page-head h1, .practice-overview', { y: 8, duration: 0.42 });
+  if (sameKind) enter('.page-head h1', { y: 8, duration: 0.42 });
   else splitReveal(document.querySelector('.page-head h1'), { duration: 0.62 });
 }
 export function unmount() { document.removeEventListener('input', onInput); stopAudio(); }

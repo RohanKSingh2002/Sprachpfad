@@ -81,7 +81,7 @@
   .sentence-round-actions { position: sticky; bottom: var(--mobile-nav-offset, 0px); padding: 9px 0; background: var(--surface); z-index: 2; }
 }
 .sentence-tool-panel, .sentence-import { margin: 14px 0; padding: 18px 22px; }
-.sentence-tool-panel > summary, .sentence-import > summary, .sentence-playback > summary { cursor: pointer; font-weight: 600; }
+.sentence-tool-panel > summary, .sentence-import > summary { cursor: pointer; font-weight: 600; }
 .sentence-tool-panel > p, .sentence-import > p { margin-top: 12px; }
 .sentence-tool-panel > .sentence-review-controls + .sentence-review-controls { margin-top: 16px; }
 .sentence-review-controls input[type="search"], .sentence-review-controls input[type="number"], .sentence-import input, .sentence-import textarea, .sentence-import select { box-sizing: border-box; width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--input); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; }
@@ -150,3 +150,5 @@
 @media (max-width: 700px) {
   .sentence-batch-bar { position: static; }
 }
+.sentence-playback-quick { display: flex; align-items: center; flex-wrap: wrap; gap: 0 16px; margin-block: 5px; }
+.sentence-playback-quick label { min-height: 44px; }

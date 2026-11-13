@@ -2,6 +2,7 @@
 
 import { LEVELS, LEVEL_BY_ID, ALL_LESSONS, ALL_WORDS, SETS, gradedTasks, isFlashcardSet, isSavedWord } from "./content.js";
 import { addDays, dayKey, todayKey } from "./utils.js";
+import { DEFAULT_GERMAN_VOICE, GERMAN_VOICES } from "./german-voices.js";
 
 const KEY = "sprachpfad-v1";
 
@@ -153,13 +154,17 @@ function savedSentencePreferences(value) {
 }
 
 function savedSitePreferences(value, oldLanguage) {
-  const { appLanguage, text, motion, home, reviewMode, cardDirection, cardSize, cardMissed } = object(value);
+  const { appLanguage, text, motion, home, reviewMode, cardDirection, cardSize, cardMissed, lessonLayout, lessonSounds, lessonCelebrations, germanVoice } = object(value);
   return {
     appLanguage: ["en", "es", "fr"].includes(appLanguage) ? appLanguage : ["es", "fr"].includes(oldLanguage) ? oldLanguage : "en",
     text: ["normal", "large", "extra"].includes(text) ? text : "normal",
     motion: ["device", "reduced", "full"].includes(motion) ? motion : "device",
     home: ["mix", "course", "review"].includes(home) ? home : "mix",
     reviewMode: Object.hasOwn(SENTENCE_MODES, reviewMode) ? reviewMode : "recall",
+    lessonLayout: lessonLayout === "focus" ? "focus" : "list",
+    lessonSounds: lessonSounds === true,
+    lessonCelebrations: lessonCelebrations !== false,
+    germanVoice: Object.hasOwn(GERMAN_VOICES, germanVoice) ? germanVoice : DEFAULT_GERMAN_VOICE,
     cardDirection: ["de", "en", "mixed"].includes(cardDirection) ? cardDirection : "de",
     cardSize: [0, 10, 20].includes(cardSize) ? cardSize : 0,
     cardMissed: cardMissed === true,

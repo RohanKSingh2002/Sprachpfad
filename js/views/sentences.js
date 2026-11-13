@@ -323,22 +323,24 @@ function playbackControls(recall = false) {
   return `<div class="sentence-playback-block">
     <div class="sentence-audio-tools">
       <button class="btn small" type="button" data-play-shadowing aria-label="Play sentence"${listening ? " disabled" : ""}>${localInstruction("Play")}</button>
-      <button class="btn small ghost" type="button" data-open-playback>Speed <span data-current-audio-speed>${audioPlaybackSpeed()}×</span></button>
+      <button class="btn small ghost" type="button" data-open-playback aria-controls="sentence-playback-options" aria-expanded="${playbackSettingsOpen}">Audio <span data-current-audio-speed>${audioPlaybackSpeed()}×</span></button>
       <button class="btn small ghost" type="button" data-stop-listening${listening ? "" : " disabled"}>Stop playback</button>
       ${recall ? "" : `<button class="link-btn" type="button" data-toggle-transcript aria-controls="sentence-transcript" aria-expanded="false">${localInstruction("Show German text")}</button>`}
     </div>
-    <details class="sentence-playback"${playbackSettingsOpen ? " open" : ""}><summary>${localInstruction("Playback settings")}</summary><div class="sentence-review-controls">
+    <div class="sentence-playback-quick" role="group" aria-label="Quick playback settings">
+      ${recall ? "" : `<label class="sentence-check"><input type="checkbox" id="sentence-round-translation"${translation !== false ? " checked" : ""}> ${localInstruction("Show translations")}</label>`}
+      <label class="sentence-check"><input type="checkbox" data-playback="paired"${paired ? " checked" : ""}> Dual audio</label>
+    </div>
+    <div class="sentence-playback" id="sentence-playback-options"${playbackSettingsOpen ? "" : " hidden"}><div class="sentence-review-controls">
       ${audioSpeedControl("sentence-playback-speed", "Speed")}
       <label>Repeats<select data-playback="repeats">${options(SENTENCE_REPEATS.map(value => [value, value]), repeats)}</select></label>
       <label>Pause between repeats and sentences (s)<input type="number" data-playback="pause" min="0" max="10" step="0.5" value="${pause}"></label>
-      <label class="sentence-check"><input type="checkbox" data-playback="paired"${paired ? " checked" : ""}> Play translation first</label>
       <label>Translation-to-German gap (s)<input type="number" data-playback="languagePause" min="0" max="10" step="0.5" value="${languagePause}"${paired ? "" : " disabled"}></label>
       <label class="sentence-check"><input type="checkbox" data-playback="pairEveryRepeat"${pairEveryRepeat ? " checked" : ""}${paired ? "" : " disabled"}> Translate before every repeat</label>
       ${recall ? "" : `
       <label class="sentence-check"><input type="checkbox" data-playback="autoplay"${autoplay ? " checked" : ""}> Auto-advance through round</label>
-      <label>Loop<select data-playback="loop">${options([["off", "Off"], ["sentence", "This sentence"], ["batch", "Whole batch"]], loop)}</select></label>
-      <label class="sentence-check"><input type="checkbox" id="sentence-round-translation"${translation !== false ? " checked" : ""}> ${localInstruction("Show translations")}</label>`}
-    </div><p class="small muted">Speed applies across Sprachpfad. The other settings apply the next time you start this player. Translations and custom German sentences use available browser voices.</p></details>
+      <label>Loop<select data-playback="loop">${options([["off", "Off"], ["sentence", "This sentence"], ["batch", "Whole batch"]], loop)}</select></label>`}
+    </div><p class="small muted">Speed applies across Sprachpfad. The other settings apply the next time you start this player. Translations and any explicitly selected browser voice use your browser’s speech service.</p></div>
     <p class="small muted" id="sentence-playback-status" role="status"></p></div>`;
 }
 
@@ -648,8 +650,11 @@ function onRoundClick(button) {
   if (data.skipSentence !== undefined) { advanceRound(false); return; }
   if (data.playShadowing !== undefined) { void playListeningRound(); return; }
   if (data.openPlayback !== undefined) {
-    document.querySelector(".sentence-playback").open = true;
-    document.getElementById("sentence-playback-speed")?.focus();
+    const options = document.getElementById("sentence-playback-options");
+    playbackSettingsOpen = options.hidden;
+    options.hidden = !playbackSettingsOpen;
+    button.setAttribute("aria-expanded", String(playbackSettingsOpen));
+    if (playbackSettingsOpen) document.getElementById("sentence-playback-speed")?.focus();
     return;
   }
   if (data.stopListening !== undefined) {
@@ -939,8 +944,10 @@ export function onChange(event) {
   }
   if (id === "sentence-round-translation") {
     setSentencePreferences({ translation: checked });
-    playbackSettingsOpen = true;
+    const transcriptOpen = document.getElementById("sentence-transcript")?.hidden === false;
     paint("#sentence-round-translation");
+    if (transcriptOpen) document.querySelector("[data-toggle-transcript]")?.click();
+    syncPlaybackControls();
     return;
   }
   if (id === "sentence-add-collection") selectedCollection = value;
@@ -998,13 +1005,8 @@ function onInput(event) {
   if (event.target.id === "sentence-collection-search") { collectionSearch = event.target.value; refreshCollections(); }
 }
 
-function onToggle(event) {
-  if (event.target.matches?.(".sentence-playback")) playbackSettingsOpen = event.target.open;
-}
-
 export function mount() {
   document.addEventListener("input", onInput);
-  document.addEventListener("toggle", onToggle, true);
   refreshSentencePrompts(document.getElementById("app"));
   unmountImport = mountSentenceImport(document.getElementById("app"), ({ id, added }) => {
     selectedCollection = id;
@@ -1023,7 +1025,6 @@ export function mount() {
 
 export function unmount() {
   document.removeEventListener("input", onInput);
-  document.removeEventListener("toggle", onToggle, true);
   unmountImport?.();
   stopListening();
 }

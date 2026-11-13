@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice preview | Sprachpfad</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f5f6f8; --panel: #fff; --ink: #15213c; --muted: #525d70; --line: #d7dce5; --yellow: #f2c02a; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #11151e; --panel: #191f2b; --ink: #f1f3f7; --muted: #b3bdd1; --line: #3c475c; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--bg); font: 1rem/1.55 Inter, system-ui, sans-serif; }
+    main { width: min(100% - 32px, 720px); margin: 32px auto 48px; }
+    header p { margin: 0; font-weight: 700; }
+    header p::before { display: inline-block; width: .7em; height: .7em; margin-right: .4em; border-radius: 50%; background: var(--yellow); content: ''; }
+    h1 { font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.12; letter-spacing: -.04em; margin: 12px 0; }
+    h2 { font-size: 1.13rem; margin: 0 0 6px; }
+    .muted, small { color: var(--muted); }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin-block: 14px; padding: clamp(14px, 4vw, 22px); }
+    .controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr)); gap: 10px; }
+    label { display: grid; gap: 4px; font-weight: 650; }
+    select, button { min-height: 44px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: inherit; }
+    select { width: 100%; }
+    button { cursor: pointer; font-weight: 650; }
+    button:disabled { cursor: default; opacity: .55; }
+    button[data-sample] { background: var(--yellow); color: #17213b; border-color: transparent; }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    .sample { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 12px; border-top: 1px solid var(--line); }
+    .sample p, .sample ol { margin: 0; }
+    .sample ol { padding-inline-start: 1.2rem; }
+    .status { display: flex; align-items: center; gap: 12px; min-height: 56px; margin-top: 8px; }
+    .status p { margin: 0; }
+    a { color: inherit; }
+    @media (max-width: 470px) { .sample { align-items: start; flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><p>Sprachpfad</p><h1>Voice preview</h1></header>
+    <p class="muted">Compare the same phrases at normal and slow speeds. Listen for clear vowels, natural sentence stress and distinct speakers.</p>
+    <section class="panel" aria-labelledby="options-heading">
+      <h2 id="options-heading">Playback settings</h2>
+      <div class="controls">
+        <label>Voice source<select id="source"><option value="browser">Browser voices</option><option value="pocket" hidden disabled>Pocket TTS · local German model</option><option value="cloud" hidden disabled>Azure neural voices</option></select></label>
+        <label>Voice 1<select id="voice-a" disabled></select></label>
+        <label>Voice 2 for dialogue<select id="voice-b" disabled></select></label>
+        <label>Speed<select id="rate"><option value="1">Normal · 1×</option><option value="0.75">Slow · 0.75×</option></select></label>
+      </div>
+      <p class="muted" id="source-note">Browser voices vary by device. Azure voices become available when the local preview is connected to Azure Speech.</p>
+      <div class="status"><button id="stop" type="button" disabled>Stop</button><p class="muted" id="status" role="status">Checking available voices…</p></div>
+    </section>
+    <section class="panel" aria-labelledby="samples-heading">
+      <h2 id="samples-heading">Listening samples</h2>
+      <div id="samples"></div>
+    </section>
+    <p class="muted">You can also audition Seraphina, Florian and Conrad in the <a href="https://speech.microsoft.com/portal/voicegallery">Microsoft Voice Gallery</a>.</p>
+  </main>
+  <script type="module" src="js/voice-preview.js"></script>
+</body>
+</html>

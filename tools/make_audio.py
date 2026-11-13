@@ -88,6 +88,8 @@ def spoken_texts():
             for practice_set in sets:
                 if practice_set.get("audioText"):
                     texts.setdefault(practice_set["audioText"])
+    for text in lesson_dialogue_voices():
+        texts.setdefault(text)
     return [t for t in texts if t.strip()]
 
 
@@ -95,6 +97,17 @@ def dialogue_segments():
     """Authored speaker turns; the combined file keeps the hash of the visible transcript."""
     course = json.loads((DATA / "a1-course.json").read_text(encoding="utf-8"))
     return {item["audioText"]: item["segments"] for item in course["test"]["listening"] if item.get("segments")}
+
+
+def lesson_dialogue_voices():
+    """Map each lesson dialogue line to the voice for that speaker."""
+    dialogues = json.loads((DATA / "lesson-dialogues.json").read_text(encoding="utf-8"))
+    voices = {}
+    for lessons in dialogues.values():
+        for dialogue in lessons.values():
+            for index, line in enumerate(dialogue["lines"]):
+                voices.setdefault(line["de"], index % 2)
+    return voices
 
 
 # Spellings the voice says more clearly than the written form (the file still belongs to the written form)
@@ -284,6 +297,7 @@ def main():
 
     texts = spoken_texts()
     dialogues = dialogue_segments()
+    lesson_voices = lesson_dialogue_voices()
     ids = {text: clip_id(text) for text in texts}
     if len(set(ids.values())) != len(ids):
         sys.exit("Two texts got the same file name; change one of them slightly.")
@@ -293,10 +307,14 @@ def main():
 
     if todo:
         tts = load_voice(ensure_model())
-        second = load_voice(ensure_model(SECOND_VOICE)) if any(t in dialogues for t in todo) else None
+        second = load_voice(ensure_model(SECOND_VOICE)) if any(t in dialogues or lesson_voices.get(t) == 1 for t in todo) else None
         start = time.time()
         for n, text in enumerate(todo, 1):
-            pcm, rate = record_dialogue([tts, second], dialogues[text], args.speed) if text in dialogues else record(tts, text, args.speed)
+            if text in dialogues:
+                pcm, rate = record_dialogue([tts, second], dialogues[text], args.speed)
+            else:
+                voice = second if lesson_voices.get(text) == 1 else tts
+                pcm, rate = record(voice, text, args.speed)
             (AUDIO / f"{ids[text]}.mp3").write_bytes(to_mp3(pcm, rate))
             if n % 25 == 0 or n == len(todo):
                 print(f"  {n}/{len(todo)} recorded ({time.time() - start:.0f}s)", flush=True)

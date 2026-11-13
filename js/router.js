@@ -24,17 +24,17 @@ import { applyDisplayPreferences, gsap, motionOK, onLeave, runCleanups, ScrollTr
 import { initSmoothScroll, scrollToTop } from "./ui/scroll.js?v=20261113-polish1";
 import * as cards from "./views/cards.js?v=20261113-polish1";
 import * as cert from "./views/cert.js?v=20261113-polish1";
-import * as home from "./views/home.js?v=20261112-shortcuts2";
-import * as lesson from "./views/lesson.js?v=20261113-polish1";
+import * as home from "./views/home.js?v=20261113-exercise-flow1";
+import * as lesson from "./views/lesson.js?v=20261113-lesson-review1";
 import * as notFound from "./views/notfound.js?v=20261113-polish1";
-import * as practice from "./views/practice.js?v=20261113-polish1";
+import * as practice from "./views/practice.js?v=20261113-lesson-review1";
 import * as profile from "./views/profile.js?v=20261113-polish1";
-import * as roadmap from "./views/roadmap.js?v=20261112-weekcards1";
+import * as roadmap from "./views/roadmap.js?v=20261113-lesson-review1";
 import * as test from "./views/test.js?v=20261113-polish1";
 import * as workshop from "./views/workshop.js?v=20261108-home1";
 import * as account from "./views/account.js?v=20261104-settings1";
-import * as settings from "./views/settings.js?v=20261113-signout1";
-import * as sentences from "./views/sentences.js?v=20261113-polish1";
+import * as settings from "./views/settings.js?v=20261113-lesson-review1";
+import * as sentences from "./views/sentences.js?v=20261113-study-ui1";
 
 let active = null;
 let firstRoute = true;

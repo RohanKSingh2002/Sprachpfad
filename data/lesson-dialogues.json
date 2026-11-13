@@ -1,0 +1,1188 @@
+{
+  "a1": {
+    "1": {
+      "title": "Meeting a classmate",
+      "lines": [
+        {
+          "de": "Hallo! Ich heiße Noor. Wie heißt du?",
+          "en": "Hello! My name is Noor. What’s your name?"
+        },
+        {
+          "de": "Ich heiße Leo. Woher kommst du?",
+          "en": "My name is Leo. Where are you from?"
+        },
+        {
+          "de": "Ich komme aus Belgien und wohne jetzt in Bonn.",
+          "en": "I’m from Belgium and now live in Bonn."
+        }
+      ]
+    },
+    "2": {
+      "title": "After work",
+      "lines": [
+        {
+          "de": "Arbeitest du heute?",
+          "en": "Are you working today?"
+        },
+        {
+          "de": "Ja. Danach lerne ich Deutsch. Und du?",
+          "en": "Yes. After that I’m studying German. What about you?"
+        },
+        {
+          "de": "Ich spiele Fußball und kaufe danach Brot.",
+          "en": "I’m playing football and buying bread afterwards."
+        }
+      ]
+    },
+    "3": {
+      "title": "At the flea market",
+      "lines": [
+        {
+          "de": "Was ist das?",
+          "en": "What’s that?"
+        },
+        {
+          "de": "Das ist eine Lampe. Der Tisch und die Stühle sind auch zu verkaufen.",
+          "en": "That’s a lamp. The table and chairs are for sale too."
+        },
+        {
+          "de": "Ich nehme die Lampe und das Buch.",
+          "en": "I’ll take the lamp and the book."
+        }
+      ]
+    },
+    "4": {
+      "title": "Making a plan",
+      "lines": [
+        {
+          "de": "Wann beginnt der Kurs?",
+          "en": "When does the course start?"
+        },
+        {
+          "de": "Heute beginnt er um sechs. Kommst du auch?",
+          "en": "Today it starts at six. Are you coming too?"
+        },
+        {
+          "de": "Heute nicht. Am Abend koche ich für meine Familie.",
+          "en": "Not today. I’m cooking for my family in the evening."
+        }
+      ]
+    },
+    "5": {
+      "title": "At a café",
+      "lines": [
+        {
+          "de": "Was möchten Sie?",
+          "en": "What would you like?"
+        },
+        {
+          "de": "Ich möchte einen Kaffee und ein Brötchen.",
+          "en": "I’d like a coffee and a bread roll."
+        },
+        {
+          "de": "Möchten Sie auch ein Wasser?",
+          "en": "Would you like a glass of water too?"
+        }
+      ]
+    },
+    "6": {
+      "title": "Meeting for a coffee",
+      "lines": [
+        {
+          "de": "Hast du heute Zeit für einen Kaffee?",
+          "en": "Do you have time for a coffee today?"
+        },
+        {
+          "de": "Ja, aber das Café am Bahnhof ist nicht billig.",
+          "en": "Yes, but the café at the station isn’t cheap."
+        },
+        {
+          "de": "Dann gehen wir in den Park. Dort brauchen wir kein Geld.",
+          "en": "Then let’s go to the park. We don’t need any money there."
+        }
+      ]
+    },
+    "7": {
+      "title": "Changing an appointment",
+      "lines": [
+        {
+          "de": "Wann ist dein Termin?",
+          "en": "When is your appointment?"
+        },
+        {
+          "de": "Am Montag um halb neun. Da kann ich nicht.",
+          "en": "On Monday at half past eight. I can’t make it then."
+        },
+        {
+          "de": "Hast du am Freitag um Viertel nach zehn Zeit?",
+          "en": "Are you free on Friday at a quarter past ten?"
+        }
+      ]
+    },
+    "8": {
+      "title": "A Saturday routine",
+      "lines": [
+        {
+          "de": "Wann stehst du am Samstag auf?",
+          "en": "When do you get up on Saturdays?"
+        },
+        {
+          "de": "Um acht. Danach kaufe ich ein.",
+          "en": "At eight. After that I do the shopping."
+        },
+        {
+          "de": "Rufst du mich am Abend an?",
+          "en": "Will you call me in the evening?"
+        }
+      ]
+    },
+    "9": {
+      "title": "Spelling a surname",
+      "lines": [
+        {
+          "de": "Wie ist Ihr Name, bitte?",
+          "en": "What’s your name, please?"
+        },
+        {
+          "de": "Mein Name ist Behn. B, E, H, N.",
+          "en": "My name is Behn. B, E, H, N."
+        },
+        {
+          "de": "Können Sie das bitte langsam wiederholen?",
+          "en": "Could you repeat that slowly, please?"
+        }
+      ]
+    },
+    "10": {
+      "title": "Ordering bread by phone",
+      "lines": [
+        {
+          "de": "Was kosten zwei Brote?",
+          "en": "How much do two loaves cost?"
+        },
+        {
+          "de": "Zusammen sechs Euro. Wie ist Ihre Adresse?",
+          "en": "Six euros altogether. What’s your address?"
+        },
+        {
+          "de": "Meine Adresse ist Marktstraße zwölf.",
+          "en": "My address is 12 Marktstraße."
+        }
+      ]
+    },
+    "11": {
+      "title": "Registering for a course",
+      "lines": [
+        {
+          "de": "Wie ist Ihr Familienname?",
+          "en": "What’s your surname?"
+        },
+        {
+          "de": "Yılmaz. Mein Wohnort ist Köln.",
+          "en": "Yılmaz. I live in Cologne."
+        },
+        {
+          "de": "Danke. Hier fehlt noch Ihr Geburtsdatum.",
+          "en": "Thank you. Your date of birth is still missing here."
+        }
+      ]
+    },
+    "12": {
+      "title": "Looking at a family photo",
+      "lines": [
+        {
+          "de": "Wer ist das neben deiner Mutter?",
+          "en": "Who’s that next to your mother?"
+        },
+        {
+          "de": "Das ist mein Bruder. Unsere Schwester ist nicht auf dem Foto.",
+          "en": "That’s my brother. Our sister isn’t in the photo."
+        },
+        {
+          "de": "Besuchst du deine Eltern oft?",
+          "en": "Do you visit your parents often?"
+        }
+      ]
+    },
+    "13": {
+      "title": "Choosing something to read",
+      "lines": [
+        {
+          "de": "Was liest du?",
+          "en": "What are you reading?"
+        },
+        {
+          "de": "Ich lese die Zeitung. Welche Zeitschrift nimmst du?",
+          "en": "I’m reading the newspaper. Which magazine are you taking?"
+        },
+        {
+          "de": "Ich nehme die hier. Wann fährt unser Zug?",
+          "en": "I’ll take this one. When does our train leave?"
+        }
+      ]
+    },
+    "14": {
+      "title": "Planning the week",
+      "lines": [
+        {
+          "de": "Arbeitest du normalerweise am Montag?",
+          "en": "Do you usually work on Mondays?"
+        },
+        {
+          "de": "Ja. Aber am Montag ist ein Feiertag. Da habe ich frei.",
+          "en": "Yes. But Monday is a public holiday. I have the day off then."
+        },
+        {
+          "de": "Gut! Dann treffen wir uns um zehn.",
+          "en": "Great! Let’s meet at ten then."
+        }
+      ]
+    },
+    "15": {
+      "title": "Ordering lunch",
+      "lines": [
+        {
+          "de": "Möchten Sie einen Salat?",
+          "en": "Would you like a salad?"
+        },
+        {
+          "de": "Ich hätte lieber eine Suppe und ein Glas Wasser.",
+          "en": "I’d rather have soup and a glass of water."
+        },
+        {
+          "de": "Gern. Möchten Sie gleich bezahlen?",
+          "en": "Of course. Would you like to pay now?"
+        },
+        {
+          "de": "Ja, bitte. Die Rechnung, bitte.",
+          "en": "Yes, please. The bill, please."
+        }
+      ]
+    },
+    "16": {
+      "title": "Buying a jacket",
+      "lines": [
+        {
+          "de": "Welche Größe brauchen Sie?",
+          "en": "What size do you need?"
+        },
+        {
+          "de": "Größe M. Was kostet diese Jacke?",
+          "en": "Size M. How much is this jacket?"
+        },
+        {
+          "de": "Vierzig Euro.",
+          "en": "Forty euros."
+        },
+        {
+          "de": "Gut. Kann ich mit Karte bezahlen?",
+          "en": "Great. Can I pay by card?"
+        }
+      ]
+    },
+    "17": {
+      "title": "At the community center",
+      "lines": [
+        {
+          "de": "Darf man hier rauchen?",
+          "en": "Is smoking allowed here?"
+        },
+        {
+          "de": "Nein. Sie müssen dafür nach draußen gehen.",
+          "en": "No. You have to go outside for that."
+        },
+        {
+          "de": "Okay. Kann ich hier auf meine Freundin warten?",
+          "en": "Okay. Can I wait here for my friend?"
+        }
+      ]
+    },
+    "18": {
+      "title": "At the front door",
+      "lines": [
+        {
+          "de": "Kannst du mir bitte helfen? Die Tür ist zu.",
+          "en": "Can you help me, please? The door is shut."
+        },
+        {
+          "de": "Klar. Gibst du mir bitte den Schlüssel?",
+          "en": "Sure. Can you give me the key, please?"
+        },
+        {
+          "de": "Hier ist er. Danke, dass du die Tür öffnest.",
+          "en": "Here it is. Thanks for opening the door."
+        }
+      ]
+    },
+    "19": {
+      "title": "Finding the station",
+      "lines": [
+        {
+          "de": "Entschuldigung, wo ist der Bahnhof?",
+          "en": "Excuse me, where’s the train station?"
+        },
+        {
+          "de": "Gehen Sie geradeaus und dann links. Er ist neben der Apotheke.",
+          "en": "Go straight ahead and then left. It’s next to the pharmacy."
+        },
+        {
+          "de": "Danke! Ist die Bushaltestelle auch dort?",
+          "en": "Thanks! Is the bus stop there too?"
+        }
+      ]
+    },
+    "20": {
+      "title": "Viewing a flat",
+      "lines": [
+        {
+          "de": "Wie viele Zimmer hat die Wohnung?",
+          "en": "How many rooms does the flat have?"
+        },
+        {
+          "de": "Zwei. Die Küche ist hell und es gibt einen Balkon.",
+          "en": "Two. The kitchen is bright and there’s a balcony."
+        },
+        {
+          "de": "Wie hoch ist die Miete?",
+          "en": "How much is the rent?"
+        }
+      ]
+    },
+    "21": {
+      "title": "Moving a meeting",
+      "lines": [
+        {
+          "de": "Können wir den Termin ändern?",
+          "en": "Can we change the appointment?"
+        },
+        {
+          "de": "Ja. Passt Donnerstag?",
+          "en": "Yes. Does Thursday work?"
+        },
+        {
+          "de": "Donnerstag geht nicht, denn ich muss in der Firma arbeiten.",
+          "en": "Thursday doesn’t work because I have to work at the office."
+        }
+      ]
+    },
+    "22": {
+      "title": "Calling the doctor’s office",
+      "lines": [
+        {
+          "de": "Guten Tag. Mir geht es nicht gut. Mein Hals tut weh.",
+          "en": "Hello. I’m not feeling well. My throat hurts."
+        },
+        {
+          "de": "Können Sie heute um elf in die Praxis kommen?",
+          "en": "Can you come to the office at eleven today?"
+        },
+        {
+          "de": "Ja, danke. Dann komme ich um elf.",
+          "en": "Yes, thank you. I’ll come at eleven then."
+        }
+      ]
+    },
+    "23": {
+      "title": "Buying a train ticket",
+      "lines": [
+        {
+          "de": "Eine Fahrkarte nach Bonn, bitte.",
+          "en": "A ticket to Bonn, please."
+        },
+        {
+          "de": "Einfach oder hin und zurück?",
+          "en": "One way or return?"
+        },
+        {
+          "de": "Hin und zurück, bitte. Muss ich umsteigen?",
+          "en": "Return, please. Do I have to change trains?"
+        },
+        {
+          "de": "Nein. Der Zug fährt von Gleis vier.",
+          "en": "No. The train leaves from platform four."
+        }
+      ]
+    },
+    "24": {
+      "title": "Getting ready to go out",
+      "lines": [
+        {
+          "de": "Regnet es noch?",
+          "en": "Is it still raining?"
+        },
+        {
+          "de": "Ja, und es ist kalt. Du brauchst eine Jacke.",
+          "en": "Yes, and it’s cold. You need a jacket."
+        },
+        {
+          "de": "Ich ziehe auch andere Schuhe an.",
+          "en": "I’ll put on different shoes as well."
+        }
+      ]
+    },
+    "25": {
+      "title": "An invitation to the cinema",
+      "lines": [
+        {
+          "de": "Wir gehen am Samstag ins Kino. Möchtest du mitkommen?",
+          "en": "We’re going to the cinema on Saturday. Would you like to come?"
+        },
+        {
+          "de": "Gern. Wann treffen wir uns?",
+          "en": "I’d love to. When shall we meet?"
+        },
+        {
+          "de": "Um sieben vor dem Kino.",
+          "en": "At seven in front of the cinema."
+        }
+      ]
+    },
+    "26": {
+      "title": "What did you do yesterday?",
+      "lines": [
+        {
+          "de": "Was hast du gestern gemacht?",
+          "en": "What did you do yesterday?"
+        },
+        {
+          "de": "Ich habe Deutsch gelernt und mit meiner Schwester telefoniert.",
+          "en": "I studied German and spoke to my sister on the phone."
+        },
+        {
+          "de": "Hast du schon gegessen?",
+          "en": "Have you eaten yet?"
+        }
+      ]
+    },
+    "27": {
+      "title": "Back from a trip",
+      "lines": [
+        {
+          "de": "Wann bist du zurückgekommen?",
+          "en": "When did you get back?"
+        },
+        {
+          "de": "Heute Morgen. Wir sind mit dem Zug gefahren.",
+          "en": "This morning. We traveled by train."
+        },
+        {
+          "de": "Wie lange seid ihr in Bonn geblieben?",
+          "en": "How long did you stay in Bonn?"
+        }
+      ]
+    },
+    "28": {
+      "title": "Back at class",
+      "lines": [
+        {
+          "de": "Wo warst du letzte Woche?",
+          "en": "Where were you last week?"
+        },
+        {
+          "de": "Ich war krank und hatte einen Termin beim Arzt.",
+          "en": "I was ill and had a doctor’s appointment."
+        },
+        {
+          "de": "Hast du heute Zeit? Ich habe die Aufgaben für dich.",
+          "en": "Do you have time today? I have the assignments for you."
+        }
+      ]
+    },
+    "29": {
+      "title": "At a closed entrance",
+      "lines": [
+        {
+          "de": "Hier steht: Dieser Eingang ist heute geschlossen.",
+          "en": "It says this entrance is closed today."
+        },
+        {
+          "de": "Ist der Eingang am Parkplatz geöffnet?",
+          "en": "Is the entrance by the car park open?"
+        },
+        {
+          "de": "Ja. Laut Schild ist er ab neun Uhr geöffnet.",
+          "en": "Yes. According to the sign it opens at nine."
+        }
+      ]
+    },
+    "30": {
+      "title": "A change of platform",
+      "lines": [
+        {
+          "de": "Die Durchsage sagt: Die Abfahrt ist nicht auf Gleis zwei, sondern auf Gleis fünf.",
+          "en": "The announcement says the train leaves from platform five instead of platform two."
+        },
+        {
+          "de": "Fährt der Zug auch später?",
+          "en": "Is the train leaving later too?"
+        },
+        {
+          "de": "Ja, um neun Uhr. Ich schicke dir eine Nachricht.",
+          "en": "Yes, at nine. I’ll send you a message."
+        }
+      ]
+    },
+    "31": {
+      "title": "A question about registration",
+      "lines": [
+        {
+          "de": "Ich möchte mich für den Kurs anmelden. Brauche ich ein Formular?",
+          "en": "I’d like to register for the course. Do I need a form?"
+        },
+        {
+          "de": "Ja. Schreiben Sie bitte „Anmeldung“ in den Betreff Ihrer E-Mail.",
+          "en": "Yes. Please put “Registration” in your email’s subject line."
+        },
+        {
+          "de": "Danke. Wann bekomme ich eine Antwort?",
+          "en": "Thank you. When will I get a reply?"
+        }
+      ]
+    },
+    "32": {
+      "title": "Practising with a partner",
+      "lines": [
+        {
+          "de": "Stell dich bitte kurz vor.",
+          "en": "Please introduce yourself briefly."
+        },
+        {
+          "de": "Ich heiße Ana und wohne in Mainz. Hast du eine Frage?",
+          "en": "My name is Ana and I live in Mainz. Do you have a question?"
+        },
+        {
+          "de": "Ja. Kannst du den Wohnort noch einmal sagen?",
+          "en": "Yes. Can you say where you live one more time?"
+        }
+      ]
+    }
+  },
+  "a2": {
+    "1": {
+      "title": "Rules for the workshop",
+      "lines": [
+        {
+          "de": "Darf man hier essen?",
+          "en": "Can you eat here?"
+        },
+        {
+          "de": "Nein. Aber du kannst draußen essen. Du musst nur die Tür hinter dir schließen.",
+          "en": "No. But you can eat outside. You just have to close the door behind you."
+        },
+        {
+          "de": "Gut, ich will sowieso kurz an die frische Luft.",
+          "en": "Good, I want to get some fresh air anyway."
+        }
+      ]
+    },
+    "2": {
+      "title": "A quiet weekend",
+      "lines": [
+        {
+          "de": "Was hast du am Wochenende gemacht?",
+          "en": "What did you do over the weekend?"
+        },
+        {
+          "de": "Ich habe einen Film gesehen und viel geschlafen. Und du?",
+          "en": "I watched a film and slept a lot. What about you?"
+        },
+        {
+          "de": "Ich habe Freunde getroffen und mit ihnen Pizza gegessen.",
+          "en": "I met up with friends and ate pizza with them."
+        }
+      ]
+    },
+    "3": {
+      "title": "A trip to Vienna",
+      "lines": [
+        {
+          "de": "Bist du nach Wien geflogen?",
+          "en": "Did you fly to Vienna?"
+        },
+        {
+          "de": "Nein, ich bin mit dem Zug gefahren und eine Woche geblieben.",
+          "en": "No, I went by train and stayed a week."
+        },
+        {
+          "de": "Hast du dort deine Freundin besucht?",
+          "en": "Did you visit your friend there?"
+        }
+      ]
+    },
+    "4": {
+      "title": "A book for someone",
+      "lines": [
+        {
+          "de": "Kannst du mir helfen? Ich möchte meinem Bruder ein Buch schenken.",
+          "en": "Can you help me? I’d like to give my brother a book."
+        },
+        {
+          "de": "Klar. Gefallen ihm Krimis?",
+          "en": "Sure. Does he like crime novels?"
+        },
+        {
+          "de": "Ja, danke! Dann gebe ich ihm diesen hier.",
+          "en": "Yes, thanks! Then I’ll give him this one."
+        }
+      ]
+    },
+    "5": {
+      "title": "Rearranging a room",
+      "lines": [
+        {
+          "de": "Wohin sollen wir das Bild hängen?",
+          "en": "Where should we hang the picture?"
+        },
+        {
+          "de": "An die Wand neben der Tür. Die Lampe stellen wir auf den Tisch.",
+          "en": "On the wall next to the door. We’ll put the lamp on the table."
+        },
+        {
+          "de": "Gut. Jetzt steht die Lampe direkt neben dem Sofa.",
+          "en": "Good. Now the lamp is right next to the sofa."
+        }
+      ]
+    },
+    "6": {
+      "title": "Staying in",
+      "lines": [
+        {
+          "de": "Kommst du heute mit?",
+          "en": "Are you coming along today?"
+        },
+        {
+          "de": "Ich bleibe zu Hause, weil ich müde bin.",
+          "en": "I’m staying home because I’m tired."
+        },
+        {
+          "de": "Okay. Wenn du morgen Zeit hast, können wir zusammen kochen.",
+          "en": "Okay. If you have time tomorrow, we can cook together."
+        }
+      ]
+    },
+    "7": {
+      "title": "Getting ready",
+      "lines": [
+        {
+          "de": "Wie fühlst du dich heute?",
+          "en": "How are you feeling today?"
+        },
+        {
+          "de": "Gut, aber ich muss mich beeilen. Wir treffen uns gleich mit Kim.",
+          "en": "Good, but I have to hurry. We’re meeting Kim shortly."
+        },
+        {
+          "de": "Zieh dich an. Ich warte unten auf dich.",
+          "en": "Get dressed. I’ll wait for you downstairs."
+        }
+      ]
+    },
+    "8": {
+      "title": "Choosing how to travel",
+      "lines": [
+        {
+          "de": "Fährst du lieber mit dem Auto?",
+          "en": "Do you prefer going by car?"
+        },
+        {
+          "de": "Nein, der Zug ist schneller als das Auto und genauso bequem.",
+          "en": "No, the train is faster than the car and just as comfortable."
+        },
+        {
+          "de": "Dann nehmen wir am besten den Zug.",
+          "en": "Then we’d better take the train."
+        }
+      ]
+    },
+    "9": {
+      "title": "A delayed arrival",
+      "lines": [
+        {
+          "de": "Warum warst du gestern nicht pünktlich?",
+          "en": "Why weren’t you on time yesterday?"
+        },
+        {
+          "de": "Der Zug hatte Verspätung. Ich musste eine Stunde warten.",
+          "en": "The train was delayed. I had to wait an hour."
+        },
+        {
+          "de": "Zum Glück konnten wir den Termin verschieben.",
+          "en": "Luckily we were able to move the appointment."
+        }
+      ]
+    },
+    "10": {
+      "title": "A first day at work",
+      "lines": [
+        {
+          "de": "Was hast du an deinem ersten Arbeitstag gemacht?",
+          "en": "What did you do on your first day at work?"
+        },
+        {
+          "de": "Zuerst habe ich das Team kennengelernt. Danach hat mir Jana das Büro gezeigt.",
+          "en": "First I met the team. Then Jana showed me the office."
+        },
+        {
+          "de": "Und zum Schluss?",
+          "en": "And at the end?"
+        },
+        {
+          "de": "Da haben wir alle zusammen Kaffee getrunken.",
+          "en": "We all had coffee together."
+        }
+      ]
+    },
+    "11": {
+      "title": "Asking about a lift",
+      "lines": [
+        {
+          "de": "Können Sie mir sagen, ob der Aufzug funktioniert?",
+          "en": "Could you tell me whether the lift is working?"
+        },
+        {
+          "de": "Der Aufzug ist außer Betrieb. Am Schalter bekommen Sie weitere Auskunft.",
+          "en": "The lift is out of service. You can get more information at the counter."
+        },
+        {
+          "de": "Danke. Wissen Sie, wo der Schalter ist?",
+          "en": "Thank you. Do you know where the counter is?"
+        }
+      ]
+    },
+    "12": {
+      "title": "An alternative time",
+      "lines": [
+        {
+          "de": "Ich muss den Termin am Dienstag leider absagen.",
+          "en": "Unfortunately I have to cancel Tuesday’s appointment."
+        },
+        {
+          "de": "Wäre Freitag um elf stattdessen möglich?",
+          "en": "Would Friday at eleven be possible instead?"
+        },
+        {
+          "de": "Ja. Können Sie mir die neue Uhrzeit bitte bestätigen?",
+          "en": "Yes. Could you confirm the new time for me, please?"
+        }
+      ]
+    },
+    "13": {
+      "title": "Trying on a coat",
+      "lines": [
+        {
+          "de": "Kann ich den gestreiften Mantel anprobieren?",
+          "en": "Can I try on the striped coat?"
+        },
+        {
+          "de": "Natürlich. Welche Größe brauchen Sie?",
+          "en": "Of course. What size do you need?"
+        },
+        {
+          "de": "Vierzig. Der blaue Mantel sieht auch bequem aus.",
+          "en": "Forty. The blue coat looks comfortable too."
+        }
+      ]
+    },
+    "14": {
+      "title": "Choosing a rain jacket",
+      "lines": [
+        {
+          "de": "Ich suche eine leichte, wasserdichte Jacke.",
+          "en": "I’m looking for a light, waterproof jacket."
+        },
+        {
+          "de": "Diese hier ist aus einem leichten Stoff. Brauchen Sie auch etwas Warmes?",
+          "en": "This one is made of a light fabric. Do you also need something warm?"
+        },
+        {
+          "de": "Nein, diese Jacke ist passend für meine Reise.",
+          "en": "No, this jacket is suitable for my trip."
+        }
+      ]
+    },
+    "15": {
+      "title": "A small change of habit",
+      "lines": [
+        {
+          "de": "Ich habe vor, öfter ohne Verpackung einzukaufen.",
+          "en": "I plan to shop without packaging more often."
+        },
+        {
+          "de": "Ich versuche auch, beim Einkaufen Verpackung zu sparen.",
+          "en": "I’m also trying to use less packaging when shopping."
+        },
+        {
+          "de": "Dann dürfen wir nicht vergessen, unsere Taschen mitzunehmen.",
+          "en": "Then we mustn’t forget to bring our bags."
+        }
+      ]
+    },
+    "16": {
+      "title": "A photography course",
+      "lines": [
+        {
+          "de": "Interessierst du dich für Fotografie?",
+          "en": "Are you interested in photography?"
+        },
+        {
+          "de": "Ja, ich nehme an einem Kurs teil und freue mich auf den nächsten Ausflug.",
+          "en": "Yes, I’m taking a course and looking forward to the next outing."
+        },
+        {
+          "de": "Worauf wartest du gerade?",
+          "en": "What are you waiting for right now?"
+        },
+        {
+          "de": "Auf die Antwort der Kursleiterin.",
+          "en": "For the course instructor’s reply."
+        }
+      ]
+    },
+    "17": {
+      "title": "Getting out the door",
+      "lines": [
+        {
+          "de": "Hast du dir schon die Hände gewaschen?",
+          "en": "Have you washed your hands yet?"
+        },
+        {
+          "de": "Ja. Ich muss mich noch anziehen. Warum beeilst du dich so?",
+          "en": "Yes. I still have to get dressed. Why are you in such a hurry?"
+        },
+        {
+          "de": "Mein Wecker hat nicht geklingelt. Der Bus kommt gleich!",
+          "en": "My alarm didn’t go off. The bus is coming any minute!"
+        }
+      ]
+    },
+    "18": {
+      "title": "Planning a meal together",
+      "lines": [
+        {
+          "de": "Was soll ich für das Essen mitbringen?",
+          "en": "What should I bring for the meal?"
+        },
+        {
+          "de": "Kannst du Brot besorgen? Ich bringe den Salat mit.",
+          "en": "Can you get some bread? I’ll bring the salad."
+        },
+        {
+          "de": "Gern. Können wir noch einen Treffpunkt vereinbaren?",
+          "en": "Sure. Can we also agree on a meeting place?"
+        }
+      ]
+    }
+  },
+  "b1": {
+    "1": {
+      "title": "A story from the village",
+      "lines": [
+        {
+          "de": "Was passierte damals im Dorf?",
+          "en": "What happened in the village back then?"
+        },
+        {
+          "de": "Plötzlich klingelte es. Vor der Tür stand ein Mann, den niemand kannte.",
+          "en": "Suddenly the doorbell rang. A man nobody knew was standing outside."
+        },
+        {
+          "de": "Und was erzählte er euch?",
+          "en": "And what did he tell you?"
+        }
+      ]
+    },
+    "2": {
+      "title": "Advice before a trip",
+      "lines": [
+        {
+          "de": "Ich würde gern mehr reisen, aber ich habe wenig Geld.",
+          "en": "I’d like to travel more, but I don’t have much money."
+        },
+        {
+          "de": "An deiner Stelle würde ich früher buchen. Dann könnte es günstiger sein.",
+          "en": "If I were you, I’d book earlier. It might be cheaper then."
+        },
+        {
+          "de": "Könntest du mir bei der Suche helfen?",
+          "en": "Could you help me look?"
+        }
+      ]
+    },
+    "3": {
+      "title": "A repair in town",
+      "lines": [
+        {
+          "de": "Wann wird die Brücke repariert?",
+          "en": "When will the bridge be repaired?"
+        },
+        {
+          "de": "Sie wird nächste Woche gesperrt. Die Teile wurden schon geliefert.",
+          "en": "It will be closed next week. The parts have already been delivered."
+        },
+        {
+          "de": "Gut. Und wann muss die Rechnung bezahlt werden?",
+          "en": "Good. And when does the bill have to be paid?"
+        }
+      ]
+    },
+    "4": {
+      "title": "At a neighborhood party",
+      "lines": [
+        {
+          "de": "Wer ist der Mann, der mit Jana spricht?",
+          "en": "Who’s the man talking to Jana?"
+        },
+        {
+          "de": "Das ist der Nachbar, den wir gestern kennengelernt haben.",
+          "en": "That’s the neighbor we met yesterday."
+        },
+        {
+          "de": "Ach, der mit dem bunten Pullover! Er hat mir eine spannende Geschichte erzählt.",
+          "en": "Oh, the one in the colorful sweater! He told me a fascinating story."
+        }
+      ]
+    },
+    "5": {
+      "title": "Waiting together",
+      "lines": [
+        {
+          "de": "Worauf wartest du?",
+          "en": "What are you waiting for?"
+        },
+        {
+          "de": "Auf den Bus. Ich ärgere mich über die Verspätung.",
+          "en": "For the bus. I’m annoyed about the delay."
+        },
+        {
+          "de": "Lass uns über den Ausflug sprechen. Interessierst du dich noch für das Museum?",
+          "en": "Let’s talk about the trip. Are you still interested in the museum?"
+        }
+      ]
+    },
+    "6": {
+      "title": "After the exam",
+      "lines": [
+        {
+          "de": "Was hast du gemacht, nachdem du die Prüfung bestanden hattest?",
+          "en": "What did you do after you passed the exam?"
+        },
+        {
+          "de": "Ich habe gefeiert. Während wir gegessen haben, hat meine Schwester alle angerufen.",
+          "en": "I celebrated. While we were eating, my sister called everyone."
+        },
+        {
+          "de": "Und bevor du nach Hause gegangen bist?",
+          "en": "And before you went home?"
+        },
+        {
+          "de": "Da habe ich meiner Lehrerin noch geschrieben.",
+          "en": "I wrote to my teacher before I left."
+        }
+      ]
+    },
+    "7": {
+      "title": "Saving for a bike",
+      "lines": [
+        {
+          "de": "Hast du Lust, morgen in die Stadt zu fahren?",
+          "en": "Do you feel like going into town tomorrow?"
+        },
+        {
+          "de": "Gern, aber ich versuche, Geld zu sparen, um ein Fahrrad zu kaufen.",
+          "en": "I’d like to, but I’m trying to save money to buy a bike."
+        },
+        {
+          "de": "Dann können wir in den Park gehen. Vergiss nicht, etwas zu trinken mitzunehmen.",
+          "en": "Then we can go to the park. Don’t forget to bring something to drink."
+        }
+      ]
+    },
+    "8": {
+      "title": "Choosing a flat",
+      "lines": [
+        {
+          "de": "Wie findest du die helle Wohnung?",
+          "en": "What do you think of the bright flat?"
+        },
+        {
+          "de": "Sie ist schön, aber ich suche eine günstigere Wohnung mit einem kleinen Balkon.",
+          "en": "It’s lovely, but I’m looking for a less expensive flat with a small balcony."
+        },
+        {
+          "de": "Dann zeige ich dir noch das kleine Zimmer im dritten Stock.",
+          "en": "Then I’ll show you the small room on the third floor too."
+        }
+      ]
+    },
+    "9": {
+      "title": "Plans in bad weather",
+      "lines": [
+        {
+          "de": "Obwohl es regnet, findet das Fest statt.",
+          "en": "Although it’s raining, the festival is still on."
+        },
+        {
+          "de": "Ich gehe trotzdem hin. Fahren wir mit dem Zug oder mit dem Auto?",
+          "en": "I’m going anyway. Are we taking the train or the car?"
+        },
+        {
+          "de": "Der Zug fällt aus. Deshalb fahren wir mit dem Auto.",
+          "en": "The train is canceled. That’s why we’re going by car."
+        }
+      ]
+    },
+    "10": {
+      "title": "Checking a news story",
+      "lines": [
+        {
+          "de": "Weißt du, ob diese Meldung zuverlässig ist?",
+          "en": "Do you know whether this report is reliable?"
+        },
+        {
+          "de": "Das weiß ich noch nicht. Ich überprüfe zuerst, wer den Beitrag veröffentlicht hat.",
+          "en": "I don’t know yet. First I’m checking who published the piece."
+        },
+        {
+          "de": "Sag mir bitte Bescheid, wenn du die ursprüngliche Quelle gefunden hast.",
+          "en": "Please let me know once you’ve found the original source."
+        }
+      ]
+    },
+    "11": {
+      "title": "At a repair workshop",
+      "lines": [
+        {
+          "de": "Wegen des Regens findet die Reparatur heute in der Werkstatt statt.",
+          "en": "Because of the rain, the repair is taking place in the workshop today."
+        },
+        {
+          "de": "Ist die Tür der Werkstatt schon offen?",
+          "en": "Is the workshop door open yet?"
+        },
+        {
+          "de": "Ja. Dort zeigen wir, wie man alte Teile wiederverwenden kann.",
+          "en": "Yes. We’ll show how old parts can be reused there."
+        }
+      ]
+    },
+    "12": {
+      "title": "A course for work",
+      "lines": [
+        {
+          "de": "Warum möchtest du an der Weiterbildung teilnehmen?",
+          "en": "Why do you want to take the professional development course?"
+        },
+        {
+          "de": "Ich melde mich an, um meine Fähigkeiten zu verbessern.",
+          "en": "I’m signing up to improve my skills."
+        },
+        {
+          "de": "Wir können dich vertreten, damit du dich in Ruhe vorbereiten kannst.",
+          "en": "We can cover for you so you can prepare without rushing."
+        }
+      ]
+    },
+    "13": {
+      "title": "Fewer interruptions",
+      "lines": [
+        {
+          "de": "Die Benachrichtigungen lenken mich so sehr ab, dass ich kaum lernen kann.",
+          "en": "The notifications distract me so much that I can hardly study."
+        },
+        {
+          "de": "Du kannst sowohl den Ton als auch die Vorschau abschalten.",
+          "en": "You can turn off both the sound and the previews."
+        },
+        {
+          "de": "Gut. Dann höre ich weder einen Ton noch sehe ich eine Vorschau.",
+          "en": "Great. Then I won’t hear a sound or see a preview."
+        }
+      ]
+    },
+    "14": {
+      "title": "Discussing study apps",
+      "lines": [
+        {
+          "de": "Ein Vorteil ist, dass wir überall üben können.",
+          "en": "One advantage is that we can practise anywhere."
+        },
+        {
+          "de": "Da stimme ich dir zu. Andererseits lenkt mich das Handy schnell ab.",
+          "en": "I agree with you. On the other hand, the phone distracts me easily."
+        },
+        {
+          "de": "Das ist ein gutes Argument. Vielleicht helfen feste Lernzeiten.",
+          "en": "That’s a good point. Maybe fixed study times would help."
+        }
+      ]
+    },
+    "15": {
+      "title": "Plans for next year",
+      "lines": [
+        {
+          "de": "Was hast du für nächstes Jahr vor?",
+          "en": "What are you planning for next year?"
+        },
+        {
+          "de": "Ich beginne im Januar eine Weiterbildung. Wie sich mein Arbeitsalltag verändert, weiß ich noch nicht.",
+          "en": "I’m starting a professional development course in January. I don’t yet know how my workday will change."
+        },
+        {
+          "de": "Vermutlich wirst du dann weniger Zeit für andere Projekte haben.",
+          "en": "You’ll probably have less time for other projects then."
+        }
+      ]
+    },
+    "16": {
+      "title": "Volunteering in the neighborhood",
+      "lines": [
+        {
+          "de": "Ich würde mich gern in der Nachbarschaft engagieren. Welche Unterstützung braucht ihr?",
+          "en": "I’d like to volunteer in the neighborhood. What help do you need?"
+        },
+        {
+          "de": "Wir suchen jemanden, der bei den Veranstaltungen mithilft. Traust du dir das zu?",
+          "en": "We’re looking for someone to help at events. Do you think you could do that?"
+        },
+        {
+          "de": "Ja. Für den ersten Einsatz hätte ich gern jemanden an meiner Seite.",
+          "en": "Yes. For the first shift I’d like to have someone alongside me."
+        }
+      ]
+    },
+    "17": {
+      "title": "Correcting a booking",
+      "lines": [
+        {
+          "de": "In meiner Bestätigung steht Freitag. Ich habe aber für Samstag gebucht.",
+          "en": "My confirmation says Friday, but I booked for Saturday."
+        },
+        {
+          "de": "Danke für den Hinweis. Ich kann die Buchung korrigieren.",
+          "en": "Thanks for letting us know. I can correct the booking."
+        },
+        {
+          "de": "Bitte teilen Sie mir mit, ob ich eine neue Bestätigung bekomme.",
+          "en": "Please let me know whether I’ll receive a new confirmation."
+        }
+      ]
+    },
+    "18": {
+      "title": "Planning a group trip",
+      "lines": [
+        {
+          "de": "Mein Vorschlag wäre, zuerst eine Unterkunft zu suchen.",
+          "en": "I’d suggest looking for accommodation first."
+        },
+        {
+          "de": "Einverstanden. Ich kümmere mich darum. Wer besorgt die Fahrkarten?",
+          "en": "Agreed. I’ll take care of that. Who will get the tickets?"
+        },
+        {
+          "de": "Ich. Zusammenfassend halten wir fest: Du buchst die Unterkunft, und ich besorge die Fahrkarten.",
+          "en": "I will. To sum up, you’ll book the accommodation and I’ll get the tickets."
+        }
+      ]
+    }
+  }
+}

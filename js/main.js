@@ -1,7 +1,7 @@
 // Entry point: load the content, restore progress, then hand over to the router.
 
 import { loadContent } from "./content.js";
-import { activeView, relayout, route } from "./router.js?v=20261113-polish1";
+import { activeView, relayout, route } from "./router.js?v=20261113-lesson-review1";
 import { initState, resetState } from "./state.js";
 import { clearDevicePractice } from "./practice-progress.js";
 import { flushStudyTime, resetStudyClock, startStudyClock } from "./study-clock.js";
@@ -43,7 +43,10 @@ async function onClick(e) {
   if (button && button.dataset.say !== undefined) {
     const view = activeView();
     if (view?.onAudioPlay?.(button) === false) return;
-    const started = await speak(button.dataset.say, button, { voice: button.dataset.voice });
+    const started = await speak(button.dataset.say, button, {
+      voice: button.dataset.voice, slower: button.hasAttribute("data-say-slower"),
+      alternate: button.hasAttribute("data-say-alternate"), segments: view?.audioSegments?.(button),
+    });
     if (activeView() === view && button.isConnected) view?.onAudioStarted?.(button, started);
     return;
   }

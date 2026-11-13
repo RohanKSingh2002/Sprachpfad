@@ -10,6 +10,7 @@ __pycache__/
 # Private reference books/notes and temporary PDF review renders.
 /Refrence Materials/
 /tmp/pdfs/
+/tmp/voice-preview/
 
 # Isolated hosting checkout and deployment archives.
 /hosting/

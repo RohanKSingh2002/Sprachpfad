@@ -7,6 +7,7 @@ const stored = new Map();
 globalThis.localStorage = { getItem: key => stored.get(key) ?? null, setItem: (key, value) => stored.set(key, value) };
 globalThis.fetch = async url => ({ ok: true, json: async () => JSON.parse(await readFile(url, 'utf8')) });
 globalThis.window = { matchMedia: () => ({ matches: false }) };
+globalThis.Audio = class {};
 const NativeDate = Date;
 let now = new NativeDate(2026, 9, 7, 12).getTime();
 globalThis.Date = class extends NativeDate {
@@ -62,8 +63,9 @@ for (const weeks of [8, 16, 24]) {
   const html = roadmap.render(level);
   const weekCards = [...html.matchAll(/<section class="course-week" aria-labelledby="course-week-(\d+)">\s*<div class="course-week-header">\s*<h3 id="course-week-\1">Week \1<\/h3>\s*<p class="muted small" data-week-status="\1">[^<]+<\/p>\s*<\/div>([\s\S]*?)<\/section>/g)];
   assert.deepEqual(weekCards.map(([, number]) => Number(number)), plan.schedule.map(week => week.number));
-  for (const [, , modules] of weekCards) {
+  for (const [, number, modules] of weekCards) {
     assert.ok(modules.includes('class="course-module'), 'Every week card contains its module rows or continuation links.');
+    assert.ok(modules.includes(`Week ${number} guidebook`) && modules.includes('data-say='), 'Every week has an audio guidebook.');
     assert.doesNotMatch(modules, /<small>Week \d+ · \d+ lessons/);
   }
   assert.equal((html.match(/id="course-module-\d+"/g) || []).length, 16);
@@ -81,11 +83,13 @@ for (const weeks of [8, 16, 24]) {
     assert.ok(html.includes('Lesson 4 · Week 3 · Days 1–3'));
     assert.ok(html.includes('Continue module 2 from Week 2'));
     assert.ok(html.includes('Weeks 2–3 · 2 lessons'), 'A module spanning two weeks still shows its full range.');
-    for (const moduleId of [2, 4, 6, 8, 10, 12, 14, 16]) {
+    for (let position = 1; position < level.course.modules.length; position += 2) {
+      const moduleId = level.course.modules[position].id;
+      const previousId = level.course.modules[position - 1].id;
       const dropdown = dropdowns.find(item => item.includes(`id="course-module-${moduleId}"`));
       const header = dropdown.split('</summary>')[0];
-      assert.ok(header.includes(`hours of study and practice</small><small class="course-module-continue"><a class="tlink" href="#/a1/roadmap?module=${moduleId - 1}">`), 'Continuation links belong directly below the schedule in module headers.');
-      assert.equal(html.split(`Continue module ${moduleId - 1} from Week`).length - 1, 1);
+      assert.ok(header.includes(`hours of study and practice</small><small class="course-module-continue"><a class="tlink" href="#/a1/roadmap?module=${previousId}">`), 'Continuation links belong directly below the schedule in module headers.');
+      assert.equal(html.split(`Continue module ${position} from Week`).length - 1, 1);
     }
   }
   assert.ok(html.includes('144 hours planned overall'));

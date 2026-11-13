@@ -145,9 +145,71 @@ ul.rules li {
 .lesson-words {
   margin-top: 36px;
 }
-.exercises [data-lesson-words] {
-  margin-bottom: 18px;
+.lesson-exercise-controls,
+.lesson-exercise-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block: 14px 18px;
 }
+.lesson-exercise-controls [aria-pressed="true"] {
+  border-color: var(--ring);
+  background: var(--accent);
+}
+.lesson-exercise-navigation { justify-content: space-between; }
+.exercises .is-focused :is([data-check-choice], [data-fill], [data-order]),
+.lesson-exercise-navigation > [hidden] { display: none; }
+.lesson-exercise-navigation:not([hidden]) {
+  position: sticky;
+  z-index: 2;
+  bottom: 0;
+  margin-top: 0;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+}
+.lesson-exercise-item .opt[aria-pressed="true"]:not(.right):not(.wrong) {
+  border-color: var(--ring);
+  background: color-mix(in srgb, var(--signal) 16%, var(--surface));
+}
+.lesson-scorecard { margin-block: 16px; }
+.lesson-scorecard summary { cursor: pointer; min-height: 44px; align-content: center; font-weight: 650; }
+.lesson-scorecard-items { display: grid; gap: 8px; }
+.lesson-scorecard-items > details { padding-inline: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.lesson-scorecard-items summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 14px; padding-block: 8px; }
+.lesson-scorecard-items summary::before { content: '+'; color: var(--muted); }
+.lesson-scorecard-items details[open] > summary::before { content: '−'; }
+.lesson-scorecard-items summary > :first-child { flex: 1 1 180px; }
+.lesson-scorecard-items dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 10px; margin-block: 6px 14px; }
+.lesson-scorecard-items dt { color: var(--muted); font-size: .875em; }
+.lesson-scorecard-items dd { margin: 4px 0 0; overflow-wrap: anywhere; }
+.lesson-scorecard-status { font-size: .875em; }
+.lesson-scorecard-status.is-correct { color: var(--ok); }
+.lesson-scorecard-status.is-missed { color: var(--muted); }
+.lesson-exercise-navigation[hidden],
+.lesson-exercise-item[hidden],
+.exercises .lprog[hidden],
+.lesson-exercise-controls button[hidden],
+.exercises [data-exercise-retry][hidden],
+.lesson-exercise-position:empty,
+[data-exercise-review-status]:empty { display: none; }
+.lesson-exercise-position { margin: 0 0 8px; }
+.lesson-exercise-item .q:focus-visible { outline-offset: 4px; }
+.lesson-characters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.lesson-characters .chip { min-width: 44px; min-height: 44px; }
+
+.lesson-dialogue { margin-block: 22px; }
+.lesson-dialogue-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.lesson-dialogue-tools label { display: flex; align-items: center; gap: 7px; min-height: 44px; cursor: pointer; }
+.dialogue-lines { list-style: none; padding: 0; margin: 14px 0 0; }
+.dialogue-lines li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: start; padding: 12px 0; }
+.dialogue-lines li + li { border-top: 1px solid var(--line); }
+.dialogue-lines p { margin: 4px 0 0; overflow-wrap: anywhere; }
+.dialogue-speaker { display: grid; place-items: center; width: 27px; height: 27px; margin-top: 3px; border-radius: 50%; background: var(--sunken); color: var(--text); font-size: 13px; font-weight: 700; }
+.dialogue-lines li:nth-child(even) .dialogue-speaker { background: var(--signal); color: var(--on-signal); }
+[data-dialogue-audio-status]:empty { display: none; }
 .vocab {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));

@@ -116,13 +116,45 @@ export function savePracticeProgress(level, session, { missed, result }, answere
   });
 }
 
-export function pendingPractice(level, progress = set => practiceProgress(level, set)) {
-  return (level.practice || []).flatMap(set => {
+export function pendingPractice(level, progress = set => practiceProgress(level, set), sets = level.practice || []) {
+  return sets.flatMap(set => {
     const data = progress(set);
     return ['normal', 'review'].flatMap(slot => data[slot] && !data[slot].finished
       ? [{ session: data[slot], updated: data[`${slot}Updated`] || 0 }] : []);
   }).sort((a, b) => b.updated - a.updated);
 }
+
+const lessonReviewSets = new WeakMap();
+function lessonReviewKey(lesson) {
+  if (!lessonReviewSets.has(lesson)) lessonReviewSets.set(lesson, { items: lesson.tasks });
+  return `lesson-mistakes:${lesson.key}:${version(lessonReviewSets.get(lesson))}`;
+}
+
+export function lessonMistakes(lesson) {
+  const missed = read(lessonReviewKey(lesson));
+  return validIndices(missed, lesson.tasks.length) ? missed.filter(index => lesson.tasks[index].type !== 'write') : [];
+}
+
+export function saveLessonMistake(lesson, index, correct) {
+  const missed = new Set(lessonMistakes(lesson));
+  if (correct) missed.delete(index);
+  else missed.add(index);
+  return write(lessonReviewKey(lesson), [...missed].sort((a, b) => a - b));
+}
+
+const lessonScorecardKey = lesson => `${lessonReviewKey(lesson)}:scorecard`;
+
+export function lessonScorecard(lesson) {
+  const saved = read(lessonScorecardKey(lesson));
+  if (!saved || typeof saved !== 'object') return {};
+  return Object.fromEntries(lesson.tasks.flatMap((task, index) => {
+    const record = saved[index];
+    return task.type !== 'write' && typeof record?.correct === 'boolean' && typeof record.response === 'string'
+      ? [[index, { correct: record.correct, response: text(record.response, 600) }]] : [];
+  }));
+}
+
+export const saveLessonScorecard = (lesson, records) => write(lessonScorecardKey(lesson), records);
 
 const checkpointKey = (level, module) => `checkpoint:${level.id}:${level.course.version}:${module.id}`;
 export function checkpointDraft(level, module) {

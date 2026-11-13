@@ -8,7 +8,8 @@ import {
 import { setReminderPaused, setStudyNotification, studyNotification, studyReminderCalendar } from "../study-reminder.js";
 import { offlineLessons, offlineSize, removeOfflineLesson } from "../offline-study.js";
 import { localInstruction, prepareStudyLanguage, refreshInterface, STUDY_LANGUAGES } from "../study-language.js";
-import { audioSpeedControl, stopAudio } from "../ui/audio.js";
+import { audioSpeedControl, liveGermanAvailable, stopAudio } from "../ui/audio.js";
+import { GERMAN_VOICES } from "../german-voices.js";
 import { applyDisplayPreferences } from "../ui/motion.js?v=20261113-polish1";
 import { initSmoothScroll } from "../ui/scroll.js?v=20261113-polish1";
 import { esc } from "../utils.js";
@@ -37,11 +38,14 @@ function segments(name, selected, options) {
 }
 
 function audioDisplay() {
-  const { text, motion } = sitePreferences();
+  const { text, motion, lessonSounds, lessonCelebrations, germanVoice } = sitePreferences();
   const { textSize, translation, feedback } = sentencePreferences();
   return `<section class="settings-panel" aria-labelledby="settings-audio-heading">
       <h2 id="settings-audio-heading">Audio playback</h2>
       <p class="muted">Lessons, flashcards, sentence practice and mock tests use this speed.</p>
+      <div class="setting-row"><label for="settings-german-voice"><strong>German voice</strong></label>
+        <select id="settings-german-voice" aria-describedby="german-voice-status">${selectOptions(GERMAN_VOICES, germanVoice)}</select>
+        <p id="german-voice-status" role="status">Checking live voice availability…</p></div>
       ${audioSpeedControl("settings-playback-speed")}
       <div class="settings-audio-scale" aria-hidden="true"><span>0.5×</span><span>1×</span><span>2×</span></div>
       <div class="settings-actions">
@@ -65,6 +69,13 @@ function audioDisplay() {
       </fieldset>
       <p class="settings-note" id="theme-save-note" role="status"></p>
     </section>
+    <section class="settings-panel" aria-labelledby="settings-lesson-experience">
+      <h2 id="settings-lesson-experience">Lesson experience</h2>
+      <div class="setting-row"><p>Play a short cue when you check an answer.</p>
+        ${switchInput("settings-lesson-sounds", lessonSounds, "Answer sounds")}</div>
+      <div class="setting-row"><p>Show the completion stamp and animate the lesson score when motion is enabled.</p>
+        ${switchInput("settings-lesson-celebrations", lessonCelebrations, "Lesson celebrations")}</div>
+    </section>
     <details class="settings-panel settings-sentence-defaults" open>
       <summary>Sentence practice defaults</summary>
       <fieldset class="setting-row"><legend class="sr">Sentence text size</legend><strong>Sentence text size</strong>
@@ -78,7 +89,7 @@ function audioDisplay() {
 }
 
 function studyPanel() {
-  const { home, reviewMode } = sitePreferences();
+  const { home, reviewMode, lessonLayout } = sitePreferences();
   const { unit, target, repetitions } = studyGoal();
   const { smartSize, smartSource } = sentencePreferences();
   return `<div class="settings-panel settings-plan" id="settings-study">
@@ -87,6 +98,7 @@ function studyPanel() {
       <label>Home starts with<select id="settings-home-mode">${selectOptions({
         mix: "Mix course progress and due review", course: "Continue the course", review: "Prioritize due review",
       }, home)}</select></label>
+      <label>Lesson exercise layout<select id="settings-lesson-layout">${selectOptions({ list: "Full list", focus: "One at a time" }, lessonLayout)}</select></label>
       <label>Daily goal<select id="study-goal-unit">${selectOptions({ actions: "Practice actions", minutes: "Study minutes",
         repetitions: "Audio repetitions", either: "Minutes or audio repetitions" }, unit)}</select></label>
       <div class="settings-field-pair">
@@ -229,6 +241,12 @@ export function mount() {
   pickedSection = false;
   document.getElementById(focus)?.focus({ preventScroll: focus !== deepLinkFocus });
   void showDownloads();
+  const voiceStatus = document.getElementById("german-voice-status");
+  if (voiceStatus) void liveGermanAvailable().then(available => {
+    if (voiceStatus.isConnected) voiceStatus.textContent = available
+      ? "Used for live German playback. Dialogues use two voices."
+      : "Live voices are unavailable here. Your choice is saved for when they’re available.";
+  });
 }
 
 export function unmount() {
@@ -250,9 +268,13 @@ export function onChange(event) {
     applyDisplayPreferences();
     initSmoothScroll();
   } else if (name === "sentence-size") setSentencePreferences({ textSize: value });
+  else if (id === "settings-german-voice") { stopAudio(); setSitePreferences({ germanVoice: value }); }
+  else if (id === "settings-lesson-sounds") setSitePreferences({ lessonSounds: checked });
+  else if (id === "settings-lesson-celebrations") setSitePreferences({ lessonCelebrations: checked });
   else if (id === "settings-sentence-translation") setSentencePreferences({ translation: checked });
   else if (id === "settings-rating-guidance") setSentencePreferences({ feedback: value });
   else if (id === "settings-home-mode") setSitePreferences({ home: value });
+  else if (id === "settings-lesson-layout") setSitePreferences({ lessonLayout: value });
   else if (id === "settings-review-mode") setSitePreferences({ reviewMode: value });
   else if (id === "settings-app-language") {
     setSitePreferences({ appLanguage: value });

@@ -8,6 +8,8 @@ import { breadcrumb, levelSwitch } from './shared.js';
 import { strategiesHTML, transferHTML } from './course-support.js';
 import { COURSE_SKILLS, moduleReviewed, objectiveComplete, paceGuidance, studyPlan } from '../course-plan.js';
 import { jumpTo } from '../ui/scroll.js?v=20261113-polish1';
+import { ARROW_ICON } from '../ui/icons.js';
+import { speakerButton } from '../ui/audio.js';
 
 let level;
 const skills = COURSE_SKILLS;
@@ -40,7 +42,13 @@ function targetRow(unit, next) {
 function roadmapProgress(plan) {
   const done = plan.units.filter(unit => unit.done).length;
   const next = nextTarget(plan);
-  return `<p><b>${level.name} · ${next ? `Week ${next.week} of ${plan.weeks}` : 'Course complete'}</b><span>${done} / ${plan.units.length} targets complete</span></p>
+  const target = next?.lesson;
+  const targetTitle = target?.title || next?.module.title;
+  const targetHref = target ? `lektion/${target.id}` : `checkpoint/${next?.module.id}`;
+  const action = target ? targetStarted(next) ? 'Continue lesson' : 'Start lesson' : 'Open checkpoint';
+  return `<div class="course-next-summary"><div><p class="course-next-label">${next ? `Next up · Week ${next.week} of ${plan.weeks}` : 'Course complete'}</p>
+    <h2>${esc(targetTitle || `${level.name} course`)}</h2><p class="muted small">${done} of ${plan.units.length} targets complete</p></div>
+    ${next ? `<a class="btn" href="#/${level.id}/${targetHref}">${action}${ARROW_ICON}</a>` : `<a class="btn" href="#/${level.id}/practice?tab=grammar">Review grammar${ARROW_ICON}</a>`}</div>
     <progress max="${plan.units.length}" value="${done}" aria-label="Course targets completed"></progress>`;
 }
 function paceText(plan) {
@@ -87,6 +95,21 @@ function weekStatus(week) {
   return `${week.units.filter(unit => unit.done).length}/${week.units.length} targets complete · Day 7: flexible review or rest`;
 }
 
+function weekGuidebook(week) {
+  const modules = [...new Set(week.units.map(unit => unit.module))];
+  const lessons = week.units.flatMap(unit => unit.lesson ? [unit.lesson] : []);
+  const references = lessons.length ? lessons : modules.flatMap(module =>
+    module.lessonIds.map(id => level.lessons.find(lesson => lesson.id === id)).filter(Boolean));
+  return `<details class="course-week-guide"><summary>Week ${week.number} guidebook</summary><div class="course-week-guide-body">
+    <h4>What you’ll practise</h4><ul>${modules.flatMap(module => module.goals).map(goal => `<li>${esc(goal)}</li>`).join('')}</ul>
+    ${references.map(lesson => {
+      const phrases = lesson.examples.filter(({ de, en }) => de && en).slice(0, 2);
+      return `<section class="course-guide-reference"><h4><a class="tlink" href="#/${level.id}/lektion/${lesson.id}">${esc(lesson.title)}</a></h4>
+        ${phrases.length ? `<ul class="course-guide-phrases">${phrases.map(({ de, en }) => `<li>${speakerButton(de)}<span><b lang="de">${esc(de)}</b><small>${esc(en)}</small></span></li>`).join('')}</ul>` : ''}
+        ${lesson.rules[0] ? `<p class="small"><b>Remember</b> ${esc(lesson.rules[0])}</p>` : ''}</section>`;
+    }).join('')}</div></details>`;
+}
+
 function weeksHTML(plan, openModules = new Set([nextTarget(plan)?.module.id || 1])) {
   return plan.schedule.map(week => {
     const starts = level.course.modules.filter(module => plan.units.find(unit => unit.module === module).week === week.number);
@@ -104,6 +127,7 @@ function weeksHTML(plan, openModules = new Set([nextTarget(plan)?.module.id || 1
         <p class="muted small" data-week-status="${week.number}">${weekStatus(week)}</p>
       </div>
       ${continuationCards}${starts.map((module, index) => moduleHTML(module, plan, openModules.has(module.id), index === 0 ? references : [])).join('')}
+      ${weekGuidebook(week)}
     </section>`;
   }).join('');
 }
@@ -117,11 +141,14 @@ export function render(lv) {
   const finalChecks = courseChecks(lv, 'final');
   const plan = studyPlan(lv);
   return `${breadcrumb(lv, 'Lessons')}
-    <header class="course-header"><p class="course-eyebrow">${esc(course.eyebrow || 'German A1 · From beginner to exam preparation')}</p><h1>${lv.name} lessons</h1><p class="intro">${esc(course.introduction || 'Learn useful German, practise all four skills, and prepare for the adult Goethe-Zertifikat A1: Start Deutsch 1. Work through the modules in order and use each checkpoint to decide what to review.')}</p>${course.scopeNote ? `<p class="muted small">${esc(course.scopeNote)}</p>` : ''}<div class="course-facts"><span><b>${lv.lessons.length}</b> lessons</span><span><b>${course.modules.length}</b> modules</span><span><b>4</b> language skills</span><span><b id="modules-reviewed">${complete}/${course.modules.length}</b> modules reviewed</span></div>${course.entryReview ? `<details class="course-transfer"><summary>Before you start</summary><p>${esc(course.entryReview)}</p>${lv.index > 0 ? `<a class="tlink" href="#/${['a1','a2'][lv.index - 1]}/roadmap">Review the previous level</a>` : ''}</details>` : ''}</header>
+    <header class="course-header"><h1>${lv.name} lessons</h1></header>
     <div class="course-pace-row">${levelSwitch(lv, '/roadmap', 'Choose a course level')}
       <label>Study pace <select id="course-pace" data-course-pace><option value="8"${coursePace(lv) === 8 ? ' selected' : ''}>8 weeks · intensive</option><option value="16"${coursePace(lv) === 16 ? ' selected' : ''}>16 weeks · regular</option><option value="24"${coursePace(lv) === 24 ? ' selected' : ''}>24 weeks · gentle</option></select></label>
     </div>
     <div id="course-progress" class="panel course-progress">${roadmapProgress(plan)}</div>
+    <details class="course-overview"><summary>About the ${lv.name} course</summary><p>${esc(course.introduction || lv.summary)}</p>${course.scopeNote ? `<p class="muted small">${esc(course.scopeNote)}</p>` : ''}
+      <div class="course-facts"><span><b>${lv.lessons.length}</b> lessons</span><span><b>${course.modules.length}</b> modules</span><span><b id="modules-reviewed">${complete}/${course.modules.length}</b> modules reviewed</span></div>
+      ${course.entryReview ? `<p>${esc(course.entryReview)}</p>${lv.index > 0 ? `<a class="tlink" href="#/${['a1','a2'][lv.index - 1]}/roadmap">Review the previous level</a>` : ''}` : ''}</details>
     <section aria-labelledby="course-path-h"><h2 id="course-path-h">Lessons and checkpoints</h2>
       <div class="course-filters"><label for="course-search">Search lessons and checkpoints</label><input type="search" id="course-search" placeholder="Lesson title or module">
         <div class="study-tabs" role="group" aria-label="Filter by progress">${filters.map(([key, label]) => `<button type="button" class="btn small ghost" data-course-filter="${key}" aria-pressed="${key === 'all'}">${label}</button>`).join('')}</div>

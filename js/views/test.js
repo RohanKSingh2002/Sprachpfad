@@ -314,6 +314,10 @@ export function onAudioPlay(button) {
   button.disabled = true;
 }
 
+export function audioSegments(button) {
+  return level.test.listening[Number(button.dataset.testListen)]?.segments;
+}
+
 export function onAudioStarted(button, started) {
   if (button.dataset.testListen === undefined) return;
   const i = +button.dataset.testListen;

@@ -17,9 +17,19 @@
 .study-plan-card { --plan-muted: var(--muted); --plan-rule: var(--line); }
 .study-plan-card :is(.study-next-description, .study-next-label, small) { color: var(--plan-muted); }
 .study-plan-steps { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); margin: 20px 0; padding: 0; list-style: none; }
-.study-plan-steps li { display: flex; gap: 9px; min-width: 0; align-items: flex-start; padding: 0 12px; }
-.study-plan-steps li:first-child { padding-left: 0; }
+.study-plan-steps li { min-width: 0; padding: 0 6px; }
+.study-plan-steps li:first-child { padding-inline-start: 0; }
+.study-plan-steps li:last-child { padding-inline-end: 0; }
 .study-plan-steps li + li { border-left: 1px solid var(--plan-rule); }
+.study-plan-step { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: 8px; min-height: 48px; height: 100%; padding: 9px; border-radius: var(--radius-md); color: var(--text); text-decoration: none; transition: background-color var(--motion-fast) var(--ease-standard); }
+.study-plan-step:focus-visible { background: var(--sunken); }
+.study-plan-step .btn-arrow { margin: 2px 0 0; width: 16px; height: 16px; }
+.study-plan-steps li:first-child .study-plan-step { background: var(--secondary); }
+.study-plan-steps li:first-child .study-plan-step:focus-visible { outline-color: var(--ring); }
+@media (hover: hover) and (pointer: fine) {
+  .study-plan-step:hover { background: var(--sunken); }
+  .study-plan-step:hover .btn-arrow { transform: translateX(2px); }
+}
 .study-plan-steps b, .study-plan-steps small { display: block; overflow-wrap: anywhere; }
 .study-step-number { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--sunken); color: var(--text); font-size: 13px; font-weight: 600; }
 .study-plan-steps li:first-child .study-step-number { background: var(--signal); color: var(--on-signal); }
@@ -63,7 +73,7 @@
   .study-home { padding: 22px 0; }
   .study-home-header { margin-bottom: 16px; }
   .study-plan-steps { grid-auto-flow: row; grid-auto-columns: auto; }
-  .study-plan-steps li { padding: 9px 0; }
+  .study-plan-steps li { padding: 4px 0; }
   .study-plan-steps li + li { border-left: 0; border-top: 1px solid var(--plan-rule); }
   .study-status:has(.study-due), .study-optional { grid-template-columns: minmax(0, 1fr); }
   .study-optional .study-start { grid-column: 1; grid-row: auto; margin-top: 7px; }

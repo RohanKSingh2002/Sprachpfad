@@ -1,13 +1,25 @@
-// German audio. Every German line on the site is recorded as an MP3 in audio/ by a natural German
-// voice (made with tools/make_audio.py), so it sounds the same in every browser, even offline.
-// Lines without recordings use a browser voice in the requested language.
+// German speech uses the shared live voice when available. Downloaded recordings and browser
+// speech provide playback when the live service is unavailable.
 
 import { esc } from "../utils.js";
-import { AUDIO_SPEED_RANGE, audioPlaybackSpeed, setSentencePreferences } from "../state.js";
+import { AUDIO_SPEED_RANGE, audioPlaybackSpeed, setSentencePreferences, sitePreferences } from "../state.js";
+import { GERMAN_VOICES } from "../german-voices.js";
 import { SPEAKER_ICON } from "./icons.js";
 import { toast } from "./toast.js";
 
 const AUDIO_DIR = new URL("../../audio/", import.meta.url);
+const SPEECH_API = new URL("../../api/german-speech", import.meta.url);
+let speechAvailability;
+let speechCheckedAt = -Infinity;
+
+export function liveGermanAvailable() {
+  if (!/^https?:$/.test(SPEECH_API.protocol) || globalThis.navigator?.onLine === false) return Promise.resolve(false);
+  if (Date.now() - speechCheckedAt < 15000) return speechAvailability;
+  speechCheckedAt = Date.now();
+  speechAvailability = fetch(SPEECH_API, { cache: "no-store", signal: AbortSignal.timeout(1500) })
+    .then(async response => response.ok && (await response.json()).available === true).catch(() => false);
+  return speechAvailability;
+}
 
 /** File name of a line's recording: the cyrb53 hash of the text in base 36 (as in tools/make_audio.py). */
 export function clipId(text) {
@@ -108,10 +120,19 @@ let playing = null; // button showing the "playing" ring
 let playbackRequest = 0;
 let completion = null;
 let recording = 0;
+let speedFactor = 1;
+let speechRequest;
+let speechURL;
+
+function releaseSpeechURL() {
+  if (speechURL) URL.revokeObjectURL(speechURL);
+  speechURL = null;
+}
 
 function finish(request, played) {
   if (request !== playbackRequest) return;
   recording = 0;
+  releaseSpeechURL();
   markPlaying(null);
   const notify = completion;
   completion = null;
@@ -126,6 +147,9 @@ function markPlaying(button) {
 
 function stop() {
   recording = 0;
+  speechRequest?.abort();
+  speechRequest = null;
+  releaseSpeechURL();
   const notify = completion;
   completion = null;
   notify?.(false);
@@ -142,6 +166,7 @@ export function stopAudio() {
 
 export function initAudio() {
   loadClips();
+  void liveGermanAvailable();
   if ("speechSynthesis" in window) speechSynthesis.getVoices();
   player.addEventListener("ended", () => {
     if (recording && player.ended) finish(recording, true);
@@ -175,7 +200,7 @@ function onSpeedControl(event) {
 function applySpeed(speed) {
   if (speed !== audioPlaybackSpeed()) setSentencePreferences({ speed });
   const saved = audioPlaybackSpeed();
-  if (!player.paused) player.playbackRate = saved;
+  if (!player.paused) player.playbackRate = Math.max(AUDIO_SPEED_RANGE.min, saved * speedFactor);
   document.querySelectorAll?.("[data-current-audio-speed]").forEach(element => { element.textContent = `${saved}×`; });
   return saved;
 }
@@ -201,17 +226,49 @@ export function setMediaControls(track = null, controls = {}) {
 }
 
 /** Read German text aloud; the button that asked (if any) shows a pulsing ring while it plays. */
-export async function speak(text, button = null, { language = "de", voice, onFinish } = {}) {
+export async function speak(text, button = null, { language = "de", voice, onFinish, slower = false, alternate = false, segments } = {}) {
   if (!text || !text.trim()) return false;
   const request = ++playbackRequest;
   stop();
   completion = onFinish;
-  const rate = audioPlaybackSpeed();
+  speedFactor = slower ? 0.75 : 1;
+  const rate = () => Math.max(AUDIO_SPEED_RANGE.min, audioPlaybackSpeed() * speedFactor);
+  if (language === "de" && !voice && await liveGermanAvailable()) {
+    if (request !== playbackRequest) return false;
+    const controller = speechRequest = new AbortController();
+    const primary = sitePreferences().germanVoice;
+    const secondary = Object.keys(GERMAN_VOICES).find(id => id !== primary);
+    const lines = segments?.length ? segments.map(line => ({ text: line.text, voice: line.voice === 1 ? secondary : primary }))
+      : [{ text, voice: alternate ? secondary : primary }];
+    markPlaying(button);
+    try {
+      const response = await fetch(SPEECH_API, {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ lines }),
+        signal: AbortSignal.any([controller.signal, AbortSignal.timeout(10000)]),
+      });
+      if (response.ok && response.headers.get("Content-Type")?.startsWith("audio/")) {
+        const blob = await response.blob();
+        if (request !== playbackRequest) return false;
+        speechURL = URL.createObjectURL(blob);
+        player.src = speechURL;
+        player.playbackRate = rate();
+        await player.play();
+        if (request !== playbackRequest) return false;
+        recording = request;
+        return true;
+      }
+    } catch { /* A failed live request can use the same offline path as any other clip. */ }
+    finally { if (speechRequest === controller) speechRequest = null; }
+    if (request !== playbackRequest) return false;
+    releaseSpeechURL();
+    markPlaying(null);
+  }
+  if (request !== playbackRequest) return false;
   const id = clipId(text);
-  if (language !== "de" || voice || (clips && !clips.has(id))) return speakWithVoice(text, button, request, rate, language, voice);
+  if (language !== "de" || voice || (clips && !clips.has(id))) return speakWithVoice(text, button, request, rate(), language, voice);
   markPlaying(button);
   player.src = new URL(`${id}.mp3`, AUDIO_DIR).href;
-  player.playbackRate = rate;
+  player.playbackRate = rate();
   try {
     await player.play();
     if (request !== playbackRequest) return false;
@@ -221,7 +278,7 @@ export async function speak(text, button = null, { language = "de", voice, onFin
     if (err.name === "AbortError" || request !== playbackRequest) return false; // another line started
     // the recording is missing or can't be played here: use the browser's German voice instead
     if (playing === button) markPlaying(null);
-    return speakWithVoice(text, button, request, rate, language, voice);
+    return speakWithVoice(text, button, request, rate(), language, voice);
   }
 }
 
@@ -235,5 +292,5 @@ export function playAudioLine(text, button, options) {
 }
 
 /** Round speaker button; any button with data-say is played by the click handler in main.js. */
-export const speakerButton = (text, label = `Play audio: ${text}`, voice) =>
-  `<button class="spk" type="button" data-say="${esc(text)}"${voice ? ` data-voice="${esc(voice)}"` : ""} aria-label="${esc(label)}">${SPEAKER_ICON}</button>`;
+export const speakerButton = (text, label = `Play audio: ${text}`, voice, { alternate = false } = {}) =>
+  `<button class="spk" type="button" data-say="${esc(text)}"${voice ? ` data-voice="${esc(voice)}"` : ""}${alternate ? ' data-say-alternate' : ''} aria-label="${esc(label)}">${SPEAKER_ICON}</button>`;

@@ -35,7 +35,9 @@ async function getJSON(file) {
 }
 
 export async function loadContent() {
-  const [levels, faq, practice] = await Promise.all([getJSON("levels.json"), getJSON("faq.json"), getJSON("practice.json")]);
+  const [levels, faq, practice, dialogues] = await Promise.all([
+    getJSON("levels.json"), getJSON("faq.json"), getJSON("practice.json"), getJSON("lesson-dialogues.json"),
+  ]);
   const files = await Promise.all(levels.map((lv) => getJSON(`${lv.id}.json`)));
   const courses = await Promise.all(levels.map((lv) => lv.courseFile ? getJSON(lv.courseFile) : null));
 
@@ -54,6 +56,7 @@ export async function loadContent() {
       lesson.position = position + 1;
       lesson.kind = "lesson";
       lesson.key = `${level.id}-${lesson.id}`; // used in saved progress and flashcard links
+      lesson.dialogue = dialogues[level.id]?.[lesson.id];
       if (course?.support[lesson.id]) {
         const { readingTask, ...support } = course.support[lesson.id];
         Object.assign(lesson, support);

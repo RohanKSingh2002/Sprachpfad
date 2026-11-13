@@ -110,8 +110,8 @@ function studyPlanCard(steps, links) {
   const minutes = steps.reduce((total, step) => total + step.min, 0);
   return `<section class="study-next study-plan-card" aria-labelledby="study-next-title">
     <p class="study-next-label">Study plan</p><h2 id="study-next-title">About ${minutes} minutes of German</h2>
-    <ol class="study-plan-steps">${steps.map(({ title, detail, min }, index) =>
-      `<li><span class="study-step-number" aria-hidden="true">${index + 1}</span><div><b>${esc(title)}</b><small>${esc(detail)} · ${min} min</small></div></li>`
+    <ol class="study-plan-steps">${steps.map(({ title, detail, min, href }, index) =>
+      `<li><a class="study-plan-step" href="${esc(href)}"><span class="study-step-number" aria-hidden="true">${index + 1}</span><span><b>${esc(title)}</b><small>${esc(detail)} · ${min} min</small></span>${ARROW_ICON}</a></li>`
     ).join("")}</ol>
     ${links}
   </section>`;
